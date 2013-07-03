@@ -14,3 +14,7 @@ config.status
 libtool
 stamp-h1
 src/wxforms
+dtsguiapp-*.tar.bz2
+dtsguiapp-*.tar.gz
+dtsguiapp-*.tar.xz
+dtsguiapp-*.zip
