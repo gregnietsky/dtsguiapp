@@ -28,3 +28,7 @@ wxforms_SOURCES = wxforms.c
 wxforms_CFLAGS = $(AM_CFLAGS) $(WX_CFLAGS) $(DTSAPPLIB_CFLAGS)
 wxforms_CXXFLAGS = $(AM_CXXFLAGS) $(WX_CXXFLAGS) $(DTSAPPLIB_CFLAGS)
 wxforms_LDADD = $(WX_LIBS) $(DTSAPPLIB_LIBS) libdtsapp_gui.la
+
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = libdtsapp_gui.pc
+

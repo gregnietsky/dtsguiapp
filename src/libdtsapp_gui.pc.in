@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@/dtsapplib
+
+Cflags: -I${includedir}
+Name: libdtsapp_gui
+Description: Distrotech GUI Application Library
+Version: @VERSION@
+Libs: -L${libdir} -ldtsapp_gui
