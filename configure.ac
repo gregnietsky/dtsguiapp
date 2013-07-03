@@ -6,6 +6,12 @@ AC_INIT([dtsguiapp], [0.1], [gregory@distrotech.co.za])
 AC_CONFIG_SRCDIR([src/wxforms.c])
 AC_CONFIG_HEADERS([config.h])
 
+#x:y:z z <= x
+#so.x.z.y
+
+LT_LIBVER=0:0:0
+AC_SUBST(LT_LIBVER)
+
 # Checks for programs.
 AC_PROG_CXX
 AC_PROG_AWK

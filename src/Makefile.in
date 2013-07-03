@@ -14,6 +14,8 @@
 
 @SET_MAKE@
 
+
+
 VPATH = @srcdir@
 am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'
 am__make_running_with_option = \
@@ -93,22 +95,60 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-am__installdirs = "$(DESTDIR)$(bindir)"
-PROGRAMS = $(bin_PROGRAMS)
-am_wxforms_OBJECTS = wxforms-DTSApp.$(OBJEXT) \
-	wxforms-DTSFrame.$(OBJEXT) wxforms-DTSPanel.$(OBJEXT) \
-	wxforms-evdata.$(OBJEXT) wxforms-cxxapi.$(OBJEXT) \
-	wxforms-dtsuserpw.$(OBJEXT) wxforms-wxforms.$(OBJEXT)
-wxforms_OBJECTS = $(am_wxforms_OBJECTS)
+am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+am__vpath_adj = case $$p in \
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
+am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
+am__install_max = 40
+am__nobase_strip_setup = \
+  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+am__nobase_strip = \
+  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+am__nobase_list = $(am__nobase_strip_setup); \
+  for p in $$list; do echo "$$p $$p"; done | \
+  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
+am__base_list = \
+  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+am__uninstall_files_from_dir = { \
+  test -z "$$files" \
+    || { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
+    || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
+         $(am__cd) "$$dir" && rm -f $$files; }; \
+  }
+am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" \
+	"$(DESTDIR)$(includeinstdir)"
+LTLIBRARIES = $(lib_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-wxforms_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+libdtsapp_gui_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
+am_libdtsapp_gui_la_OBJECTS = libdtsapp_gui_la-DTSApp.lo \
+	libdtsapp_gui_la-DTSFrame.lo libdtsapp_gui_la-DTSPanel.lo \
+	libdtsapp_gui_la-evdata.lo libdtsapp_gui_la-cxxapi.lo \
+	libdtsapp_gui_la-dtsuserpw.lo
+libdtsapp_gui_la_OBJECTS = $(am_libdtsapp_gui_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-wxforms_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(wxforms_CXXFLAGS) \
-	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+libdtsapp_gui_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libdtsapp_gui_la_LDFLAGS) $(LDFLAGS) -o $@
+PROGRAMS = $(bin_PROGRAMS)
+am_wxforms_OBJECTS = wxforms-wxforms.$(OBJEXT)
+wxforms_OBJECTS = $(am_wxforms_OBJECTS)
+wxforms_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	libdtsapp_gui.la
+wxforms_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(wxforms_CFLAGS) \
+	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -161,13 +201,14 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(wxforms_SOURCES)
-DIST_SOURCES = $(wxforms_SOURCES)
+SOURCES = $(libdtsapp_gui_la_SOURCES) $(wxforms_SOURCES)
+DIST_SOURCES = $(libdtsapp_gui_la_SOURCES) $(wxforms_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
+DATA = $(includeinst_DATA)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # Read a list of newline-separated strings from the standard input,
 # and print each of them once, without duplicates.  Input order is
@@ -234,6 +275,7 @@ LIBTOOL = @LIBTOOL@
 LIPO = @LIPO@
 LN_S = @LN_S@
 LTLIBOBJS = @LTLIBOBJS@
+LT_LIBVER = @LT_LIBVER@
 MAKEINFO = @MAKEINFO@
 MANIFEST_TOOL = @MANIFEST_TOOL@
 MKDIR_P = @MKDIR_P@
@@ -330,10 +372,18 @@ ACLOCAL_AMFLAGS = -I m4
 AM_CFLAGS = -I./include $(DEVELOPER_CFLAGS)
 AM_CXXFLAGS = -I./include $(DEVELOPER_CFLAGS)
 EXTRA_DIST = include
-wxforms_SOURCES = DTSApp.cpp DTSFrame.cpp DTSPanel.cpp evdata.cpp cxxapi.cpp dtsuserpw.c wxforms.c
+lib_LTLIBRARIES = libdtsapp_gui.la
+includeinstdir = $(oldincludedir)/dtsapplib
+includeinst_DATA = include/dtsgui.h
+libdtsapp_gui_la_SOURCES = DTSApp.cpp DTSFrame.cpp DTSPanel.cpp evdata.cpp cxxapi.cpp dtsuserpw.c
+libdtsapp_gui_la_LIBADD = $(WX_LIBS) $(DTSAPPLIB_LIBS)
+libdtsapp_gui_la_CFLAGS = $(AM_CFLAGS) $(WX_CFLAGS) $(DTSAPPLIB_CFLAGS)
+libdtsapp_gui_la_CXXFLAGS = $(AM_CXXFLAGS) $(WX_CXXFLAGS) $(DTSAPPLIB_CFLAGS)
+libdtsapp_gui_la_LDFLAGS = -version-info $(LT_LIBVER) -release $(VERSION)
+wxforms_SOURCES = wxforms.c
 wxforms_CFLAGS = $(AM_CFLAGS) $(WX_CFLAGS) $(DTSAPPLIB_CFLAGS)
 wxforms_CXXFLAGS = $(AM_CXXFLAGS) $(WX_CXXFLAGS) $(DTSAPPLIB_CFLAGS)
-wxforms_LDADD = $(WX_LIBS) $(DTSAPPLIB_LIBS)
+wxforms_LDADD = $(WX_LIBS) $(DTSAPPLIB_LIBS) libdtsapp_gui.la
 all: all-am
 
 .SUFFIXES:
@@ -368,6 +418,44 @@ $(top_srcdir)/configure:  $(am__configure_deps)
 $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
+
+install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+	@$(NORMAL_INSTALL)
+	@list='$(lib_LTLIBRARIES)'; test -n "$(libdir)" || list=; \
+	list2=; for p in $$list; do \
+	  if test -f $$p; then \
+	    list2="$$list2 $$p"; \
+	  else :; fi; \
+	done; \
+	test -z "$$list2" || { \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(libdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(libdir)" || exit 1; \
+	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 '$(DESTDIR)$(libdir)'"; \
+	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 "$(DESTDIR)$(libdir)"; \
+	}
+
+uninstall-libLTLIBRARIES:
+	@$(NORMAL_UNINSTALL)
+	@list='$(lib_LTLIBRARIES)'; test -n "$(libdir)" || list=; \
+	for p in $$list; do \
+	  $(am__strip_dir) \
+	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(DESTDIR)$(libdir)/$$f'"; \
+	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(DESTDIR)$(libdir)/$$f"; \
+	done
+
+clean-libLTLIBRARIES:
+	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+	@list='$(lib_LTLIBRARIES)'; \
+	locs=`for p in $$list; do echo $$p; done | \
+	      sed 's|^[^/]*$$|.|; s|/[^/]*$$||; s|$$|/so_locations|' | \
+	      sort -u`; \
+	test -z "$$locs" || { \
+	  echo rm -f $${locs}; \
+	  rm -f $${locs}; \
+	}
+
+libdtsapp_gui.la: $(libdtsapp_gui_la_OBJECTS) $(libdtsapp_gui_la_DEPENDENCIES) $(EXTRA_libdtsapp_gui_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libdtsapp_gui_la_LINK) -rpath $(libdir) $(libdtsapp_gui_la_OBJECTS) $(libdtsapp_gui_la_LIBADD) $(LIBS)
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
 	@list='$(bin_PROGRAMS)'; test -n "$(bindir)" || list=; \
@@ -420,7 +508,7 @@ clean-binPROGRAMS:
 
 wxforms$(EXEEXT): $(wxforms_OBJECTS) $(wxforms_DEPENDENCIES) $(EXTRA_wxforms_DEPENDENCIES) 
 	@rm -f wxforms$(EXEEXT)
-	$(AM_V_CXXLD)$(wxforms_LINK) $(wxforms_OBJECTS) $(wxforms_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(wxforms_LINK) $(wxforms_OBJECTS) $(wxforms_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -428,12 +516,12 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wxforms-DTSApp.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wxforms-DTSFrame.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wxforms-DTSPanel.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wxforms-cxxapi.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wxforms-dtsuserpw.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wxforms-evdata.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdtsapp_gui_la-DTSApp.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdtsapp_gui_la-DTSFrame.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdtsapp_gui_la-DTSPanel.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdtsapp_gui_la-cxxapi.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdtsapp_gui_la-dtsuserpw.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdtsapp_gui_la-evdata.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/wxforms-wxforms.Po@am__quote@
 
 .c.o:
@@ -457,19 +545,12 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
 
-wxforms-dtsuserpw.o: dtsuserpw.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CFLAGS) $(CFLAGS) -MT wxforms-dtsuserpw.o -MD -MP -MF $(DEPDIR)/wxforms-dtsuserpw.Tpo -c -o wxforms-dtsuserpw.o `test -f 'dtsuserpw.c' || echo '$(srcdir)/'`dtsuserpw.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-dtsuserpw.Tpo $(DEPDIR)/wxforms-dtsuserpw.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='dtsuserpw.c' object='wxforms-dtsuserpw.o' libtool=no @AMDEPBACKSLASH@
+libdtsapp_gui_la-dtsuserpw.lo: dtsuserpw.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CFLAGS) $(CFLAGS) -MT libdtsapp_gui_la-dtsuserpw.lo -MD -MP -MF $(DEPDIR)/libdtsapp_gui_la-dtsuserpw.Tpo -c -o libdtsapp_gui_la-dtsuserpw.lo `test -f 'dtsuserpw.c' || echo '$(srcdir)/'`dtsuserpw.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libdtsapp_gui_la-dtsuserpw.Tpo $(DEPDIR)/libdtsapp_gui_la-dtsuserpw.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='dtsuserpw.c' object='libdtsapp_gui_la-dtsuserpw.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CFLAGS) $(CFLAGS) -c -o wxforms-dtsuserpw.o `test -f 'dtsuserpw.c' || echo '$(srcdir)/'`dtsuserpw.c
-
-wxforms-dtsuserpw.obj: dtsuserpw.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CFLAGS) $(CFLAGS) -MT wxforms-dtsuserpw.obj -MD -MP -MF $(DEPDIR)/wxforms-dtsuserpw.Tpo -c -o wxforms-dtsuserpw.obj `if test -f 'dtsuserpw.c'; then $(CYGPATH_W) 'dtsuserpw.c'; else $(CYGPATH_W) '$(srcdir)/dtsuserpw.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-dtsuserpw.Tpo $(DEPDIR)/wxforms-dtsuserpw.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='dtsuserpw.c' object='wxforms-dtsuserpw.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CFLAGS) $(CFLAGS) -c -o wxforms-dtsuserpw.obj `if test -f 'dtsuserpw.c'; then $(CYGPATH_W) 'dtsuserpw.c'; else $(CYGPATH_W) '$(srcdir)/dtsuserpw.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CFLAGS) $(CFLAGS) -c -o libdtsapp_gui_la-dtsuserpw.lo `test -f 'dtsuserpw.c' || echo '$(srcdir)/'`dtsuserpw.c
 
 wxforms-wxforms.o: wxforms.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CFLAGS) $(CFLAGS) -MT wxforms-wxforms.o -MD -MP -MF $(DEPDIR)/wxforms-wxforms.Tpo -c -o wxforms-wxforms.o `test -f 'wxforms.c' || echo '$(srcdir)/'`wxforms.c
@@ -506,81 +587,67 @@ wxforms-wxforms.obj: wxforms.c
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LTCXXCOMPILE) -c -o $@ $<
 
-wxforms-DTSApp.o: DTSApp.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-DTSApp.o -MD -MP -MF $(DEPDIR)/wxforms-DTSApp.Tpo -c -o wxforms-DTSApp.o `test -f 'DTSApp.cpp' || echo '$(srcdir)/'`DTSApp.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-DTSApp.Tpo $(DEPDIR)/wxforms-DTSApp.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSApp.cpp' object='wxforms-DTSApp.o' libtool=no @AMDEPBACKSLASH@
+libdtsapp_gui_la-DTSApp.lo: DTSApp.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -MT libdtsapp_gui_la-DTSApp.lo -MD -MP -MF $(DEPDIR)/libdtsapp_gui_la-DTSApp.Tpo -c -o libdtsapp_gui_la-DTSApp.lo `test -f 'DTSApp.cpp' || echo '$(srcdir)/'`DTSApp.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libdtsapp_gui_la-DTSApp.Tpo $(DEPDIR)/libdtsapp_gui_la-DTSApp.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSApp.cpp' object='libdtsapp_gui_la-DTSApp.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-DTSApp.o `test -f 'DTSApp.cpp' || echo '$(srcdir)/'`DTSApp.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -c -o libdtsapp_gui_la-DTSApp.lo `test -f 'DTSApp.cpp' || echo '$(srcdir)/'`DTSApp.cpp
 
-wxforms-DTSApp.obj: DTSApp.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-DTSApp.obj -MD -MP -MF $(DEPDIR)/wxforms-DTSApp.Tpo -c -o wxforms-DTSApp.obj `if test -f 'DTSApp.cpp'; then $(CYGPATH_W) 'DTSApp.cpp'; else $(CYGPATH_W) '$(srcdir)/DTSApp.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-DTSApp.Tpo $(DEPDIR)/wxforms-DTSApp.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSApp.cpp' object='wxforms-DTSApp.obj' libtool=no @AMDEPBACKSLASH@
+libdtsapp_gui_la-DTSFrame.lo: DTSFrame.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -MT libdtsapp_gui_la-DTSFrame.lo -MD -MP -MF $(DEPDIR)/libdtsapp_gui_la-DTSFrame.Tpo -c -o libdtsapp_gui_la-DTSFrame.lo `test -f 'DTSFrame.cpp' || echo '$(srcdir)/'`DTSFrame.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libdtsapp_gui_la-DTSFrame.Tpo $(DEPDIR)/libdtsapp_gui_la-DTSFrame.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSFrame.cpp' object='libdtsapp_gui_la-DTSFrame.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-DTSApp.obj `if test -f 'DTSApp.cpp'; then $(CYGPATH_W) 'DTSApp.cpp'; else $(CYGPATH_W) '$(srcdir)/DTSApp.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -c -o libdtsapp_gui_la-DTSFrame.lo `test -f 'DTSFrame.cpp' || echo '$(srcdir)/'`DTSFrame.cpp
 
-wxforms-DTSFrame.o: DTSFrame.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-DTSFrame.o -MD -MP -MF $(DEPDIR)/wxforms-DTSFrame.Tpo -c -o wxforms-DTSFrame.o `test -f 'DTSFrame.cpp' || echo '$(srcdir)/'`DTSFrame.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-DTSFrame.Tpo $(DEPDIR)/wxforms-DTSFrame.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSFrame.cpp' object='wxforms-DTSFrame.o' libtool=no @AMDEPBACKSLASH@
+libdtsapp_gui_la-DTSPanel.lo: DTSPanel.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -MT libdtsapp_gui_la-DTSPanel.lo -MD -MP -MF $(DEPDIR)/libdtsapp_gui_la-DTSPanel.Tpo -c -o libdtsapp_gui_la-DTSPanel.lo `test -f 'DTSPanel.cpp' || echo '$(srcdir)/'`DTSPanel.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libdtsapp_gui_la-DTSPanel.Tpo $(DEPDIR)/libdtsapp_gui_la-DTSPanel.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSPanel.cpp' object='libdtsapp_gui_la-DTSPanel.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-DTSFrame.o `test -f 'DTSFrame.cpp' || echo '$(srcdir)/'`DTSFrame.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -c -o libdtsapp_gui_la-DTSPanel.lo `test -f 'DTSPanel.cpp' || echo '$(srcdir)/'`DTSPanel.cpp
 
-wxforms-DTSFrame.obj: DTSFrame.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-DTSFrame.obj -MD -MP -MF $(DEPDIR)/wxforms-DTSFrame.Tpo -c -o wxforms-DTSFrame.obj `if test -f 'DTSFrame.cpp'; then $(CYGPATH_W) 'DTSFrame.cpp'; else $(CYGPATH_W) '$(srcdir)/DTSFrame.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-DTSFrame.Tpo $(DEPDIR)/wxforms-DTSFrame.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSFrame.cpp' object='wxforms-DTSFrame.obj' libtool=no @AMDEPBACKSLASH@
+libdtsapp_gui_la-evdata.lo: evdata.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -MT libdtsapp_gui_la-evdata.lo -MD -MP -MF $(DEPDIR)/libdtsapp_gui_la-evdata.Tpo -c -o libdtsapp_gui_la-evdata.lo `test -f 'evdata.cpp' || echo '$(srcdir)/'`evdata.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libdtsapp_gui_la-evdata.Tpo $(DEPDIR)/libdtsapp_gui_la-evdata.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='evdata.cpp' object='libdtsapp_gui_la-evdata.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-DTSFrame.obj `if test -f 'DTSFrame.cpp'; then $(CYGPATH_W) 'DTSFrame.cpp'; else $(CYGPATH_W) '$(srcdir)/DTSFrame.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -c -o libdtsapp_gui_la-evdata.lo `test -f 'evdata.cpp' || echo '$(srcdir)/'`evdata.cpp
 
-wxforms-DTSPanel.o: DTSPanel.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-DTSPanel.o -MD -MP -MF $(DEPDIR)/wxforms-DTSPanel.Tpo -c -o wxforms-DTSPanel.o `test -f 'DTSPanel.cpp' || echo '$(srcdir)/'`DTSPanel.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-DTSPanel.Tpo $(DEPDIR)/wxforms-DTSPanel.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSPanel.cpp' object='wxforms-DTSPanel.o' libtool=no @AMDEPBACKSLASH@
+libdtsapp_gui_la-cxxapi.lo: cxxapi.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -MT libdtsapp_gui_la-cxxapi.lo -MD -MP -MF $(DEPDIR)/libdtsapp_gui_la-cxxapi.Tpo -c -o libdtsapp_gui_la-cxxapi.lo `test -f 'cxxapi.cpp' || echo '$(srcdir)/'`cxxapi.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libdtsapp_gui_la-cxxapi.Tpo $(DEPDIR)/libdtsapp_gui_la-cxxapi.Plo
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='cxxapi.cpp' object='libdtsapp_gui_la-cxxapi.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-DTSPanel.o `test -f 'DTSPanel.cpp' || echo '$(srcdir)/'`DTSPanel.cpp
-
-wxforms-DTSPanel.obj: DTSPanel.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-DTSPanel.obj -MD -MP -MF $(DEPDIR)/wxforms-DTSPanel.Tpo -c -o wxforms-DTSPanel.obj `if test -f 'DTSPanel.cpp'; then $(CYGPATH_W) 'DTSPanel.cpp'; else $(CYGPATH_W) '$(srcdir)/DTSPanel.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-DTSPanel.Tpo $(DEPDIR)/wxforms-DTSPanel.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='DTSPanel.cpp' object='wxforms-DTSPanel.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-DTSPanel.obj `if test -f 'DTSPanel.cpp'; then $(CYGPATH_W) 'DTSPanel.cpp'; else $(CYGPATH_W) '$(srcdir)/DTSPanel.cpp'; fi`
-
-wxforms-evdata.o: evdata.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-evdata.o -MD -MP -MF $(DEPDIR)/wxforms-evdata.Tpo -c -o wxforms-evdata.o `test -f 'evdata.cpp' || echo '$(srcdir)/'`evdata.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-evdata.Tpo $(DEPDIR)/wxforms-evdata.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='evdata.cpp' object='wxforms-evdata.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-evdata.o `test -f 'evdata.cpp' || echo '$(srcdir)/'`evdata.cpp
-
-wxforms-evdata.obj: evdata.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-evdata.obj -MD -MP -MF $(DEPDIR)/wxforms-evdata.Tpo -c -o wxforms-evdata.obj `if test -f 'evdata.cpp'; then $(CYGPATH_W) 'evdata.cpp'; else $(CYGPATH_W) '$(srcdir)/evdata.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-evdata.Tpo $(DEPDIR)/wxforms-evdata.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='evdata.cpp' object='wxforms-evdata.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-evdata.obj `if test -f 'evdata.cpp'; then $(CYGPATH_W) 'evdata.cpp'; else $(CYGPATH_W) '$(srcdir)/evdata.cpp'; fi`
-
-wxforms-cxxapi.o: cxxapi.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-cxxapi.o -MD -MP -MF $(DEPDIR)/wxforms-cxxapi.Tpo -c -o wxforms-cxxapi.o `test -f 'cxxapi.cpp' || echo '$(srcdir)/'`cxxapi.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-cxxapi.Tpo $(DEPDIR)/wxforms-cxxapi.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='cxxapi.cpp' object='wxforms-cxxapi.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-cxxapi.o `test -f 'cxxapi.cpp' || echo '$(srcdir)/'`cxxapi.cpp
-
-wxforms-cxxapi.obj: cxxapi.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -MT wxforms-cxxapi.obj -MD -MP -MF $(DEPDIR)/wxforms-cxxapi.Tpo -c -o wxforms-cxxapi.obj `if test -f 'cxxapi.cpp'; then $(CYGPATH_W) 'cxxapi.cpp'; else $(CYGPATH_W) '$(srcdir)/cxxapi.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/wxforms-cxxapi.Tpo $(DEPDIR)/wxforms-cxxapi.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='cxxapi.cpp' object='wxforms-cxxapi.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(wxforms_CXXFLAGS) $(CXXFLAGS) -c -o wxforms-cxxapi.obj `if test -f 'cxxapi.cpp'; then $(CYGPATH_W) 'cxxapi.cpp'; else $(CYGPATH_W) '$(srcdir)/cxxapi.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libdtsapp_gui_la_CXXFLAGS) $(CXXFLAGS) -c -o libdtsapp_gui_la-cxxapi.lo `test -f 'cxxapi.cpp' || echo '$(srcdir)/'`cxxapi.cpp
 
 mostlyclean-libtool:
 	-rm -f *.lo
 
 clean-libtool:
 	-rm -rf .libs _libs
+install-includeinstDATA: $(includeinst_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(includeinst_DATA)'; test -n "$(includeinstdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(includeinstdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(includeinstdir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(includeinstdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(includeinstdir)" || exit $$?; \
+	done
+
+uninstall-includeinstDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(includeinst_DATA)'; test -n "$(includeinstdir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(includeinstdir)'; $(am__uninstall_files_from_dir)
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -666,9 +733,11 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(PROGRAMS)
+all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(DATA)
+install-binPROGRAMS: install-libLTLIBRARIES
+
 installdirs:
-	for dir in "$(DESTDIR)$(bindir)"; do \
+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(includeinstdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -703,7 +772,8 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 clean: clean-am
 
-clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+clean-am: clean-binPROGRAMS clean-generic clean-libLTLIBRARIES \
+	clean-libtool mostlyclean-am
 
 distclean: distclean-am
 	-rm -rf ./$(DEPDIR)
@@ -723,13 +793,13 @@ info: info-am
 
 info-am:
 
-install-data-am:
+install-data-am: install-includeinstDATA
 
 install-dvi: install-dvi-am
 
 install-dvi-am:
 
-install-exec-am: install-binPROGRAMS
+install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
 
 install-html: install-html-am
 
@@ -769,23 +839,27 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-binPROGRAMS
+uninstall-am: uninstall-binPROGRAMS uninstall-includeinstDATA \
+	uninstall-libLTLIBRARIES
 
 .MAKE: install-am install-strip
 
 .PHONY: CTAGS GTAGS TAGS all all-am check check-am clean \
-	clean-binPROGRAMS clean-generic clean-libtool cscopelist-am \
-	ctags ctags-am distclean distclean-compile distclean-generic \
-	distclean-libtool distclean-tags distdir dvi dvi-am html \
-	html-am info info-am install install-am install-binPROGRAMS \
-	install-data install-data-am install-dvi install-dvi-am \
-	install-exec install-exec-am install-html install-html-am \
-	install-info install-info-am install-man install-pdf \
-	install-pdf-am install-ps install-ps-am install-strip \
-	installcheck installcheck-am installdirs maintainer-clean \
+	clean-binPROGRAMS clean-generic clean-libLTLIBRARIES \
+	clean-libtool cscopelist-am ctags ctags-am distclean \
+	distclean-compile distclean-generic distclean-libtool \
+	distclean-tags distdir dvi dvi-am html html-am info info-am \
+	install install-am install-binPROGRAMS install-data \
+	install-data-am install-dvi install-dvi-am install-exec \
+	install-exec-am install-html install-html-am \
+	install-includeinstDATA install-info install-info-am \
+	install-libLTLIBRARIES install-man install-pdf install-pdf-am \
+	install-ps install-ps-am install-strip installcheck \
+	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
-	tags tags-am uninstall uninstall-am uninstall-binPROGRAMS
+	tags tags-am uninstall uninstall-am uninstall-binPROGRAMS \
+	uninstall-includeinstDATA uninstall-libLTLIBRARIES
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
