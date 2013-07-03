@@ -1,0 +1,16 @@
+/bin
+/obj
+/Test.cbp
+/Test.depend
+/Test.layout
+autom4te.cache
+config.h.in~
+*.o
+.deps
+Makefile
+config.h
+config.log
+config.status
+libtool
+stamp-h1
+src/wxforms
