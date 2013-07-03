@@ -131,11 +131,9 @@ int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 	/*load xml config via http*/
 	if (!(appdata->xmldoc = loadxmlconf(dtsgui))) {
 		objunref(appdata);
-		return 0;
+		dtsgui_confirm(dtsgui, "Config DL Failed (as expected after 3 tries)\nHello Dave\n\nWould You Like To Play .... Thermo Nuclear War ?");
+		return 1;
 	}
-
-	/*dtsgui_confirm(dtsgui, "Would You Like To Play .... Thermo Nuclear War ?");*/
-
 	return 1;
 }
 
