@@ -1,4 +1,4 @@
-/*
+	/*
     Distrotech Solutions wxWidgets Gui Interface
     Copyright (C) 2013 Gregory Hinton Nietsky <gregory@distrotech.co.za>
 
@@ -70,7 +70,7 @@ bool DTSFrame::Confirm(wxString text) {
 	int res;
 
 	confirm = new wxMessageDialog(NULL, text, wxT("Confirm"),
-					wxYES_NO | wxNO_DEFAULT | wxICON_QUESTION);
+								  wxYES_NO | wxNO_DEFAULT | wxICON_QUESTION);
 	res = confirm->ShowModal();
 	confirm->Destroy();
 
@@ -81,7 +81,7 @@ bool DTSFrame::Confirm(wxString text) {
 	}
 }
 
-void DTSFrame::OnAbort(wxCloseEvent& event) {
+void DTSFrame::OnAbort(wxCloseEvent &event) {
 	if (abortconfirm && !Confirm("Are You Sure You Want To Abort ?")) {
 		event.Veto();
 	} else {
@@ -102,7 +102,8 @@ void DTSFrame::OnClose(wxCommandEvent &event) {
 		case wxID_SAVE:
 			confirm = Confirm("Save And Exit ?");
 			break;
-		default:
+		default
+				:
 			confirm = true;
 	}
 

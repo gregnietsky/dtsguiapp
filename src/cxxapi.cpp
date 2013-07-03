@@ -137,7 +137,7 @@ void newappframe(struct dtsgui *dtsgui) {
 }
 
 int dtsgui_confirm(struct dtsgui *dtsgui, const char *text) {
-	DTSFrame *f = (DTSFrame*)dtsgui->appframe;
+	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
 
 	return f->Confirm(text);
 }
@@ -221,7 +221,7 @@ dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char
 	wxWindow *w = p->GetPanel();
 
 	wxTextCtrl *eb = new wxTextCtrl(w, -1, buf, wxDefaultPosition, wxDefaultSize,
-		wxTE_MULTILINE | wxTE_RICH | wxTE_READONLY, wxDefaultValidator, wxTextCtrlNameStr);
+									wxTE_MULTILINE | wxTE_RICH | wxTE_READONLY, wxDefaultValidator, wxTextCtrlNameStr);
 
 	p->AddItem(eb, wxGBPosition(0,0), wxGBSpan(10, 6), wxEXPAND|wxGROW, 0);
 

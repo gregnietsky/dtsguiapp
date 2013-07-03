@@ -29,7 +29,7 @@ class DTSFrame: public wxFrame {
 		void SwitchWindow(wxCommandEvent &event);
 		bool Confirm(wxString text);
 		void OnClose(wxCommandEvent &event);
-		void OnAbort(wxCloseEvent& event);
+		void OnAbort(wxCloseEvent &event);
 		void OnAbout(wxCommandEvent &event);
 	private:
 		wxBoxSizer *sizer;
