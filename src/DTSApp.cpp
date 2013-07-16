@@ -19,6 +19,12 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#ifdef __WIN32__
+#define UNICODE 1
+#include <winsock2.h>
+#include <windows.h>
+#endif
+
 #include <wx/app.h>
 
 #include <dtsapp.h>

@@ -24,6 +24,7 @@ AC_PROG_MAKE_SET
 # Checks for libraries.
 AM_INIT_AUTOMAKE
 AC_CONFIG_MACRO_DIR([m4])
+AC_LIBTOOL_WIN32_DLL
 LT_INIT()
 AM_PROG_CC_C_O
 
@@ -33,7 +34,7 @@ AC_ARG_ENABLE([dev-mode], AS_HELP_STRING([--enable-dev-mode], [Developer mode -g
 AC_ARG_ENABLE([world-peace], AS_HELP_STRING([--enable-world-peace], [Yeah right .....]))
 
 if test "x$enable_dev_mode" = "xyes" ; then
- DEVELOPER_CFLAGS="-g -Wall -Werror -pedantic-errors -Wno-long-long"
+ DEVELOPER_CFLAGS="-g -Wall -Werror -pedantic-errors -Wno-long-long -Wno-unused-local-typedefs"
 fi;
 AC_SUBST(DEVELOPER_CFLAGS)
 

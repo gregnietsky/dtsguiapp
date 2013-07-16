@@ -16,6 +16,14 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#ifdef __WIN32__
+#define UNICODE 1
+#include <winsock2.h>
+#include <windows.h>
+#endif
+
+#include <stdint.h>
+
 #include <wx/app.h>
 #include <wx/frame.h>
 #include <wx/sizer.h>

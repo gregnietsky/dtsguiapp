@@ -47,7 +47,7 @@ DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size
 	dtsgui->appframe = this;
 
 	blank = new wxWindow(this, -1);
-	sizer->Add(blank, 1, wxALL | wxEXPAND, 15);
+	sizer->Add(blank, 1, wxALL | wxEXPAND);
 	a_window = blank;
 
 	blank->Show(true);
@@ -126,7 +126,7 @@ void DTSFrame::SetWindow(wxWindow *window) {
 
 	sizer->Detach(0);
 	a_window->Show(false);
-	sizer->Prepend(window, 1, wxALL | wxEXPAND, 15);
+	sizer->Prepend(window, 1, wxALL | wxEXPAND);
 	if (window == blank) {
 		SetStatusText(status);
 	}

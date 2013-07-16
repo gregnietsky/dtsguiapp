@@ -1,17 +1,17 @@
 ACLOCAL_AMFLAGS = -I m4
-AM_CFLAGS = -I./include $(DEVELOPER_CFLAGS)
-AM_CXXFLAGS = -I./include $(DEVELOPER_CFLAGS)
+AM_CFLAGS = -I$(srcdir)/include $(DEVELOPER_CFLAGS)
+AM_CXXFLAGS = -I$(srcdir)/include $(DEVELOPER_CFLAGS)
 EXTRA_DIST = include
 
 lib_LTLIBRARIES = libdtsapp_gui.la
-includeinstdir = $(oldincludedir)/dtsapplib
+includeinstdir = $(includedir)/dtsapplib
 includeinst_DATA = include/dtsgui.h
 
 libdtsapp_gui_la_SOURCES = DTSApp.cpp DTSFrame.cpp DTSPanel.cpp evdata.cpp cxxapi.cpp dtsuserpw.c
 libdtsapp_gui_la_LIBADD = $(WX_LIBS) $(DTSAPPLIB_LIBS)
 libdtsapp_gui_la_CFLAGS = $(AM_CFLAGS) $(WX_CFLAGS) $(DTSAPPLIB_CFLAGS)
 libdtsapp_gui_la_CXXFLAGS = $(AM_CXXFLAGS) $(WX_CXXFLAGS) $(DTSAPPLIB_CFLAGS)
-libdtsapp_gui_la_LDFLAGS = -version-info $(LT_LIBVER) -release $(VERSION)
+libdtsapp_gui_la_LDFLAGS = -version-info $(LT_LIBVER) -release $(VERSION) -no-undefined
 
 # Here are a set of rules to help you update your library version information:
 #
