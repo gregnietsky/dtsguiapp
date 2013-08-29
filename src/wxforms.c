@@ -20,10 +20,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 
 #include <dtsapp.h>
 
 #include "dtsgui.h"
+
+#ifndef DATA_DIR
+#define DATA_DIR	"/usr/share/dtsguiapp"
+#endif // DATA_DIR
 
 struct app_data {
 	struct dtsgui *dtsgui;
@@ -95,16 +100,17 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dtsgui_xmltextbox(pg, "VAT No.", NULL, NULL);
 
 	pg=dp[1];
-	dtsgui_xmltextbox(pg, "IPv4 Address [IP/SN]", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Domain Name", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Default Gateway", NULL, NULL);
-	dtsgui_xmltextbox(pg, "SMTP Gateway", NULL, NULL);
-	dtsgui_xmltextbox(pg, "NTP Server", NULL, NULL);
+	dtsgui_xmltextbox(pg, "IPv4 Address", "/config/IP/Interfaces/Interface[/config/IP/SysConf/Option[@option = 'Internal'] = .]", "ipaddr");
+	dtsgui_xmltextbox(pg, "IPv4 Subnet Length", "/config/IP/Interfaces/Interface[/config/IP/SysConf/Option[@option = 'Internal'] = .]", "subnet");
+	dtsgui_xmltextbox(pg, "Domain Name", "/config/DNS/Config/Option[@option = 'Domain']", NULL);
+	dtsgui_xmltextbox(pg, "Default Gateway", "/config/IP/SysConf/Option[@option = 'Nexthop']", NULL);
+	dtsgui_xmltextbox(pg, "SMTP Gateway", "/config/Email/Config/Option[@option = 'Smarthost']", NULL);
+	dtsgui_xmltextbox(pg, "NTP Server", "/config/IP/SysConf/Option[@option = 'NTPServer']", NULL);
 
 	pg=dp[2];
-	dtsgui_xmltextbox(pg, "Dynamic DNS Server", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Dynamic DNS Zone", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Dynamic DNS KEY", NULL, NULL);
+	dtsgui_xmltextbox(pg, "Dynamic DNS Server", "/config/DNS/Config/Option[@option = 'DynServ']", NULL);
+	dtsgui_xmltextbox(pg, "Dynamic DNS Zone", "/config/DNS/Config/Option[@option = 'DynZone']", NULL);
+	dtsgui_xmltextbox(pg, "Dynamic DNS KEY", "/config/DNS/Config/Option[@option = 'DynKey']", NULL);
 
 	pg=dp[3];
 	dtsgui_xmltextbox(pg, "Primary DNS", NULL, NULL);
@@ -115,16 +121,17 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dtsgui_xmltextbox(pg, "Secondary MX", NULL, NULL);
 
 	pg=dp[4];
-	dtsgui_xmltextbox(pg, "Country Code", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Province/State", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Company", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Division", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Name", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Email", NULL, NULL);
+	dtsgui_xmltextbox(pg, "Country Code", "/config/X509/Option[@option = 'Country']", NULL);
+	dtsgui_xmltextbox(pg, "Province/State", "/config/X509/Option[@option = 'State']", NULL);
+	dtsgui_xmltextbox(pg, "City", "/config/X509/Option[@option = 'City']", NULL);
+	dtsgui_xmltextbox(pg, "Company", "/config/X509/Option[@option = 'Company']", NULL);
+	dtsgui_xmltextbox(pg, "Division", "/config/X509/Option[@option = 'Division']", NULL);
+	dtsgui_xmltextbox(pg, "Name", "/config/X509/Option[@option = 'Name']", NULL);
+	dtsgui_xmltextbox(pg, "Email", "/config/X509/Option[@option = 'Email']", NULL);
 
 	pg=dp[5];
-	dtsgui_xmltextbox(pg, "Workgroup/Domain", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Aliases", NULL, NULL);
+	dtsgui_xmltextbox(pg, "Workgroup/Domain", "/config/FileServer/Setup/Option[@option = 'Domain']", NULL);
+	dtsgui_xmltextbox(pg, "Aliases", "/config/FileServer/Config/Item[starts-with(.,'netbios name')]", NULL);
 	dtsgui_xmltextbox(pg, "Domain Controllers", NULL, NULL);
 	dtsgui_xmltextbox(pg, "Realm [If Joining ADS]", NULL, NULL);
 	dtsgui_xmlcheckbox(pg, "Domain Controller", NULL, NULL);
@@ -137,10 +144,10 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dtsgui_listbox_add(ilist, "3G", NULL);
 	objunref(ilist);
 	dtsgui_xmlcheckbox(pg, "External Device Is PPPoE", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Number/Service/APN", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Username", NULL, NULL);
-	dtsgui_xmltextbox(pg, "Password", NULL, NULL);
-	dtsgui_xmltextbox(pg, "MTU", NULL, NULL);
+	dtsgui_xmltextbox(pg, "Number/Service/APN", "/config/IP/Dialup/Option[@option = 'Number']", NULL);
+	dtsgui_xmltextbox(pg, "Username", "/config/IP/Dialup/Option[@option = 'Username']", NULL);
+	dtsgui_xmltextbox(pg, "Password", "/config/IP/Dialup/Option[@option = 'Password']", NULL);
+	dtsgui_xmltextbox(pg, "MTU", "/config/IP/Dialup/Option[@option = 'MTU']", NULL);
 
 	pg=dp[7];
 	ilist = dtsgui_xmllistbox(pg, "Default Extension Permision", NULL, NULL);
@@ -248,26 +255,52 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 		} while (!newfile && !dtsgui_confirm(dtsgui, "No file selected !!!\nDo you want to continue (And loose settings)"));
 
 		if (newfile) {
+			xml_savefile(xmldoc, newfile, 1, 9);
 			objunref((void*)newfile);
 		}
+	} else if (filename && res) {
+		xml_savefile(xmldoc, filename, 1, 9);
 	}
 
 	objunref(twiz);
+	if (xmldoc) {
+		objunref(xmldoc);
+	}
 	return res;
 }
 
 int newsys_wizard(struct dtsgui *dtsgui, void *data) {
-	return system_wizard(dtsgui, data, NULL, NULL);
+	const char defconf[PATH_MAX];
+	struct xml_doc *xmldoc;
+
+	snprintf((char*)defconf, PATH_MAX, "%s/default.xml", DATA_DIR);
+	if (!is_file(defconf)) {
+		dtsgui_alert(dtsgui, "Default configuration not found.\nCheck Installation.");
+		return 0;
+	}
+
+	if (!(xmldoc = xml_loaddoc(defconf, 1))) {
+		dtsgui_alert(dtsgui, "Default configuration failed to load.\nCheck Installation.");
+		return 0;
+	}
+
+	return system_wizard(dtsgui, data, NULL, xmldoc);
 }
 
 int editsys_wizard(struct dtsgui *dtsgui, void *data) {
+	struct xml_doc *xmldoc;
 	const char *filename;
 
 	if (!(filename = dtsgui_fileopen(dtsgui, "Select Customer Configuration To Edit", NULL, "", "XML Configuration|*.xml"))) {
 		return 0;
 	}
 
-	return system_wizard(dtsgui, data, filename, NULL);
+	if (!(xmldoc = xml_loaddoc(filename, 0))) {
+		dtsgui_alert(dtsgui, "Configuration failed to load.\n");
+		return 0;
+	}
+
+	return system_wizard(dtsgui, data, filename, xmldoc);
 }
 
 void handle_test(dtsgui_pane p, int type, int event, void *data) {
@@ -321,7 +354,7 @@ void file_menu(struct dtsgui *dtsgui) {
 	file = dtsgui_newmenu(dtsgui, "&File");
 
 	dtsgui_newmenucb(file, dtsgui, "&New System", "New System Configuration Wizard", newsys_wizard, NULL);
-	dtsgui_newmenucb(file, dtsgui, "Re&Configure System", "Reconfigure Saved New System", editsys_wizard, NULL);
+	dtsgui_newmenucb(file, dtsgui, "&Edit Saved System", "Reconfigure Saved System File", editsys_wizard, NULL);
 	dtsgui_menusep(file);
 
 	testpanel(dtsgui, file);
