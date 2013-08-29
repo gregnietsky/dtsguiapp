@@ -126,8 +126,9 @@ void dtsgui_listbox_add(struct form_item *lbox, const char *text, void *data);
 /* returns auth struct needs to be un-ref'd*/
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
 
-/*confirm box*/
+/*message box's*/
 int dtsgui_confirm(struct dtsgui *dtsgui, const char *text);
+void dtsgui_alert(struct dtsgui *dtsgui, const char *text);
 
 /*set callback for a pane*/
 void dtsgui_setevcallback(dtsgui_pane pane,event_callback evcb, void *data);
