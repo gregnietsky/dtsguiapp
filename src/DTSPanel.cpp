@@ -44,6 +44,9 @@ void free_fitem(void *data) {
 	if (fi->name) {
 		free((void *)fi->name);
 	}
+	if (fi->data.ptr) {
+		objunref(fi->data.ptr);
+	}
 }
 
 struct form_item *DTSPanel::create_new_fitem(void *widget, enum widget_type type, const char *name, const char *value, void *data, enum form_data_type dtype) {
@@ -188,6 +191,10 @@ DTSPanel::~DTSPanel() {
 	}
 
 	objunref(fitems);
+
+	if (xmldoc) {
+		objunref(xmldoc);
+	}
 }
 
 void DTSPanel::EventHandler(int eid, wxCommandEvent *event) {
@@ -272,11 +279,35 @@ void DTSPanel::Title(const char *title) {
 }
 
 void DTSPanel::SetXMLDoc(struct xml_doc *xd) {
+	objref(xd);
 	xmldoc = xd;
+}
+
+void free_xmlelement(void *data) {
+	struct xml_element *xml = (struct xml_element*)data;
+
+	if (xml->xsearch) {
+		objunref(xml->xsearch);
+	}
 }
 
 struct xml_element *DTSPanel::GetNode(const char *xpath, const char *attr) {
 	struct xml_element *xml = NULL;
+
+	if (!xmldoc || !xpath || (!(xml = (struct xml_element*)objalloc(sizeof(*xml),free_xmlelement)))) {
+		return NULL;
+	}
+
+	if (!(xml->xsearch = xml_xpath(xmldoc, xpath, attr))) {
+		printf("Node Not Found: %s\n", xpath);
+		objunref(xml);
+		return NULL;
+	}
+
+	if (attr) {
+		xml->attr = strdup(attr);
+	}
+
 	return xml;
 }
 
@@ -288,6 +319,10 @@ void DTSPanel::TextBox(const char *title, wxString defval, int flags, int rows, 
 	AddItem(text, wxGBPosition(g_row, 0), wxGBSpan(rows, 3), wxLEFT | wxRIGHT, 10);
 	AddItem(tbox, wxGBPosition(g_row, 3), wxGBSpan(rows,3), wxEXPAND | wxGROW | wxLEFT | wxRIGHT, 10,	(rows > 1) ? 1 : -1);
 	g_row += rows;
+
+	if ((dtype == DTSGUI_FORM_DATA_XML) && !data) {
+		tbox->Disable();
+	}
 
 	fi = create_new_fitem(tbox, DTS_WIDGET_TEXTBOX, title, defval, data, dtype);
 	objunref(fi);
