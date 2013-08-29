@@ -299,7 +299,6 @@ struct xml_element *DTSPanel::GetNode(const char *xpath, const char *attr) {
 	}
 
 	if (!(xml->xsearch = xml_xpath(xmldoc, xpath, attr))) {
-		printf("Node Not Found: %s\n", xpath);
 		objunref(xml);
 		return NULL;
 	}
