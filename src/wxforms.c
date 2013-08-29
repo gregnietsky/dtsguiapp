@@ -62,13 +62,14 @@ struct xml_doc *loadxmlconf(struct dtsgui *dtsgui) {
 	return xmldoc;
 }
 
-int newsys_wizard(struct dtsgui *dtsgui, void *data) {
+int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struct xml_doc *xmldoc) {
 	dtsgui_pane dp[12], pg;
 	struct dtsgui_wizard *twiz;
 	struct form_item *ilist;
-	struct xml_doc *xmldoc = NULL;
+	const char *newfile;
+	int res;
 
-	twiz = dtsgui_newwizard(dtsgui, "New System Wizard");
+	twiz = dtsgui_newwizard(dtsgui, "System Configuration Wizard");
 
 	dp[0] = dtsgui_wizard_addpage(twiz, "Customer Information", NULL, xmldoc);
 	dp[1] = dtsgui_wizard_addpage(twiz, "Network/IP Information", NULL, xmldoc);
@@ -239,12 +240,35 @@ int newsys_wizard(struct dtsgui *dtsgui, void *data) {
 	dtsgui_xmlcheckbox(pg, "Use From User (SIP [Disables Sending CLI])", NULL, NULL);
 	dtsgui_xmlcheckbox(pg, "Disable Video", NULL, NULL);
 
-	dtsgui_runwizard(twiz);
+	res = dtsgui_runwizard(twiz);
+
+	if (!filename && res) {
+		do {
+			newfile = dtsgui_filesave(dtsgui, "Save New Customer Config To File", NULL, "newcustomer.xml", "*.xml");
+		} while (!newfile && !dtsgui_confirm(dtsgui, "No file selected !!!\nDo you want to continue (And loose settings)"));
+
+		if (newfile) {
+			objunref((void*)newfile);
+		}
+	}
 
 	objunref(twiz);
-	return 0;
+	return res;
 }
 
+int newsys_wizard(struct dtsgui *dtsgui, void *data) {
+	return system_wizard(dtsgui, data, NULL, NULL);
+}
+
+int editsys_wizard(struct dtsgui *dtsgui, void *data) {
+	const char *filename;
+
+	if (!(filename = dtsgui_fileopen(dtsgui, "Select Customer Configuration To Edit", NULL, "", "*.xml"))) {
+		return 0;
+	}
+
+	return system_wizard(dtsgui, data, filename, NULL);
+}
 
 void handle_test(dtsgui_pane p, int type, int event, void *data) {
 	switch(event) {
@@ -297,6 +321,7 @@ void file_menu(struct dtsgui *dtsgui) {
 	file = dtsgui_newmenu(dtsgui, "&File");
 
 	dtsgui_newmenucb(file, dtsgui, "&New System", "New System Configuration Wizard", newsys_wizard, NULL);
+	dtsgui_newmenucb(file, dtsgui, "Re&Configure System", "Reconfigure Saved New System", editsys_wizard, NULL);
 	dtsgui_menusep(file);
 
 	testpanel(dtsgui, file);

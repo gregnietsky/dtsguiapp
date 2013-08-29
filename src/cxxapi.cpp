@@ -40,6 +40,7 @@
 #include <wx/splitter.h>
 #include <wx/dataview.h>
 #include <wx/wizard.h>
+#include <wx/filedlg.h>
 
 #include <dtsapp.h>
 #include "dtsgui.hpp"
@@ -453,18 +454,34 @@ extern dtsgui_pane dtsgui_wizard_addpage(struct dtsgui_wizard *dtswiz, const cha
 	return page;
 }
 
-extern void dtsgui_runwizard(struct dtsgui_wizard *dtswiz) {
-//    wxWizardPage *wp;
-//    DTSWizardWindow *dww;
-//    wxSize psize;
-
+extern int dtsgui_runwizard(struct dtsgui_wizard *dtswiz) {
 	dtswiz->wiz->GetPageAreaSizer()->Add(dtswiz->start);
 	dtswiz->wiz->Center();
 
-	/*    for(wp = dtswiz->start;wp;wp=wp->GetNext()) {
-	        dww = dynamic_cast<DTSWizardWindow*>(wp);
-	        dww->SetSizerSize(psize, dtswiz->wiz);
-	    }*/
+	return dtswiz->wiz->RunWizard(dtswiz->start);
+}
 
-	dtswiz->wiz->RunWizard(dtswiz->start);
+const char *dtsgui_filedialog(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter, long style) {
+	wxFrame *f = (wxFrame *)dtsgui->appframe;
+	const char *filename = NULL;
+	int len;
+
+	wxFileDialog *fd = new wxFileDialog(f, title, (path) ? path : "", (name) ? name : "",
+										(filter) ? filter : wxFileSelectorDefaultWildcardStr, style);
+	if (fd->ShowModal() != wxID_CANCEL) {
+		len = strlen(fd->GetPath());
+		filename = (const char*)objalloc(len+1, NULL);
+		strcpy((char*)filename, fd->GetPath());
+	}
+
+	delete fd;
+	return filename;
+}
+
+extern const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
+	return dtsgui_filedialog(dtsgui, title, path, name, filter, wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
+}
+
+extern const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
+	return dtsgui_filedialog(dtsgui, title, path, name, filter, wxFD_OPEN);
 }

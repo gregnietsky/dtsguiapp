@@ -102,21 +102,21 @@ dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char
 dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *title);
 void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data);
 
-/*form items*/
+/*form items
+ *list/combo box must be unrefed when all items added
+ */
 extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *value, void *data);
 extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char *value, void *data);
 extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *value, void *data);
 extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, int ischecked, void *data);
-/*list box must be unrefed when all items added*/
 struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, void *data);
 struct form_item *dtsgui_combobox(dtsgui_pane pane, const char *title, void *data);
 
-/*XML form items*/
+/*XML form items - see above for need to unref list/combo boxes*/
 extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr);
 extern void dtsgui_xmltextbox_multi(dtsgui_pane pane, const char *title, const char *xpath, const char *attr);
 extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr);
 extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr);
-/*list box must be unrefed when all items added*/
 struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr);
 struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr);
 
@@ -140,7 +140,12 @@ void *dtsgui_item_value(struct form_item *fi);
 /*Wizards*/
 struct dtsgui_wizard* dtsgui_newwizard(struct dtsgui *dtsgui, const char *title);
 dtsgui_pane dtsgui_wizard_addpage(struct dtsgui_wizard *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc);
-void dtsgui_runwizard(struct dtsgui_wizard *dtswiz);
+int dtsgui_runwizard(struct dtsgui_wizard *dtswiz);
+
+/* returned values need to be unref'd*/
+const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
+const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
+
 #ifdef __cplusplus
 }
 #endif
