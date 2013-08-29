@@ -49,7 +49,6 @@
 #include "DTSFrame.h"
 #include "DTSPanel.h"
 #include "DTSTreeWindow.h"
-#include "DTSWizard.h"
 
 static int menuid = wxID_AUTO_LOWEST;
 
