@@ -20,9 +20,10 @@
 #define EVDATA_H
 
 class evdata :public wxObject {
-	public:
-		evdata(void* = NULL);
-		void *data;
+public:
+	evdata(void* = NULL, dtsgui_configcb cb = NULL);
+	void *data;
+	dtsgui_configcb callback;
 };
 
 #endif // EVDATA_H
