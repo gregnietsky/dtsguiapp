@@ -88,6 +88,15 @@ bool DTSFrame::Confirm(wxString text) {
 	}
 }
 
+void DTSFrame::Alert(wxString text) {
+	wxMessageDialog *alert;
+
+	alert = new wxMessageDialog(NULL, text, wxT("Alert"),
+								  wxOK | wxICON_EXCLAMATION);
+	alert->ShowModal();
+	alert->Destroy();
+}
+
 void DTSFrame::OnAbort(wxCloseEvent &event) {
 	if (abortconfirm && !Confirm("Are You Sure You Want To Abort ?")) {
 		event.Veto();

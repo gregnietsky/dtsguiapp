@@ -28,6 +28,7 @@ class DTSFrame: public wxFrame {
 		void SwitchWindow(wxCommandEvent &event);
 		void RunCommand(wxCommandEvent &event);
 		bool Confirm(wxString text);
+		void Alert(wxString text);
 		void OnClose(wxCommandEvent &event);
 		void OnAbort(wxCloseEvent &event);
 		void OnAbout(wxCommandEvent &event);
