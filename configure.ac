@@ -65,5 +65,6 @@ AC_CHECK_HEADER_STDBOOL
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
+                 share/Makefile
                  src/libdtsapp_gui.pc])
 AC_OUTPUT
