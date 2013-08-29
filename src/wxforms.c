@@ -244,7 +244,7 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 
 	if (!filename && res) {
 		do {
-			newfile = dtsgui_filesave(dtsgui, "Save New Customer Config To File", NULL, "newcustomer.xml", "*.xml");
+			newfile = dtsgui_filesave(dtsgui, "Save New Customer Config To File", NULL, "newcustomer.xml", "XML Configuration|*.xml");
 		} while (!newfile && !dtsgui_confirm(dtsgui, "No file selected !!!\nDo you want to continue (And loose settings)"));
 
 		if (newfile) {
@@ -263,7 +263,7 @@ int newsys_wizard(struct dtsgui *dtsgui, void *data) {
 int editsys_wizard(struct dtsgui *dtsgui, void *data) {
 	const char *filename;
 
-	if (!(filename = dtsgui_fileopen(dtsgui, "Select Customer Configuration To Edit", NULL, "", "*.xml"))) {
+	if (!(filename = dtsgui_fileopen(dtsgui, "Select Customer Configuration To Edit", NULL, "", "XML Configuration|*.xml"))) {
 		return 0;
 	}
 

@@ -483,5 +483,5 @@ extern const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, con
 }
 
 extern const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
-	return dtsgui_filedialog(dtsgui, title, path, name, filter, wxFD_OPEN);
+	return dtsgui_filedialog(dtsgui, title, path, name, filter, wxFD_OPEN | wxFD_FILE_MUST_EXIST);
 }
