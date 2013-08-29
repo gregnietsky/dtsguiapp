@@ -2446,7 +2446,7 @@ ac_config_headers="$ac_config_headers config.h"
 #x:y:z z <= x
 #so.x.z.y
 
-LT_LIBVER=0:0:0
+LT_LIBVER=0:1:0
 
 
 # Checks for programs.
@@ -15811,7 +15811,7 @@ fi
 
 
 if test "x$enable_dev_mode" = "xyes" ; then
- DEVELOPER_CFLAGS="-g -Wall -Werror -pedantic-errors -Wno-long-long -Wno-unused-local-typedefs"
+ DEVELOPER_CFLAGS="-g -Wall -Werror -pedantic-errors -Wno-long-long -Wno-unused-local-typedefs -Wno-variadic-macros"
 fi;
 
 
