@@ -25,19 +25,21 @@ class DTSFrame: public wxFrame {
 		wxMenuBar *GetMenuBar(void);
 		~DTSFrame();
 		void SetAbout(const char *a_text);
-		void SetWindow(wxWindow *window);
 		void SwitchWindow(wxCommandEvent &event);
+		void RunCommand(wxCommandEvent &event);
 		bool Confirm(wxString text);
 		void OnClose(wxCommandEvent &event);
 		void OnAbort(wxCloseEvent &event);
 		void OnAbout(wxCommandEvent &event);
 	private:
+		void SetWindow(wxWindow *window);
 		wxBoxSizer *sizer;
 		wxWindow *blank;
 		wxWindow *a_window;
 		wxString status;
 		wxString about;
 		wxMenuBar *menubar;
+		struct dtsgui *dtsgui;
 		bool abortconfirm;
 };
 
