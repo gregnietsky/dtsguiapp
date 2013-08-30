@@ -282,7 +282,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 sharedir = $(datarootdir)/@PACKAGE@
-share_DATA = netsentry.dtd default.xml default.conf
+share_DATA = netsentry.dtd default.xml default.conf xml2conf.xsl
 EXTRA_DIST = $(share_DATA)
 all: all-am
 
