@@ -121,7 +121,7 @@ struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const c
 struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr);
 
 /*add item to list*/
-void dtsgui_listbox_add(struct form_item *lbox, const char *text, void *data);
+void dtsgui_listbox_add(struct form_item *lbox, const char *text, const char *value);
 
 /* returns auth struct needs to be un-ref'd*/
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);

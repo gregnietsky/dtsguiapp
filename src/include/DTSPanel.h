@@ -41,7 +41,7 @@ struct form_item {
 	enum form_data_type dtype;
 	enum widget_type type;
 	const char *name;
-	const char *value2;
+	const char *value;
 	void *widget;
 };
 
@@ -66,8 +66,8 @@ class DTSPanel: public virtual wxWindow {
 		void TextBox(const char *, wxString = wxEmptyString, int flags = wxTE_LEFT, int rows = 1, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
 		void PasswdBox(const char *, wxString = wxEmptyString, int flags = wxTE_LEFT, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
 		void CheckBox(const char *title, int ischecked, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
-		struct form_item *ListBox(const char *title, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
-		struct form_item *ComboBox(const char *title, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
+		struct form_item *ListBox(const char *title, const char *value, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
+		struct form_item *ComboBox(const char *title, const char *value, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
 		void AddItem(wxWindow *item, const wxGBPosition pos, const wxGBSpan span = wxDefaultSpan, int flags = 0, int border = 0,	int growrow = -1);
 		void SetEventCallback(event_callback evcb, void *userdata = NULL);
 		void EventHandler(int eid, wxCommandEvent *event);
@@ -91,7 +91,7 @@ class DTSPanel: public virtual wxWindow {
 		void Buttons(void);
 		wxWindow *panel;
 	private:
-		struct form_item *create_new_fitem(void *widget, enum widget_type type, const char *name, const char *value, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
+		struct form_item *create_new_fitem(void *widget, enum widget_type type, const char *name, const char *value = NULL,void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
 		wxGridBagSizer *fgs;
 		bool beenshown;
 		int g_row;

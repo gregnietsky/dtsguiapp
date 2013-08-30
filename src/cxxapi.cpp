@@ -255,13 +255,13 @@ extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, int ischecked, 
 extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	return p->ListBox(title, data,  DTSGUI_FORM_DATA_PTR);
+	return p->ListBox(title, NULL, data,  DTSGUI_FORM_DATA_PTR);
 }
 
 extern struct form_item *dtsgui_combobox(dtsgui_pane pane, const char *title, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	return p->ComboBox(title, data, DTSGUI_FORM_DATA_PTR);
+	return p->ComboBox(title, NULL, data, DTSGUI_FORM_DATA_PTR);
 }
 
 const char *getxmlvalue(struct xml_element *xml) {
@@ -357,26 +357,49 @@ extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *
 
 struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
+	const char *value = NULL;
 	struct xml_element *xml;
+	struct form_item *fi;
 
-	xml = p->GetNode(xpath, attr);
-	return p->ListBox(title, xml, DTSGUI_FORM_DATA_XML);
+	if ((xml = p->GetNode(xpath, attr))) {
+		value = getxmlvalue(xml);
+	}
+	fi = p->ListBox(title, value, xml, DTSGUI_FORM_DATA_XML);
+
+	if (value) {
+		free((void*)value);
+	}
+
+	return fi;
 }
 
 struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
+	const char *value = NULL;
 	struct xml_element *xml;
+	struct form_item *fi;
 
-	xml = p->GetNode(xpath, attr);
-	return p->ComboBox(title, xml, DTSGUI_FORM_DATA_XML);
+	if ((xml = p->GetNode(xpath, attr))) {
+		value = getxmlvalue(xml);
+	}
+
+	fi = p->ComboBox(title, value, xml, DTSGUI_FORM_DATA_XML);
+
+	if (value) {
+		free((void*)value);
+	}
+
+	return fi;
 }
 
-void dtsgui_listbox_add(struct form_item *listbox, const char *text, void *data) {
+void dtsgui_listbox_add(struct form_item *listbox, const char *text, const char *value) {
 	wxComboBox *lbox = (wxComboBox *)listbox->widget;
-	lbox->Append(text, data);
+	lbox->Append(text, (void*)value);
 
 	if (lbox->GetSelection() == wxNOT_FOUND) {
 		lbox->SetSelection(0);
+	} else if (listbox->value && value && !strcmp(listbox->value, value)) {
+		lbox->SetSelection(lbox->GetCount()-1);
 	}
 }
 

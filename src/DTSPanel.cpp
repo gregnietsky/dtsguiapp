@@ -44,6 +44,9 @@ void free_fitem(void *data) {
 	if (fi->name) {
 		free((void *)fi->name);
 	}
+	if (fi->value) {
+		free((void *)fi->value);
+	}
 	if (fi->data.ptr) {
 		objunref(fi->data.ptr);
 	}
@@ -61,6 +64,9 @@ struct form_item *DTSPanel::create_new_fitem(void *widget, enum widget_type type
 	fi->data.ptr = data;
 	fi->dtype = dtype;
 	ALLOC_CONST(fi->name, name);
+	if (value) {
+		ALLOC_CONST(fi->value, value);
+	}
 	addtobucket(fitems, fi);
 	return fi;
 }
@@ -323,7 +329,7 @@ void DTSPanel::TextBox(const char *title, wxString defval, int flags, int rows, 
 		tbox->Disable();
 	}
 
-	fi = create_new_fitem(tbox, DTS_WIDGET_TEXTBOX, title, defval, data, dtype);
+	fi = create_new_fitem(tbox, DTS_WIDGET_TEXTBOX, title, NULL, data, dtype);
 	objunref(fi);
 }
 
@@ -346,11 +352,11 @@ void DTSPanel::CheckBox(const char *title, int ischecked, void *data, enum form_
 
 	cbox->SetValue((ischecked) ? true : false);
 
-	fi = create_new_fitem(cbox, DTS_WIDGET_CHECKBOX, title, (ischecked) ? "on" : "", data, dtype);
+	fi = create_new_fitem(cbox, DTS_WIDGET_CHECKBOX, title, NULL, data, dtype);
 	objunref(fi);
 }
 
-struct form_item *DTSPanel::ListBox(const char *title, void *data, enum form_data_type dtype) {
+struct form_item *DTSPanel::ListBox(const char *title, const char *value, void *data, enum form_data_type dtype) {
 	wxStaticText *text = new wxStaticText(panel, -1, title);
 	wxChoice *lbox = new wxComboBox(panel, -1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_READONLY);
 
@@ -362,10 +368,10 @@ struct form_item *DTSPanel::ListBox(const char *title, void *data, enum form_dat
 		lbox->Disable();
 	}
 
-	return create_new_fitem(lbox, DTS_WIDGET_LISTBOX, title, NULL, data, dtype);
+	return create_new_fitem(lbox, DTS_WIDGET_LISTBOX, title, value, data, dtype);
 }
 
-struct form_item *DTSPanel::ComboBox(const char *title, void *data, enum form_data_type dtype) {
+struct form_item *DTSPanel::ComboBox(const char *title, const char *value, void *data, enum form_data_type dtype) {
 	wxStaticText *text = new wxStaticText(panel, -1, title);
 	wxChoice *lbox = new wxComboBox(panel, -1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxTE_PROCESS_ENTER);
 
@@ -381,7 +387,7 @@ struct form_item *DTSPanel::ComboBox(const char *title, void *data, enum form_da
 		lbox->Disable();
 	}
 
-	return create_new_fitem(lbox, DTS_WIDGET_COMBOBOX, title, NULL, data, dtype);
+	return create_new_fitem(lbox, DTS_WIDGET_COMBOBOX, title, value, data, dtype);
 }
 
 void DTSPanel::Buttons(void) {
