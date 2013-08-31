@@ -68,11 +68,12 @@ struct xml_doc *loadxmlconf(struct dtsgui *dtsgui) {
 }
 
 int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struct xml_doc *xmldoc) {
+	const char *cos[] = {"Internal Extensions", "Local PSTN", "Long Distance PSTN", "Cellular", "Premium", "International"};
 	dtsgui_pane dp[12], pg;
 	struct dtsgui_wizard *twiz;
 	struct form_item *ilist;
 	const char *newfile;
-	int res;
+	int res, cnt;
 
 	twiz = dtsgui_newwizard(dtsgui, "System Configuration Wizard");
 
@@ -86,7 +87,7 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dp[7] = dtsgui_wizard_addpage(twiz, "Extensions", NULL, xmldoc);
 	dp[8] = dtsgui_wizard_addpage(twiz, "PBX Setup", NULL, xmldoc);
 	dp[9] = dtsgui_wizard_addpage(twiz, "Attendant", NULL, xmldoc);
-	dp[10] = dtsgui_wizard_addpage(twiz, "TrukSetup", NULL, xmldoc);
+	dp[10] = dtsgui_wizard_addpage(twiz, "Trunk Setup", NULL, xmldoc);
 	dp[11] = dtsgui_wizard_addpage(twiz, "Least Cost Routing", NULL, xmldoc);
 
 	pg=dp[0];
@@ -151,7 +152,6 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dtsgui_xmltextbox(pg, "MTU", "/config/IP/Dialup/Option[@option = 'MTU']", NULL);
 
 
-	const char *cos[] = {"Internal Extensions", "Local PSTN", "Long Distance PSTN", "Cellular", "Premium", "International"};
 	pg=dp[7];
 	ilist = dtsgui_xmllistbox(pg, "Default Extension Permision", "/config/IP/VOIP/ASTDB/Option[@option = 'Context']", NULL);
 	dtsgui_listbox_add(ilist, cos[0], "0");
@@ -198,13 +198,13 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	pg=dp[8];
 	dtsgui_xmltextbox(pg, "Local Area Code", "/config/IP/VOIP/ASTDB/Option[@option = 'AreaCode']", NULL);
 	dtsgui_xmltextbox(pg, "Local Extension Prefix", "/config/IP/VOIP/ASTDB/Option[@option = 'ExCode']", NULL);
-	ilist = dtsgui_xmllistbox(pg, "ISDN PRI Framing [T1-E1]", NULL, NULL);
-	dtsgui_listbox_add(ilist, "ccs - esf", NULL);
-	dtsgui_listbox_add(ilist, "cas - d4/Superframe", NULL);
+	ilist = dtsgui_xmllistbox(pg, "ISDN PRI Framing [T1-E1]", "/config/IP/VOIP/ASTDB/Option[@option = 'PRIframing']", NULL);
+	dtsgui_listbox_add(ilist, "ccs - esf", "ccs");
+	dtsgui_listbox_add(ilist, "cas - d4/Superframe", "cas");
 	objunref(ilist);
-	ilist = dtsgui_xmllistbox(pg, "ISDN PRI Coding [T1-E1]", NULL, NULL);
-	dtsgui_listbox_add(ilist, "hdb3 - b8zs", NULL);
-	dtsgui_listbox_add(ilist, "ami", NULL);
+	ilist = dtsgui_xmllistbox(pg, "ISDN PRI Coding [T1-E1]", "/config/IP/VOIP/ASTDB/Option[@option = 'PRIcoding']", NULL);
+	dtsgui_listbox_add(ilist, "hdb3 - b8zs", "hdb3");
+	dtsgui_listbox_add(ilist, "ami", "ami");
 	objunref(ilist);
 	dtsgui_xmlcheckbox(pg, "Calls To Internal Extensions Follow Forward Rules", "1", "0", "/config/IP/VOIP/ASTDB/Option[@option = 'LocalFwd']", NULL);
 	dtsgui_xmlcheckbox(pg, "Hangup Calls To Unknown Numbers/DDI", "1", "0", "/config/IP/VOIP/ASTDB/Option[@option = 'UNKDEF']", NULL);
@@ -252,17 +252,23 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 
 	res = dtsgui_runwizard(twiz);
 
-	if (!filename && res) {
-		do {
-			newfile = dtsgui_filesave(dtsgui, "Save New Customer Config To File", NULL, "newcustomer.xml", "XML Configuration|*.xml");
-		} while (!newfile && !dtsgui_confirm(dtsgui, "No file selected !!!\nDo you want to continue (And loose settings)"));
-
-		if (newfile) {
-			xml_savefile(xmldoc, newfile, 1, 9);
-			objunref((void*)newfile);
+	if (res) {
+		cnt = sizeof(dp)/sizeof(dp[0])-1;
+		for(; cnt >= 0;cnt--) {
+			dtsgui_xmlpanel_update(dp[cnt]);
 		}
-	} else if (filename && res) {
-		xml_savefile(xmldoc, filename, 1, 9);
+		if (!filename) {
+			do {
+				newfile = dtsgui_filesave(dtsgui, "Save New Customer Config To File", NULL, "newcustomer.xml", "XML Configuration|*.xml");
+			} while (!newfile && !dtsgui_confirm(dtsgui, "No file selected !!!\nDo you want to continue (And loose settings)"));
+
+			if (newfile) {
+				xml_savefile(xmldoc, newfile, 1, 9);
+				objunref((void*)newfile);
+			}
+		} else if (filename) {
+			xml_savefile(xmldoc, filename, 1, 9);
+		}
 	}
 
 	objunref(twiz);
