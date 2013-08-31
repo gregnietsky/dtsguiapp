@@ -101,6 +101,7 @@ void dtsgui_delpane(dtsgui_pane pane);
 dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char *buf);
 dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *title);
 void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data);
+void dtsgui_xmlpanel_update(dtsgui_pane pane);
 
 /*form items
  *list/combo box must be unrefed when all items added

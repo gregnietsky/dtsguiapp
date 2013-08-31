@@ -249,7 +249,7 @@ extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *va
 extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, int ischecked, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->CheckBox(title, ischecked, data,  DTSGUI_FORM_DATA_PTR);
+	p->CheckBox(title, ischecked, NULL, NULL, data,  DTSGUI_FORM_DATA_PTR);
 }
 
 extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, void *data) {
@@ -348,7 +348,7 @@ extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *
 		ischecked = 1;
 	}
 
-	p->CheckBox(title, ischecked, xml, DTSGUI_FORM_DATA_XML);
+	p->CheckBox(title, ischecked, checkval, uncheckval, xml, DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
@@ -568,4 +568,9 @@ extern const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, con
 
 extern const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
 	return dtsgui_filedialog(dtsgui, title, path, name, filter, wxFD_OPEN | wxFD_FILE_MUST_EXIST);
+}
+
+extern void dtsgui_xmlpanel_update(dtsgui_pane pane) {
+	DTSPanel *p = (DTSPanel*)pane;
+	p->Update_XML();
 }
