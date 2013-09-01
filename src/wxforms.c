@@ -43,28 +43,6 @@ void xml_config(struct xml_doc *xmldoc) {
 	objunref(xmlbuf);
 }
 
-struct xml_doc *loadxmlconf(struct dtsgui *dtsgui) {
-	struct basic_auth *auth;
-	struct curlbuf *cbuf;
-	struct xml_doc *xmldoc = NULL;
-
-	auth = dtsgui_pwdialog("admin", "", dtsgui);
-	if (!(cbuf = curl_geturl("https://callshop.distrotech.co.za:666/cshop", auth, dtsgui_pwdialog, dtsgui))) {
-		objunref(auth);
-		return NULL;
-	}
-
-	curl_ungzip(cbuf);
-
-	if (cbuf && cbuf->c_type && !strcmp("application/xml", cbuf->c_type)) {
-		xmldoc = xml_loadbuf(cbuf->body, cbuf->bsize, 1);
-	}
-
-	objunref(cbuf);
-	objunref(auth);
-	return xmldoc;
-}
-
 int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struct xml_doc *xmldoc) {
 	const char *cos[] = {"Internal Extensions", "Local PSTN", "Long Distance PSTN", "Cellular", "Premium", "International"};
 	const char *cosv[] = {"0", "1", "2", "3", "4", "5"};
@@ -389,15 +367,17 @@ int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 	file_menu(dtsgui);
 	help_menu(dtsgui);
 
+	objunref(appdata);
 	return 1;
 
 	/*load xml config via http*/
-	if (!(appdata->xmldoc = loadxmlconf(dtsgui))) {
+	if (!(appdata->xmldoc = dtsgui_loadxmlurl(dtsgui, "admin", "", "https://callshop.distrotech.co.za:666/cshop"))) {
 		objunref(appdata);
 		dtsgui_confirm(dtsgui, "Config DL Failed (as expected after 3 tries)\nHello Dave\n\nWould You Like To Play .... Thermo Nuclear War ?");
 		return 1;
 	}
 
+	objunref(appdata);
 	return 1;
 }
 
