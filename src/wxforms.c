@@ -43,6 +43,67 @@ void xml_config(struct xml_doc *xmldoc) {
 	objunref(xmlbuf);
 }
 
+
+void set_temp_xml(struct xml_doc *xmldoc) {
+	struct xml_search *xs;
+	struct xml_node *xn;
+	const char *hdir, *sdir;
+
+	xml_createpath(xmldoc, "/config/tmp/dcon");
+	xml_createpath(xmldoc, "/config/tmp/extif");
+
+	xs = xml_xpath(xmldoc, "/config/FileServer", NULL);
+	xn = xml_getfirstnode(xs, NULL);
+
+	hdir = xml_getattr(xn, "homedir");
+	sdir = xml_getattr(xn, "sharedir");
+
+	objunref(xn);
+	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/tmp/dcon", NULL);
+	xn = xml_getfirstnode(xs, NULL);
+
+	if (hdir && sdir && strcmp(hdir, "") && strcmp(sdir, "")) {
+		xml_modify(xmldoc, xn, "1");
+	} else {
+		xml_modify(xmldoc, xn, "0");
+	}
+
+	objunref(xn);
+	objunref(xs);
+}
+
+void rem_temp_xml(struct xml_doc *xmldoc) {
+	struct xml_search *xs;
+	struct xml_node *xn, *xn2;
+
+	xs = xml_xpath(xmldoc, "/config/tmp/dcon", NULL);
+	xn = xml_getfirstnode(xs, NULL);
+	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/FileServer", NULL);
+	xn2 = xml_getfirstnode(xs, NULL);
+	if (xn && xn->value && !strcmp("1", xn->value)) {
+		xml_setattr(xmldoc, xn2, "homedir", "U");
+		xml_setattr(xmldoc, xn2, "sharedir", "S");
+	} else {
+		xml_setattr(xmldoc, xn2, "homedir", "");
+		xml_setattr(xmldoc, xn2, "sharedir", "");
+	}
+
+	objunref(xn);
+	objunref(xn2);
+	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/tmp", NULL);
+	xn = xml_getfirstnode(xs, NULL);
+	xml_delete(xn);
+
+	objunref(xn);
+	objunref(xs);
+}
+
 int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struct xml_doc *xmldoc) {
 	const char *cos[] = {"Internal Extensions", "Local PSTN", "Long Distance PSTN", "Cellular", "Premium", "International"};
 	const char *cosv[] = {"0", "1", "2", "3", "4", "5"};
@@ -51,6 +112,8 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	struct form_item *ilist;
 	const char *newfile;
 	int res, cnt;
+
+	set_temp_xml(xmldoc);
 
 	twiz = dtsgui_newwizard(dtsgui, "System Configuration Wizard");
 
@@ -112,11 +175,11 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dtsgui_xmltextbox(pg, "Aliases", "/config/FileServer/Config/Option[@option = 'netbios name']", NULL);
 	dtsgui_xmltextbox(pg, "Domain Controllers", "/config/FileServer/Setup/Option[@option = 'ADSServer']", NULL);
 	dtsgui_xmltextbox(pg, "Realm [If Joining ADS]", "/config/FileServer/Setup/Option[@option = 'ADSRealm']", NULL);
-	dtsgui_xmlcheckbox(pg, "Domain Controller", NULL, NULL, NULL, NULL);
+	dtsgui_xmlcheckbox(pg, "Domain Controller", "1", "0", "/config/tmp/dcon", NULL);
 
 	pg=dp[6];
 	/*XXX USE TMP VAL and set later unckeced could be 3G... ext int/pppoe*/
-	ilist = dtsgui_xmlcombobox(pg, "External Interface", NULL, NULL);
+	ilist = dtsgui_xmlcombobox(pg, "External Interface", "/config/tmp/extif", NULL);
 	dtsgui_listbox_add(ilist, "br0", NULL);
 	dtsgui_listbox_add(ilist, "ethB", NULL);
 	dtsgui_listbox_add(ilist, "br0.100", NULL);
@@ -225,6 +288,9 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 		for(; cnt >= 0;cnt--) {
 			dtsgui_xmlpanel_update(dp[cnt]);
 		}
+
+		rem_temp_xml(xmldoc);
+
 		if (!filename) {
 			do {
 				newfile = dtsgui_filesave(dtsgui, "Save New Customer Config To File", NULL, "newcustomer.xml", "XML Configuration|*.xml");
@@ -360,7 +426,6 @@ int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 
 	if (!data || !objref(appdata)) {
 		return 0;
-
 	}
 
 	/* menus*/
