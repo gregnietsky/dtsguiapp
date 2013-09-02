@@ -98,14 +98,14 @@ void set_temp_xml(struct xml_doc *xmldoc) {
 	xml_setattr(xmldoc, xn2, "Connection", conn);
 	if (!strcmp(xn->value, "ADSL")) {
 		xml_modify(xmldoc, xn2, extif);
-		xml_setattr(xmldoc, xn2, "pppoe", "1");
+		xml_setattr(xmldoc, xn2, "pppoe", "ADSL");
 	} else {
 		if (!strcmp(extif, "Dialup")) {
 			xml_modify(xmldoc, xn2, conn);
 		} else {
 			xml_modify(xmldoc, xn2, extif);
 		}
-		xml_setattr(xmldoc, xn2, "pppoe", "0");
+		xml_setattr(xmldoc, xn2, "pppoe", "Dialup");
 	}
 	objunref(xn);
 	objunref(xn2);
@@ -157,11 +157,7 @@ void rem_temp_xml(struct xml_doc *xmldoc) {
 		xml_modify(xmldoc, xn3, xn->value);
 	} else {
 		xml_modify(xmldoc, xn2, xn->value);
-		if (!strcmp(xml_getattr(xn, "pppoe"), "1")) {
-			xml_modify(xmldoc, xn3, "ADSL");
-		} else {
-			xml_modify(xmldoc, xn3, "Dialup");
-		}
+		xml_modify(xmldoc, xn3, xml_getattr(xn, "pppoe"));
 	}
 	objunref(xn);
 	objunref(xn2);
@@ -255,7 +251,7 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dtsgui_listbox_add(ilist, "br0.100", "br0.100");
 	dtsgui_listbox_add(ilist, "3G", "3G");
 	objunref(ilist);
-	dtsgui_xmlcheckbox(pg, "External Device Is PPPoE", "1", "0", "/config/tmp/extif", "pppoe");
+	dtsgui_xmlcheckbox(pg, "External Device Is PPPoE", "ADSL", "Dialup", "/config/tmp/extif", "pppoe");
 	dtsgui_xmltextbox(pg, "Number/Service/APN", "/config/IP/Dialup/Option[@option = 'Number']", NULL);
 	dtsgui_xmltextbox(pg, "Username", "/config/IP/Dialup/Option[@option = 'Username']", NULL);
 	dtsgui_xmltextbox(pg, "Password", "/config/IP/Dialup/Option[@option = 'Password']", NULL);
