@@ -46,8 +46,9 @@ void xml_config(struct xml_doc *xmldoc) {
 
 void set_temp_xml(struct xml_doc *xmldoc) {
 	struct xml_search *xs;
-	struct xml_node *xn;
-	const char *hdir, *sdir;
+	struct xml_node *xn, *xn2;
+	const char *hdir, *sdir, *extif, *conn;
+	int domc;
 
 	xml_createpath(xmldoc, "/config/tmp/dcon");
 	xml_createpath(xmldoc, "/config/tmp/extif");
@@ -58,13 +59,19 @@ void set_temp_xml(struct xml_doc *xmldoc) {
 	hdir = xml_getattr(xn, "homedir");
 	sdir = xml_getattr(xn, "sharedir");
 
+	if (hdir && sdir && strcmp(hdir, "") && strcmp(sdir, "")) {
+		domc = 1;
+	} else {
+		domc = 0;
+	}
+
 	objunref(xn);
 	objunref(xs);
 
 	xs = xml_xpath(xmldoc, "/config/tmp/dcon", NULL);
 	xn = xml_getfirstnode(xs, NULL);
 
-	if (hdir && sdir && strcmp(hdir, "") && strcmp(sdir, "")) {
+	if (domc) {
 		xml_modify(xmldoc, xn, "1");
 	} else {
 		xml_modify(xmldoc, xn, "0");
@@ -72,11 +79,48 @@ void set_temp_xml(struct xml_doc *xmldoc) {
 
 	objunref(xn);
 	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/tmp/extif", NULL);
+	xn2 = xml_getfirstnode(xs, NULL);
+	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/IP/SysConf/Option[@option = 'External']", NULL);
+	xn = xml_getfirstnode(xs, NULL);
+	objunref(xs);
+	extif = strdup(xn->value);
+	xml_setattr(xmldoc, xn2, "External", extif);
+	objunref(xn);
+
+	xs = xml_xpath(xmldoc, "/config/IP/Dialup/Option[@option = 'Connection']", NULL);
+	xn = xml_getfirstnode(xs, NULL);
+	objunref(xs);
+	conn = strdup(xn->value);
+	xml_setattr(xmldoc, xn2, "Connection", conn);
+	if (!strcmp(xn->value, "ADSL")) {
+		xml_modify(xmldoc, xn2, extif);
+		xml_setattr(xmldoc, xn2, "pppoe", "1");
+	} else {
+		if (!strcmp(extif, "Dialup")) {
+			xml_modify(xmldoc, xn2, conn);
+		} else {
+			xml_modify(xmldoc, xn2, extif);
+		}
+		xml_setattr(xmldoc, xn2, "pppoe", "0");
+	}
+	objunref(xn);
+	objunref(xn2);
+
+	if (extif) {
+		free((void*)extif);
+	}
+	if (conn) {
+		free((void*)conn);
+	}
 }
 
 void rem_temp_xml(struct xml_doc *xmldoc) {
 	struct xml_search *xs;
-	struct xml_node *xn, *xn2;
+	struct xml_node *xn, *xn2, *xn3;
 
 	xs = xml_xpath(xmldoc, "/config/tmp/dcon", NULL);
 	xn = xml_getfirstnode(xs, NULL);
@@ -95,6 +139,33 @@ void rem_temp_xml(struct xml_doc *xmldoc) {
 	objunref(xn);
 	objunref(xn2);
 	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/tmp/extif", NULL);
+	xn = xml_getfirstnode(xs, NULL);
+	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/IP/SysConf/Option[@option = 'External']", NULL);
+	xn2 = xml_getfirstnode(xs, NULL);
+	objunref(xs);
+
+	xs = xml_xpath(xmldoc, "/config/IP/Dialup/Option[@option = 'Connection']", NULL);
+	xn3 = xml_getfirstnode(xs, NULL);
+	objunref(xs);
+
+	if (!strcmp(xn->value, "3G") || !strcmp(xn->value, "3GIPW") || !strcmp(xn->value, "Dialup") || !strcmp(xn->value, "Leased")) {
+		xml_modify(xmldoc, xn2, "Dialup");
+		xml_modify(xmldoc, xn3, xn->value);
+	} else {
+		xml_modify(xmldoc, xn2, xn->value);
+		if (!strcmp(xml_getattr(xn, "pppoe"), "1")) {
+			xml_modify(xmldoc, xn3, "ADSL");
+		} else {
+			xml_modify(xmldoc, xn3, "Dialup");
+		}
+	}
+	objunref(xn);
+	objunref(xn2);
+	objunref(xn3);
 
 	xs = xml_xpath(xmldoc, "/config/tmp", NULL);
 	xn = xml_getfirstnode(xs, NULL);
@@ -178,14 +249,13 @@ int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename, struc
 	dtsgui_xmlcheckbox(pg, "Domain Controller", "1", "0", "/config/tmp/dcon", NULL);
 
 	pg=dp[6];
-	/*XXX USE TMP VAL and set later unckeced could be 3G... ext int/pppoe*/
 	ilist = dtsgui_xmlcombobox(pg, "External Interface", "/config/tmp/extif", NULL);
-	dtsgui_listbox_add(ilist, "br0", NULL);
-	dtsgui_listbox_add(ilist, "ethB", NULL);
-	dtsgui_listbox_add(ilist, "br0.100", NULL);
-	dtsgui_listbox_add(ilist, "3G", NULL);
+	dtsgui_listbox_add(ilist, "br0", "br0");
+	dtsgui_listbox_add(ilist, "ethB", "ethB");
+	dtsgui_listbox_add(ilist, "br0.100", "br0.100");
+	dtsgui_listbox_add(ilist, "3G", "3G");
 	objunref(ilist);
-	dtsgui_xmlcheckbox(pg, "External Device Is PPPoE", "ADSL", "Dialup", "/config/IP/Dialup/Option[@option = 'Connection']", NULL);
+	dtsgui_xmlcheckbox(pg, "External Device Is PPPoE", "1", "0", "/config/tmp/extif", "pppoe");
 	dtsgui_xmltextbox(pg, "Number/Service/APN", "/config/IP/Dialup/Option[@option = 'Number']", NULL);
 	dtsgui_xmltextbox(pg, "Username", "/config/IP/Dialup/Option[@option = 'Username']", NULL);
 	dtsgui_xmltextbox(pg, "Password", "/config/IP/Dialup/Option[@option = 'Password']", NULL);
