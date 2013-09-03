@@ -590,7 +590,7 @@ extern struct xml_doc *dtsgui_loadxmlurl(struct dtsgui *dtsgui, const char *user
 	struct basic_auth *auth;
 
 	auth = dtsgui_pwdialog(user, passwd, dtsgui);
-	if (!(cbuf = curl_geturl(url, auth, NULL, dtsgui_pwdialog, dtsgui))) {
+	if (!(cbuf = curl_posturl(url, auth, NULL, dtsgui_pwdialog, dtsgui))) {
 		objunref(auth);
 		return NULL;
 	}
