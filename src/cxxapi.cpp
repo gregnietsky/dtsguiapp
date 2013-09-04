@@ -42,6 +42,7 @@
 #include <wx/dataview.h>
 #include <wx/wizard.h>
 #include <wx/filedlg.h>
+#include <wx/notebook.h>
 
 #include <dtsapp.h>
 #include "dtsgui.hpp"
@@ -91,12 +92,12 @@ void dtsgui_close(dtsgui_menu dtsmenu, struct dtsgui *dtsgui) {
 }
 
 wxWindow *getpanewindow(dtsgui_pane pane) {
-	DTSPanel *p = (DTSPanel *)pane;
+	DTSObject *p = (DTSObject *)pane;
 	return p->GetPanel();
 }
 
 wxString getpanename(dtsgui_pane pane) {
-	DTSPanel *p = (DTSPanel *)pane;
+	DTSObject *p = (DTSObject *)pane;
 	return p->GetName();
 }
 
@@ -185,23 +186,19 @@ dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, int butmask,
 		case wx_DTSPANEL_SCROLLPANEL:
 			dp = new DTSScrollPanel(frame, frame, name, butmask);
 			break;
-
 		case wx_DTSPANEL_PANEL:
 			dp = new DTSStaticPanel(frame, frame, name, butmask);
 			break;
-
 		case wx_DTSPANEL_WINDOW:
 			dp = new DTSWindow(frame);
 //			p = new DTSWindow(frame, frame, name);
 			break;
-
 		case wx_DTSPANEL_DIALOG:
 			dp = new DTSDialog(frame, name, butmask);
 			break;
-
+		case wx_DTSPANEL_TAB:
 		case wx_DTSPANEL_TREE:
 			break;
-
 		case wx_DTSPANEL_WIZARD:
 			dp = new DTSWizardWindow(name);
 			break;
@@ -227,6 +224,48 @@ extern dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *titl
 
 	tw = new DTSTreeWindow(frame, frame, title, 30);
 	return tw;
+}
+
+extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title) {
+	DTSTabWindow *tw;
+	wxFrame *frame = (wxFrame *)dtsgui->appframe;
+
+	tw = new DTSTabWindow(frame, title);
+	return tw;
+}
+
+extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butmask, enum panel_type type, void *userdata) {
+	DTSPanel *dp = NULL;
+	DTSTabWindow *tw = (DTSTabWindow*)tv;
+	wxNotebook *parent = dynamic_cast<wxNotebook*>(tw);
+	wxPanel *np;
+
+	switch (type) {
+		case wx_DTSPANEL_SCROLLPANEL:
+			dp = new DTSScrollPanel(parent, NULL, name, butmask);
+			break;
+		case wx_DTSPANEL_PANEL:
+			dp = new DTSStaticPanel(parent, NULL, name, butmask);
+			break;
+		case wx_DTSPANEL_WINDOW:
+		case wx_DTSPANEL_DIALOG:
+		case wx_DTSPANEL_TAB:
+		case wx_DTSPANEL_TREE:
+		case wx_DTSPANEL_WIZARD:
+			return NULL;
+	}
+
+	np = dynamic_cast<wxPanel*>(dp);
+	parent->AddPage(np, name);
+	return dp;
+}
+
+extern void dtsgui_showpanel(dtsgui_pane pane) {
+	DTSPanel *dp = (DTSPanel*)pane;
+
+	dp->ShowPanel(true);
+	dp->Show(true);
+
 }
 
 extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {

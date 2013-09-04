@@ -501,9 +501,35 @@ void testpanel(struct dtsgui *dtsgui, dtsgui_menu menu) {
 	dtsgui_newmenuitem(menu, dtsgui, "&Test", p);
 }
 
+void pbx_settings(dtsgui_tabview tabv) {
+	dtsgui_pane dp[10];
+	int cnt;
+
+
+	dp[0] = dtsgui_addpage(tabv, "Routing", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[1] = dtsgui_addpage(tabv, "mISDN", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[2] = dtsgui_addpage(tabv, "E1", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[3] = dtsgui_addpage(tabv, "Defaults", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[4] = dtsgui_addpage(tabv, "IVR Password", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[5] = dtsgui_addpage(tabv, "Location", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[6] = dtsgui_addpage(tabv, "Inbound", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[7] = dtsgui_addpage(tabv, "Num Plan", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[8] = dtsgui_addpage(tabv, "Auto Add", 0, wx_DTSPANEL_PANEL, NULL);
+	dp[9] = dtsgui_addpage(tabv, "Save", wx_PANEL_BUTTON_YES, wx_DTSPANEL_PANEL, NULL);
+
+/*	dtsgui_textbox(p, "TextBox", "text", "Text", NULL);
+	dtsgui_setevcallback(dp[10], handle_test, &dp);*/
+
+	cnt = sizeof(dp)/sizeof(dp[0])-1;
+	for(; cnt >= 0;cnt--) {
+		dtsgui_showpanel(dp[cnt]);
+	}
+}
+
 void file_menu(struct dtsgui *dtsgui) {
 	dtsgui_menu file;
 	dtsgui_treeview tree;
+	dtsgui_tabview tabv;
 
 	file = dtsgui_newmenu(dtsgui, "&File");
 
@@ -511,6 +537,11 @@ void file_menu(struct dtsgui *dtsgui) {
 	dtsgui_newmenucb(file, dtsgui, "&Edit Saved System", "Reconfigure Saved System File", editsys_wizard, NULL);
 	dtsgui_menusep(file);
 
+	tabv = dtsgui_tabwindow(dtsgui, "PBX Setup");
+	dtsgui_newmenuitem(file, dtsgui, "P&BX Configuration", tabv);
+	pbx_settings(tabv);
+
+	dtsgui_menusep(file);
 	testpanel(dtsgui, file);
 	tree = dtsgui_treewindow(dtsgui, "Tree Window");
 	dtsgui_newmenuitem(file, dtsgui, "T&ree", tree);
@@ -539,7 +570,7 @@ int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 		return 0;
 	}
 
-test_posturl(dtsgui, NULL, NULL, "https://sip1.speakezi.co.za:666/auth/test.php");
+/*	test_posturl(dtsgui, NULL, NULL, "https://sip1.speakezi.co.za:666/auth/test.php");*/
 
 	/* menus*/
 	file_menu(dtsgui);

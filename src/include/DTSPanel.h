@@ -59,7 +59,18 @@ class DTSPanelEvent: public wxEvtHandler {
 		DTSPanel *parent;
 };
 
-class DTSPanel: public virtual wxWindow {
+class DTSObject: public virtual wxWindow {
+	public:
+		DTSObject(wxString = wxEmptyString);
+		wxString GetName();
+		wxWindow *GetPanel();
+		panel_type type;
+	protected:
+		wxString status;
+		wxWindow *panel;
+};
+
+class DTSPanel: public DTSObject {
 	public:
 		DTSPanel(wxFrame* = NULL, wxString = wxEmptyString, int = 0);
 		~DTSPanel();
@@ -78,20 +89,15 @@ class DTSPanel: public virtual wxWindow {
 		void SetXMLDoc(struct xml_doc *xmldoc);
 		void Update_XML();
 		struct xml_element *GetNode(const char *xpath, const char *attr);
-		wxString GetName();
-		wxWindow *GetPanel();
-		panel_type type;
 		int buttons[6];
+		bool ShowPanel(bool = true);
 	protected:
 		void SetSizerSize(wxSize, wxWindow*);
-		bool ShowPanel(bool = true);
 		void SetupWin();
+		void Buttons(void);
 		DTSPanelEvent *dtsevthandler;
 		int button_mask;
-		wxString status;
 		wxFrame *frame;
-		void Buttons(void);
-		wxWindow *panel;
 	private:
 		struct form_item *create_new_fitem(void *widget, enum widget_type type, const char *name, const char *value = NULL, const char *value2 = NULL, void *data = NULL, enum form_data_type dtype = DTSGUI_FORM_DATA_PTR);
 		wxGridBagSizer *fgs;

@@ -35,6 +35,7 @@ typedef void *dtsgui_menuitem;
 typedef void *dtsgui_pane;
 typedef void *dtsgui_notebook;
 typedef void *dtsgui_treeview;
+typedef void *dtsgui_tabview;
 
 /*form controls*/
 typedef struct form_item form_item;
@@ -64,7 +65,8 @@ enum panel_type {
 	wx_DTSPANEL_SCROLLPANEL,
 	wx_DTSPANEL_DIALOG,
 	wx_DTSPANEL_TREE,
-	wx_DTSPANEL_WIZARD
+	wx_DTSPANEL_WIZARD,
+	wx_DTSPANEL_TAB
 };
 
 enum widget_type {
@@ -100,6 +102,9 @@ void dtsgui_xmlpanel(dtsgui_pane pane, struct xml_doc *xmldoc);
 void dtsgui_delpane(dtsgui_pane pane);
 dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char *buf);
 dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *title);
+dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title);
+dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butmask, enum panel_type type, void *userdata);
+void dtsgui_showpanel(dtsgui_pane pane);
 void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data);
 void dtsgui_xmlpanel_update(dtsgui_pane pane);
 void *dtsgui_paneldata(dtsgui_pane pane);

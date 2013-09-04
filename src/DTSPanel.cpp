@@ -52,28 +52,6 @@ void free_fitem(void *data) {
 	}
 }
 
-struct form_item *DTSPanel::create_new_fitem(void *widget, enum widget_type type, const char *name, const char *value, const char *value2, void *data, enum form_data_type dtype) {
-	struct form_item *fi;
-
-	if (!(fi = (struct form_item *)objalloc(sizeof(*fi),free_fitem))) {
-		return NULL;
-	}
-
-	fi->widget = widget;
-	fi->type = type;
-	fi->data.ptr = data;
-	fi->dtype = dtype;
-	ALLOC_CONST(fi->name, name);
-	if (value) {
-		ALLOC_CONST(fi->value, value);
-	}
-	if (value2) {
-		ALLOC_CONST(fi->value2, value2);
-	}
-	addtobucket(fitems, fi);
-	return fi;
-}
-
 struct bucket_list *DTSPanel::GetItems(void) {
 	objref(fitems);
 	return fitems;
@@ -183,16 +161,28 @@ void DTSPanelEvent::BindCombo(wxWindow *win, int w_id) {
 	win->Bind(wxEVT_COMMAND_TEXT_UPDATED, &DTSPanelEvent::OnCombo, this, w_id, w_id, NULL);
 }
 
-DTSPanel::DTSPanel(wxFrame *mainwin, wxString statusmsg, int butmask) {
+DTSObject::DTSObject(wxString st) {
+	status = st;
+	panel = NULL;
+	SetName(status);
+}
+
+wxString DTSObject::GetName() {
+	return status;
+}
+
+wxWindow *DTSObject::GetPanel() {
+	return panel;
+}
+
+DTSPanel::DTSPanel(wxFrame *mainwin, wxString statusmsg, int butmask)
+	:DTSObject(statusmsg) {
 	button_mask = butmask;
 	userdata = NULL;
-	status = statusmsg;
-	frame = mainwin;
-	SetName(status);
-	panel = NULL;
 	dtsevthandler = NULL;
 	xmldoc = NULL;
 	fgs = NULL;
+	frame = mainwin;
 	memcpy(buttons, def_buttons, sizeof(def_buttons));;
 	fitems = (struct bucket_list *)create_bucketlist(0, fitems_hash);
 }
@@ -211,6 +201,28 @@ DTSPanel::~DTSPanel() {
 	if (xmldoc) {
 		objunref(xmldoc);
 	}
+}
+
+struct form_item *DTSPanel::create_new_fitem(void *widget, enum widget_type type, const char *name, const char *value, const char *value2, void *data, enum form_data_type dtype) {
+	struct form_item *fi;
+
+	if (!(fi = (struct form_item *)objalloc(sizeof(*fi),free_fitem))) {
+		return NULL;
+	}
+
+	fi->widget = widget;
+	fi->type = type;
+	fi->data.ptr = data;
+	fi->dtype = dtype;
+	ALLOC_CONST(fi->name, name);
+	if (value) {
+		ALLOC_CONST(fi->value, value);
+	}
+	if (value2) {
+		ALLOC_CONST(fi->value2, value2);
+	}
+	addtobucket(fitems, fi);
+	return fi;
 }
 
 void DTSPanel::EventHandler(int eid, wxCommandEvent *event) {
@@ -241,10 +253,6 @@ void DTSPanel::SetupWin(void) {
 
 void DTSPanel::SetEventCallback(event_callback evcb, void *userdata) {
 	dtsevthandler = new DTSPanelEvent(userdata, evcb, this);
-}
-
-wxString DTSPanel::GetName() {
-	return status;
 }
 
 bool DTSPanel::ShowPanel(bool show) {
@@ -421,10 +429,6 @@ void DTSPanel::Buttons(void) {
 	g_row++;
 }
 
-wxWindow *DTSPanel::GetPanel() {
-	return panel;
-}
-
 void DTSPanel::SetUserData(void *data) {
 	userdata = data;
 }
@@ -497,7 +501,7 @@ void DTSPanel::Update_XML() {
 }
 
 DTSScrollPanel::DTSScrollPanel(wxWindow *parent,wxFrame *frame, wxString status, int butmask)
-	:wxScrolledWindow(parent, -1),
+	:wxScrolledWindow(parent, wxID_ANY),
 	 DTSPanel(frame, status, butmask) {
 	type = wx_DTSPANEL_SCROLLPANEL;
 	SetScrollRate(10, 10);
@@ -511,7 +515,7 @@ bool DTSScrollPanel::Show(bool show) {
 }
 
 DTSStaticPanel::DTSStaticPanel(wxWindow *parent,wxFrame *frame, wxString status, int butmask)
-	:wxPanel(parent, -1),
+	:wxPanel(parent, wxID_ANY),
 	 DTSPanel(frame, status, butmask) {
 	type = wx_DTSPANEL_PANEL;
 	panel = dynamic_cast<wxPanel *>(this);
