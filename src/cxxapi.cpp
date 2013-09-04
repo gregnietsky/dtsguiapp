@@ -272,6 +272,7 @@ extern void dtsgui_showpanel(dtsgui_pane pane, int act) {
 	DTSPanel *dp = (DTSPanel*)pane;
 
 	dp->Show(true);
+
 	if (!act) {
 		dp->Show(false);
 	}
