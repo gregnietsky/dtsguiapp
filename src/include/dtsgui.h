@@ -104,7 +104,7 @@ dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char
 dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *title);
 dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title);
 dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butmask, enum panel_type type, void *userdata, struct xml_doc *xmldoc);
-void dtsgui_showpanel(dtsgui_pane pane);
+void dtsgui_showpanel(dtsgui_pane pane, int act);
 void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data);
 void dtsgui_xmlpanel_update(dtsgui_pane pane);
 void *dtsgui_paneldata(dtsgui_pane pane);

@@ -268,12 +268,13 @@ extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butma
 	return dp;
 }
 
-extern void dtsgui_showpanel(dtsgui_pane pane) {
+extern void dtsgui_showpanel(dtsgui_pane pane, int act) {
 	DTSPanel *dp = (DTSPanel*)pane;
 
-	dp->ShowPanel(true);
 	dp->Show(true);
-
+	if (!act) {
+		dp->Show(false);
+	}
 }
 
 extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {

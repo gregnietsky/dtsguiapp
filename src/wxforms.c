@@ -522,7 +522,7 @@ void pbx_settings(dtsgui_tabview tabv) {
 
 	cnt = sizeof(dp)/sizeof(dp[0])-1;
 	for(; cnt >= 0;cnt--) {
-		dtsgui_showpanel(dp[cnt]);
+		dtsgui_showpanel(dp[cnt], !cnt);
 	}
 }
 
