@@ -229,40 +229,40 @@ extern dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *titl
 	return tw;
 }
 
-extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *value, void *data) {
+extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->TextBox(title, value, wxTE_LEFT, 1, data, DTSGUI_FORM_DATA_PTR);
+	p->TextBox(title, name, value, wxTE_LEFT, 1, data, DTSGUI_FORM_DATA_PTR);
 }
 
-extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char *value, void *data) {
+extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->TextBox(title, value, wxTE_MULTILINE, 5, data,  DTSGUI_FORM_DATA_PTR);
+	p->TextBox(title, name, value, wxTE_MULTILINE, 5, data,  DTSGUI_FORM_DATA_PTR);
 }
 
-extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *value, void *data) {
+extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->TextBox(title, value, wxTE_PASSWORD, 1, data,  DTSGUI_FORM_DATA_PTR);
+	p->TextBox(title, name, value, wxTE_PASSWORD, 1, data,  DTSGUI_FORM_DATA_PTR);
 }
 
-extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, int ischecked, void *data) {
+extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, const char *name, int ischecked, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->CheckBox(title, ischecked, NULL, NULL, data,  DTSGUI_FORM_DATA_PTR);
+	p->CheckBox(title, name, ischecked, NULL, NULL, data,  DTSGUI_FORM_DATA_PTR);
 }
 
-extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, void *data) {
+extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, const char *name, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	return p->ListBox(title, NULL, data,  DTSGUI_FORM_DATA_PTR);
+	return p->ListBox(title, name, NULL, data,  DTSGUI_FORM_DATA_PTR);
 }
 
-extern struct form_item *dtsgui_combobox(dtsgui_pane pane, const char *title, void *data) {
+extern struct form_item *dtsgui_combobox(dtsgui_pane pane, const char *title, const char *name, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	return p->ComboBox(title, NULL, data, DTSGUI_FORM_DATA_PTR);
+	return p->ComboBox(title, name, NULL, data, DTSGUI_FORM_DATA_PTR);
 }
 
 const char *getxmlvalue(struct xml_element *xml) {
@@ -287,7 +287,7 @@ const char *getxmlvalue(struct xml_element *xml) {
 	return ret;
 }
 
-extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr) {
+extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	struct xml_element *xml;
 	const char *value = NULL;
@@ -296,14 +296,14 @@ extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *x
 		value = getxmlvalue(xml);
 	}
 
-	p->TextBox(title, value, wxTE_LEFT, 1, xml,  DTSGUI_FORM_DATA_XML);
+	p->TextBox(title, name, value, wxTE_LEFT, 1, xml,  DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
 	}
 }
 
-extern void dtsgui_xmltextbox_multi(dtsgui_pane pane, const char *title, const char *xpath, const char *attr) {
+extern void dtsgui_xmltextbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	struct xml_element *xml;
 	const char *value = NULL;
@@ -312,14 +312,14 @@ extern void dtsgui_xmltextbox_multi(dtsgui_pane pane, const char *title, const c
 		value = getxmlvalue(xml);
 	}
 
-	p->TextBox(title, value, wxTE_MULTILINE, 5, xml, DTSGUI_FORM_DATA_XML);
+	p->TextBox(title, name, value, wxTE_MULTILINE, 5, xml, DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
 	}
 }
 
-extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr) {
+extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	struct xml_element *xml;
 	const char *value = NULL;
@@ -328,14 +328,14 @@ extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char 
 		value = getxmlvalue(xml);
 	}
 
-	p->TextBox(title, value, wxTE_PASSWORD, 1, xml, DTSGUI_FORM_DATA_XML);
+	p->TextBox(title, name, value, wxTE_PASSWORD, 1, xml, DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
 	}
 }
 
-extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *checkval, const char *uncheckval, const char *xpath, const char *attr) {
+extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	struct xml_element *xml;
 	int ischecked = 0;
@@ -349,14 +349,14 @@ extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *
 		ischecked = 1;
 	}
 
-	p->CheckBox(title, ischecked, checkval, uncheckval, xml, DTSGUI_FORM_DATA_XML);
+	p->CheckBox(title, name, ischecked, checkval, uncheckval, xml, DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
 	}
 }
 
-struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr) {
+struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	const char *value = NULL;
 	struct xml_element *xml;
@@ -365,7 +365,7 @@ struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const c
 	if ((xml = p->GetNode(xpath, attr))) {
 		value = getxmlvalue(xml);
 	}
-	fi = p->ListBox(title, value, xml, DTSGUI_FORM_DATA_XML);
+	fi = p->ListBox(title, name, value, xml, DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
@@ -374,7 +374,7 @@ struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const c
 	return fi;
 }
 
-struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *xpath, const char *attr) {
+struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	const char *value = NULL;
 	struct xml_element *xml;
@@ -384,7 +384,7 @@ struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const 
 		value = getxmlvalue(xml);
 	}
 
-	fi = p->ComboBox(title, value, xml, DTSGUI_FORM_DATA_XML);
+	fi = p->ComboBox(title, name, value, xml, DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
@@ -458,6 +458,17 @@ extern const char *dtsgui_item_name(struct form_item *fi) {
 	return fi->name;
 }
 
+extern struct form_item *dtsgui_finditem(dtsgui_pane p, const char *name) {
+	struct form_item *fi;
+	struct bucket_list *il;
+
+	il = dtsgui_panel_items(p);
+	fi = (struct form_item*)bucket_list_find_key(il, (void*)name);
+	objunref(il);
+
+	return fi;
+}
+
 extern 	const char *dtsgui_item_value(struct form_item *fi) {
 	const char *value = NULL;
 	union widgets {
@@ -475,6 +486,16 @@ extern 	const char *dtsgui_item_value(struct form_item *fi) {
 			break;
 	}
 	return value;
+}
+
+extern const char *dtsgui_findvalue(dtsgui_pane p, const char *name) {
+	struct form_item *fi;
+	const char *val;
+
+	fi = dtsgui_finditem(p, name);
+	val = dtsgui_item_value(fi);
+	objunref(fi);
+	return val;
 }
 
 void dtsgui_wizard_free(void *data) {
@@ -589,6 +610,12 @@ extern struct xml_doc *dtsgui_loadxmlurl(struct dtsgui *dtsgui, const char *user
 	struct xml_doc *xmldoc = NULL;
 	struct basic_auth *auth;
 
+	if (user && passwd) {
+		auth = dtsgui_pwdialog(user, passwd, dtsgui);
+	} else {
+		auth = NULL;
+	}
+
 	auth = dtsgui_pwdialog(user, passwd, dtsgui);
 	if (!(cbuf = curl_posturl(url, auth, NULL, dtsgui_pwdialog, dtsgui))) {
 		objunref(auth);
@@ -609,5 +636,5 @@ extern struct xml_doc *dtsgui_loadxmlurl(struct dtsgui *dtsgui, const char *user
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);
-}	
+}
 #endif
