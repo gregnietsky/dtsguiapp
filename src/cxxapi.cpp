@@ -234,7 +234,7 @@ extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title)
 	return tw;
 }
 
-extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butmask, enum panel_type type, void *userdata) {
+extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butmask, enum panel_type type, void *userdata, struct xml_doc *xmldoc) {
 	DTSPanel *dp = NULL;
 	DTSTabWindow *tw = (DTSTabWindow*)tv;
 	wxNotebook *parent = dynamic_cast<wxNotebook*>(tw);
@@ -253,6 +253,14 @@ extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butma
 		case wx_DTSPANEL_TREE:
 		case wx_DTSPANEL_WIZARD:
 			return NULL;
+	}
+
+	if (name) {
+		dp->Title(name);
+	}
+
+	if (xmldoc) {
+		dp->SetXMLDoc(xmldoc);
 	}
 
 	np = dynamic_cast<wxPanel*>(dp);
