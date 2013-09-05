@@ -234,26 +234,13 @@ extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title)
 	return tw;
 }
 
-extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butmask, enum panel_type type, void *userdata, struct xml_doc *xmldoc) {
-	DTSPanel *dp = NULL;
+extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc) {
+	DTSScrollPanel *dp = NULL;
 	DTSTabWindow *tw = (DTSTabWindow*)tv;
-	wxNotebook *parent = dynamic_cast<wxNotebook*>(tw);
+	wxBookCtrlBase *parent = dynamic_cast<wxBookCtrlBase*>(tw);
 	wxPanel *np;
 
-	switch (type) {
-		case wx_DTSPANEL_SCROLLPANEL:
-			dp = new DTSScrollPanel(parent, NULL, name, butmask);
-			break;
-		case wx_DTSPANEL_PANEL:
-			dp = new DTSStaticPanel(parent, NULL, name, butmask);
-			break;
-		case wx_DTSPANEL_WINDOW:
-		case wx_DTSPANEL_DIALOG:
-		case wx_DTSPANEL_TAB:
-		case wx_DTSPANEL_TREE:
-		case wx_DTSPANEL_WIZARD:
-			return NULL;
-	}
+	dp = new DTSScrollPanel(parent, NULL, name, butmask);
 
 	if (name) {
 		dp->Title(name);
@@ -272,6 +259,8 @@ extern void dtsgui_showpanel(dtsgui_pane pane, int act) {
 	DTSPanel *dp = (DTSPanel*)pane;
 
 	dp->Show(true);
+
+
 #ifdef _WIN32
 	if (!act) {
 		dp->Show(false);
