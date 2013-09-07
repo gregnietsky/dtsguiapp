@@ -672,6 +672,46 @@ extern struct xml_doc *dtsgui_loadxmlurl(struct dtsgui *dtsgui, const char *user
 	return xmldoc;
 }
 
+extern void dtsgui_item_xmlcreate(dtsgui_pane pane, const char *path, const char *node, const char *attr) {
+		struct bucket_list *il;
+		struct bucket_loop *bl;
+		struct form_item *fi;
+		struct xml_node *xn;
+		struct xml_doc *xmldoc;
+		DTSPanel *p = (DTSPanel*)pane;
+		wxWindow *w;
+		void *data;
+		char *xpath;
+		int len;
+
+		if (!(xmldoc = p->GetXMLDoc())) {
+			return;
+		}
+
+		il = dtsgui_panel_items(pane);
+		bl = init_bucket_loop(il);
+		while(il && bl && (fi = (struct form_item *)next_bucket_loop(bl))) {
+			if (strlen(fi->name) && !(data = fi->data.xml)) {
+				if ((xn = xml_addnode(xmldoc, path, node, "", attr, fi->name))) {
+					len = strlen(fi->name)+strlen(path)+strlen(node)+strlen(attr)+10;
+					xpath = (char*)malloc(len);
+					snprintf(xpath, len, "%s/%s[@%s = '%s']", path, node, attr, fi->name);
+					if ((fi->data.xml = p->GetNode(xpath, NULL))) {
+						fi->dtype = DTSGUI_FORM_DATA_XML;
+						w = (wxWindow*)fi->widget;
+						w->Enable(true);
+					}
+					free(xpath);
+					objunref(xn);
+				}
+			}
+			objunref(fi);
+		}
+		stop_bucket_loop(bl);
+		objunref(il);
+		objunref(xmldoc);
+}
+
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);
