@@ -8,6 +8,7 @@
 #include <wx/wizard.h>
 #include <wx/notebook.h>
 #include <wx/frame.h>
+#include <wx/menu.h>
 
 #include <stdint.h>
 #include <dtsapp.h>
@@ -15,6 +16,27 @@
 
 #include "DTSPanel.h"
 #include "DTSTreeWindow.h"
+
+DTSTreeWindowEvent::DTSTreeWindowEvent(void *userdata, event_callback ev_cb, DTSTreeWindow *win) {
+	data = userdata;
+	evcb = ev_cb;
+	parent = win;
+}
+
+void DTSTreeWindowEvent::TreeEvent(wxCommandEvent &event) {
+	DTSTreeWindow *tw;
+	int evid;
+
+	tw = (DTSTreeWindow*)parent;
+	evid = event.GetEventType();
+
+	if (evid == wxEVT_DATAVIEW_SELECTION_CHANGED) {
+		printf("Got ya\n");
+	} else if (evid == wxEVT_DATAVIEW_ITEM_CONTEXT_MENU) {
+		tw->ShowRMenu();
+		printf("Right Click\n");
+	}
+}
 
 DTSTreeWindow::DTSTreeWindow(wxWindow *parent, wxFrame *frame, wxString stat_msg, int pos)
 	:wxSplitterWindow(parent, -1, wxDefaultPosition, wxDefaultSize),
@@ -25,6 +47,10 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, wxFrame *frame, wxString stat_msg
 	wxSplitterWindow *sw = static_cast<wxSplitterWindow*>(this);
 	wxBoxSizer *p_sizer = new wxBoxSizer(wxHORIZONTAL);
 	wxBoxSizer *treesizer = new wxBoxSizer(wxVERTICAL);
+	wxDataViewItem root;
+
+	rmenu = new wxMenu("Tree Menu");
+	rmenu->Append(128, "Sort");
 
 	this->frame = frame;
 
@@ -41,6 +67,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, wxFrame *frame, wxString stat_msg
 
 	t_pane->SetSizer(treesizer);
 	tree = new wxDataViewTreeCtrl(t_pane, wxID_ANY);
+	dtsevthandler = new DTSTreeWindowEvent(NULL, NULL, this);
 	treesizer->Add(tree, 1,wxEXPAND,0);
 
 	sizer = new wxBoxSizer(wxHORIZONTAL);
@@ -55,9 +82,18 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, wxFrame *frame, wxString stat_msg
 	SetSashPosition(p, true);
 
 	tree->GetParent();
-//	tree->AppendItem(NULL, wxT("Test Root"));
 
-	tree->AppendContainer(wxDataViewItem(0), "The Root", 0 );
+	root = tree->AppendContainer(wxDataViewItem(0), "The Root", 0 );
+	tree->AppendItem(root, "Child");
+	tree->AppendItem(root, "Child");
+	tree->AppendItem(root, "Child");
+	tree->AppendItem(root, "Child");
+	tree->AppendItem(root, "Child");
+
+	tree->Bind(wxEVT_DATAVIEW_SELECTION_CHANGED, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
+	tree->Bind(wxEVT_DATAVIEW_ITEM_CONTEXT_MENU, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
+
+	tree->Select(root);
 
 	Show(false);
 }
@@ -81,9 +117,17 @@ void DTSTreeWindow::SetWindow(wxWindow *window) {
 	a_window = window;
 }
 
+void DTSTreeWindow::ShowRMenu() {
+	if (rmenu) {
+		tree->PopupMenu(rmenu);
+	}
+}
+
 DTSTreeWindow::~DTSTreeWindow() {
 	delete t_pane;
 	delete c_pane;
+	delete dtsevthandler;
+	delete rmenu;
 }
 
 bool DTSTreeWindow::Show(bool show) {
