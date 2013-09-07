@@ -89,8 +89,9 @@ void *dtsgui_userdata(struct dtsgui *dtsgui);
 
 /*menu configuration*/
 dtsgui_menu dtsgui_newmenu(struct dtsgui *dtsgui, const char *name);
-void dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *label, dtsgui_configcb, void *data);
-void dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane pane);
+dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *label, dtsgui_configcb, void *data);
+dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane pane);
+void dtsgui_menuenable(dtsgui_menuitem dmi, int enable);
 void dtsgui_menusep(dtsgui_menu dtsmenu);
 void dtsgui_about(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *text);
 void dtsgui_close(dtsgui_menu dtsmenu, struct dtsgui *dtsgui);

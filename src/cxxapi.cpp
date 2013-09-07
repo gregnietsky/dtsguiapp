@@ -134,30 +134,34 @@ void dtsgui_menusep(dtsgui_menu dtsmenu) {
 	m->AppendSeparator();
 }
 
-void dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane p) {
+dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane p) {
 	wxMenu *m = (wxMenu *)dtsmenu;
 	DTSFrame *frame = (DTSFrame *)dtsgui->appframe;
+	wxMenuItem *mi;
 
 	wxWindow *w = (p) ? getpanewindow(p) : NULL;
 
 	/*handed over to wx no need to delete*/
 	evdata *ev_data = new evdata(w);
 
-	m->Append(menuid, hint, (p) ? getpanename(p) : "");
+	mi = m->Append(menuid, hint, (p) ? getpanename(p) : "");
 	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::SwitchWindow, frame, menuid, menuid, (wxObject *)ev_data);
 	menuid++;
+	return mi;
 }
 
-void dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *label, dtsgui_configcb cb, void *data) {
+dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *label, dtsgui_configcb cb, void *data) {
 	wxMenu *m = (wxMenu *)dtsmenu;
 	DTSFrame *frame = (DTSFrame *)dtsgui->appframe;
+	wxMenuItem *mi;
 
 	/*handed over to wx no need to delete*/
 	evdata *ev_data = new evdata(data, cb);
 
-	m->Append(menuid, hint, label);
+	mi = m->Append(menuid, hint, label);
 	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::RunCommand, frame, menuid, menuid, (wxObject *)ev_data);
 	menuid++;
+	return mi;
 }
 
 void newappframe(struct dtsgui *dtsgui) {
@@ -710,6 +714,12 @@ extern void dtsgui_item_xmlcreate(dtsgui_pane pane, const char *path, const char
 		stop_bucket_loop(bl);
 		objunref(il);
 		objunref(xmldoc);
+}
+
+
+void dtsgui_menuenable(dtsgui_menuitem dmi, int enable) {
+	wxMenuItem *mi = (wxMenuItem*)dmi;
+	mi->Enable((enable) ? true : false);
 }
 
 #ifdef __WIN32

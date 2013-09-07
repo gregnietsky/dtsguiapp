@@ -42,6 +42,8 @@ struct app_data {
 	struct dtsgui *dtsgui;
 	struct xml_doc *xmldoc;
 	const char *datadir;
+	const char *openconf;
+	dtsgui_menuitem editconf;
 };
 
 struct listitem {
@@ -822,15 +824,20 @@ void file_menu(struct dtsgui *dtsgui) {
 	dtsgui_menu file;
 	dtsgui_treeview tree;
 	dtsgui_tabview tabv;
+	struct app_data *appdata;
+
+	appdata = dtsgui_userdata(dtsgui);
 
 	file = dtsgui_newmenu(dtsgui, "&File");
 
-	dtsgui_newmenucb(file, dtsgui, "&New System", "New System Configuration Wizard", newsys_wizard, NULL);
-	dtsgui_newmenucb(file, dtsgui, "&Edit Saved System", "Reconfigure Saved System File", editsys_wizard, NULL);
-	dtsgui_menusep(file);
+	dtsgui_newmenucb(file, dtsgui, "&New System (Wizard)", "New System Configuration Wizard", newsys_wizard, NULL);
+	appdata->editconf = dtsgui_newmenucb(file, dtsgui, "&Edit Saved System (Wizard)", "Reconfigure Saved System File With Wizard ", editsys_wizard, NULL);
 
+	dtsgui_menusep(file);
 	tabv = dtsgui_tabwindow(dtsgui, "PBX Setup");
+
 	dtsgui_newmenuitem(file, dtsgui, "P&BX Configuration", tabv);
+
 	pbx_settings(dtsgui, tabv);
 
 	dtsgui_menusep(file);
