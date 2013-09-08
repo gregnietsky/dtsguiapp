@@ -75,6 +75,7 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 		}
 		printf("Right Click\n");
 	}
+	parent->TreeResize();
 }
 
 void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {
@@ -237,7 +238,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	int w, h, p;
 	wxSplitterWindow *sw = static_cast<wxSplitterWindow*>(this);
 	wxBoxSizer *p_sizer = new wxBoxSizer(wxHORIZONTAL);
-	wxBoxSizer *treesizer = new wxBoxSizer(wxVERTICAL);
+	treesizer = new wxBoxSizer(wxVERTICAL);
 	wxDataViewItem root;
 
 	if ((rmenu = (struct treemenu*)objalloc(sizeof(*rmenu), free_menu))) {
@@ -254,7 +255,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	this->frame = frame;
 
 	p_sizer->Add(sw, 1,wxEXPAND,0);
-	t_pane = new wxPanel(sw, wxID_ANY);
+	t_pane = new wxScrolledWindow(sw, wxID_ANY);
 	c_pane = new wxWindow(sw, wxID_ANY);
 
 	panel = static_cast<wxWindow *>(sw);
@@ -265,6 +266,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	SetMinimumPaneSize(20);
 
 	t_pane->SetSizer(treesizer);
+	t_pane->SetScrollRate(10, 10);
 	tree = new wxDataViewTreeCtrl(t_pane, wxID_ANY);
 	dtsevthandler = new DTSTreeWindowEvent(NULL, NULL, this);
 	treesizer->Add(tree, 1,wxEXPAND,0);
@@ -304,11 +306,22 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	tree->EnableDragSource(wxDF_UNICODETEXT);
 	tree->EnableDropTarget(wxDF_UNICODETEXT);
 
+	treesizer->SetSizeHints(t_pane);
 	Show(false);
 }
 
 wxDataViewTreeCtrl *DTSTreeWindow::GetTreeCtrl() {
 	return tree;
+}
+
+void DTSTreeWindow::TreeResize() {
+	wxSize size = tree->GetClientSize();
+	tree->GetColumn(0)->SetWidth(wxCOL_WIDTH_AUTOSIZE);
+	tree->GetColumn(0)->SetMinWidth(size.x);
+	tree->GetColumn(0)->SetFlag(wxDATAVIEW_COL_RESIZABLE);
+	printf("TX: %i\n", size.x);
+	treesizer->FitInside(t_pane);
+	treesizer->Layout();
 }
 
 void DTSTreeWindow::SetWindow(wxWindow *window) {
@@ -351,8 +364,12 @@ DTSTreeWindow::~DTSTreeWindow() {
 }
 
 bool DTSTreeWindow::Show(bool show) {
-	if (show && frame) {
-		frame->SetStatusText(status);
+	if (show) {
+		TreeResize();
+		if (frame) {
+			frame->SetStatusText(status);
+		}
+
 	}
 	return wxSplitterWindow::Show(show);
 }
