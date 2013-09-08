@@ -74,8 +74,9 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 			printf("DRAG\n");
 		}
 		printf("Right Click\n");
+	} else if (evid == wxEVT_DATAVIEW_ITEM_EDITING_DONE) {
+		parent->TreeResize();
 	}
-	parent->TreeResize();
 }
 
 void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {
@@ -297,6 +298,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 
 	tree->Bind(wxEVT_DATAVIEW_SELECTION_CHANGED, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	tree->Bind(wxEVT_DATAVIEW_ITEM_CONTEXT_MENU, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
+	tree->Bind(wxEVT_DATAVIEW_ITEM_EDITING_DONE, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	frame->Bind(wxEVT_DATAVIEW_ITEM_BEGIN_DRAG, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	tree->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSTreeWindowEvent::MenuEvent, dtsevthandler);
 
@@ -307,6 +309,9 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	tree->EnableDropTarget(wxDF_UNICODETEXT);
 
 	treesizer->SetSizeHints(t_pane);
+	tree->GetColumn(0)->SetWidth(wxCOL_WIDTH_AUTOSIZE);
+	treesizer->FitInside(t_pane);
+	treesizer->Layout();
 	Show(false);
 }
 
@@ -315,13 +320,8 @@ wxDataViewTreeCtrl *DTSTreeWindow::GetTreeCtrl() {
 }
 
 void DTSTreeWindow::TreeResize() {
-	wxSize size = tree->GetClientSize();
-	tree->GetColumn(0)->SetWidth(wxCOL_WIDTH_AUTOSIZE);
-	tree->GetColumn(0)->SetMinWidth(size.x);
-	tree->GetColumn(0)->SetFlag(wxDATAVIEW_COL_RESIZABLE);
-	printf("TX: %i\n", size.x);
-	treesizer->FitInside(t_pane);
-	treesizer->Layout();
+	tree->GetColumn(0)->SetHidden(true);
+	tree->GetColumn(0)->SetHidden(false);
 }
 
 void DTSTreeWindow::SetWindow(wxWindow *window) {
