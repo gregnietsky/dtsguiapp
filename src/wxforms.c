@@ -839,7 +839,7 @@ int save_config(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata;
 
 	appdata = dtsgui_userdata(dtsgui);
-//	dtsgui_reconfig(dtsgui);
+/*	dtsgui_reconfig(dtsgui);*/
 	dtsgui_menuenable(appdata->cfg_menu, 0);
 	dtsgui_menuitemenable(appdata->e_wiz, 1);
 	dtsgui_menuitemenable(appdata->c_open, 1);
