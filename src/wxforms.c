@@ -46,7 +46,6 @@ struct app_data {
 	dtsgui_menuitem n_wiz;
 	dtsgui_menuitem e_wiz;
 	dtsgui_menuitem c_open;
-	dtsgui_menuitem c_save;
 	dtsgui_menu cfg_menu;
 };
 
@@ -840,7 +839,6 @@ int open_config(struct dtsgui *dtsgui, void *data) {
 	dtsgui_menuitemenable(appdata->e_wiz, 0);
 	dtsgui_menuitemenable(appdata->n_wiz, 0);
 	dtsgui_menuitemenable(appdata->c_open, 0);
-	dtsgui_menuitemenable(appdata->c_save, 1);
 	dtsgui_titleappend(dtsgui, "Default Configuration");
 	return 1;
 }
@@ -854,7 +852,6 @@ int save_config(struct dtsgui *dtsgui, void *data) {
 	dtsgui_menuitemenable(appdata->e_wiz, 1);
 	dtsgui_menuitemenable(appdata->n_wiz, 1);
 	dtsgui_menuitemenable(appdata->c_open, 1);
-	dtsgui_menuitemenable(appdata->c_save, 0);
 	dtsgui_titleappend(dtsgui, NULL);
 	return 1;
 }
@@ -873,9 +870,6 @@ void file_menu(struct dtsgui *dtsgui) {
 
 	dtsgui_menusep(file);
 	appdata->c_open = dtsgui_newmenucb(file, dtsgui, "&Open Config", "Open System Config (File/URL)", open_config, NULL);
-	appdata->c_save = dtsgui_newmenucb(file, dtsgui, "&Save Config", "Save/Close System Config (File/URL)", save_config, NULL);
-	dtsgui_menuitemenable(appdata->c_save, 0);
-/*	dtsgui_newmenucb(file, dtsgui, "&Open Config", "Open System Config (File/URL)", open_config, NULL);*/
 
 	dtsgui_menusep(file);
 	testpanel(dtsgui, file);
@@ -901,6 +895,9 @@ void config_menu(struct dtsgui *dtsgui) {
 	tabv = dtsgui_tabwindow(dtsgui, "PBX Setup");
 	dtsgui_newmenuitem(appdata->cfg_menu, dtsgui, "P&BX Configuration", tabv);
 	pbx_settings(dtsgui, tabv);
+
+	dtsgui_menusep(appdata->cfg_menu);
+	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&Save Config", "Save/Close System Config (File/URL)", save_config, NULL);
 
 	dtsgui_menuenable(appdata->cfg_menu, 0);
 }
