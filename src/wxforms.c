@@ -859,6 +859,9 @@ int save_config(struct dtsgui *dtsgui, void *data) {
 	dtsgui_menuitemenable(appdata->n_wiz, 1);
 	dtsgui_menuitemenable(appdata->c_open, 1);
 	dtsgui_titleappend(dtsgui, NULL);
+	if (appdata->dyn_cfg) {
+		dtsgui_closedyn(dtsgui, appdata->dyn_cfg);
+	}
 	return 1;
 }
 

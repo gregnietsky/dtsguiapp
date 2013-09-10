@@ -800,6 +800,20 @@ void dtsgui_reconfig(struct dtsgui *dtsgui) {
 	f->SendDTSEvent(1, NULL);
 }
 
+void dtsgui_closedyn(struct dtsgui *dtsgui, struct dynamic_panel *dpane) {
+	DTSObject *p;
+
+	if (!dtsgui || !dpane) {
+		return;
+	}
+	p = (DTSObject*)dpane->panel;
+//	p->Reparent(NULL);
+
+	delete p;
+
+	dpane->panel = NULL;
+}
+
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);
