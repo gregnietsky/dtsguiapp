@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
+#include <unistd.h>
 
 #ifdef __WIN32
 #define UNICODE 1
@@ -826,6 +827,7 @@ int post_test(struct dtsgui *dtsgui, void *data) {
 int open_config(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata;
 	const char *filename;
+	int i;
 
 	appdata = dtsgui_userdata(dtsgui);
 
@@ -841,6 +843,13 @@ int open_config(struct dtsgui *dtsgui, void *data) {
 	dtsgui_reconfig(dtsgui);
 
 	dtsgui_createdyn(dtsgui, appdata->dyn_cfg);
+
+	for(i=0; i < 20;i++ ){
+		if (appdata->dyn_cfg) {
+			break;
+		}
+		usleep(200000);
+	}
 
 	dtsgui_menuitemenable(appdata->e_wiz, 0);
 	dtsgui_menuitemenable(appdata->n_wiz, 0);
