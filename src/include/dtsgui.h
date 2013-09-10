@@ -117,6 +117,7 @@ void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data);
 void dtsgui_xmlpanel_update(dtsgui_pane pane);
 void *dtsgui_paneldata(dtsgui_pane pane);
 void dtsgui_closedyn(struct dtsgui *dtsgui, struct dynamic_panel *dpane);
+void dtsgui_createdyn(struct dtsgui *dtsgui, struct dynamic_panel *dpane);
 
 /*form items
  *list/combo box must be unrefed when all items added

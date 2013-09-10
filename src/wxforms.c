@@ -841,11 +841,12 @@ int open_config(struct dtsgui *dtsgui, void *data) {
 
 	appdata = dtsgui_userdata(dtsgui);
 	dtsgui_reconfig(dtsgui);
-	dtsgui_menuenable(appdata->cfg_menu, 1);
 	dtsgui_menuitemenable(appdata->e_wiz, 0);
 	dtsgui_menuitemenable(appdata->n_wiz, 0);
 	dtsgui_menuitemenable(appdata->c_open, 0);
 	dtsgui_titleappend(dtsgui, "Default Configuration");
+	dtsgui_createdyn(dtsgui, appdata->dyn_cfg);
+	dtsgui_menuenable(appdata->cfg_menu, 1);
 	return 1;
 }
 
