@@ -155,7 +155,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	:wxSplitterWindow(parent, -1, wxDefaultPosition, wxDefaultSize),
 	 DTSObject(stat_msg) {
 
-	int w, h, p;
+	int w, h, p, psize;
 	wxSplitterWindow *sw = static_cast<wxSplitterWindow*>(this);
 	wxBoxSizer *p_sizer = new wxBoxSizer(wxHORIZONTAL);
 	treesizer = new wxBoxSizer(wxVERTICAL);
@@ -242,6 +242,13 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	/*can only expand when not empty*/
 	tree->Expand(root);
 	SetTreePaneSize();
+
+	psize = p - GetSashSize();
+#ifdef _WIN32
+	tree->GetColumn(0)->SetWidth(psize);
+#else
+	tree->GetColumn(0)->SetMinWidth(psize);
+#endif // _WIN32
 }
 
 DTSDVMCtrl *DTSTreeWindow::GetTreeCtrl() {
