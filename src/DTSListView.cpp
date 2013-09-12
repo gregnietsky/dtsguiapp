@@ -5,7 +5,7 @@
 #include <wx/dataview.h>
 #include <wx/validate.h>
 
-#include "DTSListView.hpp"
+#include "DTSListView.h"
 
 DTSDVMListStore::DTSDVMListStore(DTSDVMListStore* parent, bool is_container, const wxString& title) {
 	this->parent = parent;

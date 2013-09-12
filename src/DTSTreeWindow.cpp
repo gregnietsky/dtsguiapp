@@ -18,7 +18,7 @@
 
 #include "DTSFrame.h"
 #include "DTSPanel.h"
-#include "DTSListView.hpp"
+#include "DTSListView.h"
 #include "DTSTreeWindow.h"
 
 enum treewinmenu {
