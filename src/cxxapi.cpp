@@ -24,6 +24,7 @@
 #endif
 
 #include <stdint.h>
+#include <vector>
 
 #include <wx/app.h>
 #include <wx/frame.h>
@@ -51,6 +52,7 @@
 #include "DTSApp.h"
 #include "DTSFrame.h"
 #include "DTSPanel.h"
+#include "DTSListView.h"
 #include "DTSTreeWindow.h"
 
 static int menuid = wxID_AUTO_LOWEST;
