@@ -166,7 +166,7 @@ void DTSTreeWindowEvent::MoveUp(wxDataViewItem p_cont) {
 
 void DTSTreeWindowEvent::SplitterEvent(wxSplitterEvent& event) {
 	DTSTreeWindow *tw;
-	wxSize psize;
+	int psize;
 	int evid;
 
 	tw = (DTSTreeWindow*)parent;
@@ -175,9 +175,9 @@ void DTSTreeWindowEvent::SplitterEvent(wxSplitterEvent& event) {
 	if (evid == wxEVT_SPLITTER_SASH_POS_CHANGED) {
 		psize = tw->GetTreePaneSize();
 #ifdef _WIN32
-		tree->GetColumn(0)->SetWidth(psize.x);
+		tree->GetColumn(0)->SetWidth(psize);
 #else
-		tree->GetColumn(0)->SetMinWidth(psize.x);
+		tree->GetColumn(0)->SetMinWidth(psize);
 #endif // _WIN32
 	}
 }
@@ -278,9 +278,9 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	treesizer->FitInside(t_pane);
 	treesizer->Layout();
 #ifdef _WIN32
-	tree->GetColumn(0)->SetWidth(p);
+	tree->GetColumn(0)->SetWidth(p - sw->GetSashSize());
 #else
-	tree->GetColumn(0)->SetMinWidth(p);
+	tree->GetColumn(0)->SetMinWidth(p - sw->GetSashSize());
 #endif // _WIN32
 	Show(false);
 }
@@ -289,8 +289,8 @@ DTSDVMCtrl *DTSTreeWindow::GetTreeCtrl() {
 	return tree;
 }
 
-wxSize DTSTreeWindow::GetTreePaneSize() {
-	return t_pane->GetSize();
+int DTSTreeWindow::GetTreePaneSize() {
+	return GetSashPosition() - GetSashSize();
 }
 
 void DTSTreeWindow::TreeResize() {

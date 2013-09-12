@@ -37,7 +37,7 @@ class DTSTreeWindow: public DTSObject, public virtual wxSplitterWindow {
 		bool Show(bool = true);
 		DTSDVMCtrl *GetTreeCtrl();
 		void TreeResize();
-		wxSize GetTreePaneSize();
+		int GetTreePaneSize();
 	protected:
 		void SetWindow(wxWindow *window);
 	private:
