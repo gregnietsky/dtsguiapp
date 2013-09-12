@@ -60,9 +60,8 @@ int DTSDVMListStore::GetChildIndex(DTSDVMListStore* child) {
 	std::vector<DTSDVMListStore*>::iterator last = children.end();
 	int idx = 0;
 
-	while (iter!=last && (child!=*iter)) {
-		++idx;
-		++iter;
+	for(;((iter!=last) && (child!=*iter));iter++) {
+		idx++;
 	}
 
 	return idx;
@@ -132,8 +131,32 @@ unsigned int DTSDVMListStore::GetContainers(wxDataViewItemArray& items, bool exo
 	return ccnt;
 }
 
-bool DTSDVMListStore::Expanded() {
+bool DTSDVMListStore::IsExpanded() {
 	return expanded;
+}
+
+bool DTSDVMListStore::MoveChildUp(size_t idx) {
+	DTSDVMListStore *tmp;
+
+	if ((idx <= 0) || (idx > children.size())) {
+		return false;
+	}
+	tmp = children[idx-1];
+	children[idx-1]=children[idx];
+	children[idx]=tmp;
+	return true;
+}
+
+bool DTSDVMListStore::MoveChildDown(size_t idx) {
+	DTSDVMListStore *tmp;
+
+	if ((idx < 0) || (idx > children.size()-1)) {
+		return false;
+	}
+	tmp = children[idx];
+	children[idx]=children[idx+1];
+	children[idx+1]=tmp;
+	return true;
 }
 
 DTSDVMListView::DTSDVMListView() {
@@ -340,6 +363,45 @@ void DTSDVMListView::SetExpanded(const wxDataViewItem& node, bool expanded) {
 	}
 }
 
+void DTSDVMListView::MoveChildUp(const wxDataViewItem& node) {
+	DTSDVMListStore *data, *parent;
+	wxDataViewItem pnode;
+	wxDataViewItemArray items;
+
+	data = (DTSDVMListStore*)node.GetID();
+	if (!data || !node.IsOk()) {
+		return;
+	}
+	parent = data->GetParent();
+	pnode = wxDataViewItem(parent);
+
+	if (parent) {
+		parent->MoveChildUp(parent->GetChildIndex(data));
+		GetChildren(pnode, items);
+		ItemsDeleted(pnode, items);
+		ItemsAdded(pnode, items);
+	}
+}
+
+void DTSDVMListView::MoveChildDown(const wxDataViewItem& node) {
+	DTSDVMListStore *data, *parent;
+	wxDataViewItem pnode;
+	wxDataViewItemArray items;
+
+	data = (DTSDVMListStore*)node.GetID();
+	if (!data || !node.IsOk()) {
+		return;
+	}
+	parent = data->GetParent();
+	pnode = wxDataViewItem(parent);
+
+	if (parent) {
+		parent->MoveChildDown(parent->GetChildIndex(data));
+		GetChildren(pnode, items);
+		ItemsDeleted(pnode, items);
+		ItemsAdded(pnode, items);
+	}
+}
 DTSDVMCtrl::DTSDVMCtrl() {
 	model = NULL;
 }
@@ -430,4 +492,28 @@ wxDataViewItem DTSDVMCtrl::AppendContainer(wxDataViewItem parent, const wxString
 	dvi = wxDataViewItem(li);
 	model->ItemAdded(parent, dvi);
 	return dvi;
+}
+
+
+void DTSDVMCtrl::ReloadParent(const wxDataViewItem parent, bool do_expand, const wxDataViewItemArray cont, const wxDataViewItemArray sel) {
+	DTSDVMListStore *data;
+	unsigned int cnt;
+
+	/*expand root if was expanded*/
+	if (do_expand) {
+		Expand(parent);
+	}
+
+	/*re select all selected*/
+	for (cnt=0; cnt < sel.size();cnt++) {
+		Select(wxDataViewItem(sel[cnt]));
+	}
+
+	/*re expand containers colapsed*/
+	for (cnt=0; cnt < cont.size();cnt++) {
+		data = (DTSDVMListStore*)cont[cnt].GetID();
+		if (data->IsExpanded()) {
+			Expand(cont[cnt]);
+		}
+	}
 }

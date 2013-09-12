@@ -83,7 +83,24 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 	}
 }
 
+bool DTSTreeWindowEvent::ParentConfig(const wxDataViewItem parent, wxDataViewItemArray &cont, wxDataViewItemArray &sel) {
+	bool expand;
+	unsigned int cont_cnt, cnt;
+
+	/* Get enabled/selection state of parent*/
+	expand = tree->IsExpanded(parent);
+	tree->GetSelections(sel);
+
+	/*mark expanded containers*/
+	cont_cnt = vm->GetContainers(parent, cont, false);
+	for (cnt=0; cnt < cont_cnt;cnt++) {
+		vm->SetExpanded(cont[cnt], tree->IsExpanded(cont[cnt]));
+	}
+	return expand;
+}
+
 void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid;
+	wxDataViewItemArray items, sel;
 	wxDataViewItem p_cont;
 	DTSFrame *frame;
 	bool expand;
@@ -93,10 +110,14 @@ void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid
 	eid=(treewinmenu)event.GetId();
 	switch(eid) {
 		case DTS_TREEWIN_MENU_MOVEDOWN:
-			MoveDown(p_cont);
+			expand = ParentConfig(p_cont, items, sel);
+			vm->MoveChildDown(a_item);
+			tree->ReloadParent(p_cont, expand, items, sel);
 			break;
 		case DTS_TREEWIN_MENU_MOVEUP:
-			MoveUp(p_cont);
+			expand = ParentConfig(p_cont, items, sel);
+			vm->MoveChildUp(a_item);
+			tree->ReloadParent(p_cont, expand, items, sel);
 			break;
 		case DTS_TREEWIN_MENU_DELETE:
 			frame = parent->GetFrame();
@@ -105,63 +126,11 @@ void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid
 			}
 			break;
 		case DTS_TREEWIN_MENU_SORT:
-			wxDataViewItemArray cont, sel;
-			DTSDVMListStore *data;
-			unsigned int cont_cnt, cnt;
-
-			expand = tree->IsExpanded(a_cont);
-			tree->GetSelections(sel);
-
-			/*mark expanded containers*/
-			cont_cnt = vm->GetContainers(a_cont, cont, false);
-			for (cnt=0; cnt < cont_cnt;cnt++) {
-				vm->SetExpanded(cont[cnt], tree->IsExpanded(cont[cnt]));
-			}
-
+			expand = ParentConfig(p_cont, items, sel);
 			vm->SortChildren(a_cont);
-			/*expand root if was expanded*/
-			if (expand) {
-				tree->Expand(a_cont);
-			}
-
-			/*re select all selected*/
-			for (cnt=0; cnt < sel.size();cnt++) {
-				tree->Select(wxDataViewItem(sel[cnt]));
-			}
-
-			/*re expand containers colapsed*/
-			for (cnt=0; cnt < cont.size();cnt++) {
-				data = (DTSDVMListStore*)cont[cnt].GetID();
-				if (data->Expanded()) {
-					tree->Expand(cont[cnt]);
-				}
-			}
+			tree->ReloadParent(a_cont, expand, items, sel);
 			break;
 	}
-}
-
-void DTSTreeWindowEvent::MoveDown(wxDataViewItem p_cont) {
-//	vm->MoveDown(p_cont, a_item);
-}
-
-void DTSTreeWindowEvent::MoveUp(wxDataViewItem p_cont) {
-/*	wxDataViewItemArray items;
-	int cnt,i;
-
-	cnt = vm->GetChildren(p_cont, items);
-	if (a_item == items[0]) {
-		return;
-	}
-	for(i=0; i < cnt;i++) {
-		if (items[i] == a_item) {
-			break;
-		}
-	}
-	i--;
-	if (i < 0) {
-		return;
-	}
-	Float(items, p_cont, a_item, i);*/
 }
 
 void DTSTreeWindowEvent::SplitterEvent(wxSplitterEvent& event) {

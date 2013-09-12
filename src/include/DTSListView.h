@@ -19,7 +19,9 @@ class DTSDVMListStore {
 		void SetExpanded(bool expanded = true);
 		unsigned int GetChildren(wxDataViewItemArray& items);
 		unsigned int GetContainers(wxDataViewItemArray& items, bool exonly = false);
-		bool Expanded();
+		bool IsExpanded();
+		bool MoveChildUp(size_t idx);
+		bool MoveChildDown(size_t idx);
 	protected:
 		wxString title;
 	private:
@@ -52,6 +54,8 @@ class DTSDVMListView :public wxDataViewModel {
 		wxDataViewItem GetNthChild(wxDataViewItem& parent, size_t idx);
 		void SetExpanded(const wxDataViewItem& node, bool expanded = true);
 		virtual unsigned int GetContainers(const wxDataViewItem &parent, wxDataViewItemArray &items, bool exonly = false) const;
+		void MoveChildUp(const wxDataViewItem& node);
+		void MoveChildDown(const wxDataViewItem& node);
 	protected:
 		DTSDVMListStore* root;
 };
@@ -67,6 +71,7 @@ class DTSDVMCtrl :public wxDataViewCtrl {
 		DTSDVMListView *GetStore();
 		wxDataViewItem AppendItem(wxDataViewItem parent, const wxString& title);
 		wxDataViewItem AppendContainer(wxDataViewItem parent, const wxString& title);
+		void ReloadParent(const wxDataViewItem parent, bool do_expand, const wxDataViewItemArray cont, const wxDataViewItemArray sel);
 	private:
 		DTSDVMListView *model;
 };
