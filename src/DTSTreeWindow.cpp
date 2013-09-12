@@ -228,7 +228,6 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	Show(false);
 
 	root = tree->AppendContainer(wxDataViewItem(NULL), "The Root");
-	tree->Expand(root);
 	tree->Select(root);
 
 	tree->AppendItem(root, "Child E");
@@ -245,6 +244,9 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	tree->AppendItem(root4, "Child C");
 	tree->AppendItem(root4, "Child B");
 	tree->AppendItem(root4, "Child A");
+
+	/*can only expand when not empty*/
+	tree->Expand(root);
 }
 
 DTSDVMCtrl *DTSTreeWindow::GetTreeCtrl() {
