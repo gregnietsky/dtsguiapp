@@ -355,10 +355,16 @@ DTSDVMCtrl::DTSDVMCtrl(wxWindow *parent, wxWindowID id, DTSDVMListView *model, c
 	}
 
 	col0_r = new wxDataViewTextRenderer("string", wxDATAVIEW_CELL_EDITABLE);
-	col0 = new wxDataViewColumn("Title", col0_r, 0, wxDVC_DEFAULT_WIDTH , wxALIGN_LEFT, wxDATAVIEW_COL_RESIZABLE);
+#ifndef _WIN32
+	col0_r->DisableEllipsize();
+#endif //_WIN32
+	col0 = new wxDataViewColumn("Title", col0_r, 0);
+#ifndef _WIN32
 	col0->SetWidth(wxCOL_WIDTH_AUTOSIZE);
+#endif // _WIN32
 	col0->SetFlags(wxCOL_RESIZABLE | wxCOL_REORDERABLE);
 	col0->SetReorderable(true);
+	col0->SetAlignment(wxALIGN_LEFT);
 	AppendColumn(col0);
 }
 

@@ -164,6 +164,24 @@ void DTSTreeWindowEvent::MoveUp(wxDataViewItem p_cont) {
 	Float(items, p_cont, a_item, i);*/
 }
 
+void DTSTreeWindowEvent::SplitterEvent(wxSplitterEvent& event) {
+	DTSTreeWindow *tw;
+	wxSize psize;
+	int evid;
+
+	tw = (DTSTreeWindow*)parent;
+	evid = event.GetEventType();
+
+	if (evid == wxEVT_SPLITTER_SASH_POS_CHANGED) {
+		psize = tw->GetTreePaneSize();
+#ifdef _WIN32
+		tree->GetColumn(0)->SetWidth(psize.x);
+#else
+		tree->GetColumn(0)->SetMinWidth(psize.x);
+#endif // _WIN32
+	}
+}
+
 void free_menu(void *data) {
 	struct treemenu *rmenu = (struct treemenu*)data;
 
@@ -248,6 +266,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	tree->Bind(wxEVT_DATAVIEW_ITEM_EDITING_DONE, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	frame->Bind(wxEVT_DATAVIEW_ITEM_BEGIN_DRAG, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	tree->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSTreeWindowEvent::MenuEvent, dtsevthandler);
+	sw->Bind(wxEVT_SPLITTER_SASH_POS_CHANGED, &DTSTreeWindowEvent::SplitterEvent, dtsevthandler);
 
 	tree->Expand(root);
 	tree->Select(root);
@@ -258,11 +277,20 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	treesizer->SetSizeHints(t_pane);
 	treesizer->FitInside(t_pane);
 	treesizer->Layout();
+#ifdef _WIN32
+	tree->GetColumn(0)->SetWidth(p);
+#else
+	tree->GetColumn(0)->SetMinWidth(p);
+#endif // _WIN32
 	Show(false);
 }
 
 DTSDVMCtrl *DTSTreeWindow::GetTreeCtrl() {
 	return tree;
+}
+
+wxSize DTSTreeWindow::GetTreePaneSize() {
+	return t_pane->GetSize();
 }
 
 void DTSTreeWindow::TreeResize() {
