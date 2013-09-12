@@ -105,16 +105,16 @@ void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid
 			}
 			break;
 		case DTS_TREEWIN_MENU_SORT:
-			expand = tree->IsExpanded(p_cont);
-			cont_cnt = vm->GetContainers(p_cont, cont, false);
+			expand = tree->IsExpanded(a_cont);
+			cont_cnt = vm->GetContainers(a_cont, cont, false);
 			for (cnt=0; cnt < cont_cnt;cnt++) {
 				vm->SetExpanded(cont[cnt], tree->IsExpanded(cont[cnt]));
 			}
-			vm->SortChildren(p_cont);
+			vm->SortChildren(a_cont);
 			if (expand) {
-				tree->Expand(p_cont);
+				tree->Expand(a_cont);
 			}
-			cont_cnt = vm->GetContainers(p_cont, cont2, true);
+			cont_cnt = vm->GetContainers(a_cont, cont2, true);
 			for (cnt=0; cnt < cont_cnt;cnt++) {
 				tree->Expand(cont2[cnt]);
 			}
