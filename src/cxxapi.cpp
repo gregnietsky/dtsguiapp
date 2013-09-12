@@ -307,7 +307,7 @@ extern void dtsgui_showpanel(dtsgui_pane pane, int act) {
 extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->TextBox(title, name, value, wxTE_LEFT, 1, data, DTSGUI_FORM_DATA_PTR);
+	p->TextBox(title, name, value, wxTE_LEFT | wxTE_PROCESS_ENTER, 1, data, DTSGUI_FORM_DATA_PTR);
 }
 
 extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
@@ -319,7 +319,7 @@ extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char
 extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->TextBox(title, name, value, wxTE_PASSWORD, 1, data,  DTSGUI_FORM_DATA_PTR);
+	p->TextBox(title, name, value, wxTE_PASSWORD | wxTE_PROCESS_ENTER, 1, data,  DTSGUI_FORM_DATA_PTR);
 }
 
 extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, const char *name, int ischecked, void *data) {
