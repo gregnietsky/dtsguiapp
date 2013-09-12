@@ -48,6 +48,8 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 
 	if (evid == wxEVT_DATAVIEW_SELECTION_CHANGED) {
 		printf("Got ya\n");
+	} else if (evid == wxEVT_DATAVIEW_ITEM_EXPANDED) {
+		parent->TreeResize();
 	} else if (evid == wxEVT_DATAVIEW_ITEM_CONTEXT_MENU) {
 		if ((a_item = event.GetItem())) {
 			if (vm->IsContainer(a_item)) {
@@ -241,6 +243,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 	tree->AppendItem(root4, "Child A");
 
 	tree->Bind(wxEVT_DATAVIEW_SELECTION_CHANGED, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
+	tree->Bind(wxEVT_DATAVIEW_ITEM_EXPANDED, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	tree->Bind(wxEVT_DATAVIEW_ITEM_CONTEXT_MENU, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	tree->Bind(wxEVT_DATAVIEW_ITEM_EDITING_DONE, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	frame->Bind(wxEVT_DATAVIEW_ITEM_BEGIN_DRAG, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
