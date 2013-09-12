@@ -132,6 +132,10 @@ unsigned int DTSDVMListStore::GetContainers(wxDataViewItemArray& items, bool exo
 	return ccnt;
 }
 
+bool DTSDVMListStore::Expanded() {
+	return expanded;
+}
+
 DTSDVMListView::DTSDVMListView() {
 	root = NULL;
 }

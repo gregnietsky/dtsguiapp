@@ -83,8 +83,6 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 
 void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid;
 	wxDataViewItem p_cont;
-	wxDataViewItemArray cont, cont2;
-	int cont_cnt, cnt;
 	DTSFrame *frame;
 	bool expand;
 
@@ -105,18 +103,36 @@ void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid
 			}
 			break;
 		case DTS_TREEWIN_MENU_SORT:
+			wxDataViewItemArray cont, sel;
+			DTSDVMListStore *data;
+			unsigned int cont_cnt, cnt;
+
 			expand = tree->IsExpanded(a_cont);
+			tree->GetSelections(sel);
+
+			/*mark expanded containers*/
 			cont_cnt = vm->GetContainers(a_cont, cont, false);
 			for (cnt=0; cnt < cont_cnt;cnt++) {
 				vm->SetExpanded(cont[cnt], tree->IsExpanded(cont[cnt]));
 			}
+
 			vm->SortChildren(a_cont);
+			/*expand root if was expanded*/
 			if (expand) {
 				tree->Expand(a_cont);
 			}
-			cont_cnt = vm->GetContainers(a_cont, cont2, true);
-			for (cnt=0; cnt < cont_cnt;cnt++) {
-				tree->Expand(cont2[cnt]);
+
+			/*re select all selected*/
+			for (cnt=0; cnt < sel.size();cnt++) {
+				tree->Select(wxDataViewItem(sel[cnt]));
+			}
+
+			/*re expand containers colapsed*/
+			for (cnt=0; cnt < cont.size();cnt++) {
+				data = (DTSDVMListStore*)cont[cnt].GetID();
+				if (data->Expanded()) {
+					tree->Expand(cont[cnt]);
+				}
 			}
 			break;
 	}

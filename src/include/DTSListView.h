@@ -19,6 +19,7 @@ class DTSDVMListStore {
 		void SetExpanded(bool expanded = true);
 		unsigned int GetChildren(wxDataViewItemArray& items);
 		unsigned int GetContainers(wxDataViewItemArray& items, bool exonly = false);
+		bool Expanded();
 	protected:
 		wxString title;
 	private:
