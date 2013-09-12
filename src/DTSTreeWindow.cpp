@@ -133,19 +133,13 @@ void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid
 
 void DTSTreeWindowEvent::SplitterEvent(wxSplitterEvent& event) {
 	DTSTreeWindow *tw;
-	int psize;
 	int evid;
 
 	tw = (DTSTreeWindow*)parent;
 	evid = event.GetEventType();
 
 	if (evid == wxEVT_SPLITTER_SASH_POS_CHANGED) {
-		psize = tw->GetTreePaneSize();
-#ifdef _WIN32
-		tree->GetColumn(0)->SetWidth(psize);
-#else
-		tree->GetColumn(0)->SetMinWidth(psize);
-#endif // _WIN32
+		tw->SetTreePaneSize();
 	}
 }
 
@@ -247,14 +241,20 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, wxString stat_ms
 
 	/*can only expand when not empty*/
 	tree->Expand(root);
+	SetTreePaneSize();
 }
 
 DTSDVMCtrl *DTSTreeWindow::GetTreeCtrl() {
 	return tree;
 }
 
-int DTSTreeWindow::GetTreePaneSize() {
-	return GetSashPosition() - GetSashSize();
+void DTSTreeWindow::SetTreePaneSize() {
+	int psize = GetSashPosition() - GetSashSize();
+#ifdef _WIN32
+		tree->GetColumn(0)->SetWidth(psize);
+#else
+		tree->GetColumn(0)->SetMinWidth(psize);
+#endif // _WIN32
 }
 
 void DTSTreeWindow::TreeResize() {
