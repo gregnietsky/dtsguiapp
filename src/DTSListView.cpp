@@ -154,6 +154,10 @@ bool DTSDVMListStore::MoveChildDown(size_t idx) {
 	return true;
 }
 
+void *DTSDVMListStore::GetUserData() {
+	return data;
+}
+
 DTSDVMListView::DTSDVMListView(int cols, bool cont_cols) {
 	hascontcol = cont_cols;
 	root = NULL;
@@ -211,6 +215,10 @@ unsigned int DTSDVMListView::GetColumnCount() const {
 	return colcnt;
 }
 
+bool DTSDVMListView::HasContainerColumns(const wxDataViewItem& item) const {
+	return hascontcol;
+}
+
 wxString DTSDVMListView::GetColumnType(unsigned int col) const {
 	return wxT("string");
 }
@@ -233,10 +241,6 @@ bool DTSDVMListView::SetValue(const wxVariant &variant, const wxDataViewItem &it
 	}
 
 	return false;
-}
-
-bool DTSDVMListView::HasContainerColumns(const wxDataViewItem& item) const {
-	return hascontcol;
 }
 
 DTSDVMListStore* DTSDVMListView::GetRoot() {
@@ -396,6 +400,18 @@ void DTSDVMListView::MoveChildDown(const wxDataViewItem& node) {
 	}
 }
 
+void *DTSDVMListView::GetUserData(const wxDataViewItem& node) {
+	DTSDVMListStore *data;
+
+	if (!node.IsOk() && root) {
+		return root->GetUserData();
+	} else if ((data = (DTSDVMListStore*)node.GetID())) {
+		return data->GetUserData();
+	} else {
+		return NULL;
+	}
+}
+
 DTSDVMCtrl::DTSDVMCtrl() {
 	model = NULL;
 }
@@ -489,28 +505,4 @@ wxDataViewItem DTSDVMCtrl::AppendContainer(wxDataViewItem parent, const wxString
 	dvi = wxDataViewItem(li);
 	model->ItemAdded(parent, dvi);
 	return dvi;
-}
-
-
-void DTSDVMCtrl::ReloadParent(const wxDataViewItem parent, bool do_expand, const wxDataViewItemArray cont, const wxDataViewItemArray sel) {
-	DTSDVMListStore *data;
-	unsigned int cnt;
-
-	/*expand root if was expanded*/
-	if (do_expand) {
-		Expand(parent);
-	}
-
-	/*re select all selected*/
-	for (cnt=0; cnt < sel.size();cnt++) {
-		Select(wxDataViewItem(sel[cnt]));
-	}
-
-	/*re expand containers colapsed*/
-	for (cnt=0; cnt < cont.size();cnt++) {
-		data = (DTSDVMListStore*)cont[cnt].GetID();
-		if (data->IsExpanded()) {
-			Expand(cont[cnt]);
-		}
-	}
 }

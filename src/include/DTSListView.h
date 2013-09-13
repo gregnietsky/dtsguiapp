@@ -22,11 +22,13 @@ class DTSDVMListStore {
 		bool IsExpanded();
 		bool MoveChildUp(size_t idx);
 		bool MoveChildDown(size_t idx);
+		void *GetUserData();
 	protected:
 		wxString title;
 	private:
-		DTSDVMListStore *parent;
 		std::vector<DTSDVMListStore*> children;
+		void *data;
+		DTSDVMListStore *parent;
 		bool is_container;
 		bool expanded;
 };
@@ -38,12 +40,12 @@ class DTSDVMListView :public wxDataViewModel {
 		virtual bool IsContainer( const wxDataViewItem& item) const;
 		virtual wxDataViewItem GetParent(const wxDataViewItem &item) const;
 		virtual unsigned int GetChildren(const wxDataViewItem &parent, wxDataViewItemArray &items) const;
-
 		virtual unsigned int GetColumnCount() const;
+		virtual bool HasContainerColumns(const wxDataViewItem& item) const;
+
 		virtual wxString GetColumnType(unsigned int col) const;
 		virtual void GetValue(wxVariant &variant, const wxDataViewItem &item, unsigned int col) const;
 		virtual bool SetValue(const wxVariant &variant, const wxDataViewItem &item, unsigned int col);
-		virtual bool HasContainerColumns(const wxDataViewItem& item) const;
 
 		DTSDVMListStore* GetRoot();
 		DTSDVMListStore* SetRoot(const wxString& title);
@@ -56,6 +58,7 @@ class DTSDVMListView :public wxDataViewModel {
 		virtual unsigned int GetContainers(const wxDataViewItem &parent, wxDataViewItemArray &items, bool exonly = false) const;
 		void MoveChildUp(const wxDataViewItem& node);
 		void MoveChildDown(const wxDataViewItem& node);
+		void *GetUserData(const wxDataViewItem& node);
 	protected:
 		DTSDVMListStore* root;
 		bool hascontcol;
@@ -73,7 +76,6 @@ class DTSDVMCtrl :public wxDataViewCtrl {
 		DTSDVMListView *GetStore();
 		wxDataViewItem AppendItem(wxDataViewItem parent, const wxString& title);
 		wxDataViewItem AppendContainer(wxDataViewItem parent, const wxString& title);
-		void ReloadParent(const wxDataViewItem parent, bool do_expand, const wxDataViewItemArray cont, const wxDataViewItemArray sel);
 	private:
 		DTSDVMListView *model;
 };

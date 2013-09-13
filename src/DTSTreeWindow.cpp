@@ -81,52 +81,73 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 	}
 }
 
-bool DTSTreeWindowEvent::ParentConfig(const wxDataViewItem parent, wxDataViewItemArray &cont, wxDataViewItemArray &sel) {
-	bool expand;
+void DTSTreeWindowEvent::SortParent(const wxDataViewItem parent, int action) {
+	wxDataViewItemArray expanded, selected;
+	DTSDVMListStore *data;
 	unsigned int cont_cnt, cnt;
 
 	/* Get enabled/selection state of parent*/
-	expand = tree->IsExpanded(parent);
-	tree->GetSelections(sel);
+	tree->GetSelections(selected);
 
 	/*mark expanded containers*/
-	cont_cnt = vm->GetContainers(parent, cont, false);
+	vm->SetExpanded(parent, tree->IsExpanded(parent));
+	cont_cnt = vm->GetContainers(parent, expanded, false);
 	for (cnt=0; cnt < cont_cnt;cnt++) {
-		vm->SetExpanded(cont[cnt], tree->IsExpanded(cont[cnt]));
+		vm->SetExpanded(expanded[cnt], tree->IsExpanded(expanded[cnt]));
 	}
-	return expand;
+
+	switch(action) {
+		case DTS_TREEWIN_MENU_MOVEDOWN:
+			vm->MoveChildDown(a_item);
+			break;
+		case DTS_TREEWIN_MENU_MOVEUP:
+			vm->MoveChildUp(a_item);
+			break;
+		case DTS_TREEWIN_MENU_SORT:
+			vm->SortChildren(a_cont);
+			break;
+	}
+
+	/*re select all selected*/
+	for (cnt=0; cnt < selected.size();cnt++) {
+		tree->Select(wxDataViewItem(selected[cnt]));
+	}
+
+	/*expand root if was expanded*/
+	data = (DTSDVMListStore*)parent.GetID();
+	if (data && data->IsExpanded()) {
+		tree->Expand(parent);
+		data->SetExpanded(false);
+	}
+
+	/*re expand containers colapsed*/
+	for (cnt=0; cnt < expanded.size();cnt++) {
+		data = (DTSDVMListStore*)expanded[cnt].GetID();
+		if (data && data->IsExpanded()) {
+			tree->Expand(expanded[cnt]);
+			data->SetExpanded(false);
+		}
+	}
 }
 
 void DTSTreeWindowEvent::MenuEvent(wxCommandEvent &event) {	enum treewinmenu eid;
-	wxDataViewItemArray items, sel;
 	wxDataViewItem p_cont;
 	DTSFrame *frame;
-	bool expand;
 
 	p_cont = (a_cont == a_item) ? vm->GetParent(a_cont) : a_cont;
 
 	eid=(treewinmenu)event.GetId();
 	switch(eid) {
 		case DTS_TREEWIN_MENU_MOVEDOWN:
-			expand = ParentConfig(p_cont, items, sel);
-			vm->MoveChildDown(a_item);
-			tree->ReloadParent(p_cont, expand, items, sel);
-			break;
 		case DTS_TREEWIN_MENU_MOVEUP:
-			expand = ParentConfig(p_cont, items, sel);
-			vm->MoveChildUp(a_item);
-			tree->ReloadParent(p_cont, expand, items, sel);
+		case DTS_TREEWIN_MENU_SORT:
+			SortParent(p_cont, eid);
 			break;
 		case DTS_TREEWIN_MENU_DELETE:
 			frame = parent->GetFrame();
 			if (frame->Confirm("Are you sure you want to delete this item")) {
 				vm->Delete(a_item);
 			}
-			break;
-		case DTS_TREEWIN_MENU_SORT:
-			expand = ParentConfig(p_cont, items, sel);
-			vm->SortChildren(a_cont);
-			tree->ReloadParent(a_cont, expand, items, sel);
 			break;
 	}
 }
