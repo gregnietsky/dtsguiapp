@@ -3,7 +3,7 @@
 
 class DTSDVMListStore {
 	public:
-		DTSDVMListStore(DTSDVMListStore* parent, bool is_container, const wxString &title);
+		DTSDVMListStore(DTSDVMListStore* parent, bool is_container, const wxString &title, void *userdata = NULL);
 		~DTSDVMListStore();
 		bool IsContainer() const;
 		DTSDVMListStore* GetParent();
@@ -48,7 +48,7 @@ class DTSDVMListView :public wxDataViewModel {
 		virtual bool SetValue(const wxVariant &variant, const wxDataViewItem &item, unsigned int col);
 
 		DTSDVMListStore* GetRoot();
-		DTSDVMListStore* SetRoot(const wxString& title);
+		DTSDVMListStore* SetRoot(const wxString& title, void *userdata = NULL);
 		void Delete(const wxDataViewItem& item);
 		void DeleteAll(void);
 		void SortChildren(const wxDataViewItem& parent);
@@ -74,9 +74,10 @@ class DTSDVMCtrl :public wxDataViewCtrl {
 		virtual bool AssociateModel(DTSDVMListView *model);
 		void Sort(const wxDataViewItem& parent);
 		DTSDVMListView *GetStore();
-		wxDataViewItem AppendItem(wxDataViewItem parent, const wxString& title);
-		wxDataViewItem AppendContainer(wxDataViewItem parent, const wxString& title);
+		wxDataViewItem AppendItem(wxDataViewItem parent, const wxString& title, void *userdata = NULL);
+		wxDataViewItem AppendContainer(wxDataViewItem parent, const wxString& title, void *userdata = NULL);
 	private:
+		wxDataViewItem AppendNode(wxDataViewItem parent, bool iscont, const wxString& title, void *userdata);
 		DTSDVMListView *model;
 };
 

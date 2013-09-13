@@ -16,10 +16,11 @@ bool cmp_title(DTSDVMListStore *c1,DTSDVMListStore *c2) {
 	return (s1 < s2);
 }
 
-DTSDVMListStore::DTSDVMListStore(DTSDVMListStore* parent, bool is_container, const wxString& title) {
+DTSDVMListStore::DTSDVMListStore(DTSDVMListStore* parent, bool is_container, const wxString& title, void *userdata) {
 	this->parent = parent;
 	this->title = title;
 	this->is_container = is_container;
+	this->data = userdata;
 }
 
 DTSDVMListStore::~DTSDVMListStore() {
@@ -247,8 +248,8 @@ DTSDVMListStore* DTSDVMListView::GetRoot() {
 	return root;
 }
 
-DTSDVMListStore* DTSDVMListView::SetRoot(const wxString& title) {
-	root = new DTSDVMListStore(NULL, true, title);
+DTSDVMListStore* DTSDVMListView::SetRoot(const wxString& title, void *userdata) {
+	root = new DTSDVMListStore(NULL, true, title, userdata);
 	return root;
 }
 
@@ -469,36 +470,25 @@ DTSDVMListView *DTSDVMCtrl::GetStore() {
 	return model;
 }
 
-wxDataViewItem DTSDVMCtrl::AppendItem(wxDataViewItem parent, const wxString& title) {
-	DTSDVMListStore *li, *node;
-	wxDataViewItem dvi;
-
-
-	if (!parent.IsOk() && !model->GetRoot()) {
-		li = model->SetRoot(title);
-	} else if (!(node = (DTSDVMListStore*)parent.GetID())) {
-		return wxDataViewItem(NULL);
-	} else {
-		li= new DTSDVMListStore(node, false, title);
-		node->Append(li);
-	}
-
-	dvi = wxDataViewItem(li);
-	model->ItemAdded(parent, dvi);
-	return dvi;
+wxDataViewItem DTSDVMCtrl::AppendItem(wxDataViewItem parent, const wxString& title, void *userdata) {
+	return AppendNode(parent, false, title, userdata);
 }
 
-wxDataViewItem DTSDVMCtrl::AppendContainer(wxDataViewItem parent, const wxString& title) {
+wxDataViewItem DTSDVMCtrl::AppendContainer(wxDataViewItem parent, const wxString& title, void *userdata) {
+	return AppendNode(parent, true, title, userdata);
+}
+
+wxDataViewItem DTSDVMCtrl::AppendNode(wxDataViewItem parent, bool iscont, const wxString& title, void *userdata) {
 	DTSDVMListStore *li, *node;
 	wxDataViewItem dvi;
 
 
 	if (!parent.IsOk() && !model->GetRoot()) {
-		li = model->SetRoot(title);
+		li = model->SetRoot(title, userdata);
 	} else if (!(node = (DTSDVMListStore*)parent.GetID())) {
 		return wxDataViewItem(NULL);
 	} else {
-		li= new DTSDVMListStore(node, true, title);
+		li= new DTSDVMListStore(node, iscont, title, userdata);
 		node->Append(li);
 	}
 
