@@ -40,6 +40,7 @@ class DTSTreeWindow: public DTSObject, public virtual wxSplitterWindow {
 		void TreeResize();
 		void SetTreePaneSize();
 		wxWindow *SetWindow(wxWindow *window);
+		wxWindow *GetClientPane();
 	private:
 		wxScrolledWindow *t_pane;
 		wxWindow *c_pane;
