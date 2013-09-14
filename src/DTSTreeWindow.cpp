@@ -53,10 +53,7 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 	evid = event.GetEventType();
 
 	if (evid == wxEVT_DATAVIEW_SELECTION_CHANGED) {
-		if ((a_item = event.GetItem()) && treecb) {
-			DTSDVMListStore *ndata = (a_item.IsOk()) ? (DTSDVMListStore*)a_item.GetID() : NULL;
-			treecb(dtsgui, parent, ndata->GetTitle().ToUTF8(), data, ndata);
-		}
+		TreeCallback(event.GetItem());
 	} else if (evid == wxEVT_DATAVIEW_ITEM_EXPANDED) {
 		parent->TreeResize();
 	} else if (evid == wxEVT_DATAVIEW_ITEM_CONTEXT_MENU) {
@@ -174,6 +171,13 @@ void DTSTreeWindowEvent::SplitterEvent(wxSplitterEvent& event) {
 	}
 }
 
+void DTSTreeWindowEvent::TreeCallback(const wxDataViewItem item) {
+	if (item && treecb) {
+		DTSDVMListStore *ndata = (item.IsOk()) ? (DTSDVMListStore*)item.GetID() : NULL;
+		treecb(dtsgui, parent, ndata->GetTitle().ToUTF8(), data, ndata);
+	}
+}
+
 void free_menu(void *data) {
 	struct treemenu *rmenu = (struct treemenu*)data;
 
@@ -258,6 +262,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 
 	root = tree->AppendContainer(wxDataViewItem(NULL), "The Root");
 	tree->Select(root);
+	dtsevthandler->TreeCallback(root);
 
 	tree->AppendItem(root, "Child E");
 	tree->AppendContainer(root, "Root2");
