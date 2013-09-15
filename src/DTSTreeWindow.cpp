@@ -11,6 +11,7 @@
 #include <wx/notebook.h>
 #include <wx/frame.h>
 #include <wx/menu.h>
+#include <wx/stattext.h>
 
 #include <stdint.h>
 #include <dtsapp.h>
@@ -84,7 +85,7 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 			printf("DRAG\n");
 		}
 	} else if (evid == wxEVT_DATAVIEW_ITEM_EDITING_DONE) {
-		parent->TreeResize();
+		parent->SetPaneTitle(event.GetItem());
 	}
 }
 
@@ -307,6 +308,17 @@ void DTSTreeWindow::SetTreePaneSize() {
 void DTSTreeWindow::TreeResize() {
 	tree->GetColumn(0)->SetHidden(true);
 	tree->GetColumn(0)->SetHidden(false);
+}
+
+void DTSTreeWindow::SetPaneTitle(const wxDataViewItem item) {
+	DTSDVMListStore *store =  (DTSDVMListStore*)item.GetID();
+	DTSPanel *p;
+
+	if ((p = dynamic_cast<DTSPanel*>(a_window))) {
+		p->SetTitle(store->GetTitle());
+	}
+
+	TreeResize();
 }
 
 wxWindow *DTSTreeWindow::SetWindow(wxWindow *window) {

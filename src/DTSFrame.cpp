@@ -27,6 +27,7 @@
 #include <wx/gbsizer.h>
 #include <wx/textctrl.h>
 #include <wx/scrolwin.h>
+#include <wx/stattext.h>
 
 #include <dtsapp.h>
 
