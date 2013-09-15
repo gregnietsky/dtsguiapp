@@ -39,7 +39,7 @@
 
 #define PADING	10
 
-static const int def_buttons[6] = {wxID_FIRST, wxID_BACKWARD, wxID_FORWARD, wxID_LAST, wxID_APPLY, wxID_REFRESH};
+static const int def_buttons[6] = {wxID_FIRST, wxID_BACKWARD, wxID_FORWARD, wxID_LAST, wxID_APPLY, wxID_UNDO};
 
 void free_fitem(void *data) {
 	struct form_item *fi = (struct form_item *)data;
