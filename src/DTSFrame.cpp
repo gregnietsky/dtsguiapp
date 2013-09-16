@@ -51,7 +51,6 @@ DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size
 	CreateStatusBar();
 	SetStatusText(status);
 
-	toolbar = CreateToolBar();
 	SetupToolbar();
 
 	/*deleted on close*/
@@ -255,6 +254,8 @@ struct dtsgui *DTSFrame::GetDTSData(void) {
 }
 
 void DTSFrame::SetupToolbar() {
+	toolbar = CreateToolBar();
+
 	wxComboBox *combo = new wxComboBox(toolbar, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(300,-1) );
 	wxStaticText *text = new wxStaticText(toolbar, wxID_ANY, "Server");
 	toolbar->AddControl(text, "Server");
