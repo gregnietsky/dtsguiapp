@@ -257,6 +257,8 @@ struct dtsgui *DTSFrame::GetDTSData(void) {
 void DTSFrame::SetupToolbar() {
 	wxComboBox *combo = new wxComboBox(toolbar, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(300,-1) );
 	wxStaticText *text = new wxStaticText(toolbar, wxID_ANY, "Server");
-	toolbar->AddControl(text, "Server To Manage");
-	toolbar->AddControl(combo, "Server To Manage");
+	toolbar->AddControl(text, "Server");
+	toolbar->AddStretchableSpace();
+	toolbar->AddControl(combo);
+	toolbar->Realize();
 }
