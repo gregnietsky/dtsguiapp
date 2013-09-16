@@ -85,6 +85,10 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 			printf("DRAG\n");
 		}
 	} else if (evid == wxEVT_DATAVIEW_ITEM_EDITING_DONE) {
+#ifndef _WIN32
+		DTSDVMListStore *data = (DTSDVMListStore*)event.GetItem().GetID();
+		event.SetValue(data->GetTitle());
+#endif
 		parent->SetPaneTitle(event.GetValue());
 	}
 }
