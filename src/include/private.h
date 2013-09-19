@@ -48,4 +48,4 @@ struct tree_data *gettreedata(dtsgui_treeview tree, struct xml_node *xn, enum no
 
 dtsgui_treeview network_tree(struct dtsgui *dtsgui);
 
-#endif // PRIVATE_H_INCLUDED
+#endif /*PRIVATE_H_INCLUDED*/

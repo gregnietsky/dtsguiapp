@@ -4,6 +4,7 @@
 
 #include <wx/dataview.h>
 #include <wx/validate.h>
+#include <stdint.h>
 
 #include <dtsapp.h>
 
