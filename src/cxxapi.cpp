@@ -878,6 +878,51 @@ dtsgui_treenode dtsgui_treeitem(dtsgui_treeview tree, dtsgui_treenode node, cons
 	return tc->AppendItem(root, title, can_edit, can_sort, can_del, data);
 }
 
+struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *node, const char *nodeval, const char *attrkey) {
+	struct xml_node *xn;
+	struct xml_doc *xmldoc;
+	const char *val, *name, *aval = NULL;
+	struct form_item *fi;
+	struct bucket_list *il;
+	struct bucket_loop *bl;
+
+	if (!(xmldoc = dtsgui_panelxml(p))) {
+		return NULL;
+	}
+
+	val = dtsgui_findvalue(p , nodeval);
+	aval = dtsgui_findvalue(p , attrkey);
+	xn = xml_addnode(xmldoc, xpath, node, val, attrkey, aval);
+
+	free((void*)val);
+	if (aval) {
+		free((void*)aval);
+	}
+
+	il = dtsgui_panel_items(p);
+	bl = init_bucket_loop(il);
+	while(il && bl && (fi = (struct form_item *)next_bucket_loop(bl))) {
+		if (!(name = dtsgui_item_name(fi))) {
+			objunref(fi);
+			continue;
+		}
+		if (!(val = dtsgui_item_value(fi))) {
+			objunref(fi);
+			continue;
+		}
+		if (strcmp(name, nodeval) && (!attrkey || strcmp(name, attrkey))) {
+			xml_setattr(xmldoc, xn, name, val);
+		}
+		free((void*)val);
+		objunref(fi);
+	}
+	stop_bucket_loop(bl);
+	objunref(il);
+	objunref(xmldoc);
+
+	return xn;
+}
+
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);

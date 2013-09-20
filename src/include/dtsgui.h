@@ -121,6 +121,7 @@ dtsgui_pane dtsgui_treepane(dtsgui_treeview tv, const char *name, int butmask, v
 void dtsgui_treeshow(dtsgui_treeview tv, dtsgui_pane p);
 dtsgui_treenode dtsgui_treecont(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, void *data);
 dtsgui_treenode dtsgui_treeitem(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, void *data);
+struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *node, const char *nodeval, const char *attrkey);
 
 void dtsgui_showpanel(dtsgui_pane pane, int act);
 void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data);

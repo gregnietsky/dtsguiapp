@@ -23,13 +23,11 @@
 #define DATA_DIR	"/usr/share/dtsguiapp"
 #endif
 
+
 void handle_newnet(dtsgui_pane p, int type, int event, void *data) {
-	const char *attrs[] = {"bwout", "gateway", "macaddr", "dhcpend", "dhcpstart", "subnet", "ipaddr", "bwin"};
-	struct xml_doc *xmldoc;
 	struct tree_data *td = data, *n_td;
 	struct xml_node *xn;
-	const char *iface,*name, *tmp;
-	int cnt;
+	const char *name;
 
 	switch(event) {
 		case wx_PANEL_BUTTON_YES:
@@ -38,27 +36,15 @@ void handle_newnet(dtsgui_pane p, int type, int event, void *data) {
 			return;
 	}
 
-	if (!td || !(xmldoc = dtsgui_panelxml(p))) {
+	if (!td || !(xn = dtsgui_panetoxml(p, "/config/IP/Interfaces", "Interface", "iface", "name"))) {
 		return;
 	}
 
-	iface = dtsgui_findvalue(p, "iface");
-	name = dtsgui_findvalue(p, "name");
-	xn = xml_addnode(xmldoc, "/config/IP/Interfaces", "Interface", iface, "name", name);
 	n_td = gettreedata(td->tree, xn, DTS_NODE_NETWORK_IFACE);
+	name = xml_getattr(xn, "name");
 	n_td->treenode = dtsgui_treecont(td->tree, td->treenode, name, 1, 1, 1, n_td);
-	for(cnt = 0; cnt < 8;cnt++) {
-		if ((tmp = dtsgui_findvalue(p, attrs[cnt]))) {
-			xml_setattr(xmldoc, xn, attrs[cnt], tmp);
-			free((void*)tmp);
-		}
-	}
-	free((void*)iface);
-	free((void*)name);
-
 
 	objunref(n_td);
-	objunref(xmldoc);
 }
 
 
@@ -68,7 +54,7 @@ dtsgui_pane network_newiface(struct dtsgui *dtsgui, dtsgui_treeview self, const 
 	p = dtsgui_treepane(self, title, wx_PANEL_BUTTON_ACTION, NULL, xmldoc);
 
 	dtsgui_textbox(p, "Interface", "iface", "", NULL);
-	dtsgui_textbox(p, "Interface", "name", "", NULL);
+	dtsgui_textbox(p, "Name", "name", "", NULL);
 	dtsgui_textbox(p, "IP Address", "ipaddr", "0", NULL);
 	dtsgui_textbox(p, "IP Subnet Bits", "subnet", "32", NULL);
 	dtsgui_textbox(p, "DHCP Gateway", "gateway", "", NULL);

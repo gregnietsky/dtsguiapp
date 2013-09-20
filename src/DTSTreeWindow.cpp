@@ -99,7 +99,6 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 		if (!data->can_edit) {
 			event.Veto();
 		}
-
 	} else if (evid == wxEVT_DATAVIEW_ITEM_EDITING_DONE) {
 #ifndef _WIN32
 		DTSDVMListStore *data = (DTSDVMListStore*)event.GetItem().GetID();
@@ -256,9 +255,6 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 	dtsevthandler = new DTSTreeWindowEvent(userdata, tree_cb, (frame) ? frame->GetDTSData() : NULL, this);
 	treesizer->Add(tree, 1,wxEXPAND,0);
 
-//	sizer = new wxBoxSizer(wxHORIZONTAL);
-//	c_pane->SetSizer(sizer);
-
 	p_sizer->FitInside(parent);
 	p_sizer->Layout();
 	p_sizer->SetSizeHints(sw);
@@ -270,10 +266,6 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 	treesizer->SetSizeHints(t_pane);
 	treesizer->FitInside(t_pane);
 	treesizer->Layout();
-
-//	sizer->SetSizeHints(c_pane);
-//	sizer->FitInside(c_pane);
-//	sizer->Layout();
 
 	tree->Bind(wxEVT_DATAVIEW_SELECTION_CHANGED, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	tree->Bind(wxEVT_DATAVIEW_ITEM_EXPANDED, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
@@ -348,18 +340,14 @@ wxWindow *DTSTreeWindow::SetWindow(wxWindow *window) {
 		return NULL;
 	}
 
-//	sizer->Detach(0);
 	if ((oldwin = a_window)) {
 		a_window->Show(false);
 	}
-//	sizer->Add(window, 1, wxALL | wxEXPAND);
 
 	ReplaceWindow(a_window, window);
-	window->Show(true);
-//	sizer->Layout();
-//	sizer->FitInside(window);
-	window->Layout();
 	a_window = window;
+	window->Show(true);
+	window->Layout();
 
 	return oldwin;
 }
