@@ -63,6 +63,20 @@ void xmltextbox(dtsgui_pane p, const char *name, const char *xpath, const char *
 	free(xpth);
 }
 
+void xmlcheckbox(dtsgui_pane p, const char *name, const char *xpath, const char *node, const char *val, const char *attr, const char *aval) {
+	struct xml_doc *xmldoc;
+	char *xpth;
+
+	if (!(xmldoc = dtsgui_panelxml(p))) {
+		return;
+	}
+
+	xpth = createxmlnode(xmldoc, xpath, node, val, attr, aval);
+
+	dtsgui_xmlcheckbox(p, name, (attr && aval) ? aval : node, "true", "", xpth, NULL);
+	free(xpth);
+}
+
 struct form_item *xmllistbox(dtsgui_pane p, const char *name, const char *xpath, const char *node, const char *val, const char *attr, const char *aval) {
 	struct xml_doc *xmldoc;
 	struct form_item *lb;
@@ -305,6 +319,83 @@ void network_route(dtsgui_pane p, struct xml_node *xn) {
 	dtsgui_setevcallback(p, handle_test, NULL);
 }
 
+void network_modem(dtsgui_pane p) {
+	struct form_item *lb;
+
+	/*XXX LDAP Settings server/DN*/
+	if ((lb = xmllistbox(p, "Connection Type", "/config/IP/Dialup", "Option", "Dialup", "option", "Connection"))) {
+		dtsgui_listbox_add(lb, "Dialup", "Dialup");
+		dtsgui_listbox_add(lb, "Leased", "Leased");
+		dtsgui_listbox_add(lb, "ADSL", "ADSL");
+		dtsgui_listbox_add(lb, "3G", "3G");
+		dtsgui_listbox_add(lb, "3GIPW", "3GIPW");
+		objunref(lb);
+	}
+
+	if ((lb = xmllistbox(p, "Comm Port ", "/config/IP/Dialup", "Option", "COM1", "option", "ComPort"))) {
+		dtsgui_listbox_add(lb, "COM1", "COM1");
+		dtsgui_listbox_add(lb, "COM2", "COM2");
+		dtsgui_listbox_add(lb, "COM3", "COM3");
+		dtsgui_listbox_add(lb, "COM4", "COM4");
+		dtsgui_listbox_add(lb, "USB0", "USB0");
+		dtsgui_listbox_add(lb, "USB1", "USB1");
+		dtsgui_listbox_add(lb, "USB2", "USB2");
+		dtsgui_listbox_add(lb, "USB3", "USB3");
+		objunref(lb);
+	}
+
+	xmltextbox(p, "Holdoff Time", "/config/IP/Dialup", "Option", "", "option", "Holdoff");
+	xmltextbox(p, "MTU/MRU", "/config/IP/Dialup", "Option", "", "option", "MTU");
+
+	xmltextbox(p, "Number/Service ID/APN", "/config/IP/Dialup", "Option", "TelkomSA", "opFlowControltion", "Number");
+	xmltextbox(p, "Username", "/config/IP/Dialup", "Option", "", "option", "Username");
+	xmltextbox(p, "Password", "/config/IP/Dialup", "Option", "", "option", "Password");
+
+	xmlcheckbox(p, "BSD Compression", "/config/IP/Dialup", "Option", "", "option", "BSD");
+	xmlcheckbox(p, "Deflate Compression", "/config/IP/Dialup", "Option", "", "option", "Deflate");
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_modem_ana(dtsgui_pane p) {
+	struct form_item *lb;
+
+	/*XXX LDAP Settings server/DN*/
+	if ((lb = xmllistbox(p, "Port Speed", "/config/IP/Dialup", "Option", "38400", "option", "Speed"))) {
+		dtsgui_listbox_add(lb, "115200", "115200");
+		dtsgui_listbox_add(lb, "57600", "57600");
+		dtsgui_listbox_add(lb, "38400", "38400");
+		dtsgui_listbox_add(lb, "19200", "19200");
+		dtsgui_listbox_add(lb, "9600", "9600");
+		objunref(lb);
+	}
+
+	if ((lb = xmllistbox(p, "Flow Control ", "/config/IP/Dialup", "Option", "crtscts", "option", "FlowControl"))) {
+		dtsgui_listbox_add(lb, "Hardware (RTS/CTS)", "crtscts");
+		dtsgui_listbox_add(lb, "Software (Xon/Xoff)", "xonxoff");
+		dtsgui_listbox_add(lb, "Hardware (DTR/CTS)", "cdtrcts");
+		dtsgui_listbox_add(lb, "None", "");
+		objunref(lb);
+	}
+
+	xmltextbox(p, "Local Address", "/config/IP/Dialup", "Option", "10.0.0.1", "option", "Address");
+	xmltextbox(p, "Remote Address", "/config/IP/Dialup", "Option", "10.0.0.2", "option", "Gateway");
+
+	xmltextbox(p, "Init String 1", "/config/IP/Dialup", "Option", "AT&F", "option", "Init1");
+	xmltextbox(p, "Init String 2", "/config/IP/Dialup", "Option", "ATL1M1", "option", "Init2");
+	xmltextbox(p, "Dial String", "/config/IP/Dialup", "Option", "ATDT", "option", "DialString");
+	xmltextbox(p, "Idle Timeout", "/config/IP/Dialup", "Option", "120", "option", "IdleTimeout");
+	xmltextbox(p, "Fail Limit", "/config/IP/Dialup", "Option", "5", "option", "MaxFail");
+	xmltextbox(p, "Connect Dely", "/config/IP/Dialup", "Option", "", "option", "ConnectDelay");
+
+	xmlcheckbox(p, "Abort On No Carrier", "/config/IP/Dialup", "Option", "true", "option", "NoCarrier");
+	xmlcheckbox(p, "Abort On No Dialtone", "/config/IP/Dialup", "Option", "true", "option", "NoDialtone");
+	xmlcheckbox(p, "Abort On Error", "/config/IP/Dialup", "Option", "true", "option", "Error");
+	xmlcheckbox(p, "Abort On Busy", "/config/IP/Dialup", "Option", "true", "option", "Busy");
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
 void node_edit(dtsgui_treeview tree, dtsgui_treenode node, const char *title) {
 	struct xml_doc *xmldoc;
 	struct xml_node *xn;
@@ -388,9 +479,15 @@ dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_tre
 		case DTS_NODE_NETWORK_ROUTE:
 			network_route(p, xn);
 			break;
+		case DTS_NODE_NETWORK_MODEM:
+			network_modem(p);
+			break;
+		case DTS_NODE_NETWORK_MODEM_ANA:
+			network_modem_ana(p);
+			break;
 		default:
-			dtsgui_delpane(p);
-			p = NULL;
+/*			dtsgui_delpane(p);
+			p = NULL;*/
 			break;
 	}
 
@@ -472,7 +569,8 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	}
 	objunref(xp);
 
-	dtsgui_treecont(tree, root, "Modem Config", 0, 0, 0, -1, NULL);
+	tmp = dtsgui_treecont(tree, root, "Modem Config", 0, 0, 0, DTS_NODE_NETWORK_MODEM, NULL);
+	dtsgui_treecont(tree, tmp, "Dialup/Leased", 0, 0, 0, DTS_NODE_NETWORK_MODEM_ANA, NULL);
 	dtsgui_treecont(tree, root, "Modem Firewall Rules", 0, 1, 0, -1, NULL);
 	dtsgui_treecont(tree, root, "Additional ADSL Links", 0, 1, 0, -1, NULL);
 	dtsgui_treecont(tree, root, "ADSL Accounts", 0, 1, 0, -1, NULL);
