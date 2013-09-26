@@ -43,11 +43,16 @@ typedef void *dtsgui_treenode;
 typedef struct form_item form_item;
 typedef struct dynamic_panel dynamic_panel;
 
+enum tree_cbtype {
+	DTSGUI_TREE_CB_SELECT,
+	DTSGUI_TREE_CB_EDIT
+};
+
 /*callbacks*/
 typedef int (*dtsgui_configcb)(struct dtsgui*, void*);
 typedef void (*event_callback)(dtsgui_pane, int, int, void *);
 typedef dtsgui_pane (*dtsgui_dynpanel)(struct dtsgui*, const char*, void*);
-typedef void (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, const char*, void*, void*);
+typedef void (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, enum tree_cbtype cb_type, const char*, void*, void*);
 
 struct point {
 	int x;
@@ -153,6 +158,8 @@ void dtsgui_item_xmlcreate(dtsgui_pane pane, const char *path, const char *node,
 
 /*add item to list*/
 void dtsgui_listbox_add(struct form_item *lbox, const char *text, const char *value);
+void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr);
+void dtsgui_listbox_set(struct form_item *listbox, int idx);
 
 /* returns auth struct needs to be un-ref'd*/
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);

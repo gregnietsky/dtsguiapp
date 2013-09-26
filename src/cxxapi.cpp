@@ -504,15 +504,35 @@ struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const 
 	return fi;
 }
 
+void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr) {
+	struct xml_search *xs;
+	struct xml_node *xn;
+	void *iter;
+	const char *name, *value;
+
+	xs = xml_xpath(xmldoc, xpath, nattr);
+	for(xn = xml_getfirstnode(xs, &iter); xn ; xn = xml_getnextnode(iter)) {
+		name = (nattr) ? xml_getattr(xn, nattr) : xn->value;
+		value = (vattr) ? xml_getattr(xn, vattr) : xn->value;
+		dtsgui_listbox_add(lb, name, value);
+		objunref(xn);
+	}
+}
+
 void dtsgui_listbox_add(struct form_item *listbox, const char *text, const char *value) {
 	wxComboBox *lbox = (wxComboBox *)listbox->widget;
-	lbox->Append(text, (void*)value);
+	lbox->Append(text, (value) ? (void*)strdup(value) : NULL);
 
 	if (lbox->GetSelection() == wxNOT_FOUND) {
 		lbox->SetSelection(0);
 	} else if (listbox->value && value && !strcmp(listbox->value, value)) {
 		lbox->SetSelection(lbox->GetCount()-1);
 	}
+}
+
+void dtsgui_listbox_set(struct form_item *listbox, int idx) {
+	wxComboBox *lbox = (wxComboBox*)listbox->widget;
+	lbox->SetSelection(idx);
 }
 
 void dtsgui_setevcallback(dtsgui_pane pane,event_callback evcb, void *data) {
@@ -589,6 +609,7 @@ extern 	const char *dtsgui_item_value(struct form_item *fi) {
 	const char *value = NULL;
 	union widgets {
 		wxTextCtrl *t;
+		wxComboBox *c;
 	} w;
 
 	switch(fi->type) {
@@ -596,9 +617,15 @@ extern 	const char *dtsgui_item_value(struct form_item *fi) {
 			w.t = (wxTextCtrl *)fi->widget;
 			value = strdup(w.t->GetValue().ToUTF8());
 			break;
-		case DTS_WIDGET_CHECKBOX:
 		case DTS_WIDGET_LISTBOX:
 		case DTS_WIDGET_COMBOBOX:
+			int pos;
+			w.c = (wxComboBox *)fi->widget;
+			pos = w.c->GetSelection();
+			value = strdup((char*)w.c->GetClientData(pos));
+			printf("%i %s\n", pos, value);
+			break;
+		case DTS_WIDGET_CHECKBOX:
 			break;
 	}
 	return value;
@@ -891,7 +918,9 @@ struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *
 	}
 
 	val = dtsgui_findvalue(p , nodeval);
-	aval = dtsgui_findvalue(p , attrkey);
+	if (attrkey) {
+		aval = dtsgui_findvalue(p , attrkey);
+	}
 	xn = xml_addnode(xmldoc, xpath, node, val, attrkey, aval);
 
 	free((void*)val);
