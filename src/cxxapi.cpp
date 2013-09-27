@@ -903,7 +903,7 @@ dtsgui_treenode dtsgui_treecont(dtsgui_treeview tree, dtsgui_treenode node, cons
 	DTSDVMCtrl *tc = tw->GetTreeCtrl();
 	wxDataViewItem root = wxDataViewItem(node);
 
-	return tc->AppendContainer(root, title, can_edit, can_sort, can_del, nodeid, data);
+	return tc->AppendContainer(root, title, can_edit, can_sort, can_del, nodeid, data).GetID();
 }
 
 dtsgui_treenode dtsgui_treeitem(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, void *data) {
@@ -911,7 +911,7 @@ dtsgui_treenode dtsgui_treeitem(dtsgui_treeview tree, dtsgui_treenode node, cons
 	DTSDVMCtrl *tc = tw->GetTreeCtrl();
 	wxDataViewItem root = wxDataViewItem(node);
 
-	return tc->AppendItem(root, title, can_edit, can_sort, can_del, nodeid, data);
+	return tc->AppendItem(root, title, can_edit, can_sort, can_del, nodeid, data).GetID();
 }
 
 struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *node, const char *nodeval, const char *attrkey) {
@@ -976,7 +976,7 @@ struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *
 }
 
 int dtsgui_treenodeid(dtsgui_treeview tv, dtsgui_treenode tn) {
-	wxDataViewItem item = (wxDataViewItem)tn;
+	wxDataViewItem item = wxDataViewItem(tn);
 	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
 	DTSDVMListView *store;
 
@@ -985,7 +985,7 @@ int dtsgui_treenodeid(dtsgui_treeview tv, dtsgui_treenode tn) {
 }
 
 void dtsgui_treenodesetxml(dtsgui_treeview tv, dtsgui_treenode tn,struct xml_node *xn, const char *tattr) {
-	wxDataViewItem item = (wxDataViewItem)tn;
+	wxDataViewItem item = wxDataViewItem(tn);
 	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
 	DTSDVMListView *store;
 
@@ -994,7 +994,7 @@ void dtsgui_treenodesetxml(dtsgui_treeview tv, dtsgui_treenode tn,struct xml_nod
 }
 
 struct xml_node *dtsgui_treenodegetxml(dtsgui_treeview tv, dtsgui_treenode tn, char **buf) {
-	wxDataViewItem item = (wxDataViewItem)tn;
+	wxDataViewItem item = wxDataViewItem(tn);
 	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
 	DTSDVMListView *store;
 
@@ -1003,7 +1003,7 @@ struct xml_node *dtsgui_treenodegetxml(dtsgui_treeview tv, dtsgui_treenode tn, c
 }
 
 void *dtsgui_treenodegetdata(dtsgui_treeview tv, dtsgui_treenode tn) {
-	wxDataViewItem item = (wxDataViewItem)tn;
+	wxDataViewItem item = wxDataViewItem(tn);
 	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
 	DTSDVMListView *store;
 
@@ -1012,7 +1012,7 @@ void *dtsgui_treenodegetdata(dtsgui_treeview tv, dtsgui_treenode tn) {
 }
 
 const char *dtsgui_treenodeparent(dtsgui_treenode tn) {
-	wxDataViewItem item = (wxDataViewItem)tn;
+	wxDataViewItem item = wxDataViewItem(tn);
 	DTSDVMListStore *entry, *parent;
 	const char *val;
 	bool nok;

@@ -23,6 +23,7 @@
 #define DATA_DIR	"/usr/share/dtsguiapp"
 #endif
 
+static const char *protocols[] = {"TCP", "UDP", "GRE", "ESP", "AH", "OSPF", "ALL"};
 
 char *createxmlnode(struct xml_doc *xmldoc, const char *xpath, const char *node, const char *val, const char *attr, const char *aval) {
 	struct xml_search *xp;
@@ -520,6 +521,134 @@ void node_edit(dtsgui_treeview tree, dtsgui_treenode node, const char *title) {
 	}
 }
 
+void network_adsl_link_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
+	dtsgui_textbox(p, "Link Name", "name", "", NULL);
+	dtsgui_textbox(p, "Interface", "interface", "", NULL);
+	dtsgui_textbox(p, "PPPoE Service (AC/Service)", "service", "", NULL);
+	dtsgui_textbox(p, "Username", "username", "", NULL);
+	dtsgui_textbox(p, "Password", "password", "", NULL);
+	dtsgui_textbox(p, "Bandwidth In", "bwin", "", NULL);
+	dtsgui_textbox(p, "Bandwidth Out", "bwout", "", NULL);
+	dtsgui_textbox(p, "TOS Match", "tos", "", NULL);
+	dtsgui_textbox(p, "Virtual IP", "virtip", "", NULL);
+	dtsgui_textbox(p, "Remote IP", "remip", "", NULL);
+
+	dtsgui_newxmltreenode(self, p, node, "/config/IP/ADSL/Links", "Link", "name", NULL, DTS_NODE_NETWORK_ADSL_LINK,
+								DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
+}
+
+void network_adsl_link(dtsgui_pane p, struct xml_node *xn) {
+	const char *xpre = "/config/IP/ADSL/Links/Link";
+	char xpath[PATH_MAX];
+
+	snprintf(xpath, PATH_MAX, "%s[. = '%s']", xpre, xn->value);
+
+	dtsgui_xmltextbox(p, "Interface", "interface", xpath, "interface");
+	dtsgui_xmltextbox(p, "PPPoE Service (AC/Service)", "service", xpath, "service");
+	dtsgui_xmltextbox(p, "Username", "username", xpath, "username");
+	dtsgui_xmltextbox(p, "Password", "password", xpath, "password");
+	dtsgui_xmltextbox(p, "Bandwidth In", "bwin", xpath, "bwin");
+	dtsgui_xmltextbox(p, "Bandwidth Out", "bwout", xpath, "bwout");
+	dtsgui_xmltextbox(p, "TOS Match", "tos", xpath, "tos");
+	dtsgui_xmltextbox(p, "Virtual IP", "virtip", xpath, "virtip");
+	dtsgui_xmltextbox(p, "Remote IP", "remip", xpath, "remip");
+
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_adsl_user_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
+	dtsgui_textbox(p, "Username", "username", "", NULL);
+	dtsgui_textbox(p, "Password", "password", "", NULL);
+
+	dtsgui_newxmltreenode(self, p, node, "/config/IP/ADSL/Users", "User", "username", NULL, DTS_NODE_NETWORK_ADSL_USER,
+								DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
+}
+
+void network_adsl_user(dtsgui_pane p, struct xml_node *xn) {
+	const char *xpre = "/config/IP/ADSL/Users/User";
+	char xpath[PATH_MAX];
+
+	snprintf(xpath, PATH_MAX, "%s[. = '%s']", xpre, xn->value);
+
+	dtsgui_xmltextbox(p, "Password", "password", xpath, "password");
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_tos_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
+	struct form_item *lb;
+	int pcnt, i;
+
+	dtsgui_textbox(p, "Description", "name", "", NULL);
+	dtsgui_textbox(p, "Destination Address", "ipaddr", "", NULL);
+
+	lb = dtsgui_listbox(p, "Protocol", "protocol", NULL);
+	pcnt = sizeof(protocols)/sizeof(protocols[0]);
+	for(i = 0;i < pcnt;i ++) {
+		dtsgui_listbox_add(lb, protocols[i], protocols[i]);
+	}
+	objunref(lb);
+
+	dtsgui_textbox(p, "Destination Address", "ipaddr", "", NULL);
+	dtsgui_textbox(p, "Destination Port", "dport", "", NULL);
+	dtsgui_textbox(p, "Source Port", "sport", "1024:65535", NULL);
+
+	lb = dtsgui_listbox(p, "TOS Setting", "tos", NULL);
+	dtsgui_listbox_add(lb, "Normal-Service", "Normal-Service");
+	dtsgui_listbox_add(lb, "Minimize-Cost", "Minimize-Cost");
+	dtsgui_listbox_add(lb, "Maximize-Reliability", "Maximize-Reliability");
+	dtsgui_listbox_add(lb, "Maximize-Throughput", "Maximize-Throughput");
+	dtsgui_listbox_add(lb, "Minimize-Delay", "Minimize-Delay");
+	objunref(lb);
+
+	lb = dtsgui_listbox(p, "Priority", "priority", NULL);
+	dtsgui_listbox_add(lb, "High", "High");
+	dtsgui_listbox_add(lb, "Med", "Med");
+	dtsgui_listbox_add(lb, "Low", "Low");
+	objunref(lb);
+
+	dtsgui_newxmltreenode(self, p, node, "/config/IP/QOS", "TOS", "name", NULL, DTS_NODE_NETWORK_TOS,
+								DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
+}
+
+void network_tos(dtsgui_pane p, struct xml_node *xn) {
+	struct form_item *lb;
+	int pcnt, i;
+	const char *xpre = "/config/IP/QOS/TOS";
+	char xpath[PATH_MAX];
+
+	snprintf(xpath, PATH_MAX, "%s[@name = '%s']", xpre, xml_getattr(xn, "name"));
+
+	dtsgui_xmltextbox(p, "Destination Address", "ipaddr", xpath, "ipaddr");
+
+	lb = dtsgui_xmllistbox(p, "Protocol", "protocol", xpath, "protocol");
+	pcnt = sizeof(protocols)/sizeof(protocols[0]);
+	for(i = 0;i < pcnt;i ++) {
+		dtsgui_listbox_add(lb, protocols[i], protocols[i]);
+	}
+	objunref(lb);
+
+	dtsgui_xmltextbox(p, "Destination Port", "dport", xpath, "dport");
+	dtsgui_xmltextbox(p, "Source Port", "sport", xpath, "sport");
+
+	lb = dtsgui_xmllistbox(p, "TOS Setting", "tos", xpath, NULL);
+	dtsgui_listbox_add(lb, "Normal-Service", "Normal-Service");
+	dtsgui_listbox_add(lb, "Minimize-Cost", "Minimize-Cost");
+	dtsgui_listbox_add(lb, "Maximize-Reliability", "Maximize-Reliability");
+	dtsgui_listbox_add(lb, "Maximize-Throughput", "Maximize-Throughput");
+	dtsgui_listbox_add(lb, "Minimize-Delay", "Minimize-Delay");
+	objunref(lb);
+
+	lb = dtsgui_xmllistbox(p, "Priority", "priority", xpath, "priority");
+	dtsgui_listbox_add(lb, "High", "High");
+	dtsgui_listbox_add(lb, "Med", "Med");
+	dtsgui_listbox_add(lb, "Low", "Low");
+	objunref(lb);
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
 dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_treenode node, enum tree_cbtype cb_type, const char *title, void *td) {
 	dtsgui_pane p = NULL;
 	struct xml_doc *xmldoc;
@@ -536,20 +665,21 @@ dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_tre
 			return NULL;
 	}
 
-	xmldoc = dtsgui_panelxml(self);
 	nodeid = dtsgui_treenodeid(self, node);
-	xn = dtsgui_treenodegetxml(self, node, NULL);
 
-	if (nodeid < 0) {
-		p = dtsgui_treepane(self, title, wx_PANEL_BUTTON_ACTION, NULL, NULL);
-		testpanel(p);
+	if (nodeid == -1) {
+		p = dtsgui_treepane(self, NULL, 0, NULL, NULL);
 		dtsgui_setevcallback(p, handle_test, NULL);
 		return p;
 	}
 
+	xmldoc = dtsgui_panelxml(self);
+
 	if (!(p = dtsgui_treepane(self, title, wx_PANEL_BUTTON_ACTION, NULL, xmldoc))) {
 		return NULL;
 	}
+
+	xn = dtsgui_treenodegetxml(self, node, NULL);
 
 	switch(nodeid) {
 		case DTS_NODE_NETWORK_CONFIG:
@@ -615,6 +745,24 @@ dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_tre
 		case DTS_NODE_NETWORK_MODEM_ANA:
 			network_modem_ana(p);
 			break;
+		case DTS_NODE_NETWORK_ADSL_LINK_NEW:
+			network_adsl_link_new(p, self, node);
+			break;
+		case DTS_NODE_NETWORK_ADSL_LINK:
+			network_adsl_link(p, xn);
+			break;
+		case DTS_NODE_NETWORK_ADSL_USER_NEW:
+			network_adsl_user_new(p, self, node);
+			break;
+		case DTS_NODE_NETWORK_ADSL_USER:
+			network_adsl_user(p, xn);
+			break;
+		case DTS_NODE_NETWORK_TOS_NEW:
+			network_tos_new(p, self, node);
+			break;
+		case DTS_NODE_NETWORK_TOS:
+			network_tos(p, xn);
+			break;
 		default:
 /*			dtsgui_delpane(p);
 			p = NULL;*/
@@ -635,12 +783,12 @@ dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_tre
 
 dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	dtsgui_treeview tree;
-	dtsgui_treenode root, tmp, tmp2, dns/*, tmp3*/;
+	dtsgui_treenode root, tmp, tmp2, tln/*, tmp3*/;
 	struct app_data *appdata;
 	struct xml_doc *xmldoc;
 	struct xml_search *xp;
 	struct xml_node *xn;
-	void *iter;
+	void *iter = NULL;
 	char defconf[PATH_MAX];
 
 	appdata = dtsgui_userdata(dtsgui);
@@ -658,12 +806,12 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	tree = dtsgui_treewindow(dtsgui, "Tree Window", tree_do_shit, NULL, xmldoc);
 
 	root = dtsgui_treecont(tree, NULL, "Global IP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG, NULL);
-	dns = dtsgui_treecont(tree, root, "DNS/DHCP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS, NULL);
-	dtsgui_treeitem(tree, dns, "Dynamic DNS", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_DYN, NULL);
-	dtsgui_treeitem(tree, dns, "DNS Server Options", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_SERV, NULL);
-	dtsgui_treeitem(tree, dns, "DNS Zone Defaults", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_ZONE, NULL);
+	tln = dtsgui_treecont(tree, root, "DNS/DHCP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS, NULL);
+	dtsgui_treeitem(tree, tln, "Dynamic DNS", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_DYN, NULL);
+	dtsgui_treeitem(tree, tln, "DNS Server Options", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_SERV, NULL);
+	dtsgui_treeitem(tree, tln, "DNS Zone Defaults", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_ZONE, NULL);
 
-	tmp = dtsgui_treecont(tree, dns, "Static Hosts", 0, 1, 0, DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW, NULL);
+	tmp = dtsgui_treecont(tree, tln, "Static Hosts", 0, 1, 0, DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/DNS/Hosts/Host", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_CONFIG_DNS_HOST, NULL);
@@ -671,8 +819,10 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		objunref(xn);
 	}
 	objunref(xp);
+	objunref(iter);
+	iter = NULL;
 
-	dtsgui_treecont(tree, dns, "Hosted Domains", 0, 1, 0, DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW, NULL);
+	dtsgui_treecont(tree, tln, "Hosted Domains", 0, 1, 0, DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/DNS/Hosted/Domain", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_CONFIG_DNS_HOST, NULL);
@@ -687,8 +837,11 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		objunref(xn);
 	}
 	objunref(xp);
+	objunref(iter);
+	iter = NULL;
 
-	tmp = dtsgui_treecont(tree, root, "Network Interface", 0, 1, 0, DTS_NODE_NETWORK_IFACE_NEW, NULL);
+	tln = dtsgui_treecont(tree, root, "Network Interfaces", 0, 0, 0, -1, NULL);
+	tmp = dtsgui_treecont(tree, tln, "Ethernet Interfaces", 0, 1, 0, DTS_NODE_NETWORK_IFACE_NEW, NULL);
 
 	xp = xml_xpath(xmldoc, "/config/IP/Interfaces/Interface", "name");
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
@@ -697,9 +850,10 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		objunref(xn);
 	}
 	objunref(xp);
+	objunref(iter);
+	iter = NULL;
 
-	tmp = dtsgui_treecont(tree, root, "Wireless Config", 0, 1, 0, DTS_NODE_NETWORK_WIFI_NEW, NULL);
-
+	tmp = dtsgui_treecont(tree, tln, "Wireless Config", 0, 1, 0, DTS_NODE_NETWORK_WIFI_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/WiFi", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WIFI, NULL);
@@ -707,8 +861,11 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		objunref(xn);
 	}
 	objunref(xp);
+	objunref(iter);
+	iter = NULL;
 
-	tmp = dtsgui_treecont(tree, root, "Wan Routing/Nodes", 0, 1, 0, DTS_NODE_NETWORK_WAN_NEW, NULL);
+	tln = dtsgui_treecont(tree, root, "Static Routes", 0, 0, 0, -1, NULL);
+	tmp = dtsgui_treecont(tree, tln, "Wan Routing/Nodes", 0, 1, 0, DTS_NODE_NETWORK_WAN_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/Routes/Route", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WAN, NULL);
@@ -716,8 +873,10 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		objunref(xn);
 	}
 	objunref(xp);
+	objunref(iter);
+	iter = NULL;
 
-	tmp = dtsgui_treecont(tree, root, "Other Routes", 0, 1, 0, DTS_NODE_NETWORK_ROUTE_NEW, NULL);
+	tmp = dtsgui_treecont(tree, tln, "Other Routes", 0, 1, 0, DTS_NODE_NETWORK_ROUTE_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/GenRoutes/Route", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WAN, NULL);
@@ -725,18 +884,55 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		objunref(xn);
 	}
 	objunref(xp);
+	objunref(iter);
+	iter = NULL;
 
-	tmp = dtsgui_treecont(tree, root, "Modem Config", 0, 0, 0, DTS_NODE_NETWORK_MODEM, NULL);
-	dtsgui_treeitem(tree, tmp, "Dialup/Leased", 0, 0, 0, DTS_NODE_NETWORK_MODEM_ANA, NULL);
-	dtsgui_treecont(tree, root, "Modem Firewall Rules", 0, 1, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "Additional ADSL Links", 0, 1, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "ADSL Accounts", 0, 1, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "Default TOS", 0, 1, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "FAX Config", 0, 0, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "GRE VPN Tunnels", 0, 1, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "ESP VPN Tunnels", 0, 1, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "ESP Remote Access", 0, 1, 0, -1, NULL);
-	dtsgui_treecont(tree, root, "VOIP Registrations", 0, 0, 0, -1, NULL);
+	tln = dtsgui_treecont(tree, root, "PPP Connection Config", 0, 0, 0, DTS_NODE_NETWORK_MODEM, NULL);
+	dtsgui_treeitem(tree, tln, "Dialup/Leased", 0, 0, 0, DTS_NODE_NETWORK_MODEM_ANA, NULL);
+	dtsgui_treecont(tree, tln, "Modem Firewall Rules", 0, 1, 0, -1, NULL);
+
+	tmp = dtsgui_treecont(tree, tln, "Additional ADSL Links", 0, 1, 0, DTS_NODE_NETWORK_ADSL_LINK_NEW, NULL);
+	xp = xml_xpath(xmldoc, "/config/IP/ADSL/Links/Link", NULL);
+	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
+		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_ADSL_LINK, NULL);
+		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
+		objunref(xn);
+	}
+	objunref(xp);
+	objunref(iter);
+	iter = NULL;
+
+	tmp = dtsgui_treecont(tree, tln, "ADSL Accounts", 0, 1, 0, DTS_NODE_NETWORK_ADSL_USER_NEW, NULL);
+	xp = xml_xpath(xmldoc, "/config/IP/ADSL/Users/User", NULL);
+	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
+		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_ADSL_USER, NULL);
+		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
+		objunref(xn);
+	}
+	objunref(xp);
+	objunref(iter);
+	iter = NULL;
+
+	tmp = dtsgui_treecont(tree, root, "Default TOS", 0, 1, 0, DTS_NODE_NETWORK_TOS_NEW, NULL);
+	xp = xml_xpath(xmldoc, "/config/IP/QOS/TOS", NULL);
+	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
+		tmp2 = dtsgui_treecont(tree, tmp, xml_getattr(xn, "name"), 1, 1, 1, DTS_NODE_NETWORK_TOS, NULL);
+		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
+		objunref(xn);
+	}
+	objunref(xp);
+	objunref(iter);
+	iter = NULL;
+
+
+	tln = dtsgui_treecont(tree, root, "VPN Configuration", 0, 0, 0, -1, NULL);
+	dtsgui_treecont(tree, tln, "GRE VPN Tunnels", 0, 1, 0, -1, NULL);
+	dtsgui_treecont(tree, tln, "ESP VPN Tunnels", 0, 1, 0, -1, NULL);
+	dtsgui_treecont(tree, tln, "ESP Remote Access", 0, 1, 0, -1, NULL);
+
+	tln = dtsgui_treecont(tree, root, "Voice & FAX Over IP", 0, 0, 0, -1, NULL);
+	dtsgui_treecont(tree, tln, "VOIP Registrations", 0, 0, 0, -1, NULL);
+	dtsgui_treecont(tree, tln, "FAX Config", 0, 0, 0, -1, NULL);
 	dtsgui_treecont(tree, root, "Secuity Certificate Config", 0, 0, 0, -1, NULL);
 
 	return tree;
