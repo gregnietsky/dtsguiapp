@@ -250,7 +250,11 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 	this->frame = frame;
 
 	p_sizer->Add(sw, 1,wxEXPAND,0);
-	t_pane = new wxScrolledWindow(sw, wxID_ANY);
+#ifdef _WIN32
+	t_pane = new wxScrolledWindow(sw, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxVSCROLL);
+#else
+	t_pane = new wxScrolledWindow(sw, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxHSCROLL|wxVSCROLL);
+#endif // _WIN32
 	a_window = new wxWindow(sw, wxID_ANY);
 
 	panel = static_cast<wxWindow *>(sw);
