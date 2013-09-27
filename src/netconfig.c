@@ -856,7 +856,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	tmp = dtsgui_treecont(tree, tln, "Wireless Config", 0, 1, 0, DTS_NODE_NETWORK_WIFI_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/WiFi", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
-		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WIFI, NULL);
+		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WIFI, NULL);
 		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
 		objunref(xn);
 	}
@@ -868,7 +868,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	tmp = dtsgui_treecont(tree, tln, "Wan Routing/Nodes", 0, 1, 0, DTS_NODE_NETWORK_WAN_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/Routes/Route", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
-		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WAN, NULL);
+		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WAN, NULL);
 		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
 		objunref(xn);
 	}
@@ -879,7 +879,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	tmp = dtsgui_treecont(tree, tln, "Other Routes", 0, 1, 0, DTS_NODE_NETWORK_ROUTE_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/GenRoutes/Route", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
-		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WAN, NULL);
+		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_WAN, NULL);
 		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
 		objunref(xn);
 	}
@@ -894,7 +894,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	tmp = dtsgui_treecont(tree, tln, "Additional ADSL Links", 0, 1, 0, DTS_NODE_NETWORK_ADSL_LINK_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/ADSL/Links/Link", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
-		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_ADSL_LINK, NULL);
+		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_ADSL_LINK, NULL);
 		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
 		objunref(xn);
 	}
@@ -905,7 +905,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	tmp = dtsgui_treecont(tree, tln, "ADSL Accounts", 0, 1, 0, DTS_NODE_NETWORK_ADSL_USER_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/ADSL/Users/User", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
-		tmp2 = dtsgui_treecont(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_ADSL_USER, NULL);
+		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_ADSL_USER, NULL);
 		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
 		objunref(xn);
 	}
@@ -916,7 +916,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	tmp = dtsgui_treecont(tree, root, "Default TOS", 0, 1, 0, DTS_NODE_NETWORK_TOS_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/IP/QOS/TOS", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
-		tmp2 = dtsgui_treecont(tree, tmp, xml_getattr(xn, "name"), 1, 1, 1, DTS_NODE_NETWORK_TOS, NULL);
+		tmp2 = dtsgui_treeitem(tree, tmp, xml_getattr(xn, "name"), 1, 1, 1, DTS_NODE_NETWORK_TOS, NULL);
 		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
 		objunref(xn);
 	}
