@@ -93,24 +93,6 @@ struct form_item *xmllistbox(dtsgui_pane p, const char *name, const char *xpath,
 	return lb;
 }
 
-void network_dnsconfig(	dtsgui_pane p) {
-
-	xmltextbox(p, "Primary DNS", "/config/DNS/Config", "Option", "", "option", "");
-	xmltextbox(p, "Secondary DNS", "/config/DNS/Config", "Option", "", "option", "NattedIP");
-	xmltextbox(p, "Primary WINS", "/config/DNS/Config", "Option", "", "option", "L2TPNet");
-	xmltextbox(p, "Secondary WINS", "/config/DNS/Config", "Option", "", "option", "OVPNNet");
-/*	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");
-	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");
-	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");
-	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");
-	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");
-	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");
-	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");
-	xmltextbox(p, "", "/config/IP/SysConf", "Option", "", "option", "");*/
-
-	dtsgui_setevcallback(p, handle_test, NULL);
-}
-
 void network_config(dtsgui_pane p, struct xml_doc *xmldoc) {
 	struct form_item *lb, *elb;
 	const char *extint = NULL;
@@ -136,22 +118,86 @@ void network_config(dtsgui_pane p, struct xml_doc *xmldoc) {
 		free((void*)extint);
 	}
 
-	xmltextbox(p, "Primary DNS", "/config/IP/SysConf", "Option", "", "option", "PrimaryDns");
-	xmltextbox(p, "Secondary DNS", "/config/IP/SysConf", "Option", "", "option", "SecondaryDns");
-	xmltextbox(p, "Primary WINS", "/config/IP/SysConf", "Option", "", "option", "PrimaryWins");
-	xmltextbox(p, "Secondary WINS", "/config/IP/SysConf", "Option", "", "option", "SecondaryWins");
 	xmltextbox(p, "Gateway Address", "/config/IP/SysConf", "Option", "", "option", "Nexthop");
 	xmltextbox(p, "External (Natted IP)", "/config/IP/SysConf", "Option", "", "option", "NattedIP");
 	xmltextbox(p, "IPSEC VPN Access", "/config/IP/SysConf", "Option", "", "option", "VPNNet");
 	xmltextbox(p, "Open VPN Access", "/config/IP/SysConf", "Option", "", "option", "OVPNNet");
 	xmltextbox(p, "L2TP VPN Access", "/config/IP/SysConf", "Option", "", "option", "L2TPNet");
-	xmltextbox(p, "DHCP Lease", "/config/IP/SysConf", "Option", "43200", "option", "DHCPLease");
-	xmltextbox(p, "DHCP Max Lease", "/config/IP/SysConf", "Option", "86400", "option", "DHCPMaxLease");
 	xmltextbox(p, "NTP Server[s]", "/config/IP/SysConf", "Option", "196.25.1.1 196.25.1.9", "option", "NTPServer");
 	xmltextbox(p, "Bridge Interfaces", "/config/IP/SysConf", "Option", "ethA", "option", "Bridge");
 	xmltextbox(p, "Incoming Traffic Limit", "/config/IP/SysConf", "Option", "", "option", "Ingress");
 	xmltextbox(p, "Outgoing Traffic Limit", "/config/IP/SysConf", "Option", "", "option", "Egress");
 
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_config_dns(dtsgui_pane p) {
+	xmltextbox(p, "Hostname", "/config/DNS/Config", "Option", "netsentry", "option", "Hostname");
+	xmltextbox(p, "Domain", "/config/DNS/Config", "Option", "company.co.za", "option", "Domain");
+	xmltextbox(p, "Aditional Search Domains", "/config/DNS/Config", "Option", "", "option", "Search");
+	xmltextbox(p, "Primary DNS", "/config/IP/SysConf", "Option", "", "option", "PrimaryDns");
+	xmltextbox(p, "Secondary DNS", "/config/IP/SysConf", "Option", "", "option", "SecondaryDns");
+	xmltextbox(p, "Primary WINS", "/config/IP/SysConf", "Option", "", "option", "PrimaryWins");
+	xmltextbox(p, "Secondary WINS", "/config/IP/SysConf", "Option", "", "option", "SecondaryWins");
+	xmltextbox(p, "DHCP Lease", "/config/IP/SysConf", "Option", "43200", "option", "DHCPLease");
+	xmltextbox(p, "DHCP Max Lease", "/config/IP/SysConf", "Option", "86400", "option", "DHCPMaxLease");
+	xmlcheckbox(p, "Use Internal Interface For DNS First", "/config/DNS/Config", "Option", "true", "option", "IntFirst");
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_config_dns_dyn(dtsgui_pane p) {
+	xmltextbox(p, "Dynamic DNS Domain", "/config/DNS/Config", "Option", "", "option", "DynZone");
+	xmltextbox(p, "Dynamic DNS Server", "/config/DNS/Config", "Option", "", "option", "DynServ");
+	xmltextbox(p, "Dynamic DNS Secret", "/config/DNS/Config", "Option", "", "option", "DynKey");
+	xmltextbox(p, "Dynamic Zone TTL", "/config/DNS/Config", "Option", "180", "option", "DynamicTTL");
+	xmlcheckbox(p, "Add CNAME For host", "/config/DNS/Config", "Option", "true", "option", "DynamicCNAME");
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_config_dns_serv(dtsgui_pane p) {
+	xmltextbox(p, "Shared Secret For Domain Updates", "/config/DNS/Config", "Option", "", "option", "SmartKey");
+
+	xmlcheckbox(p, "Backup Zone Files", "/config/DNS/Config", "Option", "true", "option", "Backup");
+	xmlcheckbox(p, "Authorotive [Internal]", "/config/DNS/Config", "Option", "true", "option", "Auth");
+	xmlcheckbox(p, "Authorotive [External]", "/config/DNS/Config", "Option", "", "option", "AuthX");
+	xmlcheckbox(p, "Use DNS Servers Obtained From PPP", "/config/DNS/Config", "Option", "true", "option", "Usepeer");
+	xmlcheckbox(p, "Allow Recursive Lookup Externally", "/config/DNS/Config", "Option", "", "option", "ExtServ");
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_config_dns_zone(dtsgui_pane p) {
+	xmltextbox(p, "SOA Serial", "/config/DNS/Config", "Option", "1", "option", "Serial");
+	xmltextbox(p, "SOA Refresh", "/config/DNS/Config", "Option", "3600", "option", "Refresh");
+	xmltextbox(p, "SOA Retry", "/config/DNS/Config", "Option", "1800", "option", "Retry");
+	xmltextbox(p, "SOA Expire", "/config/DNS/Config", "Option", "604800", "option", "Expire");
+	xmltextbox(p, "Default TTL", "/config/DNS/Config", "Option", "3600", "option", "DefaultTTL");
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_config_dns_host_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
+	dtsgui_textbox(p, "Hostame", "host", "", NULL);
+	dtsgui_textbox(p, "IP Address", "ipaddr", "", NULL);
+	dtsgui_textbox(p, "Interface", "macaddr", "", NULL);
+
+	dtsgui_newxmltreenode(self, p, node, "/config/DNS/Hosts", "Host", "host", "host", DTS_NODE_NETWORK_CONFIG_DNS_HOST,
+							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL);
+}
+
+void network_config_dns_host(dtsgui_pane p, struct xml_node *xn) {
+	const char *xpre = "/config/DNS/Hosts/Host";
+	char xpath[PATH_MAX];
+
+	snprintf(xpath, PATH_MAX, "%s[. = '%s']", xpre, xn->value);
+
+	dtsgui_xmltextbox(p, "IP Address", "ipaddr", xpath, "ipaddr");
+	dtsgui_xmltextbox(p, "MAC Address", "macaddr", xpath, "macaddr");
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_config_dns_domain_new(dtsgui_pane p) {
 	dtsgui_setevcallback(p, handle_test, NULL);
 }
 
@@ -167,7 +213,6 @@ void network_newiface(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node)
 	dtsgui_textbox(p, "DHCP End Address", "dhcpend", "-", NULL);
 	dtsgui_textbox(p, "Bandwidth In", "bwin", "", NULL);
 	dtsgui_textbox(p, "Bandwidth Out", "bwout", "", NULL);
-
 
 	dtsgui_newxmltreenode(self, p, node, "/config/IP/Interfaces", "Interface", "iface", "name", DTS_NODE_NETWORK_IFACE,
 							DTS_TREE_NEW_NODE_CONTAINER | DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL);
@@ -346,6 +391,9 @@ void network_modem(dtsgui_pane p) {
 
 	xmltextbox(p, "Holdoff Time", "/config/IP/Dialup", "Option", "", "option", "Holdoff");
 	xmltextbox(p, "MTU/MRU", "/config/IP/Dialup", "Option", "", "option", "MTU");
+	xmltextbox(p, "Idle Timeout", "/config/IP/Dialup", "Option", "120", "option", "IdleTimeout");
+	xmltextbox(p, "Fail Limit", "/config/IP/Dialup", "Option", "5", "option", "MaxFail");
+	xmltextbox(p, "Connect Dely", "/config/IP/Dialup", "Option", "", "option", "ConnectDelay");
 
 	xmltextbox(p, "Number/Service ID/APN", "/config/IP/Dialup", "Option", "TelkomSA", "opFlowControltion", "Number");
 	xmltextbox(p, "Username", "/config/IP/Dialup", "Option", "", "option", "Username");
@@ -384,9 +432,6 @@ void network_modem_ana(dtsgui_pane p) {
 	xmltextbox(p, "Init String 1", "/config/IP/Dialup", "Option", "AT&F", "option", "Init1");
 	xmltextbox(p, "Init String 2", "/config/IP/Dialup", "Option", "ATL1M1", "option", "Init2");
 	xmltextbox(p, "Dial String", "/config/IP/Dialup", "Option", "ATDT", "option", "DialString");
-	xmltextbox(p, "Idle Timeout", "/config/IP/Dialup", "Option", "120", "option", "IdleTimeout");
-	xmltextbox(p, "Fail Limit", "/config/IP/Dialup", "Option", "5", "option", "MaxFail");
-	xmltextbox(p, "Connect Dely", "/config/IP/Dialup", "Option", "", "option", "ConnectDelay");
 
 	xmlcheckbox(p, "Abort On No Carrier", "/config/IP/Dialup", "Option", "true", "option", "NoCarrier");
 	xmlcheckbox(p, "Abort On No Dialtone", "/config/IP/Dialup", "Option", "true", "option", "NoDialtone");
@@ -449,11 +494,29 @@ dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_tre
 	}
 
 	switch(nodeid) {
-		case DTS_NODE_DNS_CONFIG:
-			network_dnsconfig(p);
-			break;
 		case DTS_NODE_NETWORK_CONFIG:
 			network_config(p, xmldoc);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS:
+			network_config_dns(p);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_DYN:
+			network_config_dns_dyn(p);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_SERV:
+			network_config_dns_serv(p);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_ZONE:
+			network_config_dns_zone(p);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW:
+			network_config_dns_host_new(p, self, node);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_HOST:
+			network_config_dns_host(p, xn);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW:
+			network_config_dns_domain_new(p);
 			break;
 		case DTS_NODE_NETWORK_IFACE_NEW:
 			network_newiface(p, self, node);
@@ -521,7 +584,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	}
 
 	if (!(xmldoc = xml_loaddoc(defconf, 1))) {
-		dtsgui_alert(dtsgui, "Default configuration failed to load.\nCheck Installation.");
+		dtsgui_alert(dtsgui, "Default configuration failed to loDynamicTTLad.\nCheck Installation.");
 		return 0;
 	}
 
@@ -531,6 +594,20 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	root = dtsgui_treecont(tree, NULL, "Global DNS Settings", 0, 0, 0, td);*/
 
 	root = dtsgui_treecont(tree, NULL, "Global IP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG, NULL);
+	tmp = dtsgui_treecont(tree, root, "DNS/DHCP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS, NULL);
+	dtsgui_treeitem(tree, tmp, "Dynamic DNS", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_DYN, NULL);
+	dtsgui_treeitem(tree, tmp, "DNS Server Options", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_SERV, NULL);
+	dtsgui_treeitem(tree, tmp, "DNS Zone Defaults", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_ZONE, NULL);
+	dtsgui_treecont(tree, tmp, "Static Hosts", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW, NULL);
+	xp = xml_xpath(xmldoc, "/config/DNS/Hosts/Host", NULL);
+	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
+		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_CONFIG_DNS_HOST, NULL);
+		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
+		objunref(xn);
+	}
+	objunref(xp);
+	dtsgui_treecont(tree, tmp, "Hosted Domains", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW, NULL);
+
 	tmp = dtsgui_treecont(tree, root, "Network Interface", 0, 1, 0, DTS_NODE_NETWORK_IFACE_NEW, NULL);
 
 	xp = xml_xpath(xmldoc, "/config/IP/Interfaces/Interface", "name");
