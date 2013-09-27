@@ -61,6 +61,7 @@ struct tree_newnode {
 	void *data;
 	dtsgui_treeview tv;
 	dtsgui_treenode tn;
+	dtsgui_xmltreenode_cb node_cb;
 	const char *xpath;
 	const char *node;
 	const char *vitem;
@@ -360,10 +361,10 @@ extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *na
 	p->TextBox(title, name, value, wxTE_PASSWORD | wxTE_PROCESS_ENTER, 1, data,  DTSGUI_FORM_DATA_PTR);
 }
 
-extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, const char *name, int ischecked, void *data) {
+extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheck, int ischecked, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 
-	p->CheckBox(title, name, ischecked, NULL, NULL, data,  DTSGUI_FORM_DATA_PTR);
+	p->CheckBox(title, name, ischecked, checkval, uncheck, data,  DTSGUI_FORM_DATA_PTR);
 }
 
 extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, const char *name, void *data) {
@@ -611,7 +612,8 @@ extern 	const char *dtsgui_item_value(struct form_item *fi) {
 	const char *value = NULL;
 	union widgets {
 		wxTextCtrl *t;
-		wxComboBox *c;
+		wxComboBox *l;
+		wxCheckBox *c;
 	} w;
 
 	switch(fi->type) {
@@ -622,12 +624,17 @@ extern 	const char *dtsgui_item_value(struct form_item *fi) {
 		case DTS_WIDGET_LISTBOX:
 		case DTS_WIDGET_COMBOBOX:
 			int pos;
-			w.c = (wxComboBox *)fi->widget;
-			pos = w.c->GetSelection();
-			value = strdup((char*)w.c->GetClientData(pos));
-			printf("%i %s\n", pos, value);
+			w.l = (wxComboBox *)fi->widget;
+			pos = w.l->GetSelection();
+			value = strdup((char*)w.l->GetClientData(pos));
 			break;
 		case DTS_WIDGET_CHECKBOX:
+			w.c = (wxCheckBox *)fi->widget;
+			if (w.c->IsChecked()) {
+				value = (fi->value) ? strdup(fi->value) : NULL;
+			} else {
+				value = (fi->value2) ? strdup(fi->value2) : NULL;
+			}
 			break;
 	}
 	return value;
@@ -919,15 +926,22 @@ struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *
 		return NULL;
 	}
 
-	val = dtsgui_findvalue(p , nodeval);
+	if (nodeval) {
+		val = dtsgui_findvalue(p , nodeval);
+	} else {
+		val = NULL;
+	}
+
 	if (attrkey) {
 		aval = dtsgui_findvalue(p , attrkey);
 	}
 
 	xml_createpath(xmldoc, xpath);
-	xn = xml_addnode(xmldoc, xpath, node, val, attrkey, aval);
+	xn = xml_addnode(xmldoc, xpath, node, (val) ? val : "", attrkey, aval);
 
-	free((void*)val);
+	if (val) {
+		free((void*)val);
+	}
 	if (aval) {
 		free((void*)aval);
 	}
@@ -947,7 +961,8 @@ struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *
 			objunref(fi);
 			continue;
 		}
-		if (strcmp(name, nodeval) && (!attrkey || strcmp(name, attrkey))) {
+
+		if ((!nodeval || strcmp(name, nodeval)) && (!attrkey || strcmp(name, attrkey))) {
 			xml_setattr(xmldoc, xn, name, val);
 		}
 		free((void*)val);
@@ -987,6 +1002,35 @@ struct xml_node *dtsgui_treenodegetxml(dtsgui_treeview tv, dtsgui_treenode tn, c
 	return store->GetXMLData(item, buf);
 }
 
+void *dtsgui_treenodegetdata(dtsgui_treeview tv, dtsgui_treenode tn) {
+	wxDataViewItem item = (wxDataViewItem)tn;
+	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
+	DTSDVMListView *store;
+
+	store = tree->GetStore();
+	return store->GetUserData(item);
+}
+
+const char *dtsgui_treenodeparent(dtsgui_treenode tn) {
+	wxDataViewItem item = (wxDataViewItem)tn;
+	DTSDVMListStore *entry, *parent;
+	const char *val;
+	bool nok;
+
+	nok = item.IsOk();
+	entry = (DTSDVMListStore*)item.GetID();
+
+	if (!nok || !entry) {
+		return NULL;
+	}
+
+	if (!(parent = entry->GetParent())) {
+		return NULL;
+	}
+	val = strdup(parent->GetTitle().ToUTF8());
+	return val;
+}
+
 static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *data) {
 	struct tree_newnode *nn = (struct tree_newnode*)data;
 	struct xml_node *xn;
@@ -1015,6 +1059,9 @@ static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *
 		tn = dtsgui_treeitem(nn->tv, nn->tn, name, nn->flags & DTS_TREE_NEW_NODE_EDIT, nn->flags & DTS_TREE_NEW_NODE_SORT, nn->flags & DTS_TREE_NEW_NODE_DELETE, nn->type, nn->data);
 	}
 	dtsgui_treenodesetxml(nn->tv, tn, xn, nn->tattr);
+	if (nn->node_cb) {
+		nn->node_cb(nn->tv, tn, xn, nn->data);
+	}
 }
 
 static void free_tree_newnode(void *data) {
@@ -1034,8 +1081,8 @@ static void free_tree_newnode(void *data) {
 	}
 }
 
-extern void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr,
-								int nid, int flags, void *data) {
+void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr,
+								int nid, int flags, dtsgui_xmltreenode_cb node_cb, void *data) {
 	struct tree_newnode *nn;
 
 	if (!(nn = (struct tree_newnode*)objalloc(sizeof(*nn), free_tree_newnode))) {
@@ -1051,6 +1098,7 @@ extern void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_tr
 	ALLOC_CONST(nn->tattr, tattr);
 	nn->flags = flags;
 	nn->type = nid;
+	nn->node_cb = node_cb;
 
 	dtsgui_setevcallback(p, dtsgui_handle_newtreenode, nn);
 }

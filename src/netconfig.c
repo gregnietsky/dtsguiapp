@@ -179,10 +179,10 @@ void network_config_dns_zone(dtsgui_pane p) {
 void network_config_dns_host_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
 	dtsgui_textbox(p, "Hostame", "host", "", NULL);
 	dtsgui_textbox(p, "IP Address", "ipaddr", "", NULL);
-	dtsgui_textbox(p, "Interface", "macaddr", "", NULL);
+	dtsgui_textbox(p, "Mac Address", "macaddr", "", NULL);
 
 	dtsgui_newxmltreenode(self, p, node, "/config/DNS/Hosts", "Host", "host", "host", DTS_NODE_NETWORK_CONFIG_DNS_HOST,
-							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL);
+							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
 }
 
 void network_config_dns_host(dtsgui_pane p, struct xml_node *xn) {
@@ -197,7 +197,65 @@ void network_config_dns_host(dtsgui_pane p, struct xml_node *xn) {
 	dtsgui_setevcallback(p, handle_test, NULL);
 }
 
-void network_config_dns_domain_new(dtsgui_pane p) {
+void network_config_dns_domain_node(dtsgui_treeview tv, dtsgui_treenode tn, struct xml_node *xn, void *data) {
+	dtsgui_treecont(tv, tn, "Servers", 0, 1, 0, DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER_NEW, NULL);
+}
+
+void network_config_dns_domain_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
+	dtsgui_textbox(p, "Domain", "domain", "", NULL);
+	dtsgui_textbox(p, "TSIG Key [Master]", "key", "", NULL);
+	dtsgui_checkbox(p, "Internal Domain", "internal", "true", "", 0, NULL);
+
+	dtsgui_newxmltreenode(self, p, node, "/config/DNS/Hosted", "Domain", NULL, "domain", DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN,
+							DTS_TREE_NEW_NODE_CONTAINER | DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, network_config_dns_domain_node, NULL);
+}
+
+void network_config_dns_domain(dtsgui_pane p, struct xml_node *xn) {
+	const char *xpre = "/config/DNS/Hosted/Domain";
+	char xpath[PATH_MAX];
+	const char *domain;
+
+	domain = xml_getattr(xn, "domain");
+	snprintf(xpath, PATH_MAX, "%s[@domain = '%s']", xpre, domain);
+
+	dtsgui_xmltextbox(p, "TSIG Key [Master]", "key", xpath, "key");
+	dtsgui_xmlcheckbox(p, "Internal Domain", "internal", "true", "", xpath, "internal");
+
+	dtsgui_setevcallback(p, handle_test, NULL);
+}
+
+void network_config_dns_domain_server_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
+	const char *domain;
+	char xpath[PATH_MAX];
+	int len;
+
+	if (!(domain = dtsgui_treenodeparent(node))) {
+		return;
+	}
+
+	snprintf(xpath, PATH_MAX, "/config/DNS/Hosted/Domain[@domain = '%s']", domain);
+	free((void*)domain);
+
+	len = strlen(xpath)+1;
+	domain = objalloc(len, NULL);
+	memcpy((void*)domain, xpath, len);
+
+	dtsgui_textbox(p, "Name Server IP Address", "master", "", NULL);
+
+	dtsgui_newxmltreenode(self, p, node, xpath, "NameServer", "master", "master", DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER,
+							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_SORT, NULL, (void*)domain);
+}
+
+void network_config_dns_domain_server(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, struct xml_node *xn) {
+	const char *xpre;
+	char xpath[PATH_MAX];
+
+	if (!(xpre = dtsgui_treenodegetdata(self, node))) {
+		return;
+	}
+
+	snprintf(xpath, PATH_MAX, "%s/NameServer[. = '%s']", xpre, xn->value);
+	dtsgui_xmltextbox(p, "Name Server IP Address", "master", xpath, NULL);
 	dtsgui_setevcallback(p, handle_test, NULL);
 }
 
@@ -215,7 +273,7 @@ void network_newiface(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node)
 	dtsgui_textbox(p, "Bandwidth Out", "bwout", "", NULL);
 
 	dtsgui_newxmltreenode(self, p, node, "/config/IP/Interfaces", "Interface", "iface", "name", DTS_NODE_NETWORK_IFACE,
-							DTS_TREE_NEW_NODE_CONTAINER | DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL);
+							DTS_TREE_NEW_NODE_CONTAINER | DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
 }
 
 void network_iface(dtsgui_pane p, struct xml_node *xn) {
@@ -308,7 +366,7 @@ void network_newwifi(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, 
 	dtsgui_textbox(p, "TX Power", "txpower", "25", NULL);
 
 	dtsgui_newxmltreenode(self, p, node, "/config/IP", "WiFi", "iface", NULL, DTS_NODE_NETWORK_WIFI,
-							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL);
+							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
 }
 
 void network_newwan(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
@@ -322,7 +380,7 @@ void network_newwan(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node) {
 	dtsgui_textbox(p, "Gateway [Remote]", "remote", "", NULL);
 
 	dtsgui_newxmltreenode(self, p, node, "/config/IP/Routes", "Route", "descrip", NULL, DTS_NODE_NETWORK_WAN,
-							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL);
+							DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
 }
 
 void network_wan(dtsgui_pane p, struct xml_node *xn) {
@@ -348,7 +406,7 @@ void network_newroute(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node)
 	dtsgui_textbox(p, "Gateway", "gateway", "", NULL);
 
 	dtsgui_newxmltreenode(self, p, node, "/config/IP/GenRoutes", "Route", "descrip", NULL, DTS_NODE_NETWORK_ROUTE,
-								DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL);
+								DTS_TREE_NEW_NODE_DELETE | DTS_TREE_NEW_NODE_EDIT | DTS_TREE_NEW_NODE_SORT, NULL, NULL);
 }
 
 void network_route(dtsgui_pane p, struct xml_node *xn) {
@@ -516,7 +574,16 @@ dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_tre
 			network_config_dns_host(p, xn);
 			break;
 		case DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW:
-			network_config_dns_domain_new(p);
+			network_config_dns_domain_new(p, self, node);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN:
+			network_config_dns_domain(p, xn);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER_NEW:
+			network_config_dns_domain_server_new(p, self, node);
+			break;
+		case DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER:
+			network_config_dns_domain_server(p, self, node, xn);
 			break;
 		case DTS_NODE_NETWORK_IFACE_NEW:
 			network_newiface(p, self, node);
@@ -568,7 +635,7 @@ dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_tre
 
 dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	dtsgui_treeview tree;
-	dtsgui_treenode root, tmp, tmp2;
+	dtsgui_treenode root, tmp, tmp2, dns/*, tmp3*/;
 	struct app_data *appdata;
 	struct xml_doc *xmldoc;
 	struct xml_search *xp;
@@ -590,15 +657,13 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 
 	tree = dtsgui_treewindow(dtsgui, "Tree Window", tree_do_shit, NULL, xmldoc);
 
-/*	td = gettreedata(tree, NULL, DTS_NODE_DNS_CONFIG);
-	root = dtsgui_treecont(tree, NULL, "Global DNS Settings", 0, 0, 0, td);*/
-
 	root = dtsgui_treecont(tree, NULL, "Global IP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG, NULL);
-	tmp = dtsgui_treecont(tree, root, "DNS/DHCP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS, NULL);
-	dtsgui_treeitem(tree, tmp, "Dynamic DNS", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_DYN, NULL);
-	dtsgui_treeitem(tree, tmp, "DNS Server Options", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_SERV, NULL);
-	dtsgui_treeitem(tree, tmp, "DNS Zone Defaults", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_ZONE, NULL);
-	dtsgui_treecont(tree, tmp, "Static Hosts", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW, NULL);
+	dns = dtsgui_treecont(tree, root, "DNS/DHCP Settings", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS, NULL);
+	dtsgui_treeitem(tree, dns, "Dynamic DNS", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_DYN, NULL);
+	dtsgui_treeitem(tree, dns, "DNS Server Options", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_SERV, NULL);
+	dtsgui_treeitem(tree, dns, "DNS Zone Defaults", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_ZONE, NULL);
+
+	tmp = dtsgui_treecont(tree, dns, "Static Hosts", 0, 1, 0, DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW, NULL);
 	xp = xml_xpath(xmldoc, "/config/DNS/Hosts/Host", NULL);
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_CONFIG_DNS_HOST, NULL);
@@ -606,7 +671,22 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		objunref(xn);
 	}
 	objunref(xp);
-	dtsgui_treecont(tree, tmp, "Hosted Domains", 0, 0, 0, DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW, NULL);
+
+	dtsgui_treecont(tree, dns, "Hosted Domains", 0, 1, 0, DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW, NULL);
+	xp = xml_xpath(xmldoc, "/config/DNS/Hosted/Domain", NULL);
+	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
+		tmp2 = dtsgui_treeitem(tree, tmp, xn->value, 1, 1, 1, DTS_NODE_NETWORK_CONFIG_DNS_HOST, NULL);
+		dtsgui_treenodesetxml(tree, tmp2, xn, NULL);
+/*		xp2 = xml_xpath(xmldoc, "/config/DNS/Hosted/Domain", NULL);
+		for(xn = xml_getfirstnode(xp2, &iter); xn2; xn2 = xml_getnextnode(iter2)) {
+			tmp3 = dtsgui_treeitem(tree, tmp2, xn2->value, 1, 1, 1, DTS_NODE_NETWORK_CONFIG_DNS_HOST, NULL);
+			dtsgui_treenodesetxml(tree, tmp3, xn2, NULL);
+			objunref(xn2);
+		}
+		objunref(xp2);*/
+		objunref(xn);
+	}
+	objunref(xp);
 
 	tmp = dtsgui_treecont(tree, root, "Network Interface", 0, 1, 0, DTS_NODE_NETWORK_IFACE_NEW, NULL);
 
