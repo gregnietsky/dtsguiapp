@@ -715,63 +715,6 @@ void network_tree_setup(dtsgui_treeview tree, struct xml_doc *xmldoc) {
 	dtsgui_treecont(tree, root, "Secuity Certificate Config", 0, 0, 0, -1, NULL, NULL);
 }
 
-void node_edit(dtsgui_treeview tree, dtsgui_treenode node, const char *title) {
-	struct xml_doc *xmldoc;
-	struct xml_node *xn;
-	char *buff = NULL;
-
-	if (!(xmldoc = dtsgui_panelxml(tree))) {
-		return;
-	}
-
-	if (!(xn = dtsgui_treenodegetxml(tree, node, &buff))) {
-		return;
-	}
-
-	if (buff) {
-		xml_setattr(xmldoc, xn, buff, title);
-		objunref(buff);
-	} else {
-		xml_modify(xmldoc, xn, title);
-	}
-}
-
-dtsgui_pane newtreepane(dtsgui_treeview self, dtsgui_treenode node, const char *title) {
-	dtsgui_pane p = NULL;
-	struct xml_doc *xmldoc;
-	enum node_id nodeid;
-
-	nodeid = dtsgui_treenodeid(self, node);
-
-	if (nodeid == -1) {
-		p = dtsgui_treepane(self, NULL, 0, NULL, NULL);
-		dtsgui_setevcallback(p, handle_test, NULL);
-		return p;
-	}
-
-	xmldoc = dtsgui_panelxml(self);
-	if (!(p = dtsgui_treepane(self, title, wx_PANEL_BUTTON_ACTION, NULL, xmldoc))) {
-		return NULL;
-	}
-	if (xmldoc) {
-		objunref(xmldoc);
-	}
-	return p;
-}
-
-dtsgui_pane tree_do_shit(struct dtsgui *dtsgui, dtsgui_treeview self, dtsgui_treenode node, enum tree_cbtype cb_type, const char *title, void *td) {
-	switch(cb_type) {
-		case DTSGUI_TREE_CB_SELECT:
-			return newtreepane(self, node, title);
-		case DTSGUI_TREE_CB_EDIT:
-			node_edit(self, node, title);
-			return NULL;
-		case DTSGUI_TREE_CB_DELETE:
-			return NULL;
-	}
-	return NULL;
-}
-
 dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 	dtsgui_treeview tree;
 	struct app_data *appdata;
@@ -790,7 +733,7 @@ dtsgui_treeview network_tree(struct dtsgui *dtsgui) {
 		return 0;
 	}
 
-	tree = dtsgui_treewindow(dtsgui, "Tree Window", tree_do_shit, NULL, xmldoc);
+	tree = dtsgui_treewindow(dtsgui, "Tree Window", NULL, NULL, xmldoc);
 	network_tree_setup(tree, xmldoc);
 	return tree;
 }
