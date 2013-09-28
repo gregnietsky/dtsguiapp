@@ -115,9 +115,17 @@ void DTSTreeWindowEvent::TreeEvent(wxDataViewEvent &event) {
 			tw->ShowRMenu(cont, vm->GetChildCount(a_cont), first, last, c_sort, del);
 		}
 	} else if (evid == wxEVT_DATAVIEW_ITEM_START_EDITING) {
+		a_item = event.GetItem();
 		DTSDVMListStore *data = (DTSDVMListStore*)event.GetItem().GetID();
 		if (!data->can_edit) {
 			event.Veto();
+			if (data->IsContainer()) {
+				if (tree->IsExpanded(a_item)) {
+					tree->Collapse(a_item);
+				} else {
+					tree->Expand(a_item);
+				}
+			}
 		}
 	} else if (evid == wxEVT_DATAVIEW_ITEM_EDITING_DONE) {
 #ifndef _WIN32
