@@ -62,7 +62,6 @@ struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd, void *d
 	pwbox = dtsgui_panel(dtsgui, "Athentification", wx_PANEL_BUTTON_ACTION, wx_DTSPANEL_DIALOG, bauth);
 	dtsgui_textbox(pwbox, "Username", "uname", bauth->user, NULL);
 	dtsgui_passwdbox(pwbox, "Password", "pwd", bauth->passwd, NULL);
-	objref(bauth);
 	dtsgui_rundialog(pwbox, pwevent, NULL);
 
 	return bauth;

@@ -195,12 +195,13 @@ extern dtsgui_menuitem dtsgui_newmenudyn(dtsgui_menu dtsmenu, struct dtsgui *dts
 	ALLOC_CONST(p_dyn->title, title);
 	p_dyn->cb = cb;
 
-	/*handed over to wx no need to delete*/
+	/*evdata ref's data*/
 	evdata *ev_data = new evdata(p_dyn, NULL, 1);
 
 	if (d_pane) {
-		objref(p_dyn);
 		*d_pane = p_dyn;
+	} else {
+		objunref(p_dyn);
 	}
 
 	mi = m->Append(menuid, hint, (title) ? title : "");
@@ -240,7 +241,6 @@ dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, int butmask,
 			break;
 		case wx_DTSPANEL_WINDOW:
 			dp = new DTSWindow(frame);
-//			p = new DTSWindow(frame, frame, name);
 			break;
 		case wx_DTSPANEL_DIALOG:
 			dp = new DTSDialog(frame, name, butmask);
@@ -817,7 +817,9 @@ void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text) {
 		newtitle = (char*)dtsgui->title;
 	}
 	f->SetTitle(newtitle);
-
+	if (text) {
+		free(newtitle);
+	}
 }
 
 void dtsgui_menuitemenable(dtsgui_menuitem dmi, int enable) {
@@ -864,7 +866,6 @@ void dtsgui_closedyn(struct dtsgui *dtsgui, struct dynamic_panel *dpane) {
 		return;
 	}
 	p = (DTSObject*)dpane->panel;
-//	p->Reparent(NULL);
 	delete p;
 
 	dpane->panel = NULL;
@@ -1071,7 +1072,9 @@ void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode 
 		return;
 	}
 
-	nn->data = data;
+	if (data && objref(data)) {
+		nn->data = data;
+	}
 	nn->tv = tree;
 	nn->tn = tn;
 	ALLOC_CONST(nn->xpath, xpath);
@@ -1098,6 +1101,7 @@ void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *t
 	}
 
 	if (!(xn = ls->GetXMLData(&buff))) {
+		objunref(xmldoc);
 		return;
 	}
 
@@ -1107,6 +1111,8 @@ void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *t
 	} else {
 		xml_modify(xmldoc, xn, title);
 	}
+	objunref(xn);
+	objunref(xmldoc);
 }
 
 #ifdef __WIN32

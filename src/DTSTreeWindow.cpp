@@ -281,7 +281,7 @@ void DTSTreeWindowEvent::OnButton(wxCommandEvent &event) {
 		default:
 			break;
 	}
-	event.Skip();
+	event.Skip(true);
 }
 
 void free_menu(void *data) {
@@ -366,7 +366,6 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 	tree->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSTreeWindowEvent::MenuEvent, dtsevthandler);
 	sw->Bind(wxEVT_SPLITTER_SASH_POS_CHANGED, &DTSTreeWindowEvent::SplitterEvent, dtsevthandler);
 	sw->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &DTSTreeWindowEvent::OnButton, dtsevthandler);
-//	sw->Bind(wxEVT_TEXT_ENTER, &DTSTreeWindowEvent::OnButton, dtsevthandler);
 	tree->EnableDragSource(wxDF_UNICODETEXT);
 	tree->EnableDropTarget(wxDF_UNICODETEXT);
 

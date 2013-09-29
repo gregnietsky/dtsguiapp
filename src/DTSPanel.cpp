@@ -169,8 +169,8 @@ void DTSPanelEvent::OnCombo(wxCommandEvent &event) {
 		objunref(fi);
 		fi = NULL;
 	}
-
 	stop_bucket_loop(bloop);
+	objunref(bl);
 
 	if (fi) {
 		eid=event.GetId();
@@ -245,8 +245,9 @@ DTSFrame *DTSObject::GetFrame() {
 }
 
 void DTSObject::SetXMLDoc(struct xml_doc *xd) {
-	objref(xd);
-	xmldoc = xd;
+	if (xd && objref(xd)) {
+		xmldoc = xd;
+	}
 }
 
 struct xml_doc *DTSObject::GetXMLDoc(void) {
@@ -265,7 +266,9 @@ void DTSObject::EventHandler(int eid, wxCommandEvent *event) {
 }
 
 void DTSObject::SetUserData(void *data) {
-	userdata = data;
+	if (data && objref(data)) {
+		userdata = data;
+	}
 }
 
 void *DTSObject::GetUserData(void) {
@@ -366,8 +369,6 @@ bool DTSPanel::ShowPanel(bool show) {
 				fgs->AddGrowableCol(3, 1);
 				fgs->AddGrowableCol(1, 1);
 			}
-
-//            panel->SetClientSize(fgs->GetSize());
 			beenshown = true;
 		}
 	}
@@ -423,6 +424,9 @@ void free_xmlelement(void *data) {
 
 	if (xml->xpath) {
 		free((void*)xml->xpath);
+	}
+	if (xml->attr) {
+		free((void*)xml->attr);
 	}
 }
 
@@ -731,7 +735,6 @@ DTSWizardWindow::DTSWizardWindow(wxString title) {
 	type = wx_DTSPANEL_WIZARD;
 	button_mask = 0;
 	panel = dynamic_cast<wxPanel *>(this);
-//	panel->Bind(wxEVT_TEXT_ENTER, &DTSPanelEvent::OnDialog, dtsevthandler);
 	SetupWin();
 }
 
