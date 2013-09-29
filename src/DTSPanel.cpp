@@ -258,8 +258,10 @@ struct xml_doc *DTSObject::GetXMLDoc(void) {
 }
 
 struct bucket_list *DTSObject::GetItems(void) {
-	objref(fitems);
-	return fitems;
+	if (fitems && objref(fitems)) {
+		return fitems;
+	}
+	return NULL;
 }
 
 void DTSObject::EventHandler(int eid, wxCommandEvent *event) {
@@ -297,8 +299,9 @@ DTSPanel::~DTSPanel() {
 	if (dtsevthandler) {
 		delete dtsevthandler;
 	}
-
-	objunref(fitems);
+	if (fitems) {
+		objunref(fitems);
+	}
 }
 
 struct form_item *DTSPanel::create_new_fitem(void *widget, enum widget_type type, const char *name, const char *value, const char *value2, void *data, enum form_data_type dtype) {
