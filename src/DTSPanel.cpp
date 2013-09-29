@@ -94,8 +94,16 @@ DTSPanelEvent::DTSPanelEvent(DTSObject *win) {
 	parent = win;
 }
 
+DTSPanelEvent::~DTSPanelEvent() {
+	if (data) {
+		objunref(data);
+	}
+}
+
 void DTSPanelEvent::SetCallback(event_callback ev_cb, void *userdata) {
-	data = userdata;
+	if (userdata && objref(userdata)) {
+		data = userdata;
+	}
 	evcb = ev_cb;
 }
 
@@ -116,13 +124,14 @@ void DTSPanelEvent::OnButton(wxCommandEvent &event) {
 		}
 	}
 
+	parent->EventHandler(eid, &event);
+
 	if (evcb) {
 		etype = event.GetEventType();
 		evcb((void *)parent, etype, eid, data);
+	} else {
+		event.Skip(true);
 	}
-
-	parent->EventHandler(eid, &event);
-	event.Skip();
 }
 
 void DTSPanelEvent::OnDialog(wxCommandEvent &event) {

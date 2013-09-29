@@ -61,6 +61,7 @@ class DTSTreeWindow: public DTSObject, public virtual wxSplitterWindow {
 		wxWindow *SetWindow(wxWindow *window);
 		wxWindow *GetClientPane();
 		void SetPaneTitle(const wxString value);
+		void Select(const wxDataViewItem& item);
 	private:
 		wxScrolledWindow *t_pane;
 		wxWindow *c_pane;

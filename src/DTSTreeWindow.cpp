@@ -473,9 +473,7 @@ bool DTSTreeWindow::Show(bool show) {
 			model = tree->GetStore();
 			ds = model->GetRoot();
 			root = wxDataViewItem(ds);
-			tree->Select(root);
-			tree->Expand(root);
-			dtsevthandler->TreeCallback(root, DTSGUI_TREE_CB_SELECT);
+			Select(root);
 			beenshown = true;
 		}
 
@@ -488,6 +486,17 @@ bool DTSTreeWindow::Show(bool show) {
 
 wxWindow *DTSTreeWindow::GetClientPane() {
 	return a_window;
+}
+
+void DTSTreeWindow::Select(const wxDataViewItem& item) {
+	if (vm->IsContainer(item)) {
+		tree->Expand(item);
+	}
+	tree->Select(item);
+
+	wxDataViewEvent event(wxEVT_DATAVIEW_SELECTION_CHANGED, -1);
+	event.SetItem(item);
+	tree->ProcessWindowEvent(event);
 }
 
 DTSTabWindow::DTSTabWindow(DTSFrame *frame, wxString stat_msg)

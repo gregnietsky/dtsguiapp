@@ -338,7 +338,7 @@ dtsgui_pane dtsgui_treepane_defalt(dtsgui_treeview self, dtsgui_treenode node) {
 	int nodeid;
 	const char *title = strdup(ls->GetTitle().ToUTF8());
 
-	nodeid = dtsgui_treenodeid(self, node);
+	nodeid = ls->GetNodeID();
 
 	if (nodeid == -1) {
 		p = dtsgui_treepane(self, NULL, 0, NULL, NULL);
@@ -810,47 +810,6 @@ extern struct xml_doc *dtsgui_loadxmlurl(struct dtsgui *dtsgui, const char *user
 	return xmldoc;
 }
 
-extern void dtsgui_item_xmlcreate(dtsgui_pane pane, const char *path, const char *node, const char *attr) {
-		struct bucket_list *il;
-		struct bucket_loop *bl;
-		struct form_item *fi;
-		struct xml_node *xn;
-		struct xml_doc *xmldoc;
-		DTSPanel *p = (DTSPanel*)pane;
-		wxWindow *w;
-		void *data;
-		char *xpath;
-		int len;
-
-		if (!(xmldoc = p->GetXMLDoc())) {
-			return;
-		}
-
-		il = dtsgui_panel_items(pane);
-		bl = init_bucket_loop(il);
-		while(il && bl && (fi = (struct form_item *)next_bucket_loop(bl))) {
-			if (strlen(fi->name) && !(data = fi->data.xml)) {
-				if ((xn = xml_addnode(xmldoc, path, node, "", attr, fi->name))) {
-					len = strlen(fi->name)+strlen(path)+strlen(node)+strlen(attr)+10;
-					xpath = (char*)malloc(len);
-					snprintf(xpath, len, "%s/%s[@%s = '%s']", path, node, attr, fi->name);
-					if ((fi->data.xml = p->GetNode(xpath, NULL, NULL, NULL, NULL))) {
-						fi->dtype = DTSGUI_FORM_DATA_XML;
-						w = (wxWindow*)fi->widget;
-						w->Enable(true);
-					}
-					free(xpath);
-					objunref(xn);
-				}
-			}
-			objunref(fi);
-		}
-		stop_bucket_loop(bl);
-		objunref(il);
-		objunref(xmldoc);
-}
-
-
 void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text) {
 	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
 	char *newtitle;
@@ -1000,40 +959,28 @@ struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *
 	return xn;
 }
 
-int dtsgui_treenodeid(dtsgui_treeview tv, dtsgui_treenode tn) {
-	wxDataViewItem item = wxDataViewItem(tn);
-	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
-	DTSDVMListView *store;
+int dtsgui_treenodeid(dtsgui_treenode tn) {
+	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
 
-	store = tree->GetStore();
-	return store->GetNodeID(item);
+	return ls->GetNodeID();
 }
 
-void dtsgui_treenodesetxml(dtsgui_treeview tv, dtsgui_treenode tn,struct xml_node *xn, const char *tattr) {
-	wxDataViewItem item = wxDataViewItem(tn);
-	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
-	DTSDVMListView *store;
+void dtsgui_treenodesetxml(dtsgui_treenode tn,struct xml_node *xn, const char *tattr) {
+	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
 
-	store = tree->GetStore();
-	return store->SetXMLData(item, xn, tattr);
+	return ls->SetXMLData(xn, tattr);
 }
 
-struct xml_node *dtsgui_treenodegetxml(dtsgui_treeview tv, dtsgui_treenode tn, char **buf) {
-	wxDataViewItem item = wxDataViewItem(tn);
-	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
-	DTSDVMListView *store;
+struct xml_node *dtsgui_treenodegetxml(dtsgui_treenode tn, char **buf) {
+	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
 
-	store = tree->GetStore();
-	return store->GetXMLData(item, buf);
+	return ls->GetXMLData(buf);
 }
 
-void *dtsgui_treenodegetdata(dtsgui_treeview tv, dtsgui_treenode tn) {
-	wxDataViewItem item = wxDataViewItem(tn);
-	DTSDVMCtrl *tree = (DTSDVMCtrl*)tv;
-	DTSDVMListView *store;
+void *dtsgui_treenodegetdata(dtsgui_treenode tn) {
+	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
 
-	store = tree->GetStore();
-	return store->GetUserData(item);
+	return ls->GetUserData();
 }
 
 const char *dtsgui_treenodeparent(dtsgui_treenode tn) {
@@ -1061,6 +1008,7 @@ static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *
 	DTSTreeWindow *tw = (DTSTreeWindow*)nn->tv;
 	DTSDVMCtrl *tree = tw->GetTreeCtrl();
 	wxDataViewItem parent;
+	wxDataViewItem item;
 	struct xml_node *xn;
 	const char *name;
 	dtsgui_treenode tn;
@@ -1086,7 +1034,7 @@ static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *
 	} else {
 		tn = dtsgui_treeitem(nn->tv, nn->tn, name, nn->flags & DTS_TREE_NEW_NODE_EDIT, nn->flags & DTS_TREE_NEW_NODE_SORT, nn->flags & DTS_TREE_NEW_NODE_DELETE, nn->type, nn->p_cb, nn->data);
 	}
-	dtsgui_treenodesetxml(nn->tv, tn, xn, nn->tattr);
+	dtsgui_treenodesetxml(tn, xn, nn->tattr);
 
 	parent = wxDataViewItem(nn->tn);
 	if (!tree->IsExpanded(parent)) {
@@ -1096,6 +1044,8 @@ static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *
 	if (nn->node_cb) {
 		nn->node_cb(nn->tv, tn, xn, nn->data);
 	}
+	item = wxDataViewItem(tn);
+	tw->Select(item);
 }
 
 static void free_tree_newnode(void *data) {
@@ -1112,6 +1062,9 @@ static void free_tree_newnode(void *data) {
 	}
 	if (nn->tattr) {
 		free((void*)nn->tattr);
+	}
+	if (nn->data) {
+		objunref(nn->data);
 	}
 }
 
@@ -1136,6 +1089,7 @@ void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode 
 	nn->p_cb = p_cb;
 
 	dtsgui_setevcallback(p, dtsgui_handle_newtreenode, nn);
+	objunref(nn);
 }
 
 void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *title) {
