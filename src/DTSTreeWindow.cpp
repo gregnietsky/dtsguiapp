@@ -256,7 +256,7 @@ void DTSTreeWindowEvent::TreeCallback(const wxDataViewItem item, enum tree_cbtyp
 	if (sp) {
 		ndata->ConfigPanel(sp, parent);
 		w = sp->GetPanel();
-		op = parent->SetWindow(w);
+		op = parent->SetWindow(w, item);
 		delete op;
 	}
 
@@ -264,6 +264,24 @@ void DTSTreeWindowEvent::TreeCallback(const wxDataViewItem item, enum tree_cbtyp
 		objunref(tdata);
 	}
 
+}
+
+void DTSTreeWindowEvent::OnButton(wxCommandEvent &event) {
+	dtsgui_treenode tn = parent->GetActiveNode();
+	wxDataViewItem item;
+	int eid = event.GetId();
+
+	switch(eid) {
+		case wx_PANEL_BUTTON_YES:
+			break;
+		case wx_PANEL_BUTTON_NO:
+			item = wxDataViewItem(tn);
+			parent->Select(item);
+			return;
+		default:
+			break;
+	}
+	event.Skip();
 }
 
 void free_menu(void *data) {
@@ -347,7 +365,8 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 	frame->Bind(wxEVT_DATAVIEW_ITEM_BEGIN_DRAG, &DTSTreeWindowEvent::TreeEvent, dtsevthandler);
 	tree->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSTreeWindowEvent::MenuEvent, dtsevthandler);
 	sw->Bind(wxEVT_SPLITTER_SASH_POS_CHANGED, &DTSTreeWindowEvent::SplitterEvent, dtsevthandler);
-
+	sw->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &DTSTreeWindowEvent::OnButton, dtsevthandler);
+//	sw->Bind(wxEVT_TEXT_ENTER, &DTSTreeWindowEvent::OnButton, dtsevthandler);
 	tree->EnableDragSource(wxDF_UNICODETEXT);
 	tree->EnableDropTarget(wxDF_UNICODETEXT);
 
@@ -405,7 +424,11 @@ void DTSTreeWindow::SetPaneTitle(const wxString value) {
 	TreeResize();
 }
 
-wxWindow *DTSTreeWindow::SetWindow(wxWindow *window) {
+dtsgui_treenode DTSTreeWindow::GetActiveNode() {
+	return a_node;
+}
+
+wxWindow *DTSTreeWindow::SetWindow(wxWindow *window, const wxDataViewItem& item) {
 	wxWindow *oldwin;
 
 	if (!window || (window == a_window)) {
@@ -418,11 +441,10 @@ wxWindow *DTSTreeWindow::SetWindow(wxWindow *window) {
 
 	ReplaceWindow(a_window, window);
 	a_window = window;
+	a_node = item.GetID();
 	window->Show(true);
 	window->Layout();
 	window->FitInside();
-//	UpdateSize();
-
 	return oldwin;
 }
 

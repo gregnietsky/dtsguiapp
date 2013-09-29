@@ -123,12 +123,15 @@ void DTSPanelEvent::OnButton(wxCommandEvent &event) {
 			break;
 		}
 	}
+	event.SetId(eid);
 
 	parent->EventHandler(eid, &event);
 
 	if (evcb) {
 		etype = event.GetEventType();
-		evcb((void *)parent, etype, eid, data);
+		if (evcb((void *)parent, etype, eid, data)) {
+			event.Skip(true);
+		}
 	} else {
 		event.Skip(true);
 	}

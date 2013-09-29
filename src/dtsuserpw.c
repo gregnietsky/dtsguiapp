@@ -26,12 +26,12 @@
 #include "dtsgui.h"
 
 
-void pwevent(dtsgui_pane p, int type, int event, void *data) {
+int pwevent(dtsgui_pane p, int type, int event, void *data) {
 	struct basic_auth *auth;
 
 	if (event == wx_PANEL_BUTTON_YES) {
 		if (!(auth = dtsgui_paneldata(p))) {
-			return;
+			return 0;
 		}
 		if (auth->user) {
 			free((void*)auth->user);
@@ -47,6 +47,7 @@ void pwevent(dtsgui_pane p, int type, int event, void *data) {
 		auth->passwd = dtsgui_findvalue(p, "pwd");
 		objunref(auth);
 	}
+	return 0;
 }
 
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd, void *data) {

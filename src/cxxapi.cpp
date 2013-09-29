@@ -435,7 +435,7 @@ extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *n
 		value = getxmlvalue(xml);
 	}
 
-	p->TextBox(title, name, value, wxTE_LEFT, 1, xml,  DTSGUI_FORM_DATA_XML);
+	p->TextBox(title, name, value, wxTE_LEFT | wxTE_PROCESS_ENTER, 1, xml,  DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
@@ -467,7 +467,7 @@ extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char 
 		value = getxmlvalue(xml);
 	}
 
-	p->TextBox(title, name, value, wxTE_PASSWORD, 1, xml, DTSGUI_FORM_DATA_XML);
+	p->TextBox(title, name, value, wxTE_PASSWORD | wxTE_PROCESS_ENTER, 1, xml, DTSGUI_FORM_DATA_XML);
 
 	if (value) {
 		free((void*)value);
@@ -603,12 +603,6 @@ struct bucket_list *dtsgui_panel_items(dtsgui_pane pane) {
 	DTSDialog *p = (DTSDialog *)pane;
 	return p->GetItems();
 }
-
-/*struct form_item *dtsgui_panel_getname(dtsgui_pane pane, const char *name) {
-	DTSDialog *p = (DTSDialog *)pane;
-	struct bucket_list *bl = p->GetItems();
-	return (struct form_item *)bucket_list_find_key(bl, name);
-}*/
 
 extern void *dtsgui_item_data(struct form_item *fi) {
 	if (fi && fi->data.ptr) {
@@ -1003,7 +997,7 @@ const char *dtsgui_treenodeparent(dtsgui_treenode tn) {
 	return val;
 }
 
-static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *data) {
+static int dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *data) {
 	struct tree_newnode *nn = (struct tree_newnode*)data;
 	DTSTreeWindow *tw = (DTSTreeWindow*)nn->tv;
 	DTSDVMCtrl *tree = tw->GetTreeCtrl();
@@ -1017,11 +1011,11 @@ static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *
 		case wx_PANEL_BUTTON_YES:
 			break;
 		default:
-			return;
+			return 1;
 	}
 
 	if (!nn || !(xn = dtsgui_panetoxml(p, nn->xpath, nn->node, nn->vitem, nn->tattr))) {
-		return;
+		return 1;
 	}
 
 	if (nn->tattr) {
@@ -1046,6 +1040,7 @@ static void dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *
 	}
 	item = wxDataViewItem(tn);
 	tw->Select(item);
+	return 0;
 }
 
 static void free_tree_newnode(void *data) {

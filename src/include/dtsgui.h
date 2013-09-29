@@ -51,7 +51,7 @@ enum tree_cbtype {
 
 /*callbacks*/
 typedef int (*dtsgui_configcb)(struct dtsgui*, void*);
-typedef void (*event_callback)(dtsgui_pane, int, int, void *);
+typedef int (*event_callback)(dtsgui_pane, int, int, void *);
 typedef dtsgui_pane (*dtsgui_dynpanel)(struct dtsgui*, const char*, void*);
 typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_treenode, enum tree_cbtype cb_type, const char*, void*);
 typedef void (*dtsgui_xmltreenode_cb)(dtsgui_treeview, dtsgui_treenode, struct xml_node*, void*);
