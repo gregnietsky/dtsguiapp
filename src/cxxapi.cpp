@@ -315,11 +315,10 @@ extern dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *titl
 	return tw;
 }
 
-extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title) {
+extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title, void *data) {
 	DTSTabWindow *tw;
 	DTSFrame *frame = (DTSFrame *)dtsgui->appframe;
-
-	tw = new DTSTabWindow(frame, title);
+	tw = new DTSTabWindow(frame, title, data);
 	return tw;
 }
 

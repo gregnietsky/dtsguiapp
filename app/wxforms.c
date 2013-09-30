@@ -109,31 +109,23 @@ int open_config(struct dtsgui *dtsgui, void *data) {
 	}
 
 
-	pb = dtsgui_progress_start(dtsgui, "Opening Config File", 5, 0);
+	pb = dtsgui_progress_start(dtsgui, "Opening Config File", 8, 0);
 	dtsgui_reconfig(dtsgui);
 
 	dtsgui_progress_update(pb, 1, NULL);
 	dtsgui_createdyn(dtsgui, appdata->pbx_cfg);
-	dtsgui_progress_update(pb, 2, NULL);
-	dtsgui_createdyn(dtsgui, appdata->main_cfg);
 	dtsgui_progress_update(pb, 3, NULL);
+	dtsgui_createdyn(dtsgui, appdata->main_cfg);
+	dtsgui_progress_update(pb, 5, NULL);
 	dtsgui_createdyn(dtsgui, appdata->net_cfg);
-	dtsgui_progress_update(pb, 4, NULL);
-
-/*	for(i=0; i < 10000;i++ ){
-		printf("%p %p %p %i\n", appdata->pbx_cfg, appdata->main_cfg, appdata->net_cfg, i);
-		if (appdata->pbx_cfg && appdata->main_cfg && appdata->net_cfg) {
-			break;
-		}
-		usleep(2000);
-	}*/
+	dtsgui_progress_update(pb, 7, NULL);
 
 	dtsgui_menuitemenable(appdata->e_wiz, 0);
 	dtsgui_menuitemenable(appdata->n_wiz, 0);
 	dtsgui_menuitemenable(appdata->c_open, 0);
 	dtsgui_menuenable(appdata->cfg_menu, 1);
 	dtsgui_titleappend(dtsgui, filename);
-	dtsgui_progress_update(pb, 5, NULL);
+	dtsgui_progress_update(pb, 8, NULL);
 	dtsgui_progress_end(pb);
 	return 1;
 }
