@@ -575,6 +575,50 @@ void DTSTabWindowEvent::PageChanged(wxBookCtrlEvent &event) {
 	}
 }
 
+
+DTSTABPane::DTSTABPane(DTSTabWindow *tw, DTSPanel *p) {
+	nb = static_cast<wxBookCtrlBase*>(tw);
+	client = NULL;
+
+	w = new wxWindow(nb, wxID_ANY);
+	sizer = new wxBoxSizer(wxHORIZONTAL);
+	w->SetSizer(sizer);
+	nb->AddPage(w, p->GetName());
+
+	SetTABPane(p);
+	sizer->FitInside(nb);
+}
+
+DTSTABPane::~DTSTABPane() {
+}
+
+DTSPanel *DTSTABPane::SetTABPane(DTSPanel *p) {
+	DTSPanel *op;
+	wxWindow *wp = p->GetPanel();
+
+	if (!p || p == client) {
+		return NULL;
+	}
+
+	if (client) {
+		sizer->Detach(0);
+		client->Show(false);
+	}
+
+	wp->Reparent(w);
+	p->Show(true);
+
+	sizer->Add(wp, 1, wxALL | wxEXPAND);
+	sizer->Layout();
+
+	wp->FitInside();
+	wp->Layout();
+
+	op = client;
+	client = p;
+	return op;
+}
+
 DTSTabWindow::DTSTabWindow(DTSFrame *frame, wxString stat_msg, void *u_data)
 	:wxNotebook((wxWindow*)frame, -1),
 	DTSObject(stat_msg) {

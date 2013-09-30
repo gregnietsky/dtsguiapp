@@ -325,9 +325,9 @@ extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title,
 extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc) {
 	DTSScrollPanel *dp = NULL;
 	DTSTabWindow *tw = (DTSTabWindow*)tv;
-	wxBookCtrlBase *parent = dynamic_cast<wxBookCtrlBase*>(tw);
+	DTSFrame *f = tw->GetFrame();
 
-	dp = new DTSScrollPanel(parent, tw->GetFrame(), name, butmask);
+	dp = new DTSScrollPanel(f, f, name, butmask);
 	dp->type = wx_DTSPANEL_TAB;
 
 	if (name) {
@@ -343,11 +343,7 @@ extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int bu
 void dtsgui_addtabpage(dtsgui_tabview tv, dtsgui_pane p) {
 	DTSPanel *dp = (DTSPanel*)p;
 	DTSTabWindow *tw = (DTSTabWindow*)tv;
-	wxBookCtrlBase *parent = static_cast<wxBookCtrlBase*>(tw);
-	wxWindow *nw;
-
-	nw = dp->GetPanel();
-	parent->AddPage(nw, dp->GetName());
+	new DTSTABPane(tw, dp);
 }
 
 extern dtsgui_pane dtsgui_treepane(dtsgui_treeview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc) {

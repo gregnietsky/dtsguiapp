@@ -87,6 +87,18 @@ class DTSTabWindowEvent: public wxEvtHandler {
 		DTSTabWindow *tw;
 };
 
+class DTSTABPane {
+	public:
+		DTSTABPane(DTSTabWindow *tw, DTSPanel *p);
+		~DTSTABPane();
+		DTSPanel *SetTABPane(DTSPanel *p);
+	private:
+		wxBoxSizer *sizer;
+		DTSPanel *client;
+		wxBookCtrlBase *nb;
+		wxWindow *w;
+};
+
 class DTSTabWindow: public DTSObject, public virtual wxNotebook {
 	public:
 		DTSTabWindow(DTSFrame *frame = NULL, wxString stat_msg = wxEmptyString, void *u_data = NULL);
