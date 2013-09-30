@@ -532,16 +532,42 @@ DTSTabWindow::DTSTabWindow(DTSFrame *frame, wxString stat_msg)
 	:wxNotebook((wxWindow*)frame, -1),
 	DTSObject(stat_msg) {
 
+	wxBoxSizer *p_sizer = new wxBoxSizer(wxHORIZONTAL);
 	wxNotebook *nb = static_cast<wxNotebook*>(this);
+	p_sizer->Add(nb);
 
 	panel = static_cast<wxWindow *>(nb);
+
+	p_sizer->FitInside(frame);
+	p_sizer->Layout();
+
 	type = wx_DTSPANEL_TAB;
 	this->frame = frame;
+	Show(false);
 }
 
 bool DTSTabWindow::Show(bool show) {
+	wxWindow *w;
+	int i, cnt;
+
+
 	if (show && frame) {
 		frame->SetStatusText(status);
 	}
+
+	if (!beenshown && show) {
+		cnt = GetPageCount();
+		for(i = 0; i < cnt;i++) {
+			w = GetPage(i);
+			w->Show(true);
+#ifdef __WIN32
+			if (i) {
+				w->Show(false);
+			}
+#endif // __WIN32
+		}
+		beenshown = true;
+	}
+
 	return wxNotebook::Show(show);
 }

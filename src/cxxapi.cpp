@@ -342,6 +342,7 @@ extern dtsgui_pane dtsgui_addpage(dtsgui_tabview tv, const char *name, int butma
 
 	np = dynamic_cast<wxPanel*>(dp);
 	parent->AddPage(np, name);
+
 	return dp;
 }
 
@@ -387,19 +388,6 @@ dtsgui_pane dtsgui_treepane_defalt(dtsgui_treeview self, dtsgui_treenode node) {
 		free((void*)title);
 	}
 	return p;
-}
-
-extern void dtsgui_showpanel(dtsgui_pane pane, int act) {
-	DTSPanel *dp = (DTSPanel*)pane;
-
-	dp->Show(true);
-
-
-#ifdef _WIN32
-	if (!act) {
-		dp->Show(false);
-	}
-#endif
 }
 
 extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {

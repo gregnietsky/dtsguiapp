@@ -31,9 +31,8 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	struct xml_search *xp;
 	struct xml_node *xn;
 	const char *name;
-	dtsgui_pane **pa;
+	dtsgui_pane *p;
 	void *iter = NULL;
-	int i = 0, j;
 
 	appdata = dtsgui_userdata(dtsgui);
 	xmldoc = appdata->xmldoc;
@@ -42,22 +41,13 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	}
 
 	tabv = dtsgui_tabwindow(dtsgui, title);
-	pa = calloc(xml_nodecount(xp)+1, sizeof(dtsgui_pane));
 
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		name = xml_getattr(xn, "name");
-		pa[i] = dtsgui_addpage(tabv, name, wx_PANEL_BUTTON_ACTION, NULL, xmldoc);
-		network_iface_pane(pa[i], xn->value);
-		dtsgui_setevcallback(pa[i], NULL, NULL);
-		i++;
+		p = dtsgui_addpage(tabv, name, wx_PANEL_BUTTON_ACTION, NULL, xmldoc);
+		network_iface_pane(p, xn->value);
 		objunref(xn);
 	}
-
-	for(j=0; j < i;j++) {
-		dtsgui_showpanel(pa[j], !j);
-	}
-
-	free(pa);
 
 	if (iter) {
 		objunref(iter);

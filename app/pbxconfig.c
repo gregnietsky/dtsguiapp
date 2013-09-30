@@ -311,11 +311,5 @@ dtsgui_pane pbx_settings(struct dtsgui *dtsgui, const char *title, void *data) {
 
 	dtsgui_setevcallback(dp[10], NULL, &dp);
 
-	cnt = sizeof(dp)/sizeof(dp[0]);
-
-	for(i = 0; i < cnt;i++) {
-		dtsgui_showpanel(dp[i], !i);
-	}
-
 	return tabv;
 }
