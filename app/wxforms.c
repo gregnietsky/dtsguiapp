@@ -95,7 +95,7 @@ int post_test(struct dtsgui *dtsgui, void *data) {
 int open_config(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata;
 	const char *filename;
-/*	int i;*/
+	dtsgui_progress pb;
 
 	appdata = dtsgui_userdata(dtsgui);
 
@@ -108,11 +108,17 @@ int open_config(struct dtsgui *dtsgui, void *data) {
 		return 0;
 	}
 
+
+	pb = dtsgui_progress_start(dtsgui, "Opening Config File", 5, 0);
 	dtsgui_reconfig(dtsgui);
 
+	dtsgui_progress_update(pb, 1, NULL);
 	dtsgui_createdyn(dtsgui, appdata->pbx_cfg);
+	dtsgui_progress_update(pb, 2, NULL);
 	dtsgui_createdyn(dtsgui, appdata->main_cfg);
+	dtsgui_progress_update(pb, 3, NULL);
 	dtsgui_createdyn(dtsgui, appdata->net_cfg);
+	dtsgui_progress_update(pb, 4, NULL);
 
 /*	for(i=0; i < 10000;i++ ){
 		printf("%p %p %p %i\n", appdata->pbx_cfg, appdata->main_cfg, appdata->net_cfg, i);
@@ -127,6 +133,8 @@ int open_config(struct dtsgui *dtsgui, void *data) {
 	dtsgui_menuitemenable(appdata->c_open, 0);
 	dtsgui_menuenable(appdata->cfg_menu, 1);
 	dtsgui_titleappend(dtsgui, filename);
+	dtsgui_progress_update(pb, 5, NULL);
+	dtsgui_progress_end(pb);
 	return 1;
 }
 

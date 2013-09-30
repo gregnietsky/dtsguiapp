@@ -189,7 +189,7 @@ struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *da
 int dtsgui_confirm(struct dtsgui *dtsgui, const char *text);
 void dtsgui_alert(struct dtsgui *dtsgui, const char *text);
 
-dtsgui_progress dtsgui_progress_start(struct dtsgui *dtsgui, const char *text, int maxval);
+dtsgui_progress dtsgui_progress_start(struct dtsgui *dtsgui, const char *text, int maxval, int quit);
 int dtsgui_progress_update(dtsgui_progress pdlg, int newval, const char* newtext);
 void dtsgui_progress_end(dtsgui_progress pdlg);
 
