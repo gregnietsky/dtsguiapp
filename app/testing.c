@@ -92,7 +92,7 @@ int progress_test(struct dtsgui *dtsgui, void *data) {
 		Sleep(1000);
 #else
 		sleep(1);
-#endif // __WIN32
+#endif
 	}
 	dtsgui_progress_end(pdlg);
 	return 1;
