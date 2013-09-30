@@ -44,8 +44,9 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		name = xml_getattr(xn, "name");
-		p = dtsgui_addpage(tabv, name, wx_PANEL_BUTTON_ACTION, NULL, xmldoc);
+		p = dtsgui_newtabpage(tabv, name, wx_PANEL_BUTTON_ACTION, NULL, xmldoc);
 		network_iface_pane(p, xn->value);
+		dtsgui_addtabpage(tabv, p);
 		objunref(xn);
 	}
 
