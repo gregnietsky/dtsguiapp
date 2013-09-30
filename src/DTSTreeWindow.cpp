@@ -546,6 +546,7 @@ void DTSTabWindowEvent::PageChanged(wxBookCtrlEvent &event) {
 		w = tw->GetPage(p);
 		w->FitInside();
 		w->Layout();
+		w->Refresh();
 	}
 }
 
