@@ -158,8 +158,6 @@ dtsgui_pane view_config_conf(struct dtsgui *dtsgui, void *data) {
 	void *xmlbuf;
 
 	appdata = dtsgui_userdata(dtsgui);
-
-	appdata = dtsgui_userdata(dtsgui);
 	xmldoc = appdata->xmldoc;
 
 	snprintf(xsltfile, PATH_MAX-1, "%s/xml2conf.xsl", appdata->datadir);
@@ -179,6 +177,35 @@ dtsgui_pane view_config_conf(struct dtsgui *dtsgui, void *data) {
 	objunref(xsltdoc);
 	objunref(xmlbuf);
 	return p;
+}
+
+dtsgui_pane export_config(struct dtsgui *dtsgui, void *data) {
+	struct app_data *appdata;
+	struct xml_doc *xmldoc;
+	struct xslt_doc *xsltdoc;
+	char xsltfile[PATH_MAX];
+	const char *newfile;
+
+	appdata = dtsgui_userdata(dtsgui);
+	xmldoc = appdata->xmldoc;
+
+	snprintf(xsltfile, PATH_MAX-1, "%s/xml2conf.xsl", appdata->datadir);
+	if (!is_file(xsltfile)) {
+		dtsgui_alert(dtsgui, "XSLT Transform Not Found");
+		return NULL;
+	}
+
+	if (!(xsltdoc = xslt_open(xsltfile))) {
+		dtsgui_alert(dtsgui, "XSLT Open Failed");
+		return NULL;
+	}
+
+	newfile = dtsgui_filesave(dtsgui, "Export Config To File", NULL, "firewall.conf", "System Configuration (.conf)|*.conf");
+	if (newfile) {
+		xslt_apply(xmldoc, xsltdoc, newfile, 0);
+	}
+
+	return NULL;
 }
 
 void file_menu(struct dtsgui *dtsgui) {
@@ -227,7 +254,8 @@ void config_menu(struct dtsgui *dtsgui) {
 	}
 
 	dtsgui_menusep(appdata->cfg_menu);
-	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&Save Config", "Save/Close System Config (File/URL)", save_config, NULL);
+	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&Save And Close Config", "Save/Close System Config (File/URL)", save_config, NULL);
+	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "E&xport Config", "Export Configuration as a .conf file", export_config, NULL);
 
 	dtsgui_menusep(appdata->cfg_menu);
 	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&View Config (XML)", "View Current Config File In XML Format.", view_config_xml, NULL);
