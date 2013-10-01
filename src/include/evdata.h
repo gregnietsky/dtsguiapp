@@ -28,10 +28,10 @@ struct dynamic_panel {
 
 class evdata :public wxObject {
 	public:
-		evdata(void* = NULL, dtsgui_configcb cb = NULL, int uref = 0);
+		evdata(void* = NULL, dtsgui_menucb cb = NULL, int uref = 0);
 		~evdata();
 		void *data;
-		dtsgui_configcb callback;
+		dtsgui_menucb callback;
 	private:
 		int unref;
 };

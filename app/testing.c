@@ -79,7 +79,7 @@ void testpanel(dtsgui_pane p) {
 	objunref(l);
 }
 
-int progress_test(struct dtsgui *dtsgui, void *data) {
+dtsgui_pane progress_test(struct dtsgui *dtsgui, void *data) {
 	dtsgui_progress pdlg;
 	int i;
 
@@ -95,7 +95,7 @@ int progress_test(struct dtsgui *dtsgui, void *data) {
 #endif
 	}
 	dtsgui_progress_end(pdlg);
-	return 1;
+	return NULL;
 }
 
 void test_menu(struct dtsgui *dtsgui) {

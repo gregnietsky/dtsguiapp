@@ -167,7 +167,7 @@ dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, c
 	return mi;
 }
 
-dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *label, dtsgui_configcb cb, void *data) {
+dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *label, dtsgui_menucb cb, void *data) {
 	wxMenu *m = (wxMenu *)dtsmenu;
 	DTSFrame *frame = (DTSFrame *)dtsgui->appframe;
 	wxMenuItem *mi;
@@ -879,7 +879,7 @@ void dtsgui_menuenable(dtsgui_menu dm, int enable) {
 	}
 }
 
-void dtsgui_setblank(struct dtsgui *dtsgui) {
+void dtsgui_setwindow(struct dtsgui *dtsgui, dtsgui_pane p) {
 	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
 	f->SetWindow(NULL);
 }

@@ -24,7 +24,7 @@
 #include "dtsgui.h"
 #include "evdata.h"
 
-evdata::evdata(void *userdata, dtsgui_configcb cb, int uref) {
+evdata::evdata(void *userdata, dtsgui_menucb cb, int uref) {
 	if (userdata && uref) {
 		data = (objref(userdata)) ? userdata : NULL;
 	} else {

@@ -86,25 +86,25 @@ void xml_config(struct xml_doc *xmldoc) {
 	objunref(xmlbuf);
 }
 
-int post_test(struct dtsgui *dtsgui, void *data) {
+dtsgui_pane post_test(struct dtsgui *dtsgui, void *data) {
 	test_posturl(dtsgui, NULL, NULL, "https://sip1.speakezi.co.za:666/auth/test.php");
 
-	return 1;
+	return NULL;
 }
 
-int open_config(struct dtsgui *dtsgui, void *data) {
+dtsgui_pane open_config(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata;
 	const char *filename;
 
 	appdata = dtsgui_userdata(dtsgui);
 
 	if (!(filename = dtsgui_fileopen(dtsgui, "Select Customer Configuration To Open", NULL, "", "XML Configuration|*.xml"))) {
-		return 0;
+		return NULL;
 	}
 
 	if (!(appdata->xmldoc = xml_loaddoc(filename, 1	))) {
 		dtsgui_alert(dtsgui, "Configuration failed to load.\n");
-		return 0;
+		return NULL;
 	}
 
 	dtsgui_reconfig(dtsgui);
@@ -114,10 +114,10 @@ int open_config(struct dtsgui *dtsgui, void *data) {
 	dtsgui_menuitemenable(appdata->c_open, 0);
 	dtsgui_menuenable(appdata->cfg_menu, 1);
 	dtsgui_titleappend(dtsgui, filename);
-	return 1;
+	return NULL;
 }
 
-int save_config(struct dtsgui *dtsgui, void *data) {
+dtsgui_pane save_config(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata;
 
 	appdata = dtsgui_userdata(dtsgui);
@@ -129,7 +129,24 @@ int save_config(struct dtsgui *dtsgui, void *data) {
 	dtsgui_titleappend(dtsgui, NULL);
 	objunref(appdata->xmldoc);
 	appdata->xmldoc = NULL;
-	return 1;
+	return NULL;
+}
+
+
+dtsgui_pane view_config_xml(struct dtsgui *dtsgui, void *data) {
+	struct app_data *appdata;
+	struct xml_doc *xmldoc = NULL;
+	dtsgui_pane p;
+	void *xmlbuf;
+
+	appdata = dtsgui_userdata(dtsgui);
+	xmldoc = appdata->xmldoc;
+
+	xmlbuf = xml_doctobuffer(xmldoc);
+	p = dtsgui_textpane(dtsgui, "XML Configuration", xml_getbuffer(xmlbuf));
+	objunref(xmlbuf);
+
+	return p;
 }
 
 void file_menu(struct dtsgui *dtsgui) {
@@ -180,6 +197,10 @@ void config_menu(struct dtsgui *dtsgui) {
 	dtsgui_menusep(appdata->cfg_menu);
 	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&Save Config", "Save/Close System Config (File/URL)", save_config, NULL);
 
+	dtsgui_menusep(appdata->cfg_menu);
+	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&View Config (XML)", "View Current Config File.", view_config_xml, NULL);
+
+	/*initially greyed out*/
 	dtsgui_menuenable(appdata->cfg_menu, 0);
 }
 

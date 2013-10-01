@@ -259,12 +259,15 @@ void DTSFrame::DynamicPanelEvent(wxCommandEvent &event) {
 
 void DTSFrame::RunCommand(wxCommandEvent &event) {
 	class evdata *evdat;
+	DTSObject *p = NULL;
 
 	evdat = (evdata *)event.m_callbackUserData;
 
 	if (evdat->callback) {
 		SetWindow(NULL);
-		evdat->callback(dtsgui, evdat->data);
+		if ((p = (DTSObject*)evdat->callback(dtsgui, evdat->data))) {
+			SetWindow(p->GetPanel());
+		}
 	}
 }
 
