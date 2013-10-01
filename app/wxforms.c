@@ -149,6 +149,38 @@ dtsgui_pane view_config_xml(struct dtsgui *dtsgui, void *data) {
 	return p;
 }
 
+dtsgui_pane view_config_conf(struct dtsgui *dtsgui, void *data) {
+	struct app_data *appdata;
+	struct xml_doc *xmldoc;
+	struct xslt_doc *xsltdoc;
+	dtsgui_pane p = NULL;
+	char xsltfile[PATH_MAX];
+	void *xmlbuf;
+
+	appdata = dtsgui_userdata(dtsgui);
+
+	appdata = dtsgui_userdata(dtsgui);
+	xmldoc = appdata->xmldoc;
+
+	snprintf(xsltfile, PATH_MAX-1, "%s/xml2conf.xsl", appdata->datadir);
+	if (!is_file(xsltfile)) {
+		dtsgui_alert(dtsgui, "XSLT Transform Not Found");
+		return NULL;
+	}
+
+	if (!(xsltdoc = xslt_open(xsltfile))) {
+		dtsgui_alert(dtsgui, "XSLT Open Failed");
+		return NULL;
+	}
+
+	xmlbuf = xslt_apply_buffer(xmldoc, xsltdoc);
+	p = dtsgui_textpane(dtsgui, "Configuration in .conf format", xml_getbuffer(xmlbuf));
+
+	objunref(xsltdoc);
+	objunref(xmlbuf);
+	return p;
+}
+
 void file_menu(struct dtsgui *dtsgui) {
 	dtsgui_menu file;
 	struct app_data *appdata;
@@ -198,7 +230,8 @@ void config_menu(struct dtsgui *dtsgui) {
 	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&Save Config", "Save/Close System Config (File/URL)", save_config, NULL);
 
 	dtsgui_menusep(appdata->cfg_menu);
-	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&View Config (XML)", "View Current Config File.", view_config_xml, NULL);
+	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "&View Config (XML)", "View Current Config File In XML Format.", view_config_xml, NULL);
+	dtsgui_newmenucb(appdata->cfg_menu, dtsgui, "View &Config (CONF)", "View Current Config File Converted to .conf Format.", view_config_conf, NULL);
 
 	/*initially greyed out*/
 	dtsgui_menuenable(appdata->cfg_menu, 0);
