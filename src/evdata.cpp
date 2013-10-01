@@ -18,6 +18,7 @@
 
 #include <stdint.h>
 #include <wx/object.h>
+#include <wx/window.h>
 
 #include <dtsapp.h>
 
@@ -33,6 +34,7 @@ evdata::evdata(void *userdata, dtsgui_menucb cb, int blank, int uref) {
 	this->callback = cb;
 	this->unref = uref;
 	this->blank = blank;
+	this->w = NULL;
 }
 
 evdata::~evdata() {

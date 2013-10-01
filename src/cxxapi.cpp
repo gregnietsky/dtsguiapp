@@ -181,28 +181,17 @@ dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, con
 	return mi;
 }
 
-
-void free_dynamic(void *data) {
-	struct dynamic_panel *dpane = (struct dynamic_panel*)data;
-	DTSObject *p;
-
-	if ((p = (DTSObject*)dpane->panel)) {
-		delete p;
-	}
-}
-
 extern dtsgui_menuitem dtsgui_newmenudyn(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *title, const char *hint, dtsgui_dynpanel cb,void *data, struct dynamic_panel **d_pane) {
 	struct dynamic_panel *p_dyn;
 	wxMenu *m = (wxMenu *)dtsmenu;
 	DTSFrame *frame = (DTSFrame *)dtsgui->appframe;
 	wxMenuItem *mi;
 
-	if (!(p_dyn = (struct dynamic_panel*)objalloc(sizeof(*p_dyn), free_dynamic))) {
+	if (!(p_dyn = (struct dynamic_panel*)objalloc(sizeof(*p_dyn), NULL))) {
 		return NULL;
 	}
 
 	p_dyn->data = data;
-	p_dyn->panel = NULL;
 	ALLOC_CONST(p_dyn->title, title);
 	p_dyn->cb = cb;
 

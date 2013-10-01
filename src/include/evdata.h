@@ -20,7 +20,6 @@
 #define EVDATA_H
 
 struct dynamic_panel {
-	dtsgui_pane panel;
 	dtsgui_dynpanel cb;
 	const char *title;
 	void *data;
@@ -33,6 +32,7 @@ class evdata :public wxObject {
 		void *data;
 		dtsgui_menucb callback;
 		int blank;
+		wxWindow *w;
 	private:
 		int unref;
 };
