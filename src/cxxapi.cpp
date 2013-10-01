@@ -167,21 +167,7 @@ dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, c
 	return mi;
 }
 
-dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *label, int blank, dtsgui_menucb cb, void *data) {
-	wxMenu *m = (wxMenu *)dtsmenu;
-	DTSFrame *frame = (DTSFrame *)dtsgui->appframe;
-	wxMenuItem *mi;
-
-	/*handed over to wx no need to delete*/
-	evdata *ev_data = new evdata(data, cb, blank);
-
-	mi = m->Append(menuid, hint, label);
-	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::RunCommand, frame, menuid, menuid, (wxObject *)ev_data);
-	menuid++;
-	return mi;
-}
-
-extern dtsgui_menuitem dtsgui_newmenudyn(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *title, const char *hint, dtsgui_dynpanel cb,void *data, struct dynamic_panel **d_pane) {
+extern dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *title, int blank, dtsgui_dynpanel cb,void *data) {
 	struct dynamic_panel *p_dyn;
 	wxMenu *m = (wxMenu *)dtsmenu;
 	DTSFrame *frame = (DTSFrame *)dtsgui->appframe;
@@ -190,19 +176,14 @@ extern dtsgui_menuitem dtsgui_newmenudyn(dtsgui_menu dtsmenu, struct dtsgui *dts
 	if (!(p_dyn = (struct dynamic_panel*)objalloc(sizeof(*p_dyn), NULL))) {
 		return NULL;
 	}
-
 	p_dyn->data = data;
 	ALLOC_CONST(p_dyn->title, title);
 	p_dyn->cb = cb;
+	p_dyn->blank = blank;
 
-	/*evdata ref's data*/
-	evdata *ev_data = new evdata(p_dyn, NULL, 0, 1);
-
-	if (d_pane) {
-		*d_pane = p_dyn;
-	} else {
-		objunref(p_dyn);
-	}
+	/*handed over to wx no need to delete*/
+	evdata *ev_data = new evdata(p_dyn, 1);
+	objunref(p_dyn);
 
 	mi = m->Append(menuid, hint, (title) ? title : "");
 	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::DynamicPanelEvent, frame, menuid, menuid, (wxObject *)ev_data);

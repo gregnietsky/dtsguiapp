@@ -66,7 +66,6 @@ DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size
 	blank = new wxWindow(this, -1);
 	sizer->Add(blank, 1, wxALL | wxEXPAND);
 	a_window = blank;
-
 	blank->Show(true);
 
 	abortconfirm = true;
@@ -202,9 +201,9 @@ void DTSFrame::SwitchWindow(wxCommandEvent &event) {
 	wxWindow *window;
 	class evdata *evdat;
 
-	evdat = (evdata *)event.m_callbackUserData;
+	evdat = (evdata*)event.m_callbackUserData;
 
-	if (!evdat || (!(window = (wxWindow *)evdat->data))) {
+	if (!evdat || (!(window = (wxWindow*)evdat->data))) {
 		window = blank;
 	}
 
@@ -216,54 +215,34 @@ void DTSFrame::SwitchWindow(wxCommandEvent &event) {
 void DTSFrame::DynamicPanelEvent(wxCommandEvent &event) {
 	class evdata *evdat;
 	struct dynamic_panel *p_dyn;
-	dtsgui_pane p;
-	DTSObject *dp;
+	DTSObject *p;
 
 	if (!(evdat = (evdata *)event.m_callbackUserData)) {
 		SetWindow(NULL);
 		return;
 	}
 
-	if (evdat->w && (evdat->w == a_window)) {
-		return;
-	}
-
-	if (evdat->w) {
-		delete evdat->w;
-	}
-	evdat->w = NULL;
-
 	if (!evdat->data || !(p_dyn = (struct dynamic_panel*)evdat->data) || !p_dyn->cb ) {
 		SetWindow(NULL);
 		return;
 	}
 
-	if ((p = p_dyn->cb(dtsgui, p_dyn->title, p_dyn->data))) {
-		dp = (DTSObject*)p;
-		evdat->w = dp->GetPanel();
+	if (p_dyn->w == a_window) {
+		return;
 	}
 
-	SetWindow(evdat->w);
-}
+	if (p_dyn->blank) {
+		SetWindow(NULL);
+	}
 
-void DTSFrame::RunCommand(wxCommandEvent &event) {
-	class evdata *evdat;
-	DTSObject *p = NULL;
+	if (p_dyn->w) {
+		delete p_dyn->w;
+		p_dyn->w = NULL;
+	}
 
-	evdat = (evdata*)event.m_callbackUserData;
-
-	if (evdat->callback) {
-		if (evdat->blank || (evdat->w == a_window)) {
-			SetWindow(NULL);
-		}
-		if (evdat->w) {
-			delete evdat->w;
-			evdat->w = NULL;
-		}
-		if ((p = (DTSObject*)evdat->callback(dtsgui, evdat->data))) {
-			evdat->w = p->GetPanel();
-			SetWindow(evdat->w);
-		}
+	if ((p = (DTSObject*)p_dyn->cb(dtsgui, p_dyn->title, p_dyn->data))) {
+		p_dyn->w = p->GetPanel();
+		SetWindow(p_dyn->w);
 	}
 }
 

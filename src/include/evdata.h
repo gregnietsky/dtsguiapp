@@ -23,16 +23,15 @@ struct dynamic_panel {
 	dtsgui_dynpanel cb;
 	const char *title;
 	void *data;
+	int blank;
+	wxWindow *w;
 };
 
 class evdata :public wxObject {
 	public:
-		evdata(void* = NULL, dtsgui_menucb cb = NULL, int blank = 0, int uref = 0);
+		evdata(void*, int uref = 0);
 		~evdata();
 		void *data;
-		dtsgui_menucb callback;
-		int blank;
-		wxWindow *w;
 	private:
 		int unref;
 };
