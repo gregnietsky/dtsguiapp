@@ -264,7 +264,9 @@ void DTSFrame::RunCommand(wxCommandEvent &event) {
 	evdat = (evdata *)event.m_callbackUserData;
 
 	if (evdat->callback) {
-		SetWindow(NULL);
+		if (evdat->blank) {
+			SetWindow(NULL);
+		}
 		if ((p = (DTSObject*)evdat->callback(dtsgui, evdat->data))) {
 			SetWindow(p->GetPanel());
 		}
