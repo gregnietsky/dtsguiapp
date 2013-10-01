@@ -40,6 +40,7 @@ enum node_id {
 	DTS_NODE_NETWORK_ROUTE_NEW,
 	DTS_NODE_NETWORK_ROUTE,
 	DTS_NODE_NETWORK_MODEM,
+	DTS_NODE_NETWORK_MODEM_ADV,
 	DTS_NODE_NETWORK_MODEM_ANA,
 	DTS_NODE_NETWORK_ADSL_LINK_NEW,
 	DTS_NODE_NETWORK_ADSL_LINK,
@@ -84,6 +85,7 @@ void testpanel(dtsgui_pane p);
 /*netconfig.c*/
 dtsgui_pane advanced_config(struct dtsgui *dtsgui, const char *title, void *data);
 void network_iface_pane(dtsgui_pane p, const char *iface);
+void network_iface_new_pane(dtsgui_pane p);
 
 /*iface*/
 dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data);
