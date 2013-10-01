@@ -378,6 +378,8 @@ static int system_wizard(struct dtsgui *dtsgui, void *data, const char *filename
 		} else if (filename) {
 			xml_savefile(xmldoc, filename, 1, 9);
 		}
+	} else {
+		rem_temp_xml(xmldoc);
 	}
 
 	objunref(twiz);
@@ -429,8 +431,12 @@ extern int editsys_wizard(struct dtsgui *dtsgui, void *data) {
 
 extern int reconfig_wizard(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata;
+	struct xml_doc *xmldoc = NULL;
 
 	appdata = dtsgui_userdata(dtsgui);
+	if (appdata->xmldoc && objref(appdata->xmldoc)) {
+		xmldoc = appdata->xmldoc;
+	}
 
-	return system_wizard(dtsgui, data, NULL, appdata->xmldoc, 0);
+	return system_wizard(dtsgui, data, NULL, xmldoc, 0);
 }
