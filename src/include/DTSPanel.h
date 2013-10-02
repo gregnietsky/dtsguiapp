@@ -141,9 +141,10 @@ class DTSTabPage: public DTSScrollPanel {
 		~DTSTabPage();
 		void ConfigPane();
 		virtual bool Show(bool);
+		DTSTabPage &operator=(const DTSTabPage &orig);
+	private:
 		dtsgui_tabpanel_cb cb;
 		void *cdata;
-	private:
 		bool hasconfig;
 };
 

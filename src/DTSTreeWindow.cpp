@@ -560,8 +560,9 @@ DTSTabWindowEvent::~DTSTabWindowEvent() {
 }
 
 void DTSTabWindowEvent::OnButton(wxCommandEvent &event) {
-	DTSTabPage *pane = dynamic_cast<DTSTabPage*>(tw->GetCurrentPage());
-	DTSPanel *d;
+	DTSTabPage *pane = dynamic_cast<DTSTabPage*>(tw->GetCurrentPage()), *newp;
+	wxBookCtrlBase *nb = static_cast<wxBookCtrlBase*>(tw);
+	DTSObject *d;
 	wxWindow *w;
 	int pg;
 	int eid = event.GetId();
@@ -573,16 +574,16 @@ void DTSTabWindowEvent::OnButton(wxCommandEvent &event) {
 		case wx_PANEL_BUTTON_NO:
 			pg = tw->GetSelection();
 
-			d = (DTSPanel*)pane;
+			d = (DTSObject*)pane;
 			tw->RemovePage(pg);
 
-			pane = new DTSTabPage(tw, pane->GetFrame(), d->GetName(), 0, pg, pane->cb, pane->cdata, pane->GetXMLDoc());
-			delete d;
-			pane->ConfigPane();
-			w = pane->GetPanel();
+			newp = new DTSTabPage(tw, d->GetFrame(), d->GetName(), pg);
+			*newp = *pane;
+			nb->InsertPage(pg, newp->GetPanel(), d->GetName(), true);
+			delete pane;
+			w = newp->GetPanel();
 			w->Show();
 			tw->SetSelection(pg);
-
 			return;
 		default:
 			break;
