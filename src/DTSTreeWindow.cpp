@@ -559,6 +559,38 @@ DTSTabWindowEvent::~DTSTabWindowEvent() {
 	}
 }
 
+void DTSTabWindowEvent::OnButton(wxCommandEvent &event) {
+	DTSTabPage *pane = dynamic_cast<DTSTabPage*>(tw->GetCurrentPage());
+	DTSPanel *d;
+	wxWindow *w;
+	int pg;
+	int eid = event.GetId();
+
+	switch(eid) {
+		case wx_PANEL_BUTTON_YES:
+			pane->Update_XML();
+			break;
+		case wx_PANEL_BUTTON_NO:
+			pg = tw->GetSelection();
+
+			d = (DTSPanel*)pane;
+			tw->RemovePage(pg);
+
+			pane = new DTSTabPage(tw, pane->GetFrame(), d->GetName(), 0, pg, pane->cb, pane->cdata, pane->GetXMLDoc());
+			delete d;
+			pane->ConfigPane();
+			w = pane->GetPanel();
+			w->Show();
+			tw->SetSelection(pg);
+
+			return;
+		default:
+			break;
+	}
+	event.Skip(true);
+}
+
+
 void DTSTabWindowEvent::RightMenu(wxCommandEvent &event) {
 	printf("MENU\n");
 }
@@ -652,6 +684,8 @@ bool DTSTabWindow::Show(bool show) {
 		beenshown = true;
 		nb->Bind(wxEVT_NOTEBOOK_PAGE_CHANGING, &DTSTabWindowEvent::PageChange, dtsevt);
 		nb->Bind(wxEVT_NOTEBOOK_PAGE_CHANGED, &DTSTabWindowEvent::PageChanged, dtsevt);
+		nb->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &DTSTabWindowEvent::OnButton, dtsevt);
+
 	}
 	return res;
 }

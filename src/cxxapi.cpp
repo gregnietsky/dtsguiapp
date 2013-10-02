@@ -298,7 +298,7 @@ extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int bu
 	wxBookCtrlBase *nb = static_cast<wxBookCtrlBase*>(tw);
 	DTSFrame *f = tw->GetFrame();
 
-	dp = new DTSTabPage(nb, f, name, butmask, cb, cdata, xmldoc);
+	dp = new DTSTabPage(nb, f, name, butmask, -1, cb, cdata, xmldoc);
 
 	return dp;
 }
