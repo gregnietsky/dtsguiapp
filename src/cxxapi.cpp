@@ -208,37 +208,21 @@ void dtsgui_alert(struct dtsgui *dtsgui, const char *text) {
 	f->Alert(text);
 }
 
-dtsgui_progress dtsgui_progress_start(struct dtsgui *dtsgui, const char *text, int maxval, int quit) {
+int dtsgui_progress_start(struct dtsgui *dtsgui, const char *text, int maxval, int quit) {
 	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
 
 	return f->StartProgress(text, maxval, quit);
 }
 
-int dtsgui_progress_update(dtsgui_progress pdlg, int newval, const char* newtext) {
-	wxProgressDialog *pd = (wxProgressDialog*)pdlg;
-	wxString ntxt;
+int dtsgui_progress_update(struct dtsgui *dtsgui, int newval, const char* newtext) {
+	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
 
-	if (newtext) {
-		ntxt = newtext;
-	} else {
-		ntxt = wxEmptyString;
-	}
-
-	if (pd->Update(newval, ntxt)) {
-		return 1;
-	} else {
-		return 0;
-	}
+	return f->UpdateProgress(newval, newtext);
 }
 
-void dtsgui_progress_end(dtsgui_progress pdlg) {
-	wxProgressDialog *pd = (wxProgressDialog*)pdlg;
-
-	pd->Show(false);
-
-	if (pd) {
-		delete pd;
-	}
+void dtsgui_progress_end(struct dtsgui *dtsgui) {
+	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
+	f->EndProgress();
 }
 
 dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, int butmask,
