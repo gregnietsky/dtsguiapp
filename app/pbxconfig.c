@@ -41,7 +41,7 @@
 #endif
 
 
-void pbxconf_routing(dtsgui_pane pg, void *data) {
+void pbxconf_trunk(dtsgui_pane pg, void *data) {
 	struct listitem trunks[] = {{"Linux Modular ISDN Group 1", "mISDN/g:out/"},
 								{"Linux Modular ISDN Group 2", "mISDN/g:out2/"},
 								{"Linux Modular ISDN Group 3", "mISDN/g:out3/"},
@@ -96,7 +96,6 @@ void pbxconf_routing(dtsgui_pane pg, void *data) {
 		dtsgui_listbox_add(lb, trunks[i].name, trunks[i].value);
 	}
 	objunref(lb);
-
 	lb = dtsgui_xmllistbox(pg, "Level To Route Calls", "IPContext", "/config/IP/VOIP/ASTDB", "Option", "option", "IPContext", NULL);
 	dtsgui_listbox_add(lb, "Local PSTN Calls", "1");
 	dtsgui_listbox_add(lb, "Long Distance PSTN Calls", "2");
@@ -110,9 +109,12 @@ void pbxconf_routing(dtsgui_pane pg, void *data) {
 	dtsgui_listbox_add(lb, "International With Access Code", "2");
 	dtsgui_listbox_add(lb, "International With +", "3");
 	objunref(lb);
-	dtsgui_xmltextbox(pg, "Maximum Concurency On Voip Trunk", "VLIMIT", "/config/IP/VOIP/ASTDB", "Option", "option", "VLIMIT", NULL);
 	dtsgui_xmltextbox(pg, "Prefix Trunk Calls With", "TrunkPre", "/config/IP/VOIP/ASTDB", "Option", "option", "TrunkPre", NULL);
 	dtsgui_xmltextbox(pg, "Number Of Digits To Strip On Trunk", "TrunkStrip", "/config/IP/VOIP/ASTDB", "Option", "option", "TrunkStrip", NULL);
+	dtsgui_xmltextbox(pg, "Maximum Concurency On Voip Trunk", "VLIMIT", "/config/IP/VOIP/ASTDB", "Option", "option", "VLIMIT", NULL);
+}
+
+void pbxconf_topts(dtsgui_pane pg, void *data) {
 	dtsgui_xmltextbox(pg, "Maximum Call Length On Analogue Trunks (mins)", "MaxAna", "/config/IP/VOIP/ASTDB", "Option", "option", "MaxAna", NULL);
 	dtsgui_xmlcheckbox(pg, "Apply Call Limt To All Trunks", "MaxAll", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "MaxAll", NULL);
 	dtsgui_xmlcheckbox(pg, "Allow VOIP Fallover When Trunk Is Unavailable", "VoipFallover", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "VoipFallover", NULL);
@@ -197,6 +199,31 @@ void pbxconf_mfcr2(dtsgui_pane pg, void *data) {
 	dtsgui_xmlcheckbox(pg, "Accept Call With Charge", "E1mfcr2_charge_calls", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "E1mfcr2_charge_calls", NULL);
 }
 
+void pbxconf_global(dtsgui_pane pg, void *data) {
+	struct form_item *lb;
+	lb = dtsgui_xmllistbox(pg, "Valid Line Authentication", "LINEAUTH", "/config/IP/VOIP/ASTDB", "Option", "option", "LINEAUTH", NULL);
+	dtsgui_listbox_add(lb, "Line PW. That Is Same As Extension And All Bellow", "1");
+	dtsgui_listbox_add(lb, "Allow VM PW. Or Line PW. Not The Same As Exten", "2");
+	dtsgui_listbox_add(lb, "Allow Only VM PW. Not The Same As Line PW. Or Exten.", "3");
+	objunref(lb);
+	dtsgui_xmlpasswdbox(pg, "Admin Password", "AdminPass", "/config/IP/VOIP/ASTDB", "Option", "option", "AdminPass", NULL);
+	dtsgui_xmltextbox(pg, "Recording Options", "RecOpt", "/config/IP/VOIP/ASTDB", "Option", "option", "RecOpt", NULL);
+	dtsgui_xmltextbox(pg, "Default CLI (Number Displayed To Called Party)", "DefCLI", "/config/IP/VOIP/ASTDB", "Option", "option", "DefCLI", NULL);
+	dtsgui_xmlcheckbox(pg, "Hangup Calls To Unknown Numbers/DDI", "UNKDEF", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "UNKDEF", NULL);
+	dtsgui_xmlcheckbox(pg, "Disable Routing Of Voice Mail To Reception", "NoOper", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "NoOper", NULL);
+	dtsgui_xmlcheckbox(pg, "Add Billing Group To CLI (Inbound)", "AddGroup", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "AddGroup", NULL);
+	dtsgui_xmlcheckbox(pg, "Require Extension Number With PIN", "ADVPIN", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "ADVPIN", NULL);
+	dtsgui_xmlcheckbox(pg, "Follow DDI If Exten (Inbound)", "FollowDDI", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "FollowDDI", NULL);
+	dtsgui_xmlcheckbox(pg, "Authorise Only When Registered By Default (SIP)", "DEFAUTHREG", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "DEFAUTHREG", NULL);
+
+}
+
+void pbxconf_acd(dtsgui_pane pg, void *data) {
+	dtsgui_xmltextbox(pg, "Default ACD Queue Timeout", "QTimeout", "/config/IP/VOIP/ASTDB", "Option", "option", "QTimeout", NULL);
+	dtsgui_xmltextbox(pg, "Default ACD Queue Agent Timeout", "QATimeout", "/config/IP/VOIP/ASTDB", "Option", "option", "QATimeout", NULL);
+	dtsgui_xmltextbox(pg, "Default ACD Queue Agent Penalty Factor", "QAPenalty", "/config/IP/VOIP/ASTDB", "Option", "option", "QAPenalty", NULL);
+}
+
 void pbxconf_default(dtsgui_pane pg, void *data) {
 	struct listitem cos[] = {{"Internal Extensions", "0"},
 							 {"Local PSTN", "1"},
@@ -224,11 +251,6 @@ void pbxconf_default(dtsgui_pane pg, void *data) {
 		dtsgui_listbox_add(lb, cos[i].name, cos[i].value);
 	}
 	objunref(lb);
-	lb = dtsgui_xmllistbox(pg, "Valid Line Authentication", "LINEAUTH", "/config/IP/VOIP/ASTDB", "Option", "option", "LINEAUTH", NULL);
-	dtsgui_listbox_add(lb, "Line PW. That Is Same As Extension And All Bellow", "1");
-	dtsgui_listbox_add(lb, "Allow VM PW. Or Line PW. Not The Same As Exten", "2");
-	dtsgui_listbox_add(lb, "Allow Only VM PW. Not The Same As Line PW. Or Exten.", "3");
-	objunref(lb);
 	lb = dtsgui_xmllistbox(pg, "Snom Network Port Speed/Duplex", "SnomNet", "/config/IP/VOIP/ASTDB", "Option", "option", "SnomNet", NULL);
 	dtsgui_listbox_add(lb, "Auto Negotiation", "auto");
 	dtsgui_listbox_add(lb, "10 Mbit Half Duplex", "10half");
@@ -239,25 +261,14 @@ void pbxconf_default(dtsgui_pane pg, void *data) {
 	dtsgui_xmltextbox(pg, "Default FAX Handler", "FAXBOX", "/config/IP/VOIP/ASTDB" , "Option", "option", "FAXBOX", NULL);
 	dtsgui_xmltextbox(pg, "Default Ring Timeout", "Timeout", "/config/IP/VOIP/ASTDB", "Option", "option", "Timeout", NULL);
 	dtsgui_xmltextbox(pg, "Default Extension Prefix (2 Digit Dialing)", "DefaultPrefix", "/config/IP/VOIP/ASTDB", "Option", "option", "DefaultPrefix", NULL);
-	dtsgui_xmltextbox(pg, "Default CLI (Number Displayed To Called Party)", "DefCLI", "/config/IP/VOIP/ASTDB", "Option", "option", "DefCLI", NULL);
-	dtsgui_xmltextbox(pg, "Default ACD Queue Timeout", "QTimeout", "/config/IP/VOIP/ASTDB", "Option", "option", "QTimeout", NULL);
-	dtsgui_xmltextbox(pg, "Default ACD Queue Agent Timeout", "QATimeout", "/config/IP/VOIP/ASTDB", "Option", "option", "QATimeout", NULL);
-	dtsgui_xmltextbox(pg, "Default ACD Queue Agent Penalty Factor", "QAPenalty", "/config/IP/VOIP/ASTDB", "Option", "option", "QAPenalty", NULL);
-	dtsgui_xmltextbox(pg, "Recording Options", "RecOpt", "/config/IP/VOIP/ASTDB", "Option", "option", "RecOpt", NULL);
 	dtsgui_xmltextbox(pg, "Default SIP IP Subnet", "DEFIPNET", "/config/IP/VOIP/ASTDB", "Option", "option", "DEFIPNET", NULL);
 	dtsgui_xmlcheckbox(pg, "Record Calls By Default", "DEFRECORD", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "DEFRECORD", NULL);
 	dtsgui_xmlcheckbox(pg, "Enable Voice Mail By Default", "DEFNOVMAIL", "0", "1", "/config/IP/VOIP/ASTDB", "Option", "option", "DEFNOVMAIL", NULL);
-	dtsgui_xmlcheckbox(pg, "Hangup Calls To Unknown Numbers/DDI", "UNKDEF", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "UNKDEF", NULL);
+
 	dtsgui_xmlcheckbox(pg, "Extensions Are Remote By Default", "REMDEF", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "REMDEF", NULL);
-	dtsgui_xmlcheckbox(pg, "Disable Routing Of Voice Mail To Reception", "NoOper", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "NoOper", NULL);
-	dtsgui_xmlcheckbox(pg, "Require Extension Number With PIN", "ADVPIN", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "ADVPIN", NULL);
-	dtsgui_xmlcheckbox(pg, "Add Billing Group To CLI (Inbound)", "AddGroup", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "AddGroup", NULL);
-	dtsgui_xmlcheckbox(pg, "Follow DDI If Exten (Inbound)", "FollowDDI", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "FollowDDI", NULL);
-	dtsgui_xmlcheckbox(pg, "Authorise Only When Registered By Default (SIP)", "DEFAUTHREG", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "DEFAUTHREG", NULL);
 }
 
 void pbxconf_ivrpass(dtsgui_pane pg, void *data) {
-	dtsgui_xmlpasswdbox(pg, "Admin Password", "AdminPass", "/config/IP/VOIP/ASTDB", "Option", "option", "AdminPass", NULL);
 }
 
 void pbxconf_location(dtsgui_pane pg, void *data) {
@@ -322,26 +333,25 @@ dtsgui_pane dtsgui_setuptabpage(struct dtsgui *dtsgui, dtsgui_tabview tv, const 
 dtsgui_pane pbx_settings(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_tabview tabv;
 	struct app_data *appdata;
-	dtsgui_pane dp;
 
 	appdata = dtsgui_userdata(dtsgui);
 	tabv = dtsgui_tabwindow(dtsgui, title, NULL);
 
 /*	dtsgui_progress_start(dtsgui, "PBX Configuration Loading", 11, 0);*/
 
-	dtsgui_setuptabpage(dtsgui, tabv, "Routing", 0, NULL, appdata->xmldoc, pbxconf_routing, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "mISDN", 0, NULL, appdata->xmldoc, pbxconf_misdn, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "E1", 0, NULL, appdata->xmldoc, pbxconf_e1, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "MFC/R2", 0, NULL, appdata->xmldoc, pbxconf_mfcr2, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "Defaults", 0, NULL, appdata->xmldoc, pbxconf_default, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "IVR Password", 0, NULL, appdata->xmldoc, pbxconf_ivrpass, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "Location", 0, NULL, appdata->xmldoc, pbxconf_location, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "Inbound", 0, NULL, appdata->xmldoc, pbxconf_incoming, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "Num Plan", 0, NULL, appdata->xmldoc, pbxconf_numplan, NULL);
-	dtsgui_setuptabpage(dtsgui, tabv, "Auto Add", 0, NULL, appdata->xmldoc, pbxconf_autoadd, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Trunks", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_trunk, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Options", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_topts, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "mISDN", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_misdn, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "E1", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_e1, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "MFC/R2", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_mfcr2, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Global", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_global, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "ACD", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_acd, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Exten", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_default, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Location", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_location, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Inbound", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_incoming, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Num Plan", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_numplan, NULL);
+	dtsgui_setuptabpage(dtsgui, tabv, "Auto Add", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_autoadd, NULL);
 
-	dp = dtsgui_setuptabpage(dtsgui, tabv, "Save", wx_PANEL_BUTTON_YES, NULL, appdata->xmldoc, NULL, NULL);
-	dtsgui_setevcallback(dp, NULL, NULL);
 
 /*	dtsgui_progress_end(dtsgui);*/
 	return tabv;
