@@ -290,14 +290,21 @@ extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int bu
 	return dp;
 }
 
-extern dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos) {
+extern dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos, int undo) {
 	DTSTabPage *dp = NULL;
 	DTSTabWindow *tw = (DTSTabWindow*)tv;
 	wxBookCtrlBase *nb = static_cast<wxBookCtrlBase*>(tw);
 	DTSFrame *f = tw->GetFrame();
 
-	dp = new DTSTabPage(nb, f, name, false, butmask, cb, cdata, xmldoc);
+	if (!(dp = new DTSTabPage(nb, f, name, false, butmask, cb, cdata, xmldoc))) {
+		return NULL;
+	}
 	dp->InsertPage(pos);
+
+	if (undo) {
+		tw->Undo(undo);
+		tw->SetSelection(pos);
+	}
 
 	return dp;
 }

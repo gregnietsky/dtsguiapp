@@ -25,6 +25,34 @@
 #include "dtsgui.h"
 #include "private.h"
 
+struct new_iface_data {
+	dtsgui_tabview tv;
+	struct xml_doc *xmldoc;
+};
+
+void free_newiface_data(void *data) {
+	struct new_iface_data *nd = data;
+
+	if (nd->xmldoc) {
+		objunref(nd->xmldoc);
+	}
+
+}
+
+struct new_iface_data *get_newiface_data(dtsgui_tabview tv, struct xml_doc *xmldoc) {
+	struct new_iface_data *nd;
+
+	if (!(nd = objalloc(sizeof(*nd), free_newiface_data))) {
+		return NULL;
+	}
+
+	if (xmldoc && objref(xmldoc)) {
+		nd->xmldoc = xmldoc;
+	}
+	nd->tv = tv;
+	return nd;
+}
+
 
 extern int handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) {
 	struct tab_newpane *tn = (struct tab_newpane*)data;
@@ -58,13 +86,25 @@ extern int handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) 
 	if ((tn->cdata = objalloc(nl, NULL))) {
 		memcpy(tn->cdata, xn->value, nl);
 	}
-	dtsgui_tabpage_insert(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata, tn->last);
 
+	if ((p = dtsgui_tabpage_insert(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata, tn->last, 0))) {
+		tn->last++;
+	}
+
+	objunref(xn);
 	return 0;
+}
+
+void network_iface_new_pane_cb(dtsgui_pane p, void *data) {
+	struct new_iface_data *nd = data;
+
+	network_iface_new_pane(p, data);
+	dtsgui_newxmltabpane(nd->tv, p, "/config/IP/Interfaces", "Interface", "iface", "name", handle_newxmltabpane, network_iface_pane, NULL, nd->xmldoc, nd);
 }
 
 dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_tabview tabv;
+	struct new_iface_data *nd;
 	struct app_data *appdata;
 	struct xml_doc *xmldoc;
 	struct xml_search *xp;
@@ -73,7 +113,6 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	char *pdata;
 	void *iter = NULL;
 	int nl;
-	dtsgui_pane p;
 
 	appdata = dtsgui_userdata(dtsgui);
 	xmldoc = appdata->xmldoc;
@@ -93,8 +132,9 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 		objunref(pdata);
 		objunref(xn);
 	}
-	p = dtsgui_newtabpage(tabv, "Add", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, network_iface_new_pane, NULL);
-	dtsgui_newxmltabpane(tabv, p, "/config/IP/Interfaces", "Interface", "iface", "name", handle_newxmltabpane, network_iface_pane, NULL, xmldoc, NULL);
+	nd = get_newiface_data(tabv, xmldoc);
+	dtsgui_newtabpage(tabv, "Add", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, network_iface_new_pane_cb, nd);
+	objunref(nd);
 
 	if (iter) {
 		objunref(iter);
