@@ -314,7 +314,7 @@ dtsgui_pane dtsgui_setuptabpage(struct dtsgui *dtsgui, dtsgui_tabview tv, const 
 	dtsgui_pane p;
 
 	p = dtsgui_newtabpage(tv, title, buttons, hdata, xmldoc, cb, cdata);
-//	dtsgui_progress_increment(dtsgui, 1, NULL);
+/*	dtsgui_progress_increment(dtsgui, 1, NULL);*/
 
 	return p;
 }
@@ -327,7 +327,7 @@ dtsgui_pane pbx_settings(struct dtsgui *dtsgui, const char *title, void *data) {
 	appdata = dtsgui_userdata(dtsgui);
 	tabv = dtsgui_tabwindow(dtsgui, title, NULL);
 
-//	dtsgui_progress_start(dtsgui, "PBX Configuration Loading", 11, 0);
+/*	dtsgui_progress_start(dtsgui, "PBX Configuration Loading", 11, 0);*/
 
 	dtsgui_setuptabpage(dtsgui, tabv, "Routing", 0, NULL, appdata->xmldoc, pbxconf_routing, NULL);
 	dtsgui_setuptabpage(dtsgui, tabv, "mISDN", 0, NULL, appdata->xmldoc, pbxconf_misdn, NULL);
@@ -343,6 +343,6 @@ dtsgui_pane pbx_settings(struct dtsgui *dtsgui, const char *title, void *data) {
 	dp = dtsgui_setuptabpage(dtsgui, tabv, "Save", wx_PANEL_BUTTON_YES, NULL, appdata->xmldoc, NULL, NULL);
 	dtsgui_setevcallback(dp, NULL, NULL);
 
-//	dtsgui_progress_end(dtsgui);
+/*	dtsgui_progress_end(dtsgui);*/
 	return tabv;
 }
