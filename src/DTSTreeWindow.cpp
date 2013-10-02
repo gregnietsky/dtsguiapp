@@ -635,7 +635,6 @@ DTSTabWindow::~DTSTabWindow() {
 	if (userdata) {
 		objunref(userdata);
 	}
-	DeleteAllPages();
 }
 
 

@@ -82,14 +82,18 @@ extern int handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) 
 		tn->cdata = NULL;
 	}
 
-	nl = strlen(xn->value)+1;
-	if ((tn->cdata = objalloc(nl, NULL))) {
-		memcpy(tn->cdata, xn->value, nl);
+	if (xn->value) {
+		nl = strlen(xn->value)+1;
+		if ((tn->cdata = objalloc(nl, NULL))) {
+			memcpy(tn->cdata, xn->value, nl);
+		}
+		if ((p = dtsgui_tabpage_insert(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata, tn->last, -1))) {
+			tn->last++;
+		}
+	} else {
+		xml_delete(xn);
 	}
 
-	if ((p = dtsgui_tabpage_insert(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata, tn->last, 0))) {
-		tn->last++;
-	}
 
 	objunref(xn);
 	return 0;
