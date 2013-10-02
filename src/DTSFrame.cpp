@@ -32,6 +32,7 @@
 #include <wx/toolbar.h>
 #include <wx/progdlg.h>
 #include <wx/gauge.h>
+#include <wx/notebook.h>
 
 #include <dtsapp.h>
 
@@ -140,6 +141,21 @@ int DTSFrame::UpdateProgress(int cval, const wxString &text) {
 	}
 	if (pdia) {
 		if (pdia->Update(cval, text)) {
+			return 1;
+		} else {
+			return 0;
+		}
+	} else {
+		return 0;
+	}
+}
+
+int DTSFrame::IncProgress(int ival, const wxString &text) {
+	if (pbar) {
+		pbar->SetValue(pbar->GetValue()+ival);
+	}
+	if (pdia) {
+		if (pdia->Update(pdia->GetValue()+ival, text)) {
 			return 1;
 		} else {
 			return 0;

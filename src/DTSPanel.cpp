@@ -31,6 +31,7 @@
 #include <wx/button.h>
 #include <wx/wizard.h>
 #include <wx/progdlg.h>
+#include <wx/notebook.h>
 
 #include <dtsapp.h>
 #include "dtsgui.hpp"
@@ -687,6 +688,52 @@ DTSScrollPanel::DTSScrollPanel(wxWindow *parent,DTSFrame *frame, wxString status
 bool DTSScrollPanel::Show(bool show) {
 	ShowPanel(show);
 	return wxScrolledWindow::Show(show);
+}
+
+DTSTabPage::DTSTabPage(wxBookCtrlBase *parent, DTSFrame *frame, wxString status, int butmask, dtsgui_tabpanel_cb c_cb, void *c_data, struct xml_doc *xmldoc)
+	:wxScrolledWindow(parent, wxID_ANY),
+	DTSScrollPanel(parent,frame, status, butmask) {
+	type = wx_DTSPANEL_TAB;
+	cb = c_cb;
+	if (c_data && objref(c_data)) {
+		cdata = c_data;
+	} else {
+		cdata = NULL;
+	}
+	if (xmldoc) {
+		SetXMLDoc(xmldoc);
+	}
+	hasconfig = false;
+	Title(status);
+	parent->AddPage(panel, status);
+}
+
+DTSTabPage::~DTSTabPage() {
+	if (cdata) {
+		objunref(cdata);
+	}
+}
+
+bool DTSTabPage::Show(bool show) {
+	return wxScrolledWindow::Show(show);
+}
+
+bool DTSTabPage::ShowPanel(bool show) {
+	if (hasconfig) {
+		return DTSScrollPanel::ShowPanel(show);
+	} else {
+		return false;
+	}
+}
+
+void DTSTabPage::ConfigPane() {
+	if (!hasconfig) {
+		if (cb) {
+			cb(this, cdata);
+		}
+		hasconfig = true;
+		ShowPanel();
+	}
 }
 
 DTSStaticPanel::DTSStaticPanel(wxWindow *parent,DTSFrame *frame, wxString status, int butmask)

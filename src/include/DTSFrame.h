@@ -31,7 +31,8 @@ class DTSFrame: public wxFrame {
 		void Alert(wxString text);
 		int StartProgress(const wxString &text, int maxval, int quit);
 		void EndProgress(void);
-		int UpdateProgress(int cval, const wxString &title);
+		int UpdateProgress(int cval, const wxString &msg);
+		int IncProgress(int ival, const wxString &msg);
 		void OnClose(wxCommandEvent &event);
 		void OnAbort(wxCloseEvent &event);
 		void OnAbout(wxCommandEvent &event);

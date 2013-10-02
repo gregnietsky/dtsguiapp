@@ -563,12 +563,15 @@ void DTSTabWindowEvent::RightMenu(wxCommandEvent &event) {
 	printf("MENU\n");
 }
 
-void DTSTabWindowEvent::PageChanged(wxBookCtrlEvent &event) {
+void DTSTabWindowEvent::PageChange(wxBookCtrlEvent &event) {
 	wxWindow *w;
+	DTSTabPage *tp;
 	int p = event.GetSelection();
 
 	if (p != wxNOT_FOUND) {
 		w = tw->GetPage(p);
+		tp = dynamic_cast<DTSTabPage*>(w);
+		tp->ConfigPane();
 		w->FitInside();
 		w->Layout();
 		w->Refresh();
@@ -594,7 +597,6 @@ DTSTabWindow::DTSTabWindow(DTSFrame *frame, wxString stat_msg, void *u_data)
 	dtsevt = new DTSTabWindowEvent(userdata, this);
 	dtsevthandler = dtsevt;
 
-	nb->Bind(wxEVT_NOTEBOOK_PAGE_CHANGED, &DTSTabWindowEvent::PageChanged, dtsevt);
 	nb->Bind(wxEVT_CONTEXT_MENU, &DTSTabWindowEvent::RightMenu, dtsevt);
 
 	Show(false);
@@ -608,6 +610,9 @@ DTSTabWindow::~DTSTabWindow() {
 }
 
 bool DTSTabWindow::Show(bool show) {
+	wxNotebook *nb = (wxNotebook*)this;
+	DTSTabWindowEvent *dtsevt = (DTSTabWindowEvent*)dtsevthandler;
+
 	wxWindow *w;
 	int i, cnt;
 	bool res;
@@ -630,6 +635,7 @@ bool DTSTabWindow::Show(bool show) {
 #endif // __WIN32
 		}
 		beenshown = true;
+		nb->Bind(wxEVT_NOTEBOOK_PAGE_CHANGING, &DTSTabWindowEvent::PageChange, dtsevt);
 	}
 	return res;
 }
