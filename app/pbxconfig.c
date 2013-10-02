@@ -122,8 +122,6 @@ void pbxconf_topts(dtsgui_pane pg, void *data) {
 	dtsgui_xmlcheckbox(pg, "Use ENUM Lookups On Outgoing Calls", "NoEnum", "0", "1", "/config/IP/VOIP/ASTDB", "Option", "option", "NoEnum", NULL);
 	dtsgui_xmlcheckbox(pg, "Use Configured GSM Routers", "GSMRoute", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "GSMRoute", NULL);
 	dtsgui_xmlcheckbox(pg, "Allow Trunk Failover When Using Configured GSM Routers", "GSMTrunk", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "GSMTrunk", NULL);
-	dtsgui_xmlcheckbox(pg, "Calls To Internal Extensions Follow Forward Rules", "LocalFwd", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "LocalFwd", NULL);
-	dtsgui_xmlcheckbox(pg, "Inbound Calls Forwarded To Reception If No Voicemail", "Default_9", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "Default_9", NULL);
 	dtsgui_xmlcheckbox(pg, "Disable Billing Engine", "PPDIS", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "PPDIS", NULL);
 	dtsgui_xmlcheckbox(pg, "Allow DISA Passthrough On Trunks", "DISADDI", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "DISADDI", NULL);
 	dtsgui_xmlcheckbox(pg, "Disable Native Bridging On Outbound", "NoBridge", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "NoBridge", NULL);
@@ -209,14 +207,12 @@ void pbxconf_global(dtsgui_pane pg, void *data) {
 	dtsgui_xmlpasswdbox(pg, "Admin Password", "AdminPass", "/config/IP/VOIP/ASTDB", "Option", "option", "AdminPass", NULL);
 	dtsgui_xmltextbox(pg, "Recording Options", "RecOpt", "/config/IP/VOIP/ASTDB", "Option", "option", "RecOpt", NULL);
 	dtsgui_xmltextbox(pg, "Default CLI (Number Displayed To Called Party)", "DefCLI", "/config/IP/VOIP/ASTDB", "Option", "option", "DefCLI", NULL);
-	dtsgui_xmlcheckbox(pg, "Hangup Calls To Unknown Numbers/DDI", "UNKDEF", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "UNKDEF", NULL);
 	dtsgui_xmlcheckbox(pg, "Disable Routing Of Voice Mail To Reception", "NoOper", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "NoOper", NULL);
 	dtsgui_xmlcheckbox(pg, "Add Billing Group To CLI (Inbound)", "AddGroup", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "AddGroup", NULL);
 	dtsgui_xmlcheckbox(pg, "Require Extension Number With PIN", "ADVPIN", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "ADVPIN", NULL);
-	dtsgui_xmlcheckbox(pg, "Follow DDI If Exten (Inbound)", "FollowDDI", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "FollowDDI", NULL);
 	dtsgui_xmlcheckbox(pg, "Authorise Only When Registered By Default (SIP)", "DEFAUTHREG", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "DEFAUTHREG", NULL);
-
-}
+	dtsgui_xmlcheckbox(pg, "Calls To Internal Extensions Follow Forward Rules", "LocalFwd", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "LocalFwd", NULL);
+	}
 
 void pbxconf_acd(dtsgui_pane pg, void *data) {
 	dtsgui_xmltextbox(pg, "Default ACD Queue Timeout", "QTimeout", "/config/IP/VOIP/ASTDB", "Option", "option", "QTimeout", NULL);
@@ -296,6 +292,9 @@ void pbxconf_incoming(dtsgui_pane pg, void *data) {
 	dtsgui_listbox_add(lb, "Auto Fax Detect & Receive", ""); /*XXX ADD Fax Capable Devices*/
 	objunref(lb);
 	dtsgui_xmlcheckbox(pg, "Enable Inbound FAX Detect", "IFAXD", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "IFAXD", NULL);
+	dtsgui_xmlcheckbox(pg, "Inbound Calls Forwarded To Reception If No Voicemail", "Default_9", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "Default_9", NULL);
+	dtsgui_xmlcheckbox(pg, "Hangup Calls To Unknown Numbers/DDI", "UNKDEF", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "UNKDEF", NULL);
+	dtsgui_xmlcheckbox(pg, "Follow DDI If Exten (Inbound)", "FollowDDI", "1", "0", "/config/IP/VOIP/ASTDB", "Option", "option", "FollowDDI", NULL);
 }
 
 void pbxconf_numplan(dtsgui_pane pg, void *data) {
