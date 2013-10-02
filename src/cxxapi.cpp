@@ -295,7 +295,6 @@ extern dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, in
 	DTSTabWindow *tw = (DTSTabWindow*)tv;
 	wxBookCtrlBase *nb = static_cast<wxBookCtrlBase*>(tw);
 	DTSFrame *f = tw->GetFrame();
-	wxWindow *w;
 
 	dp = new DTSTabPage(nb, f, name, false, butmask, cb, cdata, xmldoc);
 	dp->InsertPage(pos);
@@ -1137,7 +1136,6 @@ void free_newtpane(void *data) {
 void dtsgui_newxmltabpane(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath, const char *node, const char *vitem, const char *tattr, event_callback evcb, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, void *data) {
 	struct tab_newpane *tn;
 	DTSTabWindow *nb = (DTSTabWindow*)tabv;
-//	struct wxBookCtrlBase *nb = dynamic_cast<wxBookCtrlBase*>(nbp);
 
 	if (!(tn = (struct tab_newpane*)objalloc(sizeof(*tn), free_newtpane))) {
 		return;
