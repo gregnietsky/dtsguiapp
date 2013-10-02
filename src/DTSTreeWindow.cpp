@@ -572,6 +572,15 @@ void DTSTabWindowEvent::PageChange(wxBookCtrlEvent &event) {
 		w = tw->GetPage(p);
 		tp = dynamic_cast<DTSTabPage*>(w);
 		tp->ConfigPane();
+	}
+}
+
+void DTSTabWindowEvent::PageChanged(wxBookCtrlEvent &event) {
+	wxWindow *w;
+	int p = event.GetSelection();
+
+	if (p != wxNOT_FOUND) {
+		w = tw->GetPage(p);
 		w->FitInside();
 		w->Layout();
 		w->Refresh();
@@ -636,6 +645,7 @@ bool DTSTabWindow::Show(bool show) {
 		}
 		beenshown = true;
 		nb->Bind(wxEVT_NOTEBOOK_PAGE_CHANGING, &DTSTabWindowEvent::PageChange, dtsevt);
+		nb->Bind(wxEVT_NOTEBOOK_PAGE_CHANGED, &DTSTabWindowEvent::PageChanged, dtsevt);
 	}
 	return res;
 }

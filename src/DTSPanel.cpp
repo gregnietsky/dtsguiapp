@@ -718,14 +718,6 @@ bool DTSTabPage::Show(bool show) {
 	return wxScrolledWindow::Show(show);
 }
 
-bool DTSTabPage::ShowPanel(bool show) {
-	if (hasconfig) {
-		return DTSScrollPanel::ShowPanel(show);
-	} else {
-		return false;
-	}
-}
-
 void DTSTabPage::ConfigPane() {
 	if (!hasconfig) {
 		if (cb) {

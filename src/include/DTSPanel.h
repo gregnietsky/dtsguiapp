@@ -139,7 +139,6 @@ class DTSTabPage: public DTSScrollPanel {
 	public:
 		DTSTabPage(wxBookCtrlBase*, DTSFrame* = NULL, wxString = wxEmptyString, int = 0, dtsgui_tabpanel_cb  = NULL, void* = NULL, struct xml_doc* = NULL);
 		~DTSTabPage();
-		bool ShowPanel(bool = true);
 		void ConfigPane();
 		virtual bool Show(bool);
 	private:
