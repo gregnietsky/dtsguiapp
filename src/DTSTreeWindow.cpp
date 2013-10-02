@@ -577,7 +577,7 @@ void DTSTabWindowEvent::OnButton(wxCommandEvent &event) {
 			d = (DTSObject*)pane;
 			tw->RemovePage(pg);
 
-			newp = new DTSTabPage(tw, d->GetFrame(), d->GetName(), pg);
+			newp = new DTSTabPage(tw, d->GetFrame(), d->GetName());
 			*newp = *pane;
 			nb->InsertPage(pg, newp->GetPanel(), d->GetName(), true);
 			delete pane;

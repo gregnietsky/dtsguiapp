@@ -690,7 +690,7 @@ bool DTSScrollPanel::Show(bool show) {
 	return wxScrolledWindow::Show(show);
 }
 
-DTSTabPage::DTSTabPage(wxBookCtrlBase *parent, DTSFrame *frame, wxString status, int idx, int butmask, dtsgui_tabpanel_cb c_cb, void *c_data, struct xml_doc *xmldoc)
+DTSTabPage::DTSTabPage(wxBookCtrlBase *parent, DTSFrame *frame, wxString status, bool addpage, int butmask, dtsgui_tabpanel_cb c_cb, void *c_data, struct xml_doc *xmldoc)
 	:wxScrolledWindow(parent, wxID_ANY),
 	DTSScrollPanel(parent,frame, status, butmask) {
 	type = wx_DTSPANEL_TAB;
@@ -705,7 +705,7 @@ DTSTabPage::DTSTabPage(wxBookCtrlBase *parent, DTSFrame *frame, wxString status,
 	}
 	hasconfig = false;
 	Title(status);
-	if (idx < 0) {
+	if (addpage) {
 		parent->AddPage(panel, status);
 	}
 }
