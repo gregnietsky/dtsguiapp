@@ -527,13 +527,16 @@ void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const c
 }
 
 void dtsgui_listbox_add(struct form_item *listbox, const char *text, const char *value) {
-	wxComboBox *lbox = (wxComboBox *)listbox->widget;
-	lbox->Append(text, (value) ? (void*)strdup(value) : NULL);
+	int idx;
 
-	if (lbox->GetSelection() == wxNOT_FOUND) {
+	wxComboBox *lbox = (wxComboBox *)listbox->widget;
+	idx = lbox->Append(text, (value) ? (void*)strdup(value) : NULL);
+
+	if ((listbox->idx == -1) && listbox->value && value && !strcmp(listbox->value, value)) {
+		listbox->idx = idx;
+		lbox->SetSelection(idx);
+	} else if (idx == 0) {
 		lbox->SetSelection(0);
-	} else if (listbox->value && value && !strcmp(listbox->value, value)) {
-		lbox->SetSelection(lbox->GetCount()-1);
 	}
 }
 

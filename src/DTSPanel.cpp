@@ -332,6 +332,7 @@ struct form_item *DTSPanel::create_new_fitem(void *widget, enum widget_type type
 	if (value2) {
 		ALLOC_CONST(fi->value2, value2);
 	}
+	fi->idx = -1;
 	addtobucket(fitems, fi);
 	return fi;
 }

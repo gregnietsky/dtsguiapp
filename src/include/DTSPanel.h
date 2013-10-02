@@ -45,6 +45,7 @@ struct form_item {
 	const char *value;
 	const char *value2;
 	void *widget;
+	int idx;
 };
 
 class DTSPanelEvent: public wxEvtHandler {
