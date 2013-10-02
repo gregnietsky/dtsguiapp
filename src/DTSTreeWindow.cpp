@@ -621,10 +621,12 @@ DTSTabWindow::~DTSTabWindow() {
 bool DTSTabWindow::Show(bool show) {
 	wxNotebook *nb = (wxNotebook*)this;
 	DTSTabWindowEvent *dtsevt = (DTSTabWindowEvent*)dtsevthandler;
-
 	wxWindow *w;
 	int i, cnt;
 	bool res;
+#ifdef __WIN32
+	DTSTabPage *tp;
+#endif // __WIN32
 
 	if (show && frame) {
 		frame->SetStatusText(status);
@@ -636,11 +638,15 @@ bool DTSTabWindow::Show(bool show) {
 		cnt = GetPageCount();
 		for(i = 0; i < cnt;i++) {
 			w = GetPage(i);
-			w->Show(true);
 #ifdef __WIN32
+			tp = dynamic_cast<DTSTabPage*>(w);
+			tp->ConfigPane();
+			w->Show(true);
 			if (i) {
 				w->Show(false);
 			}
+#else
+			w->Show(true);
 #endif // __WIN32
 		}
 		beenshown = true;
