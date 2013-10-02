@@ -730,15 +730,37 @@ void DTSTabPage::ConfigPane() {
 	}
 }
 
+void DTSTabPage::InsertPage(int pos) {
+	wxBookCtrlBase *nb = dynamic_cast<wxBookCtrlBase*>(panel->GetParent());
+
+	nb->InsertPage(pos, panel, status);
+	panel->Show();
+	nb->SetSelection(pos);
+}
+
 DTSTabPage &DTSTabPage::operator=(const DTSTabPage &orig) {
-	if (this != &orig) {
-		this->button_mask = orig.button_mask;
-		if (orig.cdata && objref(orig.cdata)) {
-			this->cdata = orig.cdata;
-		}
-		this->cb = orig.cb;
-		this->SetXMLDoc(orig.xmldoc);
+	DTSPanelEvent *dtsevt = (DTSPanelEvent*)dtsevthandler;
+
+	if (this == &orig) {
+		return *this;
 	}
+
+	button_mask = orig.button_mask;
+	if (orig.cdata && objref(orig.cdata)) {
+		cdata = orig.cdata;
+	}
+
+	cb = orig.cb;
+	SetXMLDoc(orig.xmldoc);
+	status = orig.status;
+	SetTitle(status);
+	panel->SetName(status);
+
+	frame = orig.frame;
+	if (dtsevt && frame) {
+		dtsevt->BindDTSEvent(frame);
+	}
+
 	return *this;
 }
 
