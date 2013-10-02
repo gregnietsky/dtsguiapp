@@ -58,19 +58,6 @@
 
 static int menuid = wxID_AUTO_LOWEST;
 
-struct tree_newnode {
-	void *data;
-	dtsgui_treeview tv;
-	dtsgui_treenode tn;
-	dtsgui_xmltreenode_cb node_cb;
-	dtsgui_treeviewpanel_cb p_cb;
-	const char *xpath;
-	const char *node;
-	const char *vitem;
-	const char *tattr;
-	int type;
-	int flags;
-};
 
 dtsgui *dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status) {
 	/*deleted on close*/
@@ -299,6 +286,19 @@ extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int bu
 	DTSFrame *f = tw->GetFrame();
 
 	dp = new DTSTabPage(nb, f, name, true, butmask, cb, cdata, xmldoc);
+
+	return dp;
+}
+
+extern dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos) {
+	DTSTabPage *dp = NULL;
+	DTSTabWindow *tw = (DTSTabWindow*)tv;
+	wxBookCtrlBase *nb = static_cast<wxBookCtrlBase*>(tw);
+	DTSFrame *f = tw->GetFrame();
+	wxWindow *w;
+
+	dp = new DTSTabPage(nb, f, name, false, butmask, cb, cdata, xmldoc);
+	dp->InsertPage(pos);
 
 	return dp;
 }
@@ -1077,6 +1077,95 @@ void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *t
 	}
 	objunref(xn);
 	objunref(xmldoc);
+}
+
+extern int dtsgui_handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) {
+	struct tab_newpane *tn = (struct tab_newpane*)data;
+	struct xml_node *xn;
+	const char *name;
+
+	switch(event) {
+		case wx_PANEL_BUTTON_YES:
+			break;
+		default:
+			return 1;
+	}
+
+	if (!tn || !(xn = dtsgui_panetoxml(p, tn->xpath, tn->node, tn->vitem, tn->tattr))) {
+		return 1;
+	}
+
+	if (tn->tattr) {
+		name = xml_getattr(xn, tn->tattr);
+	} else {
+		name = xn->value;
+	}
+
+	dtsgui_newtabpage(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata);
+	return 0;
+}
+
+void free_newtpane(void *data) {
+	struct tab_newpane *tn = (struct tab_newpane*)data;
+
+	if (tn->data) {
+		objunref(tn->data);
+	}
+
+	if (tn->cdata) {
+		objunref(tn->cdata);
+	}
+
+	if (tn->xmldoc) {
+		objunref(tn->xmldoc);
+	}
+
+	if (tn->xpath) {
+		free((void*)tn->xpath);
+	}
+	if (tn->node) {
+		free((void*)tn->node);
+	}
+	if (tn->vitem) {
+		free((void*)tn->vitem);
+	}
+	if (tn->tattr) {
+		free((void*)tn->tattr);
+	}
+}
+
+void dtsgui_newxmltabpane(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath, const char *node, const char *vitem, const char *tattr, event_callback evcb, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, void *data) {
+	struct tab_newpane *tn;
+	DTSTabWindow *nb = (DTSTabWindow*)tabv;
+//	struct wxBookCtrlBase *nb = dynamic_cast<wxBookCtrlBase*>(nbp);
+
+	if (!(tn = (struct tab_newpane*)objalloc(sizeof(*tn), free_newtpane))) {
+		return;
+	}
+
+	if (data && objref(data)) {
+		tn->data = data;
+	}
+
+	if (cdata && objref(cdata)) {
+		tn->cdata = cdata;
+	}
+
+	tn->tabv = tabv;
+	if (xmldoc && objref(xmldoc)) {
+		tn->xmldoc = xmldoc;
+	}
+
+	ALLOC_CONST(tn->xpath, xpath);
+	ALLOC_CONST(tn->node, node);
+	ALLOC_CONST(tn->vitem, vitem);
+	ALLOC_CONST(tn->tattr, tattr);
+
+	tn->last = nb->GetPageCount() -1;
+
+	tn->cb = cb;
+	dtsgui_setevcallback(p, evcb, tn);
+	objunref(tn);
 }
 
 #ifdef __WIN32

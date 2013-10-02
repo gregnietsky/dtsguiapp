@@ -25,6 +25,44 @@
 #include "dtsgui.h"
 #include "private.h"
 
+
+extern int handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) {
+	struct tab_newpane *tn = (struct tab_newpane*)data;
+	struct xml_node *xn;
+	const char *name;
+	int nl;
+
+	switch(event) {
+		case wx_PANEL_BUTTON_YES:
+			break;
+		default:
+			return 1;
+	}
+
+	if (!tn || !(xn = dtsgui_panetoxml(p, tn->xpath, tn->node, tn->vitem, tn->tattr))) {
+		return 1;
+	}
+
+	if (tn->tattr) {
+		name = xml_getattr(xn, tn->tattr);
+	} else {
+		name = xn->value;
+	}
+
+	if (tn->cdata) {
+		objunref(tn->cdata);
+		tn->cdata = NULL;
+	}
+
+	nl = strlen(xn->value)+1;
+	if ((tn->cdata = objalloc(nl, NULL))) {
+		memcpy(tn->cdata, xn->value, nl);
+	}
+	dtsgui_tabpage_insert(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata, tn->last);
+
+	return 0;
+}
+
 dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_tabview tabv;
 	struct app_data *appdata;
@@ -35,6 +73,7 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	char *pdata;
 	void *iter = NULL;
 	int nl;
+	dtsgui_pane p;
 
 	appdata = dtsgui_userdata(dtsgui);
 	xmldoc = appdata->xmldoc;
@@ -54,7 +93,8 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 		objunref(pdata);
 		objunref(xn);
 	}
-	dtsgui_newtabpage(tabv, "Add", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, network_iface_new_pane, NULL);
+	p = dtsgui_newtabpage(tabv, "Add", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, network_iface_new_pane, NULL);
+	dtsgui_newxmltabpane(tabv, p, "/config/IP/Interfaces", "Interface", "iface", "name", handle_newxmltabpane, network_iface_pane, NULL, xmldoc, NULL);
 
 	if (iter) {
 		objunref(iter);

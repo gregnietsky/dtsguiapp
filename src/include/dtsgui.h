@@ -65,6 +65,33 @@ struct point {
 	int y;
 };
 
+struct tree_newnode {
+	void *data;
+	dtsgui_treeview tv;
+	dtsgui_treenode tn;
+	dtsgui_xmltreenode_cb node_cb;
+	dtsgui_treeviewpanel_cb p_cb;
+	const char *xpath;
+	const char *node;
+	const char *vitem;
+	const char *tattr;
+	int type;
+	int flags;
+};
+
+struct tab_newpane {
+	struct xml_doc *xmldoc;
+	dtsgui_tabview tabv;
+	dtsgui_tabpanel_cb cb;
+	const char *xpath;
+	const char *node;
+	const char *vitem;
+	const char *tattr;
+	void *cdata;
+	void *data;
+	int last;
+};
+
 /*buttons YES / No may be YES/NO APPLY/REFRESH OK/CANCEL*/
 enum panel_buttons {
 	wx_PANEL_BUTTON_FIRST	= 1 << 0,
@@ -134,6 +161,8 @@ dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char
 dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *title, dtsgui_tree_cb tree_cb, void *userdata, struct xml_doc *xmldoc);
 dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title, void *data);
 dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata);
+dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos);
+
 
 dtsgui_pane dtsgui_treepane(dtsgui_treeview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc);
 dtsgui_pane dtsgui_treepane_defalt(dtsgui_treeview self, dtsgui_treenode node);
@@ -148,6 +177,7 @@ const char *dtsgui_treenodeparent(dtsgui_treenode tn);
 void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr,
 								int nid, int flags, dtsgui_xmltreenode_cb node_cb, void *data, dtsgui_treeviewpanel_cb p_cb);
 struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *node, const char *nodeval, const char *attrkey);
+void dtsgui_newxmltabpane(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath, const char *node, const char *vitem, const char *tattr, event_callback evcb, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, void *data);
 
 void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data);
 void dtsgui_xmlpanel_update(dtsgui_pane pane);
