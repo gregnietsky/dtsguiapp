@@ -112,6 +112,7 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 		EmptyServerList();
 		server->Append(wxEmptyString, (void*)NULL);
 		server->Dismiss();
+		event.SetEventType(wxEVT_COMBOBOX_CLOSEUP);
 		dtsgui_alert(dtsgui, "Please enter 3 or more characters to search !");
 	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (val.Len() >= 3)) {
 		struct curl_post *post = curl_newpost();
@@ -133,6 +134,7 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 			if (!xp || !xml_nodecount(xp)) {
 				server->Append(wxEmptyString, (void*)NULL);
 				sflags &= ~(DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
+				event.SetEventType(wxEVT_COMBOBOX_CLOSEUP);
 			} else {
 				sflags |= (DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 				for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
@@ -149,6 +151,7 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 				objunref(xmldoc);
 			}
 		} else {
+			event.SetEventType(wxEVT_COMBOBOX_CLOSEUP);
 			server->Append(wxEmptyString, (void*)NULL);
 			sflags &= ~(DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 		}
@@ -160,6 +163,7 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 		EmptyServerList();
 		server->Append(wxEmptyString, (void*)NULL);
 		server->Dismiss();
+		event.SetEventType(wxEVT_COMBOBOX_CLOSEUP);
 	} else if (etype == wxEVT_TEXT_ENTER) {
 		dtsgui_alert(dtsgui, "Got Me Some URL ARRRRGh");
 	} else if ((sflags & DTSAPPTB_SERVER_POP) && etype == wxEVT_COMBOBOX) {
