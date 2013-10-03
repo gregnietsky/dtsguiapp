@@ -70,6 +70,8 @@ DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size
 	this->dtsgui = dtsgui;
 
 	blank = new wxWindow(this, -1);
+	wxBoxSizer *sizer2 = new wxBoxSizer(wxHORIZONTAL);
+	blank->SetSizer(sizer2);
 	sizer->Add(blank, 1, wxALL | wxEXPAND);
 	a_window = blank;
 	blank->Show(true);

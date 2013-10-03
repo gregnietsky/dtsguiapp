@@ -1192,6 +1192,7 @@ void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
 	wxToolBar *tb = f->GetToolBar();
 
 	tb->Show((show) ? true : false);
+	f->Layout();
 }
 
 void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb, void *data) {
