@@ -109,6 +109,8 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 		sflags &= ~DTSAPPTB_SERVER_SET;
 	} else if (!(sflags & DTSAPPTB_SERVER_POP) && !(sflags & DTSAPPTB_SERVER_SET) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (val.Len() < 3)) {
 		sflags &= ~DTSAPPTB_SERVER_SET;
+		EmptyServerList();
+		server->Dismiss();
 		dtsgui_alert(dtsgui, "Please enter 3 or more characters to search !");
 	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (val.Len() >= 3)) {
 		struct curl_post *post = curl_newpost();
@@ -155,6 +157,9 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 		if (cbuf) {
 			objunref(cbuf);
 		}
+	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN)) {
+		EmptyServerList();
+		server->Dismiss();
 	} else if (etype == wxEVT_TEXT_ENTER) {
 		dtsgui_alert(dtsgui, "Got Me Some URL ARRRRGh");
 	} else if ((sflags & DTSAPPTB_SERVER_POP) && etype == wxEVT_COMBOBOX) {
