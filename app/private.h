@@ -71,6 +71,7 @@ struct listitem {
 	const char *value;
 };
 
+void xml_config(struct xml_doc *xmldoc);
 struct curlbuf *test_posturl(struct dtsgui *dtsgui, const char *user, const char *passwd, const char *url, struct curl_post *post);
 
 /*toolbar.cpp*/

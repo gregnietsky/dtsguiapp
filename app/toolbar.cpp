@@ -38,6 +38,7 @@ class DTSAPPToolBar: public wxToolBar {
 		DTSAPPToolBar(struct dtsgui *dtsgui, wxWindow *parent, long style, wxWindowID id, wxString name, void *data);
 	private:
 		void OnServer(wxCommandEvent& event);
+		void EmptyServerList();
 		wxComboBox *server;
 		wxComboBox *proto;
 		struct dtsgui *dtsgui;
@@ -66,7 +67,7 @@ DTSAPPToolBar::DTSAPPToolBar(struct dtsgui *dtsgui, wxWindow *parent, long style
 	AddControl(proto);
 	AddControl(text2);
 	AddControl(server);
-	server->Append(wxEmptyString);
+	server->Append(wxEmptyString, (void*)NULL);
 	AddStretchableSpace();
 
 	server->Bind(wxEVT_TEXT_ENTER, &DTSAPPToolBar::OnServer, this);
@@ -75,40 +76,83 @@ DTSAPPToolBar::DTSAPPToolBar(struct dtsgui *dtsgui, wxWindow *parent, long style
 	server->Bind(wxEVT_COMMAND_TEXT_UPDATED, &DTSAPPToolBar::OnServer, this);
 }
 
+void DTSAPPToolBar::EmptyServerList() {
+	void *data;
+	int i, cnt;
+
+	cnt = server->GetCount();
+	for(i=0; i < cnt;i++) {
+		if ((data = server->GetClientData(i))) {
+			free(data);
+			server->SetClientData(i, NULL);
+		}
+	}
+	server->Clear();
+}
+
 void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
-	int etype = event.GetEventType();
+	struct xml_doc *xmldoc;
+	struct xml_search *xp;
+	struct xml_node *xn;
+	wxString newval;
+	void *iter;
+	int etype = event.GetEventType(), idx;
 	wxString val;
+	const char *ipaddr;
 
 	val = server->GetValue();
+	idx = server->GetSelection();
 
 	if ((sflags & DTSAPPTB_SERVER_POP) && !(sflags & DTSAPPTB_SERVER_SET) && (etype == wxEVT_COMMAND_TEXT_UPDATED)) {
 		sflags &= ~DTSAPPTB_SERVER_POP;
 	} else if ((sflags & DTSAPPTB_SERVER_SET) && (etype == wxEVT_COMMAND_TEXT_UPDATED)) {
 		sflags &= ~DTSAPPTB_SERVER_SET;
-	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (server->GetValue().Len() < 5)) {
-		dtsgui_alert(dtsgui, "Please enter 5 or more characters to search !");
+	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (server->GetValue().Len() < 3)) {
+		dtsgui_alert(dtsgui, "Please enter 3 or more characters to search !");
 	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN)) {
 		struct curl_post *post = curl_newpost();
 		struct curlbuf *cbuf;
-
-		sflags |= (DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 
 		val = server->GetValue();
 		curl_postitem(post, "function", "getcust");
 		curl_postitem(post, "search", val);
 		cbuf = test_posturl(dtsgui, NULL, NULL, "https://sip1.speakezi.co.za:666/auth/test.php" , post);
-		server->Clear();
-/*		if (cbuf && cbuf->body) {
-			dtsgui_alert(dtsgui, (char*)cbuf->body);
-		}*/
+		EmptyServerList();
+
+		curl_ungzip(cbuf);
+		if (cbuf && cbuf->c_type && !strcmp("application/xml", cbuf->c_type)) {
+			xmldoc = xml_loadbuf(cbuf->body, cbuf->bsize, 0);
+			xml_config(xmldoc);
+			xp = xml_xpath(xmldoc, "/servers/Server", "ipaddr");
+			if (!xml_nodecount(xp)) {
+				server->Append(wxEmptyString, (void*)NULL);
+			} else {
+				sflags |= (DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
+				for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
+					ipaddr = strdup(xml_getattr(xn, "ipaddr"));
+					newval = wxString(xn->value).Append(" [").Append(ipaddr).Append("]");
+					server->Append(newval, strdup(ipaddr));
+					objunref(xn);
+				}
+				objunref(iter);
+				objunref(xp);
+			}
+			if (xmldoc) {
+				objunref(xmldoc);
+			}
+		} else {
+			server->Append(wxEmptyString, (void*)NULL);
+		}
+
 		if (cbuf) {
 			objunref(cbuf);
 		}
-		server->Append(val);
 		server->Popup();
 	} else if (etype == wxEVT_TEXT_ENTER) {
 		dtsgui_alert(dtsgui, "Got Me Some URL ARRRRGh");
 	} else if (etype == wxEVT_COMBOBOX) {
+		ipaddr = (const char*)server->GetClientData(idx);
+		dtsgui_alert(dtsgui, wxString("Selected IP ").Append(ipaddr));
 		/*Windows Barfs if you change the value*/
 #ifdef __WIN32
 		sflags |= (DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
