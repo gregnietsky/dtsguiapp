@@ -1194,6 +1194,12 @@ void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
 	tb->Show((show) ? true : false);
 }
 
+void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb) {
+	DTSFrame *f = (DTSFrame*)dtsgui->appframe;
+
+	f->SetupToolbar(cb);
+}
+
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);

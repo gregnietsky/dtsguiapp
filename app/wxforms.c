@@ -273,6 +273,8 @@ int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 		return 0;
 	}
 
+	dtsgui_setuptoolbar(dtsgui, newapptoolbar);
+
 	/* menus*/
 	file_menu(dtsgui);
 	config_menu(dtsgui);

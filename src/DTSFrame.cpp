@@ -53,11 +53,11 @@ DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size
 	status = dtsgui->status;
 	CreateStatusBar();
 	SetStatusText(status);
+	tbcb = NULL;
 
 //	pbar = new wxGauge(toolbar, wxID_ANY, 1000);
 	pbar = NULL;
 	pdia = NULL;
-	SetupToolbar();
 
 	/*deleted on close*/
 	sizer = new wxBoxSizer(wxHORIZONTAL);
@@ -304,25 +304,23 @@ struct dtsgui *DTSFrame::GetDTSData(void) {
 	return NULL;
 }
 
-void DTSFrame::SetupToolbar() {
+wxToolBar *DTSFrame::OnCreateToolBar(long style, wxWindowID id, const wxString& name) {
+	wxToolBar *tb;
+
+	if (tbcb) {
+		tb = (wxToolBar*)tbcb(this, style, id, name);
+	} else {
+		tb = new wxToolBar(this, id, wxDefaultPosition, wxDefaultSize, style, name);
+	}
+
+	return tb;
+}
+
+void DTSFrame::SetupToolbar(dtsgui_toolbar_create cb) {
+	tbcb = cb;
+
 	toolbar = CreateToolBar();
 
-	wxComboBox *server = new wxComboBox(toolbar, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(300,-1) );
-	wxComboBox *proto = new wxComboBox(toolbar, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_READONLY);
-	wxStaticText *text = new wxStaticText(toolbar, wxID_ANY, "Server ");
-	wxStaticText *text2 = new wxStaticText(toolbar, wxID_ANY, "://");
-
-	toolbar->AddControl(text);
-
-	proto->Append("http");
-	proto->Append("https");
-	proto->Append("https [:666]");
-	proto->SetSelection(2);
-
-	toolbar->AddControl(proto);
-	toolbar->AddControl(text2);
-	toolbar->AddControl(server);
-	toolbar->AddStretchableSpace();
 	if (pbar) {
 		toolbar->AddControl(pbar);
 		pbar->Hide();
