@@ -107,25 +107,30 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 		sflags &= ~DTSAPPTB_SERVER_POP;
 	} else if ((sflags & DTSAPPTB_SERVER_SET) && (etype == wxEVT_COMMAND_TEXT_UPDATED)) {
 		sflags &= ~DTSAPPTB_SERVER_SET;
-	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (server->GetValue().Len() < 3)) {
+	} else if (!(sflags & DTSAPPTB_SERVER_POP) && !(sflags & DTSAPPTB_SERVER_SET) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (val.Len() < 3)) {
+		sflags &= ~DTSAPPTB_SERVER_SET;
 		dtsgui_alert(dtsgui, "Please enter 3 or more characters to search !");
-	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN)) {
+	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (val.Len() >= 3)) {
 		struct curl_post *post = curl_newpost();
 		struct curlbuf *cbuf;
 
-		val = server->GetValue();
+		EmptyServerList();
+		server->Dismiss();
+
 		curl_postitem(post, "function", "getcust");
 		curl_postitem(post, "search", val);
 		cbuf = test_posturl(dtsgui, NULL, NULL, "https://sip1.speakezi.co.za:666/auth/test.php" , post);
-		EmptyServerList();
 
+		sflags &= ~(DTSAPPTB_SERVER_SET | DTSAPPTB_SERVER_POP);
 		curl_ungzip(cbuf);
 		if (cbuf && cbuf->c_type && !strcmp("application/xml", cbuf->c_type)) {
 			xmldoc = xml_loadbuf(cbuf->body, cbuf->bsize, 0);
 			xml_config(xmldoc);
 			xp = xml_xpath(xmldoc, "/servers/Server", "ipaddr");
-			if (!xml_nodecount(xp)) {
+			if (!xp || !xml_nodecount(xp)) {
 				server->Append(wxEmptyString, (void*)NULL);
+				server->Dismiss();
+				sflags &= ~(DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 			} else {
 				sflags |= (DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 				for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
@@ -136,21 +141,23 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 				}
 				objunref(iter);
 				objunref(xp);
+				server->Popup();
 			}
 			if (xmldoc) {
 				objunref(xmldoc);
 			}
 		} else {
 			server->Append(wxEmptyString, (void*)NULL);
+			server->Dismiss();
+			sflags &= ~(DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 		}
 
 		if (cbuf) {
 			objunref(cbuf);
 		}
-		server->Popup();
 	} else if (etype == wxEVT_TEXT_ENTER) {
 		dtsgui_alert(dtsgui, "Got Me Some URL ARRRRGh");
-	} else if (etype == wxEVT_COMBOBOX) {
+	} else if ((sflags & DTSAPPTB_SERVER_POP) && etype == wxEVT_COMBOBOX) {
 		ipaddr = (const char*)server->GetClientData(idx);
 		dtsgui_alert(dtsgui, wxString("Selected IP ").Append(ipaddr));
 		/*Windows Barfs if you change the value*/

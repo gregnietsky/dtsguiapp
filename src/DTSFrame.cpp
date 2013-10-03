@@ -125,6 +125,7 @@ int DTSFrame::StartProgress(const wxString &text, int maxval, int quit) {
 	if (!quit && pbar) {
 		pbar->SetRange(maxval);
 		pbar->Show();
+		pbar->Pulse();
 		return 1;
 	} else {
 		flags = wxPD_APP_MODAL | wxPD_AUTO_HIDE | wxPD_ELAPSED_TIME;
@@ -133,6 +134,7 @@ int DTSFrame::StartProgress(const wxString &text, int maxval, int quit) {
 		}
 		if ((pdia = new wxProgressDialog("Progress", text, maxval, NULL, flags))) {
 			pdia->Show();
+			pdia->Pulse();
 			return 1;
 		}
 	}
