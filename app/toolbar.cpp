@@ -110,6 +110,7 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 	} else if (!(sflags & DTSAPPTB_SERVER_POP) && !(sflags & DTSAPPTB_SERVER_SET) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (val.Len() < 3)) {
 		sflags &= ~DTSAPPTB_SERVER_SET;
 		EmptyServerList();
+		server->Append(wxEmptyString, (void*)NULL);
 		server->Dismiss();
 		dtsgui_alert(dtsgui, "Please enter 3 or more characters to search !");
 	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN) && (val.Len() >= 3)) {
@@ -131,7 +132,6 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 			xp = xml_xpath(xmldoc, "/servers/Server", "ipaddr");
 			if (!xp || !xml_nodecount(xp)) {
 				server->Append(wxEmptyString, (void*)NULL);
-				server->Dismiss();
 				sflags &= ~(DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 			} else {
 				sflags |= (DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
@@ -150,7 +150,6 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 			}
 		} else {
 			server->Append(wxEmptyString, (void*)NULL);
-			server->Dismiss();
 			sflags &= ~(DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
 		}
 
@@ -159,6 +158,7 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 		}
 	} else if (!(sflags & DTSAPPTB_SERVER_POP) && (etype == wxEVT_COMBOBOX_DROPDOWN)) {
 		EmptyServerList();
+		server->Append(wxEmptyString, (void*)NULL);
 		server->Dismiss();
 	} else if (etype == wxEVT_TEXT_ENTER) {
 		dtsgui_alert(dtsgui, "Got Me Some URL ARRRRGh");
