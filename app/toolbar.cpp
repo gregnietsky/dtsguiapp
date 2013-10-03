@@ -26,13 +26,16 @@
 class DTSAPPToolBar: public wxToolBar {
 	public:
 		DTSAPPToolBar(wxWindow *parent, long style, wxWindowID id, wxString name);
+	private:
+		wxComboBox *server;
+		wxComboBox *proto;
 };
 
 
 DTSAPPToolBar::DTSAPPToolBar(wxWindow *parent, long style, wxWindowID id, wxString name) {
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, style, name);
-	wxComboBox *server = new wxComboBox(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(300,-1) );
-	wxComboBox *proto = new wxComboBox(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_READONLY);
+	server = new wxComboBox(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(300,-1) );
+	proto = new wxComboBox(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_READONLY);
 	wxStaticText *text = new wxStaticText(this, wxID_ANY, "Server ");
 	wxStaticText *text2 = new wxStaticText(this, wxID_ANY, "://");
 
@@ -48,14 +51,10 @@ DTSAPPToolBar::DTSAPPToolBar(wxWindow *parent, long style, wxWindowID id, wxStri
 	AddStretchableSpace();
 }
 
-wxToolBar *app_toolbar(wxWindow *parent, long style, wxWindowID id, wxString name) {
+void *app_toolbar(void *pw, long style, int id, const char *name) {
 	DTSAPPToolBar *tb;
 
-	tb = new DTSAPPToolBar(parent, style, id, name);
+	tb = new DTSAPPToolBar((wxWindow*)pw, style, id, name);
 
 	return tb;
-}
-
-void *newapptoolbar(void *pw, long style, int id, const char *name) {
-	return app_toolbar((wxWindow*)pw, style, id, name);
 }

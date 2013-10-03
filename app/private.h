@@ -72,7 +72,7 @@ struct listitem {
 };
 
 /*toolbar.cpp*/
-void *newapptoolbar(void *pw, long style, int id, const char *name);
+void *app_toolbar(void *pw, long style, int id, const char *name);
 
 /*wizard.c*/
 dtsgui_pane reconfig_wizard(struct dtsgui *dtsgui, const char *title, void *data);
