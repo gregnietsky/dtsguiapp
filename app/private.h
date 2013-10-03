@@ -71,8 +71,10 @@ struct listitem {
 	const char *value;
 };
 
+struct curlbuf *test_posturl(struct dtsgui *dtsgui, const char *user, const char *passwd, const char *url, struct curl_post *post);
+
 /*toolbar.cpp*/
-void *app_toolbar(void *pw, long style, int id, const char *name);
+void *app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data);
 
 /*wizard.c*/
 dtsgui_pane reconfig_wizard(struct dtsgui *dtsgui, const char *title, void *data);

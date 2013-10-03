@@ -1194,10 +1194,10 @@ void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
 	tb->Show((show) ? true : false);
 }
 
-void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb) {
+void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb, void *data) {
 	DTSFrame *f = (DTSFrame*)dtsgui->appframe;
 
-	f->SetupToolbar(cb);
+	f->SetupToolbar(cb, data);
 }
 
 #ifdef __WIN32

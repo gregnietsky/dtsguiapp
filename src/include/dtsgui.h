@@ -59,7 +59,7 @@ typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_t
 typedef void (*dtsgui_xmltreenode_cb)(dtsgui_treeview, dtsgui_treenode, struct xml_node*, void*);
 typedef void (*dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void*);
 typedef void (*dtsgui_tabpanel_cb)(dtsgui_pane, void*);
-typedef void* (*dtsgui_toolbar_create)(void *, long, int, const char*);
+typedef void* (*dtsgui_toolbar_create)(struct dtsgui*, void *, long, int, const char*, void *data);
 
 struct point {
 	int x;
@@ -141,7 +141,7 @@ void *dtsgui_userdata(struct dtsgui *dtsgui);
 void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text);
 void dtsgui_reconfig(struct dtsgui *dtsgui);
 void dtsgui_setwindow(struct dtsgui *dtsgui, dtsgui_pane p);
-void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb);
+void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb, void *data);
 void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show);
 
 /*menu configuration*/

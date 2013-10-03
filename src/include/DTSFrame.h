@@ -40,7 +40,7 @@ class DTSFrame: public wxFrame {
 		void SetWindow(wxWindow *window);
 		struct dtsgui *GetDTSData(void);
 		virtual wxToolBar *OnCreateToolBar(long style, wxWindowID id, const wxString& name);
-		void SetupToolbar(dtsgui_toolbar_create cb);
+		void SetupToolbar(dtsgui_toolbar_create cb, void *data);
 	private:
 		void OnDTSEvent(wxCommandEvent &event);
 		wxBoxSizer *sizer;
@@ -55,6 +55,7 @@ class DTSFrame: public wxFrame {
 		wxGauge *pbar;
 		wxProgressDialog *pdia;
 		dtsgui_toolbar_create tbcb;
+		void *tb_data;
 };
 
 #endif // DTSFRAME_H

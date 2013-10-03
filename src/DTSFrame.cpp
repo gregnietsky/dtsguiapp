@@ -54,6 +54,7 @@ DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size
 	CreateStatusBar();
 	SetStatusText(status);
 	tbcb = NULL;
+	tb_data = NULL;
 
 //	pbar = new wxGauge(toolbar, wxID_ANY, 1000);
 	pbar = NULL;
@@ -83,6 +84,9 @@ DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size
 
 DTSFrame::~DTSFrame() {
 	objunref(dtsgui);
+	if (tb_data) {
+		objunref(tb_data);
+	}
 	delete blank;
 }
 
@@ -308,7 +312,7 @@ wxToolBar *DTSFrame::OnCreateToolBar(long style, wxWindowID id, const wxString& 
 	wxToolBar *tb;
 
 	if (tbcb) {
-		tb = (wxToolBar*)tbcb(this, style, id, name);
+		tb = (wxToolBar*)tbcb(dtsgui, this, style, id, name, tb_data);
 	} else {
 		tb = new wxToolBar(this, id, wxDefaultPosition, wxDefaultSize, style, name);
 	}
@@ -316,8 +320,17 @@ wxToolBar *DTSFrame::OnCreateToolBar(long style, wxWindowID id, const wxString& 
 	return tb;
 }
 
-void DTSFrame::SetupToolbar(dtsgui_toolbar_create cb) {
+void DTSFrame::SetupToolbar(dtsgui_toolbar_create cb, void *data) {
 	tbcb = cb;
+
+	if (tb_data) {
+		objunref(tb_data);
+		tb_data = NULL;
+	}
+
+	if (data && objref(data)) {
+		tb_data = data;
+	}
 
 	toolbar = CreateToolBar();
 
