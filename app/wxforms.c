@@ -114,6 +114,7 @@ dtsgui_pane open_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_menuitemenable(appdata->c_open, 0);
 	dtsgui_menuenable(appdata->cfg_menu, 1);
 	dtsgui_titleappend(dtsgui, filename);
+	dtsgui_set_toolbar(dtsgui, 0);
 	return NULL;
 }
 
@@ -129,6 +130,7 @@ dtsgui_pane save_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_titleappend(dtsgui, NULL);
 	objunref(appdata->xmldoc);
 	appdata->xmldoc = NULL;
+	dtsgui_set_toolbar(dtsgui, 1);
 	return NULL;
 }
 

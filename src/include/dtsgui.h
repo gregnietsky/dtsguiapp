@@ -140,6 +140,7 @@ void *dtsgui_userdata(struct dtsgui *dtsgui);
 void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text);
 void dtsgui_reconfig(struct dtsgui *dtsgui);
 void dtsgui_setwindow(struct dtsgui *dtsgui, dtsgui_pane p);
+void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show);
 
 /*menu configuration*/
 dtsgui_menu dtsgui_newmenu(struct dtsgui *dtsgui, const char *name);

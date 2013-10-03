@@ -45,6 +45,7 @@
 #include <wx/filedlg.h>
 #include <wx/notebook.h>
 #include <wx/progdlg.h>
+#include <wx/toolbar.h>
 
 #include <dtsapp.h>
 #include "dtsgui.hpp"
@@ -1184,6 +1185,13 @@ void dtsgui_newxmltabpane(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath,
 	tn->cb = cb;
 	dtsgui_setevcallback(p, evcb, tn);
 	objunref(tn);
+}
+
+void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
+	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
+	wxToolBar *tb = f->GetToolBar();
+
+	tb->Show((show) ? true : false);
 }
 
 #ifdef __WIN32
