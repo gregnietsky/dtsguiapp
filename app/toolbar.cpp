@@ -140,12 +140,14 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 				for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 					ipaddr = strdup(xml_getattr(xn, "ipaddr"));
 					newval = wxString(xn->value).Append(" [").Append(ipaddr).Append("]");
-					server->Append(newval, strdup(ipaddr));
+					server->Append(newval, (void*)ipaddr);
 					objunref(xn);
 				}
 				objunref(iter);
-				objunref(xp);
 				server->Popup();
+			}
+			if (xp) {
+				objunref(xp);
 			}
 			if (xmldoc) {
 				objunref(xmldoc);
