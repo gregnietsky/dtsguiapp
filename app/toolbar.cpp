@@ -109,11 +109,12 @@ void DTSAPPToolBar::OnServer(wxCommandEvent& event) {
 	} else if (etype == wxEVT_TEXT_ENTER) {
 		dtsgui_alert(dtsgui, "Got Me Some URL ARRRRGh");
 	} else if (etype == wxEVT_COMBOBOX) {
-		/*Setting the value fires events reenable popup when done*/
-		val.Append(" SELECTED INFO HERE");
-		sflags |= DTSAPPTB_SERVER_SET;
-		server->SetValue(val);
+		/*Windows Barfs if you change the value*/
+#ifdef __WIN32
+		sflags |= (DTSAPPTB_SERVER_POP | DTSAPPTB_SERVER_SET);
+#else
 		sflags |= DTSAPPTB_SERVER_POP;
+#endif // __WIN32
 	}
 }
 
