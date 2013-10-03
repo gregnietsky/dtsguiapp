@@ -567,7 +567,7 @@ void DTSTabWindowEvent::OnButton(wxCommandEvent &event) {
 	switch(eid) {
 		case wx_PANEL_BUTTON_YES:
 			pane->Update_XML();
-			break;
+		/*no break here will reload tab*/
 		case wx_PANEL_BUTTON_NO:
 			pg++;
 			tw->Undo(pg);

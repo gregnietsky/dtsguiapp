@@ -287,6 +287,10 @@ extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int bu
 
 	dp = new DTSTabPage(nb, f, name, true, butmask, cb, cdata, xmldoc);
 
+	if (userdata) {
+		dp->SetUserData(userdata);
+	}
+
 	return dp;
 }
 
@@ -847,6 +851,11 @@ void dtsgui_settitle(dtsgui_pane pane, const char *title) {
 	return p->SetTitle(title);
 }
 
+void dtsgui_setstatus(dtsgui_pane pane, const char *status) {
+	DTSPanel *p = (DTSPanel*)pane;
+	return p->SetStatus(status);
+}
+
 dtsgui_treenode dtsgui_treecont(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data) {
 	DTSTreeWindow *tw = (DTSTreeWindow*)tree;
 	DTSDVMCtrl *tc = tw->GetTreeCtrl();
@@ -1105,6 +1114,10 @@ extern int dtsgui_handle_newxmltabpane(dtsgui_pane p, int type, int event, void 
 		name = xml_getattr(xn, tn->tattr);
 	} else {
 		name = xn->value;
+	}
+
+	if (name) {
+		dtsgui_setstatus(p, name);
 	}
 
 	dtsgui_newtabpage(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata);

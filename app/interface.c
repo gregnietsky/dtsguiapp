@@ -30,6 +30,28 @@ struct new_iface_data {
 	struct xml_doc *xmldoc;
 };
 
+struct iface_cdata {
+	const char *name;
+};
+
+void free_iface_cdata(void *data) {
+	struct iface_cdata *cdata = data;
+	if (cdata->name) {
+		free((void*)cdata->name);
+	}
+}
+
+struct iface_cdata *get_iface_cdata(const char *val) {
+	struct iface_cdata *cd;
+
+	if (!(cd = objalloc(sizeof(*cd), free_iface_cdata))) {
+		return NULL;
+	}
+
+	ALLOC_CONST(cd->name, val);
+	return cd;
+}
+
 void free_newiface_data(void *data) {
 	struct new_iface_data *nd = data;
 
@@ -58,7 +80,6 @@ extern int handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) 
 	struct tab_newpane *tn = (struct tab_newpane*)data;
 	struct xml_node *xn;
 	const char *name;
-	int nl;
 
 	switch(event) {
 		case wx_PANEL_BUTTON_YES:
@@ -83,10 +104,7 @@ extern int handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) 
 	}
 
 	if (xn->value) {
-		nl = strlen(xn->value)+1;
-		if ((tn->cdata = objalloc(nl, NULL))) {
-			memcpy(tn->cdata, xn->value, nl);
-		}
+		tn->cdata = get_iface_cdata(xn->value);
 		if ((p = dtsgui_tabpage_insert(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata, tn->last, -1))) {
 			tn->last++;
 		}
@@ -99,12 +117,53 @@ extern int handle_newxmltabpane(dtsgui_pane p, int type, int event, void *data) 
 	return 0;
 }
 
+extern int handle_updatetabpane(dtsgui_pane p, int type, int event, void *data) {
+	struct iface_cdata *cdata = data;
+	const char *name;
+
+	switch(event) {
+		case wx_PANEL_BUTTON_YES:
+			break;
+		case wx_PANEL_BUTTON_NO:
+			return 1;
+		default:
+			return 1;
+	}
+
+	if (!cdata || !(name = dtsgui_findvalue(p, "iface"))) {
+		return 0;
+	}
+
+	if (cdata->name) {
+		free((void*)cdata->name);
+	}
+	ALLOC_CONST(cdata->name, name);
+
+	if ((name = dtsgui_findvalue(p, "name"))) {
+		dtsgui_setstatus(p, name);
+		free((void*)name);
+	}
+
+	return 1;
+}
+
+void network_iface_pane_cb(dtsgui_pane p, void *data) {
+	struct iface_cdata *cdata = data;
+	const char *iface = cdata->name;
+	const char *xpre = "/config/IP/Interfaces";
+
+	dtsgui_xmltextbox(p, "Name", "name", xpre, "Interface", NULL, iface, "name");
+	network_iface_pane(p, xpre, iface);
+	dtsgui_setevcallback(p, handle_updatetabpane, cdata);
+}
+
 void network_iface_new_pane_cb(dtsgui_pane p, void *data) {
 	struct new_iface_data *nd = data;
 
 	network_iface_new_pane(p, data);
-	dtsgui_newxmltabpane(nd->tv, p, "/config/IP/Interfaces", "Interface", "iface", "name", handle_newxmltabpane, network_iface_pane, NULL, nd->xmldoc, nd);
+	dtsgui_newxmltabpane(nd->tv, p, "/config/IP/Interfaces", "Interface", "iface", "name", handle_newxmltabpane, network_iface_pane_cb, NULL, nd->xmldoc, nd);
 }
+
 
 dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_tabview tabv;
@@ -114,9 +173,8 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	struct xml_search *xp;
 	struct xml_node *xn;
 	const char *name;
-	char *pdata;
+	struct iface_cdata *cdata;
 	void *iter = NULL;
-	int nl;
 
 	appdata = dtsgui_userdata(dtsgui);
 	xmldoc = appdata->xmldoc;
@@ -129,11 +187,9 @@ dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data) {
 
 	for(xn = xml_getfirstnode(xp, &iter); xn; xn = xml_getnextnode(iter)) {
 		name = xml_getattr(xn, "name");
-		nl = strlen(xn->value)+1;
-		pdata = objalloc(nl, NULL);
-		memcpy(pdata, xn->value, nl);
-		dtsgui_newtabpage(tabv, name, wx_PANEL_BUTTON_ACTION, NULL, xmldoc, network_iface_pane, pdata);
-		objunref(pdata);
+		cdata = get_iface_cdata(xn->value);
+		dtsgui_newtabpage(tabv, name, wx_PANEL_BUTTON_ACTION, NULL, xmldoc, network_iface_pane_cb, cdata);
+		objunref(cdata);
 		objunref(xn);
 	}
 	nd = get_newiface_data(tabv, xmldoc);

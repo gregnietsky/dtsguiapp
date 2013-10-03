@@ -81,7 +81,7 @@ void testpanel(dtsgui_pane p);
 
 /*netconfig.c*/
 dtsgui_pane advanced_config(struct dtsgui *dtsgui, const char *title, void *data);
-void network_iface_pane(dtsgui_pane p, void *data);
+void network_iface_pane(dtsgui_pane p, const char *xpre, const char *iface);
 void network_iface_new_pane(dtsgui_pane p, void *data);
 
 /*iface*/

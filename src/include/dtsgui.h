@@ -184,6 +184,7 @@ void dtsgui_xmlpanel_update(dtsgui_pane pane);
 void *dtsgui_paneldata(dtsgui_pane pane);
 
 void dtsgui_settitle(dtsgui_pane pane, const char *title);
+void dtsgui_setstatus(dtsgui_pane pane, const char *status);
 
 int dtsgui_treenodeid(dtsgui_treenode tn);
 

@@ -431,6 +431,10 @@ void DTSPanel::SetTitle(const wxString new_title, bool create) {
 	}
 }
 
+void DTSPanel::SetStatus(const wxString new_status) {
+	status = new_status;
+}
+
 void free_xmlelement(void *data) {
 	struct xml_element *xml = (struct xml_element*)data;
 
