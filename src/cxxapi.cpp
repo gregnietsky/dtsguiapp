@@ -249,7 +249,7 @@ dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, int butmask,
 	return dp;
 }
 
-extern void dtsgui_xmlpanel(dtsgui_pane pane, struct xml_doc *xmldoc) {
+extern void dtsgui_panel_setxml(dtsgui_pane pane, struct xml_doc *xmldoc) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->SetXMLDoc(xmldoc);
 }
