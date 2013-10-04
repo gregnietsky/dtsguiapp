@@ -589,7 +589,10 @@ dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char
 }
 
 void *dtsgui_userdata(struct dtsgui *dtsgui) {
-	return dtsgui->userdata;
+	if (dtsgui->userdata && objref(dtsgui->userdata)) {
+		return dtsgui->userdata;
+	}
+	return NULL;
 }
 
 struct bucket_list *dtsgui_panel_items(dtsgui_pane pane) {

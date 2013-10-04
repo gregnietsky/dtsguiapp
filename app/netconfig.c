@@ -744,13 +744,17 @@ void network_tree_setup(dtsgui_treeview tree, struct xml_doc *xmldoc) {
 
 dtsgui_pane advanced_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_treeview tree;
-	struct app_data *appdata;
 	struct xml_doc *xmldoc;
+	struct app_data *appdata;
 	char defconf[PATH_MAX];
 
-	appdata = dtsgui_userdata(dtsgui);
-	if (!appdata->xmldoc) {
+	if (!(xmldoc = app_getxmldoc(dtsgui))) {
+		if (!(appdata = dtsgui_userdata(dtsgui))) {
+			return NULL;
+		}
 		snprintf(defconf, PATH_MAX-1, "%s/default.xml", appdata->datadir);
+		objunref(appdata);
+
 		if (!is_file(defconf)) {
 			dtsgui_alert(dtsgui, "Default configuration not found.\nCheck Installation.");
 			return 0;
@@ -760,11 +764,10 @@ dtsgui_pane advanced_config(struct dtsgui *dtsgui, const char *title, void *data
 			dtsgui_alert(dtsgui, "Default configuration failed to load.\nCheck Installation.");
 			return 0;
 		}
-	} else {
-		xmldoc = appdata->xmldoc;
 	}
 
 	tree = dtsgui_treewindow(dtsgui, title, NULL, data, xmldoc);
 	network_tree_setup(tree, xmldoc);
+	objunref(xmldoc);
 	return tree;
 }

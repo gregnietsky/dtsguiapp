@@ -72,6 +72,8 @@ struct listitem {
 	const char *value;
 };
 
+struct xml_doc *app_getxmldoc(struct dtsgui *dtsgui);
+
 /*toolbar.cpp*/
 void *app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data);
 

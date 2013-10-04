@@ -323,23 +323,27 @@ void pbxconf_autoadd(dtsgui_pane pg, void *data) {
 
 dtsgui_pane pbx_settings(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_tabview tabv;
-	struct app_data *appdata;
+	struct xml_doc *xmldoc;
 
-	appdata = dtsgui_userdata(dtsgui);
+	if (!(xmldoc = app_getxmldoc(dtsgui))) {
+		return NULL;
+	}
+
 	tabv = dtsgui_tabwindow(dtsgui, title, NULL);
 
-	dtsgui_newtabpage(tabv, "Trunks", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_trunk, NULL);
-	dtsgui_newtabpage(tabv, "Options", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_topts, NULL);
-	dtsgui_newtabpage(tabv, "mISDN", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_misdn, NULL);
-	dtsgui_newtabpage(tabv, "E1", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_e1, NULL);
-	dtsgui_newtabpage(tabv, "MFC/R2", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_mfcr2, NULL);
-	dtsgui_newtabpage(tabv, "Global", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_global, NULL);
-	dtsgui_newtabpage(tabv, "ACD", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_acd, NULL);
-	dtsgui_newtabpage(tabv, "Exten", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_default, NULL);
-	dtsgui_newtabpage(tabv, "Location", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_location, NULL);
-	dtsgui_newtabpage(tabv, "Inbound", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_incoming, NULL);
-	dtsgui_newtabpage(tabv, "Num Plan", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_numplan, NULL);
-	dtsgui_newtabpage(tabv, "Auto Add", wx_PANEL_BUTTON_ACTION, NULL, appdata->xmldoc, pbxconf_autoadd, NULL);
+	dtsgui_newtabpage(tabv, "Trunks", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_trunk, NULL);
+	dtsgui_newtabpage(tabv, "Options", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_topts, NULL);
+	dtsgui_newtabpage(tabv, "mISDN", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_misdn, NULL);
+	dtsgui_newtabpage(tabv, "E1", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_e1, NULL);
+	dtsgui_newtabpage(tabv, "MFC/R2", wx_PANEL_BUTTON_ACTION, NULL,xmldoc, pbxconf_mfcr2, NULL);
+	dtsgui_newtabpage(tabv, "Global", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_global, NULL);
+	dtsgui_newtabpage(tabv, "ACD", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_acd, NULL);
+	dtsgui_newtabpage(tabv, "Exten", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_default, NULL);
+	dtsgui_newtabpage(tabv, "Location", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_location, NULL);
+	dtsgui_newtabpage(tabv, "Inbound", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_incoming, NULL);
+	dtsgui_newtabpage(tabv, "Num Plan", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_numplan, NULL);
+	dtsgui_newtabpage(tabv, "Auto Add", wx_PANEL_BUTTON_ACTION, NULL, xmldoc, pbxconf_autoadd, NULL);
 
+	objunref(xmldoc);
 	return tabv;
 }

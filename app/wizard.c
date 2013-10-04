@@ -433,8 +433,12 @@ extern dtsgui_pane newsys_wizard(struct dtsgui *dtsgui, const char *title, void 
 	struct xml_doc *xmldoc;
 	struct app_data *appdata;
 
-	appdata = dtsgui_userdata(dtsgui);
+	if (!(appdata = dtsgui_userdata(dtsgui))) {
+		return 0;
+	}
 	snprintf(defconf, PATH_MAX-1, "%s/default.xml", appdata->datadir);
+	objunref(appdata);
+
 	if (!is_file(defconf)) {
 		dtsgui_alert(dtsgui, "Default configuration not found.\nCheck Installation.");
 		return 0;
@@ -459,6 +463,7 @@ extern dtsgui_pane editsys_wizard(struct dtsgui *dtsgui, const char *title, void
 
 	if (!(xmldoc = xml_loaddoc(filename, 1	))) {
 		dtsgui_alert(dtsgui, "Configuration failed to load.\n");
+		objunref((void*)filename);
 		return 0;
 	}
 
@@ -469,12 +474,10 @@ extern dtsgui_pane editsys_wizard(struct dtsgui *dtsgui, const char *title, void
 }
 
 dtsgui_pane reconfig_wizard(struct dtsgui *dtsgui, const char *title, void *data) {
-	struct app_data *appdata;
 	struct xml_doc *xmldoc = NULL;
 
-	appdata = dtsgui_userdata(dtsgui);
-	if (appdata->xmldoc && objref(appdata->xmldoc)) {
-		xmldoc = appdata->xmldoc;
+	if (!(xmldoc = app_getxmldoc(dtsgui))) {
+		return NULL;
 	}
 
 	system_wizard(dtsgui, data, NULL, xmldoc, 0);
