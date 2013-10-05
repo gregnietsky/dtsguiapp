@@ -349,11 +349,11 @@ void DTSObject::SetUserData(void *data) {
 
 void *DTSObject::GetUserData(void) {
 	void *ud = NULL;
-	objlock(userdata);
+	objlock(refobj);
 	if (userdata && objref(userdata)) {
 		ud = userdata;
 	}
-	objunlock(userdata);
+	objunlock(refobj);
 	return ud;
 }
 
