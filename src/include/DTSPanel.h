@@ -61,6 +61,7 @@ class DTSPanelEvent: public wxEvtHandler {
 		void SetCallback(event_callback evcb = NULL, void *userdata = NULL);
 		void OnDialog(wxCommandEvent &event);
 	private:
+		int RunCallBack(int etype, int eid, void *cb_data);
 		void *data;
 		event_callback evcb;
 		DTSObject *parent;

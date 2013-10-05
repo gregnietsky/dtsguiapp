@@ -109,6 +109,23 @@ void DTSPanelEvent::SetCallback(event_callback ev_cb, void *userdata) {
 	evcb = ev_cb;
 }
 
+int DTSPanelEvent::RunCallBack(int etype, int eid, void *cb_data) {
+	void *cbdata = NULL;
+	int res;
+
+	if (cb_data && objref(cb_data)) {
+		cbdata = cb_data;
+	}
+
+	/*pass fresh ref to callback*/
+	res = evcb((void *)parent, etype, eid, cbdata);
+
+	if (cbdata) {
+		objunref(cbdata);
+	}
+	return res;
+}
+
 void DTSPanelEvent::OnButton(wxCommandEvent &event) {
 	int eid, i, etype;
 
@@ -119,21 +136,23 @@ void DTSPanelEvent::OnButton(wxCommandEvent &event) {
 
 	eid=event.GetId();
 
+	/*convert wxbutton info to own id's and pass this on except for dialog*/
 	for(i = 0; i < 6; i++) {
 		if (parent->buttons[i] == eid) {
 			eid = 1 << i;
 			break;
 		}
 	}
-
 	if (parent->type != wx_DTSPANEL_DIALOG) {
 		event.SetId(eid);
 	}
+
+	/*maybe oneday there will be a default*/
 	parent->EventHandler(eid, &event);
 
 	if (evcb) {
 		etype = event.GetEventType();
-		if (evcb((void *)parent, etype, eid, data)) {
+		if (RunCallBack(etype, eid, data)) {
 			event.Skip(true);
 		}
 	} else {
@@ -142,6 +161,7 @@ void DTSPanelEvent::OnButton(wxCommandEvent &event) {
 }
 
 void DTSPanelEvent::OnDialog(wxCommandEvent &event) {
+	/*translate enter into OK/Apply*/
 	event.SetId(parent->buttons[4]);
 	event.SetEventType(wxEVT_COMMAND_BUTTON_CLICKED);
 	OnButton(event);
@@ -180,13 +200,12 @@ void DTSPanelEvent::OnCombo(wxCommandEvent &event) {
 		eid=event.GetId();
 
 		if (evcb) {
-			evcb((void *)parent, etype, eid, fi);
+			RunCallBack(etype, eid, fi);
 
 			if (etype == wxEVT_COMMAND_TEXT_ENTER) {
 				cb->Popup();
 			}
 		}
-
 		objunref(fi);
 	} else {
 		event.Skip(true);
@@ -200,7 +219,7 @@ void DTSPanelEvent::OnDTSEvent(wxCommandEvent &event) {
 	eid=event.GetId();
 	if (evcb) {
 		etype = event.GetEventType();
-		evcb((void *)parent, etype, eid, data);
+		RunCallBack(etype, eid, data);
 	}
 	event.Skip(true);
 }
