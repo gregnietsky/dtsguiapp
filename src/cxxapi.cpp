@@ -60,11 +60,11 @@
 static int menuid = wxID_AUTO_LOWEST;
 
 
-dtsgui *dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status) {
+void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status) {
 	/*deleted on close*/
 	DTSApp *guiapp = new DTSApp();
 
-	return guiapp->CreateFrame(confcallback_cb, userdata, wsize, wpos, title, status);
+	guiapp->CreateFrame(confcallback_cb, userdata, wsize, wpos, title, status);
 }
 
 int dtsgui_run(int argc, char **argv) {
@@ -671,6 +671,9 @@ void dtsgui_wizard_free(void *data) {
 	if (dtswiz->wiz) {
 		delete dtswiz->wiz;
 	}
+	if (dtswiz->dtsgui) {
+		objunref(dtswiz->dtsgui);
+	}
 }
 
 extern struct dtsgui_wizard* dtsgui_newwizard(struct dtsgui *dtsgui, const char *title) {
@@ -681,15 +684,18 @@ extern struct dtsgui_wizard* dtsgui_newwizard(struct dtsgui *dtsgui, const char 
 		return NULL;
 	}
 
+	if (dtsgui && objref(dtsgui)) {
+		dtswiz->dtsgui = dtsgui;
+	} else {
+		objunref(dtswiz);
+		return NULL;
+	}
+
 	dtswiz->wiz = new wxWizard();
 	dtswiz->start = NULL;
-	dtswiz->dtsgui = dtsgui;
 
 	if (!dtswiz->wiz || !dtswiz->wiz->Create(f, wxID_ANY, title, wxNullBitmap, wxDefaultPosition, wxDEFAULT_DIALOG_STYLE | wxRESIZE_BORDER)) {
-		if (dtswiz->wiz) {
-			delete dtswiz->wiz;
-		}
-
+		objunref(dtswiz);
 		return NULL;
 	}
 

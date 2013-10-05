@@ -134,7 +134,7 @@ enum widget_type {
 #define wx_PANEL_BUTTON_NONE	0
 
 /*app frame config and control*/
-dtsgui *dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize,
+void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize,
 					  struct point wpos, const char *title, const char *status);
 int dtsgui_run(int argc, char **argv);
 void *dtsgui_userdata(struct dtsgui *dtsgui);
@@ -219,6 +219,14 @@ extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char 
 extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr);
 struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr);
 struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr);
+
+/*XML form items - see above for need to unref list/combo boxes*/
+extern void dtsgui_xnode_textbox(dtsgui_pane pane, const char *title, const char *attr);
+extern void dtsgui_xnode_textbox_multi(dtsgui_pane pane, const char *title, const char *attr);
+extern void dtsgui_xnode_passwdbox(dtsgui_pane pane, const char *title, const char *attr);
+extern void dtsgui_xnode_checkbox(dtsgui_pane pane, const char *title, const char *checkval, const char *uncheckval, const char *attr);
+struct form_item *dtsgui_xnode_listbox(dtsgui_pane pane, const char *title, const char *attr);
+struct form_item *dtsgui_xnode_combobox(dtsgui_pane pane, const char *title, const char *attr);
 
 /*add item to list*/
 void dtsgui_listbox_add(struct form_item *lbox, const char *text, const char *value);

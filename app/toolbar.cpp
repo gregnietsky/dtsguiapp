@@ -32,6 +32,7 @@
 class DTSAPPToolBar: public wxToolBar {
 	public:
 		DTSAPPToolBar(struct dtsgui *dtsgui, wxWindow *parent, long style, wxWindowID id, wxString name, void *data);
+		~DTSAPPToolBar();
 		static struct curl_post *GetPostInfo(const wxString& val);
 	private:
 		void HandleEvent(wxCommandEvent &event);
@@ -44,6 +45,8 @@ class DTSAPPToolBar: public wxToolBar {
 DTSAPPToolBar::DTSAPPToolBar(struct dtsgui *dtsgui, wxWindow *parent, long style, wxWindowID id, wxString name, void *data) {
 	if (dtsgui && objref(dtsgui)) {
 		this->dtsgui = (struct dtsgui*)dtsgui;
+	} else {
+		this->dtsgui = NULL;
 	}
 
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, style, name);
@@ -67,6 +70,12 @@ DTSAPPToolBar::DTSAPPToolBar(struct dtsgui *dtsgui, wxWindow *parent, long style
 	Bind(wxEVT_TEXT_ENTER, &DTSAPPToolBar::HandleEvent, this);
 	Bind(wxEVT_COMBOBOX, &DTSAPPToolBar::HandleEvent, this);
 	Bind(wxEVT_COMBOBOX_DROPDOWN, &DTSAPPToolBar::HandleEvent, this);
+}
+
+DTSAPPToolBar::~DTSAPPToolBar() {
+	if (dtsgui) {
+		objunref(dtsgui);
+	}
 }
 
 struct curl_post *DTSAPPToolBar::GetPostInfo(const wxString& val) {

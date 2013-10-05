@@ -89,6 +89,7 @@ dtsgui_pane open_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	if (!(appdata->xmldoc = xml_loaddoc(filename, 1	))) {
 		objunlock(appdata);
 		objunref(appdata);
+		objunref((void*)filename);
 		dtsgui_alert(dtsgui, "Configuration failed to load.\n");
 		return NULL;
 	}
@@ -136,7 +137,6 @@ dtsgui_pane save_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	return NULL;
 }
 
-
 dtsgui_pane view_config_xml(struct dtsgui *dtsgui, const char *title, void *data) {
 	struct xml_doc *xmldoc = NULL;
 	dtsgui_pane p;
@@ -149,8 +149,8 @@ dtsgui_pane view_config_xml(struct dtsgui *dtsgui, const char *title, void *data
 	xmlbuf = xml_doctobuffer(xmldoc);
 	p = dtsgui_textpane(dtsgui, "XML Configuration", xml_getbuffer(xmlbuf));
 
-	objunref(xmldoc);
 	objunref(xmlbuf);
+	objunref(xmldoc);
 
 	return p;
 }
@@ -302,7 +302,8 @@ void help_menu(struct dtsgui *dtsgui) {
 int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata = data;
 
-	if (!data || !objref(appdata)) {
+
+	if (!data) {
 		return 0;
 	}
 
@@ -314,7 +315,6 @@ int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 	help_menu(dtsgui);
 	test_menu(dtsgui);
 
-	objunref(appdata);
 	return 1;
 
 	/*load xml config via http*/
@@ -333,10 +333,6 @@ void free_appdata(void *data) {
 
 	if (appdata->datadir) {
 		free((void*)appdata->datadir);
-	}
-
-	if (appdata->dtsgui) {
-		objunref(appdata->dtsgui);
 	}
 
 	if (appdata->xmldoc) {
@@ -375,9 +371,8 @@ int main(int argc, char **argv) {
 	xml_init();
 	xslt_init();
 
-	appdata->dtsgui = dtsgui_config(guiconfig_cb, appdata, wsize, wpos, "Distrotech System App", "Welcome to Distrotech App!");
+	dtsgui_config(guiconfig_cb, appdata, wsize, wpos, "Distrotech System App", "Welcome to Distrotech App!");
 	res = dtsgui_run(argc, argv);
-	objunref(appdata->dtsgui);
 	objunref(appdata);
 
 	xslt_close();

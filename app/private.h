@@ -57,7 +57,6 @@ enum node_id {
 };
 
 struct app_data {
-	struct dtsgui *dtsgui;
 	struct xml_doc *xmldoc;
 	const char *datadir;
 	const char *openconf;
