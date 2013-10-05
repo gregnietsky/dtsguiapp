@@ -167,7 +167,7 @@ void dtsgui_settitle(dtsgui_pane pane, const char *title);
 void dtsgui_delpane(dtsgui_pane pane);
 void *dtsgui_paneldata(dtsgui_pane pane);
 void dtsgui_setevcallback(dtsgui_pane pane,event_callback evcb, void *data);
-void dtsgui_configcallback(dtsgui_pane pane,dtsgui_configcb cb, void *data);
+void dtsgui_configcallback(dtsgui_pane pane,dtsgui_configcb cb, void *data); /*unuded*/
 
 /*panel xml set/get*/
 void dtsgui_panel_setxml(dtsgui_pane pane, struct xml_doc *xmldoc);
