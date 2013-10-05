@@ -358,3 +358,7 @@ void DTSFrame::SetupToolbar(dtsgui_toolbar_create cb, void *data) {
 	}
 	toolbar->Realize();
 }
+
+wxMenuBar *DTSFrame::GetMenuBar() {
+	return menubar;
+}

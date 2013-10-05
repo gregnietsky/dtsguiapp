@@ -27,11 +27,16 @@
 
 #include <wx/app.h>
 #include <wx/wizard.h>
+#include <wx/frame.h>
+#include <wx/progdlg.h>
+#include <wx/gauge.h>
 
 #include <dtsapp.h>
 
 #include "dtsgui.hpp"
+
 #include "DTSApp.h"
+#include "DTSFrame.h"
 
 static void free_dtsgui(void *data) {
 	struct dtsgui *dtsgui = (struct dtsgui *)data;
@@ -82,7 +87,7 @@ bool DTSApp::OnInit() {
 	curl_setauth_cb(dtsgui_pwdialog, dtsgui);
 
 	/*deleted on close*/
-	newappframe(dtsgui);
+	new DTSFrame(dtsgui->title, wxPoint(dtsgui->wpos.x, dtsgui->wpos.y), wxSize(dtsgui->wsize.x, dtsgui->wsize.y), dtsgui);
 
 	if (dtsgui->userdata && objref(dtsgui->userdata)) {
 		data = dtsgui->userdata;

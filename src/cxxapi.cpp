@@ -106,10 +106,6 @@ wxString getpanename(dtsgui_pane pane) {
 	return p->GetName();
 }
 
-wxMenuBar *DTSFrame::GetMenuBar() {
-	return menubar;
-}
-
 dtsgui_menu dtsgui_newmenu(struct dtsgui *dtsgui, const char *name) {
 	/*deleted with menubar*/
 	wxMenu *new_menu = NULL;
@@ -177,11 +173,6 @@ extern dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsg
 	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::DynamicPanelEvent, frame, menuid, menuid, (wxObject *)ev_data);
 	menuid++;
 	return mi;
-}
-
-void newappframe(struct dtsgui *dtsgui) {
-	new DTSFrame(dtsgui->title, wxPoint(dtsgui->wpos.x, dtsgui->wpos.y),
-				 wxSize(dtsgui->wsize.x, dtsgui->wsize.y), dtsgui);
 }
 
 int dtsgui_confirm(struct dtsgui *dtsgui, const char *text) {
@@ -528,12 +519,19 @@ void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const c
 	void *iter;
 	const char *name, *value;
 
-	xs = xml_xpath(xmldoc, xpath, nattr);
+	if (!(xs = xml_xpath(xmldoc, xpath, nattr))) {
+		return;
+	}
+
 	for(xn = xml_getfirstnode(xs, &iter); xn ; xn = xml_getnextnode(iter)) {
 		name = (nattr) ? xml_getattr(xn, nattr) : xn->value;
 		value = (vattr) ? xml_getattr(xn, vattr) : xn->value;
 		dtsgui_listbox_add(lb, name, value);
 		objunref(xn);
+	}
+	objunref(xs);
+	if (iter) {
+		objunref(iter);
 	}
 }
 
@@ -589,10 +587,15 @@ dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char
 }
 
 void *dtsgui_userdata(struct dtsgui *dtsgui) {
+	void *ud = NULL;
+
+	objlock(dtsgui);
 	if (dtsgui->userdata && objref(dtsgui->userdata)) {
-		return dtsgui->userdata;
+		ud = dtsgui->userdata;
 	}
-	return NULL;
+	objunlock(dtsgui);
+
+	return ud;
 }
 
 struct bucket_list *dtsgui_panel_items(dtsgui_pane pane) {
@@ -601,11 +604,19 @@ struct bucket_list *dtsgui_panel_items(dtsgui_pane pane) {
 }
 
 extern void *dtsgui_item_data(struct form_item *fi) {
-	if (fi && fi->data.ptr) {
-		return fi->data.ptr;
-	} else {
+	void *fp = NULL;
+
+	if (!fi) {
 		return NULL;
 	}
+
+	objlock(fi);
+	if (fi->data.ptr && objref(fi->data.ptr)) {
+		fp = fi->data.ptr;
+	}
+	objunlock(fi);
+
+	return fp;
 }
 
 extern const char *dtsgui_item_name(struct form_item *fi) {
@@ -631,6 +642,11 @@ extern 	const char *dtsgui_item_value(struct form_item *fi) {
 		wxCheckBox *c;
 	} w;
 
+	if (!fi) {
+		return NULL;
+	}
+
+	objlock(fi);
 	switch(fi->type) {
 		case DTS_WIDGET_TEXTBOX:
 			w.t = (wxTextCtrl *)fi->widget;
@@ -652,6 +668,8 @@ extern 	const char *dtsgui_item_value(struct form_item *fi) {
 			}
 			break;
 	}
+	objunlock(fi);
+
 	return value;
 }
 
@@ -778,48 +796,27 @@ extern void *dtsgui_paneldata(dtsgui_pane pane) {
 	return p->GetUserData();
 }
 
-extern struct xml_doc *dtsgui_loadxmlurl(struct dtsgui *dtsgui, const char *user, const char *passwd, const char *url) {
-	struct curlbuf *cbuf;
-	struct xml_doc *xmldoc = NULL;
-	struct basic_auth *auth;
-
-	if (user && passwd) {
-		auth = dtsgui_pwdialog(user, passwd, dtsgui);
-	} else {
-		auth = NULL;
-	}
-
-	auth = dtsgui_pwdialog(user, passwd, dtsgui);
-	if (!(cbuf = curl_posturl(url, auth, NULL, dtsgui_pwdialog, dtsgui))) {
-		objunref(auth);
-		return NULL;
-	}
-
-	curl_ungzip(cbuf);
-
-	if (cbuf && cbuf->c_type && !strcmp("application/xml", cbuf->c_type)) {
-		xmldoc = xml_loadbuf(cbuf->body, cbuf->bsize, 1);
-	}
-
-	objunref(cbuf);
-	objunref(auth);
-	return xmldoc;
-}
-
 void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text) {
 	DTSFrame *f = (DTSFrame *)dtsgui->appframe;
 	char *newtitle;
 	int len;
 
+	objlock(dtsgui);
 	if (text) {
 		len = strlen(dtsgui->title)+strlen(text)+4;
-		newtitle=(char*)malloc(len);
-		snprintf(newtitle, len, "%s [%s]", dtsgui->title, text);
+		if ((newtitle=(char*)malloc(len))) {
+			snprintf(newtitle, len, "%s [%s]", dtsgui->title, text);
+		} else {
+			newtitle = (char*)dtsgui->title;
+		}
 	} else {
 		newtitle = (char*)dtsgui->title;
 	}
+	objunlock(dtsgui);
+
 	f->SetTitle(newtitle);
-	if (text) {
+
+	if (text && newtitle) {
 		free(newtitle);
 	}
 }
@@ -915,6 +912,7 @@ struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *
 	}
 
 	if (!xn) {
+		objunref(xmldoc);
 		return NULL;
 	}
 
@@ -1025,9 +1023,11 @@ static int dtsgui_handle_newtreenode(dtsgui_pane p, int type, int event, void *d
 		tree->Expand(parent);
 	}
 
+	/*the panel event manager holds a ref for nn*/
 	if (nn->node_cb) {
 		nn->node_cb(nn->tv, tn, xn, nn->data);
 	}
+	objunref(xn);
 	item = wxDataViewItem(tn);
 	tw->Select(item);
 	return 0;
@@ -1131,6 +1131,8 @@ extern int dtsgui_handle_newxmltabpane(dtsgui_pane p, int type, int event, void 
 	}
 
 	dtsgui_newtabpage(tn->tabv, name, wx_PANEL_BUTTON_ACTION, tn->data, tn->xmldoc, tn->cb, tn->cdata);
+
+	objunref(xn);
 	return 0;
 }
 
@@ -1210,6 +1212,15 @@ void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb, void *
 	f->SetupToolbar(cb, data);
 }
 
+extern struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf) {
+	struct xml_doc *xmldoc = NULL;
+
+	curl_ungzip(cbuf);
+	if (cbuf && cbuf->c_type && !strcmp("application/xml", cbuf->c_type)) {
+		xmldoc = xml_loadbuf(cbuf->body, cbuf->bsize, 1);
+	}
+	return xmldoc;
+}
 
 struct curlbuf *dtsgui_posturl(const char *url, curl_post *post) {
 	return curl_posturl(url, NULL, post, NULL, NULL);
