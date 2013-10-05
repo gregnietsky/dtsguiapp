@@ -19,6 +19,26 @@
 #ifndef DTSAPP_H
 #define DTSAPP_H
 
+
+struct dtsgui {
+	private:
+		class DTSFrame *appframe;
+		const char *title;
+		const char *status;
+		dtsgui_configcb cb;
+		void *userdata;
+		struct point wsize;
+		struct point wpos;
+	public:
+		int SetupAPPFrame(void);
+		void Setup(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *userdata);
+		void *GetUserData(void);
+		void SetStatusText(void);
+		void AppendTitle(const char *text);
+		void UnRef(void);
+		class DTSFrame *GetFrame(void);
+};
+
 class DTSApp : public wxApp {
 	public:
 		~DTSApp();

@@ -34,6 +34,7 @@
 #include <wx/notebook.h>
 
 #include <dtsapp.h>
+#include "dtsgui.h"
 #include "dtsgui.hpp"
 
 #include "DTSFrame.h"

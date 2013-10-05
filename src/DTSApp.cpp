@@ -33,6 +33,7 @@
 
 #include <dtsapp.h>
 
+#include "dtsgui.h"
 #include "dtsgui.hpp"
 
 #include "DTSApp.h"
