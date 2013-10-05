@@ -866,7 +866,11 @@ DTSTabPage &DTSTabPage::operator=(const DTSTabPage &orig) {
 	objlock(orig.refobj);
 	while(!objtrylock(this->refobj)) {
 		objunlock(orig.refobj);
+#ifdef __WIN32
+		Sleep(1);
+#else
 		usleep(1000);
+#endif
 		objlock(orig.refobj);
 	}
 	button_mask = orig.button_mask;

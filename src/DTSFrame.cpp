@@ -33,9 +33,9 @@
 #include <wx/progdlg.h>
 #include <wx/gauge.h>
 #include <wx/notebook.h>
-#include <wx/app.h>
 
 #include <dtsapp.h>
+#include <wx/app.h>
 
 #include "dtsgui.h"
 #include "dtsgui.hpp"
