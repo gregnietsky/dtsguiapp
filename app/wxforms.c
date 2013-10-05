@@ -302,7 +302,6 @@ void help_menu(struct dtsgui *dtsgui) {
 int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 	struct app_data *appdata = data;
 
-
 	if (!data) {
 		return 0;
 	}

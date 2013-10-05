@@ -163,11 +163,11 @@ void dtsgui_exit(dtsgui_menu dtsmenu, struct dtsgui *dtsgui);
 /*panel config*/
 dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, int butmask, enum panel_type type, void *userdata);
 dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char *buf);
-void dtsgui_settitle(dtsgui_pane pane, const char *title);
+void dtsgui_settitle(dtsgui_pane pane, const char *title); /*unused*/
 void dtsgui_delpane(dtsgui_pane pane);
 void *dtsgui_paneldata(dtsgui_pane pane);
 void dtsgui_setevcallback(dtsgui_pane pane,event_callback evcb, void *data);
-void dtsgui_configcallback(dtsgui_pane pane,dtsgui_configcb cb, void *data); /*unuded*/
+void dtsgui_configcallback(dtsgui_pane pane,dtsgui_configcb cb, void *data); /*unused*/
 
 /*panel xml set/get*/
 void dtsgui_panel_setxml(dtsgui_pane pane, struct xml_doc *xmldoc);

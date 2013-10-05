@@ -324,7 +324,7 @@ extern dtsgui_pane dtsgui_treepane(dtsgui_treeview tv, const char *name, int but
 	dp->type = wx_DTSPANEL_TREE;
 
 	if (name) {
-		dp->SetTitle(name);
+		dp->SetTitle(name, true);
 	}
 
 	if (xmldoc) {
@@ -725,7 +725,7 @@ extern dtsgui_pane dtsgui_wizard_addpage(struct dtsgui_wizard *dtswiz, const cha
 	}
 
 	if (title) {
-		dww->SetTitle(title);
+		dww->SetTitle(title, true);
 	}
 
 	if (xmldoc) {

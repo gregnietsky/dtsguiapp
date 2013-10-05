@@ -73,7 +73,7 @@ void DTSApp::CreateFrame(dtsgui_configcb confcallback_cb,void *data, struct poin
 }
 
 bool DTSApp::OnInit() {
-	void *data;
+	void *data = NULL;
 	bool res;
 
 	/*start up curl and add progress bits*/
