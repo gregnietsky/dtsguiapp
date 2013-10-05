@@ -31,9 +31,9 @@ struct dtsgui {
 		void SetStatusText(void);
 		void AppendTitle(const char *text);
 		void UnRef(void);
-
-		class DTSFrame *appframe;
+		class DTSFrame *GetFrame(void);
 	private:
+		class DTSFrame *appframe;
 		const char *title;
 		const char *status;
 		dtsgui_configcb cb;

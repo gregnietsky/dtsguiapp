@@ -138,6 +138,10 @@ void dtsgui::AppendTitle(const char *text) {
 	}
 }
 
+class DTSFrame *dtsgui::GetFrame(void) {
+	return appframe;
+}
+
 DTSApp::~DTSApp() {
 	if (dtsgui) {
 		objlock(dtsgui);
