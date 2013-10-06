@@ -27,16 +27,18 @@ class DTSFrame: public wxFrame {
 		void SetAbout(const char *a_text);
 		bool Confirm(wxString text);
 		void Alert(wxString text);
+		/*progress*/
 		int StartProgress(const wxString &text, int maxval, int quit);
 		void EndProgress(void);
 		int UpdateProgress(int cval, const wxString &msg);
 		int IncProgress(int ival, const wxString &msg);
-		void SendDTSEvent(int eid, wxObject *evobj);
+
 		void SetWindow(wxWindow *window);
 		struct dtsgui *GetDTSData(void);
 		virtual wxToolBar *OnCreateToolBar(long style, wxWindowID id, const wxString& name);
 		void SetupToolbar(dtsgui_toolbar_create cb, void *data);
 		/*events*/
+		void SendDTSEvent(int eid, wxObject *evobj);
 		void SwitchWindow(wxCommandEvent &event);
 		void DynamicPanelEvent(wxCommandEvent &event);
 		void OnClose(wxCommandEvent &event);

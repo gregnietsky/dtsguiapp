@@ -125,15 +125,25 @@ void DTSPanelEvent::SetCallback(event_callback ev_cb, void *userdata) {
 
 int DTSPanelEvent::RunCallBack(int etype, int eid, void *cb_data) {
 	void *cbdata = NULL;
+	DTSFrame *f;
+	struct dtsgui *dtsgui = NULL;
 	int res;
 
 	if (cb_data && objref(cb_data)) {
 		cbdata = cb_data;
 	}
 
-	/*pass fresh ref to callback*/
-	res = evcb((void *)parent, etype, eid, cbdata);
+	/*get app data*/
+	if ((f = parent->GetFrame())) {
+		dtsgui = f->GetDTSData();
+	}
 
+	/*pass fresh ref to callback*/
+	res = evcb(dtsgui, (void *)parent, etype, eid, cbdata);
+
+	if (dtsgui) {
+		objunref(dtsgui);
+	}
 	if (cbdata) {
 		objunref(cbdata);
 	}

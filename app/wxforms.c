@@ -295,6 +295,10 @@ void help_menu(struct dtsgui *dtsgui) {
 
 	p = dtsgui_textpane(dtsgui, "TEST", "Hello This is a text box");
 	dtsgui_newmenuitem(help, dtsgui, "&Hello...\tCtrl-H", p);
+
+	dtsgui_menusep(help);
+	test_menu(dtsgui, help, "https://sip1.speakezi.co.za:666/auth/test.php");
+
 	dtsgui_menusep(help);
 	dtsgui_about(help, dtsgui, "This is a test application!!!!");
 }
@@ -310,7 +314,6 @@ int guiconfig_cb(struct dtsgui *dtsgui, void *data) {
 	file_menu(dtsgui);
 	config_menu(dtsgui);
 	help_menu(dtsgui);
-	test_menu(dtsgui);
 
 	return 1;
 }
