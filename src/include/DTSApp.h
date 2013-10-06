@@ -21,12 +21,21 @@
 
 struct dtsgui {
 	public:
+		void *operator new(size_t sz) {
+			return objalloc(sz, unref);
+		}
+		void operator delete(void *obj) {
+		}
+		static void unref(void *data) {
+			struct dtsgui *refobj = (struct dtsgui*)data;
+			delete refobj;
+		}
+		dtsgui(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *userdata);
+		~dtsgui();
 		int SetupAPPFrame(void);
-		void Setup(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *userdata);
 		void *GetUserData(void);
 		void SetStatusText(void);
 		void AppendTitle(const char *text);
-		static void UnRef(void *data);
 		class DTSFrame *GetFrame(void);
 	private:
 		void *userdata;
@@ -40,13 +49,12 @@ struct dtsgui {
 
 class DTSApp : public wxApp {
 	public:
+		DTSApp(dtsgui_configcb confcallback_cb, void *data, struct point wsize, struct point wpos, const char *title, const char *status);
 		~DTSApp();
-		void CreateFrame(dtsgui_configcb confcallback_cb, void *data, struct point wsize, struct point wpos, const char *title, const char *status);
 	private:
-		int curl;
-		void ShowFrame();
 		virtual bool OnInit();
-		struct dtsgui *dtsgui;
+		struct dtsgui *guidata;
+		int curl;
 };
 
 extern "C" {

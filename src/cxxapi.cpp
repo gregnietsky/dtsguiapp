@@ -63,9 +63,7 @@ static int menuid = wxID_AUTO_LOWEST;
 
 void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status) {
 	/*deleted on close*/
-	DTSApp *guiapp = new DTSApp();
-
-	guiapp->CreateFrame(confcallback_cb, userdata, wsize, wpos, title, status);
+	new DTSApp(confcallback_cb, userdata, wsize, wpos, title, status);
 }
 
 int dtsgui_run(int argc, char **argv) {
