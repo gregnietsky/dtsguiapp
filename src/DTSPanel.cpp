@@ -238,7 +238,6 @@ void DTSPanelEvent::OnCombo(wxCommandEvent &event) {
 
 void DTSPanelEvent::OnDTSEvent(wxCommandEvent &event) {
 	int  eid, etype;
-	printf("Got DTS EVent\n");
 
 	eid=event.GetId();
 	if (evcb) {
@@ -487,10 +486,6 @@ bool DTSPanel::ShowPanel(bool show) {
 			}
 			beenshown = true;
 		}
-	}
-
-	if (dtsevthandler) {
-		printf("Do Something\n");
 	}
 
 	return show;
