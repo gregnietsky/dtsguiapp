@@ -50,7 +50,7 @@ enum treewinmenu {
 	DTS_TREEWIN_MENU_DELETE
 };
 
-DTSTreeWindowEvent::DTSTreeWindowEvent(void *userdata, dtsgui_tree_cb tree_cb, struct dtsgui *dtsgui, DTSTreeWindow *win) {
+DTSTreeWindowEvent::DTSTreeWindowEvent(void *userdata, dtsgui_tree_cb tree_cb, class dtsgui *dtsgui, DTSTreeWindow *win) {
 	if (userdata && objref(userdata)) {
 		data = userdata;
 	} else {
@@ -312,7 +312,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 	 DTSObject(stat_msg) {
 
 	int w, h, p, psize;
-	struct dtsgui *udata;
+	class dtsgui *udata;
 	a_window = NULL;
 	DTSTreeWindowEvent *dtsevt;
 	wxSplitterWindow *sw = static_cast<wxSplitterWindow*>(this);

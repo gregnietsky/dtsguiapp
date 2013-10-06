@@ -126,7 +126,7 @@ void DTSPanelEvent::SetCallback(event_callback ev_cb, void *userdata) {
 int DTSPanelEvent::RunCallBack(int etype, int eid, void *cb_data) {
 	void *cbdata = NULL;
 	DTSFrame *f;
-	struct dtsgui *dtsgui = NULL;
+	class dtsgui *dtsgui = NULL;
 	int res;
 
 	if (cb_data && objref(cb_data)) {

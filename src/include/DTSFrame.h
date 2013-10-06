@@ -34,7 +34,7 @@ class DTSFrame: public wxFrame {
 		int IncProgress(int ival, const wxString &msg);
 
 		void SetWindow(wxWindow *window);
-		struct dtsgui *GetDTSData(void);
+		class dtsgui *GetDTSData(void);
 		virtual wxToolBar *OnCreateToolBar(long style, wxWindowID id, const wxString& name);
 		void SetupToolbar(dtsgui_toolbar_create cb, void *data);
 		/*events*/
@@ -52,7 +52,7 @@ class DTSFrame: public wxFrame {
 		wxToolBar *toolbar;
 		wxString about;
 		wxMenuBar *menubar;
-		struct dtsgui *dtsgui;
+		class dtsgui *dtsgui;
 		bool abortconfirm;
 		wxGauge *pbar;
 		wxProgressDialog *pdia;

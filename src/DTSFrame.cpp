@@ -47,7 +47,7 @@
 
 wxDEFINE_EVENT(DTS_APP_EVENT, wxCommandEvent);
 
-DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size, struct dtsgui *dtsgui)
+DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size, class dtsgui *dtsgui)
 	: wxFrame(NULL, wxID_ANY, title, pos, size) {
 
 	if (!dtsgui || !objref(dtsgui)) {
@@ -312,7 +312,7 @@ void DTSFrame::SendDTSEvent(int eid, wxObject *evobj) {
 	ProcessWindowEvent(event);
 }
 
-struct dtsgui *DTSFrame::GetDTSData(void) {
+class dtsgui *DTSFrame::GetDTSData(void) {
 	if (dtsgui && objref(dtsgui)) {
 		return dtsgui;
 	}
