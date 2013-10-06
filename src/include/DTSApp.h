@@ -22,7 +22,7 @@
 #define DTS_OJBREF_CLASS(classtype)	void *operator new(size_t sz) {\
 			return objalloc(sz, unref);\
 		}\
-			void operator delete(void *obj) {\
+		void operator delete(void *obj) {\
 		}\
 		static void unref(void *data) {\
 			delete (classtype*)data;\
@@ -54,7 +54,7 @@ class DTSApp : public wxApp {
 		~DTSApp();
 	private:
 		virtual bool OnInit();
-		class dtsgui *guidata;
+		class dtsgui *dtsgui;
 		int curl;
 };
 

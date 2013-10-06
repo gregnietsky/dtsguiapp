@@ -42,6 +42,7 @@
 dtsgui::dtsgui(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *data) {
 	wsize = w_size;
 	wpos = w_pos;
+
 	cb = confcallback_cb;
 	if (data && objref(data)) {
 		userdata = data;
@@ -136,29 +137,29 @@ class DTSFrame *dtsgui::GetFrame(void) {
 	return appframe;
 }
 
+DTSApp::DTSApp(dtsgui_configcb confcallback_cb,void *data, struct point wsize, struct point wpos, const char *title, const char *status) {
+	dtsgui = new class dtsgui(title, status, wsize, wpos, confcallback_cb, data);
+
+	/*start up curl and add progress bits*/
+	curl = curlinit();
+	curl_setprogress(curl_progress_function, curl_progress_ctrl, curl_startprogress, dtsgui);
+	curl_setauth_cb(dtsgui_pwdialog, dtsgui);
+}
+
 DTSApp::~DTSApp() {
 	if (curl) {
 		curlclose();
 		curl = 0;
 	}
-	if (guidata) {
-		objunref((void *)guidata);
+	if (dtsgui) {
+		objunref((void *)dtsgui);
 	}
-}
-
-DTSApp::DTSApp(dtsgui_configcb confcallback_cb,void *data, struct point wsize, struct point wpos, const char *title, const char *status) {
-	guidata = new dtsgui(title, status, wsize, wpos, confcallback_cb, data);
 }
 
 bool DTSApp::OnInit() {
-	if (!guidata) {
+	if (!dtsgui) {
 		return false;
 	}
 
-	/*start up curl and add progress bits*/
-	curl = curlinit();
-	curl_setprogress(curl_progress_function, curl_progress_ctrl, curl_startprogress, guidata);
-	curl_setauth_cb(dtsgui_pwdialog, guidata);
-
-	return guidata->SetupAPPFrame();
+	return dtsgui->SetupAPPFrame();
 }
