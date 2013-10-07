@@ -85,7 +85,7 @@ tree_newnode::tree_newnode(dtsgui_treeview tree, dtsgui_treenode tn, const char 
 	this->p_cb = p_cb;
 }
 
-int tree_newnode::handle_newtreenode_cb(struct dtsgui *dtsgui, dtsgui_pane p, int type, int event, void *data) {
+int tree_newnode::handle_newtreenode_cb(class dtsgui *dtsgui, dtsgui_pane p, int type, int event, void *data) {
 	class tree_newnode *nn = (class tree_newnode*)data;
 	DTSPanel *dp = (DTSPanel*)p;
 
@@ -103,7 +103,7 @@ int tree_newnode::handle_newtreenode_cb(struct dtsgui *dtsgui, dtsgui_pane p, in
 	return nn->handle_newtreenode(dtsgui, dp);
 }
 
-int tree_newnode::handle_newtreenode(struct dtsgui *dtsgui, DTSPanel *dp) {
+int tree_newnode::handle_newtreenode(class dtsgui *dtsgui, DTSPanel *dp) {
 	DTSTreeWindow *tw = (DTSTreeWindow*)tv;
 	DTSDVMCtrl *tree = tw->GetTreeCtrl();
 	DTSDVMListStore *ls;
@@ -198,7 +198,7 @@ tab_newpane::~tab_newpane() {
 	}
 }
 
-int tab_newpane::handle_newtabpane_cb(struct dtsgui *dtsgui, dtsgui_pane p, int type, int event, void *data) {
+int tab_newpane::handle_newtabpane_cb(class dtsgui *dtsgui, dtsgui_pane p, int type, int event, void *data) {
 	class tab_newpane *tp = (class tab_newpane*)data;
 	DTSPanel *dp = (DTSPanel*)p;
 
@@ -216,7 +216,7 @@ int tab_newpane::handle_newtabpane_cb(struct dtsgui *dtsgui, dtsgui_pane p, int 
 	return tp->handle_newtabpane(dtsgui, dp);
 }
 
-int tab_newpane::handle_newtabpane(struct dtsgui *dtsgui, DTSPanel *dp) {
+int tab_newpane::handle_newtabpane(class dtsgui *dtsgui, DTSPanel *dp) {
 	DTSTabPage *np;
 	wxBookCtrlBase *nb = static_cast<wxBookCtrlBase*>(tabv);
 	DTSFrame *f = tabv->GetFrame();
