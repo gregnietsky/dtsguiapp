@@ -123,9 +123,9 @@ int tree_newnode::handle_newtreenode(struct dtsgui *dtsgui, DTSPanel *dp) {
 
 	root = wxDataViewItem(this->tn);
 	if (flags & DTS_TREE_NEW_NODE_CONTAINER) {
-		ls = (DTSDVMListStore*)tree->AppendItem(root, name, flags & DTS_TREE_NEW_NODE_EDIT, flags & DTS_TREE_NEW_NODE_SORT, flags & DTS_TREE_NEW_NODE_DELETE, type, p_cb, data).GetID();
-	} else {
 		ls = (DTSDVMListStore*)tree->AppendContainer(root, name, flags & DTS_TREE_NEW_NODE_EDIT, flags & DTS_TREE_NEW_NODE_SORT, flags & DTS_TREE_NEW_NODE_DELETE, type, p_cb, data).GetID();
+	} else {
+		ls = (DTSDVMListStore*)tree->AppendItem(root, name, flags & DTS_TREE_NEW_NODE_EDIT, flags & DTS_TREE_NEW_NODE_SORT, flags & DTS_TREE_NEW_NODE_DELETE, type, p_cb, data).GetID();
 	}
 	ls->SetXMLData(xn, tattr);
 
@@ -217,6 +217,9 @@ int tab_newpane::handle_newtabpane_cb(struct dtsgui *dtsgui, dtsgui_pane p, int 
 }
 
 int tab_newpane::handle_newtabpane(struct dtsgui *dtsgui, DTSPanel *dp) {
+	DTSTabPage *np;
+	wxBookCtrlBase *nb = static_cast<wxBookCtrlBase*>(tabv);
+	DTSFrame *f = tabv->GetFrame();
 	struct xml_node *xn;
 	const char *name;
 	int pos = last;
@@ -233,20 +236,22 @@ int tab_newpane::handle_newtabpane(struct dtsgui *dtsgui, DTSPanel *dp) {
 	}
 
 	if (data_cb) {
-		printf("%p %p\n", cdata, ndata);
 		data_cb(xmldoc, xn, data, &ndata, &pos);
-		printf("%p %p\n", cdata, ndata);
 		if (cdata && (ndata != cdata)) {
 			objunref(cdata);
 			cdata = NULL;
 		}
-		if (data) {
+		if (ndata) {
 			cdata = ndata;
 		}
 	}
 
-	dtsgui_tabpage_insert(tabv, name, wx_PANEL_BUTTON_ACTION, data, xmldoc, cb, cdata, pos, -1);
-	last++;
+	if ((np = new DTSTabPage(nb, f, name, false, wx_PANEL_BUTTON_ACTION, cb, cdata, xmldoc))) {
+		np->InsertPage(pos);
+		tabv->Undo(-1);
+		tabv->SetSelection(pos);
+		last++;
+	}
 
 	objunref(xn);
 	return 0;
