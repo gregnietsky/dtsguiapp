@@ -26,10 +26,6 @@
 #endif
 
 #include <wx/app.h>
-#include <wx/wizard.h>
-#include <wx/frame.h>
-#include <wx/progdlg.h>
-#include <wx/gauge.h>
 
 #include <dtsapp.h>
 

@@ -19,27 +19,27 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#include <wx/app.h>
 #include <wx/frame.h>
-#include <wx/menu.h>
-#include <wx/msgdlg.h>
-#include <wx/sizer.h>
-#include <wx/wizard.h>
+
 #include <wx/gbsizer.h>
 #include <wx/textctrl.h>
+#include <wx/panel.h>
 #include <wx/scrolwin.h>
-#include <wx/stattext.h>
-#include <wx/combobox.h>
-#include <wx/toolbar.h>
-#include <wx/progdlg.h>
+#include <wx/wizard.h>
+
+#include <wx/menu.h>
+#include <wx/msgdlg.h>
 #include <wx/gauge.h>
-#include <wx/notebook.h>
+#include <wx/progdlg.h>
+#include <wx/toolbar.h>
 
 #include <dtsapp.h>
-#include <wx/app.h>
 
 #include "dtsgui.h"
 #include "dtsgui.hpp"
 
+#include "pitems.h"
 #include "evdata.h"
 #include "DTSFrame.h"
 #include "DTSPanel.h"

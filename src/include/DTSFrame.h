@@ -19,6 +19,12 @@
 #ifndef DTSFRAME_H
 #define DTSFRAME_H
 
+#include <wx/frame.h>
+
+typedef class wxBoxSizer wxBoxSizer;
+typedef class wxGauge wxGauge;
+typedef class wxProgressDialog wxProgressDialog;
+
 class DTSFrame: public wxFrame {
 	public:
 		DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size, struct dtsgui *dtsgui);

@@ -19,20 +19,10 @@
 #ifndef DTSAPP_H
 #define DTSAPP_H
 
-#define DTS_OJBREF_CLASS(classtype)	void *operator new(size_t sz) {\
-			return objalloc(sz, unref);\
-		}\
-		void operator delete(void *obj) {\
-		}\
-		static void unref(void *data) {\
-			delete (classtype*)data;\
-		}
-
 class dtsgui {
 	public:
-		DTS_OJBREF_CLASS(dtsgui)
+		DTS_OJBREF_CLASS(dtsgui);
 		dtsgui(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *userdata);
-		~dtsgui();
 		int SetupAPPFrame(void);
 		void *GetUserData(void);
 		void SetStatusText(void);
