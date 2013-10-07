@@ -56,91 +56,18 @@
 
 static int menuid = wxID_AUTO_LOWEST;
 
-
-void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status) {
-	/*deleted on close*/
-	new DTSApp(confcallback_cb, userdata, wsize, wpos, title, status);
-}
-
-int dtsgui_run(int argc, char **argv) {
-	return wxEntry(argc, argv);
-}
-
-static void dtsgui_quit(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, int type) {
-	wxMenu *m = (wxMenu *)dtsmenu;
-	DTSFrame *frame = dtsgui->GetFrame();
-
-	switch (type) {
-		case wxID_EXIT:
-			m->Append(type, "&Quit", "Quit And Exit");
-			frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::OnClose, frame, wxID_EXIT);
-			break;
-
-		case wxID_SAVE:
-			m->Append(type, "E&xit", "Save And Exit");
-			frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::OnClose, frame, wxID_SAVE);
-			break;
-	}
-}
-
-void dtsgui_exit(dtsgui_menu dtsmenu, struct dtsgui *dtsgui) {
-	dtsgui_quit(dtsmenu, dtsgui, wxID_EXIT);
-}
-
-void dtsgui_close(dtsgui_menu dtsmenu, struct dtsgui *dtsgui) {
-	dtsgui_quit(dtsmenu, dtsgui, wxID_SAVE);
-}
-
-wxWindow *getpanewindow(dtsgui_pane pane) {
-	DTSObject *p = (DTSObject *)pane;
-	return p->GetPanel();
-}
-
-wxString getpanename(dtsgui_pane pane) {
-	DTSObject *p = (DTSObject *)pane;
-	return p->GetName();
-}
-
-dtsgui_menu dtsgui_newmenu(struct dtsgui *dtsgui, const char *name) {
-	/*deleted with menubar*/
-	wxMenu *new_menu = NULL;
-	wxMenuBar *menubar;
-	DTSFrame *frame = dtsgui->GetFrame();
-
-	if ((menubar = frame->GetMenuBar())) {
-		new_menu = new wxMenu;
-		menubar->Append(new_menu, name);
-	}
-
-	return new_menu;
-}
-
-void dtsgui_about(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *text) {
-	wxMenu *m = (wxMenu *)dtsmenu;
-	DTSFrame *frame = dtsgui->GetFrame();
-
-
-	frame->SetAbout(text);
-	m->Append(wxID_ABOUT);
-	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::OnAbout, frame, wxID_ABOUT);
-}
-
-void dtsgui_menusep(dtsgui_menu dtsmenu) {
-	wxMenu *m = (wxMenu *)dtsmenu;
-	m->AppendSeparator();
-}
-
 dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane p) {
 	wxMenu *m = (wxMenu *)dtsmenu;
 	DTSFrame *frame = dtsgui->GetFrame();
+	DTSObject *dp = (DTSObject *)p;
 	wxMenuItem *mi;
 
-	wxWindow *w = (p) ? getpanewindow(p) : NULL;
+	wxWindow *w = (dp) ? dp->GetPanel() : NULL;
 
 	/*handed over to wx no need to delete*/
 	evdata *ev_data = new evdata(w);
 
-	mi = m->Append(menuid, hint, (p) ? getpanename(p) : "");
+	mi = m->Append(menuid, hint, (dp) ? dp->GetName() : "");
 	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::SwitchWindow, frame, menuid, menuid, (wxObject *)ev_data);
 	menuid++;
 	return mi;
@@ -164,105 +91,6 @@ extern dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsg
 	frame->Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::DynamicPanelEvent, frame, menuid, menuid, (wxObject *)ev_data);
 	menuid++;
 	return mi;
-}
-
-int dtsgui_confirm(struct dtsgui *dtsgui, const char *text) {
-	DTSFrame *f = dtsgui->GetFrame();
-
-	return f->Confirm(text);
-}
-
-void dtsgui_alert(struct dtsgui *dtsgui, const char *text) {
-	DTSFrame *f = dtsgui->GetFrame();
-
-	f->Alert(text);
-}
-
-int dtsgui_progress_start(struct dtsgui *dtsgui, const char *text, int maxval, int quit) {
-	DTSFrame *f = dtsgui->GetFrame();
-
-	return f->StartProgress(text, maxval, quit);
-}
-
-int dtsgui_progress_update(struct dtsgui *dtsgui, int newval, const char* newtext) {
-	DTSFrame *f = dtsgui->GetFrame();
-
-	return f->UpdateProgress(newval, newtext);
-}
-
-int dtsgui_progress_increment(struct dtsgui *dtsgui, int ival, const char* newtext) {
-	DTSFrame *f = dtsgui->GetFrame();
-
-	return f->IncProgress(ival, newtext);
-}
-
-void dtsgui_progress_end(struct dtsgui *dtsgui) {
-	DTSFrame *f = dtsgui->GetFrame();
-	f->EndProgress();
-}
-
-dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, const char *title, int butmask,
-						 enum panel_type type, void *userdata) {
-	DTSFrame *frame = dtsgui->GetFrame();
-	DTSPanel *dp = NULL;
-
-	switch (type) {
-		case wx_DTSPANEL_SCROLLPANEL:
-			dp = new DTSScrollPanel(frame, frame, name, butmask);
-			break;
-		case wx_DTSPANEL_PANEL:
-			dp = new DTSStaticPanel(frame, frame, name, butmask);
-			break;
-		case wx_DTSPANEL_WINDOW:
-			dp = new DTSWindow(frame);
-			break;
-		case wx_DTSPANEL_DIALOG:
-			dp = new DTSDialog(frame, name, butmask);
-			break;
-		case wx_DTSPANEL_TAB:
-		case wx_DTSPANEL_TREE:
-			break;
-		case wx_DTSPANEL_WIZARD:
-			dp = new DTSWizardWindow(name);
-			break;
-	}
-	if (title) {
-		dp->SetTitle(title, true);
-	}
-
-	dp->SetUserData(userdata);
-	return dp;
-}
-
-extern void dtsgui_panel_setxml(dtsgui_pane pane, struct xml_doc *xmldoc) {
-	DTSPanel *p = (DTSPanel *)pane;
-	p->SetXMLDoc(xmldoc);
-}
-
-struct xml_doc *dtsgui_panelxml(dtsgui_pane pane) {
-	DTSPanel *p = (DTSPanel *)pane;
-	return p->GetXMLDoc();
-}
-
-void dtsgui_delpane(dtsgui_pane pane) {
-	DTSPanel *p = (DTSPanel *)pane;
-	delete p;
-}
-
-extern dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *title, dtsgui_tree_cb tree_cb, void *userdata, struct xml_doc *xmldoc) {
-	DTSTreeWindow *tw;
-	DTSFrame *frame = dtsgui->GetFrame();
-
-	tw = new DTSTreeWindow(frame, frame, tree_cb, title, 25);
-	tw->SetXMLDoc(xmldoc);
-	return tw;
-}
-
-extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title, void *data) {
-	DTSTabWindow *tw;
-	DTSFrame *frame = dtsgui->GetFrame();
-	tw = new DTSTabWindow(frame, title, data);
-	return tw;
 }
 
 extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata) {
@@ -341,42 +169,6 @@ dtsgui_pane dtsgui_treepane_defalt(dtsgui_treeview self, dtsgui_treenode node) {
 		free((void*)title);
 	}
 	return p;
-}
-
-extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	p->TextBox(title, name, value, wxTE_LEFT | wxTE_PROCESS_ENTER, 1, data, DTSGUI_FORM_DATA_PTR);
-}
-
-extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	p->TextBox(title, name, value, wxTE_MULTILINE, 5, data,  DTSGUI_FORM_DATA_PTR);
-}
-
-extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	p->TextBox(title, name, value, wxTE_PASSWORD | wxTE_PROCESS_ENTER, 1, data,  DTSGUI_FORM_DATA_PTR);
-}
-
-extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheck, int ischecked, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	p->CheckBox(title, name, ischecked, checkval, uncheck, data,  DTSGUI_FORM_DATA_PTR);
-}
-
-extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, const char *name, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	return p->ListBox(title, name, NULL, data,  DTSGUI_FORM_DATA_PTR);
-}
-
-extern struct form_item *dtsgui_combobox(dtsgui_pane pane, const char *title, const char *name, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	return p->ComboBox(title, name, NULL, data, DTSGUI_FORM_DATA_PTR);
 }
 
 extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
@@ -507,26 +299,6 @@ void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const c
 	}
 }
 
-void dtsgui_listbox_add(struct form_item *listbox, const char *text, const char *value) {
-	listbox->Append(text, value);
-}
-
-void dtsgui_listbox_set(struct form_item *listbox, int idx) {
-	listbox->SetSelection(idx);
-}
-
-void dtsgui_setevcallback(dtsgui_pane pane,event_callback evcb, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	return p->SetEventCallback(evcb, data);
-}
-
-void dtsgui_configcallback(dtsgui_pane pane,dtsgui_configcb cb, void *data) {
-	DTSPanel *p = (DTSPanel *)pane;
-
-	p->SetConfigCallback(cb, data);
-}
-
 void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data) {
 	DTSDialog *p = (DTSDialog *)pane;
 
@@ -547,27 +319,6 @@ dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char
 	return p;
 }
 
-void *dtsgui_userdata(struct dtsgui *dtsgui) {
-	return dtsgui->GetUserData();
-}
-
-struct bucket_list *dtsgui_panel_items(dtsgui_pane pane) {
-	DTSDialog *p = (DTSDialog *)pane;
-	return p->GetItems();
-}
-
-extern void *dtsgui_item_data(struct form_item *fi) {
-	if (!fi) {
-		return NULL;
-	}
-
-	return fi->GetData();
-}
-
-extern const char *dtsgui_item_name(struct form_item *fi) {
-	return fi->GetName();
-}
-
 extern struct form_item *dtsgui_finditem(dtsgui_pane p, const char *name) {
 	struct form_item *fi;
 	struct bucket_list *il;
@@ -579,14 +330,6 @@ extern struct form_item *dtsgui_finditem(dtsgui_pane p, const char *name) {
 	return fi;
 }
 
-extern 	const char *dtsgui_item_value(struct form_item *fi) {
-	if (!fi) {
-		return NULL;
-	}
-
-	return fi->GetValue();
-}
-
 extern const char *dtsgui_findvalue(dtsgui_pane p, const char *name) {
 	struct form_item *fi;
 	const char *val = NULL;
@@ -596,60 +339,6 @@ extern const char *dtsgui_findvalue(dtsgui_pane p, const char *name) {
 		objunref(fi);
 	}
 	return val;
-}
-
-extern struct dtsgui_wizard* dtsgui_newwizard(struct dtsgui *dtsgui, const char *title) {
-	return new dtsgui_wizard(dtsgui, dtsgui->GetFrame(), title);
-}
-
-extern dtsgui_pane dtsgui_wizard_addpage(struct dtsgui_wizard *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc) {
-	return dtswiz->AddPage(title, xmldoc, userdata);
-}
-
-extern int dtsgui_runwizard(struct dtsgui_wizard *dtswiz) {
-	return dtswiz->RunWizard();
-}
-
-const char *dtsgui_filedialog(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter, long style) {
-	DTSFrame *f = dtsgui->GetFrame();
-	void *filename = NULL;
-
-	wxFileDialog *fd = new wxFileDialog(f, title, (path) ? path : "", (name) ? name : "",
-										(filter) ? filter : wxFileSelectorDefaultWildcardStr, style);
-	if (fd->ShowModal() != wxID_CANCEL) {
-		filename = dtsgui_char2obj(fd->GetPath().ToUTF8());
-	}
-
-	delete fd;
-	return (const char*)filename;
-}
-
-extern const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
-	return dtsgui_filedialog(dtsgui, title, path, name, filter, wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
-}
-
-extern const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
-	return dtsgui_filedialog(dtsgui, title, path, name, filter, wxFD_OPEN | wxFD_FILE_MUST_EXIST);
-}
-
-extern void dtsgui_xmlpanel_update(dtsgui_pane pane) {
-	DTSPanel *p = (DTSPanel*)pane;
-	p->Update_XML();
-}
-
-
-extern void *dtsgui_paneldata(dtsgui_pane pane) {
-	DTSPanel *p = (DTSPanel*)pane;
-	return p->GetUserData();
-}
-
-void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text) {
-	dtsgui->AppendTitle(text);
-}
-
-void dtsgui_menuitemenable(dtsgui_menuitem dmi, int enable) {
-	wxMenuItem *mi = (wxMenuItem*)dmi;
-	mi->Enable((enable) ? true : false);
 }
 
 void dtsgui_menuenable(dtsgui_menu dm, int enable) {
@@ -669,71 +358,6 @@ void dtsgui_menuenable(dtsgui_menu dm, int enable) {
 	}
 }
 
-void dtsgui_setwindow(struct dtsgui *dtsgui, dtsgui_pane p) {
-	DTSFrame *f = dtsgui->GetFrame();
-	f->SetWindow(NULL);
-}
-
-void dtsgui_sendevent(struct dtsgui *dtsgui, int eid) {
-	DTSFrame *f =  dtsgui->GetFrame();
-	f->SendDTSEvent(eid, NULL);
-}
-
-void dtsgui_settitle(dtsgui_pane pane, const char *title) {
-	DTSPanel *p = (DTSPanel*)pane;
-	return p->SetTitle(title);
-}
-
-void dtsgui_setstatus(dtsgui_pane pane, const char *status) {
-	DTSPanel *p = (DTSPanel*)pane;
-	return p->SetStatus(status);
-}
-
-dtsgui_treenode dtsgui_treecont(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data) {
-	DTSTreeWindow *tw = (DTSTreeWindow*)tree;
-	DTSDVMCtrl *tc = tw->GetTreeCtrl();
-	wxDataViewItem root = wxDataViewItem(node);
-
-	return tc->AppendContainer(root, title, can_edit, can_sort, can_del, nodeid, p_cb, data).GetID();
-}
-
-dtsgui_treenode dtsgui_treeitem(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data) {
-	DTSTreeWindow *tw = (DTSTreeWindow*)tree;
-	DTSDVMCtrl *tc = tw->GetTreeCtrl();
-	wxDataViewItem root = wxDataViewItem(node);
-
-	return tc->AppendItem(root, title, can_edit, can_sort, can_del, nodeid, p_cb, data).GetID();
-}
-
-struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *node, const char *nodeval, const char *attrkey) {
-	DTSPanel *dp = (DTSPanel*)p;
-	return dp->Panel2XML(xpath, node, nodeval, attrkey);
-}
-
-int dtsgui_treenodeid(dtsgui_treenode tn) {
-	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
-
-	return ls->GetNodeID();
-}
-
-void dtsgui_treenodesetxml(dtsgui_treenode tn,struct xml_node *xn, const char *tattr) {
-	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
-
-	return ls->SetXMLData(xn, tattr);
-}
-
-struct xml_node *dtsgui_treenodegetxml(dtsgui_treenode tn, char **buf) {
-	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
-
-	return ls->GetXMLData(buf);
-}
-
-void *dtsgui_treenodegetdata(dtsgui_treenode tn) {
-	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
-
-	return ls->GetUserData();
-}
-
 const char *dtsgui_treenodeparent(dtsgui_treenode tn) {
 	DTSDVMListStore *entry, *parent;
 	const char *val;
@@ -744,15 +368,6 @@ const char *dtsgui_treenodeparent(dtsgui_treenode tn) {
 	}
 	val = strdup(parent->GetTitle().ToUTF8());
 	return val;
-}
-
-void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr,
-							int nid, int flags, dtsgui_xmltreenode_cb node_cb, void *data, dtsgui_treeviewpanel_cb p_cb) {
-	DTSPanel *dp = (DTSPanel*)p;
-	class tree_newnode *nn = new tree_newnode(tree, tn, xpath, node, vitem, tattr, nid, flags, node_cb, data, p_cb);
-
-	dp->SetEventCallback(&tree_newnode::handle_newtreenode_cb, nn);
-	objunref(nn);
 }
 
 void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *title) {
@@ -780,34 +395,11 @@ void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *t
 	objunref(xmldoc);
 }
 
-void dtsgui_newxmltabpane(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath, const char *node, const char *vitem, const char *tattr,  dtsgui_tabpane_newdata_cb data_cb, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, void *data) {
-	DTSPanel *dp = (DTSPanel*)p;
-
-	struct tab_newpane *tn = new tab_newpane((DTSTabWindow*)tabv, xpath, node, vitem, tattr, data_cb, cb, cdata, xmldoc, data);
-
-	dp->SetEventCallback(&tab_newpane::handle_newtabpane_cb, tn);
-	objunref(tn);
-}
-
-void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
-	DTSFrame *f = dtsgui->GetFrame();
-	wxToolBar *tb = f->GetToolBar();
-
-	tb->Show((show) ? true : false);
-	f->Layout();
-}
-
-void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb, void *data) {
-	DTSFrame *f = dtsgui->GetFrame();
-
-	f->SetupToolbar(cb, data);
-}
-
 extern struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf) {
 	struct xml_doc *xmldoc = NULL;
 
-	curl_ungzip(cbuf);
 	if (cbuf && cbuf->c_type && !strcmp("application/xml", cbuf->c_type)) {
+		curl_ungzip(cbuf);
 		xmldoc = xml_loadbuf(cbuf->body, cbuf->bsize, 1);
 	}
 	return xmldoc;
@@ -821,15 +413,6 @@ void *dtsgui_char2obj(const char *orig) {
 		memcpy(nobj, orig, len);
 	}
 	return nobj;
-}
-
-struct curl_post *dtsgui_pane2post(dtsgui_pane p) {
-	DTSPanel *dp = (DTSPanel*)p;
-	return dp->Panel2Post();
-}
-
-struct curlbuf *dtsgui_posturl(const char *url, curl_post *post) {
-	return curl_posturl(url, NULL, post, NULL, NULL);
 }
 
 #ifdef __WIN32

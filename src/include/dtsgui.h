@@ -255,7 +255,6 @@ const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char
 const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
 
 /*utils*/
-struct curlbuf *dtsgui_posturl(const char *url, curl_post *post);
 struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf);
 struct curl_post *dtsgui_pane2post(dtsgui_pane p);
 void *dtsgui_char2obj(const char *orig);
