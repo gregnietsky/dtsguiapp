@@ -19,7 +19,6 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#include <wx/app.h>
 #include <wx/frame.h>
 
 #include <wx/gbsizer.h>
@@ -35,6 +34,7 @@
 #include <wx/toolbar.h>
 
 #include <dtsapp.h>
+#include <wx/app.h>
 
 #include "dtsgui.h"
 #include "dtsgui.hpp"

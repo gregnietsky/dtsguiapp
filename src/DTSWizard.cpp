@@ -17,14 +17,15 @@
 */
 
 #include <stdint.h>
-#include <dtsapp.h>
 
-#include <wx/app.h>
 #include <wx/gbsizer.h>
 #include <wx/textctrl.h>
 #include <wx/panel.h>
 #include <wx/scrolwin.h>
 #include <wx/wizard.h>
+
+#include <dtsapp.h>
+#include <wx/app.h>
 
 #include "dtsgui.h"
 #include "pitems.h"
