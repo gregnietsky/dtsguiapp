@@ -257,6 +257,46 @@ int tab_newpane::handle_newtabpane(struct dtsgui *dtsgui, DTSPanel *dp) {
 	return 0;
 }
 
+treemenu::treemenu() {
+	menu = new wxMenu();
+	msort = menu->Append(DTS_TREEWIN_MENU_SORT, "Sort");
+	mup = menu->Append(DTS_TREEWIN_MENU_MOVEUP, "Move Up");
+	mdown = menu->Append(DTS_TREEWIN_MENU_MOVEDOWN, "Move Down");
+	menu->AppendSeparator();
+	mdelete = menu->Append(DTS_TREEWIN_MENU_DELETE, "Delete");
+}
+
+treemenu::~treemenu() {
+	delete menu;
+}
+
+bool treemenu::Show(wxWindow *w, bool cont, int cnt, bool first, bool last, bool c_sort, bool del) {
+	int scnt = 0;
+
+	if (!cont && del) {
+		scnt++;
+	}
+	mdelete->Enable(!cont && del);
+
+	if (!(cnt < 2) && c_sort) {
+		scnt++;
+	}
+	msort->Enable(!(cnt < 2) && c_sort);
+
+	if (!first || !last) {
+		scnt++;
+	}
+	mup->Enable(!first);
+	mdown->Enable(!last);
+
+	if (scnt) {
+		w->PopupMenu(menu);
+		return true;
+	} else {
+		return false;
+	}
+}
+
 DTSTreeWindowEvent::DTSTreeWindowEvent(void *userdata, dtsgui_tree_cb tree_cb, class dtsgui *dtsgui, DTSTreeWindow *win) {
 	if (userdata && objref(userdata)) {
 		data = userdata;
@@ -506,14 +546,6 @@ void DTSTreeWindowEvent::OnButton(wxCommandEvent &event) {
 	event.Skip(true);
 }
 
-void free_menu(void *data) {
-	struct treemenu *rmenu = (struct treemenu*)data;
-
-	if (rmenu->menu) {
-		delete rmenu->menu;
-	}
-}
-
 DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb tree_cb, wxString stat_msg, int pos, void *u_data)
 	:wxSplitterWindow(parent, -1, wxDefaultPosition, wxDefaultSize),
 	 DTSObject(stat_msg) {
@@ -528,16 +560,7 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 	wxDataViewItem root, root4;
 	wxWindow *aw;
 
-	if ((rmenu = (struct treemenu*)objalloc(sizeof(*rmenu), free_menu))) {
-		wxMenu *menu;
-		rmenu->menu = new wxMenu();
-		menu = rmenu->menu;
-		rmenu->msort = menu->Append(DTS_TREEWIN_MENU_SORT, "Sort");
-		rmenu->mup = menu->Append(DTS_TREEWIN_MENU_MOVEUP, "Move Up");
-		rmenu->mdown = menu->Append(DTS_TREEWIN_MENU_MOVEDOWN, "Move Down");
-		menu->AppendSeparator();
-		rmenu->mdelete = menu->Append(DTS_TREEWIN_MENU_DELETE, "Delete");
-	}
+	rmenu = new treemenu();
 
 	if (u_data && objref(u_data)) {
 		userdata = u_data;
@@ -687,31 +710,7 @@ wxWindow *DTSTreeWindow::SetWindow(DTSPanel *window, const wxDataViewItem& item)
 }
 
 void DTSTreeWindow::ShowRMenu(bool cont, int cnt, bool first, bool last, bool c_sort, bool del) {
-	wxMenu *menu;
-	int scnt = 0;
-
-	if (!rmenu || !(menu = rmenu->menu)) {
-		return;
-	}
-	if (!cont && del) {
-		scnt++;
-	}
-	rmenu->mdelete->Enable(!cont && del);
-
-	if (!(cnt < 2) && c_sort) {
-		scnt++;
-	}
-	rmenu->msort->Enable(!(cnt < 2) && c_sort);
-
-	if (!first || !last) {
-		scnt++;
-	}
-	rmenu->mup->Enable(!first);
-	rmenu->mdown->Enable(!last);
-
-	if (scnt) {
-		tree->PopupMenu(menu);
-	}
+	rmenu->Show(tree, cont, cnt, first, last, c_sort, del);
 }
 
 DTSTreeWindow::~DTSTreeWindow() {

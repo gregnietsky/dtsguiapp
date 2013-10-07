@@ -180,7 +180,6 @@ void DTSPanelEvent::OnCombo(wxCommandEvent &event) {
 	} else {
 		dtype = 0;
 	}
-
 	bloop = init_bucket_loop(bl);
 
 	while(bl && bloop && (fi = (struct form_item *)next_bucket_loop(bloop))) {

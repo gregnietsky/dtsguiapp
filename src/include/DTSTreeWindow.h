@@ -63,12 +63,17 @@ class tab_newpane {
 		int last;
 };
 
-struct treemenu {
-	wxMenu *menu;
-	wxMenuItem *msort;
-	wxMenuItem *mup;
-	wxMenuItem *mdown;
-	wxMenuItem *mdelete;
+class treemenu {
+	public:
+		DTS_OJBREF_CLASS(treemenu);
+		treemenu();
+		bool Show(wxWindow *w, bool cont, int cnt, bool first, bool last, bool c_sort, bool del);
+	private:
+		wxMenu *menu;
+		wxMenuItem *msort;
+		wxMenuItem *mup;
+		wxMenuItem *mdown;
+		wxMenuItem *mdelete;
 };
 
 class DTSTreeWindowEvent: public wxEvtHandler {
