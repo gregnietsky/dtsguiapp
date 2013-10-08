@@ -18,13 +18,6 @@
 
 #define __DTS_C_API
 
-#ifdef __WIN32__
-#define UNICODE 1
-#include <winsock2.h>
-#include <windows.h>
-#include <shlobj.h>
-#endif
-
 #include <wx/menu.h>
 #include <wx/filedlg.h>
 #include <wx/toolbar.h>
