@@ -19,10 +19,6 @@
 #include <stdlib.h>
 #include <wx/toolbar.h>
 
-#ifdef __WIN32__
-#define UNICODE 1
-#endif
-
 #include "dtsgui.h"
 
 #include "DTSApp.h"
