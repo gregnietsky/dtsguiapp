@@ -22,12 +22,8 @@
 #include <limits.h>
 
 #include "dtsgui.h"
+
 #include "private.h"
-
-#ifndef DATA_DIR
-#define DATA_DIR	"/usr/share/dtsguiapp"
-#endif
-
 
 void network_config_dns_domain_server_new(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data);
 

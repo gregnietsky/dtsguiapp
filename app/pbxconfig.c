@@ -22,11 +22,6 @@
 
 #include "private.h"
 
-#ifndef DATA_DIR
-#define DATA_DIR	"/usr/share/dtsguiapp"
-#endif
-
-
 void pbxconf_trunk(dtsgui_pane pg, void *data) {
 	struct listitem trunks[] = {{"Linux Modular ISDN Group 1", "mISDN/g:out/"},
 								{"Linux Modular ISDN Group 2", "mISDN/g:out2/"},

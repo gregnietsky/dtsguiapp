@@ -31,10 +31,6 @@
 
 #include "private.h"
 
-#ifndef DATA_DIR
-#define DATA_DIR	"/usr/share/dtsguiapp"
-#endif
-
 void xml_config(struct xml_doc *xmldoc) {
 	void *xmlbuf;
 

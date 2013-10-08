@@ -25,10 +25,6 @@
 
 #include "private.h"
 
-#ifndef DATA_DIR
-#define DATA_DIR	"/usr/share/dtsguiapp"
-#endif
-
 static void set_temp_xml(struct xml_doc *xmldoc) {
 	struct xml_search *xs;
 	struct xml_node *xn, *xn2;

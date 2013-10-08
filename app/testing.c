@@ -19,11 +19,8 @@
 #include <unistd.h>
 
 #include "dtsgui.h"
-#include "private.h"
 
-#ifndef DATA_DIR
-#define DATA_DIR	"/usr/share/dtsguiapp"
-#endif
+#include "private.h"
 
 void post_items(struct dtsgui *dtsgui, dtsgui_pane p) {
 	struct curl_post *post;
