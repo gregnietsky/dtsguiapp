@@ -455,4 +455,4 @@ void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
 	f->Layout();
 }
 
-}
+} /*END Namespace*/

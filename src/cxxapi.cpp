@@ -33,6 +33,8 @@
 #include <dtsapp.h>
 #include "dtsgui.h"
 
+namespace DTS_C_API {
+
 void dtsgui_menuenable(dtsgui_menu dm, int enable) {
 	bool state =  (enable) ? true : false;
 	wxMenuItemList items;
@@ -75,3 +77,4 @@ void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);
 }
 #endif
+} /* END namespace*/

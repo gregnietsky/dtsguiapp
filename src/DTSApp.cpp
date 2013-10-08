@@ -138,8 +138,8 @@ DTSApp::DTSApp(dtsgui_configcb confcallback_cb,void *data, struct point wsize, s
 
 	/*start up curl and add progress bits*/
 	curl = curlinit();
-	curl_setprogress(curl_progress_function, curl_progress_ctrl, curl_startprogress, dtsgui);
-	curl_setauth_cb(dtsgui_pwdialog, dtsgui);
+	curl_setprogress(DTS_C_API::curl_progress_function, DTS_C_API::curl_progress_ctrl, DTS_C_API::curl_startprogress, dtsgui);
+	curl_setauth_cb(DTS_C_API::dtsgui_pwdialog, dtsgui);
 }
 
 DTSApp::~DTSApp() {

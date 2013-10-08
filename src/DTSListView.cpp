@@ -225,7 +225,7 @@ struct xml_node *DTSDVMListStore::GetXMLData(char **buff) {
 		xn = xml;
 	}
 	if (buff && tattr) {
-		*buff = (char*)dtsgui_char2obj(tattr);
+		*buff = (char*)DTS_C_API::dtsgui_char2obj(tattr);
 	}
 	return xn;
 }

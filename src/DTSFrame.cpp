@@ -419,7 +419,7 @@ const char *DTSFrame::FileDialog(const char *title, const char *path, const char
 
 	fd = new wxFileDialog(this, title, (path) ? path : "", (name) ? name : "", (filter) ? filter : wxFileSelectorDefaultWildcardStr, style);
 	if (fd->ShowModal() != wxID_CANCEL) {
-		filename = dtsgui_char2obj(fd->GetPath().ToUTF8());
+		filename = DTS_C_API::dtsgui_char2obj(fd->GetPath().ToUTF8());
 	}
 
 	delete fd;
