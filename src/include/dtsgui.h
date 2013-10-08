@@ -124,9 +124,6 @@ namespace DTS_C_API {
  * The following items are required in C++
  */
 
-/*utils*/
-void dtsgui_menuenable(dtsgui_menu dm, int enable);
-
 /* returns auth struct needs to be un-ref'd*/
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
 
@@ -261,6 +258,8 @@ int dtsgui_runwizard(struct dtsgui_wizard *dtswiz);
 const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
 const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
 
+/*utils*/
+void dtsgui_menuenable(dtsgui_menu dm, int enable);
 struct curl_post *dtsgui_pane2post(dtsgui_pane p);
 #endif /* __cplusplus || __DTS_C_API*/
 
@@ -270,5 +269,5 @@ void getwin32folder(int csidl, char *path);
 
 #ifdef __cplusplus
 }}
-#endif /* __cplusplus*/
+#endif /* __cplusplus extern and namespace*/
 #endif /* DTSGUI_H_INCLUDED*/
