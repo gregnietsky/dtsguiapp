@@ -51,7 +51,7 @@ class DTSDVMListStore {
 		void SetXMLData(struct xml_node *xnode, const char *tattr);
 		struct xml_node *GetXMLData(char **buff);
 		void ConfigPanel(dtsgui_pane p, dtsgui_treeview tw);
-
+		static bool cmp_title(DTSDVMListStore *c1,DTSDVMListStore *c2);
 	private:
 		std::vector<DTSDVMListStore*> children;
 		dtsgui_treeviewpanel_cb p_cb;

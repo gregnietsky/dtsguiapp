@@ -16,6 +16,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#define __DTS_C_API
+
 #ifdef __WIN32__
 #define UNICODE 1
 #include <winsock2.h>

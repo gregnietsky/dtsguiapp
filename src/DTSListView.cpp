@@ -28,7 +28,7 @@
 #include "dtsgui.h"
 #include "DTSListView.h"
 
-bool cmp_title(DTSDVMListStore *c1,DTSDVMListStore *c2) {
+bool DTSDVMListStore::cmp_title(DTSDVMListStore *c1,DTSDVMListStore *c2) {
 	wxString s1, s2;
 
 	s1 = c1->GetTitle();

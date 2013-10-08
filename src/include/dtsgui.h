@@ -20,16 +20,6 @@
 #define DTSGUI_H_INCLUDED
 
 #ifdef __cplusplus
-#define DTS_OJBREF_CLASS(classtype)	void *operator new(size_t sz) {\
-			return objalloc(sz, &classtype::unref);\
-		}\
-		void operator delete(void *obj) {\
-		}\
-		static void unref(void *data) {\
-			delete (classtype*)data;\
-		}\
-		~classtype()
-
 extern "C" {
 #else
 /*application struct*/
@@ -129,6 +119,15 @@ enum widget_type {
 #define wx_PANEL_BUTTON_ALL		wx_PANEL_BUTTON_ACTION | wx_PANEL_BUTTON_NAV
 #define wx_PANEL_EVENT_BUTTON_NONE	0
 
+/* returns auth struct needs to be un-ref'd*/
+struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
+
+/*utils*/
+struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf);
+void *dtsgui_char2obj(const char *orig);
+void dtsgui_menuenable(dtsgui_menu dm, int enable);
+
+#if !defined(__cplusplus) || defined(__DTS_C_API)
 /*app frame config and control*/
 void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize,
 					  struct point wpos, const char *title, const char *status);
@@ -148,7 +147,6 @@ dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, c
 
 /*menu enable/disable*/
 void dtsgui_menuitemenable(dtsgui_menuitem dmi, int enable);
-void dtsgui_menuenable(dtsgui_menu dm, int enable);
 
 /*predefined menus*/
 void dtsgui_menusep(dtsgui_menu dtsmenu);
@@ -229,9 +227,6 @@ void dtsgui_listbox_add(struct form_item *lbox, const char *text, const char *va
 void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr);
 void dtsgui_listbox_set(struct form_item *listbox, int idx);
 
-/* returns auth struct needs to be un-ref'd*/
-struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
-
 /*message box's*/
 int dtsgui_confirm(struct dtsgui *dtsgui, const char *text);
 void dtsgui_alert(struct dtsgui *dtsgui, const char *text);
@@ -259,10 +254,8 @@ int dtsgui_runwizard(struct dtsgui_wizard *dtswiz);
 const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
 const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
 
-/*utils*/
-struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf);
 struct curl_post *dtsgui_pane2post(dtsgui_pane p);
-void *dtsgui_char2obj(const char *orig);
+#endif // __cplusplus
 
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path);
@@ -270,5 +263,5 @@ void getwin32folder(int csidl, char *path);
 
 #ifdef __cplusplus
 }
-#endif
-#endif
+#endif // __cplusplus
+#endif // DTSGUI_H_INCLUDED

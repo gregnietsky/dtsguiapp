@@ -505,7 +505,7 @@ void DTSTreeWindowEvent::TreeCallback(const wxDataViewItem item, enum tree_cbtyp
 				sp = parent->CreatePane(wxDataViewItem(ndata));
 				break;
 			case DTSGUI_TREE_CB_EDIT:
-				dtsgui_nodesetxml(parent, ndata, ndata->GetTitle().ToUTF8());
+				parent->UpdateNodeXML(wxDataViewItem(ndata), ndata->GetTitle());
 				break;
 			case DTSGUI_TREE_CB_DELETE:
 				break;
