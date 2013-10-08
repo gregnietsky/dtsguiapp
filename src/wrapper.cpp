@@ -58,6 +58,8 @@
 
 static int menuid = wxID_AUTO_LOWEST;
 
+namespace DTS_C_API {
+
 dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane p) {
 	DTSFrame *frame = dtsgui->GetFrame();
 	return frame->NewMenuItem((wxMenu *)dtsmenu, (DTSObject*)p, menuid++, hint);
@@ -307,7 +309,7 @@ extern const char *dtsgui_findvalue(dtsgui_pane p, const char *name) {
 	return dp->FindValue(name);
 }
 
-extern struct dtsgui_wizard* dtsgui_newwizard(struct dtsgui *dtsgui, const char *title) {
+extern struct dtsgui_wizard *dtsgui_newwizard(struct dtsgui *dtsgui, const char *title) {
 	return new dtsgui_wizard(dtsgui, dtsgui->GetFrame(), title);
 }
 
@@ -451,4 +453,6 @@ void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
 	wxToolBar *tb = f->GetToolBar();
 	tb->Show((show) ? true : false);
 	f->Layout();
+}
+
 }

@@ -19,11 +19,9 @@
 #ifndef DTSGUI_H_INCLUDED
 #define DTSGUI_H_INCLUDED
 
-#ifndef __cplusplus
 /*application struct*/
 typedef struct dtsgui dtsgui;
 typedef struct dtsgui_wizard dtsgui_wizard;
-#endif
 
 /*menu controls*/
 typedef void *dtsgui_menu;
@@ -134,6 +132,9 @@ void *dtsgui_char2obj(const char *orig);
 void dtsgui_menuenable(dtsgui_menu dm, int enable);
 
 #if !defined(__cplusplus) || defined(__DTS_C_API)
+#ifdef __cplusplus
+namespace DTS_C_API {
+#endif /* __cplusplus*/
 /*app frame config and control*/
 void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize,
 					  struct point wpos, const char *title, const char *status);
@@ -252,7 +253,7 @@ struct form_item *dtsgui_finditem(dtsgui_pane p, const char *name);
 const char *dtsgui_findvalue(dtsgui_pane p, const char *name);
 
 /*Wizards*/
-struct dtsgui_wizard* dtsgui_newwizard(struct dtsgui *dtsgui, const char *title);
+struct dtsgui_wizard *dtsgui_newwizard(struct dtsgui *dtsgui, const char *title);
 dtsgui_pane dtsgui_wizard_addpage(struct dtsgui_wizard *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc);
 int dtsgui_runwizard(struct dtsgui_wizard *dtswiz);
 
@@ -261,7 +262,10 @@ const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char
 const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
 
 struct curl_post *dtsgui_pane2post(dtsgui_pane p);
+#ifdef __cplusplus
+}
 #endif /* __cplusplus*/
+#endif /* __cplusplus || __DTS_C_API*/
 
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path);
@@ -269,5 +273,5 @@ void getwin32folder(int csidl, char *path);
 
 #ifdef __cplusplus
 }
-#endif /* __cplusplus || __DTS_C_API*/
+#endif /* __cplusplus*/
 #endif /* DTSGUI_H_INCLUDED*/
