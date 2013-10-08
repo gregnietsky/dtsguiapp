@@ -19,9 +19,7 @@
 #ifndef DTSGUI_H_INCLUDED
 #define DTSGUI_H_INCLUDED
 
-#ifdef __cplusplus
-extern "C" {
-#else
+#ifndef __cplusplus
 /*application struct*/
 typedef struct dtsgui dtsgui;
 typedef struct dtsgui_wizard dtsgui_wizard;
@@ -118,6 +116,14 @@ enum widget_type {
 #define wx_PANEL_BUTTON_ACTION	wx_PANEL_EVENT_BUTTON_YES | wx_PANEL_EVENT_BUTTON_NO
 #define wx_PANEL_BUTTON_ALL		wx_PANEL_BUTTON_ACTION | wx_PANEL_BUTTON_NAV
 #define wx_PANEL_EVENT_BUTTON_NONE	0
+
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus*/
+
+/*
+ * The following items are required in C++
+ */
 
 /* returns auth struct needs to be un-ref'd*/
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
@@ -255,13 +261,13 @@ const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char
 const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter);
 
 struct curl_post *dtsgui_pane2post(dtsgui_pane p);
-#endif // __cplusplus
+#endif /* __cplusplus*/
 
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path);
-#endif
+#endif /* __WIN32*/
 
 #ifdef __cplusplus
 }
-#endif // __cplusplus
-#endif // DTSGUI_H_INCLUDED
+#endif /* __cplusplus || __DTS_C_API*/
+#endif /* DTSGUI_H_INCLUDED*/
