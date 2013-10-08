@@ -20,17 +20,6 @@
 #define DTSGUI_HPP_INCLUDED
 #include <wx/app.h>
 
-#define DTS_OJBREF_CLASS(classtype)	void *operator new(size_t sz) {\
-			return objalloc(sz, &classtype::unref);\
-		}\
-		void operator delete(void *obj) {\
-		}\
-		static void unref(void *data) {\
-			delete (classtype*)data;\
-		}\
-		~classtype()
-
-
 wxDECLARE_EVENT(DTS_APP_EVENT, wxCommandEvent);
 
 #endif // DTSGUI_HPP_INCLUDED

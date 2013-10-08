@@ -49,26 +49,6 @@ void dtsgui_menuenable(dtsgui_menu dm, int enable) {
 	}
 }
 
-extern struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf) {
-	struct xml_doc *xmldoc = NULL;
-
-	if (cbuf && cbuf->c_type && !strcmp("application/xml", cbuf->c_type)) {
-		curl_ungzip(cbuf);
-		xmldoc = xml_loadbuf(cbuf->body, cbuf->bsize, 1);
-	}
-	return xmldoc;
-}
-
-void *dtsgui_char2obj(const char *orig) {
-	int len = strlen(orig) + 1;
-	void *nobj;
-
-	if ((nobj = objalloc(len, NULL))) {
-		memcpy(nobj, orig, len);
-	}
-	return nobj;
-}
-
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);

@@ -108,7 +108,7 @@ void test_menu(struct dtsgui *dtsgui, dtsgui_menu menu, const char *url) {
 	void *purl;
 	dtsgui_pane p;
 
-	purl = dtsgui_char2obj(url);
+	purl = objchar(url);
 	p = dtsgui_panel(dtsgui, "Test Panel", "Test Panel", wx_PANEL_BUTTON_ALL, 1, purl);
 	objunref(purl);
 	testpanel(p);

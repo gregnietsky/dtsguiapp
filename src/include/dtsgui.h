@@ -125,8 +125,6 @@ namespace DTS_C_API {
  */
 
 /*utils*/
-struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf);
-void *dtsgui_char2obj(const char *orig);
 void dtsgui_menuenable(dtsgui_menu dm, int enable);
 
 /* returns auth struct needs to be un-ref'd*/
