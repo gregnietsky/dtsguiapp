@@ -77,6 +77,11 @@ DTSDVMListStore* DTSDVMListStore::GetParent() {
 	return parent;
 }
 
+const wxString DTSDVMListStore::GetParentTitle() {
+	DTSDVMListStore *parent = this->GetParent();
+	return (parent) ? parent->GetTitle() : "";
+}
+
 size_t DTSDVMListStore::GetChildCount() {
 	return children.size();
 }
@@ -523,6 +528,17 @@ struct xml_node *DTSDVMListView::GetXMLData(const wxDataViewItem& node, char **b
 		return data->GetXMLData(buf);
 	}
 	return NULL;
+}
+
+const wxString DTSDVMListView::GetTitle(const wxDataViewItem& node) {
+	DTSDVMListStore *data;
+
+	if (!node.IsOk() && root) {
+		return root->GetTitle();
+	} else if ((data = (DTSDVMListStore*)node.GetID())) {
+		return data->GetTitle();
+	}
+	return wxEmptyString;
 }
 
 DTSDVMCtrl::DTSDVMCtrl() {
