@@ -17,6 +17,7 @@
 */
 
 #include <stdlib.h>
+#include <wx/toolbar.h>
 
 #ifdef __WIN32__
 #define UNICODE 1
@@ -119,6 +120,14 @@ void dtsgui::AppendTitle(const char *text) {
 	if (text && newtitle) {
 		free(newtitle);
 	}
+}
+
+void dtsgui::ShowToolbar(bool show) {
+	wxToolBar *tb;
+
+	tb = appframe->GetToolBar();
+	tb->Show(show);
+	appframe->Layout();
 }
 
 class DTSFrame *dtsgui::GetFrame(void) {

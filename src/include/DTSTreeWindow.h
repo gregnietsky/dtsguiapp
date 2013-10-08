@@ -107,7 +107,7 @@ class DTSTreeWindowEvent: public wxEvtHandler {
 
 class DTSTreeWindow: public DTSObject, public virtual wxSplitterWindow {
 	public:
-		DTSTreeWindow(wxWindow *parent = NULL, DTSFrame *frame = NULL, dtsgui_tree_cb tree_cb = NULL, wxString stat_msg = wxEmptyString, int pos = 30, void *u_data = NULL);
+		DTSTreeWindow(wxWindow *parent = NULL, DTSFrame *frame = NULL, dtsgui_tree_cb tree_cb = NULL, wxString stat_msg = wxEmptyString, int pos = 30, void *u_data = NULL, struct xml_doc *xd = NULL);
 		~DTSTreeWindow();
 		void ShowRMenu(bool cont, int cnt, bool first, bool last, bool c_sort, bool del);
 		bool Show(bool = true);

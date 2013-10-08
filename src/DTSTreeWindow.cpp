@@ -527,7 +527,7 @@ void DTSTreeWindowEvent::OnButton(wxCommandEvent &event) {
 	event.Skip(true);
 }
 
-DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb tree_cb, wxString stat_msg, int pos, void *u_data)
+DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb tree_cb, wxString stat_msg, int pos, void *u_data, struct xml_doc *xd)
 	:wxSplitterWindow(parent, -1, wxDefaultPosition, wxDefaultSize),
 	 DTSObject(stat_msg) {
 
@@ -549,6 +549,10 @@ DTSTreeWindow::DTSTreeWindow(wxWindow *parent, DTSFrame *frame, dtsgui_tree_cb t
 		userdata = NULL;
 	}
 	this->frame = frame;
+
+	if (xd) {
+		SetXMLDoc(xd);
+	}
 
 	p_sizer->Add(sw, 1,wxEXPAND,0);
 #ifdef __WIN32
