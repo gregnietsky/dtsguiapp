@@ -54,6 +54,18 @@
 #include "DTSTreeWindow.h"
 #include "DTSWizard.h"
 
+static int menuid = wxID_AUTO_LOWEST;
+
+dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane p) {
+	DTSFrame *frame = dtsgui->GetFrame();
+	return frame->NewMenuItem((wxMenu *)dtsmenu, (DTSObject*)p, menuid++, hint);
+}
+
+extern dtsgui_menuitem dtsgui_newmenucb(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *name, int blank, dtsgui_dynpanel cb,void *data) {
+	DTSFrame *frame = dtsgui->GetFrame();
+	return frame->NewMenuItem((wxMenu *)dtsmenu, menuid++, name, hint, blank, cb, data);
+}
+
 void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status) {
 	new DTSApp(confcallback_cb, userdata, wsize, wpos, title, status);
 }
@@ -122,6 +134,21 @@ dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, const char *ti
 	return frame->CreatePane(name, title, butmask, type, userdata);
 }
 
+dtsgui_pane dtsgui_textpane(struct dtsgui *dtsgui, const char *title, const char *buf) {
+	DTSFrame *f = dtsgui->GetFrame();
+	return f->TextPanel(title, buf);
+}
+
+extern dtsgui_pane dtsgui_treepane(dtsgui_treeview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc) {
+	DTSTreeWindow *tw = (DTSTreeWindow*)tv;
+	return tw->CreatePane(name, butmask, userdata, xmldoc);
+}
+
+dtsgui_pane dtsgui_treepane_default(dtsgui_treeview tv, dtsgui_treenode node) {
+	DTSTreeWindow *tw = (DTSTreeWindow*)tv;
+	return tw->CreatePane((DTSDVMListStore*)node);
+}
+
 extern void dtsgui_panel_setxml(dtsgui_pane pane, struct xml_doc *xmldoc) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->SetXMLDoc(xmldoc);
@@ -145,8 +172,19 @@ extern dtsgui_treeview dtsgui_treewindow(struct dtsgui *dtsgui, const char *titl
 
 extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title, void *data) {
 	DTSFrame *frame = dtsgui->GetFrame();
-	DTSTabWindow *tw = new DTSTabWindow(frame, title, data);
-	return tw;
+	return  new DTSTabWindow(frame, title, data);
+}
+
+extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata) {
+	DTSTabWindow *tw = (DTSTabWindow*)tv;
+	return tw->CreateTab(name, butmask, userdata, cb, cdata, xmldoc);
+}
+
+extern dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos, int undo) {
+	DTSTabWindow *tw = (DTSTabWindow*)tv;
+	DTSTabPage *dp = tw->CreateTab(name, butmask, userdata, cb, cdata, xmldoc, false);
+	tw->InsertTab(dp, pos, true, undo);
+	return dp;
 }
 
 extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
@@ -154,9 +192,19 @@ extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name
 	p->TextBox(title, name, value, wxTE_LEFT | wxTE_PROCESS_ENTER, 1, data, DTSGUI_FORM_DATA_PTR);
 }
 
+extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
+	DTSPanel *p = (DTSPanel *)pane;
+	p->XMLTextBox(title, name, xpath, node, fattr, fval, attr, wxTE_LEFT | wxTE_PROCESS_ENTER, 1);
+}
+
 extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->TextBox(title, name, value, wxTE_MULTILINE, 5, data,  DTSGUI_FORM_DATA_PTR);
+}
+
+extern void dtsgui_xmltextbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
+	DTSPanel *p = (DTSPanel *)pane;
+	p->XMLTextBox(title, name, xpath, node, fattr, fval, attr, wxTE_MULTILINE, 5);
 }
 
 extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
@@ -164,9 +212,19 @@ extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *na
 	p->TextBox(title, name, value, wxTE_PASSWORD | wxTE_PROCESS_ENTER, 1, data,  DTSGUI_FORM_DATA_PTR);
 }
 
+extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
+	DTSPanel *p = (DTSPanel *)pane;
+	p->XMLPasswdBox(title, name, xpath, node, fattr, fval, attr, wxTE_LEFT | wxTE_PROCESS_ENTER);
+}
+
 extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheck, int ischecked, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->CheckBox(title, name, ischecked, checkval, uncheck, data,  DTSGUI_FORM_DATA_PTR);
+}
+
+extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
+	DTSPanel *p = (DTSPanel *)pane;
+	p->XMLCheckBox(title, name, checkval, uncheckval, xpath, node, fattr, fval, attr);
 }
 
 extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, const char *name, void *data) {
@@ -174,13 +232,27 @@ extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, con
 	return p->ListBox(title, name, NULL, data,  DTSGUI_FORM_DATA_PTR);
 }
 
+struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
+	DTSPanel *p = (DTSPanel *)pane;
+	return p->XMLListBox(title, name, xpath, node, fattr, fval, attr);
+}
+
 extern struct form_item *dtsgui_combobox(dtsgui_pane pane, const char *title, const char *name, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	return p->ComboBox(title, name, NULL, data, DTSGUI_FORM_DATA_PTR);
 }
 
+struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
+	DTSPanel *p = (DTSPanel *)pane;
+	return p->XMLComboBox(title, name, xpath, node, fattr, fval, attr);
+}
+
 void dtsgui_listbox_add(struct form_item *listbox, const char *text, const char *value) {
 	listbox->Append(text, value);
+}
+
+void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr) {
+	lb->AppendXML(xmldoc, xpath, nattr, vattr);
 }
 
 void dtsgui_listbox_set(struct form_item *listbox, int idx) {
@@ -216,6 +288,16 @@ extern const char *dtsgui_item_name(struct form_item *fi) {
 
 extern 	const char *dtsgui_item_value(struct form_item *fi) {
 	return (fi) ? fi->GetValue() : NULL;
+}
+
+extern struct form_item *dtsgui_finditem(dtsgui_pane p, const char *name) {
+	DTSPanel *dp = (DTSPanel*)p;
+	return dp->FindItem(name);
+}
+
+extern const char *dtsgui_findvalue(dtsgui_pane p, const char *name) {
+	DTSPanel *dp = (DTSPanel*)p;
+	return dp->FindValue(name);
 }
 
 extern struct dtsgui_wizard* dtsgui_newwizard(struct dtsgui *dtsgui, const char *title) {
@@ -312,6 +394,11 @@ void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb, void *
 struct curl_post *dtsgui_pane2post(dtsgui_pane p) {
 	DTSPanel *dp = (DTSPanel*)p;
 	return dp->Panel2Post();
+}
+
+void dtsgui_rundialog(dtsgui_pane pane, event_callback evcb, void *data) {
+	DTSDialog *p = (DTSDialog *)pane;
+	p->RunDialog(evcb, data);
 }
 
 dtsgui_treenode dtsgui_treecont(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data) {

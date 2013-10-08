@@ -425,3 +425,52 @@ const char *DTSFrame::FileDialog(const char *title, const char *path, const char
 	delete fd;
 	return (const char*)filename;
 }
+
+DTSPanel *DTSFrame::TextPanel(const wxString &title, const char *buf) {
+	DTSStaticPanel *p;
+	wxWindow *w;
+	wxTextCtrl *tc;
+
+	p = new DTSStaticPanel(this, this, title);
+	w = p->GetPanel();
+
+	tc = new wxTextCtrl(w, -1, buf, wxDefaultPosition, wxDefaultSize,wxTE_MULTILINE | wxHSCROLL | wxTE_READONLY);
+	p->AddItem(tc, wxGBPosition(0,0), wxGBSpan(10, 6), wxEXPAND|wxGROW, 0, 0);
+
+	return p;
+}
+
+wxMenuItem *DTSFrame::NewMenuItem(wxMenu *m, DTSObject *panel, int menuid, const wxString &hint) {
+	wxMenuItem *mi;
+	wxWindow *w = NULL;
+	wxObject *ev_data;
+	wxString name = wxEmptyString;
+
+	if (panel) {
+		w = panel->GetPanel();
+		name = panel->GetName();
+	}
+	ev_data = new evdata(w);
+
+
+	mi = m->Append(menuid, hint, name);
+	Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::SwitchWindow, this, menuid, menuid, ev_data);
+	return mi;
+}
+
+wxMenuItem *DTSFrame::NewMenuItem(wxMenu *m, int menuid, const wxString &name, const wxString &hint, int blank, dtsgui_dynpanel cb, void *data) {
+	wxMenuItem *mi;
+	wxObject *ev_data;
+	class dynamic_panel *p_dyn;
+
+	if (!(p_dyn = new dynamic_panel(name, blank, cb, data))) {
+		return NULL;
+	}
+
+	ev_data = new evdata(p_dyn, 1);
+	objunref(p_dyn);
+
+	mi = m->Append(menuid, hint, name);
+	Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::DynamicPanelEvent, this, menuid, menuid, ev_data);
+	return mi;
+}

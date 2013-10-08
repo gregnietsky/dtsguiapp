@@ -25,6 +25,8 @@ typedef class wxBoxSizer wxBoxSizer;
 typedef class wxGauge wxGauge;
 typedef class wxProgressDialog wxProgressDialog;
 typedef class DTSPanel DTSPanel;
+typedef class DTSObject DTSObject;
+typedef class EventArg EventArg;
 
 class DTSFrame: public wxFrame {
 	public:
@@ -48,6 +50,9 @@ class DTSFrame: public wxFrame {
 		virtual wxToolBar *OnCreateToolBar(long style, wxWindowID id, const wxString& name);
 		void SetupToolbar(dtsgui_toolbar_create cb, void *data);
 		DTSPanel *CreatePane(const wxString &name, const wxString &title, int butmask, enum panel_type type, void *udata);
+		DTSPanel *TextPanel(const wxString &title, const char *buf);
+		wxMenuItem *NewMenuItem(wxMenu *m, DTSObject *panel, int menuid, const wxString &hint);
+		wxMenuItem *NewMenuItem(wxMenu *m, int menuid, const wxString &name, const wxString &hint, int blank, dtsgui_dynpanel cb, void *data);
 		/*events*/
 		void SendDTSEvent(int eid, wxObject *evobj);
 		void SwitchWindow(wxCommandEvent &event);
