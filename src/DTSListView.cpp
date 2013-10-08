@@ -22,9 +22,7 @@
 
 #include <algorithm>
 #include <stdlib.h>
-#include <stdint.h>
 
-#include <dtsapp.h>
 #include "dtsgui.h"
 
 #include "DTSListView.h"

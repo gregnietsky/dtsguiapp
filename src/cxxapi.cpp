@@ -18,8 +18,6 @@
 
 #define __DTS_C_API
 
-#include <stdint.h>
-
 #ifdef __WIN32__
 #define UNICODE 1
 #include <winsock2.h>
@@ -29,7 +27,6 @@
 
 #include <wx/menu.h>
 
-#include <dtsapp.h>
 #include "dtsgui.h"
 
 namespace DTS_C_API {

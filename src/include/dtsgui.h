@@ -19,6 +19,9 @@
 #ifndef DTSGUI_H_INCLUDED
 #define DTSGUI_H_INCLUDED
 
+#include <stdint.h>
+#include <dtsapp.h>
+
 /*application struct*/
 typedef struct dtsgui dtsgui;
 typedef struct dtsgui_wizard dtsgui_wizard;
@@ -269,5 +272,9 @@ void getwin32folder(int csidl, char *path);
 
 #ifdef __cplusplus
 }}
+
+#include <wx/app.h>
+
+wxDECLARE_EVENT(DTS_APP_EVENT, wxCommandEvent);
 #endif /* __cplusplus extern and namespace*/
 #endif /* DTSGUI_H_INCLUDED*/

@@ -16,11 +16,7 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <stdint.h>
-
 #include <wx/combobox.h>
-
-#include <dtsapp.h>
 
 #include "dtsgui.h"
 
