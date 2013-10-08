@@ -108,6 +108,7 @@ class DTSPanel: public DTSObject {
 		void Buttons(void);
 		int button_mask;
 	private:
+		static int fitems_hash(const void *data, int key);
 		wxStaticText *title;
 		wxGridBagSizer *fgs;
 		int g_row;

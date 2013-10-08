@@ -43,7 +43,7 @@
 
 static const int def_buttons[6] = {wxID_FIRST, wxID_BACKWARD, wxID_FORWARD, wxID_LAST, wxID_APPLY, wxID_UNDO};
 
-static int fitems_hash(const void *data, int key) {
+int DTSPanel::fitems_hash(const void *data, int key) {
 	int ret = 0;
 
 	class form_item *fi = (class form_item *)data;
