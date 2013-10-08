@@ -16,6 +16,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#ifdef __WIN32__
+#define UNICODE 1
+#endif
+
 #include <stdint.h>
 
 #include <dtsapp.h>
