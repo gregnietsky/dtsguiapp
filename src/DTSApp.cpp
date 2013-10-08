@@ -25,8 +25,6 @@
 #include <windows.h>
 #endif
 
-#include <wx/app.h>
-
 #include <dtsapp.h>
 
 #include "dtsgui.h"

@@ -26,18 +26,6 @@
 #endif
 
 #include <stdint.h>
-#include <vector>
-
-#include <wx/app.h>
-#include <wx/gbsizer.h>
-#include <wx/textctrl.h>
-#include <wx/panel.h>
-#include <wx/scrolwin.h>
-#include <wx/wizard.h>
-
-#include <wx/dataview.h>
-#include <wx/splitter.h>
-#include <wx/notebook.h>
 
 #include <wx/menu.h>
 #include <wx/filedlg.h>
@@ -47,14 +35,12 @@
 #include "dtsgui.h"
 #include "dtsgui.hpp"
 
-#include "pitems.h"
-#include "evdata.h"
-#include "DTSApp.h"
 #include "DTSFrame.h"
-#include "DTSPanel.h"
-#include "DTSListView.h"
+#include "DTSApp.h"
 #include "DTSTreeWindow.h"
+#include "pitems.h"
 #include "DTSWizard.h"
+#include "DTSListView.h"
 
 static int menuid = wxID_AUTO_LOWEST;
 

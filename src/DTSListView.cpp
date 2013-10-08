@@ -16,16 +16,13 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <vector>
 #include <algorithm>
 #include <stdlib.h>
 #include <stdint.h>
 
-#include <wx/dataview.h>
-
 #include <dtsapp.h>
-
 #include "dtsgui.h"
+
 #include "DTSListView.h"
 
 bool DTSDVMListStore::cmp_title(DTSDVMListStore *c1,DTSDVMListStore *c2) {

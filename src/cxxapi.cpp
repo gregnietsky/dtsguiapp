@@ -16,10 +16,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#define __DTS_C_API
-
 #include <stdint.h>
-#include <vector>
 
 #ifdef __WIN32__
 #define UNICODE 1

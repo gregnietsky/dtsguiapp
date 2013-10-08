@@ -19,14 +19,19 @@
 #ifndef DTSPANEL_H
 #define DTSPANEL_H
 
-typedef class wxComboBox wxComboBox;
-typedef class wxCheckBox wxCheckBox;
+#include <wx/event.h>
+#include <wx/window.h>
+#include <wx/gbsizer.h>
+#include <wx/textctrl.h>
+#include <wx/panel.h>
+#include <wx/scrolwin.h>
+#include <wx/wizard.h>
+
+typedef class DTSFrame DTSFrame;
+typedef class DTSObject DTSObject;
 typedef class wxStaticText wxStaticText;
 typedef class wxBookCtrlBase wxBookCtrlBase;
 typedef class wxDialog wxDialog;
-typedef class DTSFrame DTSFrame;
-
-typedef class DTSObject DTSObject;
 
 class DTSPanelEvent: public wxEvtHandler {
 	public:

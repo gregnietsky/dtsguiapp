@@ -18,22 +18,14 @@
 
 #include <stdint.h>
 
-#include <wx/gbsizer.h>
-#include <wx/textctrl.h>
-#include <wx/panel.h>
-#include <wx/scrolwin.h>
-#include <wx/wizard.h>
-
 #include <dtsapp.h>
-#include <wx/app.h>
-
 #include "dtsgui.h"
 #include "dtsgui.hpp"
-#include "pitems.h"
+
 #include "DTSWizard.h"
-#include "DTSPanel.h"
-#include "DTSApp.h"
 #include "DTSFrame.h"
+#include "DTSApp.h"
+#include "DTSPanel.h"
 
 dtsgui_wizard::dtsgui_wizard(class dtsgui *dgui, wxWindow *f, const wxString &title) {
 	if (dgui && objref(dgui)) {

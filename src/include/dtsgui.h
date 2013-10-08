@@ -129,9 +129,12 @@ struct xml_doc *dtsgui_buf2xml(struct curlbuf *cbuf);
 void *dtsgui_char2obj(const char *orig);
 void dtsgui_menuenable(dtsgui_menu dm, int enable);
 
-
 /* returns auth struct needs to be un-ref'd*/
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
+
+/*
+ * These are used in C only or when __DTS_C_API is defined
+ */
 
 #if !defined(__cplusplus) || defined(__DTS_C_API)
 /*app frame config and control*/
