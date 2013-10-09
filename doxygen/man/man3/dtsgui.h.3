@@ -1,0 +1,963 @@
+.TH "src/include/dtsgui.h" 3 "Wed Oct 9 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/include/dtsgui.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <dtsapp\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpoint\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBwx_PANEL_BUTTON_NAV\fP   \fBwx_PANEL_EVENT_BUTTON_FIRST\fP | \fBwx_PANEL_EVENT_BUTTON_BACK\fP | \fBwx_PANEL_EVENT_BUTTON_FWD\fP | \fBwx_PANEL_EVENT_BUTTON_LAST\fP"
+.br
+.ti -1c
+.RI "#define \fBwx_PANEL_BUTTON_DIR\fP   \fBwx_PANEL_EVENT_BUTTON_BACK\fP | \fBwx_PANEL_EVENT_BUTTON_FWD\fP"
+.br
+.ti -1c
+.RI "#define \fBwx_PANEL_BUTTON_ACTION\fP   \fBwx_PANEL_EVENT_BUTTON_YES\fP | \fBwx_PANEL_EVENT_BUTTON_NO\fP"
+.br
+.ti -1c
+.RI "#define \fBwx_PANEL_BUTTON_ALL\fP   \fBwx_PANEL_BUTTON_ACTION\fP | \fBwx_PANEL_BUTTON_NAV\fP"
+.br
+.ti -1c
+.RI "#define \fBwx_PANEL_EVENT_BUTTON_NONE\fP   0"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBdtsgui\fP \fBdtsgui\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBdtsgui_wizard\fP \fBdtsgui_wizard\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_menu\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_menuitem\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_pane\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_notebook\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_treeview\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_tabview\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_treenode\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBdtsgui_progress\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBform_item\fP \fBform_item\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBdynamic_panel\fP \fBdynamic_panel\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBdtsgui_configcb\fP )(struct \fBdtsgui\fP *, void *)"
+.br
+.ti -1c
+.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_menucb\fP )(struct \fBdtsgui\fP *, void *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBevent_callback\fP )(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int, int, void *)"
+.br
+.ti -1c
+.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_dynpanel\fP )(struct \fBdtsgui\fP *, const char *, void *)"
+.br
+.ti -1c
+.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_tree_cb\fP )(struct \fBdtsgui\fP *, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, enum \fBtree_cbtype\fP cb_type, const char *, void *)"
+.br
+.ti -1c
+.RI "typedef void(* \fBdtsgui_xmltreenode_cb\fP )(\fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, struct xml_node *, void *)"
+.br
+.ti -1c
+.RI "typedef void(* \fBdtsgui_treeviewpanel_cb\fP )(\fBdtsgui_pane\fP, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, void *)"
+.br
+.ti -1c
+.RI "typedef void(* \fBdtsgui_tabpanel_cb\fP )(\fBdtsgui_pane\fP, void *)"
+.br
+.ti -1c
+.RI "typedef void *(* \fBdtsgui_toolbar_create\fP )(struct \fBdtsgui\fP *, void *, long, int, const char *, void *data)"
+.br
+.ti -1c
+.RI "typedef void(* \fBdtsgui_tabpane_newdata_cb\fP )(struct xml_doc *, struct xml_node *, void *, void **, int *)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBtree_cbtype\fP { \fBDTSGUI_TREE_CB_SELECT\fP, \fBDTSGUI_TREE_CB_DELETE\fP, \fBDTSGUI_TREE_CB_EDIT\fP }"
+.br
+.ti -1c
+.RI "enum \fBform_data_type\fP { \fBDTSGUI_FORM_DATA_PTR\fP, \fBDTSGUI_FORM_DATA_XML\fP }"
+.br
+.ti -1c
+.RI "enum \fBpanel_buttons\fP { \fBwx_PANEL_EVENT_BUTTON_FIRST\fP = 1 << 0, \fBwx_PANEL_EVENT_BUTTON_BACK\fP = 1 << 1, \fBwx_PANEL_EVENT_BUTTON_FWD\fP = 1 << 2, \fBwx_PANEL_EVENT_BUTTON_LAST\fP = 1 << 3, \fBwx_PANEL_EVENT_BUTTON_YES\fP = 1 << 4, \fBwx_PANEL_EVENT_BUTTON_NO\fP = 1 << 5 }"
+.br
+.ti -1c
+.RI "enum \fBpanel_events\fP { \fBwx_PANEL_EVENT_BUTTON\fP = 1 << 0, \fBwx_PANEL_EVENT_COMBO_ENTER\fP = 1 << 1, \fBwx_PANEL_EVENT_COMBO_UPDATE\fP = 1 << 2, \fBwx_PANEL_EVENT_DTS\fP = 1 << 3 }"
+.br
+.ti -1c
+.RI "enum \fBtree_newnode_flags\fP { \fBDTS_TREE_NEW_NODE_EDIT\fP = 1 << 0, \fBDTS_TREE_NEW_NODE_DELETE\fP = 1 << 1, \fBDTS_TREE_NEW_NODE_CONTAINER\fP = 1 << 2, \fBDTS_TREE_NEW_NODE_SORT\fP = 1 << 3 }"
+.br
+.ti -1c
+.RI "enum \fBpanel_type\fP { \fBwx_DTSPANEL_WINDOW\fP, \fBwx_DTSPANEL_PANEL\fP, \fBwx_DTSPANEL_SCROLLPANEL\fP, \fBwx_DTSPANEL_DIALOG\fP, \fBwx_DTSPANEL_TREE\fP, \fBwx_DTSPANEL_WIZARD\fP, \fBwx_DTSPANEL_TAB\fP }"
+.br
+.ti -1c
+.RI "enum \fBwidget_type\fP { \fBDTS_WIDGET_TEXTBOX\fP, \fBDTS_WIDGET_CHECKBOX\fP, \fBDTS_WIDGET_LISTBOX\fP, \fBDTS_WIDGET_COMBOBOX\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdtsgui_config\fP (\fBdtsgui_configcb\fP confcallback_cb, void *userdata, struct \fBpoint\fP wsize, struct \fBpoint\fP wpos, const char *title, const char *status)"
+.br
+.ti -1c
+.RI "int \fBdtsgui_run\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "void * \fBdtsgui_userdata\fP (struct \fBdtsgui\fP *\fBdtsgui\fP)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_titleappend\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *text)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_sendevent\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, int eid)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_setwindow\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, \fBdtsgui_pane\fP p)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_setuptoolbar\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, \fBdtsgui_toolbar_create\fP cb, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_set_toolbar\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, int show)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_setstatus\fP (\fBdtsgui_pane\fP pane, const char *status)"
+.br
+.ti -1c
+.RI "\fBdtsgui_menu\fP \fBdtsgui_newmenu\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *name)"
+.br
+.ti -1c
+.RI "\fBdtsgui_menuitem\fP \fBdtsgui_newmenucb\fP (\fBdtsgui_menu\fP dtsmenu, struct \fBdtsgui\fP *\fBdtsgui\fP, const char *hint, const char *title, int blank, \fBdtsgui_dynpanel\fP cb, void *data)"
+.br
+.ti -1c
+.RI "\fBdtsgui_menuitem\fP \fBdtsgui_newmenuitem\fP (\fBdtsgui_menu\fP dtsmenu, struct \fBdtsgui\fP *\fBdtsgui\fP, const char *hint, \fBdtsgui_pane\fP pane)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_menuitemenable\fP (\fBdtsgui_menuitem\fP dmi, int enable)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_menusep\fP (\fBdtsgui_menu\fP dtsmenu)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_about\fP (\fBdtsgui_menu\fP dtsmenu, struct \fBdtsgui\fP *\fBdtsgui\fP, const char *text)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_close\fP (\fBdtsgui_menu\fP dtsmenu, struct \fBdtsgui\fP *\fBdtsgui\fP)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_exit\fP (\fBdtsgui_menu\fP dtsmenu, struct \fBdtsgui\fP *\fBdtsgui\fP)"
+.br
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBdtsgui_panel\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *name, const char *title, int butmask, enum \fBpanel_type\fP type, void *userdata)"
+.br
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBdtsgui_textpane\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, const char *buf)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_settitle\fP (\fBdtsgui_pane\fP pane, const char *title)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_delpane\fP (\fBdtsgui_pane\fP pane)"
+.br
+.ti -1c
+.RI "void * \fBdtsgui_paneldata\fP (\fBdtsgui_pane\fP pane)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_setevcallback\fP (\fBdtsgui_pane\fP pane, \fBevent_callback\fP evcb, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_configcallback\fP (\fBdtsgui_pane\fP pane, \fBdtsgui_configcb\fP cb, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_panel_setxml\fP (\fBdtsgui_pane\fP pane, struct xml_doc *xmldoc)"
+.br
+.ti -1c
+.RI "struct xml_doc * \fBdtsgui_panelxml\fP (\fBdtsgui_pane\fP pane)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xmlpanel_update\fP (\fBdtsgui_pane\fP pane)"
+.br
+.ti -1c
+.RI "\fBdtsgui_tabview\fP \fBdtsgui_tabwindow\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, void *data)"
+.br
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBdtsgui_newtabpage\fP (\fBdtsgui_tabview\fP tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fP cb, void *cdata)"
+.br
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBdtsgui_tabpage_insert\fP (\fBdtsgui_tabview\fP tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fP cb, void *cdata, int pos, int undo)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_newxmltabpane\fP (\fBdtsgui_tabview\fP tabv, \fBdtsgui_pane\fP p, const char *xpath, const char *node, const char *vitem, const char *tattr, \fBdtsgui_tabpane_newdata_cb\fP data_cb, \fBdtsgui_tabpanel_cb\fP cb, void *cdata, struct xml_doc *xmldoc, void *data)"
+.br
+.ti -1c
+.RI "\fBdtsgui_treeview\fP \fBdtsgui_treewindow\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, \fBdtsgui_tree_cb\fP tree_cb, void *userdata, struct xml_doc *xmldoc)"
+.br
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBdtsgui_treepane\fP (\fBdtsgui_treeview\fP tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc)"
+.br
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBdtsgui_treepane_default\fP (\fBdtsgui_treeview\fP self, \fBdtsgui_treenode\fP node)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_nodesetxml\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title)"
+.br
+.ti -1c
+.RI "\fBdtsgui_treenode\fP \fBdtsgui_treecont\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, \fBdtsgui_treeviewpanel_cb\fP p_cb, void *data)"
+.br
+.ti -1c
+.RI "\fBdtsgui_treenode\fP \fBdtsgui_treeitem\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, \fBdtsgui_treeviewpanel_cb\fP p_cb, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_treenodesetxml\fP (\fBdtsgui_treenode\fP tn, struct xml_node *xn, const char *tattr)"
+.br
+.ti -1c
+.RI "struct xml_node * \fBdtsgui_treenodegetxml\fP (\fBdtsgui_treenode\fP tn, char **buf)"
+.br
+.ti -1c
+.RI "void * \fBdtsgui_treenodegetdata\fP (\fBdtsgui_treenode\fP tn)"
+.br
+.ti -1c
+.RI "const char * \fBdtsgui_treenodeparent\fP (\fBdtsgui_treenode\fP tn)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_newxmltreenode\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_pane\fP p, \fBdtsgui_treenode\fP tn, const char *xpath, const char *node, const char *vitem, const char *tattr, int nid, int flags, \fBdtsgui_xmltreenode_cb\fP node_cb, void *data, \fBdtsgui_treeviewpanel_cb\fP p_cb)"
+.br
+.ti -1c
+.RI "int \fBdtsgui_treenodeid\fP (\fBdtsgui_treenode\fP tn)"
+.br
+.ti -1c
+.RI "struct xml_node * \fBdtsgui_panetoxml\fP (\fBdtsgui_pane\fP p, const char *xpath, const char *node, const char *nodeval, const char *attrkey)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_rundialog\fP (\fBdtsgui_pane\fP pane, \fBevent_callback\fP evcb, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_textbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *value, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_textbox_multi\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *value, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_passwdbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *value, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_checkbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *checkval, const char *uncheck, int ischecked, void *data)"
+.br
+.ti -1c
+.RI "struct \fBform_item\fP * \fBdtsgui_listbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, void *data)"
+.br
+.ti -1c
+.RI "struct \fBform_item\fP * \fBdtsgui_combobox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, void *data)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xmltextbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xmltextbox_multi\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xmlpasswdbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xmlcheckbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+.br
+.ti -1c
+.RI "struct \fBform_item\fP * \fBdtsgui_xmllistbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+.br
+.ti -1c
+.RI "struct \fBform_item\fP * \fBdtsgui_xmlcombobox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xnode_textbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xnode_textbox_multi\fP (\fBdtsgui_pane\fP pane, const char *title, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xnode_passwdbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_xnode_checkbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *checkval, const char *uncheckval, const char *attr)"
+.br
+.ti -1c
+.RI "struct \fBform_item\fP * \fBdtsgui_xnode_listbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *attr)"
+.br
+.ti -1c
+.RI "struct \fBform_item\fP * \fBdtsgui_xnode_combobox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *attr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_listbox_add\fP (struct \fBform_item\fP *lbox, const char *text, const char *value)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_listbox_addxml\fP (struct \fBform_item\fP *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_listbox_set\fP (struct \fBform_item\fP *listbox, int idx)"
+.br
+.ti -1c
+.RI "int \fBdtsgui_confirm\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *text)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_alert\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *text)"
+.br
+.ti -1c
+.RI "int \fBdtsgui_progress_start\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *text, int maxval, int quit)"
+.br
+.ti -1c
+.RI "int \fBdtsgui_progress_update\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, int newval, const char *newtext)"
+.br
+.ti -1c
+.RI "int \fBdtsgui_progress_increment\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, int ival, const char *newtext)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_progress_end\fP (struct \fBdtsgui\fP *\fBdtsgui\fP)"
+.br
+.ti -1c
+.RI "struct bucket_list * \fBdtsgui_panel_items\fP (\fBdtsgui_pane\fP pane)"
+.br
+.ti -1c
+.RI "void * \fBdtsgui_item_data\fP (struct \fBform_item\fP *fi)"
+.br
+.ti -1c
+.RI "const char * \fBdtsgui_item_name\fP (struct \fBform_item\fP *fi)"
+.br
+.ti -1c
+.RI "const char * \fBdtsgui_item_value\fP (struct \fBform_item\fP *fi)"
+.br
+.ti -1c
+.RI "struct \fBform_item\fP * \fBdtsgui_finditem\fP (\fBdtsgui_pane\fP p, const char *name)"
+.br
+.ti -1c
+.RI "const char * \fBdtsgui_findvalue\fP (\fBdtsgui_pane\fP p, const char *name)"
+.br
+.ti -1c
+.RI "struct \fBdtsgui_wizard\fP * \fBdtsgui_newwizard\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title)"
+.br
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBdtsgui_wizard_addpage\fP (struct \fBdtsgui_wizard\fP *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)"
+.br
+.ti -1c
+.RI "int \fBdtsgui_runwizard\fP (struct \fBdtsgui_wizard\fP *dtswiz)"
+.br
+.ti -1c
+.RI "const char * \fBdtsgui_filesave\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, const char *path, const char *name, const char *filter)"
+.br
+.ti -1c
+.RI "const char * \fBdtsgui_fileopen\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, const char *path, const char *name, const char *filter)"
+.br
+.ti -1c
+.RI "void \fBdtsgui_menuenable\fP (\fBdtsgui_menu\fP dm, int enable)"
+.br
+.ti -1c
+.RI "struct curl_post * \fBdtsgui_pane2post\fP (\fBdtsgui_pane\fP p)"
+.br
+.ti -1c
+.RI "struct basic_auth * \fBdtsgui_pwdialog\fP (const char *user, const char *passwd, void *data)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define wx_PANEL_BUTTON_ACTION   \fBwx_PANEL_EVENT_BUTTON_YES\fP | \fBwx_PANEL_EVENT_BUTTON_NO\fP"
+
+.PP
+Definition at line 117 of file dtsgui\&.h\&.
+.SS "#define wx_PANEL_BUTTON_ALL   \fBwx_PANEL_BUTTON_ACTION\fP | \fBwx_PANEL_BUTTON_NAV\fP"
+
+.PP
+Definition at line 118 of file dtsgui\&.h\&.
+.SS "#define wx_PANEL_BUTTON_DIR   \fBwx_PANEL_EVENT_BUTTON_BACK\fP | \fBwx_PANEL_EVENT_BUTTON_FWD\fP"
+
+.PP
+Definition at line 116 of file dtsgui\&.h\&.
+.SS "#define wx_PANEL_BUTTON_NAV   \fBwx_PANEL_EVENT_BUTTON_FIRST\fP | \fBwx_PANEL_EVENT_BUTTON_BACK\fP | \fBwx_PANEL_EVENT_BUTTON_FWD\fP | \fBwx_PANEL_EVENT_BUTTON_LAST\fP"
+
+.PP
+Definition at line 115 of file dtsgui\&.h\&.
+.SS "#define wx_PANEL_EVENT_BUTTON_NONE   0"
+
+.PP
+Definition at line 119 of file dtsgui\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBdtsgui\fP \fBdtsgui\fP"
+
+.PP
+Definition at line 26 of file dtsgui\&.h\&.
+.SS "typedef int(* dtsgui_configcb)(struct \fBdtsgui\fP *, void *)"
+
+.PP
+Definition at line 58 of file dtsgui\&.h\&.
+.SS "typedef \fBdtsgui_pane\fP(* dtsgui_dynpanel)(struct \fBdtsgui\fP *, const char *, void *)"
+
+.PP
+Definition at line 61 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_menu\fP"
+
+.PP
+Definition at line 30 of file dtsgui\&.h\&.
+.SS "typedef \fBdtsgui_pane\fP(* dtsgui_menucb)(struct \fBdtsgui\fP *, void *)"
+
+.PP
+Definition at line 59 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_menuitem\fP"
+
+.PP
+Definition at line 31 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_notebook\fP"
+
+.PP
+Definition at line 35 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_pane\fP"
+
+.PP
+Definition at line 34 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_progress\fP"
+
+.PP
+Definition at line 40 of file dtsgui\&.h\&.
+.SS "typedef void(* dtsgui_tabpane_newdata_cb)(struct xml_doc *, struct xml_node *, void *, void **, int *)"
+
+.PP
+Definition at line 67 of file dtsgui\&.h\&.
+.SS "typedef void(* dtsgui_tabpanel_cb)(\fBdtsgui_pane\fP, void *)"
+
+.PP
+Definition at line 65 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_tabview\fP"
+
+.PP
+Definition at line 37 of file dtsgui\&.h\&.
+.SS "typedef void*(* dtsgui_toolbar_create)(struct \fBdtsgui\fP *, void *, long, int, const char *, void *data)"
+
+.PP
+Definition at line 66 of file dtsgui\&.h\&.
+.SS "typedef \fBdtsgui_pane\fP(* dtsgui_tree_cb)(struct \fBdtsgui\fP *, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, enum \fBtree_cbtype\fP cb_type, const char *, void *)"
+
+.PP
+Definition at line 62 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_treenode\fP"
+
+.PP
+Definition at line 39 of file dtsgui\&.h\&.
+.SS "typedef void* \fBdtsgui_treeview\fP"
+
+.PP
+Definition at line 36 of file dtsgui\&.h\&.
+.SS "typedef void(* dtsgui_treeviewpanel_cb)(\fBdtsgui_pane\fP, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, void *)"
+
+.PP
+Definition at line 64 of file dtsgui\&.h\&.
+.SS "typedef struct \fBdtsgui_wizard\fP \fBdtsgui_wizard\fP"
+
+.PP
+Definition at line 27 of file dtsgui\&.h\&.
+.SS "typedef void(* dtsgui_xmltreenode_cb)(\fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, struct xml_node *, void *)"
+
+.PP
+Definition at line 63 of file dtsgui\&.h\&.
+.SS "typedef struct \fBdynamic_panel\fP \fBdynamic_panel\fP"
+
+.PP
+Definition at line 44 of file dtsgui\&.h\&.
+.SS "typedef int(* event_callback)(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int, int, void *)"
+
+.PP
+Definition at line 60 of file dtsgui\&.h\&.
+.SS "typedef struct \fBform_item\fP \fBform_item\fP"
+
+.PP
+Definition at line 43 of file dtsgui\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBform_data_type\fP"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIDTSGUI_FORM_DATA_PTR \fP\fP
+.TP
+\fB\fIDTSGUI_FORM_DATA_XML \fP\fP
+
+.PP
+Definition at line 52 of file dtsgui\&.h\&.
+.SS "enum \fBpanel_buttons\fP"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIwx_PANEL_EVENT_BUTTON_FIRST \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_BUTTON_BACK \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_BUTTON_FWD \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_BUTTON_LAST \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_BUTTON_YES \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_BUTTON_NO \fP\fP
+
+.PP
+Definition at line 75 of file dtsgui\&.h\&.
+.SS "enum \fBpanel_events\fP"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIwx_PANEL_EVENT_BUTTON \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_COMBO_ENTER \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_COMBO_UPDATE \fP\fP
+.TP
+\fB\fIwx_PANEL_EVENT_DTS \fP\fP
+
+.PP
+Definition at line 84 of file dtsgui\&.h\&.
+.SS "enum \fBpanel_type\fP"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIwx_DTSPANEL_WINDOW \fP\fP
+.TP
+\fB\fIwx_DTSPANEL_PANEL \fP\fP
+.TP
+\fB\fIwx_DTSPANEL_SCROLLPANEL \fP\fP
+.TP
+\fB\fIwx_DTSPANEL_DIALOG \fP\fP
+.TP
+\fB\fIwx_DTSPANEL_TREE \fP\fP
+.TP
+\fB\fIwx_DTSPANEL_WIZARD \fP\fP
+.TP
+\fB\fIwx_DTSPANEL_TAB \fP\fP
+
+.PP
+Definition at line 98 of file dtsgui\&.h\&.
+.SS "enum \fBtree_cbtype\fP"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIDTSGUI_TREE_CB_SELECT \fP\fP
+.TP
+\fB\fIDTSGUI_TREE_CB_DELETE \fP\fP
+.TP
+\fB\fIDTSGUI_TREE_CB_EDIT \fP\fP
+
+.PP
+Definition at line 46 of file dtsgui\&.h\&.
+.SS "enum \fBtree_newnode_flags\fP"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIDTS_TREE_NEW_NODE_EDIT \fP\fP
+.TP
+\fB\fIDTS_TREE_NEW_NODE_DELETE \fP\fP
+.TP
+\fB\fIDTS_TREE_NEW_NODE_CONTAINER \fP\fP
+.TP
+\fB\fIDTS_TREE_NEW_NODE_SORT \fP\fP
+
+.PP
+Definition at line 91 of file dtsgui\&.h\&.
+.SS "enum \fBwidget_type\fP"
+
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIDTS_WIDGET_TEXTBOX \fP\fP
+.TP
+\fB\fIDTS_WIDGET_CHECKBOX \fP\fP
+.TP
+\fB\fIDTS_WIDGET_LISTBOX \fP\fP
+.TP
+\fB\fIDTS_WIDGET_COMBOBOX \fP\fP
+
+.PP
+Definition at line 108 of file dtsgui\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void dtsgui_about (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *text)"
+
+.PP
+Definition at line 72 of file wrapper\&.cpp\&.
+.SS "void dtsgui_alert (struct \fBdtsgui\fP *dtsgui, const char *text)"
+
+.PP
+Definition at line 87 of file wrapper\&.cpp\&.
+.SS "void dtsgui_checkbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *checkval, const char *uncheck, intischecked, void *data)"
+
+.PP
+Definition at line 201 of file wrapper\&.cpp\&.
+.SS "void dtsgui_close (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui)"
+
+.PP
+Definition at line 62 of file wrapper\&.cpp\&.
+.SS "struct \fBform_item\fP* dtsgui_combobox (\fBdtsgui_pane\fPpane, const char *title, const char *name, void *data)\fC [read]\fP"
+
+.PP
+Definition at line 221 of file wrapper\&.cpp\&.
+.SS "void dtsgui_config (\fBdtsgui_configcb\fPconfcallback_cb, void *userdata, struct \fBpoint\fPwsize, struct \fBpoint\fPwpos, const char *title, const char *status)"
+
+.PP
+Definition at line 49 of file wrapper\&.cpp\&.
+.SS "void dtsgui_configcallback (\fBdtsgui_pane\fPpane, \fBdtsgui_configcb\fPcb, void *data)"
+
+.PP
+Definition at line 248 of file wrapper\&.cpp\&.
+.SS "int dtsgui_confirm (struct \fBdtsgui\fP *dtsgui, const char *text)"
+
+.PP
+Definition at line 82 of file wrapper\&.cpp\&.
+.SS "void dtsgui_delpane (\fBdtsgui_pane\fPpane)"
+
+.PP
+Definition at line 147 of file wrapper\&.cpp\&.
+.SS "void dtsgui_exit (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui)"
+
+.PP
+Definition at line 57 of file wrapper\&.cpp\&.
+.SS "const char* dtsgui_fileopen (struct \fBdtsgui\fP *dtsgui, const char *title, const char *path, const char *name, const char *filter)"
+
+.PP
+Definition at line 301 of file wrapper\&.cpp\&.
+.SS "const char* dtsgui_filesave (struct \fBdtsgui\fP *dtsgui, const char *title, const char *path, const char *name, const char *filter)"
+
+.PP
+Definition at line 296 of file wrapper\&.cpp\&.
+.SS "struct \fBform_item\fP* dtsgui_finditem (\fBdtsgui_pane\fPp, const char *name)\fC [read]\fP"
+
+.PP
+Definition at line 274 of file wrapper\&.cpp\&.
+.SS "const char* dtsgui_findvalue (\fBdtsgui_pane\fPp, const char *name)"
+
+.PP
+Definition at line 279 of file wrapper\&.cpp\&.
+.SS "void* dtsgui_item_data (struct \fBform_item\fP *fi)"
+
+.PP
+Definition at line 262 of file wrapper\&.cpp\&.
+.SS "const char* dtsgui_item_name (struct \fBform_item\fP *fi)"
+
+.PP
+Definition at line 266 of file wrapper\&.cpp\&.
+.SS "const char* dtsgui_item_value (struct \fBform_item\fP *fi)"
+
+.PP
+Definition at line 270 of file wrapper\&.cpp\&.
+.SS "struct \fBform_item\fP* dtsgui_listbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, void *data)\fC [read]\fP"
+
+.PP
+Definition at line 211 of file wrapper\&.cpp\&.
+.SS "void dtsgui_listbox_add (struct \fBform_item\fP *lbox, const char *text, const char *value)"
+
+.PP
+Definition at line 231 of file wrapper\&.cpp\&.
+.SS "void dtsgui_listbox_addxml (struct \fBform_item\fP *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr)"
+
+.PP
+Definition at line 235 of file wrapper\&.cpp\&.
+.SS "void dtsgui_listbox_set (struct \fBform_item\fP *listbox, intidx)"
+
+.PP
+Definition at line 239 of file wrapper\&.cpp\&.
+.SS "void dtsgui_menuenable (\fBdtsgui_menu\fPdm, intenable)"
+
+.PP
+Definition at line 33 of file cxxapi\&.cpp\&.
+.SS "void dtsgui_menuitemenable (\fBdtsgui_menuitem\fPdmi, intenable)"
+
+.PP
+Definition at line 320 of file wrapper\&.cpp\&.
+.SS "void dtsgui_menusep (\fBdtsgui_menu\fPdtsmenu)"
+
+.PP
+Definition at line 77 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_menu\fP dtsgui_newmenu (struct \fBdtsgui\fP *dtsgui, const char *name)"
+
+.PP
+Definition at line 67 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_menuitem\fP dtsgui_newmenucb (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *hint, const char *title, intblank, \fBdtsgui_dynpanel\fPcb, void *data)"
+
+.PP
+Definition at line 44 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_menuitem\fP dtsgui_newmenuitem (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *hint, \fBdtsgui_pane\fPpane)"
+
+.PP
+Definition at line 39 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_pane\fP dtsgui_newtabpage (\fBdtsgui_tabview\fPtv, const char *name, intbutmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fPcb, void *cdata)"
+
+.PP
+Definition at line 161 of file wrapper\&.cpp\&.
+.SS "struct \fBdtsgui_wizard\fP* dtsgui_newwizard (struct \fBdtsgui\fP *dtsgui, const char *title)\fC [read]\fP"
+
+.PP
+Definition at line 284 of file wrapper\&.cpp\&.
+.SS "void dtsgui_newxmltabpane (\fBdtsgui_tabview\fPtabv, \fBdtsgui_pane\fPp, const char *xpath, const char *node, const char *vitem, const char *tattr, \fBdtsgui_tabpane_newdata_cb\fPdata_cb, \fBdtsgui_tabpanel_cb\fPcb, void *cdata, struct xml_doc *xmldoc, void *data)"
+
+.PP
+Definition at line 400 of file wrapper\&.cpp\&.
+.SS "void dtsgui_newxmltreenode (\fBdtsgui_treeview\fPtree, \fBdtsgui_pane\fPp, \fBdtsgui_treenode\fPtn, const char *xpath, const char *node, const char *vitem, const char *tattr, intnid, intflags, \fBdtsgui_xmltreenode_cb\fPnode_cb, void *data, \fBdtsgui_treeviewpanel_cb\fPp_cb)"
+
+.PP
+Definition at line 405 of file wrapper\&.cpp\&.
+.SS "void dtsgui_nodesetxml (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *title)"
+
+.PP
+Definition at line 137 of file wrapper\&.cpp\&.
+.SS "struct curl_post* dtsgui_pane2post (\fBdtsgui_pane\fPp)\fC [read]\fP"
+
+.PP
+Definition at line 380 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_pane\fP dtsgui_panel (struct \fBdtsgui\fP *dtsgui, const char *name, const char *title, intbutmask, enum \fBpanel_type\fPtype, void *userdata)"
+
+.PP
+Definition at line 112 of file wrapper\&.cpp\&.
+.SS "struct bucket_list* dtsgui_panel_items (\fBdtsgui_pane\fPpane)\fC [read]\fP"
+
+.PP
+Definition at line 257 of file wrapper\&.cpp\&.
+.SS "void dtsgui_panel_setxml (\fBdtsgui_pane\fPpane, struct xml_doc *xmldoc)"
+
+.PP
+Definition at line 132 of file wrapper\&.cpp\&.
+.SS "void* dtsgui_paneldata (\fBdtsgui_pane\fPpane)"
+
+.PP
+Definition at line 311 of file wrapper\&.cpp\&.
+.SS "struct xml_doc* dtsgui_panelxml (\fBdtsgui_pane\fPpane)\fC [read]\fP"
+
+.PP
+Definition at line 142 of file wrapper\&.cpp\&.
+.SS "struct xml_node* dtsgui_panetoxml (\fBdtsgui_pane\fPp, const char *xpath, const char *node, const char *nodeval, const char *attrkey)\fC [read]\fP"
+
+.PP
+Definition at line 325 of file wrapper\&.cpp\&.
+.SS "void dtsgui_passwdbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *value, void *data)"
+
+.PP
+Definition at line 191 of file wrapper\&.cpp\&.
+.SS "void dtsgui_progress_end (struct \fBdtsgui\fP *dtsgui)"
+
+.PP
+Definition at line 107 of file wrapper\&.cpp\&.
+.SS "int dtsgui_progress_increment (struct \fBdtsgui\fP *dtsgui, intival, const char *newtext)"
+
+.PP
+Definition at line 102 of file wrapper\&.cpp\&.
+.SS "int dtsgui_progress_start (struct \fBdtsgui\fP *dtsgui, const char *text, intmaxval, intquit)"
+
+.PP
+Definition at line 92 of file wrapper\&.cpp\&.
+.SS "int dtsgui_progress_update (struct \fBdtsgui\fP *dtsgui, intnewval, const char *newtext)"
+
+.PP
+Definition at line 97 of file wrapper\&.cpp\&.
+.SS "struct basic_auth* dtsgui_pwdialog (const char *user, const char *passwd, void *data)\fC [read]\fP"
+
+.PP
+Definition at line 415 of file wrapper\&.cpp\&.
+.SS "int dtsgui_run (intargc, char **argv)"
+
+.PP
+Definition at line 53 of file wrapper\&.cpp\&.
+.SS "void dtsgui_rundialog (\fBdtsgui_pane\fPpane, \fBevent_callback\fPevcb, void *data)"
+
+.PP
+Definition at line 385 of file wrapper\&.cpp\&.
+.SS "int dtsgui_runwizard (struct \fBdtsgui_wizard\fP *dtswiz)"
+
+.PP
+Definition at line 292 of file wrapper\&.cpp\&.
+.SS "void dtsgui_sendevent (struct \fBdtsgui\fP *dtsgui, inteid)"
+
+.PP
+Definition at line 335 of file wrapper\&.cpp\&.
+.SS "void dtsgui_set_toolbar (struct \fBdtsgui\fP *dtsgui, intshow)"
+
+.PP
+Definition at line 411 of file wrapper\&.cpp\&.
+.SS "void dtsgui_setevcallback (\fBdtsgui_pane\fPpane, \fBevent_callback\fPevcb, void *data)"
+
+.PP
+Definition at line 243 of file wrapper\&.cpp\&.
+.SS "void dtsgui_setstatus (\fBdtsgui_pane\fPpane, const char *status)"
+
+.PP
+Definition at line 345 of file wrapper\&.cpp\&.
+.SS "void dtsgui_settitle (\fBdtsgui_pane\fPpane, const char *title)"
+
+.PP
+Definition at line 340 of file wrapper\&.cpp\&.
+.SS "void dtsgui_setuptoolbar (struct \fBdtsgui\fP *dtsgui, \fBdtsgui_toolbar_create\fPcb, void *data)"
+
+.PP
+Definition at line 375 of file wrapper\&.cpp\&.
+.SS "void dtsgui_setwindow (struct \fBdtsgui\fP *dtsgui, \fBdtsgui_pane\fPp)"
+
+.PP
+Definition at line 330 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_pane\fP dtsgui_tabpage_insert (\fBdtsgui_tabview\fPtv, const char *name, intbutmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fPcb, void *cdata, intpos, intundo)"
+
+.PP
+Definition at line 166 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_tabview\fP dtsgui_tabwindow (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
+
+.PP
+Definition at line 156 of file wrapper\&.cpp\&.
+.SS "void dtsgui_textbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *value, void *data)"
+
+.PP
+Definition at line 171 of file wrapper\&.cpp\&.
+.SS "void dtsgui_textbox_multi (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *value, void *data)"
+
+.PP
+Definition at line 181 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_pane\fP dtsgui_textpane (struct \fBdtsgui\fP *dtsgui, const char *title, const char *buf)"
+
+.PP
+Definition at line 117 of file wrapper\&.cpp\&.
+.SS "void dtsgui_titleappend (struct \fBdtsgui\fP *dtsgui, const char *text)"
+
+.PP
+Definition at line 316 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_treenode\fP dtsgui_treecont (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *title, intcan_edit, intcan_sort, intcan_del, intnodeid, \fBdtsgui_treeviewpanel_cb\fPp_cb, void *data)"
+
+.PP
+Definition at line 390 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_treenode\fP dtsgui_treeitem (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *title, intcan_edit, intcan_sort, intcan_del, intnodeid, \fBdtsgui_treeviewpanel_cb\fPp_cb, void *data)"
+
+.PP
+Definition at line 395 of file wrapper\&.cpp\&.
+.SS "void* dtsgui_treenodegetdata (\fBdtsgui_treenode\fPtn)"
+
+.PP
+Definition at line 370 of file wrapper\&.cpp\&.
+.SS "struct xml_node* dtsgui_treenodegetxml (\fBdtsgui_treenode\fPtn, char **buf)\fC [read]\fP"
+
+.PP
+Definition at line 365 of file wrapper\&.cpp\&.
+.SS "int dtsgui_treenodeid (\fBdtsgui_treenode\fPtn)"
+
+.PP
+Definition at line 350 of file wrapper\&.cpp\&.
+.SS "const char* dtsgui_treenodeparent (\fBdtsgui_treenode\fPtn)"
+
+.PP
+Definition at line 355 of file wrapper\&.cpp\&.
+.SS "void dtsgui_treenodesetxml (\fBdtsgui_treenode\fPtn, struct xml_node *xn, const char *tattr)"
+
+.PP
+Definition at line 360 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_pane\fP dtsgui_treepane (\fBdtsgui_treeview\fPtv, const char *name, intbutmask, void *userdata, struct xml_doc *xmldoc)"
+
+.PP
+Definition at line 122 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_pane\fP dtsgui_treepane_default (\fBdtsgui_treeview\fPself, \fBdtsgui_treenode\fPnode)"
+
+.PP
+Definition at line 127 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_treeview\fP dtsgui_treewindow (struct \fBdtsgui\fP *dtsgui, const char *title, \fBdtsgui_tree_cb\fPtree_cb, void *userdata, struct xml_doc *xmldoc)"
+
+.PP
+Definition at line 151 of file wrapper\&.cpp\&.
+.SS "void* dtsgui_userdata (struct \fBdtsgui\fP *dtsgui)"
+
+.PP
+Definition at line 253 of file wrapper\&.cpp\&.
+.SS "\fBdtsgui_pane\fP dtsgui_wizard_addpage (struct \fBdtsgui_wizard\fP *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)"
+
+.PP
+Definition at line 288 of file wrapper\&.cpp\&.
+.SS "void dtsgui_xmlcheckbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+
+.PP
+Definition at line 206 of file wrapper\&.cpp\&.
+.SS "struct \fBform_item\fP* dtsgui_xmlcombobox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)\fC [read]\fP"
+
+.PP
+Definition at line 226 of file wrapper\&.cpp\&.
+.SS "struct \fBform_item\fP* dtsgui_xmllistbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)\fC [read]\fP"
+
+.PP
+Definition at line 216 of file wrapper\&.cpp\&.
+.SS "void dtsgui_xmlpanel_update (\fBdtsgui_pane\fPpane)"
+
+.PP
+Definition at line 306 of file wrapper\&.cpp\&.
+.SS "void dtsgui_xmlpasswdbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+
+.PP
+Definition at line 196 of file wrapper\&.cpp\&.
+.SS "void dtsgui_xmltextbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+
+.PP
+Definition at line 176 of file wrapper\&.cpp\&.
+.SS "void dtsgui_xmltextbox_multi (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
+
+.PP
+Definition at line 186 of file wrapper\&.cpp\&.
+.SS "void dtsgui_xnode_checkbox (\fBdtsgui_pane\fPpane, const char *title, const char *checkval, const char *uncheckval, const char *attr)"
+
+.SS "struct \fBform_item\fP* dtsgui_xnode_combobox (\fBdtsgui_pane\fPpane, const char *title, const char *attr)\fC [read]\fP"
+
+.SS "struct \fBform_item\fP* dtsgui_xnode_listbox (\fBdtsgui_pane\fPpane, const char *title, const char *attr)\fC [read]\fP"
+
+.SS "void dtsgui_xnode_passwdbox (\fBdtsgui_pane\fPpane, const char *title, const char *attr)"
+
+.SS "void dtsgui_xnode_textbox (\fBdtsgui_pane\fPpane, const char *title, const char *attr)"
+
+.SS "void dtsgui_xnode_textbox_multi (\fBdtsgui_pane\fPpane, const char *title, const char *attr)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.
