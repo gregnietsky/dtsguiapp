@@ -398,20 +398,22 @@ dtsgui_treenode dtsgui_treeitem(dtsgui_treeview tree, dtsgui_treenode node, cons
 }
 
 void dtsgui_newxmltabpane(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath, const char *node, const char *vitem, const char *tattr,  dtsgui_tabpane_newdata_cb data_cb, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, void *data) {
-	DTSPanel *dp = (DTSPanel*)p;
 	class tab_newpane *tn = new tab_newpane((DTSTabWindow*)tabv, xpath, node, vitem, tattr, data_cb, cb, cdata, xmldoc, data);
-	dp->SetEventCallback(&tab_newpane::handle_newtabpane_cb, tn, true);
+	static_cast<DTSPanel*>(p)->SetEventCallback(&tab_newpane::handle_newtabpane_cb, tn, true);
 }
 
 void dtsgui_newxmltreenode(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr,
 							int nid, int flags, dtsgui_xmltreenode_cb node_cb, void *data, dtsgui_treeviewpanel_cb p_cb) {
-	DTSPanel *dp = (DTSPanel*)p;
 	class tree_newnode *nn = new tree_newnode(tree, tn, xpath, node, vitem, tattr, nid, flags, node_cb, data, p_cb);
-	dp->SetEventCallback(&tree_newnode::handle_newtreenode_cb, nn, true);
+	static_cast<DTSPanel*>(p)->SetEventCallback(&tree_newnode::handle_newtreenode_cb, nn, true);
 }
 
 void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
 	dtsgui->ShowToolbar(show);
 }
 
+struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd, void *data) {
+	DTSFrame *f = static_cast<class dtsgui*>(data)->GetFrame();
+	return f->Passwd(user, passwd);
+}
 } /*END Namespace*/

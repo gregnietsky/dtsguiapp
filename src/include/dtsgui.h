@@ -118,21 +118,14 @@ enum widget_type {
 #define wx_PANEL_BUTTON_ALL		wx_PANEL_BUTTON_ACTION | wx_PANEL_BUTTON_NAV
 #define wx_PANEL_EVENT_BUTTON_NONE	0
 
+/*
+ * These are used in C only or when __DTS_C_API is defined in the DTS_C_API namespace
+ */
+
 #ifdef __cplusplus
 extern "C" {
 namespace DTS_C_API {
 #endif /* __cplusplus*/
-
-/*
- * The following items are required in C++
- */
-
-/* returns auth struct needs to be un-ref'd*/
-struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
-
-/*
- * These are used in C only or when __DTS_C_API is defined
- */
 
 #if !defined(__cplusplus) || defined(__DTS_C_API)
 /*app frame config and control*/
@@ -264,12 +257,15 @@ const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char
 /*utils*/
 void dtsgui_menuenable(dtsgui_menu dm, int enable);
 struct curl_post *dtsgui_pane2post(dtsgui_pane p);
-#endif /* __cplusplus || __DTS_C_API*/
+
+/* returns auth struct needs to be un-ref'd*/
+struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd,void *data);
 
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path);
 #endif /* __WIN32*/
 
+#endif /* __cplusplus || __DTS_C_API*/
 #ifdef __cplusplus
 }}
 

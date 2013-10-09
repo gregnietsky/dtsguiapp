@@ -44,17 +44,10 @@ class DTSApp : public wxApp {
 		DTSApp(dtsgui_configcb confcallback_cb, void *data, struct point wsize, struct point wpos, const char *title, const char *status);
 		~DTSApp();
 	private:
+		static basic_auth *CurlPasswd(const char *user, const char *passwd, void *data);
 		virtual bool OnInit();
 		class dtsgui *dtsgui;
 		int curl;
 };
-
-namespace DTS_C_API {
-	extern "C" {
-		int curl_progress_function(void *data, double dltotal, double dlnow, double ultotal, double ulnow);
-		void curl_progress_ctrl(void *data, int pause);
-		void *curl_startprogress(void *data);
-	}
-}
 
 #endif // DTSAPP_H

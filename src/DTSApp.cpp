@@ -24,6 +24,15 @@
 #include "DTSApp.h"
 #include "DTSFrame.h"
 
+/* add  the callback defines here explicitly in the correct namespace*/
+namespace DTS_C_API {
+	extern "C" {
+		int curl_progress_function(void *data, double dltotal, double dlnow, double ultotal, double ulnow);
+		void curl_progress_ctrl(void *data, int pause);
+		void *curl_startprogress(void *data);
+	}
+}
+
 dtsgui::dtsgui(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *data) {
 	wsize = w_size;
 	wpos = w_pos;
@@ -136,7 +145,7 @@ DTSApp::DTSApp(dtsgui_configcb confcallback_cb,void *data, struct point wsize, s
 	/*start up curl and add progress bits*/
 	curl = curlinit();
 	curl_setprogress(DTS_C_API::curl_progress_function, DTS_C_API::curl_progress_ctrl, DTS_C_API::curl_startprogress, dtsgui);
-	curl_setauth_cb(DTS_C_API::dtsgui_pwdialog, dtsgui);
+	curl_setauth_cb(CurlPasswd, dtsgui);
 }
 
 DTSApp::~DTSApp() {
@@ -155,4 +164,11 @@ bool DTSApp::OnInit() {
 	}
 
 	return dtsgui->SetupAPPFrame();
+}
+
+struct basic_auth *DTSApp::CurlPasswd(const char *user, const char *passwd, void *data) {
+	class dtsgui *dtsgui = (class dtsgui*)data;
+	class DTSFrame *f = dtsgui->GetFrame();
+
+	return f->Passwd(user, passwd);
 }

@@ -460,3 +460,45 @@ wxMenuItem *DTSFrame::NewMenuItem(wxMenu *m, int menuid, const wxString &name, c
 	Bind(wxEVT_COMMAND_MENU_SELECTED, &DTSFrame::DynamicPanelEvent, this, menuid, menuid, ev_data);
 	return mi;
 }
+
+int DTSFrame::pwevent(struct dtsgui *dtsgui, dtsgui_pane p, int type, int event, void *data) {
+	struct basic_auth *auth;
+	DTSDialog *dp = (DTSDialog*)p;
+
+	if (event == wx_PANEL_EVENT_BUTTON_YES) {
+		if (!(auth = (struct basic_auth*)dp->GetUserData())) {
+			return 0;
+		}
+		if (auth->user) {
+			free((void*)auth->user);
+			auth->user = NULL;
+		}
+		if (auth->passwd) {
+			memset((void*)auth->passwd, 0, strlen(auth->passwd));
+			free((void*)auth->passwd);
+			auth->passwd = NULL;
+		}
+
+		auth->user = dp->FindValue("uname");
+		auth->passwd = dp->FindValue("pwd");
+		objunref(auth);
+	}
+	return 1;
+}
+
+class basic_auth *DTSFrame::Passwd(const char *user, const char *passwd) {
+	struct basic_auth *bauth;
+	DTSDialog *pwbox;
+
+	if (!(bauth = curl_newauth(user, passwd))) {
+		return NULL;
+	}
+
+	pwbox = (DTSDialog*)CreatePane("Athentification", wxEmptyString, wx_PANEL_BUTTON_ACTION, wx_DTSPANEL_DIALOG, bauth);
+	pwbox->TextBox("Username", "uname", bauth->user, wxTE_LEFT | wxTE_PROCESS_ENTER, 1, NULL, DTSGUI_FORM_DATA_PTR);
+	pwbox->TextBox("Password", "pwd", bauth->passwd, wxTE_PASSWORD | wxTE_PROCESS_ENTER, 1, NULL,  DTSGUI_FORM_DATA_PTR);
+
+	pwbox->RunDialog(pwevent, NULL);
+
+	return bauth;
+}
