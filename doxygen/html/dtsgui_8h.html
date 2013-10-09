@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('dtsgui_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,9 +109,12 @@ $(document).ready(function(){initNavTree('dtsgui_8h.html','');});
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">dtsgui.h File Reference</div>  </div>
+<div class="title">dtsgui.h File Reference<div class="ingroups"><a class="el" href="group___c-_a_p_i.html">Library C API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main include file for the GUI Library.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br/>
 <code>#include &lt;dtsapp.h&gt;</code><br/>
 </div>
@@ -160,8 +164,9 @@ Typedefs</h2></td></tr>
 <tr class="separator:abbf6decd0bf8428c296f4adcafed46fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa881f6b55dcf9b95108f08bf62d4802f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="classdynamic__panel.html">dynamic_panel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aa881f6b55dcf9b95108f08bf62d4802f">dynamic_panel</a></td></tr>
 <tr class="separator:aa881f6b55dcf9b95108f08bf62d4802f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3b80490c86b8275c47382588f2ecfd4"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *)</td></tr>
-<tr class="separator:ad3b80490c86b8275c47382588f2ecfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3b80490c86b8275c47382588f2ecfd4"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#gad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *)</td></tr>
+<tr class="memdesc:gad3b80490c86b8275c47382588f2ecfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called on application execution.  <a href="group___c-_a_p_i.html#gad3b80490c86b8275c47382588f2ecfd4"></a><br/></td></tr>
+<tr class="separator:gad3b80490c86b8275c47382588f2ecfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d655090fad451700b01ffc4b0bdd727"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a0d655090fad451700b01ffc4b0bdd727">dtsgui_menucb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *)</td></tr>
 <tr class="separator:a0d655090fad451700b01ffc4b0bdd727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfd3355668ba382f87a9aab4ea2c4e9c"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, int, int, void *)</td></tr>
@@ -236,96 +241,139 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a50f9e1db382c043f9e1acb5562e866d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a50f9e1db382c043f9e1acb5562e866d0">dtsgui_config</a> (<a class="el" href="dtsgui_8h.html#ad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> confcallback_cb, void *userdata, struct <a class="el" href="structpoint.html">point</a> wsize, struct <a class="el" href="structpoint.html">point</a> wpos, const char *title, const char *status)</td></tr>
-<tr class="separator:a50f9e1db382c043f9e1acb5562e866d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4af7c2c71970b7148517501486d9d4cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a4af7c2c71970b7148517501486d9d4cd">dtsgui_run</a> (int argc, char **argv)</td></tr>
-<tr class="separator:a4af7c2c71970b7148517501486d9d4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa15d65f936fae1e503c631690cfdf531"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aa15d65f936fae1e503c631690cfdf531">dtsgui_userdata</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
-<tr class="separator:aa15d65f936fae1e503c631690cfdf531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af964347f37077f674bbe6052609da1c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#af964347f37077f674bbe6052609da1c3">dtsgui_titleappend</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *text)</td></tr>
-<tr class="separator:af964347f37077f674bbe6052609da1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec2dc986c8fa482e2b7170bd08396f06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aec2dc986c8fa482e2b7170bd08396f06">dtsgui_sendevent</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int eid)</td></tr>
-<tr class="separator:aec2dc986c8fa482e2b7170bd08396f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a674e016ff10002ff77d7dca63b795b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a674e016ff10002ff77d7dca63b795b45">dtsgui_setwindow</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p)</td></tr>
-<tr class="separator:a674e016ff10002ff77d7dca63b795b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a25a3945b9a7e016ea0cf4cb38bb53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a65a25a3945b9a7e016ea0cf4cb38bb53">dtsgui_setuptoolbar</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, <a class="el" href="dtsgui_8h.html#a53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> cb, void *data)</td></tr>
-<tr class="separator:a65a25a3945b9a7e016ea0cf4cb38bb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e32e36e1d7bad6e4e25b26722fee638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a2e32e36e1d7bad6e4e25b26722fee638">dtsgui_set_toolbar</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int show)</td></tr>
-<tr class="separator:a2e32e36e1d7bad6e4e25b26722fee638"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1a78fdb6f0c4066da7491ddef1ac990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ab1a78fdb6f0c4066da7491ddef1ac990">dtsgui_setstatus</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, const char *status)</td></tr>
-<tr class="separator:ab1a78fdb6f0c4066da7491ddef1ac990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d2a8ac2b1684dd387077816eaf0b412"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a7d2a8ac2b1684dd387077816eaf0b412">dtsgui_newmenu</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *name)</td></tr>
-<tr class="separator:a7d2a8ac2b1684dd387077816eaf0b412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d27dd98edafdcd70b0f2ee45df6ae25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#af59302244664352117c2669055da5850">dtsgui_menuitem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a9d27dd98edafdcd70b0f2ee45df6ae25">dtsgui_newmenucb</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *hint, const char *title, int blank, <a class="el" href="dtsgui_8h.html#a080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> cb, void *data)</td></tr>
-<tr class="separator:a9d27dd98edafdcd70b0f2ee45df6ae25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91384d34bdbc0b0b13c615135b8a9d6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#af59302244664352117c2669055da5850">dtsgui_menuitem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a91384d34bdbc0b0b13c615135b8a9d6a">dtsgui_newmenuitem</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *hint, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
-<tr class="separator:a91384d34bdbc0b0b13c615135b8a9d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacecdb36b65ac3d5522a419a6b69c9f7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#gacecdb36b65ac3d5522a419a6b69c9f7f">dtsgui_config</a> (<a class="el" href="group___c-_a_p_i.html#gad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> confcallback_cb, void *userdata, struct <a class="el" href="structpoint.html">point</a> wsize, struct <a class="el" href="structpoint.html">point</a> wpos, const char *title, const char *status)</td></tr>
+<tr class="memdesc:gacecdb36b65ac3d5522a419a6b69c9f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the GUI and create a application frame.  <a href="group___c-_a_p_i.html#gacecdb36b65ac3d5522a419a6b69c9f7f"></a><br/></td></tr>
+<tr class="separator:gacecdb36b65ac3d5522a419a6b69c9f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ac9d5ef153d17266a704a373d591962"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#ga3ac9d5ef153d17266a704a373d591962">dtsgui_run</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:ga3ac9d5ef153d17266a704a373d591962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the GUI and create a application frame.  <a href="group___c-_a_p_i.html#ga3ac9d5ef153d17266a704a373d591962"></a><br/></td></tr>
+<tr class="separator:ga3ac9d5ef153d17266a704a373d591962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa224c0a868745526e6ac3c05970471c5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#gaa224c0a868745526e6ac3c05970471c5">dtsgui_userdata</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
+<tr class="memdesc:gaa224c0a868745526e6ac3c05970471c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a reference for the application userdata.  <a href="group___c-_a_p_i.html#gaa224c0a868745526e6ac3c05970471c5"></a><br/></td></tr>
+<tr class="separator:gaa224c0a868745526e6ac3c05970471c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc00c020f324c119956fcc38e7fd55db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#gafc00c020f324c119956fcc38e7fd55db">dtsgui_titleappend</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *text)</td></tr>
+<tr class="memdesc:gafc00c020f324c119956fcc38e7fd55db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append text to the title enclosed in square brackets Update the main application title bar text.  <a href="group___c-_a_p_i.html#gafc00c020f324c119956fcc38e7fd55db"></a><br/></td></tr>
+<tr class="separator:gafc00c020f324c119956fcc38e7fd55db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e766a49c1e9eba3f2c2fda47b8166aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#ga4e766a49c1e9eba3f2c2fda47b8166aa">dtsgui_sendevent</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int eid)</td></tr>
+<tr class="memdesc:ga4e766a49c1e9eba3f2c2fda47b8166aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emit a event handled by event callback's A event is emited and recived by all active handlers The ID can be determined as required.  <a href="group___c-_a_p_i.html#ga4e766a49c1e9eba3f2c2fda47b8166aa"></a><br/></td></tr>
+<tr class="separator:ga4e766a49c1e9eba3f2c2fda47b8166aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga529d973a998e39dba025dfcd96a9a706"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#ga529d973a998e39dba025dfcd96a9a706">dtsgui_setwindow</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p)</td></tr>
+<tr class="memdesc:ga529d973a998e39dba025dfcd96a9a706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the displayed panel.  <a href="group___c-_a_p_i.html#ga529d973a998e39dba025dfcd96a9a706"></a><br/></td></tr>
+<tr class="separator:ga529d973a998e39dba025dfcd96a9a706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1734b840fc0696b13d5b616df0ec3bbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#ga1734b840fc0696b13d5b616df0ec3bbb">dtsgui_setuptoolbar</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, <a class="el" href="dtsgui_8h.html#a53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> cb, void *data)</td></tr>
+<tr class="memdesc:ga1734b840fc0696b13d5b616df0ec3bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to run to create and activate the toolbar. The toolbar has of yet not been wrapped into the C API Its recomended that a C++ object be linked that contains a derived class of wxToolbar.  <a href="group___c-_a_p_i.html#ga1734b840fc0696b13d5b616df0ec3bbb"></a><br/></td></tr>
+<tr class="separator:ga1734b840fc0696b13d5b616df0ec3bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga164aa159bc57a744f012b49268796bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i.html#ga164aa159bc57a744f012b49268796bbe">dtsgui_set_toolbar</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int show)</td></tr>
+<tr class="memdesc:ga164aa159bc57a744f012b49268796bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable or enable the toolbar.  <a href="group___c-_a_p_i.html#ga164aa159bc57a744f012b49268796bbe"></a><br/></td></tr>
+<tr class="separator:ga164aa159bc57a744f012b49268796bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad561196144c72953e31b83aff17054e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#gad561196144c72953e31b83aff17054e5">dtsgui_setstatus</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, const char *status)</td></tr>
+<tr class="memdesc:gad561196144c72953e31b83aff17054e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the status bar message of panel.  <a href="group___c-_a_p_i-_panel.html#gad561196144c72953e31b83aff17054e5"></a><br/></td></tr>
+<tr class="separator:gad561196144c72953e31b83aff17054e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd0f3eab51bf576378a6438c3982fd48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_menus.html#gadd0f3eab51bf576378a6438c3982fd48">dtsgui_newmenu</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *name)</td></tr>
+<tr class="memdesc:gadd0f3eab51bf576378a6438c3982fd48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new menu and append it to the menu bar.  <a href="group___c-_a_p_i-_menus.html#gadd0f3eab51bf576378a6438c3982fd48"></a><br/></td></tr>
+<tr class="separator:gadd0f3eab51bf576378a6438c3982fd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga045cc441a11f42796d6bd89dfa52e4ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#af59302244664352117c2669055da5850">dtsgui_menuitem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec">dtsgui_newmenucb</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *hint, const char *title, int blank, <a class="el" href="dtsgui_8h.html#a080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> cb, void *data)</td></tr>
+<tr class="memdesc:ga045cc441a11f42796d6bd89dfa52e4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a menu item that will call a function with supplied data.  <a href="group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec"></a><br/></td></tr>
+<tr class="separator:ga045cc441a11f42796d6bd89dfa52e4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb8b44357ce2ce4a3fd028939cf8c700"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#af59302244664352117c2669055da5850">dtsgui_menuitem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_menus.html#gabb8b44357ce2ce4a3fd028939cf8c700">dtsgui_newmenuitem</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *hint, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
+<tr class="memdesc:gabb8b44357ce2ce4a3fd028939cf8c700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a menu item that will activate the pane provided.  <a href="group___c-_a_p_i-_menus.html#gabb8b44357ce2ce4a3fd028939cf8c700"></a><br/></td></tr>
+<tr class="separator:gabb8b44357ce2ce4a3fd028939cf8c700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a85f388867d2c2059a620883dc0f39f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a8a85f388867d2c2059a620883dc0f39f">dtsgui_menuitemenable</a> (<a class="el" href="dtsgui_8h.html#af59302244664352117c2669055da5850">dtsgui_menuitem</a> dmi, int enable)</td></tr>
 <tr class="separator:a8a85f388867d2c2059a620883dc0f39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79b28355b43972330f6cc4701e853796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a79b28355b43972330f6cc4701e853796">dtsgui_menusep</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu)</td></tr>
-<tr class="separator:a79b28355b43972330f6cc4701e853796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac24f9bd1872446b45a73c81f7fc1cbc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ac24f9bd1872446b45a73c81f7fc1cbc9">dtsgui_about</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *text)</td></tr>
-<tr class="separator:ac24f9bd1872446b45a73c81f7fc1cbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55f5cf53a83a219f28932e2342a72c27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a55f5cf53a83a219f28932e2342a72c27">dtsgui_close</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
-<tr class="separator:a55f5cf53a83a219f28932e2342a72c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa6753a35aac33f9fafe19f247cbd12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aefa6753a35aac33f9fafe19f247cbd12">dtsgui_exit</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
-<tr class="separator:aefa6753a35aac33f9fafe19f247cbd12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52490aaab82d11b0b623c3bed66a228d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a52490aaab82d11b0b623c3bed66a228d">dtsgui_panel</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *name, const char *title, int butmask, enum <a class="el" href="dtsgui_8h.html#a9275874ac61d3750aa677a36da714373">panel_type</a> type, void *userdata)</td></tr>
-<tr class="separator:a52490aaab82d11b0b623c3bed66a228d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd0fab4862d2f37a36e14d388e88abb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#acd0fab4862d2f37a36e14d388e88abb6">dtsgui_textpane</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, const char *buf)</td></tr>
-<tr class="separator:acd0fab4862d2f37a36e14d388e88abb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7213d8f0478f68e236032f95ec6b807c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a7213d8f0478f68e236032f95ec6b807c">dtsgui_settitle</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, const char *title)</td></tr>
-<tr class="separator:a7213d8f0478f68e236032f95ec6b807c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05cda377b30652ee4a51547a2213d96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ad05cda377b30652ee4a51547a2213d96">dtsgui_delpane</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
-<tr class="separator:ad05cda377b30652ee4a51547a2213d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a789900b81dc498b4be42129e64a72853"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a789900b81dc498b4be42129e64a72853">dtsgui_paneldata</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
-<tr class="separator:a789900b81dc498b4be42129e64a72853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5554fe3d240dc18751404d2fc4f56d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a5554fe3d240dc18751404d2fc4f56d60">dtsgui_setevcallback</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, <a class="el" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> evcb, void *data)</td></tr>
-<tr class="separator:a5554fe3d240dc18751404d2fc4f56d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e6070a37d835753216a910515cc061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a66e6070a37d835753216a910515cc061">dtsgui_configcallback</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, <a class="el" href="dtsgui_8h.html#ad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> cb, void *data)</td></tr>
-<tr class="separator:a66e6070a37d835753216a910515cc061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0138db5d86e70bb55258f0063d8dcded"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a0138db5d86e70bb55258f0063d8dcded">dtsgui_panel_setxml</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, struct xml_doc *xmldoc)</td></tr>
-<tr class="separator:a0138db5d86e70bb55258f0063d8dcded"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4b585f8d1ecc02e04b16694d655e850"><td class="memItemLeft" align="right" valign="top">struct xml_doc *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ae4b585f8d1ecc02e04b16694d655e850">dtsgui_panelxml</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
-<tr class="separator:ae4b585f8d1ecc02e04b16694d655e850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1427bf41d77169094f3722ff5b20f657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a1427bf41d77169094f3722ff5b20f657">dtsgui_xmlpanel_update</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
-<tr class="separator:a1427bf41d77169094f3722ff5b20f657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4164d90e36519fb0c61cf583fe808154"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a4164d90e36519fb0c61cf583fe808154">dtsgui_tabwindow</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, void *data)</td></tr>
-<tr class="separator:a4164d90e36519fb0c61cf583fe808154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a346ef4dc47cab9f5b572a46db5665aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a346ef4dc47cab9f5b572a46db5665aa3">dtsgui_newtabpage</a> (<a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a> tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, <a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> cb, void *cdata)</td></tr>
-<tr class="separator:a346ef4dc47cab9f5b572a46db5665aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d54d12c672f4810d05061eedf19d04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ad6d54d12c672f4810d05061eedf19d04">dtsgui_tabpage_insert</a> (<a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a> tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, <a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> cb, void *cdata, int pos, int undo)</td></tr>
-<tr class="separator:ad6d54d12c672f4810d05061eedf19d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae08578b520ba3285fb636c970db7d42e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ae08578b520ba3285fb636c970db7d42e">dtsgui_newxmltabpane</a> (<a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a> tabv, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, const char *xpath, const char *node, const char *vitem, const char *tattr, <a class="el" href="dtsgui_8h.html#ab5e1fa276d48b20d35f4ef20110c39ed">dtsgui_tabpane_newdata_cb</a> data_cb, <a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> cb, void *cdata, struct xml_doc *xmldoc, void *data)</td></tr>
-<tr class="separator:ae08578b520ba3285fb636c970db7d42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5fdf4f87736dd97f4efc5fe98710d39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ae5fdf4f87736dd97f4efc5fe98710d39">dtsgui_treewindow</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, <a class="el" href="dtsgui_8h.html#a32927ee58215cd957e5134af0f13303f">dtsgui_tree_cb</a> tree_cb, void *userdata, struct xml_doc *xmldoc)</td></tr>
-<tr class="separator:ae5fdf4f87736dd97f4efc5fe98710d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b43ff2904ec47f8fa2768ebb58f08df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a2b43ff2904ec47f8fa2768ebb58f08df">dtsgui_treepane</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc)</td></tr>
-<tr class="separator:a2b43ff2904ec47f8fa2768ebb58f08df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa42e7fa21213f6092280f3a79efe4b45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aa42e7fa21213f6092280f3a79efe4b45">dtsgui_treepane_default</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> self, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node)</td></tr>
-<tr class="separator:aa42e7fa21213f6092280f3a79efe4b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acef472698d24ffa2724ab954fb515fd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#acef472698d24ffa2724ab954fb515fd4">dtsgui_nodesetxml</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node, const char *title)</td></tr>
-<tr class="separator:acef472698d24ffa2724ab954fb515fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea3ddf7a32e4c9e8e835a125f9e8efcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aea3ddf7a32e4c9e8e835a125f9e8efcb">dtsgui_treecont</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, <a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> p_cb, void *data)</td></tr>
-<tr class="separator:aea3ddf7a32e4c9e8e835a125f9e8efcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa59cc2b0928b977dc199cd4b295668b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aaa59cc2b0928b977dc199cd4b295668b">dtsgui_treeitem</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, <a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> p_cb, void *data)</td></tr>
-<tr class="separator:aaa59cc2b0928b977dc199cd4b295668b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78262eee893ac5cee50ad23092fdfa27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a78262eee893ac5cee50ad23092fdfa27">dtsgui_treenodesetxml</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn, struct xml_node *xn, const char *tattr)</td></tr>
-<tr class="separator:a78262eee893ac5cee50ad23092fdfa27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf655828d94de128cfd8269d03d649092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_menus.html#gaf655828d94de128cfd8269d03d649092">dtsgui_menusep</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu)</td></tr>
+<tr class="memdesc:gaf655828d94de128cfd8269d03d649092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Menu seperator to the menu.  <a href="group___c-_a_p_i-_menus.html#gaf655828d94de128cfd8269d03d649092"></a><br/></td></tr>
+<tr class="separator:gaf655828d94de128cfd8269d03d649092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf06c34986c04d800883694733554033e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_menus.html#gaf06c34986c04d800883694733554033e">dtsgui_about</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *text)</td></tr>
+<tr class="memdesc:gaf06c34986c04d800883694733554033e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Menu item will pop up a "about" box.  <a href="group___c-_a_p_i-_menus.html#gaf06c34986c04d800883694733554033e"></a><br/></td></tr>
+<tr class="separator:gaf06c34986c04d800883694733554033e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58e38f8ef567c8f50e15a53507ee4a72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_menus.html#ga58e38f8ef567c8f50e15a53507ee4a72">dtsgui_close</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
+<tr class="memdesc:ga58e38f8ef567c8f50e15a53507ee4a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Menu item that will close the app after sending a save event.  <a href="group___c-_a_p_i-_menus.html#ga58e38f8ef567c8f50e15a53507ee4a72"></a><br/></td></tr>
+<tr class="separator:ga58e38f8ef567c8f50e15a53507ee4a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf67f1b041be315b58ccacc7d193b273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_menus.html#gabf67f1b041be315b58ccacc7d193b273">dtsgui_exit</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsmenu, struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
+<tr class="memdesc:gabf67f1b041be315b58ccacc7d193b273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Menu item that will abort the app without save event been generated.  <a href="group___c-_a_p_i-_menus.html#gabf67f1b041be315b58ccacc7d193b273"></a><br/></td></tr>
+<tr class="separator:gabf67f1b041be315b58ccacc7d193b273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac763bff39863668014931022b469d836"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#gac763bff39863668014931022b469d836">dtsgui_panel</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *name, const char *title, int butmask, enum <a class="el" href="dtsgui_8h.html#a9275874ac61d3750aa677a36da714373">panel_type</a> type, void *userdata)</td></tr>
+<tr class="memdesc:gac763bff39863668014931022b469d836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a pannel to be displayed.  <a href="group___c-_a_p_i-_panel.html#gac763bff39863668014931022b469d836"></a><br/></td></tr>
+<tr class="separator:gac763bff39863668014931022b469d836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb8efe017917a372826f7ddedb0e8bba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#gafb8efe017917a372826f7ddedb0e8bba">dtsgui_textpane</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, const char *buf)</td></tr>
+<tr class="memdesc:gafb8efe017917a372826f7ddedb0e8bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a text display box with the supplied buffer.  <a href="group___c-_a_p_i-_panel.html#gafb8efe017917a372826f7ddedb0e8bba"></a><br/></td></tr>
+<tr class="separator:gafb8efe017917a372826f7ddedb0e8bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f8f0e22fd2ecdcb915ec06851d12e3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga3f8f0e22fd2ecdcb915ec06851d12e3d">dtsgui_settitle</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, const char *title)</td></tr>
+<tr class="memdesc:ga3f8f0e22fd2ecdcb915ec06851d12e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the title on the panel if it exists.  <a href="group___c-_a_p_i-_panel.html#ga3f8f0e22fd2ecdcb915ec06851d12e3d"></a><br/></td></tr>
+<tr class="separator:ga3f8f0e22fd2ecdcb915ec06851d12e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71826ffc718e3dc219e57befdb6f0d8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga71826ffc718e3dc219e57befdb6f0d8c">dtsgui_delpane</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
+<tr class="memdesc:ga71826ffc718e3dc219e57befdb6f0d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a panel.  <a href="group___c-_a_p_i-_panel.html#ga71826ffc718e3dc219e57befdb6f0d8c"></a><br/></td></tr>
+<tr class="separator:ga71826ffc718e3dc219e57befdb6f0d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6728901f40e67a95bc46150e1cf3c450"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga6728901f40e67a95bc46150e1cf3c450">dtsgui_paneldata</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
+<tr class="memdesc:ga6728901f40e67a95bc46150e1cf3c450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a reference to the userdata of panel.  <a href="group___c-_a_p_i-_panel.html#ga6728901f40e67a95bc46150e1cf3c450"></a><br/></td></tr>
+<tr class="separator:ga6728901f40e67a95bc46150e1cf3c450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa85445ee6c9a2c24d76824bb67cc2ab2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#gaa85445ee6c9a2c24d76824bb67cc2ab2">dtsgui_setevcallback</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, <a class="el" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> evcb, void *data)</td></tr>
+<tr class="memdesc:gaa85445ee6c9a2c24d76824bb67cc2ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set event callback function for panel.  <a href="group___c-_a_p_i-_panel.html#gaa85445ee6c9a2c24d76824bb67cc2ab2"></a><br/></td></tr>
+<tr class="separator:gaa85445ee6c9a2c24d76824bb67cc2ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2f995a29a5b461ac67c7d9aa7091686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#gab2f995a29a5b461ac67c7d9aa7091686">dtsgui_configcallback</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, <a class="el" href="group___c-_a_p_i.html#gad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> cb, void *data)</td></tr>
+<tr class="memdesc:gab2f995a29a5b461ac67c7d9aa7091686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set config callback function for panel (UNUSED).  <a href="group___c-_a_p_i-_panel.html#gab2f995a29a5b461ac67c7d9aa7091686"></a><br/></td></tr>
+<tr class="separator:gab2f995a29a5b461ac67c7d9aa7091686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad91055a12542c30dab4aacbd0761c785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#gad91055a12542c30dab4aacbd0761c785">dtsgui_panel_setxml</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, struct xml_doc *xmldoc)</td></tr>
+<tr class="memdesc:gad91055a12542c30dab4aacbd0761c785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass a reference to a XML Doc Structure to the panel.  <a href="group___c-_a_p_i-_panel.html#gad91055a12542c30dab4aacbd0761c785"></a><br/></td></tr>
+<tr class="separator:gad91055a12542c30dab4aacbd0761c785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75c6083aa363922fdf1fd19767eceeea"><td class="memItemLeft" align="right" valign="top">struct xml_doc *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga75c6083aa363922fdf1fd19767eceeea">dtsgui_panelxml</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
+<tr class="memdesc:ga75c6083aa363922fdf1fd19767eceeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference to previously allocated XML Doc.  <a href="group___c-_a_p_i-_panel.html#ga75c6083aa363922fdf1fd19767eceeea"></a><br/></td></tr>
+<tr class="separator:ga75c6083aa363922fdf1fd19767eceeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28e2dbe2171ea35e32fa615aca55b934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga28e2dbe2171ea35e32fa615aca55b934">dtsgui_xmlpanel_update</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
+<tr class="memdesc:ga28e2dbe2171ea35e32fa615aca55b934"><td class="mdescLeft">&#160;</td><td class="mdescRight">update all XML elements in the panel.  <a href="group___c-_a_p_i-_panel.html#ga28e2dbe2171ea35e32fa615aca55b934"></a><br/></td></tr>
+<tr class="separator:ga28e2dbe2171ea35e32fa615aca55b934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05cf1592d301351aa838bd23c710f3bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga05cf1592d301351aa838bd23c710f3bb">dtsgui_tabwindow</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, void *data)</td></tr>
+<tr class="memdesc:ga05cf1592d301351aa838bd23c710f3bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a tab view panel.  <a href="group___c-_a_p_i-_panel.html#ga05cf1592d301351aa838bd23c710f3bb"></a><br/></td></tr>
+<tr class="separator:ga05cf1592d301351aa838bd23c710f3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7cf11b65ccca530aecef7f7daa389e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tab.html#gae7cf11b65ccca530aecef7f7daa389e9">dtsgui_newtabpage</a> (<a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a> tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, <a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> cb, void *cdata)</td></tr>
+<tr class="memdesc:gae7cf11b65ccca530aecef7f7daa389e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and append a tab to the view.  <a href="group___c-_a_p_i-_panel-_tab.html#gae7cf11b65ccca530aecef7f7daa389e9"></a><br/></td></tr>
+<tr class="separator:gae7cf11b65ccca530aecef7f7daa389e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26ee371ec8b1bed0f4a652eb99e04767"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tab.html#ga26ee371ec8b1bed0f4a652eb99e04767">dtsgui_tabpage_insert</a> (<a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a> tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, <a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> cb, void *cdata, int pos, int undo)</td></tr>
+<tr class="memdesc:ga26ee371ec8b1bed0f4a652eb99e04767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and append a tab to the view.  <a href="group___c-_a_p_i-_panel-_tab.html#ga26ee371ec8b1bed0f4a652eb99e04767"></a><br/></td></tr>
+<tr class="separator:ga26ee371ec8b1bed0f4a652eb99e04767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3333a23e28993072b5ef4feed86778c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tab.html#gad3333a23e28993072b5ef4feed86778c">dtsgui_newxmltabpane</a> (<a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a> tabv, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, const char *xpath, const char *node, const char *vitem, const char *tattr, <a class="el" href="dtsgui_8h.html#ab5e1fa276d48b20d35f4ef20110c39ed">dtsgui_tabpane_newdata_cb</a> data_cb, <a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> cb, void *cdata, struct xml_doc *xmldoc, void *data)</td></tr>
+<tr class="memdesc:gad3333a23e28993072b5ef4feed86778c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to handle "Adding" a new tab from a existing tab.  <a href="group___c-_a_p_i-_panel-_tab.html#gad3333a23e28993072b5ef4feed86778c"></a><br/></td></tr>
+<tr class="separator:gad3333a23e28993072b5ef4feed86778c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa92cb9c6006aaf320e784f04500c3b25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#gaa92cb9c6006aaf320e784f04500c3b25">dtsgui_treewindow</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, <a class="el" href="dtsgui_8h.html#a32927ee58215cd957e5134af0f13303f">dtsgui_tree_cb</a> tree_cb, void *userdata, struct xml_doc *xmldoc)</td></tr>
+<tr class="memdesc:gaa92cb9c6006aaf320e784f04500c3b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a treepane view.  <a href="group___c-_a_p_i-_panel.html#gaa92cb9c6006aaf320e784f04500c3b25"></a><br/></td></tr>
+<tr class="separator:gaa92cb9c6006aaf320e784f04500c3b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad71b59e1898bce570cac2acd774f71e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#gad71b59e1898bce570cac2acd774f71e3">dtsgui_treepane</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc)</td></tr>
+<tr class="memdesc:gad71b59e1898bce570cac2acd774f71e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a tree view panel with information.  <a href="group___c-_a_p_i-_panel-_tree.html#gad71b59e1898bce570cac2acd774f71e3"></a><br/></td></tr>
+<tr class="separator:gad71b59e1898bce570cac2acd774f71e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8713feb542a9bb13f8fe7e3bf568bda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#gab8713feb542a9bb13f8fe7e3bf568bda">dtsgui_treepane_default</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> self, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node)</td></tr>
+<tr class="memdesc:gab8713feb542a9bb13f8fe7e3bf568bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a tree view panel with information.  <a href="group___c-_a_p_i-_panel-_tree.html#gab8713feb542a9bb13f8fe7e3bf568bda"></a><br/></td></tr>
+<tr class="separator:gab8713feb542a9bb13f8fe7e3bf568bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaaf93911380c2f40eb8adbdc39ac36ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#gaaaf93911380c2f40eb8adbdc39ac36ac">dtsgui_nodesetxml</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node, const char *title)</td></tr>
+<tr class="memdesc:gaaaf93911380c2f40eb8adbdc39ac36ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the XML Node with a new name.  <a href="group___c-_a_p_i-_panel-_tree.html#gaaaf93911380c2f40eb8adbdc39ac36ac"></a><br/></td></tr>
+<tr class="separator:gaaaf93911380c2f40eb8adbdc39ac36ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga550b7516bbb97dd66bc71033e7d996cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#ga550b7516bbb97dd66bc71033e7d996cb">dtsgui_treecont</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, <a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> p_cb, void *data)</td></tr>
+<tr class="memdesc:ga550b7516bbb97dd66bc71033e7d996cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a container in the tree view.  <a href="group___c-_a_p_i-_panel-_tree.html#ga550b7516bbb97dd66bc71033e7d996cb"></a><br/></td></tr>
+<tr class="separator:ga550b7516bbb97dd66bc71033e7d996cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f7146637609d42057e2cd21bd2bf33e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#ga0f7146637609d42057e2cd21bd2bf33e">dtsgui_treeitem</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, <a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> p_cb, void *data)</td></tr>
+<tr class="memdesc:ga0f7146637609d42057e2cd21bd2bf33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a item in a container.  <a href="group___c-_a_p_i-_panel-_tree.html#ga0f7146637609d42057e2cd21bd2bf33e"></a><br/></td></tr>
+<tr class="separator:ga0f7146637609d42057e2cd21bd2bf33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e6618e889e7b58e3bf2ae3d63332178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#ga3e6618e889e7b58e3bf2ae3d63332178">dtsgui_treenodesetxml</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn, struct xml_node *xn, const char *tattr)</td></tr>
+<tr class="memdesc:ga3e6618e889e7b58e3bf2ae3d63332178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a XML node to the tree node.  <a href="group___c-_a_p_i-_panel-_tree.html#ga3e6618e889e7b58e3bf2ae3d63332178"></a><br/></td></tr>
+<tr class="separator:ga3e6618e889e7b58e3bf2ae3d63332178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac23fb82d0b4d99484fc878d27ee51cbf"><td class="memItemLeft" align="right" valign="top">struct xml_node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ac23fb82d0b4d99484fc878d27ee51cbf">dtsgui_treenodegetxml</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn, char **buf)</td></tr>
 <tr class="separator:ac23fb82d0b4d99484fc878d27ee51cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d1181eb156645f2f98f43943128f24"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a08d1181eb156645f2f98f43943128f24">dtsgui_treenodegetdata</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn)</td></tr>
-<tr class="separator:a08d1181eb156645f2f98f43943128f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8aa95e1968fdbc543efaf31ebd05d1f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ab8aa95e1968fdbc543efaf31ebd05d1f">dtsgui_treenodeparent</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn)</td></tr>
-<tr class="separator:ab8aa95e1968fdbc543efaf31ebd05d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b4eb80d57afcea28cfac31800f465a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a4b4eb80d57afcea28cfac31800f465a9">dtsgui_newxmltreenode</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn, const char *xpath, const char *node, const char *vitem, const char *tattr, int nid, int flags, <a class="el" href="dtsgui_8h.html#a52992645e33e4d92c8e68c3490239c75">dtsgui_xmltreenode_cb</a> node_cb, void *data, <a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> p_cb)</td></tr>
-<tr class="separator:a4b4eb80d57afcea28cfac31800f465a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77fd07a7f881cc14e6c4c9d495c04dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ab77fd07a7f881cc14e6c4c9d495c04dd">dtsgui_treenodeid</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn)</td></tr>
-<tr class="separator:ab77fd07a7f881cc14e6c4c9d495c04dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43968167b198c24e8bcd62078ec4083c"><td class="memItemLeft" align="right" valign="top">struct xml_node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a43968167b198c24e8bcd62078ec4083c">dtsgui_panetoxml</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, const char *xpath, const char *node, const char *nodeval, const char *attrkey)</td></tr>
-<tr class="separator:a43968167b198c24e8bcd62078ec4083c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab435a3f54e7a92a7f87c0da7affa7982"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ab435a3f54e7a92a7f87c0da7affa7982">dtsgui_rundialog</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, <a class="el" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> evcb, void *data)</td></tr>
-<tr class="separator:ab435a3f54e7a92a7f87c0da7affa7982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00767aae723dce154065e0bb090c0e70"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#ga00767aae723dce154065e0bb090c0e70">dtsgui_treenodegetdata</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn)</td></tr>
+<tr class="memdesc:ga00767aae723dce154065e0bb090c0e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reference for the user data of node.  <a href="group___c-_a_p_i-_panel-_tree.html#ga00767aae723dce154065e0bb090c0e70"></a><br/></td></tr>
+<tr class="separator:ga00767aae723dce154065e0bb090c0e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedca58250011ea48c67fbc4faa14278f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#gaedca58250011ea48c67fbc4faa14278f">dtsgui_treenodeparent</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn)</td></tr>
+<tr class="memdesc:gaedca58250011ea48c67fbc4faa14278f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the nodes parent.  <a href="group___c-_a_p_i-_panel-_tree.html#gaedca58250011ea48c67fbc4faa14278f"></a><br/></td></tr>
+<tr class="separator:gaedca58250011ea48c67fbc4faa14278f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55a99744231b294667ece32a1087042f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#ga55a99744231b294667ece32a1087042f">dtsgui_newxmltreenode</a> (<a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> tree, <a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, <a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn, const char *xpath, const char *node, const char *vitem, const char *tattr, int nid, int flags, <a class="el" href="dtsgui_8h.html#a52992645e33e4d92c8e68c3490239c75">dtsgui_xmltreenode_cb</a> node_cb, void *data, <a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> p_cb)</td></tr>
+<tr class="memdesc:ga55a99744231b294667ece32a1087042f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to handle "Adding" a new node from a existing node.  <a href="group___c-_a_p_i-_panel-_tree.html#ga55a99744231b294667ece32a1087042f"></a><br/></td></tr>
+<tr class="separator:ga55a99744231b294667ece32a1087042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc59452935e169e8e78c178aed0b77c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_tree.html#gadc59452935e169e8e78c178aed0b77c0">dtsgui_treenodeid</a> (<a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> tn)</td></tr>
+<tr class="memdesc:gadc59452935e169e8e78c178aed0b77c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the node id of a tree node.  <a href="group___c-_a_p_i-_panel-_tree.html#gadc59452935e169e8e78c178aed0b77c0"></a><br/></td></tr>
+<tr class="separator:gadc59452935e169e8e78c178aed0b77c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c1222d2fe8fa5066a2c55e4b71c2cac"><td class="memItemLeft" align="right" valign="top">struct xml_node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga9c1222d2fe8fa5066a2c55e4b71c2cac">dtsgui_panetoxml</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, const char *xpath, const char *node, const char *nodeval, const char *attrkey)</td></tr>
+<tr class="memdesc:ga9c1222d2fe8fa5066a2c55e4b71c2cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a node from the elements on the panel.  <a href="group___c-_a_p_i-_panel.html#ga9c1222d2fe8fa5066a2c55e4b71c2cac"></a><br/></td></tr>
+<tr class="separator:ga9c1222d2fe8fa5066a2c55e4b71c2cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f904089ceb734323477f2b3dbac4a41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga3f904089ceb734323477f2b3dbac4a41">dtsgui_rundialog</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, <a class="el" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> evcb, void *data)</td></tr>
+<tr class="memdesc:ga3f904089ceb734323477f2b3dbac4a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a dialog panel. Pop up and run a dialog pane the result will be obtained int the event handler.  <a href="group___c-_a_p_i-_panel.html#ga3f904089ceb734323477f2b3dbac4a41"></a><br/></td></tr>
+<tr class="separator:ga3f904089ceb734323477f2b3dbac4a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a516c50b1b7dc3d64b7359b2dc8cc5c7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a516c50b1b7dc3d64b7359b2dc8cc5c7c">dtsgui_textbox</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, const char *title, const char *name, const char *value, void *data)</td></tr>
 <tr class="separator:a516c50b1b7dc3d64b7359b2dc8cc5c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6e3fc77fef8fb74258c33ee69b911bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ab6e3fc77fef8fb74258c33ee69b911bb">dtsgui_textbox_multi</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane, const char *title, const char *name, const char *value, void *data)</td></tr>
@@ -372,14 +420,18 @@ Functions</h2></td></tr>
 <tr class="separator:af92ea8c5403cf99b34199eaaf35fa600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cc7862093cea93011a8719a43bf858f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a3cc7862093cea93011a8719a43bf858f">dtsgui_alert</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *text)</td></tr>
 <tr class="separator:a3cc7862093cea93011a8719a43bf858f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8ca4f7fc18ae12f8dd08105f1f77969"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ad8ca4f7fc18ae12f8dd08105f1f77969">dtsgui_progress_start</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *text, int maxval, int quit)</td></tr>
-<tr class="separator:ad8ca4f7fc18ae12f8dd08105f1f77969"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5526d1fdca4bbe8da149d5ed95f7b35a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a5526d1fdca4bbe8da149d5ed95f7b35a">dtsgui_progress_update</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int newval, const char *newtext)</td></tr>
-<tr class="separator:a5526d1fdca4bbe8da149d5ed95f7b35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acffa408f5d56d8c781c36f5a58bf2828"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#acffa408f5d56d8c781c36f5a58bf2828">dtsgui_progress_increment</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int ival, const char *newtext)</td></tr>
-<tr class="separator:acffa408f5d56d8c781c36f5a58bf2828"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaed1816bb25d00cc12696a6c569dbf07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#aaed1816bb25d00cc12696a6c569dbf07">dtsgui_progress_end</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
-<tr class="separator:aaed1816bb25d00cc12696a6c569dbf07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4185ec71523c1735f1da2cb6dc876d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_progress.html#gac4185ec71523c1735f1da2cb6dc876d3">dtsgui_progress_start</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *text, int maxval, int quit)</td></tr>
+<tr class="memdesc:gac4185ec71523c1735f1da2cb6dc876d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the progress dialog Pop up a dialog box that can be updated to showprogress with a optional cancel button.  <a href="group___c-_a_p_i-_progress.html#gac4185ec71523c1735f1da2cb6dc876d3"></a><br/></td></tr>
+<tr class="separator:gac4185ec71523c1735f1da2cb6dc876d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabda6276de46c13fb4e0831bb8c8d1ec1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_progress.html#gabda6276de46c13fb4e0831bb8c8d1ec1">dtsgui_progress_update</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int newval, const char *newtext)</td></tr>
+<tr class="memdesc:gabda6276de46c13fb4e0831bb8c8d1ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the progress bar counter This function updates the current progress value and optionally allows setting new displayed text.  <a href="group___c-_a_p_i-_progress.html#gabda6276de46c13fb4e0831bb8c8d1ec1"></a><br/></td></tr>
+<tr class="separator:gabda6276de46c13fb4e0831bb8c8d1ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7bd617a3f00cb21ae6df7a37eba0dc7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_progress.html#ga7bd617a3f00cb21ae6df7a37eba0dc7b">dtsgui_progress_increment</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, int ival, const char *newtext)</td></tr>
+<tr class="memdesc:ga7bd617a3f00cb21ae6df7a37eba0dc7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the counter by adding to it not setting it.  <a href="group___c-_a_p_i-_progress.html#ga7bd617a3f00cb21ae6df7a37eba0dc7b"></a><br/></td></tr>
+<tr class="separator:ga7bd617a3f00cb21ae6df7a37eba0dc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga528f638b6cb7b0d813e350a0b0c7262c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_progress.html#ga528f638b6cb7b0d813e350a0b0c7262c">dtsgui_progress_end</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>)</td></tr>
+<tr class="memdesc:ga528f638b6cb7b0d813e350a0b0c7262c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the progress bar.  <a href="group___c-_a_p_i-_progress.html#ga528f638b6cb7b0d813e350a0b0c7262c"></a><br/></td></tr>
+<tr class="separator:ga528f638b6cb7b0d813e350a0b0c7262c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ddb743b7fd844efb49fe9c9a21ab5b"><td class="memItemLeft" align="right" valign="top">struct bucket_list *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ad7ddb743b7fd844efb49fe9c9a21ab5b">dtsgui_panel_items</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> pane)</td></tr>
 <tr class="separator:ad7ddb743b7fd844efb49fe9c9a21ab5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b7c1bec5b0e7fb98c1da39ba7a33f11"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a4b7c1bec5b0e7fb98c1da39ba7a33f11">dtsgui_item_data</a> (struct <a class="el" href="classform__item.html">form_item</a> *fi)</td></tr>
@@ -392,24 +444,34 @@ Functions</h2></td></tr>
 <tr class="separator:a6aa6d1c9a511d7761cad2cbfd291505c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a670cae0571f32de4e06c4d32dd11e9d8"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a670cae0571f32de4e06c4d32dd11e9d8">dtsgui_findvalue</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, const char *name)</td></tr>
 <tr class="separator:a670cae0571f32de4e06c4d32dd11e9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e8abc1c69bfbda572b141e5648682c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a43e8abc1c69bfbda572b141e5648682c">dtsgui_newwizard</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title)</td></tr>
-<tr class="separator:a43e8abc1c69bfbda572b141e5648682c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf44a85e73ba5c39ea11ef3aa374e97f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a> (struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)</td></tr>
-<tr class="separator:adf44a85e73ba5c39ea11ef3aa374e97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a663223915b4247295d807b511f655237"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a663223915b4247295d807b511f655237">dtsgui_runwizard</a> (struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *dtswiz)</td></tr>
-<tr class="separator:a663223915b4247295d807b511f655237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e1e2013214ae275160b8c87e6cb3d89"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_wizard.html#ga2e1e2013214ae275160b8c87e6cb3d89">dtsgui_newwizard</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title)</td></tr>
+<tr class="memdesc:ga2e1e2013214ae275160b8c87e6cb3d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new wizard.  <a href="group___c-_a_p_i-_wizard.html#ga2e1e2013214ae275160b8c87e6cb3d89"></a><br/></td></tr>
+<tr class="separator:ga2e1e2013214ae275160b8c87e6cb3d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e76b1ea2eebb91e1d0b5a55649d65e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6">dtsgui_wizard_addpage</a> (struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)</td></tr>
+<tr class="memdesc:ga3e76b1ea2eebb91e1d0b5a55649d65e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a panel appended to the wizard.  <a href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6"></a><br/></td></tr>
+<tr class="separator:ga3e76b1ea2eebb91e1d0b5a55649d65e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25174d47f2e9680d41aebdf08ff9b979"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_wizard.html#ga25174d47f2e9680d41aebdf08ff9b979">dtsgui_runwizard</a> (struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *dtswiz)</td></tr>
+<tr class="memdesc:ga25174d47f2e9680d41aebdf08ff9b979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the wizard.  <a href="group___c-_a_p_i-_wizard.html#ga25174d47f2e9680d41aebdf08ff9b979"></a><br/></td></tr>
+<tr class="separator:ga25174d47f2e9680d41aebdf08ff9b979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45086dc70bb1514065404a0fc25e4bce"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a45086dc70bb1514065404a0fc25e4bce">dtsgui_filesave</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, const char *path, const char *name, const char *filter)</td></tr>
 <tr class="separator:a45086dc70bb1514065404a0fc25e4bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a539470bafd5da6df6ab9ccabad15fd71"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a539470bafd5da6df6ab9ccabad15fd71">dtsgui_fileopen</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, const char *path, const char *name, const char *filter)</td></tr>
 <tr class="separator:a539470bafd5da6df6ab9ccabad15fd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae70ea93052afabcae582538032652d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#ae70ea93052afabcae582538032652d7f">dtsgui_menuenable</a> (<a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dm, int enable)</td></tr>
 <tr class="separator:ae70ea93052afabcae582538032652d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af46bf4a1b74cc4d04132df231d7f288e"><td class="memItemLeft" align="right" valign="top">struct curl_post *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#af46bf4a1b74cc4d04132df231d7f288e">dtsgui_pane2post</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p)</td></tr>
-<tr class="separator:af46bf4a1b74cc4d04132df231d7f288e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d0d6742f61c91fb590b3728a7229150"><td class="memItemLeft" align="right" valign="top">struct curl_post *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel.html#ga4d0d6742f61c91fb590b3728a7229150">dtsgui_pane2post</a> (<a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p)</td></tr>
+<tr class="memdesc:ga4d0d6742f61c91fb590b3728a7229150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a HTTP POST structure from panel.  <a href="group___c-_a_p_i-_panel.html#ga4d0d6742f61c91fb590b3728a7229150"></a><br/></td></tr>
+<tr class="separator:ga4d0d6742f61c91fb590b3728a7229150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5488398f5555e2f93a35774428dd9b"><td class="memItemLeft" align="right" valign="top">struct basic_auth *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dtsgui_8h.html#a1b5488398f5555e2f93a35774428dd9b">dtsgui_pwdialog</a> (const char *user, const char *passwd, void *data)</td></tr>
 <tr class="separator:a1b5488398f5555e2f93a35774428dd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main include file for the GUI Library. </p>
+<p>This file needs to be included to use the defined functions and API. Including it in a C++ file without defining _DTS_C_API will not allow access to the namespace <a class="el" href="namespace_d_t_s___c___a_p_i.html" title="Namespace containing exported functions used by C.">DTS_C_API</a>.</p>
+<p>It is not recomended to use the C API from C++. </p>
+
+<p>Definition in file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a4ef37ee1286eb68a9f5663813f134be2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +482,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00117">117</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00137">137</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -434,7 +496,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00118">118</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00138">138</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +510,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00116">116</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00136">136</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -462,7 +524,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00115">115</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00135">135</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +538,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00119">119</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00139">139</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -491,21 +553,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00026">26</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad3b80490c86b8275c47382588f2ecfd4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* dtsgui_configcb)(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00058">58</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00038">38</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +567,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00061">61</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00081">81</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -533,7 +581,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00030">30</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00042">42</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -547,7 +595,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00059">59</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00079">79</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -561,7 +609,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00031">31</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00043">43</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -575,7 +623,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00035">35</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00047">47</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -589,7 +637,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00034">34</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00046">46</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -603,7 +651,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00040">40</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00052">52</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -617,7 +665,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00067">67</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00087">87</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -631,7 +679,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00065">65</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00085">85</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -645,7 +693,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00037">37</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00049">49</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -659,7 +707,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00066">66</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00086">86</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -673,7 +721,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00062">62</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00082">82</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -687,7 +735,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00039">39</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00051">51</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -701,7 +749,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00036">36</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00048">48</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -715,7 +763,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00064">64</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00084">84</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -729,7 +777,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00027">27</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00039">39</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -743,7 +791,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00063">63</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00083">83</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -757,7 +805,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00044">44</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00056">56</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -771,7 +819,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00060">60</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00080">80</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -785,7 +833,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00043">43</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00055">55</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -808,7 +856,7 @@ Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00052">52</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00064">64</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -838,7 +886,7 @@ Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00075">75</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00095">95</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -864,7 +912,7 @@ Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00084">84</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00104">104</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -896,7 +944,7 @@ Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00098">98</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00118">118</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -920,7 +968,7 @@ Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00046">46</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00058">58</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -946,7 +994,7 @@ Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00091">91</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00111">111</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -972,45 +1020,11 @@ Functions</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00108">108</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00128">128</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ac24f9bd1872446b45a73c81f7fc1cbc9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_about </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td>
-          <td class="paramname"><em>dtsmenu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>text</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00072">72</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a3cc7862093cea93011a8719a43bf858f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1035,7 +1049,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00087">87</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01073">1073</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1093,35 +1107,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00201">201</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a55f5cf53a83a219f28932e2342a72c27"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_close </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td>
-          <td class="paramname"><em>dtsmenu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00062">62</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01103">1103</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1169,93 +1155,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00221">221</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a50f9e1db382c043f9e1acb5562e866d0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_config </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#ad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a>&#160;</td>
-          <td class="paramname"><em>confcallback_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structpoint.html">point</a>&#160;</td>
-          <td class="paramname"><em>wsize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structpoint.html">point</a>&#160;</td>
-          <td class="paramname"><em>wpos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>status</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00049">49</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a66e6070a37d835753216a910515cc061"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_configcallback </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#ad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a>&#160;</td>
-          <td class="paramname"><em>cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00248">248</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01113">1113</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1283,53 +1183,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00082">82</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad05cda377b30652ee4a51547a2213d96"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_delpane </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00147">147</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aefa6753a35aac33f9fafe19f247cbd12"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_exit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td>
-          <td class="paramname"><em>dtsmenu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00057">57</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01068">1068</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1375,7 +1229,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00301">301</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01083">1083</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1275,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00296">296</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01078">1078</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1457,7 +1311,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00274">274</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01053">1053</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1485,7 +1339,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00279">279</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01058">1058</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1503,7 +1357,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00262">262</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01037">1037</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1521,7 +1375,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00266">266</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01041">1041</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1539,7 +1393,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00270">270</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01045">1045</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1441,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00211">211</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01108">1108</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1621,7 +1475,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00231">231</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01024">1024</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1667,7 +1521,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00235">235</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01049">1049</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1695,7 +1549,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00239">239</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01028">1028</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1751,527 +1605,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00320">320</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a79b28355b43972330f6cc4701e853796"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_menusep </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td>
-          <td class="paramname"><em>dtsmenu</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00077">77</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7d2a8ac2b1684dd387077816eaf0b412"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a> dtsgui_newmenu </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00067">67</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9d27dd98edafdcd70b0f2ee45df6ae25"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#af59302244664352117c2669055da5850">dtsgui_menuitem</a> dtsgui_newmenucb </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td>
-          <td class="paramname"><em>dtsmenu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>hint</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>blank</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a>&#160;</td>
-          <td class="paramname"><em>cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00044">44</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a91384d34bdbc0b0b13c615135b8a9d6a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#af59302244664352117c2669055da5850">dtsgui_menuitem</a> dtsgui_newmenuitem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682">dtsgui_menu</a>&#160;</td>
-          <td class="paramname"><em>dtsmenu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>hint</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00039">39</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a346ef4dc47cab9f5b572a46db5665aa3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> dtsgui_newtabpage </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a>&#160;</td>
-          <td class="paramname"><em>tv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>butmask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_doc *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a>&#160;</td>
-          <td class="paramname"><em>cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>cdata</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00161">161</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a43e8abc1c69bfbda572b141e5648682c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a>* dtsgui_newwizard </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00284">284</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae08578b520ba3285fb636c970db7d42e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_newxmltabpane </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a>&#160;</td>
-          <td class="paramname"><em>tabv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>xpath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>vitem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>tattr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#ab5e1fa276d48b20d35f4ef20110c39ed">dtsgui_tabpane_newdata_cb</a>&#160;</td>
-          <td class="paramname"><em>data_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a>&#160;</td>
-          <td class="paramname"><em>cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>cdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_doc *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00400">400</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4b4eb80d57afcea28cfac31800f465a9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_newxmltreenode </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td>
-          <td class="paramname"><em>tree</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>tn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>xpath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>vitem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>tattr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a52992645e33e4d92c8e68c3490239c75">dtsgui_xmltreenode_cb</a>&#160;</td>
-          <td class="paramname"><em>node_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a>&#160;</td>
-          <td class="paramname"><em>p_cb</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00405">405</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acef472698d24ffa2724ab954fb515fd4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_nodesetxml </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td>
-          <td class="paramname"><em>tree</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00137">137</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af46bf4a1b74cc4d04132df231d7f288e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct curl_post* dtsgui_pane2post </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00380">380</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a52490aaab82d11b0b623c3bed66a228d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> dtsgui_panel </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>butmask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">enum <a class="el" href="dtsgui_8h.html#a9275874ac61d3750aa677a36da714373">panel_type</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userdata</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00112">112</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00236">236</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2297,133 +1631,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00257">257</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0138db5d86e70bb55258f0063d8dcded"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_panel_setxml </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_doc *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00132">132</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a789900b81dc498b4be42129e64a72853"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* dtsgui_paneldata </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00311">311</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae4b585f8d1ecc02e04b16694d655e850"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct xml_doc* dtsgui_panelxml </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00142">142</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a43968167b198c24e8bcd62078ec4083c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct xml_node* dtsgui_panetoxml </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>xpath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>nodeval</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>attrkey</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00325">325</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01032">1032</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2469,133 +1677,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00191">191</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aaed1816bb25d00cc12696a6c569dbf07"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_progress_end </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00107">107</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acffa408f5d56d8c781c36f5a58bf2828"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dtsgui_progress_increment </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ival</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>newtext</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00102">102</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad8ca4f7fc18ae12f8dd08105f1f77969"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dtsgui_progress_start </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxval</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>quit</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00092">92</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5526d1fdca4bbe8da149d5ed95f7b35a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dtsgui_progress_update </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>newval</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>newtext</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00097">97</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01098">1098</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -2637,399 +1719,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00415">415</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4af7c2c71970b7148517501486d9d4cd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dtsgui_run </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00053">53</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab435a3f54e7a92a7f87c0da7affa7982"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_rundialog </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a>&#160;</td>
-          <td class="paramname"><em>evcb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00385">385</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a663223915b4247295d807b511f655237"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dtsgui_runwizard </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *&#160;</td>
-          <td class="paramname"><em>dtswiz</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00292">292</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aec2dc986c8fa482e2b7170bd08396f06"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_sendevent </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>eid</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00335">335</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2e32e36e1d7bad6e4e25b26722fee638"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_set_toolbar </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>show</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00411">411</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5554fe3d240dc18751404d2fc4f56d60"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_setevcallback </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a>&#160;</td>
-          <td class="paramname"><em>evcb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00243">243</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab1a78fdb6f0c4066da7491ddef1ac990"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_setstatus </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>status</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00345">345</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7213d8f0478f68e236032f95ec6b807c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_settitle </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00340">340</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a65a25a3945b9a7e016ea0cf4cb38bb53"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_setuptoolbar </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a>&#160;</td>
-          <td class="paramname"><em>cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00375">375</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a674e016ff10002ff77d7dca63b795b45"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_setwindow </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00330">330</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad6d54d12c672f4810d05061eedf19d04"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> dtsgui_tabpage_insert </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a>&#160;</td>
-          <td class="paramname"><em>tv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>butmask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_doc *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a>&#160;</td>
-          <td class="paramname"><em>cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>cdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>undo</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00166">166</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4164d90e36519fb0c61cf583fe808154"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a29c463cda54f69beb273c77e1aa7ccef">dtsgui_tabview</a> dtsgui_tabwindow </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00156">156</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01063">1063</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3075,7 +1765,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00171">171</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01088">1088</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3121,227 +1811,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00181">181</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acd0fab4862d2f37a36e14d388e88abb6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> dtsgui_textpane </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>buf</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00117">117</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af964347f37077f674bbe6052609da1c3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_titleappend </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>text</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00316">316</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aea3ddf7a32e4c9e8e835a125f9e8efcb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> dtsgui_treecont </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td>
-          <td class="paramname"><em>tree</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>can_edit</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>can_sort</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>can_del</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nodeid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a>&#160;</td>
-          <td class="paramname"><em>p_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00390">390</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aaa59cc2b0928b977dc199cd4b295668b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a> dtsgui_treeitem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td>
-          <td class="paramname"><em>tree</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>can_edit</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>can_sort</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>can_del</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nodeid</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a>&#160;</td>
-          <td class="paramname"><em>p_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00395">395</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a08d1181eb156645f2f98f43943128f24"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* dtsgui_treenodegetdata </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>tn</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00370">370</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01093">1093</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3377,255 +1847,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00365">365</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab77fd07a7f881cc14e6c4c9d495c04dd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int dtsgui_treenodeid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>tn</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00350">350</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab8aa95e1968fdbc543efaf31ebd05d1f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* dtsgui_treenodeparent </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>tn</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00355">355</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a78262eee893ac5cee50ad23092fdfa27"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_treenodesetxml </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>tn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_node *&#160;</td>
-          <td class="paramname"><em>xn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>tattr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00360">360</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2b43ff2904ec47f8fa2768ebb58f08df"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> dtsgui_treepane </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td>
-          <td class="paramname"><em>tv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>butmask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_doc *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00122">122</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa42e7fa21213f6092280f3a79efe4b45"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> dtsgui_treepane_default </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>&#160;</td>
-          <td class="paramname"><em>node</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00127">127</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae5fdf4f87736dd97f4efc5fe98710d39"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a> dtsgui_treewindow </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a32927ee58215cd957e5134af0f13303f">dtsgui_tree_cb</a>&#160;</td>
-          <td class="paramname"><em>tree_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_doc *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00151">151</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa15d65f936fae1e503c631690cfdf531"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* dtsgui_userdata </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
-          <td class="paramname"><em>dtsgui</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00253">253</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="adf44a85e73ba5c39ea11ef3aa374e97f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> dtsgui_wizard_addpage </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="classdtsgui__wizard.html">dtsgui_wizard</a> *&#160;</td>
-          <td class="paramname"><em>dtswiz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>title</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userdata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct xml_doc *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00288">288</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00777">777</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3701,7 +1923,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00206">206</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01133">1133</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3773,7 +1995,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00226">226</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01143">1143</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3845,25 +2067,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00216">216</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1427bf41d77169094f3722ff5b20f657"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dtsgui_xmlpanel_update </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
-          <td class="paramname"><em>pane</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00306">306</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01138">1138</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3927,7 +2131,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00196">196</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01128">1128</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -3991,7 +2195,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00176">176</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01118">1118</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -4055,7 +2259,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00186">186</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01123">1123</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -4285,7 +2489,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dtsgui_8h.html">dtsgui.h</a></li>
-    <li class="footer">Generated on Wed Oct 9 2013 11:30:49 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Wed Oct 9 2013 22:32:56 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

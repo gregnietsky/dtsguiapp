@@ -182,7 +182,7 @@
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/button.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/notebook.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dtsgui_8h" kindref="compound" tooltip="Main include file for the GUI Library.">dtsgui.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_d_t_s_frame_8h" kindref="compound">DTSFrame.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pitems_8h" kindref="compound">pitems.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -560,7 +560,7 @@
 <codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="403"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="404"><highlight class="normal"></highlight></codeline>
-<codeline lineno="405" refid="class_d_t_s_panel_1acdb57729ace5f3c0fc76cce4d41c36cc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_t_s_panel_1acdb57729ace5f3c0fc76cce4d41c36cc" kindref="member">DTSPanel::SetConfigCallback</ref>(<ref refid="dtsgui_8h_1ad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)<sp/>{</highlight></codeline>
+<codeline lineno="405" refid="class_d_t_s_panel_1acdb57729ace5f3c0fc76cce4d41c36cc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_t_s_panel_1acdb57729ace5f3c0fc76cce4d41c36cc" kindref="member">DTSPanel::SetConfigCallback</ref>(<ref refid="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member" tooltip="Callback called on application execution.">dtsgui_configcb</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)<sp/>{</highlight></codeline>
 <codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>objlock(<ref refid="class_d_t_s_object_1a941fc98555b60d021a6c2f488ce9ae3e" kindref="member">refobj</ref>);</highlight></codeline>
 <codeline lineno="407"><highlight class="normal"></highlight></codeline>
 <codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config_data)<sp/>{</highlight></codeline>

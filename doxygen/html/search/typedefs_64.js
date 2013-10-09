@@ -4,7 +4,7 @@ var searchData=
   ['dtsdvmlistview',['DTSDVMListView',['../_d_t_s_tree_window_8h.html#a40910b006b3cb725bb4b46991136f4d9',1,'DTSTreeWindow.h']]],
   ['dtsframe',['DTSFrame',['../_d_t_s_panel_8h.html#ac041b748b16da7ef8c4a1ff9d1a357af',1,'DTSPanel.h']]],
   ['dtsgui',['dtsgui',['../dtsgui_8h.html#a8d0ed2b4049e42079b366e341b33347f',1,'dtsgui.h']]],
-  ['dtsgui_5fconfigcb',['dtsgui_configcb',['../dtsgui_8h.html#ad3b80490c86b8275c47382588f2ecfd4',1,'dtsgui.h']]],
+  ['dtsgui_5fconfigcb',['dtsgui_configcb',['../group___c-_a_p_i.html#gad3b80490c86b8275c47382588f2ecfd4',1,'dtsgui.h']]],
   ['dtsgui_5fdynpanel',['dtsgui_dynpanel',['../dtsgui_8h.html#a080f931027861c0021f72ac2562b45d7',1,'dtsgui.h']]],
   ['dtsgui_5fmenu',['dtsgui_menu',['../dtsgui_8h.html#afb1e28bd82fd8ea9d43a188c06095682',1,'dtsgui.h']]],
   ['dtsgui_5fmenucb',['dtsgui_menucb',['../dtsgui_8h.html#a0d655090fad451700b01ffc4b0bdd727',1,'dtsgui.h']]],

@@ -16,6 +16,18 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/** @file
+  * @ingroup C-API
+  * @brief Main include file for the GUI Library
+  *
+  * This file needs to be included to use the defined functions and API.
+  * Including it in a C++ file without defining _DTS_C_API will not 
+  * allow access to the namespace DTS_C_API.
+  *
+  * It is not recomended to use the C API from C++.
+  *
+  */
+
 #ifndef DTSGUI_H_INCLUDED
 #define DTSGUI_H_INCLUDED
 
@@ -55,6 +67,14 @@ enum form_data_type {
 };
 
 /*callbacks*/
+/** @ingroup C-API
+  * @brief Callback called on application execution
+  *
+  * The callback is called with the application pointer and supplied userdata
+  *
+  * Returning 0 will cause application execution to fail.
+  *
+  */
 typedef int (*dtsgui_configcb)(struct dtsgui*, void*);
 typedef dtsgui_pane (*dtsgui_menucb)(struct dtsgui*, void*);
 typedef int (*event_callback)(struct dtsgui*, dtsgui_pane, int, int, void *);

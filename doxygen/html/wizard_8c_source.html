@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('wizard_8c_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,7 +129,7 @@ $(document).ready(function(){initNavTree('wizard_8c_source.html','');});
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;limits.h&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dtsgui_8h.html">dtsgui.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dtsgui_8h.html" title="Main include file for the GUI Library.">dtsgui.h</a>&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="private_8h.html">private.h</a>&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
@@ -468,20 +469,20 @@ $(document).ready(function(){initNavTree('wizard_8c_source.html','');});
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    set_temp_xml(xmldoc);</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    twiz = <a class="code" href="dtsgui_8h.html#a43e8abc1c69bfbda572b141e5648682c">dtsgui_newwizard</a>(dtsgui, <span class="stringliteral">&quot;System Configuration Wizard&quot;</span>);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    twiz = <a class="code" href="group___c-_a_p_i-_wizard.html#ga2e1e2013214ae275160b8c87e6cb3d89" title="Create a new wizard.">dtsgui_newwizard</a>(dtsgui, <span class="stringliteral">&quot;System Configuration Wizard&quot;</span>);</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    dp[0] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Customer Information&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    dp[1] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Network/IP Information&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    dp[2] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Dynamic DNS&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    dp[3] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;DNS&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    dp[4] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;X.509&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    dp[5] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Fileserver&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    dp[6] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Firewall&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    dp[7] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Extensions&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    dp[8] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;PBX Setup&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    dp[9] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Attendant&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    dp[10] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Trunk Setup&quot;</span>, NULL, xmldoc);</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    dp[11] = <a class="code" href="dtsgui_8h.html#adf44a85e73ba5c39ea11ef3aa374e97f">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Least Cost Routing&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    dp[0] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Customer Information&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    dp[1] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Network/IP Information&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    dp[2] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Dynamic DNS&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    dp[3] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;DNS&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    dp[4] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;X.509&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    dp[5] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Fileserver&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    dp[6] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Firewall&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    dp[7] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Extensions&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    dp[8] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;PBX Setup&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    dp[9] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Attendant&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    dp[10] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Trunk Setup&quot;</span>, NULL, xmldoc);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    dp[11] = <a class="code" href="group___c-_a_p_i-_wizard.html#ga3e76b1ea2eebb91e1d0b5a55649d65e6" title="Create a panel appended to the wizard.">dtsgui_wizard_addpage</a>(twiz, <span class="stringliteral">&quot;Least Cost Routing&quot;</span>, NULL, xmldoc);</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <a class="code" href="private_8h.html#accc1788f03d17d487ce09a1d07d53018">wizz_custinfo</a>(dp[0]);</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <a class="code" href="wizard_8c.html#af6a04c61f4efb3d8c9581d1ca2a79f7c">wizz_netinfo</a>(dp[1]);</div>
@@ -496,12 +497,12 @@ $(document).ready(function(){initNavTree('wizard_8c_source.html','');});
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <a class="code" href="wizard_8c.html#aa274a72a578011082041109b5e2d8b22">wizz_trunk</a>(dp[10]);</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <a class="code" href="wizard_8c.html#a4663a22f17fb8c01f6058f117ed6c201">wizz_voip</a>(dp[11]);</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    res = <a class="code" href="dtsgui_8h.html#a663223915b4247295d807b511f655237">dtsgui_runwizard</a>(twiz);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    res = <a class="code" href="group___c-_a_p_i-_wizard.html#ga25174d47f2e9680d41aebdf08ff9b979" title="Run the wizard.">dtsgui_runwizard</a>(twiz);</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">if</span> (res) {</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        cnt = <span class="keyword">sizeof</span>(dp)/<span class="keyword">sizeof</span>(dp[0])-1;</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">for</span>(; cnt &gt;= 0;cnt--) {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <a class="code" href="dtsgui_8h.html#a1427bf41d77169094f3722ff5b20f657">dtsgui_xmlpanel_update</a>(dp[cnt]);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <a class="code" href="group___c-_a_p_i-_panel.html#ga28e2dbe2171ea35e32fa615aca55b934" title="update all XML elements in the panel.">dtsgui_xmlpanel_update</a>(dp[cnt]);</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        }</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        rem_temp_xml(xmldoc);</div>
@@ -538,7 +539,7 @@ $(document).ready(function(){initNavTree('wizard_8c_source.html','');});
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keyword">struct </span>xml_doc *xmldoc;</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keyword">struct </span><a class="code" href="structapp__data.html">app_data</a> *appdata;</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">if</span> (!(appdata = <a class="code" href="dtsgui_8h.html#aa15d65f936fae1e503c631690cfdf531">dtsgui_userdata</a>(dtsgui))) {</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">if</span> (!(appdata = <a class="code" href="group___c-_a_p_i.html#gaa224c0a868745526e6ac3c05970471c5" title="Obtain a reference for the application userdata.">dtsgui_userdata</a>(dtsgui))) {</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    snprintf(defconf, PATH_MAX-1, <span class="stringliteral">&quot;%s/default.xml&quot;</span>, appdata-&gt;<a class="code" href="structapp__data.html#aaa1b1bd30fab72d8b9a34f890fd060c0">datadir</a>);</div>
@@ -594,7 +595,7 @@ $(document).ready(function(){initNavTree('wizard_8c_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="wizard_8c.html">wizard.c</a></li>
-    <li class="footer">Generated on Wed Oct 9 2013 11:30:49 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Wed Oct 9 2013 22:32:56 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

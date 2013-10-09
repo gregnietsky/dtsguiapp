@@ -1,6 +1,12 @@
 var searchData=
 [
   ['c',['c',['../unionwidgets.html#aa5bb8e792fd60fca871e8782e39993cc',1,'widgets']]],
+  ['c_20api_20menu_20bar_20interface',['C API Menu Bar Interface',['../group___c-_a_p_i-_menus.html',1,'']]],
+  ['c_20api_20panel_20interface',['C API Panel Interface',['../group___c-_a_p_i-_panel.html',1,'']]],
+  ['c_20api_20tab_20view_20interface',['C API Tab View Interface',['../group___c-_a_p_i-_panel-_tab.html',1,'']]],
+  ['c_20api_20tree_20view_20interface',['C API Tree View Interface',['../group___c-_a_p_i-_panel-_tree.html',1,'']]],
+  ['c_20api_20progress_20dialog_20functions',['C API Progress Dialog Functions',['../group___c-_a_p_i-_progress.html',1,'']]],
+  ['c_20api_20wizard_20interface',['C API Wizard Interface',['../group___c-_a_p_i-_wizard.html',1,'']]],
   ['c_5fopen',['c_open',['../structapp__data.html#a68690abb28e424749f67339ea3736a41',1,'app_data']]],
   ['can_5fdelete',['can_delete',['../class_d_t_s_d_v_m_list_store.html#a6794906e84f9d97761f95ff7d3b8a452',1,'DTSDVMListStore']]],
   ['can_5fedit',['can_edit',['../class_d_t_s_d_v_m_list_store.html#a5f2a6fd27284866f4cfd264a91b8fdb3',1,'DTSDVMListStore']]],
