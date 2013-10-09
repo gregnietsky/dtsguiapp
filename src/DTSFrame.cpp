@@ -32,8 +32,6 @@
 #include "DTSApp.h"
 #include "DTSFrame.h"
 
-wxDEFINE_EVENT(DTS_APP_EVENT, wxCommandEvent);
-
 DTSFrame::DTSFrame(const wxString &title, const wxPoint &pos, const wxSize &size, class dtsgui *dtsgui)
 	: wxFrame(NULL, wxID_ANY, title, pos, size) {
 
@@ -143,9 +141,9 @@ int DTSFrame::StartProgress(const wxString &text, int maxval, int quit) {
 }
 
 int DTSFrame::UpdateProgress(int cval, const wxString &text) {
-	if (pbar) {
+/*	if (pbar) {
 		pbar->SetValue(cval);
-	}
+	}*/
 	if (pdia) {
 		if (pdia->Update(cval, text)) {
 			return 1;
@@ -158,9 +156,9 @@ int DTSFrame::UpdateProgress(int cval, const wxString &text) {
 }
 
 int DTSFrame::IncProgress(int ival, const wxString &text) {
-	if (pbar) {
+/*	if (pbar) {
 		pbar->SetValue(pbar->GetValue()+ival);
-	}
+	}*/
 	if (pdia) {
 		if (pdia->Update(pdia->GetValue()+ival, text)) {
 			return 1;
@@ -178,9 +176,9 @@ void DTSFrame::EndProgress(void) {
 		delete pdia;
 		pdia = NULL;
 	}
-	if (pbar) {
+/*	if (pbar) {
 		pbar->Hide();
-	}
+	}*/
 }
 
 void DTSFrame::OnDTSEvent(wxCommandEvent &event) {
