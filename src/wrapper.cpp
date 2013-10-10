@@ -18,12 +18,12 @@
 
 /** @defgroup C-API Library C API
   * @brief Exported functions used for use in C code.
-  *
-  * Use of this API is not recomended from inside C++ use the native API.
-  *
+  * @remark Use of this API is not recomended from inside C++ use the native API.
   * @see __DTS_C_API
   * @see DTS_C_API
+  * @see CORE
   * @see @ref wrapper.cpp
+  * @see @ref cxxapi.cpp
   * @see @ref dtsgui.h*/
 
 /** @file
@@ -38,53 +38,66 @@
 /** @defgroup C-API-Menus C API Menu Bar Interface
   * @brief C-API Menu Management
   * @ingroup C-API
-  *
-  * Resources controlling the menu bar in the C API.*/
+  * @remark Resources controlling the menu bar in the C API.*/
 
 /** @defgroup C-API-Panel C API Panel Interface
   * @brief C API Panel Management
   * @ingroup C-API
-  *
-  * Resources controlling and manipulating panels in the C API.*/
+  * @remark Resources controlling and manipulating panels in the C API.*/
 
 /** @defgroup C-API-Wizard C API Wizard Interface
   * @brief C API Wizard Management
   * @ingroup C-API
-  *
-  * Resources controlling and manipulating wizards in the C API.*/
+  * @remark Resources controlling and manipulating wizards in the C API.*/
 
 /** @defgroup C-API-Panel-Tree C API Tree View Interface
   * @brief C API for managing tree view panels.
   * @ingroup C-API-Panel
-  *
-  * Resources controlling and manipulating tree view in the C API.*/
+  * @remark Resources controlling and manipulating tree view in the C API.*/
 
 /** @defgroup C-API-Panel-Tab C API Tab View Interface
   * @brief C API for managing tab view panels.
   * @ingroup C-API-Panel
-  *
-  * Resources controlling and manipulating tab view in the C API.*/
+  * @remark Resources controlling and manipulating tab view in the C API.*/
 
-/** @defgroup C-API-Panel-Items C API Form Element Interface
+/** @defgroup C-API-Panel-Items C API Form Item Interface
   * @brief C API for managing elements of a panel.
-  *
-  * Element items include Text / Password / Check / List / Combo boxes.
-  * This API allows access to the elements and values set.
-  *
   * @ingroup C-API-Panel
+  * @remark Element items include Text / Password / Check / List / Combo boxes.*/
+
+/** @defgroup C-API-Panel-Elements C API Form Element Interface
+  * @brief C API for placing and creating elements on a panel.
+  * @ingroup C-API-Panel
+  * @remark Element items include Text / Password / Check / List / Combo boxes.*/
+
+/** @defgroup C-API-Panel-Elements-STD C API Standard Form Element Interface
+  * @brief C API for placing and creating standard elements on a panel.
+  * @ingroup C-API-Panel-Elements*/
+
+/** @defgroup C-API-Panel-Elements-XML C API XML Form Element Interface
+  * @brief C API for placing and creating XML elements on a panel.
+  * @ingroup C-API-Panel-Elements*/
+
+/** @defgroup C-API-Dialog C API Common Dialog Boxes
+  * @brief C API for managing user interface dialogs.
+  * @ingroup C-API
+  * @remark Simple dialog boxes for user interfacing (Alert/Confirm/File/Password)
   *
-  * Resources controlling and manipulating tree view in the C API.*/
+  * remark All implementations of the wxFileDialog provide a wildcard filter.
+  * Typing a filename containing wildcards (*, ?) in the filename text item, and clicking on Ok, will 
+  * result in only those files matching the pattern being displayed.
+  * The wildcard may be a specification for multiple types of file with a description for each, such as:
+  * @verbatim"BMP and GIF files (*.bmp;*.gif)|*.bmp;*.gif|PNG files (*.png)|*.png"@endverbatim*/
 
 /** @defgroup C-API-Progress C API Progress Dialog Functions
   * @brief C API for managing progress dialog
   * @ingroup C-API
-  *
-  * Resources controlling and manipulating the progress dialog*/
+  * @remark Resources controlling and manipulating the progress dialog*/
 
 /**
   * @ingroup C-API
   * @brief Defining __DTS_C_API allows access to C API from inside a C++ file
-  *
+  * 
   * dtsgui.h will only include the definitions for the C API if this is defined.*/
 #define __DTS_C_API
 
@@ -226,7 +239,7 @@ void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text) {
 /** @ingroup C-API
   * @brief Enable/Disable an menu item.
   * @param dmi Menuitem
-  * @param int Disable the menu if set to 0.*/
+  * @param enable Disable the menu if set to 0.*/
 void dtsgui_menuitemenable(dtsgui_menuitem dmi, int enable) {
 	wxMenuItem *mi = (wxMenuItem*)dmi;
 	mi->Enable((enable) ? true : false);
@@ -555,7 +568,10 @@ extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int bu
   * @param userdata Referenced object stored and made available in callbacks.
   * @param xmldoc Optional XML document stored and made available to XML resources.
   * @param cb Callback called to configure the panel.
-  * @param cdata Referenced object passed to the configuration callback.*/
+  * @param cdata Referenced object passed to the configuration callback.
+  * @param pos Position to insert into
+  * @param undo Delete and recreate the panel at this position
+  * @return New Tab Pane*/
 extern dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos, int undo) {
 	DTSTabWindow *tw = (DTSTabWindow*)tv;
 	return tw->CreateTab(name, butmask, userdata, cb, cdata, xmldoc, pos, undo);
@@ -579,6 +595,7 @@ extern dtsgui_pane dtsgui_tabpage_insert(dtsgui_tabview tv, const char *name, in
   * @param vitem the item in the panel to be used to create the value of the new node.
   * @param tattr the attribute to be used too create the title in the new pane.
   * @param data_cb Callback to allow setting the data used in pane creation.
+  * @param cb Callback to configure the pane.
   * @param cdata Referrenced object containing initial callback data.
   * @param xmldoc XML doc reference for creating the node / panel.
   * @param data Referenced object made available in callbacks.
@@ -641,7 +658,8 @@ dtsgui_pane dtsgui_treepane_default(dtsgui_treeview tv, dtsgui_treenode node) {
   * @param node The parent node or NULL to create root node.
   * @param title The label shown on the tree.
   * @param can_edit Allow editing of this node the XML node will be updated.
-  * @param can_del Not yet implemented for containers but will allow right click menu to delete.
+  * @param can_sort Allow sorting of this node the XML node will be updated.
+   * @param can_del Not yet implemented for containers but will allow right click menu to delete.
   * @param nodeid A value passed to the callback as convinence can be any value -1 will cause a blank panel.
   * @param p_cb Callback to pass panel for configuration on selection of the item.
   * @param data Referenced object passed too callbacks.*/
@@ -664,6 +682,7 @@ dtsgui_treenode dtsgui_treecont(dtsgui_treeview tree, dtsgui_treenode node, cons
   * @param node The parent node or NULL to create root node.
   * @param title The label shown on the tree.
   * @param can_edit Allow editing of this node the XML node will be updated.
+  * @param can_sort Allow sorting of this node the XML node will be updated.
   * @param can_del Allow right click menu to delete.
   * @param nodeid A value passed to the callback as convinence can be any value -1 will cause a blank panel.
   * @param p_cb Callback to pass panel for configuration on selection of the item.
@@ -687,6 +706,7 @@ dtsgui_treenode dtsgui_treeitem(dtsgui_treeview tree, dtsgui_treenode node, cons
   *
   * @param tree Tree view the new panel will be added too.
   * @param p The panel this callback is attached too.
+  * @param tn Root treenode to add too.
   * @param xpath the path of the new node.
   * @param node the name of the XML node to create in the xpath.
   * @param vitem the item in the panel to be used to create the value of the new node.
@@ -728,6 +748,7 @@ const char *dtsgui_treenodeparent(dtsgui_treenode tn) {
 /** @ingroup C-API-Panel-Tree
   * @brief Add a XML node to the tree node
   * @see DTSDVMListStore::SetXMLData
+  * @param tn Tree node to set.
   * @param xn XML Node to reference.
   * @param tattr Attribute in the XN that represents the title NULL if the value is the title.*/
 void dtsgui_treenodesetxml(dtsgui_treenode tn,struct xml_node *xn, const char *tattr) {
@@ -804,7 +825,7 @@ extern void dtsgui_xmlpanel_update(dtsgui_pane pane) {
   * @see dtsgui_xmlpane_update()
   * @see DTSPanel::Panel2Post()
   *
-  * @param pane Panel to create from.
+  * @param p Panel to create from.
   * @return A CURL HTTP POST Structure.*/
 struct curl_post *dtsgui_pane2post(dtsgui_pane p) {
 	DTSPanel *dp = (DTSPanel*)p;
@@ -870,7 +891,7 @@ void dtsgui_configcallback(dtsgui_pane pane,dtsgui_configcb cb, void *data) {
   *
   * @see DTSPanel::Panel2XML()
   *
-  * @param pane Panel to create nodes from.
+  * @param p Panel to create nodes from.
   * @param xpath Base path to create the nodes in.
   * @param node Name of the node to add.
   * @param nodeval Name of the element to use as the value of node.
@@ -1006,7 +1027,7 @@ struct bucket_list *dtsgui_panel_items(dtsgui_pane pane) {
   * specified name.
   * @see DTSPanel::FindItem()
   * @param p panel who's item list is to be searched.
-  * @name name Return item with this name.
+  * @param  name Return item with this name.
   * @return Form item if found matching the name.*/
 extern struct form_item *dtsgui_finditem(dtsgui_pane p, const char *name) {
 	DTSPanel *dp = (DTSPanel*)p;
@@ -1064,101 +1085,282 @@ extern const char *dtsgui_findvalue(dtsgui_pane p, const char *name) {
 	return dp->FindValue(name);
 }
 
+
+/** @ingroup C-API-Dialog
+  * @brief Alert the user and expect a confirmation.
+  * @see DTSFrame::Alert()
+  * @param dtsgui Application data ptr.
+  * @param text Text to supply in the alert.*/
 void dtsgui_alert(struct dtsgui *dtsgui, const char *text) {
 	DTSFrame *f = dtsgui->GetFrame();
 	f->Alert(text);
 }
 
+/** @ingroup C-API-Dialog
+  * @brief Request Yes/No Confirmation from the user.
+  * @see DTSFrame::Confirm()
+  * @param dtsgui Application data ptr.
+  * @param text Text to supply in the alert.
+  * @return Non zero if the user affirmed.*/
 int dtsgui_confirm(struct dtsgui *dtsgui, const char *text) {
 	DTSFrame *f = dtsgui->GetFrame();
 	return f->Confirm(text);
 }
 
+/** @ingroup C-API-Dialog
+  * @brief Open file save dialog box.
+  * @see DTSFrame::FileDialog()
+  * @param dtsgui Application data ptr.
+  * @param title Title of the file dialog.
+  * @param path Original path to open dialog in.
+  * @param name Suggested name to save as.
+  * @param filter File namr filter.
+  * @return Reference to the filename that must be unreferenced.*/
 extern const char *dtsgui_filesave(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
 	DTSFrame *f = dtsgui->GetFrame();
 	return f->FileDialog(title, path, name, filter, wxFD_SAVE | wxFD_OVERWRITE_PROMPT);
 }
 
+/** @ingroup C-API-Dialog
+  * @brief Open file open dialog box.
+  * 
+  * @see DTSFrame::FileDialog()
+  * @see dtsgui_fileopen() 
+  * @param dtsgui Application data ptr.
+  * @param title Title of the file dialog.
+  * @param path Original path to open dialog in.
+  * @param name Suggested name to open.
+  * @param filter File namr filter.
+  * @return Reference to the filename that must be unreferenced.*/
 extern const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter) {
 	DTSFrame *f = dtsgui->GetFrame();
 	return f->FileDialog(title, path, name, filter, wxFD_OPEN | wxFD_FILE_MUST_EXIST);
 }
 
+/** @ingroup C-API-Dialog
+  * @brief Return basic auth reference from a password dialog box.
+  * A dialog box requesting the user name and password is presented to the user.
+  * The initial values may be supplied.
+  * @remark This function is used as a callback for CURL.
+  * @see DTSFrame::Passwd()
+  * @param user initial username entered into the box.
+  * @param passwd the initial password.
+  * @param data this will always be the application data ptr.
+  * @return Basic auth reference.*/
 struct basic_auth *dtsgui_pwdialog(const char *user, const char *passwd, void *data) {
 	DTSFrame *f = static_cast<class dtsgui*>(data)->GetFrame();
 	return f->Passwd(user, passwd);
 }
 
+/** @ingroup C-API-Panel-Elements
+  * @brief Add a name / value to the list box for selection.
+  * @see form_item::Append()
+  * @param listbox A form item containing a listbox or combobox.
+  * @param text The text appearing on the drop down box.
+  * @param value The value set when this item is selected.*/
+void dtsgui_listbox_add(struct form_item *listbox, const char *text, const char *value) {
+	listbox->Append(text, value);
+}
+
+/** @ingroup C-API-Panel-Elements
+  * @brief Set the selected item on a list box or combobox to the index.
+  * @param listbox A form item containing a listbox or combobox.
+  * @param idx the index to set as the selected value.*/
+void dtsgui_listbox_set(struct form_item *listbox, int idx) {
+	listbox->SetSelection(idx);
+}
+
+/** @ingroup C-API-Panel-Elements
+  * @brief Populate a listbox or combobox from a XML path.
+  * A entry is added for each node found using the supplied attributes for displayed text and value
+  * @remark passing NULL as either or both of the attributes will use the value of the node.
+  * @param lb A form item containing a listbox or combobox.
+  * @param xmldoc XML Document to search.
+  * @param xpath XML search path.
+  * @param nattr Attribute whoose value will be used for name on list.
+  * @param vattr Attribute whoose value will be used for value.*/
+void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr) {
+	lb->AppendXML(xmldoc, xpath, nattr, vattr);
+}
+
+/** @ingroup C-API-Panel-Elements-STD
+  * @brief Place a text element on the panel.
+  * @see DTSPanel::TextBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param value Initial value of element.
+  * @param data User data to hold a reference of.*/
 extern void dtsgui_textbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->TextBox(title, name, value, wxTE_LEFT | wxTE_PROCESS_ENTER, 1, data, DTSGUI_FORM_DATA_PTR);
 }
 
+/** @ingroup C-API-Panel-Elements-STD
+  * @brief Place a multi line text element on the panel.
+  * @see DTSPanel::TextBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param value Initial value of element.
+  * @param data User data to hold a reference of.*/
 extern void dtsgui_textbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->TextBox(title, name, value, wxTE_MULTILINE, 5, data,  DTSGUI_FORM_DATA_PTR);
 }
 
+/** @ingroup C-API-Panel-Elements-STD
+  * @brief Place a password element on the panel.
+  * @see DTSPanel::TextBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param value Initial value of element.
+  * @param data User data to hold a reference of.*/
 extern void dtsgui_passwdbox(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->TextBox(title, name, value, wxTE_PASSWORD | wxTE_PROCESS_ENTER, 1, data,  DTSGUI_FORM_DATA_PTR);
 }
 
+/** @ingroup C-API-Panel-Elements-STD
+  * @brief Place a checkbox element on the panel.
+  * @see DTSPanel::CheckBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param checkval Value of item when checked.
+  * @param uncheck Value of item when unchecked.
+  * @param ischecked Set to non zero if item is initially checked.
+  * @param data User data to hold a reference of.*/
 extern void dtsgui_checkbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheck, int ischecked, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->CheckBox(title, name, ischecked, checkval, uncheck, data,  DTSGUI_FORM_DATA_PTR);
 }
 
+/** @ingroup C-API-Panel-Elements-STD
+  * @brief Place a listbox element on the panel.
+  * @see DTSPanel::ListBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param data User data to hold a reference of.
+  * @return Form item that can be used to add values this must be unreferenced*/
 extern struct form_item *dtsgui_listbox(dtsgui_pane pane, const char *title, const char *name, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	return p->ListBox(title, name, NULL, data,  DTSGUI_FORM_DATA_PTR);
 }
 
+/** @ingroup C-API-Panel-Elements-STD
+  * @brief Place a combobox element on the panel.
+  * @see DTSPanel::ComboBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param data User data to hold a reference of.
+  * @return Form item that can be used to add values this must be unreferenced*/
 extern struct form_item *dtsgui_combobox(dtsgui_pane pane, const char *title, const char *name, void *data) {
 	DTSPanel *p = (DTSPanel *)pane;
 	return p->ComboBox(title, name, NULL, data, DTSGUI_FORM_DATA_PTR);
 }
 
+/** @ingroup C-API-Panel-Elements-XML
+  * @brief Place a XML text element on the panel.
+  * @see DTSPanel::XMLTextBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param xpath Xpath of the element.
+  * @param node Node to create in path if it does not exist.
+  * @param fattr Attribute to create a filter on.
+  * @param fval Value to equate to filter attr in filter.
+  * @param attr Attribute in the node to assign value of.*/
 extern void dtsgui_xmltextbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->XMLTextBox(title, name, xpath, node, fattr, fval, attr, wxTE_LEFT | wxTE_PROCESS_ENTER, 1);
 }
 
+/** @ingroup C-API-Panel-Elements-XML
+  * @brief Place a XML multi line text element on the panel.
+  * @see DTSPanel::XMLTextBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param xpath Xpath of the element.
+  * @param node Node to create in path if it does not exist.
+  * @param fattr Attribute to create a filter on.
+  * @param fval Value to equate to filter attr in filter.
+  * @param attr Attribute in the node to assign value of.*/
 extern void dtsgui_xmltextbox_multi(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->XMLTextBox(title, name, xpath, node, fattr, fval, attr, wxTE_MULTILINE, 5);
 }
 
+/** @ingroup C-API-Panel-Elements-XML
+  * @brief Place a XML password element on the panel.
+  * @see DTSPanel::XMLPasswdBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param xpath Xpath of the element.
+  * @param node Node to create in path if it does not exist.
+  * @param fattr Attribute to create a filter on.
+  * @param fval Value to equate to filter attr in filter.
+  * @param attr Attribute in the node to assign value of.*/
 extern void dtsgui_xmlpasswdbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->XMLPasswdBox(title, name, xpath, node, fattr, fval, attr, wxTE_LEFT | wxTE_PROCESS_ENTER);
 }
 
+/** @ingroup C-API-Panel-Elements-XML
+  * @brief Place a XML checkbox element on the panel.
+  * @see DTSPanel::XMLCheckBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param checkval The value will be set to this if checked.
+  * @param uncheckval The value will be set to this if unchecked.
+  * @param xpath Xpath of the element.
+  * @param node Node to create in path if it does not exist.
+  * @param fattr Attribute to create a filter on.
+  * @param fval Value to equate to filter attr in filter.
+  * @param attr Attribute in the node to assign value of.*/
 extern void dtsgui_xmlcheckbox(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	p->XMLCheckBox(title, name, checkval, uncheckval, xpath, node, fattr, fval, attr);
 }
 
+/** @ingroup C-API-Panel-Elements-XML
+  * @brief Place a XML listbox element on the panel.
+  * @see DTSPanel::XMLListBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param xpath Xpath of the element.
+  * @param node Node to create in path if it does not exist.
+  * @param fattr Attribute to create a filter on.
+  * @param fval Value to equate to filter attr in filter.
+  * @param attr Attribute in the node to assign value of.
+  * @return Form item that can be used to add values this must be unreferenced*/
 struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	return p->XMLListBox(title, name, xpath, node, fattr, fval, attr);
 }
 
+/** @ingroup C-API-Panel-Elements-XML
+  * @brief Place a XML combobox element on the panel.
+  * @see DTSPanel::XMLComboBox()
+  * @param pane Panel to place element on.
+  * @param title Title of element.
+  * @param name Name of element.
+  * @param xpath Xpath of the element.
+  * @param node Node to create in path if it does not exist.
+  * @param fattr Attribute to create a filter on.
+  * @param fval Value to equate to filter attr in filter.
+  * @param attr Attribute in the node to assign value of.
+  * @return Form item that can be used to add values this must be unreferenced*/
 struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr) {
 	DTSPanel *p = (DTSPanel *)pane;
 	return p->XMLComboBox(title, name, xpath, node, fattr, fval, attr);
-}
-
-void dtsgui_listbox_add(struct form_item *listbox, const char *text, const char *value) {
-	listbox->Append(text, value);
-}
-
-void dtsgui_listbox_set(struct form_item *listbox, int idx) {
-	listbox->SetSelection(idx);
-}
-
-void dtsgui_listbox_addxml(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr) {
-	lb->AppendXML(xmldoc, xpath, nattr, vattr);
 }
 
 } /*END Namespace*/

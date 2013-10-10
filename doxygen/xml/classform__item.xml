@@ -5,7 +5,7 @@
     <includes refid="pitems_8h" local="no">pitems.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classform__item_1aa7364e00d99d22b9a594767915caa4be" prot="private" static="no" mutable="no">
-        <type>enum <ref refid="dtsgui_8h_1afd296180392ef5681415b9fb0590be84" kindref="member">widget_type</ref></type>
+        <type>enum <ref refid="group___c_o_r_e_1gafd296180392ef5681415b9fb0590be84" kindref="member">widget_type</ref></type>
         <definition>enum widget_type form_item::type</definition>
         <argsstring></argsstring>
         <name>type</name>
@@ -70,7 +70,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/pitems.h" line="67" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/pitems.h" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classform__item_1acaa83eeebb557f7e66ae998bc45dc6c9" prot="private" static="no" mutable="no">
-        <type>enum <ref refid="dtsgui_8h_1aa648ae9cc0927fecec3a6f705930f8a9" kindref="member">form_data_type</ref></type>
+        <type>enum <ref refid="group___c_o_r_e_1gaa648ae9cc0927fecec3a6f705930f8a9" kindref="member">form_data_type</ref></type>
         <definition>enum form_data_type form_item::dtype</definition>
         <argsstring></argsstring>
         <name>dtype</name>
@@ -136,7 +136,7 @@
           <declname>widget</declname>
         </param>
         <param>
-          <type>enum <ref refid="dtsgui_8h_1afd296180392ef5681415b9fb0590be84" kindref="member">widget_type</ref></type>
+          <type>enum <ref refid="group___c_o_r_e_1gafd296180392ef5681415b9fb0590be84" kindref="member">widget_type</ref></type>
           <declname>type</declname>
         </param>
         <param>
@@ -156,7 +156,7 @@
           <declname>data</declname>
         </param>
         <param>
-          <type>enum <ref refid="dtsgui_8h_1aa648ae9cc0927fecec3a6f705930f8a9" kindref="member">form_data_type</ref></type>
+          <type>enum <ref refid="group___c_o_r_e_1gaa648ae9cc0927fecec3a6f705930f8a9" kindref="member">form_data_type</ref></type>
           <declname>dtype</declname>
         </param>
         <briefdescription>

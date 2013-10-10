@@ -1,6 +1,6 @@
 var classdynamic__panel =
 [
-    [ "dynamic_panel", "classdynamic__panel.html#ae6689acea2cf5d984fbcb191a680c4cb", null ],
+    [ "dynamic_panel", "classdynamic__panel.html#ab9bd460c0e6acd3b84806f908d53df49", null ],
     [ "DTS_OJBREF_CLASS", "classdynamic__panel.html#a85d6e3235706cc6f50d14be843a563f6", null ],
     [ "HasCallback", "classdynamic__panel.html#a52940fe2d7c72ec45a2aff77ad7ec8d0", null ],
     [ "IsBlank", "classdynamic__panel.html#a001a227c89e7998e18b88f7c49d4d035", null ],

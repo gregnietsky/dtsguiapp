@@ -15,11 +15,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="120" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="120" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="130" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="130" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1ab20156180905342ce3bc648253507f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_menus_1gab20156180905342ce3bc648253507f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_menuenable</definition>
         <argsstring>(dtsgui_menu dm, int enable)</argsstring>
@@ -33,12 +33,27 @@
           <declname>enable</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Enable or disable all items in menu. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Menu to enable/disable. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable all items if set to non zero. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="33" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="33" bodyend="48"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="52" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="52" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1gacecdb36b65ac3d5522a419a6b69c9f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,7 +61,7 @@
         <argsstring>(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status)</argsstring>
         <name>dtsgui_config</name>
         <param>
-          <type><ref refid="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></type>
           <declname>confcallback_cb</declname>
         </param>
         <param>
@@ -72,7 +87,7 @@
         <briefdescription>
 <para>Configure the GUI and create a application frame. </para>        </briefdescription>
         <detaileddescription>
-<para>This is the first process required the application is created and the callback is executed.</para><para>Application processing continues until dtsgui_run is executed at this point the call back is executed and proccessing will be passed to the GUI App.</para><para>The userdata is returned in the callback.</para><para>The Callback must return a non zero value to indicat success should the application fail returning 0 will close the application.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_app" kindref="compound">DTSApp</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></para></simplesect>
+<para>This is the first process required the application is created and the callback is executed.</para><para>Application processing continues until dtsgui_run is executed at this point the call back is executed and proccessing will be passed to the GUI App.</para><para>The userdata is returned in the callback.</para><para>The Callback must return a non zero value to indicat success should the application fail returning 0 will close the application.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_app" kindref="compound">DTSApp</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>confcallback_cb</parametername>
@@ -120,7 +135,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="148" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="148" bodyend="150"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="156" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="156" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga3ac9d5ef153d17266a704a373d591962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -158,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="164" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="164" bodyend="166"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="171" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="171" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -186,7 +201,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="177" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="177" bodyend="179"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="184" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="184" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga529d973a998e39dba025dfcd96a9a706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +238,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="191" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="191" bodyend="194"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="198" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="198" bodyend="201"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga4e766a49c1e9eba3f2c2fda47b8166aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -260,7 +275,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="203" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="203" bodyend="206"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="210" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="210" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga1734b840fc0696b13d5b616df0ec3bbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -308,7 +323,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="217" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="217" bodyend="220"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="224" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="224" bodyend="227"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -345,9 +360,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="228" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="228" bodyend="230"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="235" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="235" bodyend="237"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a99f0bbb3bf979d0102b7b19899ad79dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i_1ga99f0bbb3bf979d0102b7b19899ad79dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_menuitemenable</definition>
         <argsstring>(dtsgui_menuitem dmi, int enable)</argsstring>
@@ -361,12 +376,27 @@
           <declname>enable</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Enable/Disable an menu item. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dmi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Menuitem </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Disable the menu if set to 0. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="236" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="236" bodyend="239"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="243" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="243" bodyend="246"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga164aa159bc57a744f012b49268796bbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -403,7 +433,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="246" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="246" bodyend="248"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="253" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="253" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
@@ -441,7 +471,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="264" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="264" bodyend="267"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="269" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="269" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
@@ -501,7 +531,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="288" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="288" bodyend="291"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="291" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="291" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
@@ -594,7 +624,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="317" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="317" bodyend="320"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="318" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="318" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gabf67f1b041be315b58ccacc7d193b273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -632,7 +662,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="337" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="337" bodyend="340"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="336" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="336" bodyend="339"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -670,7 +700,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="357" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="357" bodyend="360"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="354" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="354" bodyend="357"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -719,7 +749,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="376" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="376" bodyend="379"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="371" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="371" bodyend="374"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gaf655828d94de128cfd8269d03d649092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -746,7 +776,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="393" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="393" bodyend="396"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="386" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="386" bodyend="389"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gac763bff39863668014931022b469d836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -770,7 +800,7 @@
           <declname>butmask</declname>
         </param>
         <param>
-          <type>enum <ref refid="dtsgui_8h_1a9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref></type>
+          <type>enum <ref refid="group___c_o_r_e_1ga9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref></type>
           <declname>type</declname>
         </param>
         <param>
@@ -780,7 +810,7 @@
         <briefdescription>
 <para>Create a pannel to be displayed. </para>        </briefdescription>
         <detaileddescription>
-<para>This function is able to create and return various panels excluding Tab/Tree view panels.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a3b1105fb9c8e3b6909994e7f993eee20" kindref="member">DTSFrame::CreatePane()</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref></para></simplesect>
+<para>This function is able to create and return various panels excluding Tab/Tree view panels.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a3b1105fb9c8e3b6909994e7f993eee20" kindref="member">DTSFrame::CreatePane()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dtsgui</parametername>
@@ -828,7 +858,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="415" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="415" bodyend="418"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="407" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="407" bodyend="410"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gafb8efe017917a372826f7ddedb0e8bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -877,7 +907,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="436" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="436" bodyend="439"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="426" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="426" bodyend="429"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gaa92cb9c6006aaf320e784f04500c3b25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
@@ -907,7 +937,7 @@
         <briefdescription>
 <para>Create a treepane view. </para>        </briefdescription>
         <detaileddescription>
-<para>Create a split window with a tree control on the left and display area on right.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_tree_window" kindref="compound">DTSTreeWindow</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a465794df2cb30731dfe34d3e7a4ed368" kindref="member">tree_cbtype</ref></para></simplesect>
+<para>Create a split window with a tree control on the left and display area on right.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_tree_window" kindref="compound">DTSTreeWindow</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga465794df2cb30731dfe34d3e7a4ed368" kindref="member">tree_cbtype</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dtsgui</parametername>
@@ -947,7 +977,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="458" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="458" bodyend="461"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="446" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="446" bodyend="449"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
@@ -996,7 +1026,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="476" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="476" bodyend="479"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="463" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="463" bodyend="466"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1044,7 +1074,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="492" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="492" bodyend="495"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="478" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="478" bodyend="481"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gad91055a12542c30dab4aacbd0761c785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1081,7 +1111,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="507" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="507" bodyend="510"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="492" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="492" bodyend="495"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga75c6083aa363922fdf1fd19767eceeea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct xml_doc *</type>
@@ -1109,7 +1139,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="524" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="524" bodyend="527"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="508" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="508" bodyend="511"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga71826ffc718e3dc219e57befdb6f0d8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1135,7 +1165,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="536" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="536" bodyend="538"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="519" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="519" bodyend="521"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -1174,7 +1204,7 @@
 <para>Create and append a tab to the view. </para>        </briefdescription>
         <detaileddescription>
 <para>Append a tab to the tab view the tab will be configured when it is selected the callback will run to configure it.</para><para><simplesect kind="note"><para>Its also possible to configure the returned panel. </para><simplesectsep/><para>On win32 all tabs are configured when the view is activated.</para></simplesect>
-<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" kindref="member">dtsgui_tabpage_insert</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
+<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" kindref="member">dtsgui_tabpage_insert</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tv</parametername>
@@ -1228,7 +1258,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="565" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="565" bodyend="568"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="546" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="546" bodyend="549"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -1274,7 +1304,7 @@
         <briefdescription>
 <para>Create and append a tab to the view. </para>        </briefdescription>
         <detaileddescription>
-<para>Insert a tab at the position specified and recreate the panel at position undo.</para><para><simplesect kind="see"><para>dtsgui_tabpage_newtabpage </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
+<para>Insert a tab at the position specified and recreate the panel at position undo.</para><para><simplesect kind="see"><para>dtsgui_tabpage_newtabpage </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tv</parametername>
@@ -1324,11 +1354,26 @@
 <parameterdescription>
 <para>Referenced object passed to the configuration callback. </para></parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to insert into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>undo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delete and recreate the panel at this position </para></parameterdescription>
+</parameteritem>
 </parameterlist>
+<simplesect kind="return"><para>New Tab Pane </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="593" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="593" bodyend="596"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="575" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="575" bodyend="578"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gad3333a23e28993072b5ef4feed86778c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1435,6 +1480,13 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback to configure the pane. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>cdata</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -1459,7 +1511,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="622" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="621" bodyend="625"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="604" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="603" bodyend="607"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gad71b59e1898bce570cac2acd774f71e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -1489,7 +1541,7 @@
         <briefdescription>
 <para>Create a tree view panel with information. </para>        </briefdescription>
         <detaileddescription>
-<para>This will seldom be needed as panels are created and supplied in callbacks.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_tree_window_1a7457dc767b9cbc873e0e963644fa1fda" kindref="member">DTSTreeWindow::CreatePane()</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref></para></simplesect>
+<para>This will seldom be needed as panels are created and supplied in callbacks.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_tree_window_1a7457dc767b9cbc873e0e963644fa1fda" kindref="member">DTSTreeWindow::CreatePane()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tv</parametername>
@@ -1530,7 +1582,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="642" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="642" bodyend="645"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="623" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="623" bodyend="626"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gab8713feb542a9bb13f8fe7e3bf568bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -1569,7 +1621,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="661" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="661" bodyend="664"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="641" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="641" bodyend="644"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
@@ -1647,6 +1699,13 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
+<parametername>can_sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allow sorting of this node the XML node will be updated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>can_del</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -1677,7 +1736,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="687" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="686" bodyend="690"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="667" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="666" bodyend="670"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga0f7146637609d42057e2cd21bd2bf33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
@@ -1754,6 +1813,13 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
+<parametername>can_sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allow sorting of this node the XML node will be updated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>can_del</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -1784,7 +1850,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="711" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="710" bodyend="714"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="691" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="690" bodyend="694"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga55a99744231b294667ece32a1087042f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1842,7 +1908,7 @@
         <briefdescription>
 <para>Helper function to handle &quot;Adding&quot; a new node from a existing node. </para>        </briefdescription>
         <detaileddescription>
-<para>This implements the concept of the New button a new node will be created from the data filled in on the pane this callback is attached too. A new XML node is created and the panel created from this node.</para><para><simplesect kind="see"><para><ref refid="dtsgui_8h_1a7ecd2a00f2306c0b94734a72a7899898" kindref="member">tree_newnode_flags</ref></para></simplesect>
+<para>This implements the concept of the New button a new node will be created from the data filled in on the pane this callback is attached too. A new XML node is created and the panel created from this node.</para><para><simplesect kind="see"><para><ref refid="group___c_o_r_e_1ga7ecd2a00f2306c0b94734a72a7899898" kindref="member">tree_newnode_flags</ref></para></simplesect>
 <simplesect kind="note"><para>this callback helper is rather complex.</para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -1857,6 +1923,13 @@
 </parameternamelist>
 <parameterdescription>
 <para>The panel this callback is attached too. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Root treenode to add too. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -1926,7 +1999,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="740" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="739" bodyend="743"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="721" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="720" bodyend="724"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gadc59452935e169e8e78c178aed0b77c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1953,7 +2026,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="752" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="752" bodyend="755"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="733" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="733" bodyend="736"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gaedca58250011ea48c67fbc4faa14278f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -1980,7 +2053,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="762" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="762" bodyend="765"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="743" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="743" bodyend="746"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga3e6618e889e7b58e3bf2ae3d63332178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2005,10 +2078,17 @@
 <para><simplesect kind="see"><para><ref refid="class_d_t_s_d_v_m_list_store_1aa82d333247a2bf537c3acdeae7635e15" kindref="member">DTSDVMListStore::SetXMLData</ref> </para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
+<parametername>tn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tree node to set. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
 <parametername>xn</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>XML node. </para></parameterdescription>
+<para>XML Node to reference. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -2021,9 +2101,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="772" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="772" bodyend="775"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="754" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="754" bodyend="757"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1af56a924134315107e80c8b01bfbeee68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct xml_node *</type>
         <definition>struct xml_node* DTS_C_API::dtsgui_treenodegetxml</definition>
         <argsstring>(dtsgui_treenode tn, char **buf)</argsstring>
@@ -2037,12 +2117,29 @@
           <declname>buf</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Return the XML node reference held by the tree node. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Returns the XML node of the node and optionally the title attribute.</para><para><simplesect kind="note"><para>The reference to the buffer and node needs to be droped. </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tree node to obtain XML node from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to a buffer that will be set to the title attribute (Optional). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the XML node stored in the tree node. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="777" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="777" bodyend="780"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="768" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="768" bodyend="771"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga00767aae723dce154065e0bb090c0e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -2070,7 +2167,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="788" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="788" bodyend="791"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="779" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="779" bodyend="782"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gaa85445ee6c9a2c24d76824bb67cc2ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2118,7 +2215,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="806" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="806" bodyend="809"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="796" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="796" bodyend="799"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga28e2dbe2171ea35e32fa615aca55b934" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2144,7 +2241,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="823" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="823" bodyend="826"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="812" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="812" bodyend="815"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga4d0d6742f61c91fb590b3728a7229150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct curl_post *</type>
@@ -2161,7 +2258,7 @@ When a event happens the callback is called with the userdata to allow actioning
 <para>Create a HTTP Post structure from the values and names Of elements on a panel this can then be used with curl_post to post to a URL.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" kindref="member">DTSPanel::Update_XML()</ref> </para><simplesectsep/><para>dtsgui_xmlpane_update() </para><simplesectsep/><para><ref refid="class_d_t_s_panel_1a7ce048cedd00ee1f1d9ea1c1fd504a6f" kindref="member">DTSPanel::Panel2Post()</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>pane</parametername>
+<parametername>p</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Panel to create from. </para></parameterdescription>
@@ -2171,7 +2268,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="841" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="841" bodyend="844"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="830" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="830" bodyend="833"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga6728901f40e67a95bc46150e1cf3c450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -2199,7 +2296,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="856" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="856" bodyend="859"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="844" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="844" bodyend="847"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga3f8f0e22fd2ecdcb915ec06851d12e3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2236,7 +2333,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="866" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="866" bodyend="869"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="854" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="854" bodyend="857"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gad561196144c72953e31b83aff17054e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2273,7 +2370,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="877" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="877" bodyend="880"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="865" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="865" bodyend="868"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gab2f995a29a5b461ac67c7d9aa7091686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2285,7 +2382,7 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>pane</declname>
         </param>
         <param>
-          <type><ref refid="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -2295,7 +2392,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <briefdescription>
 <para>Set config callback function for panel (UNUSED). </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1acdb57729ace5f3c0fc76cce4d41c36cc" kindref="member">DTSPanel::SetConfigCallback()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1acdb57729ace5f3c0fc76cce4d41c36cc" kindref="member">DTSPanel::SetConfigCallback()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></para></simplesect>
 <simplesect kind="note"><para>Not yet implemted who knows maybe it will maybe it wont.</para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -2322,7 +2419,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="894" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="894" bodyend="897"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="881" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="881" bodyend="884"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga9c1222d2fe8fa5066a2c55e4b71c2cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct xml_node *</type>
@@ -2355,7 +2452,7 @@ When a event happens the callback is called with the userdata to allow actioning
 <para>Using the path information a node is created and elements added as attributes.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1ad28f5ed6bd19e9d685a18df8bf568f92" kindref="member">DTSPanel::Panel2XML()</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>pane</parametername>
+<parametername>p</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Panel to create nodes from. </para></parameterdescription>
@@ -2393,7 +2490,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="913" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="913" bodyend="916"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="900" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="900" bodyend="903"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga3f904089ceb734323477f2b3dbac4a41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2441,7 +2538,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="925" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="925" bodyend="928"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="912" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="912" bodyend="915"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="classdtsgui__wizard" kindref="compound">dtsgui_wizard</ref> *</type>
@@ -2479,7 +2576,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="941" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="941" bodyend="943"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="928" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="928" bodyend="930"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_wizard_1ga3e76b1ea2eebb91e1d0b5a55649d65e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -2539,7 +2636,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="955" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="955" bodyend="957"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="942" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="942" bodyend="944"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_wizard_1ga25174d47f2e9680d41aebdf08ff9b979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2566,7 +2663,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="970" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="970" bodyend="972"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="957" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="957" bodyend="959"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_progress_1gac4185ec71523c1735f1da2cb6dc876d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2626,7 +2723,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="983" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="983" bodyend="986"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="970" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="970" bodyend="973"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_progress_1gabda6276de46c13fb4e0831bb8c8d1ec1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2675,7 +2772,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="998" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="998" bodyend="1001"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="985" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="985" bodyend="988"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_progress_1ga7bd617a3f00cb21ae6df7a37eba0dc7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2724,7 +2821,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1010" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1010" bodyend="1013"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="997" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="997" bodyend="1000"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_progress_1ga528f638b6cb7b0d813e350a0b0c7262c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2750,55 +2847,9 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1019" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1019" bodyend="1022"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1006" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1006" bodyend="1009"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a557f314ceb047c6d2ee3ec5f40e6b93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DTS_C_API::dtsgui_listbox_add</definition>
-        <argsstring>(struct form_item *listbox, const char *text, const char *value)</argsstring>
-        <name>dtsgui_listbox_add</name>
-        <param>
-          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
-          <declname>listbox</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>text</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1024" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1024" bodyend="1026"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1aaa4e4de11048d7e32151628f4428cf3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DTS_C_API::dtsgui_listbox_set</definition>
-        <argsstring>(struct form_item *listbox, int idx)</argsstring>
-        <name>dtsgui_listbox_set</name>
-        <param>
-          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
-          <declname>listbox</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>idx</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1028" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1028" bodyend="1030"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a9a2e87bf30be8644653d11754fcb4e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga9a2e87bf30be8644653d11754fcb4e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct bucket_list *</type>
         <definition>struct bucket_list* DTS_C_API::dtsgui_panel_items</definition>
         <argsstring>(dtsgui_pane pane)</argsstring>
@@ -2808,98 +2859,24 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>pane</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Return reference to hashed bucket list of items. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>The bucket list API in dtsapplib contains more information.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_object_1a4cadcce0480e7e8f4a9a07a4aedd3c1f" kindref="member">DTSObject::GetItems()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to obtain list from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to hashed bucket list. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1032" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1032" bodyend="1035"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1019" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1019" bodyend="1022"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a30bc1422cf3395b150773320ffda00ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void *</type>
-        <definition>void* DTS_C_API::dtsgui_item_data</definition>
-        <argsstring>(struct form_item *fi)</argsstring>
-        <name>dtsgui_item_data</name>
-        <param>
-          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
-          <declname>fi</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1037" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1037" bodyend="1039"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a2cb1581f47559805b221f9290f9ec83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const char *</type>
-        <definition>const char* DTS_C_API::dtsgui_item_name</definition>
-        <argsstring>(struct form_item *fi)</argsstring>
-        <name>dtsgui_item_name</name>
-        <param>
-          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
-          <declname>fi</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1041" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1041" bodyend="1043"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1adc168d1ed91fc91be2bb7bf7b060dd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const char *</type>
-        <definition>const char* DTS_C_API::dtsgui_item_value</definition>
-        <argsstring>(struct form_item *fi)</argsstring>
-        <name>dtsgui_item_value</name>
-        <param>
-          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
-          <declname>fi</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1045" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1045" bodyend="1047"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a6585281832905a2e769f8b0f813a67e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DTS_C_API::dtsgui_listbox_addxml</definition>
-        <argsstring>(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr)</argsstring>
-        <name>dtsgui_listbox_addxml</name>
-        <param>
-          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
-          <declname>lb</declname>
-        </param>
-        <param>
-          <type>struct xml_doc *</type>
-          <declname>xmldoc</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>xpath</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>nattr</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>vattr</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1049" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1049" bodyend="1051"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a3af426dd6bf50cb6bd7232c4ea5b92f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
         <definition>struct form_item* DTS_C_API::dtsgui_finditem</definition>
         <argsstring>(dtsgui_pane p, const char *name)</argsstring>
@@ -2913,14 +2890,114 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>name</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Return refernece to a form element. Find a item and return it searcing the bucket list for the specified name. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" kindref="member">DTSPanel::FindItem()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>panel who&apos;s item list is to be searched. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Return item with this name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Form item if found matching the name. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1053" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1053" bodyend="1056"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1032" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1032" bodyend="1035"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a37f578498eb38e545906898e7250e6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga30bc1422cf3395b150773320ffda00ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* DTS_C_API::dtsgui_item_data</definition>
+        <argsstring>(struct form_item *fi)</argsstring>
+        <name>dtsgui_item_data</name>
+        <param>
+          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
+          <declname>fi</declname>
+        </param>
+        <briefdescription>
+<para>Get refernece to data stoed on element. </para>        </briefdescription>
+        <detaileddescription>
+<para>Each element is capable of storing user supplied data this returns a reference to this data. <simplesect kind="see"><para>dtsgui_item::GetData() </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Form item to obtain data from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to data stored in item. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1045" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1045" bodyend="1047"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* DTS_C_API::dtsgui_item_value</definition>
+        <argsstring>(struct form_item *fi)</argsstring>
+        <name>dtsgui_item_value</name>
+        <param>
+          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
+          <declname>fi</declname>
+        </param>
+        <briefdescription>
+<para>Return value of element. The value of the panel element is returned fo the item. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The return value must be freed. </para></simplesect>
+<simplesect kind="see"><para>dtsgui_item::GetValue() </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Form item to obtain value of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of the element. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1056" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1056" bodyend="1058"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga2cb1581f47559805b221f9290f9ec83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* DTS_C_API::dtsgui_item_name</definition>
+        <argsstring>(struct form_item *fi)</argsstring>
+        <name>dtsgui_item_name</name>
+        <param>
+          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
+          <declname>fi</declname>
+        </param>
+        <briefdescription>
+<para>Return name of element. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>the name must not be freed and the form itme must not be un referenced </para></simplesect>
+<simplesect kind="see"><para><ref refid="classform__item_1a4f3558ce5670e789ad51d1f489ec5b14" kindref="member">form_item::GetName()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Form item. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Name of item. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1067" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1067" bodyend="1069"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga37f578498eb38e545906898e7250e6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
         <definition>const char* DTS_C_API::dtsgui_findvalue</definition>
         <argsstring>(dtsgui_pane p, const char *name)</argsstring>
@@ -2934,60 +3011,32 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>name</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Helper function to return a value of a item. This function finds a value by name returning the value. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="note"><para>the returned value must be freeed. </para></simplesect>
+<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" kindref="member">dtsgui_finditem()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" kindref="member">dtsgui_item_value()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" kindref="member">DTSPanel::FindValue()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" kindref="member">DTSPanel::FindItem()</ref> </para><simplesectsep/><para>dtsgui_item::GetValue() </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to search element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Return value of element with this name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of element. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1058" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1058" bodyend="1061"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1083" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1083" bodyend="1086"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1ab2431470ff495d71aae8e41368a214cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>struct basic_auth *</type>
-        <definition>struct basic_auth* DTS_C_API::dtsgui_pwdialog</definition>
-        <argsstring>(const char *user, const char *passwd, void *data)</argsstring>
-        <name>dtsgui_pwdialog</name>
-        <param>
-          <type>const char *</type>
-          <declname>user</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>passwd</declname>
-        </param>
-        <param>
-          <type>void *</type>
-          <declname>data</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1063" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1063" bodyend="1066"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a5761cfa6ab849723e50760a9642efc9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int DTS_C_API::dtsgui_confirm</definition>
-        <argsstring>(struct dtsgui *dtsgui, const char *text)</argsstring>
-        <name>dtsgui_confirm</name>
-        <param>
-          <type>struct <ref refid="classdtsgui" kindref="compound">dtsgui</ref> *</type>
-          <declname>dtsgui</declname>
-        </param>
-        <param>
-          <type>const char *</type>
-          <declname>text</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1068" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1068" bodyend="1071"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1ad331a82b0502bea7d78545c6efb72b78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_alert</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *text)</argsstring>
@@ -3001,14 +3050,68 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>text</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Alert the user and expect a confirmation. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a890f88e157626205916bdb961cc6fb6f" kindref="member">DTSFrame::Alert()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dtsgui</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application data ptr. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text to supply in the alert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1073" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1073" bodyend="1076"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1094" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1094" bodyend="1097"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1ad2b11bd5e9e51dcba9f53f4969f1f25c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_dialog_1ga5761cfa6ab849723e50760a9642efc9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DTS_C_API::dtsgui_confirm</definition>
+        <argsstring>(struct dtsgui *dtsgui, const char *text)</argsstring>
+        <name>dtsgui_confirm</name>
+        <param>
+          <type>struct <ref refid="classdtsgui" kindref="compound">dtsgui</ref> *</type>
+          <declname>dtsgui</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Request Yes/No Confirmation from the user. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a937f276b15be00e81087ef1a73605478" kindref="member">DTSFrame::Confirm()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dtsgui</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application data ptr. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text to supply in the alert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non zero if the user affirmed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1105" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1105" bodyend="1108"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_dialog_1gad2b11bd5e9e51dcba9f53f4969f1f25c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
         <definition>const char* DTS_C_API::dtsgui_filesave</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter)</argsstring>
@@ -3034,14 +3137,52 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>filter</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Open file save dialog box. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1af996b558ba17ecc23cf6ed1a3d1873fb" kindref="member">DTSFrame::FileDialog()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dtsgui</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application data ptr. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of the file dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original path to open dialog in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suggested name to save as. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File namr filter. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the filename that must be unreferenced. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1078" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1078" bodyend="1081"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1119" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1119" bodyend="1122"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1ad458f5d64710487c7213a4921a5ebc99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
         <definition>const char* DTS_C_API::dtsgui_fileopen</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *title, const char *path, const char *name, const char *filter)</argsstring>
@@ -3067,14 +3208,256 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>filter</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Open file open dialog box. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1af996b558ba17ecc23cf6ed1a3d1873fb" kindref="member">DTSFrame::FileDialog()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" kindref="member">dtsgui_fileopen()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dtsgui</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application data ptr. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of the file dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original path to open dialog in. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suggested name to open. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File namr filter. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the filename that must be unreferenced. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1083" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1083" bodyend="1086"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1135" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1135" bodyend="1138"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a9bbd9bb4aa7a921fc64742ecf3b0f61d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_dialog_1gab2431470ff495d71aae8e41368a214cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct basic_auth *</type>
+        <definition>struct basic_auth* DTS_C_API::dtsgui_pwdialog</definition>
+        <argsstring>(const char *user, const char *passwd, void *data)</argsstring>
+        <name>dtsgui_pwdialog</name>
+        <param>
+          <type>const char *</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>passwd</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Return basic auth reference from a password dialog box. A dialog box requesting the user name and password is presented to the user. The initial values may be supplied. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>This function is used as a callback for CURL. </para></simplesect>
+<simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a5a7ad78662b511e7ef6ac513f8d1a28b" kindref="member">DTSFrame::Passwd()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initial username entered into the box. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>passwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial password. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this will always be the application data ptr. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Basic auth reference. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1150" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1150" bodyend="1153"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DTS_C_API::dtsgui_listbox_add</definition>
+        <argsstring>(struct form_item *listbox, const char *text, const char *value)</argsstring>
+        <name>dtsgui_listbox_add</name>
+        <param>
+          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
+          <declname>listbox</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a name / value to the list box for selection. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classform__item_1ad99d224a37a5bc6f99835afb2347fac8" kindref="member">form_item::Append()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listbox</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A form item containing a listbox or combobox. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text appearing on the drop down box. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value set when this item is selected. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1161" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1161" bodyend="1163"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements_1gaaa4e4de11048d7e32151628f4428cf3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DTS_C_API::dtsgui_listbox_set</definition>
+        <argsstring>(struct form_item *listbox, int idx)</argsstring>
+        <name>dtsgui_listbox_set</name>
+        <param>
+          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
+          <declname>listbox</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Set the selected item on a list box or combobox to the index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listbox</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A form item containing a listbox or combobox. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index to set as the selected value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1169" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1169" bodyend="1171"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements_1ga6585281832905a2e769f8b0f813a67e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DTS_C_API::dtsgui_listbox_addxml</definition>
+        <argsstring>(struct form_item *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr)</argsstring>
+        <name>dtsgui_listbox_addxml</name>
+        <param>
+          <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
+          <declname>lb</declname>
+        </param>
+        <param>
+          <type>struct xml_doc *</type>
+          <declname>xmldoc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>xpath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>nattr</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>vattr</declname>
+        </param>
+        <briefdescription>
+<para>Populate a listbox or combobox from a XML path. A entry is added for each node found using the supplied attributes for displayed text and value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>passing NULL as either or both of the attributes will use the value of the node. </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A form item containing a listbox or combobox. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmldoc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML Document to search. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML search path. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute whoose value will be used for name on list. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute whoose value will be used for value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1182" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1182" bodyend="1184"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_textbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data)</argsstring>
@@ -3100,14 +3483,51 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>data</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a text element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" kindref="member">DTSPanel::TextBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial value of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to hold a reference of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1088" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1088" bodyend="1091"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1194" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1194" bodyend="1197"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a89eb3889f372aaec58543d51d881c822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga89eb3889f372aaec58543d51d881c822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_textbox_multi</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data)</argsstring>
@@ -3133,14 +3553,51 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>data</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a multi line text element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" kindref="member">DTSPanel::TextBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial value of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to hold a reference of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1093" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1093" bodyend="1096"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1207" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1207" bodyend="1210"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a42a80bcfa5dfb41d87e548eb146261e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga42a80bcfa5dfb41d87e548eb146261e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_passwdbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data)</argsstring>
@@ -3166,14 +3623,51 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>data</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a password element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" kindref="member">DTSPanel::TextBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial value of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to hold a reference of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1098" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1098" bodyend="1101"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1220" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1220" bodyend="1223"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1ad9a5fa9a5623850a3889e305ef3da717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_s_t_d_1gad9a5fa9a5623850a3889e305ef3da717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_checkbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheck, int ischecked, void *data)</argsstring>
@@ -3207,14 +3701,65 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>data</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a checkbox element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a1bfea883644cb1052752528b89b8c71f" kindref="member">DTSPanel::CheckBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checkval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of item when checked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncheck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of item when unchecked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ischecked</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to non zero if item is initially checked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to hold a reference of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1103" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1103" bodyend="1106"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1235" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1235" bodyend="1238"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a21dbebc529c734dffe528f2b15b2a441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga21dbebc529c734dffe528f2b15b2a441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
         <definition>struct form_item* DTS_C_API::dtsgui_listbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, void *data)</argsstring>
@@ -3236,14 +3781,45 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>data</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a listbox element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a08cb04c83c8e5668592bd2f3bacf8267" kindref="member">DTSPanel::ListBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to hold a reference of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Form item that can be used to add values this must be unreferenced </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1108" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1108" bodyend="1111"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1248" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1248" bodyend="1251"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a554b15e578927450a5ee9128483885ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga554b15e578927450a5ee9128483885ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
         <definition>struct form_item* DTS_C_API::dtsgui_combobox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, void *data)</argsstring>
@@ -3265,14 +3841,45 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>data</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a combobox element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1ad91d3ca25ab8349403efc7cc78cb1869" kindref="member">DTSPanel::ComboBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to hold a reference of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Form item that can be used to add values this must be unreferenced </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1113" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1113" bodyend="1116"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1261" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1261" bodyend="1264"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a8eca510dc07eee0cd113f852fe67caa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_xmltextbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
@@ -3310,14 +3917,72 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>attr</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a XML text element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" kindref="member">DTSPanel::XMLTextBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath of the element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node to create in path if it does not exist. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute to create a filter on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to equate to filter attr in filter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute in the node to assign value of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1118" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1118" bodyend="1121"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1277" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1277" bodyend="1280"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a1e60e1a55957b1055c99df5a45f18bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga1e60e1a55957b1055c99df5a45f18bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_xmltextbox_multi</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
@@ -3355,14 +4020,72 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>attr</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a XML multi line text element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" kindref="member">DTSPanel::XMLTextBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath of the element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node to create in path if it does not exist. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute to create a filter on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to equate to filter attr in filter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute in the node to assign value of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1123" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1123" bodyend="1126"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1293" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1293" bodyend="1296"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1ab8e603da01cb2c17d0ecfbbe216ac750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_x_m_l_1gab8e603da01cb2c17d0ecfbbe216ac750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_xmlpasswdbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
@@ -3400,14 +4123,72 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>attr</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a XML password element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a5bbe4bfc295ef7b772c09628e80976c7" kindref="member">DTSPanel::XMLPasswdBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath of the element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node to create in path if it does not exist. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute to create a filter on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to equate to filter attr in filter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute in the node to assign value of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1128" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1128" bodyend="1131"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1309" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1309" bodyend="1312"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a2a2a0a7402e2f1bbbd5eeff3446a08fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DTS_C_API::dtsgui_xmlcheckbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
@@ -3453,14 +4234,86 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>attr</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a XML checkbox element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a1495f670e901f45cbbc3a4d2c471aa53" kindref="member">DTSPanel::XMLCheckBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checkval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value will be set to this if checked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncheckval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value will be set to this if unchecked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath of the element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node to create in path if it does not exist. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute to create a filter on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to equate to filter attr in filter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute in the node to assign value of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1133" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1133" bodyend="1136"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1327" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1327" bodyend="1330"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a0f5275b68ac882154ab7b2bf48e47ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
         <definition>struct form_item* DTS_C_API::dtsgui_xmllistbox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
@@ -3498,14 +4351,73 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>attr</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a XML listbox element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a03d63a8c380ee62e263d7bc3a3c86396" kindref="member">DTSPanel::XMLListBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath of the element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node to create in path if it does not exist. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute to create a filter on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to equate to filter attr in filter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute in the node to assign value of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Form item that can be used to add values this must be unreferenced </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1138" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1138" bodyend="1141"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1344" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1344" bodyend="1347"/>
       </memberdef>
-      <memberdef kind="function" id="namespace_d_t_s___c___a_p_i_1a9472a3941bf352a063fa5e55a6016fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga9472a3941bf352a063fa5e55a6016fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
         <definition>struct form_item* DTS_C_API::dtsgui_xmlcombobox</definition>
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
@@ -3543,18 +4455,77 @@ When a event happens the callback is called with the userdata to allow actioning
           <declname>attr</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Place a XML combobox element on the panel. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1a4d294755a98b6194df04292abe18d1b0" kindref="member">DTSPanel::XMLComboBox()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to place element on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath of the element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node to create in path if it does not exist. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fattr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute to create a filter on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to equate to filter attr in filter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attribute in the node to assign value of. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Form item that can be used to add values this must be unreferenced </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1143" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1143" bodyend="1146"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1361" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1361" bodyend="1364"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Namespace containing exported functions used by C. </para>    </briefdescription>
     <detaileddescription>
 <para>These functions should not be used in C++ code use of the native API is recomended.</para><para>Allocate all exported fuctions for C to the namespace <ref refid="namespace_d_t_s___c___a_p_i" kindref="compound">DTS_C_API</ref> Functions in this namespace are wrappers and should not be used in C++ code. </para>    </detaileddescription>
-    <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="31"/>
+    <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="46"/>
   </compounddef>
 </doxygen>

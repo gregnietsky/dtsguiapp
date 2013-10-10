@@ -16,6 +16,21 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/** @file
+  * @brief C++ Functions exported to C API
+  * @ingroup C-API
+  * @see DTS_C_API
+  * @see __DTS_C_API
+  * @see @ref C-API
+  * 
+  * These functions should not be used in C++ applications.*/
+
+
+/**  
+  * @ingroup C-API
+  * @brief Defining __DTS_C_API allows access to C API from inside a C++ file
+  * 
+  * dtsgui.h will only include the definitions for the C API if this is defined.*/
 #define __DTS_C_API
 
 #ifdef __WIN32__
@@ -30,6 +45,10 @@
 
 namespace DTS_C_API {
 
+/** @ingroup C-API-Menus
+  * @brief Enable or disable all items in menu.
+  * @param dm Menu to enable/disable.
+  * @param enable Enable all items if set to non zero.*/
 void dtsgui_menuenable(dtsgui_menu dm, int enable) {
 	bool state =  (enable) ? true : false;
 	wxMenuItemList items;

@@ -1,16 +1,18 @@
-.TH "C API Menu Bar Interface" 3 "Wed Oct 9 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "C API Menu Bar Interface" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 C API Menu Bar Interface \- 
 .PP
-C-API Menu Management
-.PP
-Resources controlling the menu bar in the C API\&.  
+C-API Menu Management\&.  
 
 .SS "Functions"
 
 .in +1c
+.ti -1c
+.RI "void \fBDTS_C_API::dtsgui_menuenable\fP (\fBdtsgui_menu\fP dm, int enable)"
+.br
+.RI "\fIEnable or disable all items in menu\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_menu\fP \fBDTS_C_API::dtsgui_newmenu\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *name)"
 .br
@@ -42,10 +44,13 @@ Resources controlling the menu bar in the C API\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C-API Menu Management
-.PP
-Resources controlling the menu bar in the C API\&. 
+C-API Menu Management\&. 
 
+\fBRemarks:\fP
+.RS 4
+Resources controlling the menu bar in the C API\&. 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -77,7 +82,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 376 of file wrapper\&.cpp\&.
+Definition at line 371 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_close (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui)"
 
 .PP
@@ -106,7 +111,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 357 of file wrapper\&.cpp\&.
+Definition at line 354 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_exit (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui)"
 
 .PP
@@ -135,7 +140,20 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 337 of file wrapper\&.cpp\&.
+Definition at line 336 of file wrapper\&.cpp\&.
+.SS "void DTS_C_API::dtsgui_menuenable (\fBdtsgui_menu\fPdm, intenable)"
+
+.PP
+Enable or disable all items in menu\&. \fBParameters:\fP
+.RS 4
+\fIdm\fP Menu to enable/disable\&. 
+.br
+\fIenable\fP Enable all items if set to non zero\&. 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file cxxapi\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_menusep (\fBdtsgui_menu\fPdtsmenu)"
 
 .PP
@@ -160,7 +178,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 393 of file wrapper\&.cpp\&.
+Definition at line 386 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_menu\fP DTS_C_API::dtsgui_newmenu (struct \fBdtsgui\fP *dtsgui, const char *name)"
 
 .PP
@@ -185,7 +203,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 264 of file wrapper\&.cpp\&.
+Definition at line 269 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_menuitem\fP DTS_C_API::dtsgui_newmenucb (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *hint, const char *name, intblank, \fBdtsgui_dynpanel\fPcb, void *data)"
 
 .PP
@@ -228,7 +246,7 @@ Created menu item\&.
 .PP
 
 .PP
-Definition at line 317 of file wrapper\&.cpp\&.
+Definition at line 318 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_menuitem\fP DTS_C_API::dtsgui_newmenuitem (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *hint, \fBdtsgui_pane\fPp)"
 
 .PP
@@ -263,7 +281,7 @@ Created menu item\&.
 .PP
 
 .PP
-Definition at line 288 of file wrapper\&.cpp\&.
+Definition at line 291 of file wrapper\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

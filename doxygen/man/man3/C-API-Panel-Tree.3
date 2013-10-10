@@ -1,12 +1,10 @@
-.TH "C API Tree View Interface" 3 "Wed Oct 9 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "C API Tree View Interface" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 C API Tree View Interface \- 
 .PP
-C API for managing tree view panels\&.
-.PP
-Resources controlling and manipulating tree view in the C API\&.  
+C API for managing tree view panels\&.  
 
 .SS "Functions"
 
@@ -48,16 +46,23 @@ Resources controlling and manipulating tree view in the C API\&.
 .br
 .RI "\fIAdd a XML node to the tree node\&. \fP"
 .ti -1c
+.RI "struct xml_node * \fBDTS_C_API::dtsgui_treenodegetxml\fP (\fBdtsgui_treenode\fP tn, char **buf)"
+.br
+.RI "\fIReturn the XML node reference held by the tree node\&. \fP"
+.ti -1c
 .RI "void * \fBDTS_C_API::dtsgui_treenodegetdata\fP (\fBdtsgui_treenode\fP tn)"
 .br
 .RI "\fIGet reference for the user data of node\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for managing tree view panels\&.
-.PP
-Resources controlling and manipulating tree view in the C API\&. 
+C API for managing tree view panels\&. 
 
+\fBRemarks:\fP
+.RS 4
+Resources controlling and manipulating tree view in the C API\&. 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -81,6 +86,8 @@ this callback helper is rather complex\&.
 \fItree\fP Tree view the new panel will be added too\&. 
 .br
 \fIp\fP The panel this callback is attached too\&. 
+.br
+\fItn\fP Root treenode to add too\&. 
 .br
 \fIxpath\fP the path of the new node\&. 
 .br
@@ -108,7 +115,7 @@ Nothing is returned the callback is registered on the panel\&.
 .PP
 
 .PP
-Definition at line 739 of file wrapper\&.cpp\&.
+Definition at line 720 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_nodesetxml (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *newname)"
 
 .PP
@@ -130,7 +137,7 @@ Update the XML Node with a new name\&. This helper function will update the node
 .PP
 
 .PP
-Definition at line 492 of file wrapper\&.cpp\&.
+Definition at line 478 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_treenode\fP DTS_C_API::dtsgui_treecont (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *title, intcan_edit, intcan_sort, intcan_del, intnodeid, \fBdtsgui_treeviewpanel_cb\fPp_cb, void *data)"
 
 .PP
@@ -158,6 +165,8 @@ DTSTreeWindow::AppendContainer
 .br
 \fIcan_edit\fP Allow editing of this node the XML node will be updated\&. 
 .br
+\fIcan_sort\fP Allow sorting of this node the XML node will be updated\&. 
+.br
 \fIcan_del\fP Not yet implemented for containers but will allow right click menu to delete\&. 
 .br
 \fInodeid\fP A value passed to the callback as convinence can be any value -1 will cause a blank panel\&. 
@@ -169,7 +178,7 @@ DTSTreeWindow::AppendContainer
 .PP
 
 .PP
-Definition at line 686 of file wrapper\&.cpp\&.
+Definition at line 666 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_treenode\fP DTS_C_API::dtsgui_treeitem (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *title, intcan_edit, intcan_sort, intcan_del, intnodeid, \fBdtsgui_treeviewpanel_cb\fPp_cb, void *data)"
 
 .PP
@@ -192,6 +201,8 @@ DTSTreeWindow::AppendItem
 .br
 \fIcan_edit\fP Allow editing of this node the XML node will be updated\&. 
 .br
+\fIcan_sort\fP Allow sorting of this node the XML node will be updated\&. 
+.br
 \fIcan_del\fP Allow right click menu to delete\&. 
 .br
 \fInodeid\fP A value passed to the callback as convinence can be any value -1 will cause a blank panel\&. 
@@ -203,7 +214,7 @@ DTSTreeWindow::AppendItem
 .PP
 
 .PP
-Definition at line 710 of file wrapper\&.cpp\&.
+Definition at line 690 of file wrapper\&.cpp\&.
 .SS "void* DTS_C_API::dtsgui_treenodegetdata (\fBdtsgui_treenode\fPtn)"
 
 .PP
@@ -229,7 +240,32 @@ Reference to user data
 .PP
 
 .PP
-Definition at line 788 of file wrapper\&.cpp\&.
+Definition at line 779 of file wrapper\&.cpp\&.
+.SS "struct xml_node* DTS_C_API::dtsgui_treenodegetxml (\fBdtsgui_treenode\fPtn, char **buf)\fC [read]\fP"
+
+.PP
+Return the XML node reference held by the tree node\&. Returns the XML node of the node and optionally the title attribute\&.
+.PP
+\fBNote:\fP
+.RS 4
+The reference to the buffer and node needs to be droped\&. 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fItn\fP Tree node to obtain XML node from\&. 
+.br
+\fIbuf\fP a pointer to a buffer that will be set to the title attribute (Optional)\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the XML node stored in the tree node\&. 
+.RE
+.PP
+
+.PP
+Definition at line 768 of file wrapper\&.cpp\&.
 .SS "int DTS_C_API::dtsgui_treenodeid (\fBdtsgui_treenode\fPtn)"
 
 .PP
@@ -250,7 +286,7 @@ the user defined tree node ID
 .PP
 
 .PP
-Definition at line 752 of file wrapper\&.cpp\&.
+Definition at line 733 of file wrapper\&.cpp\&.
 .SS "const char* DTS_C_API::dtsgui_treenodeparent (\fBdtsgui_treenode\fPtn)"
 
 .PP
@@ -271,7 +307,7 @@ Name og the nodes parentI
 .PP
 
 .PP
-Definition at line 762 of file wrapper\&.cpp\&.
+Definition at line 743 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_treenodesetxml (\fBdtsgui_treenode\fPtn, struct xml_node *xn, const char *tattr)"
 
 .PP
@@ -282,14 +318,16 @@ Add a XML node to the tree node\&. \fBSee Also:\fP
 .PP
 \fBParameters:\fP
 .RS 4
-\fIxn\fP XML node\&. 
+\fItn\fP Tree node to set\&. 
+.br
+\fIxn\fP XML Node to reference\&. 
 .br
 \fItattr\fP Attribute in the XN that represents the title NULL if the value is the title\&. 
 .RE
 .PP
 
 .PP
-Definition at line 772 of file wrapper\&.cpp\&.
+Definition at line 754 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_treepane (\fBdtsgui_treeview\fPtv, const char *name, intbutmask, void *userdata, struct xml_doc *xmldoc)"
 
 .PP
@@ -322,7 +360,7 @@ New Tree Pane\&.
 .PP
 
 .PP
-Definition at line 642 of file wrapper\&.cpp\&.
+Definition at line 623 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_treepane_default (\fBdtsgui_treeview\fPtv, \fBdtsgui_treenode\fPnode)"
 
 .PP
@@ -352,7 +390,7 @@ New Tree Pane\&.
 .PP
 
 .PP
-Definition at line 661 of file wrapper\&.cpp\&.
+Definition at line 641 of file wrapper\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

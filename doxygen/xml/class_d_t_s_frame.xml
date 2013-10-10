@@ -548,7 +548,7 @@
           <declname>butmask</declname>
         </param>
         <param>
-          <type>enum <ref refid="dtsgui_8h_1a9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref></type>
+          <type>enum <ref refid="group___c_o_r_e_1ga9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref></type>
           <declname>type</declname>
         </param>
         <param>

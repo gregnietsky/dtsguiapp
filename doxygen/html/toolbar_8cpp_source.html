@@ -207,12 +207,12 @@ $(document).ready(function(){initNavTree('toolbar_8cpp_source.html','');});
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    idx = server-&gt;GetSelection();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (etype == wxEVT_TEXT_ENTER) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="namespace_d_t_s___c___a_p_i.html#ad331a82b0502bea7d78545c6efb72b78">DTS_C_API::dtsgui_alert</a>(<a class="code" href="classdtsgui.html">dtsgui</a>, <span class="stringliteral">&quot;Got Me Some URL ARRRRGh&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="group___c-_a_p_i-_dialog.html#gad331a82b0502bea7d78545c6efb72b78" title="Alert the user and expect a confirmation.">DTS_C_API::dtsgui_alert</a>(<a class="code" href="classdtsgui.html">dtsgui</a>, <span class="stringliteral">&quot;Got Me Some URL ARRRRGh&quot;</span>);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (etype == wxEVT_COMBOBOX) {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        xn = (<span class="keyword">struct </span>xml_node*)server-&gt;GetClientData(idx);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="namespace_d_t_s___c___a_p_i.html#ad331a82b0502bea7d78545c6efb72b78">DTS_C_API::dtsgui_alert</a>(<a class="code" href="classdtsgui.html">dtsgui</a>, wxString(<span class="stringliteral">&quot;Selected IP &quot;</span>).Append(xml_getattr(xn, <span class="stringliteral">&quot;ipaddr&quot;</span>)));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="group___c-_a_p_i-_dialog.html#gad331a82b0502bea7d78545c6efb72b78" title="Alert the user and expect a confirmation.">DTS_C_API::dtsgui_alert</a>(<a class="code" href="classdtsgui.html">dtsgui</a>, wxString(<span class="stringliteral">&quot;Selected IP &quot;</span>).Append(xml_getattr(xn, <span class="stringliteral">&quot;ipaddr&quot;</span>)));</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((etype == wxEVT_COMBOBOX_DROPDOWN) &amp;&amp; !server-&gt;<a class="code" href="class_d_t_s_x_m_l_combo_box.html#ab73ab96a2dddeb756b984db6e0fa9106">HasXMLList</a>()) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="namespace_d_t_s___c___a_p_i.html#ad331a82b0502bea7d78545c6efb72b78">DTS_C_API::dtsgui_alert</a>(<a class="code" href="classdtsgui.html">dtsgui</a>, <span class="stringliteral">&quot;Please enter 3 or more characters to search !&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="group___c-_a_p_i-_dialog.html#gad331a82b0502bea7d78545c6efb72b78" title="Alert the user and expect a confirmation.">DTS_C_API::dtsgui_alert</a>(<a class="code" href="classdtsgui.html">dtsgui</a>, <span class="stringliteral">&quot;Please enter 3 or more characters to search !&quot;</span>);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
@@ -229,7 +229,7 @@ $(document).ready(function(){initNavTree('toolbar_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="toolbar_8cpp.html">toolbar.cpp</a></li>
-    <li class="footer">Generated on Wed Oct 9 2013 22:32:56 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 15:03:48 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

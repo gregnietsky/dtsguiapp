@@ -186,7 +186,7 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="classform__item.html#a9fe4dea1dbc9692a1511c6ba5256665e">   81</a></span>&#160;<a class="code" href="classform__item.html#a9fe4dea1dbc9692a1511c6ba5256665e">form_item::form_item</a>(<span class="keywordtype">void</span> *widget, <span class="keyword">enum</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84">widget_type</a> type, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <span class="keywordtype">char</span> *value, <span class="keyword">const</span> <span class="keywordtype">char</span> *value2, <span class="keywordtype">void</span> *data, <span class="keyword">enum</span> <a class="code" href="dtsgui_8h.html#aa648ae9cc0927fecec3a6f705930f8a9">form_data_type</a> dtype) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="classform__item.html#a9fe4dea1dbc9692a1511c6ba5256665e">   81</a></span>&#160;<a class="code" href="classform__item.html#a9fe4dea1dbc9692a1511c6ba5256665e">form_item::form_item</a>(<span class="keywordtype">void</span> *widget, <span class="keyword">enum</span> <a class="code" href="group___c_o_r_e.html#gafd296180392ef5681415b9fb0590be84" title="Type of list item.">widget_type</a> type, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <span class="keywordtype">char</span> *value, <span class="keyword">const</span> <span class="keywordtype">char</span> *value2, <span class="keywordtype">void</span> *data, <span class="keyword">enum</span> <a class="code" href="group___c_o_r_e.html#gaa648ae9cc0927fecec3a6f705930f8a9" title="Data storage type on form element.">form_data_type</a> dtype) {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    this-&gt;widget.p = widget;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    this-&gt;type = type;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    this-&gt;data.ptr = data;</div>
@@ -203,11 +203,11 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;form_item::~form_item() {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">switch</span>(type) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28">DTS_WIDGET_CHECKBOX</a>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836">DTS_WIDGET_TEXTBOX</a>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28">DTS_WIDGET_CHECKBOX</a>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836">DTS_WIDGET_TEXTBOX</a>:</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="pitems_8h.html#abd3381f4db4e2b967199254324c78f71">wxComboBox</a> *cbox = widget.<a class="code" href="unionwidgets.html#a9e5583bcc42f0273b9c6a1605e0e1b6d">l</a>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordtype">int</span> cnt = cbox-&gt;GetCount();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordtype">void</span> *val;</div>
@@ -234,7 +234,7 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="classform__item.html#a1e08369cee96e1b5417c767be9b086ce">  126</a></span>&#160;<span class="keyword">class </span><a class="code" href="classxml__element.html">xml_element</a> *<a class="code" href="classform__item.html#a1e08369cee96e1b5417c767be9b086ce">form_item::GetXMLData</a>() {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">class </span><a class="code" href="classxml__element.html">xml_element</a> *ret = NULL;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    objlock(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> ((dtype == <a class="code" href="dtsgui_8h.html#aa648ae9cc0927fecec3a6f705930f8a9a5c592b75994135a5de470f79e40aafda">DTSGUI_FORM_DATA_XML</a>) &amp;&amp; data.<a class="code" href="unionform__data.html#a3dcf61d4a1bf598d238248b6a2fd84c0">xml</a> &amp;&amp; objref(data.<a class="code" href="unionform__data.html#a3dcf61d4a1bf598d238248b6a2fd84c0">xml</a>)) {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> ((dtype == <a class="code" href="group___c_o_r_e.html#ggaa648ae9cc0927fecec3a6f705930f8a9a5c592b75994135a5de470f79e40aafda" title="Reference to XML Node.">DTSGUI_FORM_DATA_XML</a>) &amp;&amp; data.<a class="code" href="unionform__data.html#a3dcf61d4a1bf598d238248b6a2fd84c0">xml</a> &amp;&amp; objref(data.<a class="code" href="unionform__data.html#a3dcf61d4a1bf598d238248b6a2fd84c0">xml</a>)) {</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        ret = data.<a class="code" href="unionform__data.html#a3dcf61d4a1bf598d238248b6a2fd84c0">xml</a>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    objunlock(<span class="keyword">this</span>);</div>
@@ -256,8 +256,8 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">int</span> i;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">switch</span>(type) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">return</span>;</div>
@@ -275,8 +275,8 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno"><a class="code" href="classform__item.html#a9f108735a3f81f0f419fd828a29b2938">  168</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classform__item.html#a9f108735a3f81f0f419fd828a29b2938">form_item::SetSelection</a>(<span class="keywordtype">int</span> i) {</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">switch</span>(type) {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">return</span>;</div>
@@ -294,11 +294,11 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> *tmp;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">switch</span>(type) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836">DTS_WIDGET_TEXTBOX</a>:</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836">DTS_WIDGET_TEXTBOX</a>:</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            val = strdup(widget.<a class="code" href="unionwidgets.html#ad9dbdf416e8ba75e55b8030549c2d5ac">t</a>-&gt;GetValue().ToUTF8());</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>:</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>:</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">int</span> pos;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            pos = widget.<a class="code" href="unionwidgets.html#a9e5583bcc42f0273b9c6a1605e0e1b6d">l</a>-&gt;GetSelection();</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">if</span> ((pos !=  wxNOT_FOUND) &amp;&amp; widget.<a class="code" href="unionwidgets.html#a9e5583bcc42f0273b9c6a1605e0e1b6d">l</a>-&gt;HasClientData() &amp;&amp; (tmp = widget.<a class="code" href="unionwidgets.html#a9e5583bcc42f0273b9c6a1605e0e1b6d">l</a>-&gt;GetClientData(pos))) {</div>
@@ -307,7 +307,7 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                val = strdup(widget.<a class="code" href="unionwidgets.html#a9e5583bcc42f0273b9c6a1605e0e1b6d">l</a>-&gt;GetValue().ToUTF8());</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="dtsgui_8h.html#afd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28">DTS_WIDGET_CHECKBOX</a>:</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28">DTS_WIDGET_CHECKBOX</a>:</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">if</span> (widget.<a class="code" href="unionwidgets.html#aa5bb8e792fd60fca871e8782e39993cc">c</a>-&gt;IsChecked()) {</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                val = (value) ? strdup(value) : NULL;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            } <span class="keywordflow">else</span> {</div>
@@ -349,7 +349,7 @@ $(document).ready(function(){initNavTree('pitems_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="pitems_8cpp.html">pitems.cpp</a></li>
-    <li class="footer">Generated on Wed Oct 9 2013 22:32:56 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 15:03:48 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

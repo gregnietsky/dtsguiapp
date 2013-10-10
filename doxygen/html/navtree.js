@@ -37,8 +37,9 @@ var NAVTREEINDEX =
 [
 "_d_t_s_app_8cpp.html",
 "class_d_t_s_panel_event.html#ae1fda2b21c16c83d067c5305d5338bd6",
-"dtsgui_8h.html#ga045cc441a11f42796d6bd89dfa52e4ec",
-"netconfig_8c.html#a8736362ad99edb6b363f2238131368d7"
+"dtsgui_8h.html#gad561196144c72953e31b83aff17054e5",
+"group___c_o_r_e.html#gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500",
+"wrapper_8cpp.html#ga550b7516bbb97dd66bc71033e7d996cb"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -4,6 +4,42 @@
     <compoundname>C-API-Menus</compoundname>
     <title>C API Menu Bar Interface</title>
       <sectiondef kind="func">
+      <memberdef kind="function" id="group___c-_a_p_i-_menus_1gab20156180905342ce3bc648253507f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DTS_C_API::dtsgui_menuenable</definition>
+        <argsstring>(dtsgui_menu dm, int enable)</argsstring>
+        <name>dtsgui_menuenable</name>
+        <param>
+          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <declname>dm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable or disable all items in menu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Menu to enable/disable. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable all items if set to non zero. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="52" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="52" bodyend="67"/>
+      </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
         <definition>dtsgui_menu DTS_C_API::dtsgui_newmenu</definition>
@@ -40,7 +76,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="264" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="264" bodyend="267"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="269" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="269" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
@@ -100,7 +136,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="288" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="288" bodyend="291"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="291" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="291" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
@@ -193,7 +229,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="317" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="317" bodyend="320"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="318" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="318" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gabf67f1b041be315b58ccacc7d193b273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +267,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="337" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="337" bodyend="340"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="336" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="336" bodyend="339"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -269,7 +305,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="357" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="357" bodyend="360"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="354" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="354" bodyend="357"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -318,7 +354,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="376" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="376" bodyend="379"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="371" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="371" bodyend="374"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gaf655828d94de128cfd8269d03d649092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -345,12 +381,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="393" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="393" bodyend="396"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="386" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="386" bodyend="389"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>C-API Menu Management</para><para>Resources controlling the menu bar in the C API. </para>    </briefdescription>
+<para>C-API Menu Management. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="remark"><para>Resources controlling the menu bar in the C API. </para></simplesect>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

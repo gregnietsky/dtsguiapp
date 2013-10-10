@@ -3,28 +3,15 @@
   <compounddef id="group___c-_a_p_i" kind="group">
     <compoundname>C-API</compoundname>
     <title>Library C API</title>
+    <innerfile refid="cxxapi_8cpp">cxxapi.cpp</innerfile>
     <innerfile refid="dtsgui_8h">dtsgui.h</innerfile>
     <innerfile refid="wrapper_8cpp">wrapper.cpp</innerfile>
     <innernamespace refid="namespace_d_t_s___c___a_p_i">DTS_C_API</innernamespace>
     <innergroup refid="group___c-_a_p_i-_menus">C API Menu Bar Interface</innergroup>
     <innergroup refid="group___c-_a_p_i-_panel">C API Panel Interface</innergroup>
     <innergroup refid="group___c-_a_p_i-_wizard">C API Wizard Interface</innergroup>
+    <innergroup refid="group___c-_a_p_i-_dialog">C API Common Dialog Boxes</innergroup>
     <innergroup refid="group___c-_a_p_i-_progress">C API Progress Dialog Functions</innergroup>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* dtsgui_configcb)(struct dtsgui *, void *)</definition>
-        <argsstring>)(struct dtsgui *, void *)</argsstring>
-        <name>dtsgui_configcb</name>
-        <briefdescription>
-<para>Callback called on application execution. </para>        </briefdescription>
-        <detaileddescription>
-<para>The callback is called with the application pointer and supplied userdata</para><para>Returning 0 will cause application execution to fail. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="78" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="78" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="group___c-_a_p_i_1gacecdb36b65ac3d5522a419a6b69c9f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,7 +19,7 @@
         <argsstring>(dtsgui_configcb confcallback_cb, void *userdata, struct point wsize, struct point wpos, const char *title, const char *status)</argsstring>
         <name>dtsgui_config</name>
         <param>
-          <type><ref refid="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></type>
           <declname>confcallback_cb</declname>
         </param>
         <param>
@@ -58,7 +45,7 @@
         <briefdescription>
 <para>Configure the GUI and create a application frame. </para>        </briefdescription>
         <detaileddescription>
-<para>This is the first process required the application is created and the callback is executed.</para><para>Application processing continues until dtsgui_run is executed at this point the call back is executed and proccessing will be passed to the GUI App.</para><para>The userdata is returned in the callback.</para><para>The Callback must return a non zero value to indicat success should the application fail returning 0 will close the application.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_app" kindref="compound">DTSApp</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></para></simplesect>
+<para>This is the first process required the application is created and the callback is executed.</para><para>Application processing continues until dtsgui_run is executed at this point the call back is executed and proccessing will be passed to the GUI App.</para><para>The userdata is returned in the callback.</para><para>The Callback must return a non zero value to indicat success should the application fail returning 0 will close the application.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_app" kindref="compound">DTSApp</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>confcallback_cb</parametername>
@@ -106,7 +93,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="148" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="148" bodyend="150"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="156" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="156" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga3ac9d5ef153d17266a704a373d591962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -144,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="164" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="164" bodyend="166"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="171" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="171" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -172,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="177" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="177" bodyend="179"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="184" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="184" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga529d973a998e39dba025dfcd96a9a706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -209,7 +196,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="191" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="191" bodyend="194"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="198" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="198" bodyend="201"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga4e766a49c1e9eba3f2c2fda47b8166aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -246,7 +233,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="203" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="203" bodyend="206"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="210" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="210" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga1734b840fc0696b13d5b616df0ec3bbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -294,7 +281,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="217" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="217" bodyend="220"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="224" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="224" bodyend="227"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -331,7 +318,43 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="228" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="228" bodyend="230"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="235" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="235" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="group___c-_a_p_i_1ga99f0bbb3bf979d0102b7b19899ad79dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DTS_C_API::dtsgui_menuitemenable</definition>
+        <argsstring>(dtsgui_menuitem dmi, int enable)</argsstring>
+        <name>dtsgui_menuitemenable</name>
+        <param>
+          <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+          <declname>dmi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable/Disable an menu item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dmi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Menuitem </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Disable the menu if set to 0. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="243" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="243" bodyend="246"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga164aa159bc57a744f012b49268796bbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -368,7 +391,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="246" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="246" bodyend="248"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="253" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="253" bodyend="255"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -380,13 +403,24 @@
 <para><ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref> will only include the definitions for the C API if this is defined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="90" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="90" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="34" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" prot="public" static="no">
+        <name>__DTS_C_API</name>
+        <briefdescription>
+<para>Defining __DTS_C_API allows access to C API from inside a C++ file. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref> will only include the definitions for the C API if this is defined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="102" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="102" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Exported functions used for use in C code. </para>    </briefdescription>
     <detaileddescription>
-<para>Use of this API is not recomended from inside C++ use the native API.</para><para><simplesect kind="see"><para><ref refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kindref="member">__DTS_C_API</ref> </para><simplesectsep/><para><ref refid="namespace_d_t_s___c___a_p_i" kindref="compound">DTS_C_API</ref> </para><simplesectsep/><para><ref refid="wrapper_8cpp" kindref="compound">wrapper.cpp</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref> </para></simplesect>
+<para><simplesect kind="remark"><para>Use of this API is not recomended from inside C++ use the native API. </para></simplesect>
+<simplesect kind="see"><para><ref refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kindref="member">__DTS_C_API</ref> </para><simplesectsep/><para><ref refid="namespace_d_t_s___c___a_p_i" kindref="compound">DTS_C_API</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e" kindref="compound">Core API Interface Common to C and C++</ref> </para><simplesectsep/><para><ref refid="wrapper_8cpp" kindref="compound">wrapper.cpp</ref> </para><simplesectsep/><para><ref refid="cxxapi_8cpp" kindref="compound">cxxapi.cpp</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref> </para></simplesect>
 </para>    </detaileddescription>
   </compounddef>
 </doxygen>

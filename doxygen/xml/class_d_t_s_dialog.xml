@@ -51,7 +51,7 @@
         <param>
           <type>int</type>
           <defname>butmask</defname>
-          <defval><ref refid="dtsgui_8h_1a4ef37ee1286eb68a9f5663813f134be2" kindref="member">wx_PANEL_BUTTON_ACTION</ref></defval>
+          <defval><ref refid="group___c_o_r_e_1ga4ef37ee1286eb68a9f5663813f134be2" kindref="member">wx_PANEL_BUTTON_ACTION</ref></defval>
         </param>
         <briefdescription>
         </briefdescription>

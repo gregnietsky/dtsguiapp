@@ -235,7 +235,7 @@
           <declname>item</declname>
         </param>
         <param>
-          <type>enum <ref refid="dtsgui_8h_1a465794df2cb30731dfe34d3e7a4ed368" kindref="member">tree_cbtype</ref></type>
+          <type>enum <ref refid="group___c_o_r_e_1ga465794df2cb30731dfe34d3e7a4ed368" kindref="member">tree_cbtype</ref></type>
           <declname>cbtype</declname>
         </param>
         <briefdescription>

@@ -1,12 +1,10 @@
-.TH "C API Tab View Interface" 3 "Wed Oct 9 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "C API Tab View Interface" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 C API Tab View Interface \- 
 .PP
-C API for managing tab view panels\&.
-.PP
-Resources controlling and manipulating tab view in the C API\&.  
+C API for managing tab view panels\&.  
 
 .SS "Functions"
 
@@ -26,10 +24,13 @@ Resources controlling and manipulating tab view in the C API\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for managing tab view panels\&.
-.PP
-Resources controlling and manipulating tab view in the C API\&. 
+C API for managing tab view panels\&. 
 
+\fBRemarks:\fP
+.RS 4
+Resources controlling and manipulating tab view in the C API\&. 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -79,7 +80,7 @@ On win32 all tabs are configured when the view is activated\&.
 .PP
 
 .PP
-Definition at line 565 of file wrapper\&.cpp\&.
+Definition at line 546 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_newxmltabpane (\fBdtsgui_tabview\fPtabv, \fBdtsgui_pane\fPp, const char *xpath, const char *node, const char *vitem, const char *tattr, \fBdtsgui_tabpane_newdata_cb\fPdata_cb, \fBdtsgui_tabpanel_cb\fPcb, void *cdata, struct xml_doc *xmldoc, void *data)"
 
 .PP
@@ -111,6 +112,8 @@ this callback helper is rather complex\&.
 .br
 \fIdata_cb\fP Callback to allow setting the data used in pane creation\&. 
 .br
+\fIcb\fP Callback to configure the pane\&. 
+.br
 \fIcdata\fP Referrenced object containing initial callback data\&. 
 .br
 \fIxmldoc\fP XML doc reference for creating the node / panel\&. 
@@ -125,7 +128,7 @@ Nothing is returned the callback is registered on the panel\&.
 .PP
 
 .PP
-Definition at line 621 of file wrapper\&.cpp\&.
+Definition at line 603 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_tabpage_insert (\fBdtsgui_tabview\fPtv, const char *name, intbutmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fPcb, void *cdata, intpos, intundo)"
 
 .PP
@@ -161,11 +164,20 @@ dtsgui_tabpage_newtabpage
 \fIcb\fP Callback called to configure the panel\&. 
 .br
 \fIcdata\fP Referenced object passed to the configuration callback\&. 
+.br
+\fIpos\fP Position to insert into 
+.br
+\fIundo\fP Delete and recreate the panel at this position 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+New Tab Pane 
 .RE
 .PP
 
 .PP
-Definition at line 593 of file wrapper\&.cpp\&.
+Definition at line 575 of file wrapper\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

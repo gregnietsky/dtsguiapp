@@ -1,12 +1,10 @@
-.TH "C API Progress Dialog Functions" 3 "Wed Oct 9 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "C API Progress Dialog Functions" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 C API Progress Dialog Functions \- 
 .PP
-C API for managing progress dialog
-.PP
-Resources controlling and manipulating the progress dialog\&.  
+C API for managing progress dialog\&.  
 
 .SS "Functions"
 
@@ -30,10 +28,13 @@ Resources controlling and manipulating the progress dialog\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for managing progress dialog
-.PP
-Resources controlling and manipulating the progress dialog\&. 
+C API for managing progress dialog\&. 
 
+\fBRemarks:\fP
+.RS 4
+Resources controlling and manipulating the progress dialog 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -52,7 +53,7 @@ Disable the progress bar\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1019 of file wrapper\&.cpp\&.
+Definition at line 1006 of file wrapper\&.cpp\&.
 .SS "int DTS_C_API::dtsgui_progress_increment (struct \fBdtsgui\fP *dtsgui, intival, const char *newtext)"
 
 .PP
@@ -77,7 +78,7 @@ Increments the counter by adding to it not setting it\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1010 of file wrapper\&.cpp\&.
+Definition at line 997 of file wrapper\&.cpp\&.
 .SS "int DTS_C_API::dtsgui_progress_start (struct \fBdtsgui\fP *dtsgui, const char *text, intmaxval, intquit)"
 
 .PP
@@ -104,7 +105,7 @@ zero on failure
 .PP
 
 .PP
-Definition at line 983 of file wrapper\&.cpp\&.
+Definition at line 970 of file wrapper\&.cpp\&.
 .SS "int DTS_C_API::dtsgui_progress_update (struct \fBdtsgui\fP *dtsgui, intnewval, const char *newtext)"
 
 .PP
@@ -129,7 +130,7 @@ Update the progress bar counter This function updates the current progress value
 .PP
 
 .PP
-Definition at line 998 of file wrapper\&.cpp\&.
+Definition at line 985 of file wrapper\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

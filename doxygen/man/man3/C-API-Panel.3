@@ -1,12 +1,10 @@
-.TH "C API Panel Interface" 3 "Wed Oct 9 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "C API Panel Interface" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 C API Panel Interface \- 
 .PP
-C API Panel Management
-.PP
-Resources controlling and manipulating panels in the C API\&.  
+C API Panel Management\&.  
 
 .SS "Modules"
 
@@ -14,15 +12,19 @@ Resources controlling and manipulating panels in the C API\&.
 .ti -1c
 .RI "\fBC API Tree View Interface\fP"
 .br
-.RI "\fIC API for managing tree view panels\&.
-.PP
-Resources controlling and manipulating tree view in the C API\&. \fP"
+.RI "\fIC API for managing tree view panels\&. \fP"
 .ti -1c
 .RI "\fBC API Tab View Interface\fP"
 .br
-.RI "\fIC API for managing tab view panels\&.
-.PP
-Resources controlling and manipulating tab view in the C API\&. \fP"
+.RI "\fIC API for managing tab view panels\&. \fP"
+.ti -1c
+.RI "\fBC API Form Item Interface\fP"
+.br
+.RI "\fIC API for managing elements of a panel\&. \fP"
+.ti -1c
+.RI "\fBC API Form Element Interface\fP"
+.br
+.RI "\fIC API for placing and creating elements on a panel\&. \fP"
 .in -1c
 .SS "Functions"
 
@@ -94,10 +96,13 @@ Resources controlling and manipulating tab view in the C API\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API Panel Management
-.PP
-Resources controlling and manipulating panels in the C API\&. 
+C API Panel Management\&. 
 
+\fBRemarks:\fP
+.RS 4
+Resources controlling and manipulating panels in the C API\&. 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -127,7 +132,7 @@ Not yet implemted who knows maybe it will maybe it wont\&.
 .PP
 
 .PP
-Definition at line 894 of file wrapper\&.cpp\&.
+Definition at line 881 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_delpane (\fBdtsgui_pane\fPpane)"
 
 .PP
@@ -143,7 +148,7 @@ This is unlikly too be needed as the GUI manages panels\&.
 .PP
 
 .PP
-Definition at line 536 of file wrapper\&.cpp\&.
+Definition at line 519 of file wrapper\&.cpp\&.
 .SS "struct curl_post* DTS_C_API::dtsgui_pane2post (\fBdtsgui_pane\fPp)\fC [read]\fP"
 
 .PP
@@ -160,7 +165,7 @@ dtsgui_xmlpane_update()
 .PP
 \fBParameters:\fP
 .RS 4
-\fIpane\fP Panel to create from\&. 
+\fIp\fP Panel to create from\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -170,7 +175,7 @@ A CURL HTTP POST Structure\&.
 .PP
 
 .PP
-Definition at line 841 of file wrapper\&.cpp\&.
+Definition at line 830 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_panel (struct \fBdtsgui\fP *dtsgui, const char *name, const char *title, intbutmask, enum \fBpanel_type\fPtype, void *userdata)"
 
 .PP
@@ -207,7 +212,7 @@ Newly created panel\&.
 .PP
 
 .PP
-Definition at line 415 of file wrapper\&.cpp\&.
+Definition at line 407 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_panel_setxml (\fBdtsgui_pane\fPpane, struct xml_doc *xmldoc)"
 
 .PP
@@ -227,7 +232,7 @@ Pass a reference to a XML Doc Structure to the panel\&. Assign a reference to a 
 .PP
 
 .PP
-Definition at line 507 of file wrapper\&.cpp\&.
+Definition at line 492 of file wrapper\&.cpp\&.
 .SS "void* DTS_C_API::dtsgui_paneldata (\fBdtsgui_pane\fPpane)"
 
 .PP
@@ -253,7 +258,7 @@ Reference to userdata\&.
 .PP
 
 .PP
-Definition at line 856 of file wrapper\&.cpp\&.
+Definition at line 844 of file wrapper\&.cpp\&.
 .SS "struct xml_doc* DTS_C_API::dtsgui_panelxml (\fBdtsgui_pane\fPpane)\fC [read]\fP"
 
 .PP
@@ -281,7 +286,7 @@ Reference to XML Doc\&.
 .PP
 
 .PP
-Definition at line 524 of file wrapper\&.cpp\&.
+Definition at line 508 of file wrapper\&.cpp\&.
 .SS "struct xml_node* DTS_C_API::dtsgui_panetoxml (\fBdtsgui_pane\fPp, const char *xpath, const char *node, const char *nodeval, const char *attrkey)\fC [read]\fP"
 
 .PP
@@ -294,7 +299,7 @@ Create a node from the elements on the panel\&. Using the path information a nod
 .PP
 \fBParameters:\fP
 .RS 4
-\fIpane\fP Panel to create nodes from\&. 
+\fIp\fP Panel to create nodes from\&. 
 .br
 \fIxpath\fP Base path to create the nodes in\&. 
 .br
@@ -312,7 +317,7 @@ New XML Node\&.
 .PP
 
 .PP
-Definition at line 913 of file wrapper\&.cpp\&.
+Definition at line 900 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_rundialog (\fBdtsgui_pane\fPpane, \fBevent_callback\fPevcb, void *data)"
 
 .PP
@@ -332,7 +337,7 @@ Execute a dialog panel\&. Pop up and run a dialog pane the result will be obtain
 .PP
 
 .PP
-Definition at line 925 of file wrapper\&.cpp\&.
+Definition at line 912 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_setevcallback (\fBdtsgui_pane\fPpane, \fBevent_callback\fPevcb, void *data)"
 
 .PP
@@ -356,7 +361,7 @@ When a event happens the callback is called with the userdata to allow actioning
 .PP
 
 .PP
-Definition at line 806 of file wrapper\&.cpp\&.
+Definition at line 796 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_setstatus (\fBdtsgui_pane\fPpane, const char *status)"
 
 .PP
@@ -374,7 +379,7 @@ Update the status bar message of panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 877 of file wrapper\&.cpp\&.
+Definition at line 865 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_settitle (\fBdtsgui_pane\fPpane, const char *title)"
 
 .PP
@@ -392,7 +397,7 @@ Update the title on the panel if it exists\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 866 of file wrapper\&.cpp\&.
+Definition at line 854 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_tabview\fP DTS_C_API::dtsgui_tabwindow (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -419,7 +424,7 @@ Tab window\&.
 .PP
 
 .PP
-Definition at line 476 of file wrapper\&.cpp\&.
+Definition at line 463 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_textpane (struct \fBdtsgui\fP *dtsgui, const char *title, const char *buf)"
 
 .PP
@@ -448,7 +453,7 @@ New text panel\&.
 .PP
 
 .PP
-Definition at line 436 of file wrapper\&.cpp\&.
+Definition at line 426 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_treeview\fP DTS_C_API::dtsgui_treewindow (struct \fBdtsgui\fP *dtsgui, const char *title, \fBdtsgui_tree_cb\fPtree_cb, void *userdata, struct xml_doc *xmldoc)"
 
 .PP
@@ -478,7 +483,7 @@ Create a treepane view\&. Create a split window with a tree control on the left 
 .PP
 
 .PP
-Definition at line 458 of file wrapper\&.cpp\&.
+Definition at line 446 of file wrapper\&.cpp\&.
 .SS "void DTS_C_API::dtsgui_xmlpanel_update (\fBdtsgui_pane\fPpane)"
 
 .PP
@@ -500,7 +505,7 @@ update all XML elements in the panel\&. All elements on the panel that are XML w
 .PP
 
 .PP
-Definition at line 823 of file wrapper\&.cpp\&.
+Definition at line 812 of file wrapper\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

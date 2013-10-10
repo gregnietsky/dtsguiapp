@@ -1,8 +1,13 @@
 var searchData=
 [
   ['c',['c',['../unionwidgets.html#aa5bb8e792fd60fca871e8782e39993cc',1,'widgets']]],
+  ['c_20api_20common_20dialog_20boxes',['C API Common Dialog Boxes',['../group___c-_a_p_i-_dialog.html',1,'']]],
   ['c_20api_20menu_20bar_20interface',['C API Menu Bar Interface',['../group___c-_a_p_i-_menus.html',1,'']]],
   ['c_20api_20panel_20interface',['C API Panel Interface',['../group___c-_a_p_i-_panel.html',1,'']]],
+  ['c_20api_20form_20element_20interface',['C API Form Element Interface',['../group___c-_a_p_i-_panel-_elements.html',1,'']]],
+  ['c_20api_20standard_20form_20element_20interface',['C API Standard Form Element Interface',['../group___c-_a_p_i-_panel-_elements-_s_t_d.html',1,'']]],
+  ['c_20api_20xml_20form_20element_20interface',['C API XML Form Element Interface',['../group___c-_a_p_i-_panel-_elements-_x_m_l.html',1,'']]],
+  ['c_20api_20form_20item_20interface',['C API Form Item Interface',['../group___c-_a_p_i-_panel-_items.html',1,'']]],
   ['c_20api_20tab_20view_20interface',['C API Tab View Interface',['../group___c-_a_p_i-_panel-_tab.html',1,'']]],
   ['c_20api_20tree_20view_20interface',['C API Tree View Interface',['../group___c-_a_p_i-_panel-_tree.html',1,'']]],
   ['c_20api_20progress_20dialog_20functions',['C API Progress Dialog Functions',['../group___c-_a_p_i-_progress.html',1,'']]],
@@ -25,6 +30,7 @@ var searchData=
   ['configpane',['ConfigPane',['../class_d_t_s_tab_page.html#a433bdbb8af0ded1fb884b45c5d9259a9',1,'DTSTabPage']]],
   ['configpanel',['ConfigPanel',['../class_d_t_s_d_v_m_list_store.html#a235c78752ca007f5189806e95abcefe2',1,'DTSDVMListStore']]],
   ['confirm',['Confirm',['../class_d_t_s_frame.html#a937f276b15be00e81087ef1a73605478',1,'DTSFrame']]],
+  ['core_20api_20interface_20common_20to_20c_20and_20c_2b_2b',['Core API Interface Common to C and C++',['../group___c_o_r_e.html',1,'']]],
   ['createpane',['CreatePane',['../class_d_t_s_frame.html#a3b1105fb9c8e3b6909994e7f993eee20',1,'DTSFrame::CreatePane()'],['../class_d_t_s_tree_window.html#a7457dc767b9cbc873e0e963644fa1fda',1,'DTSTreeWindow::CreatePane(const wxString &amp;name=wxEmptyString, int butmask=0, void *userdata=NULL, struct xml_doc *xmldoc=NULL)'],['../class_d_t_s_tree_window.html#a45d33a41609c46d51d17bb80a64f2ca4',1,'DTSTreeWindow::CreatePane(const wxDataViewItem &amp;node)']]],
   ['createtab',['CreateTab',['../class_d_t_s_tab_window.html#aa37d1c10f98b08a6c7b265ecd77e3f1f',1,'DTSTabWindow::CreateTab(const wxString &amp;name, int butmask=0, void *userdata=NULL, dtsgui_tabpanel_cb cb=NULL, void *cdata=NULL, struct xml_doc *xmldoc=NULL, bool addpage=true)'],['../class_d_t_s_tab_window.html#a92747d3ec04159b96c1e2fde83b9c325',1,'DTSTabWindow::CreateTab(const wxString &amp;name, int butmask, void *userdata, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, int pos, int undo)']]],
   ['curl_5fprogress',['curl_progress',['../classcurl__progress.html',1,'curl_progress'],['../classcurl__progress.html#a855a2ff30ced56e3344ce6a6d76b0e01',1,'curl_progress::curl_progress()']]],

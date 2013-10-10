@@ -17,7 +17,7 @@
 */
 
 /** @file
-  * @ingroup C-API
+  * @ingroup C-API CORE
   * @brief Main include file for the GUI Library
   *
   * This file needs to be included to use the defined functions and API.
@@ -55,19 +55,28 @@ typedef void *dtsgui_progress;
 typedef struct form_item form_item;
 typedef struct dynamic_panel dynamic_panel;
 
+/** @ingroup CORE
+  * @brief Callback event for tree view.*/
 enum tree_cbtype {
+	/**@brief Treenods is selected*/ 
 	DTSGUI_TREE_CB_SELECT,
+	/**@brief Treenods is to be deleted*/ 
 	DTSGUI_TREE_CB_DELETE,
+	/**@brief Treenods is edited*/ 
 	DTSGUI_TREE_CB_EDIT
 };
 
+/** @ingroup CORE
+  * @brief Data storage type on form element*/
 enum form_data_type {
+	/** @brief Reference to data.*/
 	DTSGUI_FORM_DATA_PTR,
+	/** @brief Reference to XML Node.*/
 	DTSGUI_FORM_DATA_XML
 };
 
 /*callbacks*/
-/** @ingroup C-API
+/** @ingroup CORE
   * @brief Callback called on application execution
   *
   * The callback is called with the application pointer and supplied userdata
@@ -86,35 +95,63 @@ typedef void (*dtsgui_tabpanel_cb)(dtsgui_pane, void*);
 typedef void* (*dtsgui_toolbar_create)(struct dtsgui*, void *, long, int, const char*, void *data);
 typedef void (*dtsgui_tabpane_newdata_cb)(struct xml_doc*, struct xml_node*, void*, void**, int*);
 
+/** @ingroup CORE
+  * @brief A simple data structure to store a coordinate*/
 struct point {
+	/**@brief X axis*/
 	int x;
+	/**@brief Y axis*/
 	int y;
 };
 
-/*buttons YES / No may be YES/NO APPLY/REFRESH OK/CANCEL*/
+/** @ingroup CORE
+  * @brief Define all buttons that are used in creating a panel.
+  * @remark These buttons are placed in this order at the bottom of the panel
+  * buttons not in the mask are not displayed and are blank spaces*/
 enum panel_buttons {
+	/**@brief A Rewind button used to indicate select first record.*/
 	wx_PANEL_EVENT_BUTTON_FIRST		= 1 << 0,
+	/**@brief A Back button used to go one record back.*/
 	wx_PANEL_EVENT_BUTTON_BACK		= 1 << 1,
+	/**@brief A Forward button indicating to proceed to next record.*/
 	wx_PANEL_EVENT_BUTTON_FWD		= 1 << 2,
+	/**@brief A Fast Forward button used to indicate select lasr record.*/
 	wx_PANEL_EVENT_BUTTON_LAST		= 1 << 3,
+	/**@brief A Affirmative button.*/
 	wx_PANEL_EVENT_BUTTON_YES		= 1 << 4,
+	/**@brief A Cancel/No/Undo button*/
 	wx_PANEL_EVENT_BUTTON_NO		= 1 << 5
 };
 
+/** @ingroup CORE
+  * @brief Define all possible events that are passed to event handler.*/
 enum panel_events {
+	/**@brief Button press event.*/
 	wx_PANEL_EVENT_BUTTON			= 1 << 0,
+	/**@brief Enter was pressed in a Combo box.*/
 	wx_PANEL_EVENT_COMBO_ENTER		= 1 << 1,
+	/**@brief Combo box text has been updated.*/
 	wx_PANEL_EVENT_COMBO_UPDATE		= 1 << 2,
-	wx_PANEL_EVENT_DTS				= 1 << 3
+	/**@brief DTS Application event..*/
+	wx_PANEL_EVENT_DTS			= 1 << 3
 };
 
+/** @ingroup CORE
+  * @brief Options set on tree nodes
+  * @remark Not all options apply to containers and leaf nodes.*/
 enum tree_newnode_flags {
+	/**@brief Allow editing of the node.*/
 	DTS_TREE_NEW_NODE_EDIT = 1 << 0,
+	/**@brief Allow deleteing the node from right click menu.*/
 	DTS_TREE_NEW_NODE_DELETE = 1 << 1,
+	/**@brief Node is a Container.*/
 	DTS_TREE_NEW_NODE_CONTAINER = 1 << 2,
+	/**@brief Container node allows sorting.*/
 	DTS_TREE_NEW_NODE_SORT = 1 << 3
 };
 
+/** @ingroup CORE
+  * @brief Panel Type.*/
 enum panel_type {
 	wx_DTSPANEL_WINDOW,
 	wx_DTSPANEL_PANEL,
@@ -125,6 +162,8 @@ enum panel_type {
 	wx_DTSPANEL_TAB
 };
 
+/** @ingroup CORE
+  * @brief Type of list item.*/
 enum widget_type {
 	DTS_WIDGET_TEXTBOX,
 	DTS_WIDGET_CHECKBOX,
@@ -132,11 +171,21 @@ enum widget_type {
 	DTS_WIDGET_COMBOBOX
 };
 
+/** @ingroup CORE
+  * @brief Shortcut flags for navigation buttons.*/
 #define wx_PANEL_BUTTON_NAV		wx_PANEL_EVENT_BUTTON_FIRST | wx_PANEL_EVENT_BUTTON_BACK | wx_PANEL_EVENT_BUTTON_FWD | wx_PANEL_EVENT_BUTTON_LAST
+/** @ingroup CORE
+  * @brief Shortcut flags for direction buttons.*/
 #define wx_PANEL_BUTTON_DIR		wx_PANEL_EVENT_BUTTON_BACK | wx_PANEL_EVENT_BUTTON_FWD
-#define wx_PANEL_BUTTON_ACTION	wx_PANEL_EVENT_BUTTON_YES | wx_PANEL_EVENT_BUTTON_NO
-#define wx_PANEL_BUTTON_ALL		wx_PANEL_BUTTON_ACTION | wx_PANEL_BUTTON_NAV
-#define wx_PANEL_EVENT_BUTTON_NONE	0
+/** @ingroup CORE
+  * @brief Shortcut flags for action buttons.*/
+#define wx_PANEL_BUTTON_ACTION wx_PANEL_EVENT_BUTTON_YES | wx_PANEL_EVENT_BUTTON_NO
+/** @ingroup CORE
+  * @brief Shortcut flags for all buttons.*/
+#define wx_PANEL_BUTTON_ALL wx_PANEL_BUTTON_ACTION | wx_PANEL_BUTTON_NAV
+/** @ingroup CORE
+  * @brief Shortcut flags for no buttons.*/
+#define wx_PANEL_EVENT_BUTTON_NONE 0
 
 /*
  * These are used in C only or when __DTS_C_API is defined in the DTS_C_API namespace
@@ -235,12 +284,13 @@ struct form_item *dtsgui_xmllistbox(dtsgui_pane pane, const char *title, const c
 struct form_item *dtsgui_xmlcombobox(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr);
 
 /*XML form items - see above for need to unref list/combo boxes*/
+/*
 extern void dtsgui_xnode_textbox(dtsgui_pane pane, const char *title, const char *attr);
 extern void dtsgui_xnode_textbox_multi(dtsgui_pane pane, const char *title, const char *attr);
 extern void dtsgui_xnode_passwdbox(dtsgui_pane pane, const char *title, const char *attr);
 extern void dtsgui_xnode_checkbox(dtsgui_pane pane, const char *title, const char *checkval, const char *uncheckval, const char *attr);
 struct form_item *dtsgui_xnode_listbox(dtsgui_pane pane, const char *title, const char *attr);
-struct form_item *dtsgui_xnode_combobox(dtsgui_pane pane, const char *title, const char *attr);
+struct form_item *dtsgui_xnode_combobox(dtsgui_pane pane, const char *title, const char *attr);*/
 
 /*add item to list*/
 void dtsgui_listbox_add(struct form_item *lbox, const char *text, const char *value);

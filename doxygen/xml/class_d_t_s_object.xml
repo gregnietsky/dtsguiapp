@@ -9,7 +9,7 @@
     <includes refid="_d_t_s_panel_8h" local="no">DTSPanel.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" prot="public" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga9275874ac61d3750aa677a36da714373" kindref="member">panel_type</ref></type>
         <definition>panel_type DTSObject::type</definition>
         <argsstring></argsstring>
         <name>type</name>

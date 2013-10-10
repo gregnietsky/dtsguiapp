@@ -1,12 +1,10 @@
-.TH "C API Wizard Interface" 3 "Wed Oct 9 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "C API Wizard Interface" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 C API Wizard Interface \- 
 .PP
-C API Wizard Management
-.PP
-Resources controlling and manipulating wizards in the C API\&.  
+C API Wizard Management\&.  
 
 .SS "Functions"
 
@@ -26,10 +24,13 @@ Resources controlling and manipulating wizards in the C API\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API Wizard Management
-.PP
-Resources controlling and manipulating wizards in the C API\&. 
+C API Wizard Management\&. 
 
+\fBRemarks:\fP
+.RS 4
+Resources controlling and manipulating wizards in the C API\&. 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -57,7 +58,7 @@ New wizard that needs pages added too and run\&.
 .PP
 
 .PP
-Definition at line 941 of file wrapper\&.cpp\&.
+Definition at line 928 of file wrapper\&.cpp\&.
 .SS "int DTS_C_API::dtsgui_runwizard (struct \fBdtsgui_wizard\fP *dtswiz)"
 
 .PP
@@ -80,7 +81,7 @@ non Zero on success\&.
 .PP
 
 .PP
-Definition at line 970 of file wrapper\&.cpp\&.
+Definition at line 957 of file wrapper\&.cpp\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_wizard_addpage (struct \fBdtsgui_wizard\fP *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)"
 
 .PP
@@ -107,7 +108,7 @@ New panel that will need to be configured and processed after completion\&.
 .PP
 
 .PP
-Definition at line 955 of file wrapper\&.cpp\&.
+Definition at line 942 of file wrapper\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.
