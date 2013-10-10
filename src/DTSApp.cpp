@@ -199,7 +199,9 @@ void dtsgui_curl::curl_progress_ctrl(void *data, int pause) {
 			cp->pd = 0;
 			break;
 		case -1:
-			f->EndProgress();
+			if (cp->pd) {
+				f->EndProgress();
+			}
 			objunref(cp);
 			break;
 	}
