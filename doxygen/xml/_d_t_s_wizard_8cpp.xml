@@ -130,15 +130,15 @@
 <codeline lineno="30" refid="classdtsgui__wizard_1aef1a3023055dee016ead1826c44731d1" refkind="member"><highlight class="normal"><ref refid="classdtsgui__wizard_1aef1a3023055dee016ead1826c44731d1" kindref="member">dtsgui_wizard::dtsgui_wizard</ref>(</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*dgui,<sp/><ref refid="evdata_8h_1a1105ebf7ed384267b36c9594fb95e3f4" kindref="member">wxWindow</ref><sp/>*f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wxString<sp/>&amp;title)<sp/>{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dgui<sp/>&amp;&amp;<sp/>objref(dgui))<sp/>{</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>=<sp/>dgui;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wiz<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_d_t_s_wizard_8h_1afc9801308f8dd7566a2e222ef91a6932" kindref="member">wxWizard</ref>(f,<sp/>wxID_ANY,<sp/>title,<sp/>wxNullBitmap,<sp/>wxDefaultPosition,<sp/>wxDEFAULT_DIALOG_STYLE<sp/>|<sp/>wxRESIZE_BORDER);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdtsgui__wizard_1a54ee023336fe1f000bb593c7dcbbcc9d" kindref="member">wiz</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_d_t_s_wizard_8h_1afc9801308f8dd7566a2e222ef91a6932" kindref="member">wxWizard</ref>(f,<sp/>wxID_ANY,<sp/>title,<sp/>wxNullBitmap,<sp/>wxDefaultPosition,<sp/>wxDEFAULT_DIALOG_STYLE<sp/>|<sp/>wxRESIZE_BORDER);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>start<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdtsgui__wizard_1aaffe8d8784abd52b3496bce01bc17491" kindref="member">start</ref><sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal">dtsgui_wizard::~dtsgui_wizard()<sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wiz)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>wiz;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdtsgui__wizard_1a54ee023336fe1f000bb593c7dcbbcc9d" kindref="member">wiz</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classdtsgui__wizard_1a54ee023336fe1f000bb593c7dcbbcc9d" kindref="member">wiz</ref>;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdtsgui" kindref="compound">dtsgui</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>objunref(<ref refid="classdtsgui" kindref="compound">dtsgui</ref>);</highlight></codeline>
@@ -154,7 +154,7 @@
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>dww<sp/>=<sp/>(<ref refid="class_d_t_s_wizard_window" kindref="compound">DTSWizardWindow</ref>*)f-&gt;<ref refid="class_d_t_s_frame_1a3b1105fb9c8e3b6909994e7f993eee20" kindref="member">CreatePane</ref>(title,<sp/>wxEmptyString,<sp/>0,<sp/><ref refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" kindref="member">wx_DTSPANEL_WIZARD</ref>,<sp/>userdata);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>wp<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="_d_t_s_wizard_8h_1a0692504754593e8beb0333a4d1f6c80e" kindref="member">wxWizardPageSimple</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dww);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>wp-&gt;Create(wiz);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>wp-&gt;Create(<ref refid="classdtsgui__wizard_1a54ee023336fe1f000bb593c7dcbbcc9d" kindref="member">wiz</ref>);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(title)<sp/>{</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dww-&gt;<ref refid="class_d_t_s_panel_1a58daeb533cce1e4bdac57118cce7c7ea" kindref="member">SetTitle</ref>(title,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
@@ -165,10 +165,10 @@
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>objlock(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!start)<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start<sp/>=<sp/>wp;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classdtsgui__wizard_1aaffe8d8784abd52b3496bce01bc17491" kindref="member">start</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdtsgui__wizard_1aaffe8d8784abd52b3496bce01bc17491" kindref="member">start</ref><sp/>=<sp/>wp;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(last<sp/>=<sp/>start;<sp/>last-&gt;GetNext();<sp/>last=last-&gt;GetNext());</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(last<sp/>=<sp/><ref refid="classdtsgui__wizard_1aaffe8d8784abd52b3496bce01bc17491" kindref="member">start</ref>;<sp/>last-&gt;GetNext();<sp/>last=last-&gt;GetNext());</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="_d_t_s_wizard_8h_1a0692504754593e8beb0333a4d1f6c80e" kindref="member">wxWizardPageSimple</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(last);</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp-&gt;SetNext(wp);</highlight></codeline>
@@ -179,10 +179,10 @@
 <codeline lineno="79"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81" refid="classdtsgui__wizard_1ab0554e6b9fe1d2c0419a6659d883edf3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdtsgui__wizard_1ab0554e6b9fe1d2c0419a6659d883edf3" kindref="member">dtsgui_wizard::RunWizard</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>wiz-&gt;GetPageAreaSizer()-&gt;Add(start);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>wiz-&gt;Center();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdtsgui__wizard_1a54ee023336fe1f000bb593c7dcbbcc9d" kindref="member">wiz</ref>-&gt;GetPageAreaSizer()-&gt;Add(<ref refid="classdtsgui__wizard_1aaffe8d8784abd52b3496bce01bc17491" kindref="member">start</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdtsgui__wizard_1a54ee023336fe1f000bb593c7dcbbcc9d" kindref="member">wiz</ref>-&gt;Center();</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wiz-&gt;RunWizard(start);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdtsgui__wizard_1a54ee023336fe1f000bb593c7dcbbcc9d" kindref="member">wiz</ref>-&gt;RunWizard(<ref refid="classdtsgui__wizard_1aaffe8d8784abd52b3496bce01bc17491" kindref="member">start</ref>);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/usr/src/dtsapplib/dtsguiapp/src/DTSWizard.cpp"/>

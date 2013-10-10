@@ -16,6 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/private.h" line="70" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/private.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="wizard_8c_1a2385f9d99b5222b879485702af299fd0" compoundref="wizard_8c" startline="228" endline="275">wizz_exten</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structlistitem_1a678100a2bc64b5f325a842ac0555d191" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -29,6 +30,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/private.h" line="71" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/private.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="wizard_8c_1a2385f9d99b5222b879485702af299fd0" compoundref="wizard_8c" startline="228" endline="275">wizz_exten</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

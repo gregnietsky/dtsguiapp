@@ -9,7 +9,9 @@ var searchData=
   ['append',['Append',['../class_d_t_s_d_v_m_list_store.html#aa12273287bfd185a52224543fcae3b23',1,'DTSDVMListStore::Append()'],['../classform__item.html#ad99d224a37a5bc6f99835afb2347fac8',1,'form_item::Append()']]],
   ['appendcontainer',['AppendContainer',['../class_d_t_s_d_v_m_ctrl.html#a853bc63ae2098cf907897dfe896f38b2',1,'DTSDVMCtrl']]],
   ['appenditem',['AppendItem',['../class_d_t_s_d_v_m_ctrl.html#a60de6e9342a4c140fa2b72acfbfd97dc',1,'DTSDVMCtrl']]],
+  ['appendnode',['AppendNode',['../class_d_t_s_d_v_m_ctrl.html#aff491c87f47b924fd0d6d26fb319b82c',1,'DTSDVMCtrl']]],
   ['appendtitle',['AppendTitle',['../classdtsgui.html#a9d7432eacf96358d22797b37ee73caed',1,'dtsgui']]],
   ['appendxml',['AppendXML',['../classform__item.html#a7bbc5ad6365c6b104f230afb35b0996b',1,'form_item']]],
+  ['appendxmlnodes',['AppendXMLNodes',['../class_d_t_s_x_m_l_combo_box.html#acf258ad2d53caf6b87d48cbb53e32a65',1,'DTSXMLComboBox']]],
   ['associatemodel',['AssociateModel',['../class_d_t_s_d_v_m_ctrl.html#ad844ee2c061ae2233ac8cca01c0a6a92',1,'DTSDVMCtrl']]]
 ];

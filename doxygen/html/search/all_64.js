@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['data',['data',['../classevdata.html#ab8569cae7cd7a33fde4e51872ef29090',1,'evdata']]],
+  ['data',['data',['../class_d_t_s_d_v_m_list_store.html#a9d9977d520e8871cfdc9abae581801d5',1,'DTSDVMListStore::data()'],['../class_d_t_s_panel_event.html#a63313454db1807ffd97873cb2ffd5e0d',1,'DTSPanelEvent::data()'],['../classtree__newnode.html#a0f8198927692046e5763c7e126ea101c',1,'tree_newnode::data()'],['../classtab__newpane.html#a70f33dd22d1a121e7d8e84cd52f1efd0',1,'tab_newpane::data()'],['../class_d_t_s_tree_window_event.html#a97dc4c3c5cebbaa4c5f7f5dcad70f104',1,'DTSTreeWindowEvent::data()'],['../class_d_t_s_tab_window_event.html#a4d7e06b09353386e0c891fb2f5c82b55',1,'DTSTabWindowEvent::data()'],['../classdynamic__panel.html#a829939df89ab897c11179a31b8cd46be',1,'dynamic_panel::data()'],['../classevdata.html#ab8569cae7cd7a33fde4e51872ef29090',1,'evdata::data()'],['../classform__item.html#a601ff328ce4165b07d5ad23bd96967b7',1,'form_item::data()']]],
+  ['data_5fcb',['data_cb',['../classtab__newpane.html#ad411183382cacce488de4bad08fa1e74',1,'tab_newpane']]],
   ['data_5fdir',['DATA_DIR',['../private_8h.html#a48cc0a91e8f54c62f3341c21c8cc74e8',1,'private.h']]],
   ['datadir',['datadir',['../structapp__data.html#aaa1b1bd30fab72d8b9a34f890fd060c0',1,'app_data']]],
+  ['def_5fbuttons',['def_buttons',['../_d_t_s_panel_8cpp.html#a138f34819b90ed241ed77fc27958f745',1,'DTSPanel.cpp']]],
   ['delete',['Delete',['../class_d_t_s_d_v_m_list_view.html#aae01dd71efaebb94dfea9e35d552237e',1,'DTSDVMListView']]],
   ['deleteall',['DeleteAll',['../class_d_t_s_d_v_m_list_view.html#a7d0ec062e50e1d05cf4a2e8852104580',1,'DTSDVMListView']]],
+  ['dialog',['dialog',['../class_d_t_s_dialog.html#aa5f49d2b6d13bebadc4721ade6f29de9',1,'DTSDialog']]],
   ['dts_5fc_5fapi',['DTS_C_API',['../namespace_d_t_s___c___a_p_i.html',1,'']]],
   ['dts_5fnode_5fcustomer',['DTS_NODE_CUSTOMER',['../private_8h.html#a018cb6fe637d3a25a67e794d620808eca05bdc159f9d09f11da201a71742409ab',1,'private.h']]],
   ['dts_5fnode_5fnetwork_5fadsl_5flink',['DTS_NODE_NETWORK_ADSL_LINK',['../private_8h.html#a018cb6fe637d3a25a67e794d620808eca227b415be9d0831d430de77ec5bf8c52',1,'private.h']]],
@@ -62,7 +65,7 @@ var searchData=
   ['dtsframe',['DTSFrame',['../class_d_t_s_frame.html',1,'DTSFrame'],['../class_d_t_s_frame.html#a183097dc59ac2195f758f7ea5213ad76',1,'DTSFrame::DTSFrame()'],['../_d_t_s_panel_8h.html#ac041b748b16da7ef8c4a1ff9d1a357af',1,'DTSFrame():&#160;DTSPanel.h']]],
   ['dtsframe_2ecpp',['DTSFrame.cpp',['../_d_t_s_frame_8cpp.html',1,'']]],
   ['dtsframe_2eh',['DTSFrame.h',['../_d_t_s_frame_8h.html',1,'']]],
-  ['dtsgui',['dtsgui',['../classdtsgui.html',1,'dtsgui'],['../classdtsgui.html#a96324bdb4d6457ea0c815959092bee84',1,'dtsgui::dtsgui()'],['../group___c_o_r_e.html#ga8d0ed2b4049e42079b366e341b33347f',1,'dtsgui():&#160;dtsgui.h']]],
+  ['dtsgui',['dtsgui',['../classdtsgui.html',1,'dtsgui'],['../class_d_t_s_a_p_p_tool_bar.html#a299c68d2f3d838a1c8d04a94a71afd5d',1,'DTSAPPToolBar::dtsgui()'],['../class_d_t_s_app.html#a05d434e7521a1228cc58ee1a49a8044f',1,'DTSApp::dtsgui()'],['../class_d_t_s_frame.html#a6cb9a33c465559941f8ce90ecb27819b',1,'DTSFrame::dtsgui()'],['../class_d_t_s_tree_window_event.html#a88eb3a82035ee504cc380b094b763e3a',1,'DTSTreeWindowEvent::dtsgui()'],['../classdtsgui__wizard.html#abb0f21895a9868f84f9ce7390ddcd14a',1,'dtsgui_wizard::dtsgui()'],['../classdtsgui.html#a96324bdb4d6457ea0c815959092bee84',1,'dtsgui::dtsgui()'],['../group___c_o_r_e.html#ga8d0ed2b4049e42079b366e341b33347f',1,'dtsgui():&#160;dtsgui.h']]],
   ['dtsgui_2eh',['dtsgui.h',['../dtsgui_8h.html',1,'']]],
   ['dtsgui_5fabout',['dtsgui_about',['../group___c-_a_p_i-_menus.html#gaf06c34986c04d800883694733554033e',1,'dtsgui_about():&#160;wrapper.cpp'],['../group___c-_a_p_i-_menus.html#gaf06c34986c04d800883694733554033e',1,'DTS_C_API::dtsgui_about()']]],
   ['dtsgui_5falert',['dtsgui_alert',['../group___c-_a_p_i-_dialog.html#gad331a82b0502bea7d78545c6efb72b78',1,'dtsgui_alert():&#160;wrapper.cpp'],['../group___c-_a_p_i-_dialog.html#gad331a82b0502bea7d78545c6efb72b78',1,'DTS_C_API::dtsgui_alert()']]],
@@ -139,7 +142,7 @@ var searchData=
   ['dtsgui_5ftextpane',['dtsgui_textpane',['../group___c-_a_p_i-_panel.html#gafb8efe017917a372826f7ddedb0e8bba',1,'dtsgui_textpane():&#160;wrapper.cpp'],['../group___c-_a_p_i-_panel.html#gafb8efe017917a372826f7ddedb0e8bba',1,'DTS_C_API::dtsgui_textpane()']]],
   ['dtsgui_5ftitleappend',['dtsgui_titleappend',['../group___c-_a_p_i.html#gafc00c020f324c119956fcc38e7fd55db',1,'dtsgui_titleappend():&#160;wrapper.cpp'],['../group___c-_a_p_i.html#gafc00c020f324c119956fcc38e7fd55db',1,'DTS_C_API::dtsgui_titleappend()']]],
   ['dtsgui_5ftoolbar_5fcreate',['dtsgui_toolbar_create',['../group___c_o_r_e.html#ga53eefce4ace6a7d72e49e9ae4c520226',1,'dtsgui.h']]],
-  ['dtsgui_5ftree_5fcb',['dtsgui_tree_cb',['../group___c_o_r_e.html#ga32927ee58215cd957e5134af0f13303f',1,'dtsgui.h']]],
+  ['dtsgui_5ftree_5fcb',['dtsgui_tree_cb',['../group___c_o_r_e.html#gae088feda00f338f6ddd35daaacc44817',1,'dtsgui.h']]],
   ['dtsgui_5ftree_5fcb_5fdelete',['DTSGUI_TREE_CB_DELETE',['../group___c_o_r_e.html#gga465794df2cb30731dfe34d3e7a4ed368a95978182db76e342ba406456dc935258',1,'dtsgui.h']]],
   ['dtsgui_5ftree_5fcb_5fedit',['DTSGUI_TREE_CB_EDIT',['../group___c_o_r_e.html#gga465794df2cb30731dfe34d3e7a4ed368a629392b319c09bfdb44b638c858381e8',1,'dtsgui.h']]],
   ['dtsgui_5ftree_5fcb_5fselect',['DTSGUI_TREE_CB_SELECT',['../group___c_o_r_e.html#gga465794df2cb30731dfe34d3e7a4ed368adac89e1845cacd5358022cbc20aba1a9',1,'dtsgui.h']]],
@@ -191,6 +194,7 @@ var searchData=
   ['dtsxmlcombobox',['DTSXMLComboBox',['../class_d_t_s_x_m_l_combo_box.html',1,'DTSXMLComboBox'],['../class_d_t_s_x_m_l_combo_box.html#aa0ef061b697a527a559d56a6c5914e08',1,'DTSXMLComboBox::DTSXMLComboBox()']]],
   ['dtsxmlcombobox_2ecpp',['DTSXMLComboBox.cpp',['../_d_t_s_x_m_l_combo_box_8cpp.html',1,'']]],
   ['dtsxmlcombobox_2eh',['DTSXMLComboBox.h',['../_d_t_s_x_m_l_combo_box_8h.html',1,'']]],
+  ['dtype',['dtype',['../classform__item.html#acaa83eeebb557f7e66ae998bc45dc6c9',1,'form_item']]],
   ['dynamic_5fpanel',['dynamic_panel',['../classdynamic__panel.html',1,'dynamic_panel'],['../classdynamic__panel.html#ab9bd460c0e6acd3b84806f908d53df49',1,'dynamic_panel::dynamic_panel()'],['../group___c_o_r_e.html#gaa881f6b55dcf9b95108f08bf62d4802f',1,'dynamic_panel():&#160;dtsgui.h']]],
   ['dynamicpanelevent',['DynamicPanelEvent',['../class_d_t_s_frame.html#a8b1d7dbacb2a99f3758a35ef06046963',1,'DTSFrame']]]
 ];

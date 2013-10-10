@@ -106,6 +106,9 @@ $(document).ready(function(){initNavTree('class_d_t_s_frame.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_d_t_s_frame-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DTSFrame Class Reference</div>  </div>
@@ -166,7 +169,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a036e076a53c67d43204aa636ab26328d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55fe07b66530435bce652e8ab3091707"><td class="memItemLeft" align="right" valign="top">wxMenuItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a55fe07b66530435bce652e8ab3091707">NewMenuItem</a> (wxMenu *m, <a class="el" href="class_d_t_s_object.html">DTSObject</a> *panel, int menuid, const wxString &amp;hint)</td></tr>
 <tr class="separator:a55fe07b66530435bce652e8ab3091707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a658114abb50692e826e18593a0e3ba73"><td class="memItemLeft" align="right" valign="top">wxMenuItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a658114abb50692e826e18593a0e3ba73">NewMenuItem</a> (wxMenu *m, int menuid, const wxString &amp;name, const wxString &amp;hint, int blank, <a class="el" href="group___c_o_r_e.html#ga080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> cb, void *data)</td></tr>
+<tr class="memitem:a658114abb50692e826e18593a0e3ba73"><td class="memItemLeft" align="right" valign="top">wxMenuItem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a658114abb50692e826e18593a0e3ba73">NewMenuItem</a> (wxMenu *m, int menuid, const wxString &amp;name, const wxString &amp;hint, int <a class="el" href="class_d_t_s_frame.html#a20507dd71a62b698a9070e40755fab26">blank</a>, <a class="el" href="group___c_o_r_e.html#ga080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> cb, void *data)</td></tr>
 <tr class="separator:a658114abb50692e826e18593a0e3ba73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63488ecbdbe2770ea7d12ce2b06f1b72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a63488ecbdbe2770ea7d12ce2b06f1b72">SendDTSEvent</a> (int eid, wxObject *evobj)</td></tr>
 <tr class="separator:a63488ecbdbe2770ea7d12ce2b06f1b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,6 +183,43 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a38dd78f5af3241bc9ff822c883e9a3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a117230517edf6e062aad2a22b00b2d56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a117230517edf6e062aad2a22b00b2d56">OnAbout</a> (wxCommandEvent &amp;event)</td></tr>
 <tr class="separator:a117230517edf6e062aad2a22b00b2d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4662602e974661de7c512bbd9dd3115a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a4662602e974661de7c512bbd9dd3115a">OnDTSEvent</a> (wxCommandEvent &amp;event)</td></tr>
+<tr class="separator:a4662602e974661de7c512bbd9dd3115a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:adb19cc1077af840c132d8e11fd163a15"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#adb19cc1077af840c132d8e11fd163a15">pwevent</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, int type, int event, void *data)</td></tr>
+<tr class="separator:adb19cc1077af840c132d8e11fd163a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af5ccc418850aa4603c4100b6a93cc051"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_d_t_s_frame_8h.html#ad396616e0ef9ed30f9053d7b48712ecd">wxBoxSizer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#af5ccc418850aa4603c4100b6a93cc051">sizer</a></td></tr>
+<tr class="separator:af5ccc418850aa4603c4100b6a93cc051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20507dd71a62b698a9070e40755fab26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="evdata_8h.html#a1105ebf7ed384267b36c9594fb95e3f4">wxWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a20507dd71a62b698a9070e40755fab26">blank</a></td></tr>
+<tr class="separator:a20507dd71a62b698a9070e40755fab26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eaa2e530669ee48b4b6d38a4cc3ae6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="evdata_8h.html#a1105ebf7ed384267b36c9594fb95e3f4">wxWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a4eaa2e530669ee48b4b6d38a4cc3ae6e">a_window</a></td></tr>
+<tr class="separator:a4eaa2e530669ee48b4b6d38a4cc3ae6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1acb9ecd1828ba46aca3524efbe9ea"><td class="memItemLeft" align="right" valign="top">wxToolBar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a5b1acb9ecd1828ba46aca3524efbe9ea">toolbar</a></td></tr>
+<tr class="separator:a5b1acb9ecd1828ba46aca3524efbe9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18384d2a5e61a59fb0c704fff5475ef4"><td class="memItemLeft" align="right" valign="top">wxString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a18384d2a5e61a59fb0c704fff5475ef4">about</a></td></tr>
+<tr class="separator:a18384d2a5e61a59fb0c704fff5475ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3da41657d6700c5843ce858709f280"><td class="memItemLeft" align="right" valign="top">wxMenuBar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a5f3da41657d6700c5843ce858709f280">menubar</a></td></tr>
+<tr class="separator:a5f3da41657d6700c5843ce858709f280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb9a33c465559941f8ce90ecb27819b"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a6cb9a33c465559941f8ce90ecb27819b">dtsgui</a></td></tr>
+<tr class="separator:a6cb9a33c465559941f8ce90ecb27819b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5206963dd3d2de8dc57ab020d8926c37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a5206963dd3d2de8dc57ab020d8926c37">abortconfirm</a></td></tr>
+<tr class="separator:a5206963dd3d2de8dc57ab020d8926c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96185334cac8d4d93c8684ebe152f17c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_d_t_s_frame_8h.html#a87c58918f18a953b17e8f868b1fa6a95">wxGauge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a96185334cac8d4d93c8684ebe152f17c">pbar</a></td></tr>
+<tr class="separator:a96185334cac8d4d93c8684ebe152f17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7178b3e879eb8fefe5e7361f349cd275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_d_t_s_frame_8h.html#a76cdd62022b409cbb306785d979d5644">wxProgressDialog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a7178b3e879eb8fefe5e7361f349cd275">pdia</a></td></tr>
+<tr class="separator:a7178b3e879eb8fefe5e7361f349cd275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9beabfd1eda04f79c8df588790c83398"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___c_o_r_e.html#ga53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#a9beabfd1eda04f79c8df588790c83398">tbcb</a></td></tr>
+<tr class="separator:a9beabfd1eda04f79c8df588790c83398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f3cd2304aa316d21d15c753eb31a70"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_t_s_frame.html#ac0f3cd2304aa316d21d15c753eb31a70">tb_data</a></td></tr>
+<tr class="separator:ac0f3cd2304aa316d21d15c753eb31a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -223,6 +263,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00068">a_window</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00073">abortconfirm</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00070">about</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00067">blank</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00072">dtsgui</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00071">menubar</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00188">OnAbort()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00184">OnDTSEvent()</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00074">pbar</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00075">pdia</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00066">sizer</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00077">tb_data</a>, and <a class="el" href="_d_t_s_frame_8h_source.html#l00076">tbcb</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a43d60e05b6719fe6cd215bea5bff2247"></a>
@@ -239,6 +281,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00078">78</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00067">blank</a>, and <a class="el" href="_d_t_s_frame_8h_source.html#l00077">tb_data</a>.</p>
 
 </div>
 </div>
@@ -258,6 +302,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00112">112</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l01094">DTS_C_API::dtsgui_alert()</a>.</p>
 
 </div>
 </div>
@@ -287,6 +333,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00345">345</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8cpp_source.html#l00196">OnClose()</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00354">DTS_C_API::dtsgui_close()</a>, and <a class="el" href="wrapper_8cpp_source.html#l00336">DTS_C_API::dtsgui_exit()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a937f276b15be00e81087ef1a73605478"></a>
@@ -304,6 +354,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00096">96</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l01105">DTS_C_API::dtsgui_confirm()</a>, <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00431">DTSTreeWindowEvent::MenuEvent()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00188">OnAbort()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00196">OnClose()</a>.</p>
 
 </div>
 </div>
@@ -351,6 +403,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00367">367</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_panel_8cpp_source.html#l00470">DTSPanel::SetTitle()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00314">DTSObject::SetUserData()</a>, <a class="el" href="dtsgui_8h_source.html#l00211">wx_DTSPANEL_DIALOG</a>, <a class="el" href="dtsgui_8h_source.html#l00209">wx_DTSPANEL_PANEL</a>, <a class="el" href="dtsgui_8h_source.html#l00210">wx_DTSPANEL_SCROLLPANEL</a>, <a class="el" href="dtsgui_8h_source.html#l00214">wx_DTSPANEL_TAB</a>, <a class="el" href="dtsgui_8h_source.html#l00212">wx_DTSPANEL_TREE</a>, <a class="el" href="dtsgui_8h_source.html#l00208">wx_DTSPANEL_WINDOW</a>, and <a class="el" href="dtsgui_8h_source.html#l00213">wx_DTSPANEL_WIZARD</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_wizard_8cpp_source.html#l00048">dtsgui_wizard::AddPage()</a>, <a class="el" href="wrapper_8cpp_source.html#l00407">DTS_C_API::dtsgui_panel()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00487">Passwd()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8b1d7dbacb2a99f3758a35ef06046963"></a>
@@ -369,6 +425,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00264">264</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00068">a_window</a>, <a class="el" href="evdata_8h_source.html#l00044">evdata::data</a>, <a class="el" href="evdata_8cpp_source.html#l00048">dynamic_panel::HasCallback()</a>, <a class="el" href="evdata_8cpp_source.html#l00052">dynamic_panel::IsBlank()</a>, <a class="el" href="evdata_8cpp_source.html#l00060">dynamic_panel::RunCallback()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00227">SetWindow()</a>, and <a class="el" href="evdata_8h_source.html#l00033">dynamic_panel::w</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00445">NewMenuItem()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa33b0ba3ce50a7ec4434a78c2be498b7"></a>
@@ -386,6 +446,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00173">173</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00075">pdia</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_app_8cpp_source.html#l00194">dtsgui_curl::curl_progress_ctrl()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01006">DTS_C_API::dtsgui_progress_end()</a>.</p>
 
 </div>
 </div>
@@ -433,6 +497,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00400">400</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l01135">DTS_C_API::dtsgui_fileopen()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01119">DTS_C_API::dtsgui_filesave()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0a5798261ab9b56b7938f968b4032a24"></a>
@@ -451,6 +517,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00299">299</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00072">dtsgui</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00530">DTSTreeWindow::DTSTreeWindow()</a>, and <a class="el" href="_d_t_s_panel_8cpp_source.html#l00084">DTSPanelEvent::RunCallBack()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8285d1a5b16cff7020e7fe43838906cb"></a>
@@ -468,6 +538,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00341">341</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00071">menubar</a>.</p>
 
 </div>
 </div>
@@ -497,6 +569,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00158">158</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00075">pdia</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00997">DTS_C_API::dtsgui_progress_increment()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a27cb5c393f6f9bbab0d087db9e6338ce"></a>
@@ -514,6 +590,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00358">358</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00071">menubar</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00269">DTS_C_API::dtsgui_newmenu()</a>.</p>
 
 </div>
 </div>
@@ -554,6 +634,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00427">427</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_panel_8cpp_source.html#l00260">DTSObject::GetName()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00270">DTSObject::GetPanel()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00249">SwitchWindow()</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00318">DTS_C_API::dtsgui_newmenucb()</a>, and <a class="el" href="wrapper_8cpp_source.html#l00291">DTS_C_API::dtsgui_newmenuitem()</a>.</p>
 
 </div>
 </div>
@@ -613,6 +697,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00445">445</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8cpp_source.html#l00264">DynamicPanelEvent()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a38dd78f5af3241bc9ff822c883e9a3ad"></a>
@@ -630,6 +716,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00188">188</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00073">abortconfirm</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00096">Confirm()</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>.</p>
 
 </div>
 </div>
@@ -649,6 +739,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00223">223</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00070">about</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00086">SetAbout()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5bd732df0fb24d07db470c3275504b43"></a>
@@ -666,6 +760,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00196">196</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00073">abortconfirm</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00096">Confirm()</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00345">CloseMenu()</a>.</p>
 
 </div>
 </div>
@@ -709,6 +807,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00306">306</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00077">tb_data</a>, and <a class="el" href="_d_t_s_frame_8h_source.html#l00076">tbcb</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4662602e974661de7c512bbd9dd3115a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DTSFrame::OnDTSEvent </td>
+          <td>(</td>
+          <td class="paramtype">wxCommandEvent &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00184">184</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5a7ad78662b511e7ef6ac513f8d1a28b"></a>
@@ -736,6 +864,68 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00487">487</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8cpp_source.html#l00367">CreatePane()</a>, <a class="el" href="dtsgui_8h_source.html#l00050">DTSGUI_FORM_DATA_PTR</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00462">pwevent()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l01064">DTSDialog::RunDialog()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00554">DTSPanel::TextBox()</a>, <a class="el" href="dtsgui_8h_source.html#l00211">wx_DTSPANEL_DIALOG</a>, and <a class="el" href="dtsgui_8h_source.html#l00230">wx_PANEL_BUTTON_ACTION</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_app_8cpp_source.html#l00216">dtsgui_curl::CurlPasswd()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01150">DTS_C_API::dtsgui_pwdialog()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb19cc1077af840c132d8e11fd163a15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DTSFrame::pwevent </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="classdtsgui.html">dtsgui</a> *&#160;</td>
+          <td class="paramname"><em>dtsgui</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00462">462</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_panel_8cpp_source.html#l00873">DTSPanel::FindValue()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00326">DTSObject::GetUserData()</a>, and <a class="el" href="dtsgui_8h_source.html#l00176">wx_PANEL_EVENT_BUTTON_YES</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00487">Passwd()</a>.</p>
 
 </div>
 </div>
@@ -765,6 +955,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00292">292</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00210">DTS_C_API::dtsgui_sendevent()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af57b68ada1f1958582fea200a2a315fc"></a>
@@ -792,6 +984,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00086">86</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00070">about</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00223">OnAbout()</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00371">DTS_C_API::dtsgui_about()</a>.</p>
 
 </div>
 </div>
@@ -821,6 +1017,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00320">320</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_app_8h_source.html#l00037">dtsgui::cb</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00074">pbar</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00077">tb_data</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00076">tbcb</a>, and <a class="el" href="_d_t_s_frame_8h_source.html#l00069">toolbar</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00224">DTS_C_API::dtsgui_setuptoolbar()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7e9f18961fb55d1b9be667b81681803c"></a>
@@ -838,6 +1038,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00227">227</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00068">a_window</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00067">blank</a>, <a class="el" href="_d_t_s_app_8cpp_source.html#l00097">dtsgui::SetStatusText()</a>, and <a class="el" href="_d_t_s_frame_8h_source.html#l00066">sizer</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00198">DTS_C_API::dtsgui_setwindow()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00264">DynamicPanelEvent()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00249">SwitchWindow()</a>.</p>
 
 </div>
 </div>
@@ -873,6 +1077,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00121">121</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00074">pbar</a>, and <a class="el" href="_d_t_s_frame_8h_source.html#l00075">pdia</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_app_8cpp_source.html#l00168">dtsgui_curl::curl_progress_function()</a>, and <a class="el" href="wrapper_8cpp_source.html#l00970">DTS_C_API::dtsgui_progress_start()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a85e9e9e31176870e5d1d7fb96972d236"></a>
@@ -890,6 +1098,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00249">249</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
+
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00068">a_window</a>, <a class="el" href="_d_t_s_frame_8h_source.html#l00067">blank</a>, <a class="el" href="evdata_8h_source.html#l00044">evdata::data</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00227">SetWindow()</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00427">NewMenuItem()</a>.</p>
 
 </div>
 </div>
@@ -919,6 +1131,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00413">413</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_panel_8cpp_source.html#l00440">DTSPanel::AddItem()</a>, and <a class="el" href="_d_t_s_panel_8cpp_source.html#l00270">DTSObject::GetPanel()</a>.</p>
+
+<p>Referenced by <a class="el" href="wrapper_8cpp_source.html#l00426">DTS_C_API::dtsgui_textpane()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3b057f8c85958444049063e75b602108"></a>
@@ -947,6 +1163,299 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_d_t_s_frame_8cpp_source.html#l00143">143</a> of file <a class="el" href="_d_t_s_frame_8cpp_source.html">DTSFrame.cpp</a>.</p>
 
+<p>References <a class="el" href="_d_t_s_frame_8h_source.html#l00075">pdia</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_app_8cpp_source.html#l00168">dtsgui_curl::curl_progress_function()</a>, and <a class="el" href="wrapper_8cpp_source.html#l00985">DTS_C_API::dtsgui_progress_update()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a4eaa2e530669ee48b4b6d38a4cc3ae6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="evdata_8h.html#a1105ebf7ed384267b36c9594fb95e3f4">wxWindow</a>* DTSFrame::a_window</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00068">68</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00264">DynamicPanelEvent()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00227">SetWindow()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00249">SwitchWindow()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5206963dd3d2de8dc57ab020d8926c37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DTSFrame::abortconfirm</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00073">73</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00188">OnAbort()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00196">OnClose()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18384d2a5e61a59fb0c704fff5475ef4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxString DTSFrame::about</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00070">70</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00223">OnAbout()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00086">SetAbout()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20507dd71a62b698a9070e40755fab26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="evdata_8h.html#a1105ebf7ed384267b36c9594fb95e3f4">wxWindow</a>* DTSFrame::blank</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00067">67</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00227">SetWindow()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00249">SwitchWindow()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00078">~DTSFrame()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cb9a33c465559941f8ce90ecb27819b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="classdtsgui.html">dtsgui</a>* DTSFrame::dtsgui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00072">72</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00299">GetDTSData()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f3da41657d6700c5843ce858709f280"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxMenuBar* DTSFrame::menubar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00071">71</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00341">GetMenuBar()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00358">NewMenu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a96185334cac8d4d93c8684ebe152f17c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_d_t_s_frame_8h.html#a87c58918f18a953b17e8f868b1fa6a95">wxGauge</a>* DTSFrame::pbar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00074">74</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00320">SetupToolbar()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00121">StartProgress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7178b3e879eb8fefe5e7361f349cd275"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_d_t_s_frame_8h.html#a76cdd62022b409cbb306785d979d5644">wxProgressDialog</a>* DTSFrame::pdia</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00075">75</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00173">EndProgress()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00158">IncProgress()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00121">StartProgress()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00143">UpdateProgress()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5ccc418850aa4603c4100b6a93cc051"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_d_t_s_frame_8h.html#ad396616e0ef9ed30f9053d7b48712ecd">wxBoxSizer</a>* DTSFrame::sizer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00066">66</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00227">SetWindow()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0f3cd2304aa316d21d15c753eb31a70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* DTSFrame::tb_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00077">77</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00306">OnCreateToolBar()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00320">SetupToolbar()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00078">~DTSFrame()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9beabfd1eda04f79c8df588790c83398"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___c_o_r_e.html#ga53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> DTSFrame::tbcb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00076">76</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00035">DTSFrame()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00306">OnCreateToolBar()</a>, and <a class="el" href="_d_t_s_frame_8cpp_source.html#l00320">SetupToolbar()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b1acb9ecd1828ba46aca3524efbe9ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxToolBar* DTSFrame::toolbar</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_d_t_s_frame_8h_source.html#l00069">69</a> of file <a class="el" href="_d_t_s_frame_8h_source.html">DTSFrame.h</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_frame_8cpp_source.html#l00320">SetupToolbar()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -959,7 +1468,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_d_t_s_frame.html">DTSFrame</a></li>
-    <li class="footer">Generated on Thu Oct 10 2013 16:13:05 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 22:26:38 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

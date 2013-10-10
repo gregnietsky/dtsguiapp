@@ -6,7 +6,8 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
     [ "Classes", null, [
@@ -24,6 +25,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
@@ -36,10 +38,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_d_t_s_app_8cpp.html",
-"class_d_t_s_panel_event.html#ae1fda2b21c16c83d067c5305d5338bd6",
-"dtsgui_8h.html#gad9a5fa9a5623850a3889e305ef3da717",
-"group___c_o_r_e.html#gga465794df2cb30731dfe34d3e7a4ed368a629392b319c09bfdb44b638c858381e8",
-"wrapper_8cpp.html#ga25174d47f2e9680d41aebdf08ff9b979"
+"class_d_t_s_panel.html#a03be174c3cb033ba74b6abce543347e3",
+"classtree__newnode.html#a71eae2a3f8fbcb7e2c4245ae0303d171",
+"globals_0x6d.html",
+"netconfig_8c.html#af6cb7d31e4a663493723310afddf0657"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -17,7 +17,7 @@ var dtsgui_8h =
     [ "dtsgui_tabpanel_cb", "dtsgui_8h.html#gab65db729662a3b0d109158d2fb51f93c", null ],
     [ "dtsgui_tabview", "dtsgui_8h.html#ga29c463cda54f69beb273c77e1aa7ccef", null ],
     [ "dtsgui_toolbar_create", "dtsgui_8h.html#ga53eefce4ace6a7d72e49e9ae4c520226", null ],
-    [ "dtsgui_tree_cb", "dtsgui_8h.html#ga32927ee58215cd957e5134af0f13303f", null ],
+    [ "dtsgui_tree_cb", "dtsgui_8h.html#gae088feda00f338f6ddd35daaacc44817", null ],
     [ "dtsgui_treenode", "dtsgui_8h.html#ga6529df5f03710b4fec84553e1d7febc5", null ],
     [ "dtsgui_treeview", "dtsgui_8h.html#ga91b92f00d06cc6174b8b271fc9f2c241", null ],
     [ "dtsgui_treeviewpanel_cb", "dtsgui_8h.html#ga8bf800adcd2392cf7722c3cf2f603f96", null ],

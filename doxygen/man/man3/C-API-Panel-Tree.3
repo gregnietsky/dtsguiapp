@@ -116,6 +116,10 @@ Nothing is returned the callback is registered on the panel\&.
 
 .PP
 Definition at line 720 of file wrapper\&.cpp\&.
+.PP
+References tree_newnode::handle_newtreenode_cb(), and tree_newnode::tree_newnode()\&.
+.PP
+Referenced by network_adsl_link_new(), network_adsl_user_new(), network_config_dns_domain_new(), network_config_dns_domain_server_new(), network_config_dns_host_new(), network_newiface(), network_newroute(), network_newwan(), network_newwifi(), and network_tos_new()\&.
 .SS "void DTS_C_API::dtsgui_nodesetxml (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *newname)"
 
 .PP
@@ -138,6 +142,8 @@ Update the XML Node with a new name\&. This helper function will update the node
 
 .PP
 Definition at line 478 of file wrapper\&.cpp\&.
+.PP
+References DTSTreeWindow::UpdateNodeXML()\&.
 .SS "\fBdtsgui_treenode\fP DTS_C_API::dtsgui_treecont (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *title, intcan_edit, intcan_sort, intcan_del, intnodeid, \fBdtsgui_treeviewpanel_cb\fPp_cb, void *data)"
 
 .PP
@@ -179,6 +185,10 @@ DTSTreeWindow::AppendContainer
 
 .PP
 Definition at line 666 of file wrapper\&.cpp\&.
+.PP
+References DTSDVMCtrl::AppendContainer(), and DTSTreeWindow::GetTreeCtrl()\&.
+.PP
+Referenced by network_config_dns_domain_node(), and network_tree_setup()\&.
 .SS "\fBdtsgui_treenode\fP DTS_C_API::dtsgui_treeitem (\fBdtsgui_treeview\fPtree, \fBdtsgui_treenode\fPnode, const char *title, intcan_edit, intcan_sort, intcan_del, intnodeid, \fBdtsgui_treeviewpanel_cb\fPp_cb, void *data)"
 
 .PP
@@ -215,6 +225,10 @@ DTSTreeWindow::AppendItem
 
 .PP
 Definition at line 690 of file wrapper\&.cpp\&.
+.PP
+References DTSDVMCtrl::AppendItem(), and DTSTreeWindow::GetTreeCtrl()\&.
+.PP
+Referenced by network_tree_setup()\&.
 .SS "void* DTS_C_API::dtsgui_treenodegetdata (\fBdtsgui_treenode\fPtn)"
 
 .PP
@@ -241,6 +255,10 @@ Reference to user data
 
 .PP
 Definition at line 779 of file wrapper\&.cpp\&.
+.PP
+References DTSDVMListStore::GetUserData()\&.
+.PP
+Referenced by network_config_dns_domain_server()\&.
 .SS "struct xml_node* DTS_C_API::dtsgui_treenodegetxml (\fBdtsgui_treenode\fPtn, char **buf)\fC [read]\fP"
 
 .PP
@@ -266,6 +284,10 @@ Reference to the XML node stored in the tree node\&.
 
 .PP
 Definition at line 768 of file wrapper\&.cpp\&.
+.PP
+References DTSDVMListStore::GetXMLData()\&.
+.PP
+Referenced by network_adsl_link(), network_adsl_user(), network_config_dns_domain(), network_config_dns_domain_server(), network_config_dns_host(), network_iface(), network_route(), network_tos(), network_wan(), and network_wifi()\&.
 .SS "int DTS_C_API::dtsgui_treenodeid (\fBdtsgui_treenode\fPtn)"
 
 .PP
@@ -287,6 +309,8 @@ the user defined tree node ID
 
 .PP
 Definition at line 733 of file wrapper\&.cpp\&.
+.PP
+References DTSDVMListStore::GetNodeID()\&.
 .SS "const char* DTS_C_API::dtsgui_treenodeparent (\fBdtsgui_treenode\fPtn)"
 
 .PP
@@ -308,6 +332,10 @@ Name og the nodes parentI
 
 .PP
 Definition at line 743 of file wrapper\&.cpp\&.
+.PP
+References DTSDVMListStore::GetParentTitle()\&.
+.PP
+Referenced by network_config_dns_domain_server_new()\&.
 .SS "void DTS_C_API::dtsgui_treenodesetxml (\fBdtsgui_treenode\fPtn, struct xml_node *xn, const char *tattr)"
 
 .PP
@@ -328,6 +356,10 @@ Add a XML node to the tree node\&. \fBSee Also:\fP
 
 .PP
 Definition at line 754 of file wrapper\&.cpp\&.
+.PP
+References DTSDVMListStore::SetXMLData()\&.
+.PP
+Referenced by network_tree_setup()\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_treepane (\fBdtsgui_treeview\fPtv, const char *name, intbutmask, void *userdata, struct xml_doc *xmldoc)"
 
 .PP
@@ -361,6 +393,8 @@ New Tree Pane\&.
 
 .PP
 Definition at line 623 of file wrapper\&.cpp\&.
+.PP
+References DTSTreeWindow::CreatePane()\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_treepane_default (\fBdtsgui_treeview\fPtv, \fBdtsgui_treenode\fPnode)"
 
 .PP
@@ -391,6 +425,8 @@ New Tree Pane\&.
 
 .PP
 Definition at line 641 of file wrapper\&.cpp\&.
+.PP
+References DTSTreeWindow::CreatePane()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

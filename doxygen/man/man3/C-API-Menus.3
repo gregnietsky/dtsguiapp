@@ -83,6 +83,10 @@ The fuction does not return\&.
 
 .PP
 Definition at line 371 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame(), and DTSFrame::SetAbout()\&.
+.PP
+Referenced by help_menu()\&.
 .SS "void DTS_C_API::dtsgui_close (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui)"
 
 .PP
@@ -112,6 +116,10 @@ The fuction does not return\&.
 
 .PP
 Definition at line 354 of file wrapper\&.cpp\&.
+.PP
+References DTSFrame::CloseMenu(), and dtsgui::GetFrame()\&.
+.PP
+Referenced by file_menu()\&.
 .SS "void DTS_C_API::dtsgui_exit (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui)"
 
 .PP
@@ -141,6 +149,10 @@ The fuction does not return\&.
 
 .PP
 Definition at line 336 of file wrapper\&.cpp\&.
+.PP
+References DTSFrame::CloseMenu(), and dtsgui::GetFrame()\&.
+.PP
+Referenced by file_menu()\&.
 .SS "void DTS_C_API::dtsgui_menuenable (\fBdtsgui_menu\fPdm, intenable)"
 
 .PP
@@ -154,6 +166,8 @@ Enable or disable all items in menu\&. \fBParameters:\fP
 
 .PP
 Definition at line 52 of file cxxapi\&.cpp\&.
+.PP
+Referenced by config_menu(), open_config(), and save_config()\&.
 .SS "void DTS_C_API::dtsgui_menusep (\fBdtsgui_menu\fPdtsmenu)"
 
 .PP
@@ -179,6 +193,8 @@ The fuction does not return\&.
 
 .PP
 Definition at line 386 of file wrapper\&.cpp\&.
+.PP
+Referenced by config_menu(), file_menu(), and help_menu()\&.
 .SS "\fBdtsgui_menu\fP DTS_C_API::dtsgui_newmenu (struct \fBdtsgui\fP *dtsgui, const char *name)"
 
 .PP
@@ -204,6 +220,10 @@ The fuction does not return\&.
 
 .PP
 Definition at line 269 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame(), and DTSFrame::NewMenu()\&.
+.PP
+Referenced by config_menu(), file_menu(), and help_menu()\&.
 .SS "\fBdtsgui_menuitem\fP DTS_C_API::dtsgui_newmenucb (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *hint, const char *name, intblank, \fBdtsgui_dynpanel\fPcb, void *data)"
 
 .PP
@@ -247,6 +267,10 @@ Created menu item\&.
 
 .PP
 Definition at line 318 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame(), DTS_C_API::menuid, and DTSFrame::NewMenuItem()\&.
+.PP
+Referenced by config_menu(), and file_menu()\&.
 .SS "\fBdtsgui_menuitem\fP DTS_C_API::dtsgui_newmenuitem (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *hint, \fBdtsgui_pane\fPp)"
 
 .PP
@@ -282,6 +306,10 @@ Created menu item\&.
 
 .PP
 Definition at line 291 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame(), DTS_C_API::menuid, and DTSFrame::NewMenuItem()\&.
+.PP
+Referenced by help_menu(), and test_menu()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

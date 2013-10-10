@@ -103,7 +103,8 @@ $(document).ready(function(){initNavTree('netconfig_8c.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">netconfig.c File Reference</div>  </div>
 </div><!--header-->
@@ -187,6 +188,11 @@ Functions</h2></td></tr>
 <tr class="separator:ad5f5bf5384beb7b8c2fefdd51315d079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d9d2b0105df87000cb2bdecbff91239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="netconfig_8c.html#a6d9d2b0105df87000cb2bdecbff91239">advanced_config</a> (struct <a class="el" href="classdtsgui.html">dtsgui</a> *<a class="el" href="classdtsgui.html">dtsgui</a>, const char *title, void *data)</td></tr>
 <tr class="separator:a6d9d2b0105df87000cb2bdecbff91239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:adbe54f6a0a7e02ca7aa64f300dc162b0"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="netconfig_8c.html#adbe54f6a0a7e02ca7aa64f300dc162b0">protocols</a> [] = {&quot;TCP&quot;, &quot;UDP&quot;, &quot;GRE&quot;, &quot;ESP&quot;, &quot;AH&quot;, &quot;OSPF&quot;, &quot;ALL&quot;}</td></tr>
+<tr class="separator:adbe54f6a0a7e02ca7aa64f300dc162b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a6d9d2b0105df87000cb2bdecbff91239"></a>
@@ -220,6 +226,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00740">740</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wxforms_8c_source.html#l00044">app_getxmldoc()</a>, <a class="el" href="private_8h_source.html#l00061">app_data::datadir</a>, <a class="el" href="wrapper_8cpp_source.html#l01094">dtsgui_alert()</a>, <a class="el" href="wrapper_8cpp_source.html#l00446">dtsgui_treewindow()</a>, <a class="el" href="wrapper_8cpp_source.html#l00184">dtsgui_userdata()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
+<p>Referenced by <a class="el" href="config_8c_source.html#l00189">config_menu()</a>.</p>
 
 </div>
 </div>
@@ -261,6 +271,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00032">32</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wizard_8c_source.html#l00159">wizz_custinfo()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="afbdf0e8165311538e8b408c7ba2fabbf"></a>
@@ -300,6 +314,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00446">446</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01182">dtsgui_listbox_addxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l00508">dtsgui_panelxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01344">dtsgui_xmllistbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00479">network_adsl_link_new()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -341,6 +359,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00479">479</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="private_8h_source.html#l00052">DTS_NODE_NETWORK_ADSL_LINK</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l01248">dtsgui_listbox()</a>, <a class="el" href="wrapper_8cpp_source.html#l01182">dtsgui_listbox_addxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l00508">dtsgui_panelxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, and <a class="el" href="netconfig_8c_source.html#l00446">network_adsl_link()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa879445eb24134718f10512cbd22df27"></a>
@@ -380,6 +402,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00504">504</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00513">network_adsl_user_new()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -421,6 +447,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00513">513</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="private_8h_source.html#l00054">DTS_NODE_NETWORK_ADSL_USER</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, and <a class="el" href="netconfig_8c_source.html#l00504">network_adsl_user()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a53ff57cbb1a4442c4428c95746229150"></a>
@@ -460,6 +490,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00037">37</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01056">dtsgui_item_value()</a>, <a class="el" href="wrapper_8cpp_source.html#l01161">dtsgui_listbox_add()</a>, <a class="el" href="wrapper_8cpp_source.html#l01182">dtsgui_listbox_addxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l00508">dtsgui_panelxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01344">dtsgui_xmllistbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -501,6 +535,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00076">76</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01327">dtsgui_xmlcheckbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a07f37413fb1c1cb24c6f3a8a2e542114"></a>
@@ -540,6 +578,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00138">138</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01327">dtsgui_xmlcheckbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00151">network_config_dns_domain_new()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -581,6 +623,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00151">151</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="private_8h_source.html#l00037">DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN</a>, <a class="el" href="dtsgui_8h_source.html#l00201">DTS_TREE_NEW_NODE_CONTAINER</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l01235">dtsgui_checkbox()</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, <a class="el" href="netconfig_8c_source.html#l00138">network_config_dns_domain()</a>, and <a class="el" href="netconfig_8c_source.html#l00134">network_config_dns_domain_node()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1d7b1d28e9721a0c428be28f6c505875"></a>
@@ -620,6 +666,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00134">134</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="private_8h_source.html#l00038">DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER_NEW</a>, <a class="el" href="wrapper_8cpp_source.html#l00666">dtsgui_treecont()</a>, and <a class="el" href="netconfig_8c_source.html#l00177">network_config_dns_domain_server_new()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00151">network_config_dns_domain_new()</a>.</p>
 
 </div>
 </div>
@@ -661,6 +711,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00163">163</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l00779">dtsgui_treenodegetdata()</a>, <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00177">network_config_dns_domain_server_new()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af6cb7d31e4a663493723310afddf0657"></a>
@@ -700,6 +754,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00177">177</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="private_8h_source.html#l00039">DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, <a class="el" href="wrapper_8cpp_source.html#l00743">dtsgui_treenodeparent()</a>, and <a class="el" href="netconfig_8c_source.html#l00163">network_config_dns_domain_server()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00134">network_config_dns_domain_node()</a>.</p>
 
 </div>
 </div>
@@ -741,6 +799,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00089">89</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01327">dtsgui_xmlcheckbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad08cc595d8b15576d51ce580336f6063"></a>
@@ -780,6 +842,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00115">115</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00125">network_config_dns_host_new()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -821,6 +887,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00125">125</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="private_8h_source.html#l00035">DTS_NODE_NETWORK_CONFIG_DNS_HOST</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, and <a class="el" href="netconfig_8c_source.html#l00115">network_config_dns_host()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a035e28f34c903ba37365831f1dc546a0"></a>
@@ -860,6 +930,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00097">97</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01327">dtsgui_xmlcheckbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -901,6 +975,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00107">107</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a21ad9729b2e5667d1a71117c3811d428"></a>
@@ -941,6 +1019,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00213">213</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, and <a class="el" href="netconfig_8c_source.html#l00201">network_iface_pane()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00235">network_newiface()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3d43e57bb96cf8bd603872099c3bc038"></a>
@@ -968,6 +1050,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00222">222</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="interface_8c_source.html#l00137">network_iface_new_pane_cb()</a>, and <a class="el" href="netconfig_8c_source.html#l00235">network_newiface()</a>.</p>
 
 </div>
 </div>
@@ -1002,6 +1088,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00201">201</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00213">network_iface()</a>, and <a class="el" href="interface_8c_source.html#l00123">network_iface_pane_cb()</a>.</p>
 
 </div>
 </div>
@@ -1043,6 +1133,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00372">372</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01161">dtsgui_listbox_add()</a>, <a class="el" href="wrapper_8cpp_source.html#l01344">dtsgui_xmllistbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab761836f12c4ee80260a57451498d48f"></a>
@@ -1082,6 +1176,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00390">390</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01327">dtsgui_xmlcheckbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -1123,6 +1221,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00401">401</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01161">dtsgui_listbox_add()</a>, <a class="el" href="wrapper_8cpp_source.html#l01327">dtsgui_xmlcheckbox()</a>, <a class="el" href="wrapper_8cpp_source.html#l01344">dtsgui_xmllistbox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a27bdf0ff7227d24f8b4811af169802a1"></a>
@@ -1162,6 +1264,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00235">235</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="private_8h_source.html#l00041">DTS_NODE_NETWORK_IFACE</a>, <a class="el" href="dtsgui_8h_source.html#l00201">DTS_TREE_NEW_NODE_CONTAINER</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="netconfig_8c_source.html#l00213">network_iface()</a>, and <a class="el" href="netconfig_8c_source.html#l00222">network_iface_new_pane()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -1203,6 +1309,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00359">359</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="private_8h_source.html#l00047">DTS_NODE_NETWORK_ROUTE</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, and <a class="el" href="netconfig_8c_source.html#l00349">network_route()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a853ca11b890527ee2031a756497e145c"></a>
@@ -1242,6 +1352,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00333">333</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="private_8h_source.html#l00045">DTS_NODE_NETWORK_WAN</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, and <a class="el" href="netconfig_8c_source.html#l00320">network_wan()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -1283,6 +1397,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00277">277</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="private_8h_source.html#l00043">DTS_NODE_NETWORK_WIFI</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l01248">dtsgui_listbox()</a>, <a class="el" href="wrapper_8cpp_source.html#l01161">dtsgui_listbox_add()</a>, <a class="el" href="wrapper_8cpp_source.html#l01182">dtsgui_listbox_addxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01169">dtsgui_listbox_set()</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l00508">dtsgui_panelxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, and <a class="el" href="netconfig_8c_source.html#l00245">network_wifi()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="afd9751515d9c36b70349d2a9ef5fae7f"></a>
@@ -1322,6 +1440,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00349">349</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00359">network_newroute()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
 
 </div>
 </div>
@@ -1363,6 +1485,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00524">524</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01161">dtsgui_listbox_add()</a>, <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01344">dtsgui_xmllistbox()</a>, <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>, <a class="el" href="pitems_8h_source.html#l00064">form_item::name</a>, and <a class="el" href="netconfig_8c_source.html#l00030">protocols</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00565">network_tos_new()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3a92d505fabcecdf55524fe8b77f08bc"></a>
@@ -1403,6 +1529,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00565">565</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="private_8h_source.html#l00056">DTS_NODE_NETWORK_TOS</a>, <a class="el" href="dtsgui_8h_source.html#l00199">DTS_TREE_NEW_NODE_DELETE</a>, <a class="el" href="dtsgui_8h_source.html#l00197">DTS_TREE_NEW_NODE_EDIT</a>, <a class="el" href="dtsgui_8h_source.html#l00203">DTS_TREE_NEW_NODE_SORT</a>, <a class="el" href="wrapper_8cpp_source.html#l01248">dtsgui_listbox()</a>, <a class="el" href="wrapper_8cpp_source.html#l01161">dtsgui_listbox_add()</a>, <a class="el" href="wrapper_8cpp_source.html#l00720">dtsgui_newxmltreenode()</a>, <a class="el" href="wrapper_8cpp_source.html#l01194">dtsgui_textbox()</a>, <a class="el" href="netconfig_8c_source.html#l00524">network_tos()</a>, and <a class="el" href="netconfig_8c_source.html#l00030">protocols</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad5f5bf5384beb7b8c2fefdd51315d079"></a>
@@ -1430,6 +1560,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00602">602</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>References <a class="el" href="netconfig_8c_source.html#l00032">customer_info()</a>, <a class="el" href="private_8h_source.html#l00028">DTS_NODE_CUSTOMER</a>, <a class="el" href="private_8h_source.html#l00052">DTS_NODE_NETWORK_ADSL_LINK</a>, <a class="el" href="private_8h_source.html#l00051">DTS_NODE_NETWORK_ADSL_LINK_NEW</a>, <a class="el" href="private_8h_source.html#l00054">DTS_NODE_NETWORK_ADSL_USER</a>, <a class="el" href="private_8h_source.html#l00053">DTS_NODE_NETWORK_ADSL_USER_NEW</a>, <a class="el" href="private_8h_source.html#l00029">DTS_NODE_NETWORK_CONFIG</a>, <a class="el" href="private_8h_source.html#l00030">DTS_NODE_NETWORK_CONFIG_DNS</a>, <a class="el" href="private_8h_source.html#l00037">DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN</a>, <a class="el" href="private_8h_source.html#l00036">DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW</a>, <a class="el" href="private_8h_source.html#l00031">DTS_NODE_NETWORK_CONFIG_DNS_DYN</a>, <a class="el" href="private_8h_source.html#l00035">DTS_NODE_NETWORK_CONFIG_DNS_HOST</a>, <a class="el" href="private_8h_source.html#l00034">DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW</a>, <a class="el" href="private_8h_source.html#l00032">DTS_NODE_NETWORK_CONFIG_DNS_SERV</a>, <a class="el" href="private_8h_source.html#l00033">DTS_NODE_NETWORK_CONFIG_DNS_ZONE</a>, <a class="el" href="private_8h_source.html#l00041">DTS_NODE_NETWORK_IFACE</a>, <a class="el" href="private_8h_source.html#l00040">DTS_NODE_NETWORK_IFACE_NEW</a>, <a class="el" href="private_8h_source.html#l00048">DTS_NODE_NETWORK_MODEM</a>, <a class="el" href="private_8h_source.html#l00049">DTS_NODE_NETWORK_MODEM_ADV</a>, <a class="el" href="private_8h_source.html#l00050">DTS_NODE_NETWORK_MODEM_ANA</a>, <a class="el" href="private_8h_source.html#l00046">DTS_NODE_NETWORK_ROUTE_NEW</a>, <a class="el" href="private_8h_source.html#l00056">DTS_NODE_NETWORK_TOS</a>, <a class="el" href="private_8h_source.html#l00055">DTS_NODE_NETWORK_TOS_NEW</a>, <a class="el" href="private_8h_source.html#l00045">DTS_NODE_NETWORK_WAN</a>, <a class="el" href="private_8h_source.html#l00044">DTS_NODE_NETWORK_WAN_NEW</a>, <a class="el" href="private_8h_source.html#l00043">DTS_NODE_NETWORK_WIFI</a>, <a class="el" href="private_8h_source.html#l00042">DTS_NODE_NETWORK_WIFI_NEW</a>, <a class="el" href="wrapper_8cpp_source.html#l00666">dtsgui_treecont()</a>, <a class="el" href="wrapper_8cpp_source.html#l00690">dtsgui_treeitem()</a>, <a class="el" href="wrapper_8cpp_source.html#l00754">dtsgui_treenodesetxml()</a>, <a class="el" href="netconfig_8c_source.html#l00446">network_adsl_link()</a>, <a class="el" href="netconfig_8c_source.html#l00479">network_adsl_link_new()</a>, <a class="el" href="netconfig_8c_source.html#l00504">network_adsl_user()</a>, <a class="el" href="netconfig_8c_source.html#l00513">network_adsl_user_new()</a>, <a class="el" href="netconfig_8c_source.html#l00037">network_config()</a>, <a class="el" href="netconfig_8c_source.html#l00076">network_config_dns()</a>, <a class="el" href="netconfig_8c_source.html#l00138">network_config_dns_domain()</a>, <a class="el" href="netconfig_8c_source.html#l00151">network_config_dns_domain_new()</a>, <a class="el" href="netconfig_8c_source.html#l00089">network_config_dns_dyn()</a>, <a class="el" href="netconfig_8c_source.html#l00115">network_config_dns_host()</a>, <a class="el" href="netconfig_8c_source.html#l00125">network_config_dns_host_new()</a>, <a class="el" href="netconfig_8c_source.html#l00097">network_config_dns_serv()</a>, <a class="el" href="netconfig_8c_source.html#l00107">network_config_dns_zone()</a>, <a class="el" href="netconfig_8c_source.html#l00213">network_iface()</a>, <a class="el" href="netconfig_8c_source.html#l00372">network_modem()</a>, <a class="el" href="netconfig_8c_source.html#l00390">network_modem_adv()</a>, <a class="el" href="netconfig_8c_source.html#l00401">network_modem_ana()</a>, <a class="el" href="netconfig_8c_source.html#l00235">network_newiface()</a>, <a class="el" href="netconfig_8c_source.html#l00359">network_newroute()</a>, <a class="el" href="netconfig_8c_source.html#l00333">network_newwan()</a>, <a class="el" href="netconfig_8c_source.html#l00277">network_newwifi()</a>, <a class="el" href="netconfig_8c_source.html#l00349">network_route()</a>, <a class="el" href="netconfig_8c_source.html#l00524">network_tos()</a>, <a class="el" href="netconfig_8c_source.html#l00565">network_tos_new()</a>, <a class="el" href="netconfig_8c_source.html#l00320">network_wan()</a>, and <a class="el" href="netconfig_8c_source.html#l00245">network_wifi()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00740">advanced_config()</a>.</p>
 
 </div>
 </div>
@@ -1471,6 +1605,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00320">320</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00333">network_newwan()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="adceac66b5b38e18e528fc5a2adb2d649"></a>
@@ -1511,6 +1649,35 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="netconfig_8c_source.html#l00245">245</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
 
+<p>References <a class="el" href="wrapper_8cpp_source.html#l01161">dtsgui_listbox_add()</a>, <a class="el" href="wrapper_8cpp_source.html#l00768">dtsgui_treenodegetxml()</a>, <a class="el" href="wrapper_8cpp_source.html#l01361">dtsgui_xmlcombobox()</a>, and <a class="el" href="wrapper_8cpp_source.html#l01277">dtsgui_xmltextbox()</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00277">network_newwifi()</a>, and <a class="el" href="netconfig_8c_source.html#l00602">network_tree_setup()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="adbe54f6a0a7e02ca7aa64f300dc162b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* protocols[] = {&quot;TCP&quot;, &quot;UDP&quot;, &quot;GRE&quot;, &quot;ESP&quot;, &quot;AH&quot;, &quot;OSPF&quot;, &quot;ALL&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="netconfig_8c_source.html#l00030">30</a> of file <a class="el" href="netconfig_8c_source.html">netconfig.c</a>.</p>
+
+<p>Referenced by <a class="el" href="netconfig_8c_source.html#l00524">network_tos()</a>, and <a class="el" href="netconfig_8c_source.html#l00565">network_tos_new()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -1519,7 +1686,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="netconfig_8c.html">netconfig.c</a></li>
-    <li class="footer">Generated on Thu Oct 10 2013 16:13:05 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 22:26:38 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

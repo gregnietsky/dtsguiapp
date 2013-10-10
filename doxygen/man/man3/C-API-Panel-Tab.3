@@ -81,6 +81,10 @@ On win32 all tabs are configured when the view is activated\&.
 
 .PP
 Definition at line 546 of file wrapper\&.cpp\&.
+.PP
+References DTSTabWindow::CreateTab()\&.
+.PP
+Referenced by iface_config(), and pbx_settings()\&.
 .SS "void DTS_C_API::dtsgui_newxmltabpane (\fBdtsgui_tabview\fPtabv, \fBdtsgui_pane\fPp, const char *xpath, const char *node, const char *vitem, const char *tattr, \fBdtsgui_tabpane_newdata_cb\fPdata_cb, \fBdtsgui_tabpanel_cb\fPcb, void *cdata, struct xml_doc *xmldoc, void *data)"
 
 .PP
@@ -129,6 +133,10 @@ Nothing is returned the callback is registered on the panel\&.
 
 .PP
 Definition at line 603 of file wrapper\&.cpp\&.
+.PP
+References tab_newpane::handle_newtabpane_cb(), and tab_newpane::tab_newpane()\&.
+.PP
+Referenced by network_iface_new_pane_cb()\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_tabpage_insert (\fBdtsgui_tabview\fPtv, const char *name, intbutmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fPcb, void *cdata, intpos, intundo)"
 
 .PP
@@ -178,6 +186,8 @@ New Tab Pane
 
 .PP
 Definition at line 575 of file wrapper\&.cpp\&.
+.PP
+References DTSTabWindow::CreateTab()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

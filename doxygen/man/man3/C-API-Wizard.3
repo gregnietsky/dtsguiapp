@@ -59,6 +59,10 @@ New wizard that needs pages added too and run\&.
 
 .PP
 Definition at line 928 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame()\&.
+.PP
+Referenced by system_wizard()\&.
 .SS "int DTS_C_API::dtsgui_runwizard (struct \fBdtsgui_wizard\fP *dtswiz)"
 
 .PP
@@ -82,6 +86,10 @@ non Zero on success\&.
 
 .PP
 Definition at line 957 of file wrapper\&.cpp\&.
+.PP
+References dtsgui_wizard::RunWizard()\&.
+.PP
+Referenced by system_wizard()\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_wizard_addpage (struct \fBdtsgui_wizard\fP *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)"
 
 .PP
@@ -109,6 +117,10 @@ New panel that will need to be configured and processed after completion\&.
 
 .PP
 Definition at line 942 of file wrapper\&.cpp\&.
+.PP
+References dtsgui_wizard::AddPage()\&.
+.PP
+Referenced by system_wizard()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

@@ -17,7 +17,7 @@
 */
 
 /** @file
-  * @ingroup C-API CORE
+  * @ingroup CORE C-API
   * @brief Main include file for the GUI Library
   *
   * This file needs to be included to use the defined functions and API.
@@ -33,32 +33,6 @@
 
 #include <stdint.h>
 #include <dtsapp.h>
-
-/** @brief Forward decleration of the application data class*/
-typedef struct dtsgui dtsgui;
-/** @brief Forward decleration of wizard class*/
-typedef struct dtsgui_wizard dtsgui_wizard;
-/** @brief Forward definition of form_item*/
-typedef struct form_item form_item;
-/** @brief Forward definition of dynamic_panel*/
-typedef struct dynamic_panel dynamic_panel;
-
-/** @brief Define menu as void* it is not exported to API*/
-typedef void *dtsgui_menu;
-/** @brief Define menuitem as void* it is not exported to API*/
-typedef void *dtsgui_menuitem;
-/** @brief Define panel as void* it is not exported to API*/
-typedef void *dtsgui_pane;
-/** @brief Define notebook as void* it is not exported to API*/
-typedef void *dtsgui_notebook;
-/** @brief Define treeview as void* it is not exported to API*/
-typedef void *dtsgui_treeview;
-/** @brief Define tabview as void* it is not exported to API*/
-typedef void *dtsgui_tabview;
-/** @brief Define treenode as void* it is not exported to API*/
-typedef void *dtsgui_treenode;
-/** @brief Define progress as void* it is not exported to API*/
-typedef void *dtsgui_progress;
 
 /** @brief Callback event for tree view.*/
 enum tree_cbtype {
@@ -103,6 +77,18 @@ typedef int (*dtsgui_configcb)(struct dtsgui*, void*);
   * @return A non zero value to allow further processing of the event.*/ 
 typedef int (*event_callback)(struct dtsgui*, dtsgui_pane, int type, int, void*);
 
+/** @brief Calback to configure and return a wxToolbar objecct.
+  * @see DTSFrame::SetupToolbar()
+  * @see dtsgui_setuptoolbar
+  * @param dtsgui Application data ptr.
+  * @param window Application frame (Parent window wxWindow)
+  * @param style Style to be supplied to wxToolbar constructor.
+  * @param wid Window id to be supplied.
+  * @param name Name to be supplied.
+  * @param data Reference to data supplied when setting upt the tool bar.
+  * @return Must return a wxToolbar object.*/
+typedef void* (*dtsgui_toolbar_create)(struct dtsgui*, void *, long, int, const char*, void *data);
+
 /** @brief Callback called when a dynamic menu item is selected
   * This function is called and allows returning a pane to be displayed.
   * @see DTSFrame::NewMenuItem()
@@ -113,12 +99,58 @@ typedef int (*event_callback)(struct dtsgui*, dtsgui_pane, int type, int, void*)
   * @return If a panel is returned it will be displayed.*/
 typedef dtsgui_pane (*dtsgui_dynpanel)(struct dtsgui*, const char*, void*);
 
-typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_treenode, enum tree_cbtype cb_type, const char*, void*);
+/** @brief Callback used for tree view events
+  *
+  * @see DTSTreeWindowEvent::TreeCallback()
+  * @see tree_cbtype
+  * @param dtsgui Application data ptr.
+  * @param tree Treeview.
+  * @param node Tree node that generated the event.
+  * @param type Callback type.
+  * @param title Name of node.
+  * @param data Userdata refernece of data passed too treeview.
+  * @return If a panel is returned it will be placed int the display area.*/
+typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_treenode, enum tree_cbtype, const char*, void*);
+
+/** @brief Callback called as part of the creation of a new node.
+  * This callback will allow manipulation of the newly created node if required.
+  * @see dtsgui_newxmltreenode()
+  * @see tree_newnode::tree_newnode()
+  * @param tree Tree view that contains the node.
+  * @param node Newly created tree node.
+  * @param xn XML Node assigned to the node.
+  * @param data Reference to user data.*/
 typedef void (*dtsgui_xmltreenode_cb)(dtsgui_treeview, dtsgui_treenode, struct xml_node*, void*);
 typedef void (*dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void*);
+
 typedef void (*dtsgui_tabpanel_cb)(dtsgui_pane, void*);
-typedef void* (*dtsgui_toolbar_create)(struct dtsgui*, void *, long, int, const char*, void *data);
 typedef void (*dtsgui_tabpane_newdata_cb)(struct xml_doc*, struct xml_node*, void*, void**, int*);
+
+/** @brief Forward decleration of the application data class*/
+typedef struct dtsgui dtsgui;
+/** @brief Forward decleration of wizard class*/
+typedef struct dtsgui_wizard dtsgui_wizard;
+/** @brief Forward definition of form_item*/
+typedef struct form_item form_item;
+/** @brief Forward definition of dynamic_panel*/
+typedef struct dynamic_panel dynamic_panel;
+
+/** @brief Define menu as void* it is not exported to API*/
+typedef void *dtsgui_menu;
+/** @brief Define menuitem as void* it is not exported to API*/
+typedef void *dtsgui_menuitem;
+/** @brief Define panel as void* it is not exported to API*/
+typedef void *dtsgui_pane;
+/** @brief Define notebook as void* it is not exported to API*/
+typedef void *dtsgui_notebook;
+/** @brief Define treeview as void* it is not exported to API*/
+typedef void *dtsgui_treeview;
+/** @brief Define tabview as void* it is not exported to API*/
+typedef void *dtsgui_tabview;
+/** @brief Define treenode as void* it is not exported to API*/
+typedef void *dtsgui_treenode;
+/** @brief Define progress as void* it is not exported to API*/
+typedef void *dtsgui_progress;
 
 /** @brief A simple data structure to store a coordinate*/
 struct point {

@@ -41,6 +41,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="928" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="928" bodyend="930"/>
+        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
+        <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_wizard_1ga3e76b1ea2eebb91e1d0b5a55649d65e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -101,6 +103,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="942" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="942" bodyend="944"/>
+        <references refid="classdtsgui__wizard_1a02984b1d70df5100e8b6200e0bb1b421" compoundref="_d_t_s_wizard_8cpp" startline="48" endline="79">dtsgui_wizard::AddPage</references>
+        <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_wizard_1ga25174d47f2e9680d41aebdf08ff9b979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -128,6 +132,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="957" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="957" bodyend="959"/>
+        <references refid="classdtsgui__wizard_1ab0554e6b9fe1d2c0419a6659d883edf3" compoundref="_d_t_s_wizard_8cpp" startline="81" endline="86">dtsgui_wizard::RunWizard</references>
+        <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

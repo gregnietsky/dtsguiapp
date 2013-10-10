@@ -1,7 +1,10 @@
 var searchData=
 [
+  ['w',['w',['../classdynamic__panel.html#a5d13849f704cffb0ecfde8dfdb072571',1,'dynamic_panel']]],
+  ['widget',['widget',['../classform__item.html#a6720d7a562d897686e128fc2146702e7',1,'form_item']]],
   ['widget_5ftype',['widget_type',['../group___c_o_r_e.html#gafd296180392ef5681415b9fb0590be84',1,'dtsgui.h']]],
   ['widgets',['widgets',['../unionwidgets.html',1,'']]],
+  ['wiz',['wiz',['../classdtsgui__wizard.html#a54ee023336fe1f000bb593c7dcbbcc9d',1,'dtsgui_wizard']]],
   ['wizard_2ec',['wizard.c',['../wizard_8c.html',1,'']]],
   ['wizz_5facd',['wizz_acd',['../wizard_8c.html#a34653c75ebbdc91cadc68180a51b121b',1,'wizard.c']]],
   ['wizz_5fcustinfo',['wizz_custinfo',['../private_8h.html#accc1788f03d17d487ce09a1d07d53018',1,'wizz_custinfo(dtsgui_pane *pg):&#160;wizard.c'],['../wizard_8c.html#accc1788f03d17d487ce09a1d07d53018',1,'wizz_custinfo(dtsgui_pane *pg):&#160;wizard.c']]],
@@ -15,7 +18,9 @@ var searchData=
   ['wizz_5ftrunk',['wizz_trunk',['../wizard_8c.html#aa274a72a578011082041109b5e2d8b22',1,'wizard.c']]],
   ['wizz_5fvoip',['wizz_voip',['../wizard_8c.html#a4663a22f17fb8c01f6058f117ed6c201',1,'wizard.c']]],
   ['wizz_5fx509',['wizz_x509',['../wizard_8c.html#a81b5895e97fa4d47dbd829cccffa1b7b',1,'wizard.c']]],
+  ['wpos',['wpos',['../classdtsgui.html#a7a64aff083bfba24859a4c47e9d89c53',1,'dtsgui']]],
   ['wrapper_2ecpp',['wrapper.cpp',['../wrapper_8cpp.html',1,'']]],
+  ['wsize',['wsize',['../classdtsgui.html#a04955c97163ded998019001b749a1883',1,'dtsgui']]],
   ['wx_5fdtspanel_5fdialog',['wx_DTSPANEL_DIALOG',['../group___c_o_r_e.html#gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a',1,'dtsgui.h']]],
   ['wx_5fdtspanel_5fpanel',['wx_DTSPANEL_PANEL',['../group___c_o_r_e.html#gga9275874ac61d3750aa677a36da714373a0e31c26466ea939007976914785fff2c',1,'dtsgui.h']]],
   ['wx_5fdtspanel_5fscrollpanel',['wx_DTSPANEL_SCROLLPANEL',['../group___c_o_r_e.html#gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500',1,'dtsgui.h']]],

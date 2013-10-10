@@ -188,6 +188,8 @@ The fuction does not return\&.
 
 .PP
 Definition at line 156 of file wrapper\&.cpp\&.
+.PP
+Referenced by main()\&.
 .SS "void DTS_C_API::dtsgui_menuitemenable (\fBdtsgui_menuitem\fPdmi, intenable)"
 
 .PP
@@ -201,6 +203,8 @@ Enable/Disable an menu item\&. \fBParameters:\fP
 
 .PP
 Definition at line 243 of file wrapper\&.cpp\&.
+.PP
+Referenced by open_config(), and save_config()\&.
 .SS "int DTS_C_API::dtsgui_run (intargc, char **argv)"
 
 .PP
@@ -228,6 +232,8 @@ Return value from callback function\&.
 
 .PP
 Definition at line 171 of file wrapper\&.cpp\&.
+.PP
+Referenced by main()\&.
 .SS "void DTS_C_API::dtsgui_sendevent (struct \fBdtsgui\fP *dtsgui, inteid)"
 
 .PP
@@ -246,6 +252,10 @@ Emit a event handled by event callback's A event is emited and recived by all ac
 
 .PP
 Definition at line 210 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame(), and DTSFrame::SendDTSEvent()\&.
+.PP
+Referenced by open_config()\&.
 .SS "void DTS_C_API::dtsgui_set_toolbar (struct \fBdtsgui\fP *dtsgui, intshow)"
 
 .PP
@@ -264,6 +274,10 @@ Disable or enable the toolbar\&. \fBSee Also:\fP
 
 .PP
 Definition at line 253 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::ShowToolbar()\&.
+.PP
+Referenced by open_config(), and save_config()\&.
 .SS "void DTS_C_API::dtsgui_setuptoolbar (struct \fBdtsgui\fP *dtsgui, \fBdtsgui_toolbar_create\fPcb, void *data)"
 
 .PP
@@ -284,6 +298,10 @@ Callback to run to create and activate the toolbar\&. The toolbar has of yet not
 
 .PP
 Definition at line 224 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame(), and DTSFrame::SetupToolbar()\&.
+.PP
+Referenced by guiconfig_cb()\&.
 .SS "void DTS_C_API::dtsgui_setwindow (struct \fBdtsgui\fP *dtsgui, \fBdtsgui_pane\fPp)"
 
 .PP
@@ -304,6 +322,8 @@ Set the displayed panel\&. Switch the curent pane with the one provided this sho
 
 .PP
 Definition at line 198 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetFrame(), and DTSFrame::SetWindow()\&.
 .SS "void DTS_C_API::dtsgui_titleappend (struct \fBdtsgui\fP *dtsgui, const char *text)"
 
 .PP
@@ -322,6 +342,10 @@ Append text to the title enclosed in square brackets Update the main application
 
 .PP
 Definition at line 235 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::AppendTitle()\&.
+.PP
+Referenced by open_config(), and save_config()\&.
 .SS "void* DTS_C_API::dtsgui_userdata (struct \fBdtsgui\fP *dtsgui)"
 
 .PP
@@ -348,6 +372,10 @@ Reference to application user data
 
 .PP
 Definition at line 184 of file wrapper\&.cpp\&.
+.PP
+References dtsgui::GetUserData()\&.
+.PP
+Referenced by advanced_config(), app_getxmldoc(), config_menu(), export_config(), file_menu(), newsys_wizard(), open_config(), save_config(), and view_config_conf()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

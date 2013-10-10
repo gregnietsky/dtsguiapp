@@ -17,6 +17,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="49" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_d_t_s_panel_event_1aff96878e6ad8892cb0aff455592388d0" compoundref="_d_t_s_panel_8cpp" startline="52" endline="58">DTSPanelEvent</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ad6d0fb736bf45162b6bf2082e437195b" compoundref="_d_t_s_panel_8cpp" startline="70" endline="82">SetCallback</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1abc29f1fa037447b888db14249d480de5" compoundref="_d_t_s_panel_8cpp" startline="60" endline="68">~DTSPanelEvent</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_panel_event_1a63313454db1807ffd97873cb2ffd5e0d" prot="private" static="no" mutable="no">
         <type>void *</type>
@@ -30,6 +33,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="51" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_d_t_s_panel_event_1aff96878e6ad8892cb0aff455592388d0" compoundref="_d_t_s_panel_8cpp" startline="52" endline="58">DTSPanelEvent</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ae1fda2b21c16c83d067c5305d5338bd6" compoundref="_d_t_s_panel_8cpp" startline="111" endline="142">OnButton</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1a878aaab5bddc9167d3d2380ea7de0f31" compoundref="_d_t_s_panel_8cpp" startline="206" endline="214">OnDTSEvent</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ad6d0fb736bf45162b6bf2082e437195b" compoundref="_d_t_s_panel_8cpp" startline="70" endline="82">SetCallback</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1abc29f1fa037447b888db14249d480de5" compoundref="_d_t_s_panel_8cpp" startline="60" endline="68">~DTSPanelEvent</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" prot="private" static="no" mutable="no">
         <type><ref refid="group___c_o_r_e_1ga06d1a959e1581116961bca636a919043" kindref="member">event_callback</ref></type>
@@ -43,6 +51,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="52" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="class_d_t_s_panel_event_1aff96878e6ad8892cb0aff455592388d0" compoundref="_d_t_s_panel_8cpp" startline="52" endline="58">DTSPanelEvent</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ae1fda2b21c16c83d067c5305d5338bd6" compoundref="_d_t_s_panel_8cpp" startline="111" endline="142">OnButton</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1a8e755136313a6c423167af1d44dfc710" compoundref="_d_t_s_panel_8cpp" startline="151" endline="204">OnCombo</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1a878aaab5bddc9167d3d2380ea7de0f31" compoundref="_d_t_s_panel_8cpp" startline="206" endline="214">OnDTSEvent</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ad6d0fb736bf45162b6bf2082e437195b" compoundref="_d_t_s_panel_8cpp" startline="70" endline="82">SetCallback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" prot="private" static="no" mutable="no">
         <type><ref refid="class_d_t_s_object" kindref="compound">DTSObject</ref> *</type>
@@ -56,6 +70,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="53" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_d_t_s_panel_event_1aff96878e6ad8892cb0aff455592388d0" compoundref="_d_t_s_panel_8cpp" startline="52" endline="58">DTSPanelEvent</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ae1fda2b21c16c83d067c5305d5338bd6" compoundref="_d_t_s_panel_8cpp" startline="111" endline="142">OnButton</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1a8e755136313a6c423167af1d44dfc710" compoundref="_d_t_s_panel_8cpp" startline="151" endline="204">OnCombo</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ae7b3a422bc55f7f9f676b2b640614fd9" compoundref="_d_t_s_panel_8cpp" startline="144" endline="149">OnDialog</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -76,6 +95,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="38" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="52" bodyend="58"/>
+        <references refid="class_d_t_s_panel_event_1a63313454db1807ffd97873cb2ffd5e0d" compoundref="_d_t_s_panel_8h" startline="51">data</references>
+        <references refid="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" compoundref="_d_t_s_panel_8h" startline="52">evcb</references>
+        <references refid="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" compoundref="_d_t_s_panel_8h" startline="53">parent</references>
+        <references refid="class_d_t_s_panel_event_1a51478063cdaccd9bb7df533e0a7fc442" compoundref="_d_t_s_panel_8h" startline="49">refobj</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1abc29f1fa037447b888db14249d480de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -89,6 +112,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="39" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="60" bodyend="68"/>
+        <references refid="class_d_t_s_panel_event_1a63313454db1807ffd97873cb2ffd5e0d" compoundref="_d_t_s_panel_8h" startline="51">data</references>
+        <references refid="class_d_t_s_panel_event_1a51478063cdaccd9bb7df533e0a7fc442" compoundref="_d_t_s_panel_8h" startline="49">refobj</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1ac885bd160c79e96062605dc1f0fcd4f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -110,6 +135,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="40" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="220" bodyend="222"/>
+        <references refid="class_d_t_s_panel_event_1ae1fda2b21c16c83d067c5305d5338bd6" compoundref="_d_t_s_panel_8cpp" startline="111" endline="142">OnButton</references>
+        <referencedby refid="class_d_t_s_panel_1ae2385ab076d14fdecc0d58285063c520" compoundref="_d_t_s_panel_8cpp" startline="711" endline="731">DTSPanel::Buttons</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1af2333021915425cd85ab9544170e7152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -127,6 +154,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="41" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="216" bodyend="218"/>
+        <references refid="class_d_t_s_panel_event_1a878aaab5bddc9167d3d2380ea7de0f31" compoundref="_d_t_s_panel_8cpp" startline="206" endline="214">OnDTSEvent</references>
+        <referencedby refid="class_d_t_s_panel_1abfe32d536cdcb2eee87a5c0ef1df826f" compoundref="_d_t_s_panel_8cpp" startline="336" endline="355">DTSPanel::DTSPanel</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1a99f09a166ea777c2dcc572284594b00e" compoundref="_d_t_s_panel_8cpp" startline="949" endline="997">DTSTabPage::operator=</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1a65d4d4e41f8fe4501dfccab666b46123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -148,6 +178,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="42" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="224" bodyend="227"/>
+        <references refid="class_d_t_s_panel_event_1a8e755136313a6c423167af1d44dfc710" compoundref="_d_t_s_panel_8cpp" startline="151" endline="204">OnCombo</references>
+        <referencedby refid="class_d_t_s_panel_1ad91d3ca25ab8349403efc7cc78cb1869" compoundref="_d_t_s_panel_8cpp" startline="671" endline="692">DTSPanel::ComboBox</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1ae1fda2b21c16c83d067c5305d5338bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -165,6 +197,17 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="43" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="111" bodyend="142"/>
+        <references refid="class_d_t_s_object_1abcce46b892d3c17810d4551c495512ce" compoundref="_d_t_s_panel_8h" startline="70">DTSObject::buttons</references>
+        <references refid="class_d_t_s_panel_event_1a63313454db1807ffd97873cb2ffd5e0d" compoundref="_d_t_s_panel_8h" startline="51">data</references>
+        <references refid="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" compoundref="_d_t_s_panel_8h" startline="52">evcb</references>
+        <references refid="class_d_t_s_object_1a392c5ee37a2ca5e82e39cf11bc781eda" compoundref="_d_t_s_panel_8cpp" startline="311" endline="312">DTSObject::EventHandler</references>
+        <references refid="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" compoundref="_d_t_s_panel_8h" startline="53">parent</references>
+        <references refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</references>
+        <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" compoundref="dtsgui_8h" startline="211">wx_DTSPANEL_DIALOG</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a331937b86eb259d1d84728d28fbed79d" compoundref="dtsgui_8h" startline="184">wx_PANEL_EVENT_BUTTON</references>
+        <referencedby refid="class_d_t_s_panel_event_1ac885bd160c79e96062605dc1f0fcd4f4" compoundref="_d_t_s_panel_8cpp" startline="220" endline="222">BindButton</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1ae7b3a422bc55f7f9f676b2b640614fd9" compoundref="_d_t_s_panel_8cpp" startline="144" endline="149">OnDialog</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1a8e755136313a6c423167af1d44dfc710" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,6 +225,16 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="44" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="151" bodyend="204"/>
+        <references refid="classdtsgui_1aa47c583745cf2afd984cd09088d8fa00" compoundref="_d_t_s_app_8h" startline="37">dtsgui::cb</references>
+        <references refid="classform__item_1acaa83eeebb557f7e66ae998bc45dc6c9" compoundref="pitems_8h" startline="68">form_item::dtype</references>
+        <references refid="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" compoundref="_d_t_s_panel_8h" startline="52">evcb</references>
+        <references refid="class_d_t_s_object_1a4cadcce0480e7e8f4a9a07a4aedd3c1f" compoundref="_d_t_s_panel_8cpp" startline="304" endline="309">DTSObject::GetItems</references>
+        <references refid="classform__item_1a9d5508fb933bef9f078f702338e3d166" compoundref="pitems_8cpp" startline="213" endline="215">form_item::GetWidget</references>
+        <references refid="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" compoundref="_d_t_s_panel_8h" startline="53">parent</references>
+        <references refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a05cb2a662e44a9332f631e8fb04ea5ef" compoundref="dtsgui_8h" startline="186">wx_PANEL_EVENT_COMBO_ENTER</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a9d9853f83e3e28aaca0621c788994cc8" compoundref="dtsgui_8h" startline="188">wx_PANEL_EVENT_COMBO_UPDATE</references>
+        <referencedby refid="class_d_t_s_panel_event_1a65d4d4e41f8fe4501dfccab666b46123" compoundref="_d_t_s_panel_8cpp" startline="224" endline="227">BindCombo</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1a878aaab5bddc9167d3d2380ea7de0f31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,6 +252,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="45" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="206" bodyend="214"/>
+        <references refid="class_d_t_s_panel_event_1a63313454db1807ffd97873cb2ffd5e0d" compoundref="_d_t_s_panel_8h" startline="51">data</references>
+        <references refid="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" compoundref="_d_t_s_panel_8h" startline="52">evcb</references>
+        <references refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a8f700b4b2b17b782d57dd32dc696956c" compoundref="dtsgui_8h" startline="190">wx_PANEL_EVENT_DTS</references>
+        <referencedby refid="class_d_t_s_panel_event_1af2333021915425cd85ab9544170e7152" compoundref="_d_t_s_panel_8cpp" startline="216" endline="218">BindDTSEvent</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1ad6d0fb736bf45162b6bf2082e437195b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -222,6 +280,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="46" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="70" bodyend="82"/>
+        <references refid="class_d_t_s_panel_event_1a63313454db1807ffd97873cb2ffd5e0d" compoundref="_d_t_s_panel_8h" startline="51">data</references>
+        <references refid="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" compoundref="_d_t_s_panel_8h" startline="52">evcb</references>
+        <references refid="class_d_t_s_panel_event_1a51478063cdaccd9bb7df533e0a7fc442" compoundref="_d_t_s_panel_8h" startline="49">refobj</references>
+        <referencedby refid="class_d_t_s_panel_1ac18de08077529d488ea329a72ee14d98" compoundref="_d_t_s_panel_8cpp" startline="394" endline="403">DTSPanel::SetEventCallback</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1ae7b3a422bc55f7f9f676b2b640614fd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -239,6 +301,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="47" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="144" bodyend="149"/>
+        <references refid="class_d_t_s_object_1abcce46b892d3c17810d4551c495512ce" compoundref="_d_t_s_panel_8h" startline="70">DTSObject::buttons</references>
+        <references refid="class_d_t_s_panel_event_1ae1fda2b21c16c83d067c5305d5338bd6" compoundref="_d_t_s_panel_8cpp" startline="111" endline="142">OnButton</references>
+        <references refid="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" compoundref="_d_t_s_panel_8h" startline="53">parent</references>
+        <referencedby refid="class_d_t_s_dialog_1a09808605e28e0870bd717a975fd0d856" compoundref="_d_t_s_panel_8cpp" startline="1035" endline="1054">DTSDialog::DTSDialog</referencedby>
+        <referencedby refid="class_d_t_s_scroll_panel_1a3ded23df3221978b4f78e2ff6cc53366" compoundref="_d_t_s_panel_8cpp" startline="886" endline="896">DTSScrollPanel::DTSScrollPanel</referencedby>
+        <referencedby refid="class_d_t_s_static_panel_1ac982605cd17112ca73ede769814cca47" compoundref="_d_t_s_panel_8cpp" startline="999" endline="1007">DTSStaticPanel::DTSStaticPanel</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -266,6 +334,13 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="50" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="84" bodyend="109"/>
+        <references refid="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" compoundref="_d_t_s_panel_8h" startline="52">evcb</references>
+        <references refid="class_d_t_s_frame_1a0a5798261ab9b56b7938f968b4032a24" compoundref="_d_t_s_frame_8cpp" startline="299" endline="304">DTSFrame::GetDTSData</references>
+        <references refid="class_d_t_s_object_1ae5239b912c725a7a5720954767c3537a" compoundref="_d_t_s_panel_8cpp" startline="274" endline="276">DTSObject::GetFrame</references>
+        <references refid="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" compoundref="_d_t_s_panel_8h" startline="53">parent</references>
+        <referencedby refid="class_d_t_s_panel_event_1ae1fda2b21c16c83d067c5305d5338bd6" compoundref="_d_t_s_panel_8cpp" startline="111" endline="142">OnButton</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1a8e755136313a6c423167af1d44dfc710" compoundref="_d_t_s_panel_8cpp" startline="151" endline="204">OnCombo</referencedby>
+        <referencedby refid="class_d_t_s_panel_event_1a878aaab5bddc9167d3d2380ea7de0f31" compoundref="_d_t_s_panel_8cpp" startline="206" endline="214">OnDTSEvent</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -273,25 +348,74 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="78">
+      <node id="116">
         <label>DTSPanelEvent</label>
         <link refid="class_d_t_s_panel_event"/>
-        <childnode refid="79" relation="public-inheritance">
+        <childnode refid="117" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="79">
+      <node id="117">
         <label>wxEvtHandler</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="80">
-        <label>DTSPanelEvent</label>
-        <link refid="class_d_t_s_panel_event"/>
-        <childnode refid="81" relation="public-inheritance">
+      <node id="124">
+        <label>DTSObject</label>
+        <link refid="class_d_t_s_object"/>
+        <childnode refid="125" relation="public-inheritance">
+        </childnode>
+        <childnode refid="121" relation="usage">
+          <edgelabel>frame</edgelabel>
         </childnode>
       </node>
-      <node id="81">
+      <node id="118">
+        <label>DTSPanelEvent</label>
+        <link refid="class_d_t_s_panel_event"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+        <childnode refid="120" relation="usage">
+          <edgelabel>evcb</edgelabel>
+        </childnode>
+        <childnode refid="124" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="119">
         <label>wxEvtHandler</label>
+      </node>
+      <node id="125">
+        <label>wxWindow</label>
+      </node>
+      <node id="122">
+        <label>wxFrame</label>
+      </node>
+      <node id="120">
+        <label>dtsgui</label>
+        <link refid="classdtsgui"/>
+        <childnode refid="121" relation="usage">
+          <edgelabel>appframe</edgelabel>
+        </childnode>
+        <childnode refid="120" relation="usage">
+          <edgelabel>cb</edgelabel>
+        </childnode>
+        <childnode refid="123" relation="usage">
+          <edgelabel>wsize</edgelabel>
+          <edgelabel>wpos</edgelabel>
+        </childnode>
+      </node>
+      <node id="123">
+        <label>point</label>
+        <link refid="structpoint"/>
+      </node>
+      <node id="121">
+        <label>DTSFrame</label>
+        <link refid="class_d_t_s_frame"/>
+        <childnode refid="122" relation="public-inheritance">
+        </childnode>
+        <childnode refid="120" relation="usage">
+          <edgelabel>dtsgui</edgelabel>
+          <edgelabel>tbcb</edgelabel>
+        </childnode>
       </node>
     </collaborationgraph>
     <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="36" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="36" bodyend="54"/>

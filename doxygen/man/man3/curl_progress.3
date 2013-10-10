@@ -31,6 +31,13 @@ curl_progress \-
 .RI "int \fBpause\fP"
 .br
 .in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "class \fBdtsgui_curl\fP * \fBowner\fP"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 Definition at line 57 of file DTSApp\&.h\&.
@@ -48,16 +55,26 @@ Definition at line 227 of file DTSApp\&.cpp\&.
 
 .PP
 Definition at line 243 of file DTSApp\&.cpp\&.
+.PP
+Referenced by dtsgui_curl::curl_progress_ctrl(), and dtsgui_curl::curl_progress_function()\&.
 .SH "Member Data Documentation"
 .PP 
+.SS "class \fBdtsgui_curl\fP* curl_progress::owner\fC [private]\fP"
+
+.PP
+Definition at line 65 of file DTSApp\&.h\&.
 .SS "int curl_progress::pause"
 
 .PP
 Definition at line 63 of file DTSApp\&.h\&.
+.PP
+Referenced by dtsgui_curl::curl_progress_ctrl(), and dtsgui_curl::curl_progress_function()\&.
 .SS "int curl_progress::pd"
 
 .PP
 Definition at line 62 of file DTSApp\&.h\&.
+.PP
+Referenced by dtsgui_curl::curl_progress_ctrl(), and dtsgui_curl::curl_progress_function()\&.
 
 .SH "Author"
 .PP 

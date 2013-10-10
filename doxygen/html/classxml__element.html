@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('classxml__element.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classxml__element-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">xml_element Class Reference</div>  </div>
@@ -124,6 +125,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a232e850ca67d3d065d1c16bea79cb441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0415b9bbe906cbab04e2c78c84ae5bc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxml__element.html#ae0415b9bbe906cbab04e2c78c84ae5bc">GetValue</a> ()</td></tr>
 <tr class="separator:ae0415b9bbe906cbab04e2c78c84ae5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7064cb97bc7806a0d2fb792d9c0891e5"><td class="memItemLeft" align="right" valign="top">struct xml_search *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxml__element.html#a7064cb97bc7806a0d2fb792d9c0891e5">xsearch</a></td></tr>
+<tr class="separator:a7064cb97bc7806a0d2fb792d9c0891e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78560d170e3256faa79d79679552b717"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxml__element.html#a78560d170e3256faa79d79679552b717">xpath</a></td></tr>
+<tr class="separator:a78560d170e3256faa79d79679552b717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1c544e39cc117f13e692f59cf020c1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxml__element.html#a5e1c544e39cc117f13e692f59cf020c1">attr</a></td></tr>
+<tr class="separator:a5e1c544e39cc117f13e692f59cf020c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -161,6 +171,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="pitems_8cpp_source.html#l00038">38</a> of file <a class="el" href="pitems_8cpp_source.html">pitems.cpp</a>.</p>
 
+<p>References <a class="el" href="pitems_8h_source.html#l00035">attr</a>, <a class="el" href="pitems_8h_source.html#l00034">xpath</a>, and <a class="el" href="pitems_8h_source.html#l00033">xsearch</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -195,6 +207,10 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="pitems_8cpp_source.html#l00059">59</a> of file <a class="el" href="pitems_8cpp_source.html">pitems.cpp</a>.</p>
 
+<p>References <a class="el" href="pitems_8h_source.html#l00035">attr</a>, and <a class="el" href="pitems_8h_source.html#l00033">xsearch</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_panel_8cpp_source.html#l00615">DTSPanel::XMLCheckBox()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00694">DTSPanel::XMLComboBox()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00654">DTSPanel::XMLListBox()</a>, and <a class="el" href="_d_t_s_panel_8cpp_source.html#l00572">DTSPanel::XMLTextBox()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a232e850ca67d3d065d1c16bea79cb441"></a>
@@ -223,6 +239,83 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="pitems_8cpp_source.html#l00046">46</a> of file <a class="el" href="pitems_8cpp_source.html">pitems.cpp</a>.</p>
 
+<p>References <a class="el" href="pitems_8h_source.html#l00035">attr</a>, and <a class="el" href="pitems_8h_source.html#l00033">xsearch</a>.</p>
+
+<p>Referenced by <a class="el" href="_d_t_s_panel_8cpp_source.html#l00733">DTSPanel::Update_XML()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5e1c544e39cc117f13e692f59cf020c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* xml_element::attr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pitems_8h_source.html#l00035">35</a> of file <a class="el" href="pitems_8h_source.html">pitems.h</a>.</p>
+
+<p>Referenced by <a class="el" href="pitems_8cpp_source.html#l00059">GetValue()</a>, <a class="el" href="pitems_8cpp_source.html#l00046">Modify()</a>, and <a class="el" href="pitems_8cpp_source.html#l00038">xml_element()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78560d170e3256faa79d79679552b717"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* xml_element::xpath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pitems_8h_source.html#l00034">34</a> of file <a class="el" href="pitems_8h_source.html">pitems.h</a>.</p>
+
+<p>Referenced by <a class="el" href="pitems_8cpp_source.html#l00038">xml_element()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7064cb97bc7806a0d2fb792d9c0891e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct xml_search* xml_element::xsearch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="pitems_8h_source.html#l00033">33</a> of file <a class="el" href="pitems_8h_source.html">pitems.h</a>.</p>
+
+<p>Referenced by <a class="el" href="pitems_8cpp_source.html#l00059">GetValue()</a>, <a class="el" href="pitems_8cpp_source.html#l00046">Modify()</a>, and <a class="el" href="pitems_8cpp_source.html#l00038">xml_element()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -235,7 +328,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classxml__element.html">xml_element</a></li>
-    <li class="footer">Generated on Thu Oct 10 2013 16:13:05 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 22:26:38 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>
