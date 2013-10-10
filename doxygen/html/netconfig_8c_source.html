@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('netconfig_8c_source.html','');});
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="netconfig_8c.html#adbe54f6a0a7e02ca7aa64f300dc162b0">   30</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="netconfig_8c.html#adbe54f6a0a7e02ca7aa64f300dc162b0">protocols</a>[] = {<span class="stringliteral">&quot;TCP&quot;</span>, <span class="stringliteral">&quot;UDP&quot;</span>, <span class="stringliteral">&quot;GRE&quot;</span>, <span class="stringliteral">&quot;ESP&quot;</span>, <span class="stringliteral">&quot;AH&quot;</span>, <span class="stringliteral">&quot;OSPF&quot;</span>, <span class="stringliteral">&quot;ALL&quot;</span>};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="netconfig_8c.html#ae22737be42f8d0e7f4095a937e911578">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="netconfig_8c.html#ae22737be42f8d0e7f4095a937e911578">customer_info</a>(<a class="code" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438" title="Define panel as void* it is not exported to API.">dtsgui_pane</a> p, <a class="code" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241" title="Define treeview as void* it is not exported to API.">dtsgui_treeview</a> <span class="keyword">self</span>, <a class="code" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5" title="Define treenode as void* it is not exported to API.">dtsgui_treenode</a> node, <span class="keywordtype">void</span> *data) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="private_8h.html#accc1788f03d17d487ce09a1d07d53018">wizz_custinfo</a>(p);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="group___d_t_s-_a_p_p-_wizard.html#gaccc1788f03d17d487ce09a1d07d53018">wizz_custinfo</a>(p);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*XXX LDAP Settings server/DN*/</span></div>
@@ -852,7 +852,7 @@ $(document).ready(function(){initNavTree('netconfig_8c_source.html','');});
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    <span class="keywordtype">char</span> defconf[PATH_MAX];</div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;</div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <span class="comment">/*get default for test window*/</span></div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="private_8h.html#a65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <span class="keywordflow">if</span> (!(appdata = <a class="code" href="group___c-_a_p_i.html#gaa224c0a868745526e6ac3c05970471c5" title="Obtain a reference for the application userdata.">dtsgui_userdata</a>(dtsgui))) {</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        }</div>
@@ -881,7 +881,7 @@ $(document).ready(function(){initNavTree('netconfig_8c_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="netconfig_8c.html">netconfig.c</a></li>
-    <li class="footer">Generated on Thu Oct 10 2013 23:45:06 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 00:37:52 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

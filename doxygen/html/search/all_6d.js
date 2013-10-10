@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main',['main',['../wxforms_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'wxforms.c']]],
+  ['main',['main',['../group___d_t_s-_a_p_p.html#ga3c04138a5bfe5d72780bb7e82a18e627',1,'wxforms.c']]],
   ['mdelete',['mdelete',['../classtreemenu.html#a359469982a21e31368621e0cda9c5f5d',1,'treemenu']]],
   ['mdown',['mdown',['../classtreemenu.html#a662ecad63db574b8e5766be9875ddd3a',1,'treemenu']]],
   ['menu',['menu',['../classtreemenu.html#ac4c099bd171f3b9a862c1b117e90d23a',1,'treemenu']]],

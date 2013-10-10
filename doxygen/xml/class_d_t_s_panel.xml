@@ -219,7 +219,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="87" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="554" bodyend="570"/>
         <references refid="class_d_t_s_panel_1a714c09276642d4a0cf20cc5d941f62a1" compoundref="_d_t_s_panel_8cpp" startline="440" endline="446">AddItem</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836" compoundref="dtsgui_8h" startline="229">DTS_WIDGET_TEXTBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836" compoundref="dtsgui_8h" startline="244">DTS_WIDGET_TEXTBOX</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9a5c592b75994135a5de470f79e40aafda" compoundref="dtsgui_8h" startline="52">DTSGUI_FORM_DATA_XML</references>
         <references refid="class_d_t_s_object_1a53fa1242a31d95bc3fec2824ff055cae" compoundref="_d_t_s_panel_8h" startline="77">DTSObject::fitems</references>
         <references refid="class_d_t_s_panel_1a40a4abd45ab1af5aff6eb893aeb0eede" compoundref="_d_t_s_panel_8h" startline="119">g_row</references>
@@ -317,7 +317,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="89" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="595" bodyend="613"/>
         <references refid="class_d_t_s_panel_1a714c09276642d4a0cf20cc5d941f62a1" compoundref="_d_t_s_panel_8cpp" startline="440" endline="446">AddItem</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28" compoundref="dtsgui_8h" startline="230">DTS_WIDGET_CHECKBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28" compoundref="dtsgui_8h" startline="245">DTS_WIDGET_CHECKBOX</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9a5c592b75994135a5de470f79e40aafda" compoundref="dtsgui_8h" startline="52">DTSGUI_FORM_DATA_XML</references>
         <references refid="class_d_t_s_object_1a53fa1242a31d95bc3fec2824ff055cae" compoundref="_d_t_s_panel_8h" startline="77">DTSObject::fitems</references>
         <references refid="class_d_t_s_panel_1a40a4abd45ab1af5aff6eb893aeb0eede" compoundref="_d_t_s_panel_8h" startline="119">g_row</references>
@@ -361,7 +361,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="90" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="635" bodyend="652"/>
         <references refid="class_d_t_s_panel_1a714c09276642d4a0cf20cc5d941f62a1" compoundref="_d_t_s_panel_8cpp" startline="440" endline="446">AddItem</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="231">DTS_WIDGET_LISTBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="246">DTS_WIDGET_LISTBOX</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9a5c592b75994135a5de470f79e40aafda" compoundref="dtsgui_8h" startline="52">DTSGUI_FORM_DATA_XML</references>
         <references refid="class_d_t_s_object_1a53fa1242a31d95bc3fec2824ff055cae" compoundref="_d_t_s_panel_8h" startline="77">DTSObject::fitems</references>
         <references refid="class_d_t_s_panel_1a40a4abd45ab1af5aff6eb893aeb0eede" compoundref="_d_t_s_panel_8h" startline="119">g_row</references>
@@ -407,7 +407,7 @@
         <references refid="class_d_t_s_panel_1a714c09276642d4a0cf20cc5d941f62a1" compoundref="_d_t_s_panel_8cpp" startline="440" endline="446">AddItem</references>
         <references refid="class_d_t_s_panel_event_1a65d4d4e41f8fe4501dfccab666b46123" compoundref="_d_t_s_panel_8cpp" startline="224" endline="227">DTSPanelEvent::BindCombo</references>
         <references refid="classform__item_1a601ff328ce4165b07d5ad23bd96967b7" compoundref="pitems_8h" startline="66">form_item::data</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="232">DTS_WIDGET_COMBOBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="247">DTS_WIDGET_COMBOBOX</references>
         <references refid="class_d_t_s_object_1a132481851865629352e4aefa7f822e4b" compoundref="_d_t_s_panel_8h" startline="76">DTSObject::dtsevthandler</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9a5c592b75994135a5de470f79e40aafda" compoundref="dtsgui_8h" startline="52">DTSGUI_FORM_DATA_XML</references>
         <references refid="class_d_t_s_object_1a53fa1242a31d95bc3fec2824ff055cae" compoundref="_d_t_s_panel_8h" startline="77">DTSObject::fitems</references>
@@ -915,8 +915,8 @@
         <references refid="class_d_t_s_object_1af8c7a75701ac05261749552eef4bc6ed" compoundref="_d_t_s_panel_8h" startline="75">DTSObject::panel</references>
         <references refid="class_d_t_s_object_1a1292b4804b31450f0ee960fa59fcfc7a" compoundref="_d_t_s_panel_8h" startline="74">DTSObject::status</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="224">wx_DTSPANEL_TAB</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="222">wx_DTSPANEL_TREE</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="239">wx_DTSPANEL_TAB</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="237">wx_DTSPANEL_TREE</references>
         <referencedby refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="932" endline="947">DTSTabPage::ConfigPane</referencedby>
         <referencedby refid="class_d_t_s_static_panel_1adc4c9227ed43facbd7a202f220eb4382" compoundref="_d_t_s_panel_8cpp" startline="1013" endline="1016">DTSStaticPanel::Show</referencedby>
         <referencedby refid="class_d_t_s_scroll_panel_1a4aea715d4e6ac3257c482813c8ab2bbc" compoundref="_d_t_s_panel_8cpp" startline="898" endline="901">DTSScrollPanel::Show</referencedby>
@@ -1082,7 +1082,7 @@
         <references refid="class_d_t_s_object_1a941fc98555b60d021a6c2f488ce9ae3e" compoundref="_d_t_s_panel_8h" startline="72">DTSObject::refobj</references>
         <references refid="class_d_t_s_object_1a1292b4804b31450f0ee960fa59fcfc7a" compoundref="_d_t_s_panel_8h" startline="74">DTSObject::status</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="222">wx_DTSPANEL_TREE</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="237">wx_DTSPANEL_TREE</references>
         <referencedby refid="class_d_t_s_dialog_1a09808605e28e0870bd717a975fd0d856" compoundref="_d_t_s_panel_8cpp" startline="1035" endline="1054">DTSDialog::DTSDialog</referencedby>
         <referencedby refid="class_d_t_s_scroll_panel_1a3ded23df3221978b4f78e2ff6cc53366" compoundref="_d_t_s_panel_8cpp" startline="886" endline="896">DTSScrollPanel::DTSScrollPanel</referencedby>
         <referencedby refid="class_d_t_s_static_panel_1ac982605cd17112ca73ede769814cca47" compoundref="_d_t_s_panel_8cpp" startline="999" endline="1007">DTSStaticPanel::DTSStaticPanel</referencedby>

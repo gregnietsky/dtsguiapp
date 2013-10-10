@@ -200,8 +200,10 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:ga52992645e33e4d92c8e68c3490239c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called as part of the creation of a new node. This callback will allow manipulation of the newly created node if required.  <a href="#ga52992645e33e4d92c8e68c3490239c75"></a><br/></td></tr>
 <tr class="separator:ga52992645e33e4d92c8e68c3490239c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab65db729662a3b0d109158d2fb51f93c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, void *)</td></tr>
+<tr class="memdesc:gab65db729662a3b0d109158d2fb51f93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a tab view panel prior to display. Tab panels are dynanic and created as needed by calling this callback.  <a href="#gab65db729662a3b0d109158d2fb51f93c"></a><br/></td></tr>
 <tr class="separator:gab65db729662a3b0d109158d2fb51f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab5e1fa276d48b20d35f4ef20110c39ed">dtsgui_tabpane_newdata_cb</a> )(struct xml_doc *, struct xml_node *, void *, void **, int *)</td></tr>
+<tr class="memdesc:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow setting the configuration data before tab pane is created. This callback is called as part of the new tab creation to allow setting callback data.The position of the pane can also be set.  <a href="#gab5e1fa276d48b20d35f4ef20110c39ed"></a><br/></td></tr>
 <tr class="separator:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -279,7 +281,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for action buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00242">242</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00257">257</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00722">DTSTreeWindow::CreatePane()</a>, <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00202">tab_newpane::handle_newtabpane()</a>, <a class="el" href="interface_8c_source.html#l00145">iface_config()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00487">DTSFrame::Passwd()</a>, and <a class="el" href="pbxconfig_8c_source.html#l00325">pbx_settings()</a>.</p>
 
@@ -297,7 +299,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for all buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00245">245</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00260">260</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 <p>Referenced by <a class="el" href="testing_8c_source.html#l00094">test_menu()</a>.</p>
 
@@ -315,7 +317,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for direction buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00239">239</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00254">254</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -331,7 +333,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for navigation buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00236">236</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00251">251</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -347,7 +349,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for no buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00248">248</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00263">263</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -514,7 +516,20 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00163">163</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Allow setting the configuration data before tab pane is created. This callback is called as part of the new tab creation to allow setting callback data.The position of the pane can also be set. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classtab__newpane.html#af3f96c0ce186f089d5e5598ea4814179">tab_newpane::handle_newtabpane()</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xmldoc</td><td>XML Document. </td></tr>
+    <tr><td class="paramname">xn</td><td>XML Node reference. </td></tr>
+    <tr><td class="paramname">data</td><td>Panel data reference. </td></tr>
+    <tr><td class="paramname">cdata</td><td>Pointer to reference of cdata can be replaced by setting cdata[0] to new reference. </td></tr>
+    <tr><td class="paramname">pos</td><td>Pointer to integer containing panel position can be overwritten setting *pos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00178">178</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -528,7 +543,17 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00162">162</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Configure a tab view panel prior to display. Tab panels are dynanic and created as needed by calling this callback. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_d_t_s_tab_page.html#a433bdbb8af0ded1fb884b45c5d9259a9">DTSTabPage::ConfigPane()</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pane</td><td>Panel been configured. </td></tr>
+    <tr><td class="paramname">data</td><td>Reference to the config data held by panel. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00167">167</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -842,7 +867,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00176">176</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00191">191</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -874,7 +899,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00192">192</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00207">207</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -908,7 +933,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00217">217</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00232">232</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -970,7 +995,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00205">205</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00220">220</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1023,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00228">228</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00243">243</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1032,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 10 2013 23:45:06 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 00:37:52 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

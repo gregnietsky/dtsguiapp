@@ -15,8 +15,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="168" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="168" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">dtsgui::SetupAPPFrame</referencedby>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="183" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">dtsgui::SetupAPPFrame</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpoint_1a9a82ca9504acabb1e30569f89c805471" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -29,15 +29,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="170" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="170" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">dtsgui::SetupAPPFrame</referencedby>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="185" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="185" bodyend="-1"/>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">dtsgui::SetupAPPFrame</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A simple data structure to store a coordinate. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="166" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="166" bodyend="171"/>
+    <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="181" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="181" bodyend="186"/>
     <listofallmembers>
       <member refid="structpoint_1ad679b07fb69d55f5ad454d0f1f2891d5" prot="public" virt="non-virtual"><scope>point</scope><name>x</name></member>
       <member refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" prot="public" virt="non-virtual"><scope>point</scope><name>y</name></member>

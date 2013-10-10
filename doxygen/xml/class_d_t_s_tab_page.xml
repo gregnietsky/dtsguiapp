@@ -107,7 +107,7 @@
         <references refid="class_d_t_s_panel_1a58daeb533cce1e4bdac57118cce7c7ea" compoundref="_d_t_s_panel_8cpp" startline="470" endline="476">DTSPanel::SetTitle</references>
         <references refid="class_d_t_s_object_1a1ae63425d8e5770a8b0717f37fd695b2" compoundref="_d_t_s_panel_8cpp" startline="278" endline="291">DTSObject::SetXMLDoc</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="224">wx_DTSPANEL_TAB</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="239">wx_DTSPANEL_TAB</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_page_1a9dc8aa3cd79b00e80747a9bd0cf9b379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

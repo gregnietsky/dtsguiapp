@@ -255,8 +255,8 @@
         <references refid="class_d_t_s_tree_window_event_1a182862c6039a3636a3b2a8fad26f15a9" compoundref="_d_t_s_tree_window_8h" startline="100">parent</references>
         <references refid="class_d_t_s_tree_window_1a16e8b0b7de01806b70235b4eac89345e" compoundref="_d_t_s_tree_window_8cpp" startline="800" endline="809">DTSTreeWindow::Select</references>
         <references refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="733" endline="762">DTSPanel::Update_XML</references>
-        <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302ecadb8742f8472eb90558cfbf8e3914553b" compoundref="dtsgui_8h" startline="188">wx_PANEL_EVENT_BUTTON_NO</references>
-        <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302eca6ce91176e6c929e87d7acbd000d07f79" compoundref="dtsgui_8h" startline="186">wx_PANEL_EVENT_BUTTON_YES</references>
+        <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302ecadb8742f8472eb90558cfbf8e3914553b" compoundref="dtsgui_8h" startline="203">wx_PANEL_EVENT_BUTTON_NO</references>
+        <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302eca6ce91176e6c929e87d7acbd000d07f79" compoundref="dtsgui_8h" startline="201">wx_PANEL_EVENT_BUTTON_YES</references>
         <referencedby refid="class_d_t_s_tree_window_1a1664835725e0e19ce3e4cced298fac39" compoundref="_d_t_s_tree_window_8cpp" startline="530" endline="639">DTSTreeWindow::DTSTreeWindow</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tree_window_event_1ac629b258d688fee58bdccd9d165c076e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">

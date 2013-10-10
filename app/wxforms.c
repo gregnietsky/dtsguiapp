@@ -16,7 +16,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/**@file*/
+/** @defgroup DTS-APP Distrotech Application
+  * @{
+  * @file
+  * @brief Main application file.*/
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -171,3 +174,5 @@ int main(int argc, char **argv) {
 
 	return res;
 }
+
+/**@}*/

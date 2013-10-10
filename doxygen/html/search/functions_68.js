@@ -11,5 +11,5 @@ var searchData=
   ['hascallback',['HasCallback',['../classdynamic__panel.html#a52940fe2d7c72ec45a2aff77ad7ec8d0',1,'dynamic_panel']]],
   ['hascontainercolumns',['HasContainerColumns',['../class_d_t_s_d_v_m_list_view.html#ab28ac2eef25cf6be486a5fdf2769b4ef',1,'DTSDVMListView']]],
   ['hasxmllist',['HasXMLList',['../class_d_t_s_x_m_l_combo_box.html#ab73ab96a2dddeb756b984db6e0fa9106',1,'DTSXMLComboBox']]],
-  ['help_5fmenu',['help_menu',['../wxforms_8c.html#ae1b0e521306d90ee09f460064c015b2b',1,'wxforms.c']]]
+  ['help_5fmenu',['help_menu',['../group___d_t_s-_a_p_p.html#gae1b0e521306d90ee09f460064c015b2b',1,'wxforms.c']]]
 ];

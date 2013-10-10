@@ -16,9 +16,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="33" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" bodystart="33" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="35" endline="47">dtsgui</referencedby>
-        <referencedby refid="classdtsgui_1a4d5bf22a505defc4ab13178ff95f2b32" compoundref="_d_t_s_app_8cpp" startline="85" endline="95">GetUserData</referencedby>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">SetupAPPFrame</referencedby>
+        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="36" endline="48">dtsgui</referencedby>
+        <referencedby refid="classdtsgui_1a4d5bf22a505defc4ab13178ff95f2b32" compoundref="_d_t_s_app_8cpp" startline="86" endline="96">GetUserData</referencedby>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">SetupAPPFrame</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classdtsgui_1a23186f0e51311156f54f9f9882806414" prot="private" static="no" mutable="no">
         <type>class <ref refid="class_d_t_s_frame" kindref="compound">DTSFrame</ref> *</type>
@@ -32,11 +32,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="34" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" bodystart="34" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a9d7432eacf96358d22797b37ee73caed" compoundref="_d_t_s_app_8cpp" startline="105" endline="127">AppendTitle</referencedby>
-        <referencedby refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">GetFrame</referencedby>
-        <referencedby refid="classdtsgui_1a67a85f336d93a287e5ec3434a79620ed" compoundref="_d_t_s_app_8cpp" startline="97" endline="103">SetStatusText</referencedby>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">SetupAPPFrame</referencedby>
-        <referencedby refid="classdtsgui_1adbf932006dfc6df2266b5fbf34af67ac" compoundref="_d_t_s_app_8cpp" startline="129" endline="135">ShowToolbar</referencedby>
+        <referencedby refid="classdtsgui_1a9d7432eacf96358d22797b37ee73caed" compoundref="_d_t_s_app_8cpp" startline="106" endline="128">AppendTitle</referencedby>
+        <referencedby refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="138" endline="140">GetFrame</referencedby>
+        <referencedby refid="classdtsgui_1a67a85f336d93a287e5ec3434a79620ed" compoundref="_d_t_s_app_8cpp" startline="98" endline="104">SetStatusText</referencedby>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">SetupAPPFrame</referencedby>
+        <referencedby refid="classdtsgui_1adbf932006dfc6df2266b5fbf34af67ac" compoundref="_d_t_s_app_8cpp" startline="130" endline="136">ShowToolbar</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classdtsgui_1a949562ecff03159461686f2ddc36b936" prot="private" static="no" mutable="no">
         <type>const char *</type>
@@ -50,8 +50,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="35" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" bodystart="35" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a9d7432eacf96358d22797b37ee73caed" compoundref="_d_t_s_app_8cpp" startline="105" endline="127">AppendTitle</referencedby>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">SetupAPPFrame</referencedby>
+        <referencedby refid="classdtsgui_1a9d7432eacf96358d22797b37ee73caed" compoundref="_d_t_s_app_8cpp" startline="106" endline="128">AppendTitle</referencedby>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">SetupAPPFrame</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classdtsgui_1a8ae0201b6a08daf9d9804c1f7550da4e" prot="private" static="no" mutable="no">
         <type>const char *</type>
@@ -65,8 +65,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="36" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" bodystart="36" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="35" endline="47">dtsgui</referencedby>
-        <referencedby refid="classdtsgui_1a67a85f336d93a287e5ec3434a79620ed" compoundref="_d_t_s_app_8cpp" startline="97" endline="103">SetStatusText</referencedby>
+        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="36" endline="48">dtsgui</referencedby>
+        <referencedby refid="classdtsgui_1a67a85f336d93a287e5ec3434a79620ed" compoundref="_d_t_s_app_8cpp" startline="98" endline="104">SetStatusText</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classdtsgui_1aa47c583745cf2afd984cd09088d8fa00" prot="private" static="no" mutable="no">
         <type><ref refid="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" kindref="member">dtsgui_configcb</ref></type>
@@ -80,9 +80,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="37" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" bodystart="37" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="35" endline="47">dtsgui</referencedby>
+        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="36" endline="48">dtsgui</referencedby>
         <referencedby refid="class_d_t_s_panel_event_1a8e755136313a6c423167af1d44dfc710" compoundref="_d_t_s_panel_8cpp" startline="151" endline="204">DTSPanelEvent::OnCombo</referencedby>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">SetupAPPFrame</referencedby>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">SetupAPPFrame</referencedby>
         <referencedby refid="class_d_t_s_frame_1a1fe29f6d56f11d1702a372416a659e3e" compoundref="_d_t_s_frame_8cpp" startline="320" endline="339">DTSFrame::SetupToolbar</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classdtsgui_1a04955c97163ded998019001b749a1883" prot="private" static="no" mutable="no">
@@ -97,8 +97,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="38" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" bodystart="38" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="35" endline="47">dtsgui</referencedby>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">SetupAPPFrame</referencedby>
+        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="36" endline="48">dtsgui</referencedby>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">SetupAPPFrame</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classdtsgui_1a7a64aff083bfba24859a4c47e9d89c53" prot="private" static="no" mutable="no">
         <type>struct <ref refid="structpoint" kindref="compound">point</ref></type>
@@ -112,8 +112,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="39" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" bodystart="39" bodyend="-1"/>
-        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="35" endline="47">dtsgui</referencedby>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">SetupAPPFrame</referencedby>
+        <referencedby refid="classdtsgui_1a96324bdb4d6457ea0c815959092bee84" compoundref="_d_t_s_app_8cpp" startline="36" endline="48">dtsgui</referencedby>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">SetupAPPFrame</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="25" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="35" bodyend="47"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="25" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="36" bodyend="48"/>
         <references refid="classdtsgui_1aa47c583745cf2afd984cd09088d8fa00" compoundref="_d_t_s_app_8h" startline="37">cb</references>
         <references refid="classdtsgui_1a8ae0201b6a08daf9d9804c1f7550da4e" compoundref="_d_t_s_app_8h" startline="36">status</references>
         <references refid="classdtsgui_1a9c7541fac0311f9b2ffcb5c2699719ca" compoundref="_d_t_s_app_8h" startline="33">userdata</references>
@@ -189,17 +189,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="26" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="64" bodyend="83"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="26" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="65" bodyend="84"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
         <references refid="classdtsgui_1aa47c583745cf2afd984cd09088d8fa00" compoundref="_d_t_s_app_8h" startline="37">cb</references>
-        <references refid="classdtsgui_1a67a85f336d93a287e5ec3434a79620ed" compoundref="_d_t_s_app_8cpp" startline="97" endline="103">SetStatusText</references>
+        <references refid="classdtsgui_1a67a85f336d93a287e5ec3434a79620ed" compoundref="_d_t_s_app_8cpp" startline="98" endline="104">SetStatusText</references>
         <references refid="classdtsgui_1a949562ecff03159461686f2ddc36b936" compoundref="_d_t_s_app_8h" startline="35">title</references>
         <references refid="classdtsgui_1a9c7541fac0311f9b2ffcb5c2699719ca" compoundref="_d_t_s_app_8h" startline="33">userdata</references>
         <references refid="classdtsgui_1a7a64aff083bfba24859a4c47e9d89c53" compoundref="_d_t_s_app_8h" startline="39">wpos</references>
         <references refid="classdtsgui_1a04955c97163ded998019001b749a1883" compoundref="_d_t_s_app_8h" startline="38">wsize</references>
-        <references refid="structpoint_1ad679b07fb69d55f5ad454d0f1f2891d5" compoundref="dtsgui_8h" startline="168">point::x</references>
-        <references refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" compoundref="dtsgui_8h" startline="170">point::y</references>
-        <referencedby refid="class_d_t_s_app_1ae21cc8793d06b6b770867ebd3d0d1daa" compoundref="_d_t_s_app_8cpp" startline="262" endline="268">DTSApp::OnInit</referencedby>
+        <references refid="structpoint_1ad679b07fb69d55f5ad454d0f1f2891d5" compoundref="dtsgui_8h" startline="183">point::x</references>
+        <references refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" compoundref="dtsgui_8h" startline="185">point::y</references>
+        <referencedby refid="class_d_t_s_app_1ae21cc8793d06b6b770867ebd3d0d1daa" compoundref="_d_t_s_app_8cpp" startline="263" endline="269">DTSApp::OnInit</referencedby>
       </memberdef>
       <memberdef kind="function" id="classdtsgui_1a4d5bf22a505defc4ab13178ff95f2b32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="27" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="85" bodyend="95"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="27" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="86" bodyend="96"/>
         <references refid="classdtsgui_1a9c7541fac0311f9b2ffcb5c2699719ca" compoundref="_d_t_s_app_8h" startline="33">userdata</references>
         <referencedby refid="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" compoundref="wrapper_8cpp" startline="183" endline="185">DTS_C_API::dtsgui_userdata</referencedby>
       </memberdef>
@@ -233,10 +233,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="28" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="97" bodyend="103"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="28" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="98" bodyend="104"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
         <references refid="classdtsgui_1a8ae0201b6a08daf9d9804c1f7550da4e" compoundref="_d_t_s_app_8h" startline="36">status</references>
-        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">SetupAPPFrame</referencedby>
+        <referencedby refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">SetupAPPFrame</referencedby>
         <referencedby refid="class_d_t_s_frame_1a7e9f18961fb55d1b9be667b81681803c" compoundref="_d_t_s_frame_8cpp" startline="227" endline="247">DTSFrame::SetWindow</referencedby>
       </memberdef>
       <memberdef kind="function" id="classdtsgui_1a9d7432eacf96358d22797b37ee73caed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="29" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="105" bodyend="127"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="29" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="106" bodyend="128"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
         <references refid="classdtsgui_1a949562ecff03159461686f2ddc36b936" compoundref="_d_t_s_app_8h" startline="35">title</references>
         <referencedby refid="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" compoundref="wrapper_8cpp" startline="234" endline="236">DTS_C_API::dtsgui_titleappend</referencedby>
@@ -273,14 +273,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="30" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="137" bodyend="139"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="30" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="138" bodyend="140"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
         <referencedby refid="classdtsgui__wizard_1a02984b1d70df5100e8b6200e0bb1b421" compoundref="_d_t_s_wizard_8cpp" startline="48" endline="79">dtsgui_wizard::AddPage</referencedby>
         <referencedby refid="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" compoundref="wrapper_8cpp" startline="370" endline="373">DTS_C_API::dtsgui_about</referencedby>
         <referencedby refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1093" endline="1096">DTS_C_API::dtsgui_alert</referencedby>
         <referencedby refid="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" compoundref="wrapper_8cpp" startline="353" endline="356">DTS_C_API::dtsgui_close</referencedby>
         <referencedby refid="group___c-_a_p_i-_dialog_1ga5761cfa6ab849723e50760a9642efc9f" compoundref="wrapper_8cpp" startline="1104" endline="1107">DTS_C_API::dtsgui_confirm</referencedby>
-        <referencedby refid="classdtsgui__curl_1a32244d6816ad29d796387af121707d2f" compoundref="_d_t_s_app_8cpp" startline="141" endline="147">dtsgui_curl::dtsgui_curl</referencedby>
+        <referencedby refid="classdtsgui__curl_1a32244d6816ad29d796387af121707d2f" compoundref="_d_t_s_app_8cpp" startline="142" endline="148">dtsgui_curl::dtsgui_curl</referencedby>
         <referencedby refid="group___c-_a_p_i-_menus_1gabf67f1b041be315b58ccacc7d193b273" compoundref="wrapper_8cpp" startline="335" endline="338">DTS_C_API::dtsgui_exit</referencedby>
         <referencedby refid="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" compoundref="wrapper_8cpp" startline="1134" endline="1137">DTS_C_API::dtsgui_fileopen</referencedby>
         <referencedby refid="group___c-_a_p_i-_dialog_1gad2b11bd5e9e51dcba9f53f4969f1f25c" compoundref="wrapper_8cpp" startline="1118" endline="1121">DTS_C_API::dtsgui_filesave</referencedby>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="31" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="129" bodyend="135"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="31" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="130" bodyend="136"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
         <referencedby refid="group___c-_a_p_i_1ga164aa159bc57a744f012b49268796bbe" compoundref="wrapper_8cpp" startline="252" endline="254">DTS_C_API::dtsgui_set_toolbar</referencedby>
       </memberdef>

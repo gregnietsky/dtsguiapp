@@ -159,7 +159,22 @@ typedef void (*dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_tre
   * @param data Reference to user data.*/
 typedef void (*dtsgui_xmltreenode_cb)(dtsgui_treeview, dtsgui_treenode, struct xml_node*, void*);
 
+/** @brief Configure a tab view panel prior to display.
+  * Tab panels are dynanic and created as needed by calling this callback.
+  * @see DTSTabPage::ConfigPane()
+  * @param pane Panel been configured.
+  * @param data Reference to the config data held by panel.*/
 typedef void (*dtsgui_tabpanel_cb)(dtsgui_pane, void*);
+
+/** @brief Allow setting the configuration data before tab pane is created.
+  * This callback is called as part of the new tab creation to allow setting callback
+  * data.The position of the pane can also be set.
+  * @see tab_newpane::handle_newtabpane()
+  * @param xmldoc XML Document.
+  * @param xn XML Node reference.
+  * @param data Panel data reference.
+  * @param cdata Pointer to reference of cdata can be replaced by setting cdata[0] to new reference.
+  * @param pos Pointer to integer containing panel position can be overwritten setting *pos.*/
 typedef void (*dtsgui_tabpane_newdata_cb)(struct xml_doc*, struct xml_node*, void*, void**, int*);
 
 /** @brief A simple data structure to store a coordinate*/

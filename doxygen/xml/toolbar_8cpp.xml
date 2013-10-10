@@ -107,7 +107,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/toolbar.cpp" line="111" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/toolbar.cpp" bodystart="111" bodyend="117"/>
-        <referencedby refid="wxforms_8c_1af12c2714c0878b7565d8b788931f9e50" compoundref="wxforms_8c" startline="106" endline="119">guiconfig_cb</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p_1gaf12c2714c0878b7565d8b788931f9e50" compoundref="wxforms_8c" startline="109" endline="122">guiconfig_cb</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

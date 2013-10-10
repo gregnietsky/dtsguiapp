@@ -24,5 +24,5 @@ var searchData=
   ['have_5fsys_5fstat_5fh',['HAVE_SYS_STAT_H',['../build_2config_8h.html#ace156430ba007d19b4348a950d0c692b',1,'HAVE_SYS_STAT_H():&#160;config.h'],['../mingw_2config_8h.html#ace156430ba007d19b4348a950d0c692b',1,'HAVE_SYS_STAT_H():&#160;config.h']]],
   ['have_5fsys_5ftypes_5fh',['HAVE_SYS_TYPES_H',['../build_2config_8h.html#a69dc70bea5d1f8bd2be9740e974fa666',1,'HAVE_SYS_TYPES_H():&#160;config.h'],['../mingw_2config_8h.html#a69dc70bea5d1f8bd2be9740e974fa666',1,'HAVE_SYS_TYPES_H():&#160;config.h']]],
   ['have_5funistd_5fh',['HAVE_UNISTD_H',['../build_2config_8h.html#a219b06937831d0da94d801ab13987639',1,'HAVE_UNISTD_H():&#160;config.h'],['../mingw_2config_8h.html#a219b06937831d0da94d801ab13987639',1,'HAVE_UNISTD_H():&#160;config.h']]],
-  ['help_5fmenu',['help_menu',['../wxforms_8c.html#ae1b0e521306d90ee09f460064c015b2b',1,'wxforms.c']]]
+  ['help_5fmenu',['help_menu',['../group___d_t_s-_a_p_p.html#gae1b0e521306d90ee09f460064c015b2b',1,'wxforms.c']]]
 ];

@@ -90,7 +90,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="406" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="406" bodyend="409"/>
         <references refid="class_d_t_s_frame_1a3b1105fb9c8e3b6909994e7f993eee20" compoundref="_d_t_s_frame_8cpp" startline="367" endline="398">DTSFrame::CreatePane</references>
-        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
+        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="138" endline="140">dtsgui::GetFrame</references>
         <referencedby refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" compoundref="testing_8c" startline="94" endline="105">test_menu</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gafb8efe017917a372826f7ddedb0e8bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -141,9 +141,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="425" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="425" bodyend="428"/>
-        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
+        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="138" endline="140">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</references>
-        <referencedby refid="wxforms_8c_1ae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="90" endline="104">help_menu</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p_1gae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="93" endline="107">help_menu</referencedby>
         <referencedby refid="private_8h_1abc9a4e54439d7a701992752ec7b3f6b9" compoundref="config_8c" startline="112" endline="148">view_config_conf</referencedby>
         <referencedby refid="private_8h_1abe0b9ce2252ec72774af23a0ec71424f" compoundref="config_8c" startline="94" endline="110">view_config_xml</referencedby>
       </memberdef>
@@ -216,7 +216,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="445" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="445" bodyend="448"/>
-        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
+        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="138" endline="140">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="740" endline="769">advanced_config</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -267,7 +267,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="462" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="462" bodyend="465"/>
-        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
+        <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="138" endline="140">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
         <referencedby refid="private_8h_1aa1aa69985689f9714422c273fe968fdf" compoundref="pbxconfig_8c" startline="325" endline="350">pbx_settings</referencedby>
       </memberdef>
@@ -445,7 +445,7 @@ When a event happens the callback is called with the userdata to allow actioning
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="811" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="811" bodyend="814"/>
         <references refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="733" endline="762">DTSPanel::Update_XML</references>
-        <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p-_wizard_1gae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="362" endline="433">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga4d0d6742f61c91fb590b3728a7229150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct curl_post *</type>

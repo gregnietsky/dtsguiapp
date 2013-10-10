@@ -34,5 +34,5 @@ var searchData=
   ['getwidget',['GetWidget',['../classform__item.html#a9d5508fb933bef9f078f702338e3d166',1,'form_item']]],
   ['getxmldata',['GetXMLData',['../class_d_t_s_d_v_m_list_store.html#a61adea3902f8c4b1c746546b1b9bbff0',1,'DTSDVMListStore::GetXMLData()'],['../class_d_t_s_d_v_m_list_view.html#a90439ae943298c9d7104e3f09dbd3abf',1,'DTSDVMListView::GetXMLData()'],['../classform__item.html#a1e08369cee96e1b5417c767be9b086ce',1,'form_item::GetXMLData()']]],
   ['getxmldoc',['GetXMLDoc',['../class_d_t_s_object.html#ae177d1cfd85be759810b252b98f2050d',1,'DTSObject::GetXMLDoc()'],['../class_d_t_s_x_m_l_combo_box.html#a3f983fc429c2fa50b9b46d7c5fa0538d',1,'DTSXMLComboBox::GetXMLDoc()']]],
-  ['guiconfig_5fcb',['guiconfig_cb',['../wxforms_8c.html#af12c2714c0878b7565d8b788931f9e50',1,'wxforms.c']]]
+  ['guiconfig_5fcb',['guiconfig_cb',['../group___d_t_s-_a_p_p.html#gaf12c2714c0878b7565d8b788931f9e50',1,'wxforms.c']]]
 ];

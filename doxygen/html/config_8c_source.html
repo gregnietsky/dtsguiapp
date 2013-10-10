@@ -204,7 +204,7 @@ $(document).ready(function(){initNavTree('config_8c_source.html','');});
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438" title="Define panel as void* it is not exported to API.">dtsgui_pane</a> p;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> *xmlbuf;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="private_8h.html#a65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
@@ -236,7 +236,7 @@ $(document).ready(function(){initNavTree('config_8c_source.html','');});
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="private_8h.html#a65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
@@ -278,7 +278,7 @@ $(document).ready(function(){initNavTree('config_8c_source.html','');});
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="private_8h.html#a65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span> (!(xmldoc = <a class="code" href="group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0">app_getxmldoc</a>(dtsgui))) {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        objunref(xsltdoc);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
@@ -304,7 +304,7 @@ $(document).ready(function(){initNavTree('config_8c_source.html','');});
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    objlock(appdata);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    appdata-&gt;<a class="code" href="structapp__data.html#a7ad75d9cf58124aed6037c47c87fcbf5">cfg_menu</a> = <a class="code" href="group___c-_a_p_i-_menus.html#gadd0f3eab51bf576378a6438c3982fd48" title="Create a new menu and append it to the menu bar.">dtsgui_newmenu</a>(dtsgui, <span class="stringliteral">&quot;&amp;Config&quot;</span>);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec" title="Create a menu item that will call a function with supplied data.">dtsgui_newmenucb</a>(appdata-&gt;<a class="code" href="structapp__data.html#a7ad75d9cf58124aed6037c47c87fcbf5">cfg_menu</a>, dtsgui, <span class="stringliteral">&quot;Reconfigure &amp;Wizard&quot;</span>, <span class="stringliteral">&quot;Run System Reconfigure Wizard.&quot;</span>, 1, <a class="code" href="private_8h.html#a0be336c09b5cd473a616326c4cb227d2">reconfig_wizard</a>, NULL);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec" title="Create a menu item that will call a function with supplied data.">dtsgui_newmenucb</a>(appdata-&gt;<a class="code" href="structapp__data.html#a7ad75d9cf58124aed6037c47c87fcbf5">cfg_menu</a>, dtsgui, <span class="stringliteral">&quot;Reconfigure &amp;Wizard&quot;</span>, <span class="stringliteral">&quot;Run System Reconfigure Wizard.&quot;</span>, 1, <a class="code" href="group___d_t_s-_a_p_p-_wizard.html#ga0be336c09b5cd473a616326c4cb227d2">reconfig_wizard</a>, NULL);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec" title="Create a menu item that will call a function with supplied data.">dtsgui_newmenucb</a>(appdata-&gt;<a class="code" href="structapp__data.html#a7ad75d9cf58124aed6037c47c87fcbf5">cfg_menu</a>, dtsgui, <span class="stringliteral">&quot;P&amp;BX Configuration&quot;</span>, <span class="stringliteral">&quot;PBX Setup&quot;</span>, 0, <a class="code" href="pbxconfig_8c.html#aa1aa69985689f9714422c273fe968fdf">pbx_settings</a>, NULL);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec" title="Create a menu item that will call a function with supplied data.">dtsgui_newmenucb</a>(appdata-&gt;<a class="code" href="structapp__data.html#a7ad75d9cf58124aed6037c47c87fcbf5">cfg_menu</a>, dtsgui, <span class="stringliteral">&quot;&amp;Interface Configuration&quot;</span>, <span class="stringliteral">&quot;Inteface Configuration&quot;</span>, 0, <a class="code" href="interface_8c.html#abf43f59e582eee9f27734b14c8307819">iface_config</a>, NULL);</div>
@@ -329,7 +329,7 @@ $(document).ready(function(){initNavTree('config_8c_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="config_8c.html">config.c</a></li>
-    <li class="footer">Generated on Thu Oct 10 2013 23:45:06 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 00:37:52 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

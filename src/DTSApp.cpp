@@ -30,6 +30,7 @@
 /**@file
   *@brief Core Application Classes.*/
 
+/** @brief Define event type used for application events*/
 wxDEFINE_EVENT(DTS_APP_EVENT, wxCommandEvent);
 
 dtsgui::dtsgui(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *data) {

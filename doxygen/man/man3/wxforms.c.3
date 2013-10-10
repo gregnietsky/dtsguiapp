@@ -1,8 +1,11 @@
-.TH "app/wxforms.c" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "app/wxforms.c" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 app/wxforms.c \- 
+.PP
+Main application file\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -44,58 +47,13 @@ app/wxforms.c \-
 .RI "int \fBmain\fP (int argc, char **argv)"
 .br
 .in -1c
-.SH "Function Documentation"
+.SH "Detailed Description"
 .PP 
-.SS "struct xml_doc* app_getxmldoc (struct \fBdtsgui\fP *dtsgui)\fC [read]\fP"
+Main application file\&. 
+
 
 .PP
-Definition at line 44 of file wxforms\&.c\&.
-.PP
-References dtsgui_userdata(), and app_data::xmldoc\&.
-.PP
-Referenced by advanced_config(), export_config(), iface_config(), pbx_settings(), reconfig_wizard(), view_config_conf(), and view_config_xml()\&.
-.SS "void file_menu (struct \fBdtsgui\fP *dtsgui)"
-
-.PP
-Definition at line 65 of file wxforms\&.c\&.
-.PP
-References app_data::c_open, dtsgui_close(), dtsgui_exit(), dtsgui_menusep(), dtsgui_newmenu(), dtsgui_newmenucb(), dtsgui_userdata(), app_data::e_wiz, editsys_wizard(), app_data::n_wiz, newsys_wizard(), and open_config()\&.
-.PP
-Referenced by guiconfig_cb()\&.
-.SS "void free_appdata (void *data)"
-
-.PP
-Definition at line 121 of file wxforms\&.c\&.
-.PP
-References app_data::datadir, and app_data::xmldoc\&.
-.PP
-Referenced by main()\&.
-.SS "int guiconfig_cb (struct \fBdtsgui\fP *dtsgui, void *data)"
-
-.PP
-Definition at line 106 of file wxforms\&.c\&.
-.PP
-References app_toolbar(), config_menu(), dtsgui_setuptoolbar(), file_menu(), and help_menu()\&.
-.PP
-Referenced by main()\&.
-.SS "void help_menu (struct \fBdtsgui\fP *dtsgui)"
-
-.PP
-Definition at line 90 of file wxforms\&.c\&.
-.PP
-References dtsgui_about(), dtsgui_menusep(), dtsgui_newmenu(), dtsgui_newmenuitem(), dtsgui_textpane(), and test_menu()\&.
-.PP
-Referenced by guiconfig_cb()\&.
-.SS "int main (intargc, char **argv)"
-
-.PP
-Definition at line 133 of file wxforms\&.c\&.
-.PP
-References DATA_DIR, app_data::datadir, dtsgui_config(), dtsgui_run(), free_appdata(), and guiconfig_cb()\&.
-.SS "void xml_config (struct xml_doc *xmldoc)"
-
-.PP
-Definition at line 36 of file wxforms\&.c\&.
+Definition in file \fBwxforms\&.c\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

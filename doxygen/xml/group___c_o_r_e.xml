@@ -118,7 +118,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="176" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="176" bodyend="189"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="191" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="191" bodyend="204"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1ga54d7edaba9c015c3b5310ed3080b82e6" prot="public" static="no">
         <name>panel_events</name>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="192" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="192" bodyend="201"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="207" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="207" bodyend="216"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1ga7ecd2a00f2306c0b94734a72a7899898" prot="public" static="no">
         <name>tree_newnode_flags</name>
@@ -203,7 +203,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="205" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="205" bodyend="214"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="220" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="220" bodyend="229"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1ga9275874ac61d3750aa677a36da714373" prot="public" static="no">
         <name>panel_type</name>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="217" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="217" bodyend="225"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="232" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="232" bodyend="240"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1gafd296180392ef5681415b9fb0590be84" prot="public" static="no">
         <name>widget_type</name>
@@ -300,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="228" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="228" bodyend="233"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="243" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="243" bodyend="248"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -786,12 +786,28 @@
         <argsstring>)(dtsgui_pane, void *)</argsstring>
         <name>dtsgui_tabpanel_cb</name>
         <briefdescription>
-        </briefdescription>
+<para>Configure a tab view panel prior to display. Tab panels are dynanic and created as needed by calling this callback. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" kindref="member">DTSTabPage::ConfigPane()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel been configured. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the config data held by panel. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="162" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="162" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="167" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="167" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1gab5e1fa276d48b20d35f4ef20110c39ed" prot="public" static="no">
         <type>void(*</type>
@@ -799,12 +815,49 @@
         <argsstring>)(struct xml_doc *, struct xml_node *, void *, void **, int *)</argsstring>
         <name>dtsgui_tabpane_newdata_cb</name>
         <briefdescription>
-        </briefdescription>
+<para>Allow setting the configuration data before tab pane is created. This callback is called as part of the new tab creation to allow setting callback data.The position of the pane can also be set. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" kindref="member">tab_newpane::handle_newtabpane()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmldoc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML Document. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>XML Node reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel data reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to reference of cdata can be replaced by setting cdata[0] to new reference. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to integer containing panel position can be overwritten setting *pos. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="163" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="163" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="178" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="178" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -817,7 +870,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="236" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="236" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="251" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="251" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1gaa7fc68a1ddb9112dbbbfe2ae26e2e379" prot="public" static="no">
         <name>wx_PANEL_BUTTON_DIR</name>
@@ -828,7 +881,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="239" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="239" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="254" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="254" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1ga4ef37ee1286eb68a9f5663813f134be2" prot="public" static="no">
         <name>wx_PANEL_BUTTON_ACTION</name>
@@ -839,7 +892,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="242" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="242" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="257" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="257" bodyend="-1"/>
         <referencedby refid="class_d_t_s_tree_window_1a45d33a41609c46d51d17bb80a64f2ca4" compoundref="_d_t_s_tree_window_8cpp" startline="722" endline="738">DTSTreeWindow::CreatePane</referencedby>
         <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="202" endline="239">tab_newpane::handle_newtabpane</referencedby>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
@@ -855,7 +908,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="245" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="245" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="260" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="260" bodyend="-1"/>
         <referencedby refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" compoundref="testing_8c" startline="94" endline="105">test_menu</referencedby>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1ga655f2051956468f6592bef486573e424" prot="public" static="no">
@@ -867,7 +920,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="248" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="248" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="263" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="263" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

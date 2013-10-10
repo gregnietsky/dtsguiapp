@@ -1,4 +1,4 @@
-.TH "src/include/dtsgui.h" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "src/include/dtsgui.h" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -128,9 +128,11 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "typedef void(* \fBdtsgui_tabpanel_cb\fP )(\fBdtsgui_pane\fP, void *)"
 .br
+.RI "\fIConfigure a tab view panel prior to display\&. Tab panels are dynanic and created as needed by calling this callback\&. \fP"
 .ti -1c
 .RI "typedef void(* \fBdtsgui_tabpane_newdata_cb\fP )(struct xml_doc *, struct xml_node *, void *, void **, int *)"
 .br
+.RI "\fIAllow setting the configuration data before tab pane is created\&. This callback is called as part of the new tab creation to allow setting callback data\&.The position of the pane can also be set\&. \fP"
 .in -1c
 .SS "Enumerations"
 

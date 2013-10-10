@@ -258,8 +258,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/pitems.h" line="56" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/pitems.cpp" bodystart="147" bodyend="166"/>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="232">DTS_WIDGET_COMBOBOX</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="231">DTS_WIDGET_LISTBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="247">DTS_WIDGET_COMBOBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="246">DTS_WIDGET_LISTBOX</references>
         <references refid="classform__item_1a9c5388b8962be531b51920c7775f8d2d" compoundref="pitems_8h" startline="65">idx</references>
         <references refid="unionwidgets_1a9e5583bcc42f0273b9c6a1605e0e1b6d" compoundref="pitems_8h" startline="45">widgets::l</references>
         <references refid="classform__item_1a9f108735a3f81f0f419fd828a29b2938" compoundref="pitems_8cpp" startline="168" endline="178">SetSelection</references>
@@ -285,8 +285,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/pitems.h" line="57" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/pitems.cpp" bodystart="168" bodyend="178"/>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="232">DTS_WIDGET_COMBOBOX</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="231">DTS_WIDGET_LISTBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="247">DTS_WIDGET_COMBOBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="246">DTS_WIDGET_LISTBOX</references>
         <references refid="unionwidgets_1a9e5583bcc42f0273b9c6a1605e0e1b6d" compoundref="pitems_8h" startline="45">widgets::l</references>
         <references refid="classform__item_1aa7364e00d99d22b9a594767915caa4be" compoundref="pitems_8h" startline="63">type</references>
         <references refid="classform__item_1a6720d7a562d897686e128fc2146702e7" compoundref="pitems_8h" startline="67">widget</references>
@@ -324,10 +324,10 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/pitems.h" line="59" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/pitems.cpp" bodystart="184" bodyend="211"/>
         <references refid="unionwidgets_1aa5bb8e792fd60fca871e8782e39993cc" compoundref="pitems_8h" startline="46">widgets::c</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28" compoundref="dtsgui_8h" startline="230">DTS_WIDGET_CHECKBOX</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="232">DTS_WIDGET_COMBOBOX</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="231">DTS_WIDGET_LISTBOX</references>
-        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836" compoundref="dtsgui_8h" startline="229">DTS_WIDGET_TEXTBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28" compoundref="dtsgui_8h" startline="245">DTS_WIDGET_CHECKBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc" compoundref="dtsgui_8h" startline="247">DTS_WIDGET_COMBOBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a" compoundref="dtsgui_8h" startline="246">DTS_WIDGET_LISTBOX</references>
+        <references refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836" compoundref="dtsgui_8h" startline="244">DTS_WIDGET_TEXTBOX</references>
         <references refid="unionwidgets_1a9e5583bcc42f0273b9c6a1605e0e1b6d" compoundref="pitems_8h" startline="45">widgets::l</references>
         <references refid="unionwidgets_1ad9dbdf416e8ba75e55b8030549c2d5ac" compoundref="pitems_8h" startline="44">widgets::t</references>
         <references refid="classform__item_1aa7364e00d99d22b9a594767915caa4be" compoundref="pitems_8h" startline="63">type</references>

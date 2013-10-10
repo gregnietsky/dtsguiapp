@@ -5,7 +5,7 @@ var searchData=
   ['senddtsevent',['SendDTSEvent',['../class_d_t_s_frame.html#a63488ecbdbe2770ea7d12ce2b06f1b72',1,'DTSFrame']]],
   ['server',['server',['../class_d_t_s_a_p_p_tool_bar.html#a151a662ef084fa456f4a32f6b2977290',1,'DTSAPPToolBar']]],
   ['server_5fstate',['server_state',['../_d_t_s_x_m_l_combo_box_8h.html#a1b5487ca2ccbd717b153b67c8d8f0520',1,'DTSXMLComboBox.h']]],
-  ['set_5ftemp_5fxml',['set_temp_xml',['../wizard_8c.html#a4f882ff8bd54df9885846da44baba542',1,'wizard.c']]],
+  ['set_5ftemp_5fxml',['set_temp_xml',['../group___d_t_s-_a_p_p-_wizard.html#ga4f882ff8bd54df9885846da44baba542',1,'wizard.c']]],
   ['setabout',['SetAbout',['../class_d_t_s_frame.html#af57b68ada1f1958582fea200a2a315fc',1,'DTSFrame']]],
   ['setcallback',['SetCallback',['../class_d_t_s_panel_event.html#ad6d0fb736bf45162b6bf2082e437195b',1,'DTSPanelEvent']]],
   ['setconfigcallback',['SetConfigCallback',['../class_d_t_s_panel.html#acdb57729ace5f3c0fc76cce4d41c36cc',1,'DTSPanel']]],
@@ -42,5 +42,5 @@ var searchData=
   ['status',['status',['../classdtsgui.html#a8ae0201b6a08daf9d9804c1f7550da4e',1,'dtsgui::status()'],['../class_d_t_s_object.html#a1292b4804b31450f0ee960fa59fcfc7a',1,'DTSObject::status()']]],
   ['stdc_5fheaders',['STDC_HEADERS',['../build_2config_8h.html#a550e5c272cc3cf3814651721167dcd23',1,'STDC_HEADERS():&#160;config.h'],['../mingw_2config_8h.html#a550e5c272cc3cf3814651721167dcd23',1,'STDC_HEADERS():&#160;config.h']]],
   ['switchwindow',['SwitchWindow',['../class_d_t_s_frame.html#a85e9e9e31176870e5d1d7fb96972d236',1,'DTSFrame']]],
-  ['system_5fwizard',['system_wizard',['../wizard_8c.html#ae99af9389a848fe0d810a538d0b64d53',1,'wizard.c']]]
+  ['system_5fwizard',['system_wizard',['../group___d_t_s-_a_p_p-_wizard.html#gae99af9389a848fe0d810a538d0b64d53',1,'wizard.c']]]
 ];

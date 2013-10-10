@@ -40,7 +40,7 @@ var searchData=
   ['new_5fiface_5fdata',['new_iface_data',['../structnew__iface__data.html',1,'']]],
   ['newmenu',['NewMenu',['../class_d_t_s_frame.html#a27cb5c393f6f9bbab0d087db9e6338ce',1,'DTSFrame']]],
   ['newmenuitem',['NewMenuItem',['../class_d_t_s_frame.html#a55fe07b66530435bce652e8ab3091707',1,'DTSFrame::NewMenuItem(wxMenu *m, DTSObject *panel, int menuid, const wxString &amp;hint)'],['../class_d_t_s_frame.html#a658114abb50692e826e18593a0e3ba73',1,'DTSFrame::NewMenuItem(wxMenu *m, int menuid, const wxString &amp;name, const wxString &amp;hint, int blank, dtsgui_dynpanel cb, void *data)']]],
-  ['newsys_5fwizard',['newsys_wizard',['../private_8h.html#a56c78e0d32a18452dcea4f026de2c889',1,'newsys_wizard(struct dtsgui *dtsgui, const char *title, void *data):&#160;wizard.c'],['../wizard_8c.html#a56c78e0d32a18452dcea4f026de2c889',1,'newsys_wizard(struct dtsgui *dtsgui, const char *title, void *data):&#160;wizard.c']]],
+  ['newsys_5fwizard',['newsys_wizard',['../group___d_t_s-_a_p_p-_wizard.html#ga56c78e0d32a18452dcea4f026de2c889',1,'newsys_wizard(struct dtsgui *dtsgui, const char *title, void *data):&#160;wizard.c'],['../group___d_t_s-_a_p_p-_wizard.html#ga56c78e0d32a18452dcea4f026de2c889',1,'newsys_wizard(struct dtsgui *dtsgui, const char *title, void *data):&#160;wizard.c']]],
   ['node',['node',['../classtree__newnode.html#a50e4845fff0149464cfb8ffe105b061c',1,'tree_newnode::node()'],['../classtab__newpane.html#a6ba77ba36491f4faaa975fe4264e0da5',1,'tab_newpane::node()']]],
   ['node_5fcb',['node_cb',['../classtree__newnode.html#acd8405c3d6f344a21ecdadcbf3db14a6',1,'tree_newnode']]],
   ['node_5fid',['node_id',['../private_8h.html#a018cb6fe637d3a25a67e794d620808ec',1,'private.h']]],

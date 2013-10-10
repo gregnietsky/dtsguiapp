@@ -2,7 +2,7 @@ var searchData=
 [
   ['x',['x',['../structpoint.html#ad679b07fb69d55f5ad454d0f1f2891d5',1,'point']]],
   ['xml',['xml',['../class_d_t_s_d_v_m_list_store.html#a92118dc06f2c70dea29103fd004228da',1,'DTSDVMListStore::xml()'],['../unionform__data.html#a3dcf61d4a1bf598d238248b6a2fd84c0',1,'form_data::xml()']]],
-  ['xml_5fconfig',['xml_config',['../wxforms_8c.html#a063bbba7cc37af45b7989f2838fae1e1',1,'wxforms.c']]],
+  ['xml_5fconfig',['xml_config',['../group___d_t_s-_a_p_p.html#ga063bbba7cc37af45b7989f2838fae1e1',1,'wxforms.c']]],
   ['xml_5felement',['xml_element',['../classxml__element.html',1,'xml_element'],['../classxml__element.html#a888f82e61d6ed6d91077cbf0037c5ed9',1,'xml_element::xml_element()']]],
   ['xmlcheckbox',['XMLCheckBox',['../class_d_t_s_panel.html#a1495f670e901f45cbbc3a4d2c471aa53',1,'DTSPanel']]],
   ['xmlcombobox',['XMLComboBox',['../class_d_t_s_panel.html#a4d294755a98b6194df04292abe18d1b0',1,'DTSPanel']]],

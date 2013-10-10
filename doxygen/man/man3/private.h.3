@@ -1,4 +1,4 @@
-.TH "app/private.h" 3 "Thu Oct 10 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "app/private.h" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -174,14 +174,6 @@ Definition at line 740 of file netconfig\&.c\&.
 References app_getxmldoc(), app_data::datadir, dtsgui_alert(), dtsgui_treewindow(), dtsgui_userdata(), and network_tree_setup()\&.
 .PP
 Referenced by config_menu()\&.
-.SS "struct xml_doc* app_getxmldoc (struct \fBdtsgui\fP *dtsgui)\fC [read]\fP"
-
-.PP
-Definition at line 44 of file wxforms\&.c\&.
-.PP
-References dtsgui_userdata(), and app_data::xmldoc\&.
-.PP
-Referenced by advanced_config(), export_config(), iface_config(), pbx_settings(), reconfig_wizard(), view_config_conf(), and view_config_xml()\&.
 .SS "void* app_toolbar (struct \fBdtsgui\fP *dtsgui, void *pw, longstyle, intid, const char *name, void *data)"
 
 .PP
@@ -196,14 +188,6 @@ Definition at line 189 of file config\&.c\&.
 References advanced_config(), app_data::cfg_menu, dtsgui_menuenable(), dtsgui_menusep(), dtsgui_newmenu(), dtsgui_newmenucb(), dtsgui_userdata(), export_config(), iface_config(), pbx_settings(), reconfig_wizard(), save_config(), view_config_conf(), and view_config_xml()\&.
 .PP
 Referenced by guiconfig_cb()\&.
-.SS "\fBdtsgui_pane\fP editsys_wizard (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
-
-.PP
-Definition at line 456 of file wizard\&.c\&.
-.PP
-References dtsgui_alert(), dtsgui_fileopen(), and system_wizard()\&.
-.PP
-Referenced by file_menu()\&.
 .SS "\fBdtsgui_pane\fP export_config (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -236,14 +220,6 @@ Definition at line 201 of file netconfig\&.c\&.
 References dtsgui_xmltextbox()\&.
 .PP
 Referenced by network_iface(), and network_iface_pane_cb()\&.
-.SS "\fBdtsgui_pane\fP newsys_wizard (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
-
-.PP
-Definition at line 431 of file wizard\&.c\&.
-.PP
-References app_data::datadir, dtsgui_alert(), dtsgui_userdata(), and system_wizard()\&.
-.PP
-Referenced by file_menu()\&.
 .SS "\fBdtsgui_pane\fP open_config (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -258,14 +234,6 @@ Referenced by file_menu()\&.
 Definition at line 325 of file pbxconfig\&.c\&.
 .PP
 References app_getxmldoc(), dtsgui_newtabpage(), dtsgui_tabwindow(), pbxconf_acd(), pbxconf_autoadd(), pbxconf_default(), pbxconf_e1(), pbxconf_global(), pbxconf_incoming(), pbxconf_location(), pbxconf_mfcr2(), pbxconf_misdn(), pbxconf_numplan(), pbxconf_topts(), pbxconf_trunk(), and wx_PANEL_BUTTON_ACTION\&.
-.PP
-Referenced by config_menu()\&.
-.SS "\fBdtsgui_pane\fP reconfig_wizard (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
-
-.PP
-Definition at line 476 of file wizard\&.c\&.
-.PP
-References app_getxmldoc(), and system_wizard()\&.
 .PP
 Referenced by config_menu()\&.
 .SS "\fBdtsgui_pane\fP save_config (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
@@ -300,14 +268,6 @@ Definition at line 94 of file config\&.c\&.
 References app_getxmldoc(), and dtsgui_textpane()\&.
 .PP
 Referenced by config_menu()\&.
-.SS "void wizz_custinfo (\fBdtsgui_pane\fP *pg)"
-
-.PP
-Definition at line 159 of file wizard\&.c\&.
-.PP
-References dtsgui_xmltextbox(), and dtsgui_xmltextbox_multi()\&.
-.PP
-Referenced by customer_info(), and system_wizard()\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.
