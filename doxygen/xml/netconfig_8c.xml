@@ -79,15 +79,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_domain_server_new</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -108,15 +108,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>customer_info</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -137,15 +137,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -166,15 +166,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -195,15 +195,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_dyn</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -224,15 +224,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_serv</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -253,15 +253,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_zone</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -282,15 +282,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_host</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -311,15 +311,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_host_new</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -340,11 +340,11 @@
         <argsstring>(dtsgui_treeview tv, dtsgui_treenode tn, struct xml_node *xn, void *data)</argsstring>
         <name>network_config_dns_domain_node</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -369,15 +369,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_domain</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -398,15 +398,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_domain_new</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -427,15 +427,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_config_dns_domain_server</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -456,7 +456,7 @@
         <argsstring>(dtsgui_pane p, const char *xpre, const char *iface)</argsstring>
         <name>network_iface_pane</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -481,15 +481,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_iface</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -510,7 +510,7 @@
         <argsstring>(dtsgui_pane p, void *data)</argsstring>
         <name>network_iface_new_pane</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -531,15 +531,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_newiface</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -560,15 +560,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_wifi</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -589,15 +589,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_newwifi</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -618,15 +618,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_wan</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -647,15 +647,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_newwan</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -676,15 +676,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_route</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -705,15 +705,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_newroute</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -734,15 +734,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_modem</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -763,15 +763,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_modem_adv</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -792,15 +792,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_modem_ana</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -821,15 +821,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_adsl_link</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -850,15 +850,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_adsl_link_new</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -879,15 +879,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_adsl_user</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -908,15 +908,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_adsl_user_new</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -937,15 +937,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_tos</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -966,15 +966,15 @@
         <argsstring>(dtsgui_pane p, dtsgui_treeview self, dtsgui_treenode node, void *data)</argsstring>
         <name>network_tos_new</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>self</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -995,7 +995,7 @@
         <argsstring>(dtsgui_treeview tree, struct xml_doc *xmldoc)</argsstring>
         <name>network_tree_setup</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
@@ -1011,7 +1011,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/app/netconfig.c" line="602" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/netconfig.c" bodystart="602" bodyend="738"/>
       </memberdef>
       <memberdef kind="function" id="netconfig_8c_1a6d9d2b0105df87000cb2bdecbff91239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane advanced_config</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *title, void *data)</argsstring>
         <name>advanced_config</name>
@@ -1068,16 +1068,16 @@
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private_8h" kindref="compound">private.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" kindref="member">network_config_dns_domain_server_new</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" kindref="member">network_config_dns_domain_server_new</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*protocols[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;TCP&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;UDP&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;GRE&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ESP&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;AH&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OSPF&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ALL&quot;</highlight><highlight class="normal">};</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="netconfig_8c_1ae22737be42f8d0e7f4095a937e911578" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ae22737be42f8d0e7f4095a937e911578" kindref="member">customer_info</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="32" refid="netconfig_8c_1ae22737be42f8d0e7f4095a937e911578" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ae22737be42f8d0e7f4095a937e911578" kindref="member">customer_info</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="private_8h_1accc1788f03d17d487ce09a1d07d53018" kindref="member">wizz_custinfo</ref>(p);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*XXX<sp/>LDAP<sp/>Settings<sp/>server/DN*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" kindref="member">network_config</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="37" refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" kindref="member">network_config</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_doc<sp/>*xmldoc<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel_1ga75c6083aa363922fdf1fd19767eceeea" kindref="member" tooltip="Get reference to previously allocated XML Doc.">dtsgui_panelxml</ref>(p);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*lb,<sp/>*elb;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*extint<sp/>=<sp/>NULL;</highlight></codeline>
@@ -1116,7 +1116,7 @@
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xmldoc);</highlight></codeline>
 <codeline lineno="74"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="netconfig_8c_1ae9c5a17913250cf9e849ee49b2398b98" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ae9c5a17913250cf9e849ee49b2398b98" kindref="member">network_config_dns</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="76" refid="netconfig_8c_1ae9c5a17913250cf9e849ee49b2398b98" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ae9c5a17913250cf9e849ee49b2398b98" kindref="member">network_config_dns</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Hostname&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Hostname&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Hostname&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Domain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Domain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Domain&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Aditional<sp/>Search<sp/>Domains&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Search&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Search&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1129,7 +1129,7 @@
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" kindref="member" tooltip="Place a XML checkbox element on the panel.">dtsgui_xmlcheckbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>Internal<sp/>Interface<sp/>For<sp/>DNS<sp/>First&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IntFirst&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IntFirst&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="netconfig_8c_1a320c13af10e723f60daea4caa8aa9b50" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a320c13af10e723f60daea4caa8aa9b50" kindref="member">network_config_dns_dyn</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="89" refid="netconfig_8c_1a320c13af10e723f60daea4caa8aa9b50" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a320c13af10e723f60daea4caa8aa9b50" kindref="member">network_config_dns_dyn</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Dynamic<sp/>DNS<sp/>Domain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynZone&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynZone&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Dynamic<sp/>DNS<sp/>Server&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynServ&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynServ&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Dynamic<sp/>DNS<sp/>Secret&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynKey&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynKey&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1137,7 +1137,7 @@
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" kindref="member" tooltip="Place a XML checkbox element on the panel.">dtsgui_xmlcheckbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Add<sp/>CNAME<sp/>For<sp/>host&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynamicCNAME&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DynamicCNAME&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97" refid="netconfig_8c_1a035e28f34c903ba37365831f1dc546a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a035e28f34c903ba37365831f1dc546a0" kindref="member">network_config_dns_serv</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="97" refid="netconfig_8c_1a035e28f34c903ba37365831f1dc546a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a035e28f34c903ba37365831f1dc546a0" kindref="member">network_config_dns_serv</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Shared<sp/>Secret<sp/>For<sp/>Domain<sp/>Updates&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;SmartKey&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;SmartKey&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" kindref="member" tooltip="Place a XML checkbox element on the panel.">dtsgui_xmlcheckbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Backup<sp/>Zone<sp/>Files&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Backup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Backup&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1147,7 +1147,7 @@
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" kindref="member" tooltip="Place a XML checkbox element on the panel.">dtsgui_xmlcheckbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Allow<sp/>Recursive<sp/>Lookup<sp/>Externally&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ExtServ&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ExtServ&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="105"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107" refid="netconfig_8c_1a9648a33ba3b8a54dc53b527c6604feb5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a9648a33ba3b8a54dc53b527c6604feb5" kindref="member">network_config_dns_zone</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="107" refid="netconfig_8c_1a9648a33ba3b8a54dc53b527c6604feb5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a9648a33ba3b8a54dc53b527c6604feb5" kindref="member">network_config_dns_zone</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;SOA<sp/>Serial&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Serial&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Serial&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;SOA<sp/>Refresh&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Refresh&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Refresh&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;SOA<sp/>Retry&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Retry&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Retry&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1155,7 +1155,7 @@
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Default<sp/>TTL&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DefaultTTL&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Config&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DefaultTTL&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="113"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115" refid="netconfig_8c_1ad08cc595d8b15576d51ce580336f6063" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ad08cc595d8b15576d51ce580336f6063" kindref="member">network_config_dns_host</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="115" refid="netconfig_8c_1ad08cc595d8b15576d51ce580336f6063" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ad08cc595d8b15576d51ce580336f6063" kindref="member">network_config_dns_host</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Hosts&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
@@ -1165,7 +1165,7 @@
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="123"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125" refid="netconfig_8c_1a298dbf73bc519972483995caa73e6d94" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a298dbf73bc519972483995caa73e6d94" kindref="member">network_config_dns_host_new</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="125" refid="netconfig_8c_1a298dbf73bc519972483995caa73e6d94" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a298dbf73bc519972483995caa73e6d94" kindref="member">network_config_dns_host_new</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Hostame&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;host&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;IP<sp/>Address&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ipaddr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Mac<sp/>Address&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;macaddr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1174,11 +1174,11 @@
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___c_o_r_e_1gga7ecd2a00f2306c0b94734a72a7899898a09bf4479510d6996e8c2d0e3cd27c714" kindref="member" tooltip="Allow deleteing the node from right click menu.">DTS_TREE_NEW_NODE_DELETE</ref><sp/>|<sp/><ref refid="group___c_o_r_e_1gga7ecd2a00f2306c0b94734a72a7899898a92d0796e80ba757f7f74979253423b98" kindref="member" tooltip="Allow editing of the node.">DTS_TREE_NEW_NODE_EDIT</ref><sp/>|<sp/><ref refid="group___c_o_r_e_1gga7ecd2a00f2306c0b94734a72a7899898ab4026cda71b1fb600c8af942c1194e99" kindref="member" tooltip="Container node allows sorting.">DTS_TREE_NEW_NODE_SORT</ref>,<sp/>NULL,<sp/>NULL,<sp/><ref refid="netconfig_8c_1ad08cc595d8b15576d51ce580336f6063" kindref="member">network_config_dns_host</ref>);</highlight></codeline>
 <codeline lineno="132"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134" refid="netconfig_8c_1a1d7b1d28e9721a0c428be28f6c505875" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a1d7b1d28e9721a0c428be28f6c505875" kindref="member">network_config_dns_domain_node</ref>(<ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/>tv,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>tn,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>xml_node<sp/>*xn,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="134" refid="netconfig_8c_1a1d7b1d28e9721a0c428be28f6c505875" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a1d7b1d28e9721a0c428be28f6c505875" kindref="member">network_config_dns_domain_node</ref>(<ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/>tv,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>tn,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>xml_node<sp/>*xn,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" kindref="member" tooltip="Create a container in the tree view.">dtsgui_treecont</ref>(tv,<sp/>tn,<sp/></highlight><highlight class="stringliteral">&quot;Servers&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>1,<sp/>0,<sp/><ref refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca67d5c38ab27222a53751515b85b184f3" kindref="member">DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER_NEW</ref>,<sp/><ref refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" kindref="member">network_config_dns_domain_server_new</ref>,<sp/>NULL);</highlight></codeline>
 <codeline lineno="136"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138" refid="netconfig_8c_1a07f37413fb1c1cb24c6f3a8a2e542114" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a07f37413fb1c1cb24c6f3a8a2e542114" kindref="member">network_config_dns_domain</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="138" refid="netconfig_8c_1a07f37413fb1c1cb24c6f3a8a2e542114" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a07f37413fb1c1cb24c6f3a8a2e542114" kindref="member">network_config_dns_domain</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/DNS/Hosted&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain;</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
@@ -1191,7 +1191,7 @@
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="149"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151" refid="netconfig_8c_1aa9efe8e76bc229a36fa2499c892949ce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aa9efe8e76bc229a36fa2499c892949ce" kindref="member">network_config_dns_domain_new</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="151" refid="netconfig_8c_1aa9efe8e76bc229a36fa2499c892949ce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aa9efe8e76bc229a36fa2499c892949ce" kindref="member">network_config_dns_domain_new</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flg;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"></highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Domain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;domain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1203,7 +1203,7 @@
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="netconfig_8c_1a1d7b1d28e9721a0c428be28f6c505875" kindref="member">network_config_dns_domain_node</ref>,<sp/>NULL,<sp/><ref refid="netconfig_8c_1a07f37413fb1c1cb24c6f3a8a2e542114" kindref="member">network_config_dns_domain</ref>);</highlight></codeline>
 <codeline lineno="161"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163" refid="netconfig_8c_1a85464ec7fa78ad423246f4cd96e69cfc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a85464ec7fa78ad423246f4cd96e69cfc" kindref="member">network_config_dns_domain_server</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="163" refid="netconfig_8c_1a85464ec7fa78ad423246f4cd96e69cfc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a85464ec7fa78ad423246f4cd96e69cfc" kindref="member">network_config_dns_domain_server</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre;</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"></highlight></codeline>
@@ -1217,7 +1217,7 @@
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="175"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177" refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" kindref="member">network_config_dns_domain_server_new</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="177" refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" kindref="member">network_config_dns_domain_server_new</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*domain;</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>xpath[PATH_MAX];</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/>flg;</highlight></codeline>
@@ -1241,7 +1241,7 @@
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)domain);</highlight></codeline>
 <codeline lineno="199"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="201" refid="private_8h_1ab77c80061336502da4c2cc2d2c11f4a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ab77c80061336502da4c2cc2d2c11f4a0" kindref="member">network_iface_pane</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iface)<sp/>{</highlight></codeline>
+<codeline lineno="201" refid="private_8h_1ab77c80061336502da4c2cc2d2c11f4a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ab77c80061336502da4c2cc2d2c11f4a0" kindref="member">network_iface_pane</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iface)<sp/>{</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Interface&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;iface&quot;</highlight><highlight class="normal">,<sp/>xpre,<sp/></highlight><highlight class="stringliteral">&quot;Interface&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>iface,<sp/>NULL);</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;IP<sp/>Address&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ipaddr&quot;</highlight><highlight class="normal">,<sp/>xpre,<sp/></highlight><highlight class="stringliteral">&quot;Interface&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>iface,<sp/></highlight><highlight class="stringliteral">&quot;ipaddr&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;IP<sp/>Subnet<sp/>Bits&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;subnet&quot;</highlight><highlight class="normal">,<sp/>xpre,<sp/></highlight><highlight class="stringliteral">&quot;Interface&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>iface,<sp/></highlight><highlight class="stringliteral">&quot;subnet&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -1253,7 +1253,7 @@
 <codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Bandwidth<sp/>Out&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;bwout&quot;</highlight><highlight class="normal">,<sp/>xpre,<sp/></highlight><highlight class="stringliteral">&quot;Interface&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>iface,<sp/></highlight><highlight class="stringliteral">&quot;bwout&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="211"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="213" refid="netconfig_8c_1a21ad9729b2e5667d1a71117c3811d428" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a21ad9729b2e5667d1a71117c3811d428" kindref="member">network_iface</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="213" refid="netconfig_8c_1a21ad9729b2e5667d1a71117c3811d428" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a21ad9729b2e5667d1a71117c3811d428" kindref="member">network_iface</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
 <codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Interfaces&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iface<sp/>=<sp/>data;</highlight></codeline>
@@ -1262,7 +1262,7 @@
 <codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="220"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222" refid="private_8h_1a3d43e57bb96cf8bd603872099c3bc038" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a3d43e57bb96cf8bd603872099c3bc038" kindref="member">network_iface_new_pane</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="222" refid="private_8h_1a3d43e57bb96cf8bd603872099c3bc038" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a3d43e57bb96cf8bd603872099c3bc038" kindref="member">network_iface_new_pane</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Interface&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;iface&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;IP<sp/>Address&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ipaddr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1275,7 +1275,7 @@
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Bandwidth<sp/>Out&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;bwout&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="233"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="234"><highlight class="normal"></highlight></codeline>
-<codeline lineno="235" refid="netconfig_8c_1a27bdf0ff7227d24f8b4811af169802a1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a27bdf0ff7227d24f8b4811af169802a1" kindref="member">network_newiface</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="235" refid="netconfig_8c_1a27bdf0ff7227d24f8b4811af169802a1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a27bdf0ff7227d24f8b4811af169802a1" kindref="member">network_newiface</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flg;</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"></highlight></codeline>
 <codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="netconfig_8c_1a3d43e57bb96cf8bd603872099c3bc038" kindref="member">network_iface_new_pane</ref>(p,<sp/>data);</highlight></codeline>
@@ -1285,7 +1285,7 @@
 <codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flg,<sp/>NULL,<sp/>NULL,<sp/><ref refid="netconfig_8c_1a21ad9729b2e5667d1a71117c3811d428" kindref="member">network_iface</ref>);</highlight></codeline>
 <codeline lineno="243"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="244"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245" refid="netconfig_8c_1adceac66b5b38e18e528fc5a2adb2d649" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1adceac66b5b38e18e528fc5a2adb2d649" kindref="member">network_wifi</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="245" refid="netconfig_8c_1adceac66b5b38e18e528fc5a2adb2d649" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1adceac66b5b38e18e528fc5a2adb2d649" kindref="member">network_wifi</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*lb;</highlight></codeline>
 <codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
@@ -1317,7 +1317,7 @@
 <codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="275"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"></highlight></codeline>
-<codeline lineno="277" refid="netconfig_8c_1a3a749e8b1e9561bb168ba3aed04444a8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a3a749e8b1e9561bb168ba3aed04444a8" kindref="member">network_newwifi</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="277" refid="netconfig_8c_1a3a749e8b1e9561bb168ba3aed04444a8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a3a749e8b1e9561bb168ba3aed04444a8" kindref="member">network_newwifi</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_doc<sp/>*xmldoc<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel_1ga75c6083aa363922fdf1fd19767eceeea" kindref="member" tooltip="Get reference to previously allocated XML Doc.">dtsgui_panelxml</ref>(p);</highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*lb;</highlight></codeline>
 <codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flg;</highlight></codeline>
@@ -1360,7 +1360,7 @@
 <codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xmldoc);</highlight></codeline>
 <codeline lineno="318"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="319"><highlight class="normal"></highlight></codeline>
-<codeline lineno="320" refid="netconfig_8c_1a7b1e028eec7d055f71cd0b466131fb1e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a7b1e028eec7d055f71cd0b466131fb1e" kindref="member">network_wan</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="320" refid="netconfig_8c_1a7b1e028eec7d055f71cd0b466131fb1e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a7b1e028eec7d055f71cd0b466131fb1e" kindref="member">network_wan</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Routes&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
 <codeline lineno="323"><highlight class="normal"></highlight></codeline>
@@ -1373,7 +1373,7 @@
 <codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="331"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="332"><highlight class="normal"></highlight></codeline>
-<codeline lineno="333" refid="netconfig_8c_1a853ca11b890527ee2031a756497e145c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a853ca11b890527ee2031a756497e145c" kindref="member">network_newwan</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="333" refid="netconfig_8c_1a853ca11b890527ee2031a756497e145c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a853ca11b890527ee2031a756497e145c" kindref="member">network_newwan</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flg;</highlight></codeline>
 <codeline lineno="335"><highlight class="normal"></highlight></codeline>
 <codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;descrip&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1389,7 +1389,7 @@
 <codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flg,<sp/>NULL,<sp/>NULL,<sp/><ref refid="netconfig_8c_1a7b1e028eec7d055f71cd0b466131fb1e" kindref="member">network_wan</ref>);</highlight></codeline>
 <codeline lineno="347"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="348"><highlight class="normal"></highlight></codeline>
-<codeline lineno="349" refid="netconfig_8c_1afd9751515d9c36b70349d2a9ef5fae7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1afd9751515d9c36b70349d2a9ef5fae7f" kindref="member">network_route</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="349" refid="netconfig_8c_1afd9751515d9c36b70349d2a9ef5fae7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1afd9751515d9c36b70349d2a9ef5fae7f" kindref="member">network_route</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/GenRoutes&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
 <codeline lineno="352"><highlight class="normal"></highlight></codeline>
@@ -1399,7 +1399,7 @@
 <codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="357"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"></highlight></codeline>
-<codeline lineno="359" refid="netconfig_8c_1a605df16cf428f6c76fe9b0936203b005" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a605df16cf428f6c76fe9b0936203b005" kindref="member">network_newroute</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="359" refid="netconfig_8c_1a605df16cf428f6c76fe9b0936203b005" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a605df16cf428f6c76fe9b0936203b005" kindref="member">network_newroute</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flg;</highlight></codeline>
 <codeline lineno="361"><highlight class="normal"></highlight></codeline>
 <codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;descrip&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1412,7 +1412,7 @@
 <codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flg,<sp/>NULL,<sp/>NULL,<sp/><ref refid="netconfig_8c_1afd9751515d9c36b70349d2a9ef5fae7f" kindref="member">network_route</ref>);</highlight></codeline>
 <codeline lineno="370"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="371"><highlight class="normal"></highlight></codeline>
-<codeline lineno="372" refid="netconfig_8c_1aaf6857ee640832afc05a9e158faedde3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aaf6857ee640832afc05a9e158faedde3" kindref="member">network_modem</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="372" refid="netconfig_8c_1aaf6857ee640832afc05a9e158faedde3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aaf6857ee640832afc05a9e158faedde3" kindref="member">network_modem</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*lb;</highlight></codeline>
 <codeline lineno="374"><highlight class="normal"></highlight></codeline>
 <codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*XXX<sp/>LDAP<sp/>Settings<sp/>server/DN*/</highlight><highlight class="normal"></highlight></codeline>
@@ -1430,7 +1430,7 @@
 <codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Password&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Password&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Dialup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Password&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="388"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="389"><highlight class="normal"></highlight></codeline>
-<codeline lineno="390" refid="netconfig_8c_1ab761836f12c4ee80260a57451498d48f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ab761836f12c4ee80260a57451498d48f" kindref="member">network_modem_adv</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="390" refid="netconfig_8c_1ab761836f12c4ee80260a57451498d48f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ab761836f12c4ee80260a57451498d48f" kindref="member">network_modem_adv</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Holdoff<sp/>Time&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Holdoff&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Dialup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Holdoff&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;MTU/MRU&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MTU&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Dialup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MTU&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" kindref="member" tooltip="Place a XML text element on the panel.">dtsgui_xmltextbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Idle<sp/>Timeout&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IdleTimeout&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Dialup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IdleTimeout&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1441,7 +1441,7 @@
 <codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" kindref="member" tooltip="Place a XML checkbox element on the panel.">dtsgui_xmlcheckbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Deflate<sp/>Compression&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Deflate&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Dialup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Deflate&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="399"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="400"><highlight class="normal"></highlight></codeline>
-<codeline lineno="401" refid="netconfig_8c_1a4bab1c305385131091d979ad287b2ea3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a4bab1c305385131091d979ad287b2ea3" kindref="member">network_modem_ana</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="401" refid="netconfig_8c_1a4bab1c305385131091d979ad287b2ea3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a4bab1c305385131091d979ad287b2ea3" kindref="member">network_modem_ana</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*lb;</highlight></codeline>
 <codeline lineno="403"><highlight class="normal"></highlight></codeline>
 <codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((lb<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" kindref="member" tooltip="Place a XML listbox element on the panel.">dtsgui_xmllistbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Comm<sp/>Port<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ComPort&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Dialup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ComPort&quot;</highlight><highlight class="normal">,<sp/>NULL)))<sp/>{</highlight></codeline>
@@ -1486,7 +1486,7 @@
 <codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" kindref="member" tooltip="Place a XML checkbox element on the panel.">dtsgui_xmlcheckbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Abort<sp/>On<sp/>Busy&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Busy&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Dialup&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;option&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Busy&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
 <codeline lineno="444"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="445"><highlight class="normal"></highlight></codeline>
-<codeline lineno="446" refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" kindref="member">network_adsl_link</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="446" refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" kindref="member">network_adsl_link</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/ADSL/Links&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn;</highlight></codeline>
 <codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_doc<sp/>*xmldoc;</highlight></codeline>
@@ -1519,7 +1519,7 @@
 <codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xmldoc);</highlight></codeline>
 <codeline lineno="477"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="478"><highlight class="normal"></highlight></codeline>
-<codeline lineno="479" refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" kindref="member">network_adsl_link_new</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="479" refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" kindref="member">network_adsl_link_new</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_doc<sp/>*xmldoc<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel_1ga75c6083aa363922fdf1fd19767eceeea" kindref="member" tooltip="Get reference to previously allocated XML Doc.">dtsgui_panelxml</ref>(p);</highlight></codeline>
 <codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*elb;</highlight></codeline>
 <codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flg;</highlight></codeline>
@@ -1544,7 +1544,7 @@
 <codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xmldoc);</highlight></codeline>
 <codeline lineno="502"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="503"><highlight class="normal"></highlight></codeline>
-<codeline lineno="504" refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" kindref="member">network_adsl_user</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="504" refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" kindref="member">network_adsl_user</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/ADSL/Users&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kindref="member" tooltip="Return the XML node reference held by the tree node.">dtsgui_treenodegetxml</ref>(node,<sp/>NULL);</highlight></codeline>
 <codeline lineno="507"><highlight class="normal"></highlight></codeline>
@@ -1553,7 +1553,7 @@
 <codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="511"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="512"><highlight class="normal"></highlight></codeline>
-<codeline lineno="513" refid="netconfig_8c_1a8736362ad99edb6b363f2238131368d7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a8736362ad99edb6b363f2238131368d7" kindref="member">network_adsl_user_new</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="513" refid="netconfig_8c_1a8736362ad99edb6b363f2238131368d7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a8736362ad99edb6b363f2238131368d7" kindref="member">network_adsl_user_new</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flg;</highlight></codeline>
 <codeline lineno="515"><highlight class="normal"></highlight></codeline>
 <codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;Username&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;username&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -1564,7 +1564,7 @@
 <codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flg,<sp/>NULL,<sp/>NULL,<sp/><ref refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" kindref="member">network_adsl_user</ref>);</highlight></codeline>
 <codeline lineno="522"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="523"><highlight class="normal"></highlight></codeline>
-<codeline lineno="524" refid="netconfig_8c_1a0b2d5249167dfdc0b972bff2091b5745" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a0b2d5249167dfdc0b972bff2091b5745" kindref="member">network_tos</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="524" refid="netconfig_8c_1a0b2d5249167dfdc0b972bff2091b5745" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a0b2d5249167dfdc0b972bff2091b5745" kindref="member">network_tos</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*lb;</highlight></codeline>
 <codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pcnt,<sp/>i;</highlight></codeline>
 <codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/QOS&quot;</highlight><highlight class="normal">;</highlight></codeline>
@@ -1605,7 +1605,7 @@
 <codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(xn);</highlight></codeline>
 <codeline lineno="563"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="564"><highlight class="normal"></highlight></codeline>
-<codeline lineno="565" refid="netconfig_8c_1a3a92d505fabcecdf55524fe8b77f08bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a3a92d505fabcecdf55524fe8b77f08bc" kindref="member">network_tos_new</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="565" refid="netconfig_8c_1a3a92d505fabcecdf55524fe8b77f08bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1a3a92d505fabcecdf55524fe8b77f08bc" kindref="member">network_tos_new</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>node,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*lb;</highlight></codeline>
 <codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pcnt,<sp/>i,<sp/>flg;</highlight></codeline>
 <codeline lineno="568"><highlight class="normal"></highlight></codeline>
@@ -1642,8 +1642,8 @@
 <codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flg,<sp/>NULL,<sp/>NULL,<sp/><ref refid="netconfig_8c_1a0b2d5249167dfdc0b972bff2091b5745" kindref="member">network_tos</ref>);</highlight></codeline>
 <codeline lineno="600"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="601"><highlight class="normal"></highlight></codeline>
-<codeline lineno="602" refid="netconfig_8c_1ad5f5bf5384beb7b8c2fefdd51315d079" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ad5f5bf5384beb7b8c2fefdd51315d079" kindref="member">network_tree_setup</ref>(<ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/>tree,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>xml_doc<sp/>*xmldoc)<sp/>{</highlight></codeline>
-<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref><sp/>cust,<sp/>ipconf,<sp/>tmp,<sp/>tmp2,<sp/>tln</highlight><highlight class="comment">/*,<sp/>tmp3*/</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="602" refid="netconfig_8c_1ad5f5bf5384beb7b8c2fefdd51315d079" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="netconfig_8c_1ad5f5bf5384beb7b8c2fefdd51315d079" kindref="member">network_tree_setup</ref>(<ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/>tree,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>xml_doc<sp/>*xmldoc)<sp/>{</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member" tooltip="Define treenode as void* it is not exported to API.">dtsgui_treenode</ref><sp/>cust,<sp/>ipconf,<sp/>tmp,<sp/>tmp2,<sp/>tln</highlight><highlight class="comment">/*,<sp/>tmp3*/</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_search<sp/>*xp;</highlight></codeline>
 <codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_node<sp/>*xn;</highlight></codeline>
 <codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iter<sp/>=<sp/>NULL;</highlight></codeline>
@@ -1780,8 +1780,8 @@
 <codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" kindref="member" tooltip="Create a container in the tree view.">dtsgui_treecont</ref>(tree,<sp/>ipconf,<sp/></highlight><highlight class="stringliteral">&quot;Secuity<sp/>Certificate<sp/>Config&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>0,<sp/>0,<sp/>-1,<sp/>NULL,<sp/>NULL);</highlight></codeline>
 <codeline lineno="738"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="739"><highlight class="normal"></highlight></codeline>
-<codeline lineno="740" refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" refkind="member"><highlight class="normal"><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/><ref refid="netconfig_8c_1a6d9d2b0105df87000cb2bdecbff91239" kindref="member">advanced_config</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
-<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref><sp/>tree;</highlight></codeline>
+<codeline lineno="740" refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" refkind="member"><highlight class="normal"><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/><ref refid="netconfig_8c_1a6d9d2b0105df87000cb2bdecbff91239" kindref="member">advanced_config</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member" tooltip="Define treeview as void* it is not exported to API.">dtsgui_treeview</ref><sp/>tree;</highlight></codeline>
 <codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_doc<sp/>*xmldoc;</highlight></codeline>
 <codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapp__data" kindref="compound">app_data</ref><sp/>*appdata;</highlight></codeline>
 <codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>defconf[PATH_MAX];</highlight></codeline>

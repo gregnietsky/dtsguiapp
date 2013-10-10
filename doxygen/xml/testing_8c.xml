@@ -49,7 +49,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -70,7 +70,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -99,7 +99,7 @@
         <argsstring>(dtsgui_pane p)</argsstring>
         <name>testpanel</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -120,7 +120,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>menu</declname>
         </param>
         <param>
@@ -165,7 +165,7 @@
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private_8h" kindref="compound">private.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="testing_8c_1a467cf1f57bc5317de7fa356f87b324a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="testing_8c_1a467cf1f57bc5317de7fa356f87b324a6" kindref="member">post_items</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="25" refid="testing_8c_1a467cf1f57bc5317de7fa356f87b324a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="testing_8c_1a467cf1f57bc5317de7fa356f87b324a6" kindref="member">post_items</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p)<sp/>{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">curl_post<sp/>*post;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">curlbuf<sp/>*cbuf;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*url;</highlight></codeline>
@@ -184,7 +184,7 @@
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)url);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="testing_8c_1af1d7f330874be6beda389c9ea4a4545c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="testing_8c_1af1d7f330874be6beda389c9ea4a4545c" kindref="member">handle_test</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="44" refid="testing_8c_1af1d7f330874be6beda389c9ea4a4545c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="testing_8c_1af1d7f330874be6beda389c9ea4a4545c" kindref="member">handle_test</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>!=<sp/><ref refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a331937b86eb259d1d84728d28fbed79d" kindref="member" tooltip="Button press event.">wx_PANEL_EVENT_BUTTON</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -212,7 +212,7 @@
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" kindref="member">testpanel</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="72" refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" kindref="member">testpanel</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p)<sp/>{</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="classform__item" kindref="compound">form_item</ref><sp/>*l;</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel-_elements-_s_t_d_1ga9bbd9bb4aa7a921fc64742ecf3b0f61d" kindref="member" tooltip="Place a text element on the panel.">dtsgui_textbox</ref>(p,<sp/></highlight><highlight class="stringliteral">&quot;TextBox&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Text&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
@@ -234,9 +234,9 @@
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>objunref(l);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94" refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="private_8h_1a77cb81a619f8c9ccd83cdf1e7c97aae9" kindref="member">test_menu</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref><sp/>menu,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*url)<sp/>{</highlight></codeline>
+<codeline lineno="94" refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="private_8h_1a77cb81a619f8c9ccd83cdf1e7c97aae9" kindref="member">test_menu</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member" tooltip="Define menu as void* it is not exported to API.">dtsgui_menu</ref><sp/>menu,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*url)<sp/>{</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*purl;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p;</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>purl<sp/>=<sp/>objchar(url);</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>p<sp/>=<sp/><ref refid="group___c-_a_p_i-_panel_1gac763bff39863668014931022b469d836" kindref="member" tooltip="Create a pannel to be displayed.">dtsgui_panel</ref>(dtsgui,<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>Panel&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Test<sp/>Panel&quot;</highlight><highlight class="normal">,<sp/><ref refid="group___c_o_r_e_1ga6fd6c8004323d4605940ac5fb2ff9c9b" kindref="member" tooltip="Shortcut flags for all buttons.">wx_PANEL_BUTTON_ALL</ref>,<sp/>1,<sp/>purl);</highlight></codeline>

@@ -18,7 +18,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" line="33" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdynamic__panel_1ace913453518c31659ba1ecdbede98d99" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
         <definition>dtsgui_dynpanel dynamic_panel::cb</definition>
         <argsstring></argsstring>
         <name>cb</name>
@@ -101,7 +101,7 @@
           <declname>blank</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
           <declname>cb</declname>
         </param>
         <param>

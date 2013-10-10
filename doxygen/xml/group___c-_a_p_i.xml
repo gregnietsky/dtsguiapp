@@ -171,7 +171,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -245,7 +245,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -326,7 +326,7 @@
         <argsstring>(dtsgui_menuitem dmi, int enable)</argsstring>
         <name>dtsgui_menuitemenable</name>
         <param>
-          <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+          <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
           <declname>dmi</declname>
         </param>
         <param>

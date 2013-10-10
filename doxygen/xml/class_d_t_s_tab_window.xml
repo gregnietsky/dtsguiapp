@@ -67,7 +67,7 @@
           <defval>NULL</defval>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
           <defval>NULL</defval>
         </param>
@@ -112,7 +112,7 @@
           <declname>userdata</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>

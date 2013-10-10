@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    objunref(refobj);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="class_d_t_s_panel_event.html#ad6d0fb736bf45162b6bf2082e437195b">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_panel_event.html#ad6d0fb736bf45162b6bf2082e437195b">DTSPanelEvent::SetCallback</a>(<a class="code" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> ev_cb, <span class="keywordtype">void</span> *userdata) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="class_d_t_s_panel_event.html#ad6d0fb736bf45162b6bf2082e437195b">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_panel_event.html#ad6d0fb736bf45162b6bf2082e437195b">DTSPanelEvent::SetCallback</a>(<a class="code" href="group___c_o_r_e.html#ga06d1a959e1581116961bca636a919043" title="Callback run on panel event When a panel event is triggered and a callback has been registered it wil...">event_callback</a> ev_cb, <span class="keywordtype">void</span> *userdata) {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    objlock(refobj);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (data) {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        objunref(data);</div>
@@ -499,7 +499,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    w-&gt;Show(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;}</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
-<div class="line"><a name="l00394"></a><span class="lineno"><a class="code" href="class_d_t_s_panel.html#ac18de08077529d488ea329a72ee14d98">  394</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_panel.html#ac18de08077529d488ea329a72ee14d98">DTSPanel::SetEventCallback</a>(<a class="code" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> evcb, <span class="keywordtype">void</span> *userdata, <span class="keywordtype">bool</span> useref) {</div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="code" href="class_d_t_s_panel.html#ac18de08077529d488ea329a72ee14d98">  394</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_panel.html#ac18de08077529d488ea329a72ee14d98">DTSPanel::SetEventCallback</a>(<a class="code" href="group___c_o_r_e.html#ga06d1a959e1581116961bca636a919043" title="Callback run on panel event When a panel event is triggered and a callback has been registered it wil...">event_callback</a> evcb, <span class="keywordtype">void</span> *userdata, <span class="keywordtype">bool</span> useref) {</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="class_d_t_s_panel_event.html">DTSPanelEvent</a> *dtsevt = (<a class="code" href="class_d_t_s_panel_event.html">DTSPanelEvent</a>*)<a class="code" href="class_d_t_s_object.html#a132481851865629352e4aefa7f822e4b">dtsevthandler</a>;</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_d_t_s_object.html#a132481851865629352e4aefa7f822e4b">dtsevthandler</a>) {</div>
@@ -672,7 +672,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        tbox-&gt;Disable();</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    }</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="dtsgui_8h.html#abbf6decd0bf8428c296f4adcafed46fb">form_item</a>(tbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836">DTS_WIDGET_TEXTBOX</a>, name, NULL, NULL, data, dtype);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="group___c_o_r_e.html#gabbf6decd0bf8428c296f4adcafed46fb" title="Forward definition of form_item.">form_item</a>(tbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836">DTS_WIDGET_TEXTBOX</a>, name, NULL, NULL, data, dtype);</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    addtobucket(<a class="code" href="class_d_t_s_object.html#a53fa1242a31d95bc3fec2824ff055cae">fitems</a>, fi);</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    objunref(fi);</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;}</div>
@@ -715,7 +715,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    cbox-&gt;SetValue((ischecked) ? <span class="keyword">true</span> : <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="dtsgui_8h.html#abbf6decd0bf8428c296f4adcafed46fb">form_item</a>(cbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28">DTS_WIDGET_CHECKBOX</a>, name, checkval, uncheckval, data, dtype);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="group___c_o_r_e.html#gabbf6decd0bf8428c296f4adcafed46fb" title="Forward definition of form_item.">form_item</a>(cbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28">DTS_WIDGET_CHECKBOX</a>, name, checkval, uncheckval, data, dtype);</div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    addtobucket(<a class="code" href="class_d_t_s_object.html#a53fa1242a31d95bc3fec2824ff055cae">fitems</a>, fi);</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    objunref(fi);</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;}</div>
@@ -754,7 +754,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        lbox-&gt;Disable();</div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    }</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="dtsgui_8h.html#abbf6decd0bf8428c296f4adcafed46fb">form_item</a>(lbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>, name, value, NULL, data, dtype);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="group___c_o_r_e.html#gabbf6decd0bf8428c296f4adcafed46fb" title="Forward definition of form_item.">form_item</a>(lbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84a617d0a94e82cae830c769b66b1751b9a">DTS_WIDGET_LISTBOX</a>, name, value, NULL, data, dtype);</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    addtobucket(<a class="code" href="class_d_t_s_object.html#a53fa1242a31d95bc3fec2824ff055cae">fitems</a>, fi);</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="keywordflow">return</span> fi;</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;}</div>
@@ -794,7 +794,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        lbox-&gt;Disable();</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    }</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="dtsgui_8h.html#abbf6decd0bf8428c296f4adcafed46fb">form_item</a>(lbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>, name, value, NULL, data, dtype);</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    fi = <span class="keyword">new</span> <a class="code" href="group___c_o_r_e.html#gabbf6decd0bf8428c296f4adcafed46fb" title="Forward definition of form_item.">form_item</a>(lbox, <a class="code" href="group___c_o_r_e.html#ggafd296180392ef5681415b9fb0590be84ad091872a88b66595cb453008b03565cc">DTS_WIDGET_COMBOBOX</a>, name, value, NULL, data, dtype);</div>
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    addtobucket(<a class="code" href="class_d_t_s_object.html#a53fa1242a31d95bc3fec2824ff055cae">fitems</a>, fi);</div>
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordflow">return</span> fi;</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;}</div>
@@ -1008,7 +1008,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    <span class="keywordflow">return</span> wxScrolledWindow::Show(show);</div>
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;}</div>
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;</div>
-<div class="line"><a name="l00903"></a><span class="lineno"><a class="code" href="class_d_t_s_tab_page.html#ae29cbd93440f0d485b2f186fcdbc9c7c">  903</a></span>&#160;<a class="code" href="class_d_t_s_tab_page.html#ae29cbd93440f0d485b2f186fcdbc9c7c">DTSTabPage::DTSTabPage</a>(<a class="code" href="_d_t_s_panel_8h.html#af976c481b023e74fc9d1d4cc939082e7">wxBookCtrlBase</a> *parent, <a class="code" href="class_d_t_s_frame.html">DTSFrame</a> *frame, wxString status, <span class="keywordtype">int</span> butmask, <a class="code" href="dtsgui_8h.html#ab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> c_cb, <span class="keywordtype">void</span> *c_data, <span class="keyword">struct</span> xml_doc *xmldoc)</div>
+<div class="line"><a name="l00903"></a><span class="lineno"><a class="code" href="class_d_t_s_tab_page.html#ae29cbd93440f0d485b2f186fcdbc9c7c">  903</a></span>&#160;<a class="code" href="class_d_t_s_tab_page.html#ae29cbd93440f0d485b2f186fcdbc9c7c">DTSTabPage::DTSTabPage</a>(<a class="code" href="_d_t_s_panel_8h.html#af976c481b023e74fc9d1d4cc939082e7">wxBookCtrlBase</a> *parent, <a class="code" href="class_d_t_s_frame.html">DTSFrame</a> *frame, wxString status, <span class="keywordtype">int</span> butmask, <a class="code" href="group___c_o_r_e.html#gab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> c_cb, <span class="keywordtype">void</span> *c_data, <span class="keyword">struct</span> xml_doc *xmldoc)</div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    :wxScrolledWindow(parent, wxID_ANY),</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    <a class="code" href="class_d_t_s_scroll_panel.html">DTSScrollPanel</a>(parent,frame, status, butmask) {</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;    <a class="code" href="class_d_t_s_object.html#ad191e42b5daa056f9ea8247d752df3b0">type</a> = <a class="code" href="group___c_o_r_e.html#gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad">wx_DTSPANEL_TAB</a>;</div>
@@ -1169,7 +1169,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    <span class="keywordflow">return</span> wxPanel::Show(show);</div>
 <div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;}</div>
 <div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;</div>
-<div class="line"><a name="l01064"></a><span class="lineno"><a class="code" href="class_d_t_s_dialog.html#af1e6be7e08913149d128839b7e535cd0"> 1064</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_dialog.html#af1e6be7e08913149d128839b7e535cd0">DTSDialog::RunDialog</a>(<a class="code" href="dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c">event_callback</a> evcb, <span class="keywordtype">void</span> *data) {</div>
+<div class="line"><a name="l01064"></a><span class="lineno"><a class="code" href="class_d_t_s_dialog.html#af1e6be7e08913149d128839b7e535cd0"> 1064</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_dialog.html#af1e6be7e08913149d128839b7e535cd0">DTSDialog::RunDialog</a>(<a class="code" href="group___c_o_r_e.html#ga06d1a959e1581116961bca636a919043" title="Callback run on panel event When a panel event is triggered and a callback has been registered it wil...">event_callback</a> evcb, <span class="keywordtype">void</span> *data) {</div>
 <div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;    <a class="code" href="class_d_t_s_panel.html#ac18de08077529d488ea329a72ee14d98">SetEventCallback</a>(evcb, data);</div>
 <div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;</div>
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;    <a class="code" href="class_d_t_s_dialog.html#a569e3d1caa1405354a2a090725b76071">Show</a>(<span class="keyword">true</span>);</div>
@@ -1205,7 +1205,7 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_d_t_s_panel_8cpp.html">DTSPanel.cpp</a></li>
-    <li class="footer">Generated on Thu Oct 10 2013 15:03:48 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 16:13:05 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

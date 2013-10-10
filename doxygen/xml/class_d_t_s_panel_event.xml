@@ -32,7 +32,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="51" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1acfd3355668ba382f87a9aab4ea2c4e9c" kindref="member">event_callback</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga06d1a959e1581116961bca636a919043" kindref="member">event_callback</ref></type>
         <definition>event_callback DTSPanelEvent::evcb</definition>
         <argsstring></argsstring>
         <name>evcb</name>
@@ -206,7 +206,7 @@
         <argsstring>(event_callback evcb=NULL, void *userdata=NULL)</argsstring>
         <name>SetCallback</name>
         <param>
-          <type><ref refid="dtsgui_8h_1acfd3355668ba382f87a9aab4ea2c4e9c" kindref="member">event_callback</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga06d1a959e1581116961bca636a919043" kindref="member">event_callback</ref></type>
           <declname>evcb</declname>
           <defval>NULL</defval>
         </param>

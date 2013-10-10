@@ -10,7 +10,7 @@
         <argsstring>(dtsgui_menu dm, int enable)</argsstring>
         <name>dtsgui_menuenable</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dm</declname>
         </param>
         <param>
@@ -41,7 +41,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="52" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="52" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+        <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
         <definition>dtsgui_menu DTS_C_API::dtsgui_newmenu</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *name)</argsstring>
         <name>dtsgui_newmenu</name>
@@ -79,12 +79,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="269" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="269" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+        <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
         <definition>dtsgui_menuitem DTS_C_API::dtsgui_newmenuitem</definition>
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane p)</argsstring>
         <name>dtsgui_newmenuitem</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -96,7 +96,7 @@
           <declname>hint</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -139,12 +139,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="291" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="291" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+        <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
         <definition>dtsgui_menuitem DTS_C_API::dtsgui_newmenucb</definition>
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *name, int blank, dtsgui_dynpanel cb, void *data)</argsstring>
         <name>dtsgui_newmenucb</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -164,7 +164,7 @@
           <declname>blank</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -174,7 +174,7 @@
         <briefdescription>
 <para>Create a menu item that will call a function with supplied data. </para>        </briefdescription>
         <detaileddescription>
-<para>The specified call back will be called passing the application pointer (dtsgui), the name and data ptr supplied. if this function returns a <ref refid="class_d_t_s_object" kindref="compound">DTSObject</ref> pane it will be displayed.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" kindref="member">DTSFrame::NewMenuItem()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_frame_1a27cb5c393f6f9bbab0d087db9e6338ce" kindref="member">DTSFrame::NewMenu()</ref></para></simplesect>
+<para>The specified call back will be called passing the application pointer (dtsgui), the name and data ptr supplied. if this function returns a <ref refid="class_d_t_s_object" kindref="compound">DTSObject</ref> pane it will be displayed.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" kindref="member">DTSFrame::NewMenuItem()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_frame_1a27cb5c393f6f9bbab0d087db9e6338ce" kindref="member">DTSFrame::NewMenu()</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dtsmenu</parametername>
@@ -237,7 +237,7 @@
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui)</argsstring>
         <name>dtsgui_exit</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -275,7 +275,7 @@
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui)</argsstring>
         <name>dtsgui_close</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -313,7 +313,7 @@
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *text)</argsstring>
         <name>dtsgui_about</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -362,7 +362,7 @@
         <argsstring>(dtsgui_menu dtsmenu)</argsstring>
         <name>dtsgui_menusep</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <briefdescription>

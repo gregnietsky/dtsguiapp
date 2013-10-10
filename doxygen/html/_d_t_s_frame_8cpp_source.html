@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    this-&gt;dtsgui = <a class="code" href="dtsgui_8h.html#a8d0ed2b4049e42079b366e341b33347f">dtsgui</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    this-&gt;dtsgui = <a class="code" href="group___c_o_r_e.html#ga8d0ed2b4049e42079b366e341b33347f" title="Forward decleration of the application data class.">dtsgui</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/*deleted on close*/</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    menubar = <span class="keyword">new</span> wxMenuBar;</div>
@@ -425,7 +425,7 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> tb;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno"><a class="code" href="class_d_t_s_frame.html#a1fe29f6d56f11d1702a372416a659e3e">  320</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_frame.html#a1fe29f6d56f11d1702a372416a659e3e">DTSFrame::SetupToolbar</a>(<a class="code" href="dtsgui_8h.html#a53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> cb, <span class="keywordtype">void</span> *data) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="code" href="class_d_t_s_frame.html#a1fe29f6d56f11d1702a372416a659e3e">  320</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_d_t_s_frame.html#a1fe29f6d56f11d1702a372416a659e3e">DTSFrame::SetupToolbar</a>(<a class="code" href="group___c_o_r_e.html#ga53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> cb, <span class="keywordtype">void</span> *data) {</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    tbcb = cb;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">if</span> (tb_data) {</div>
@@ -550,12 +550,12 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keywordflow">return</span> mi;</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
-<div class="line"><a name="l00445"></a><span class="lineno"><a class="code" href="class_d_t_s_frame.html#a658114abb50692e826e18593a0e3ba73">  445</a></span>&#160;wxMenuItem *<a class="code" href="class_d_t_s_frame.html#a55fe07b66530435bce652e8ab3091707">DTSFrame::NewMenuItem</a>(wxMenu *m, <span class="keywordtype">int</span> menuid, <span class="keyword">const</span> wxString &amp;name, <span class="keyword">const</span> wxString &amp;hint, <span class="keywordtype">int</span> blank, <a class="code" href="dtsgui_8h.html#a080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> cb, <span class="keywordtype">void</span> *data) {</div>
+<div class="line"><a name="l00445"></a><span class="lineno"><a class="code" href="class_d_t_s_frame.html#a658114abb50692e826e18593a0e3ba73">  445</a></span>&#160;wxMenuItem *<a class="code" href="class_d_t_s_frame.html#a55fe07b66530435bce652e8ab3091707">DTSFrame::NewMenuItem</a>(wxMenu *m, <span class="keywordtype">int</span> menuid, <span class="keyword">const</span> wxString &amp;name, <span class="keyword">const</span> wxString &amp;hint, <span class="keywordtype">int</span> blank, <a class="code" href="group___c_o_r_e.html#ga080f931027861c0021f72ac2562b45d7" title="Callback called when a dynamic menu item is selected This function is called and allows returning a p...">dtsgui_dynpanel</a> cb, <span class="keywordtype">void</span> *data) {</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    wxMenuItem *mi;</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    wxObject *ev_data;</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keyword">class </span><a class="code" href="classdynamic__panel.html">dynamic_panel</a> *p_dyn;</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordflow">if</span> (!(p_dyn = <span class="keyword">new</span> <a class="code" href="dtsgui_8h.html#aa881f6b55dcf9b95108f08bf62d4802f">dynamic_panel</a>(name, blank, cb, data))) {</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordflow">if</span> (!(p_dyn = <span class="keyword">new</span> <a class="code" href="group___c_o_r_e.html#gaa881f6b55dcf9b95108f08bf62d4802f" title="Forward definition of dynamic_panel.">dynamic_panel</a>(name, blank, cb, data))) {</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    }</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
@@ -567,7 +567,7 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordflow">return</span> mi;</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;}</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keywordtype">int</span> DTSFrame::pwevent(<span class="keyword">struct</span> <a class="code" href="classdtsgui.html">dtsgui</a> *<a class="code" href="classdtsgui.html">dtsgui</a>, <a class="code" href="dtsgui_8h.html#a80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a> p, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> event, <span class="keywordtype">void</span> *data) {</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keywordtype">int</span> DTSFrame::pwevent(<span class="keyword">struct</span> <a class="code" href="classdtsgui.html">dtsgui</a> *<a class="code" href="classdtsgui.html">dtsgui</a>, <a class="code" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438" title="Define panel as void* it is not exported to API.">dtsgui_pane</a> p, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> event, <span class="keywordtype">void</span> *data) {</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">struct </span>basic_auth *auth;</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <a class="code" href="class_d_t_s_dialog.html">DTSDialog</a> *dp = (<a class="code" href="class_d_t_s_dialog.html">DTSDialog</a>*)p;</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
@@ -614,7 +614,7 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_d_t_s_frame_8cpp.html">DTSFrame.cpp</a></li>
-    <li class="footer">Generated on Thu Oct 10 2013 15:03:48 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 16:13:05 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

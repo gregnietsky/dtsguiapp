@@ -104,7 +104,7 @@
         <argsstring>(dtsgui_tabview tv, struct xml_doc *xmldoc)</argsstring>
         <name>get_newiface_data</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
@@ -162,7 +162,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -191,7 +191,7 @@
         <argsstring>(dtsgui_pane p, void *data)</argsstring>
         <name>network_iface_pane_cb</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -212,7 +212,7 @@
         <argsstring>(dtsgui_pane p, void *data)</argsstring>
         <name>network_iface_new_pane_cb</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -228,7 +228,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/app/interface.c" line="137" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/interface.c" bodystart="137" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="interface_8c_1abf43f59e582eee9f27734b14c8307819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane iface_config</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *title, void *data)</argsstring>
         <name>iface_config</name>
@@ -284,7 +284,7 @@
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="private_8h" kindref="compound">private.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26" refid="structnew__iface__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnew__iface__data" kindref="compound">new_iface_data</ref><sp/>{</highlight></codeline>
-<codeline lineno="27" refid="structnew__iface__data_1a9d79a7426a503e08072ca03cd2e03bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref><sp/><ref refid="structnew__iface__data_1a9d79a7426a503e08072ca03cd2e03bd2" kindref="member">tv</ref>;</highlight></codeline>
+<codeline lineno="27" refid="structnew__iface__data_1a9d79a7426a503e08072ca03cd2e03bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member" tooltip="Define tabview as void* it is not exported to API.">dtsgui_tabview</ref><sp/><ref refid="structnew__iface__data_1a9d79a7426a503e08072ca03cd2e03bd2" kindref="member">tv</ref>;</highlight></codeline>
 <codeline lineno="28" refid="structnew__iface__data_1a1e4c0298e74a4fe178240c7335ca7acf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_doc<sp/>*<ref refid="structnew__iface__data_1a1e4c0298e74a4fe178240c7335ca7acf" kindref="member">xmldoc</ref>;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
@@ -320,7 +320,7 @@
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="interface_8c_1a23ef5c5cf103f36dd179c5625f8f8576" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnew__iface__data" kindref="compound">new_iface_data</ref><sp/>*<ref refid="interface_8c_1a23ef5c5cf103f36dd179c5625f8f8576" kindref="member">get_newiface_data</ref>(<ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref><sp/><ref refid="structnew__iface__data_1a9d79a7426a503e08072ca03cd2e03bd2" kindref="member">tv</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>xml_doc<sp/>*<ref refid="structnew__iface__data_1a1e4c0298e74a4fe178240c7335ca7acf" kindref="member">xmldoc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63" refid="interface_8c_1a23ef5c5cf103f36dd179c5625f8f8576" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnew__iface__data" kindref="compound">new_iface_data</ref><sp/>*<ref refid="interface_8c_1a23ef5c5cf103f36dd179c5625f8f8576" kindref="member">get_newiface_data</ref>(<ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member" tooltip="Define tabview as void* it is not exported to API.">dtsgui_tabview</ref><sp/><ref refid="structnew__iface__data_1a9d79a7426a503e08072ca03cd2e03bd2" kindref="member">tv</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>xml_doc<sp/>*<ref refid="structnew__iface__data_1a1e4c0298e74a4fe178240c7335ca7acf" kindref="member">xmldoc</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnew__iface__data" kindref="compound">new_iface_data</ref><sp/>*nd;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(nd<sp/>=<sp/>objalloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*nd),<sp/><ref refid="interface_8c_1ad806ada5b6aa10cb8e8b21af8fe03c33" kindref="member">free_newiface_data</ref>)))<sp/>{</highlight></codeline>
@@ -343,7 +343,7 @@
 <codeline lineno="83"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/*update<sp/>data<sp/>and<sp/>let<sp/>system<sp/>continue<sp/>by<sp/>&quot;skiping*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" kindref="member">handle_updatetabpane</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="86" refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" kindref="member">handle_updatetabpane</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structiface__cdata" kindref="compound">iface_cdata</ref><sp/>*cdata<sp/>=<sp/>data;</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structiface__cdata_1afbf1d003b7573fb72ce7a31b527557cb" kindref="member">name</ref>;</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
@@ -380,7 +380,7 @@
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
 <codeline lineno="121"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123" refid="interface_8c_1aec69e5698c53680c3551eeb9e05cbaf6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_8c_1aec69e5698c53680c3551eeb9e05cbaf6" kindref="member">network_iface_pane_cb</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="123" refid="interface_8c_1aec69e5698c53680c3551eeb9e05cbaf6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_8c_1aec69e5698c53680c3551eeb9e05cbaf6" kindref="member">network_iface_pane_cb</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structiface__cdata" kindref="compound">iface_cdata</ref><sp/>*cdata<sp/>=<sp/>data;</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*iface;</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*xpre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/config/IP/Interfaces&quot;</highlight><highlight class="normal">;</highlight></codeline>
@@ -394,7 +394,7 @@
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c-_a_p_i-_panel_1gaa85445ee6c9a2c24d76824bb67cc2ab2" kindref="member" tooltip="Set event callback function for panel.">dtsgui_setevcallback</ref>(p,<sp/><ref refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" kindref="member">handle_updatetabpane</ref>,<sp/>cdata);</highlight></codeline>
 <codeline lineno="135"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137" refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" kindref="member">network_iface_new_pane_cb</ref>(<ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="137" refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" kindref="member">network_iface_new_pane_cb</ref>(<ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnew__iface__data" kindref="compound">new_iface_data</ref><sp/>*nd<sp/>=<sp/>data;</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="netconfig_8c_1a3d43e57bb96cf8bd603872099c3bc038" kindref="member">network_iface_new_pane</ref>(p,<sp/>data);</highlight></codeline>
@@ -402,8 +402,8 @@
 <codeline lineno="142"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145" refid="private_8h_1abf43f59e582eee9f27734b14c8307819" refkind="member"><highlight class="normal"><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref><sp/><ref refid="interface_8c_1abf43f59e582eee9f27734b14c8307819" kindref="member">iface_config</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref><sp/>tabv;</highlight></codeline>
+<codeline lineno="145" refid="private_8h_1abf43f59e582eee9f27734b14c8307819" refkind="member"><highlight class="normal"><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member" tooltip="Define panel as void* it is not exported to API.">dtsgui_pane</ref><sp/><ref refid="interface_8c_1abf43f59e582eee9f27734b14c8307819" kindref="member">iface_config</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="classdtsgui" kindref="compound">dtsgui</ref><sp/>*<ref refid="classdtsgui" kindref="compound">dtsgui</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member" tooltip="Define tabview as void* it is not exported to API.">dtsgui_tabview</ref><sp/>tabv;</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnew__iface__data" kindref="compound">new_iface_data</ref><sp/>*nd;</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_doc<sp/>*xmldoc;</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">xml_search<sp/>*xp;</highlight></codeline>

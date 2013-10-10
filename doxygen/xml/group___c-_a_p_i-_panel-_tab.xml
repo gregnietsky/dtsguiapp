@@ -5,12 +5,12 @@
     <title>C API Tab View Interface</title>
       <sectiondef kind="func">
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_newtabpage</definition>
         <argsstring>(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata)</argsstring>
         <name>dtsgui_newtabpage</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
@@ -30,7 +30,7 @@
           <declname>xmldoc</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -41,7 +41,7 @@
 <para>Create and append a tab to the view. </para>        </briefdescription>
         <detaileddescription>
 <para>Append a tab to the tab view the tab will be configured when it is selected the callback will run to configure it.</para><para><simplesect kind="note"><para>Its also possible to configure the returned panel. </para><simplesectsep/><para>On win32 all tabs are configured when the view is activated.</para></simplesect>
-<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" kindref="member">dtsgui_tabpage_insert</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
+<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" kindref="member">dtsgui_tabpage_insert</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tv</parametername>
@@ -98,12 +98,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="546" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="546" bodyend="549"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_tabpage_insert</definition>
         <argsstring>(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos, int undo)</argsstring>
         <name>dtsgui_tabpage_insert</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
@@ -123,7 +123,7 @@
           <declname>xmldoc</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -141,7 +141,7 @@
         <briefdescription>
 <para>Create and append a tab to the view. </para>        </briefdescription>
         <detaileddescription>
-<para>Insert a tab at the position specified and recreate the panel at position undo.</para><para><simplesect kind="see"><para>dtsgui_tabpage_newtabpage </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
+<para>Insert a tab at the position specified and recreate the panel at position undo.</para><para><simplesect kind="see"><para>dtsgui_tabpage_newtabpage </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tv</parametername>
@@ -218,11 +218,11 @@
         <argsstring>(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath, const char *node, const char *vitem, const char *tattr, dtsgui_tabpane_newdata_cb data_cb, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, void *data)</argsstring>
         <name>dtsgui_newxmltabpane</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
           <declname>tabv</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -242,11 +242,11 @@
           <declname>tattr</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
           <declname>data_cb</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>

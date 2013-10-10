@@ -31,7 +31,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="62" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classtab__newpane_1a8eb7f1e451ea29a942fe94c5e79842bc" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+        <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
         <definition>dtsgui_tabpanel_cb tab_newpane::cb</definition>
         <argsstring></argsstring>
         <name>cb</name>
@@ -44,7 +44,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="63" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classtab__newpane_1ad411183382cacce488de4bad08fa1e74" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1ab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
+        <type><ref refid="group___c_o_r_e_1gab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
         <definition>dtsgui_tabpane_newdata_cb tab_newpane::data_cb</definition>
         <argsstring></argsstring>
         <name>data_cb</name>
@@ -191,11 +191,11 @@
           <declname>tattr</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
           <declname>data_cb</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -230,7 +230,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>

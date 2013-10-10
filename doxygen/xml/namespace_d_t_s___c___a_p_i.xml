@@ -25,7 +25,7 @@
         <argsstring>(dtsgui_menu dm, int enable)</argsstring>
         <name>dtsgui_menuenable</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dm</declname>
         </param>
         <param>
@@ -213,7 +213,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -287,7 +287,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -368,7 +368,7 @@
         <argsstring>(dtsgui_menuitem dmi, int enable)</argsstring>
         <name>dtsgui_menuitemenable</name>
         <param>
-          <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+          <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
           <declname>dmi</declname>
         </param>
         <param>
@@ -436,7 +436,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="253" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="253" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+        <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
         <definition>dtsgui_menu DTS_C_API::dtsgui_newmenu</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *name)</argsstring>
         <name>dtsgui_newmenu</name>
@@ -474,12 +474,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="269" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="269" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+        <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
         <definition>dtsgui_menuitem DTS_C_API::dtsgui_newmenuitem</definition>
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, dtsgui_pane p)</argsstring>
         <name>dtsgui_newmenuitem</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -491,7 +491,7 @@
           <declname>hint</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -534,12 +534,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="291" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="291" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+        <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
         <definition>dtsgui_menuitem DTS_C_API::dtsgui_newmenucb</definition>
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *hint, const char *name, int blank, dtsgui_dynpanel cb, void *data)</argsstring>
         <name>dtsgui_newmenucb</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -559,7 +559,7 @@
           <declname>blank</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -569,7 +569,7 @@
         <briefdescription>
 <para>Create a menu item that will call a function with supplied data. </para>        </briefdescription>
         <detaileddescription>
-<para>The specified call back will be called passing the application pointer (dtsgui), the name and data ptr supplied. if this function returns a <ref refid="class_d_t_s_object" kindref="compound">DTSObject</ref> pane it will be displayed.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" kindref="member">DTSFrame::NewMenuItem()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_frame_1a27cb5c393f6f9bbab0d087db9e6338ce" kindref="member">DTSFrame::NewMenu()</ref></para></simplesect>
+<para>The specified call back will be called passing the application pointer (dtsgui), the name and data ptr supplied. if this function returns a <ref refid="class_d_t_s_object" kindref="compound">DTSObject</ref> pane it will be displayed.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" kindref="member">DTSFrame::NewMenuItem()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kindref="member">dtsgui_newmenu()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_frame_1a27cb5c393f6f9bbab0d087db9e6338ce" kindref="member">DTSFrame::NewMenu()</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dtsmenu</parametername>
@@ -632,7 +632,7 @@
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui)</argsstring>
         <name>dtsgui_exit</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -670,7 +670,7 @@
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui)</argsstring>
         <name>dtsgui_close</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -708,7 +708,7 @@
         <argsstring>(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, const char *text)</argsstring>
         <name>dtsgui_about</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <param>
@@ -757,7 +757,7 @@
         <argsstring>(dtsgui_menu dtsmenu)</argsstring>
         <name>dtsgui_menusep</name>
         <param>
-          <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+          <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
           <declname>dtsmenu</declname>
         </param>
         <briefdescription>
@@ -779,7 +779,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="386" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="386" bodyend="389"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gac763bff39863668014931022b469d836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_panel</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *name, const char *title, int butmask, enum panel_type type, void *userdata)</argsstring>
         <name>dtsgui_panel</name>
@@ -861,7 +861,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="407" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="407" bodyend="410"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gafb8efe017917a372826f7ddedb0e8bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_textpane</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *title, const char *buf)</argsstring>
         <name>dtsgui_textpane</name>
@@ -910,7 +910,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="426" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="426" bodyend="429"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gaa92cb9c6006aaf320e784f04500c3b25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
         <definition>dtsgui_treeview DTS_C_API::dtsgui_treewindow</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *title, dtsgui_tree_cb tree_cb, void *userdata, struct xml_doc *xmldoc)</argsstring>
         <name>dtsgui_treewindow</name>
@@ -923,7 +923,7 @@
           <declname>title</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref></type>
           <declname>tree_cb</declname>
         </param>
         <param>
@@ -937,7 +937,7 @@
         <briefdescription>
 <para>Create a treepane view. </para>        </briefdescription>
         <detaileddescription>
-<para>Create a split window with a tree control on the left and display area on right.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_tree_window" kindref="compound">DTSTreeWindow</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1a32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga465794df2cb30731dfe34d3e7a4ed368" kindref="member">tree_cbtype</ref></para></simplesect>
+<para>Create a split window with a tree control on the left and display area on right.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_tree_window" kindref="compound">DTSTreeWindow</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga465794df2cb30731dfe34d3e7a4ed368" kindref="member">tree_cbtype</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dtsgui</parametername>
@@ -980,7 +980,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="446" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="446" bodyend="449"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
         <definition>dtsgui_tabview DTS_C_API::dtsgui_tabwindow</definition>
         <argsstring>(struct dtsgui *dtsgui, const char *title, void *data)</argsstring>
         <name>dtsgui_tabwindow</name>
@@ -1034,11 +1034,11 @@
         <argsstring>(dtsgui_treeview tree, dtsgui_treenode node, const char *newname)</argsstring>
         <name>dtsgui_nodesetxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -1082,7 +1082,7 @@
         <argsstring>(dtsgui_pane pane, struct xml_doc *xmldoc)</argsstring>
         <name>dtsgui_panel_setxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -1119,7 +1119,7 @@
         <argsstring>(dtsgui_pane pane)</argsstring>
         <name>dtsgui_panelxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <briefdescription>
@@ -1147,7 +1147,7 @@
         <argsstring>(dtsgui_pane pane)</argsstring>
         <name>dtsgui_delpane</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <briefdescription>
@@ -1168,12 +1168,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="519" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="519" bodyend="521"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_newtabpage</definition>
         <argsstring>(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata)</argsstring>
         <name>dtsgui_newtabpage</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
@@ -1193,7 +1193,7 @@
           <declname>xmldoc</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -1204,7 +1204,7 @@
 <para>Create and append a tab to the view. </para>        </briefdescription>
         <detaileddescription>
 <para>Append a tab to the tab view the tab will be configured when it is selected the callback will run to configure it.</para><para><simplesect kind="note"><para>Its also possible to configure the returned panel. </para><simplesectsep/><para>On win32 all tabs are configured when the view is activated.</para></simplesect>
-<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" kindref="member">dtsgui_tabpage_insert</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
+<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" kindref="member">dtsgui_tabpage_insert</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tv</parametername>
@@ -1261,12 +1261,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="546" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="546" bodyend="549"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_tabpage_insert</definition>
         <argsstring>(dtsgui_tabview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, dtsgui_tabpanel_cb cb, void *cdata, int pos, int undo)</argsstring>
         <name>dtsgui_tabpage_insert</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
@@ -1286,7 +1286,7 @@
           <declname>xmldoc</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -1304,7 +1304,7 @@
         <briefdescription>
 <para>Create and append a tab to the view. </para>        </briefdescription>
         <detaileddescription>
-<para>Insert a tab at the position specified and recreate the panel at position undo.</para><para><simplesect kind="see"><para>dtsgui_tabpage_newtabpage </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
+<para>Insert a tab at the position specified and recreate the panel at position undo.</para><para><simplesect kind="see"><para>dtsgui_tabpage_newtabpage </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kindref="member">dtsgui_tabwindow()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" kindref="member">DTSTabWindow::CreateTab()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga5082bae7f0b5d2b7d715e40450f302ec" kindref="member">panel_buttons</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tv</parametername>
@@ -1381,11 +1381,11 @@
         <argsstring>(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath, const char *node, const char *vitem, const char *tattr, dtsgui_tabpane_newdata_cb data_cb, dtsgui_tabpanel_cb cb, void *cdata, struct xml_doc *xmldoc, void *data)</argsstring>
         <name>dtsgui_newxmltabpane</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
           <declname>tabv</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -1405,11 +1405,11 @@
           <declname>tattr</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab5e1fa276d48b20d35f4ef20110c39ed" kindref="member">dtsgui_tabpane_newdata_cb</ref></type>
           <declname>data_cb</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -1514,12 +1514,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="604" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="603" bodyend="607"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gad71b59e1898bce570cac2acd774f71e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_treepane</definition>
         <argsstring>(dtsgui_treeview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc)</argsstring>
         <name>dtsgui_treepane</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
@@ -1585,16 +1585,16 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="623" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="623" bodyend="626"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gab8713feb542a9bb13f8fe7e3bf568bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_treepane_default</definition>
         <argsstring>(dtsgui_treeview tv, dtsgui_treenode node)</argsstring>
         <name>dtsgui_treepane_default</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -1624,16 +1624,16 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="641" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="641" bodyend="644"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
         <definition>dtsgui_treenode DTS_C_API::dtsgui_treecont</definition>
         <argsstring>(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data)</argsstring>
         <name>dtsgui_treecont</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -1657,7 +1657,7 @@
           <declname>nodeid</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
         </param>
         <param>
@@ -1668,7 +1668,7 @@
 <para>Create a container in the tree view. </para>        </briefdescription>
         <detaileddescription>
 <para>Create and insert a new folder/container in the tree view with properties / call back. A panel will be created and supplied to the callback too implement on selection.</para><para><simplesect kind="note"><para>The root node is NULL this is the initial container.</para></simplesect>
-<simplesect kind="see"><para>DTSTreeWindow::AppendContainer </para><simplesectsep/><para><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
+<simplesect kind="see"><para>DTSTreeWindow::AppendContainer </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tree</parametername>
@@ -1739,16 +1739,16 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="667" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="666" bodyend="670"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga0f7146637609d42057e2cd21bd2bf33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
         <definition>dtsgui_treenode DTS_C_API::dtsgui_treeitem</definition>
         <argsstring>(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data)</argsstring>
         <name>dtsgui_treeitem</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -1772,7 +1772,7 @@
           <declname>nodeid</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
         </param>
         <param>
@@ -1782,7 +1782,7 @@
         <briefdescription>
 <para>Create a item in a container. </para>        </briefdescription>
         <detaileddescription>
-<para>Create and insert a new item in the tree view in the node specified with properties / call back. A panel will be created and supplied to the callback too implement on selection.</para><para><simplesect kind="see"><para>DTSTreeWindow::AppendItem </para><simplesectsep/><para><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
+<para>Create and insert a new item in the tree view in the node specified with properties / call back. A panel will be created and supplied to the callback too implement on selection.</para><para><simplesect kind="see"><para>DTSTreeWindow::AppendItem </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tree</parametername>
@@ -1858,15 +1858,15 @@
         <argsstring>(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr, int nid, int flags, dtsgui_xmltreenode_cb node_cb, void *data, dtsgui_treeviewpanel_cb p_cb)</argsstring>
         <name>dtsgui_newxmltreenode</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -1894,7 +1894,7 @@
           <declname>flags</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
           <declname>node_cb</declname>
         </param>
         <param>
@@ -1902,7 +1902,7 @@
           <declname>data</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
         </param>
         <briefdescription>
@@ -2007,7 +2007,7 @@
         <argsstring>(dtsgui_treenode tn)</argsstring>
         <name>dtsgui_treenodeid</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <briefdescription>
@@ -2034,7 +2034,7 @@
         <argsstring>(dtsgui_treenode tn)</argsstring>
         <name>dtsgui_treenodeparent</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <briefdescription>
@@ -2061,7 +2061,7 @@
         <argsstring>(dtsgui_treenode tn, struct xml_node *xn, const char *tattr)</argsstring>
         <name>dtsgui_treenodesetxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -2109,7 +2109,7 @@
         <argsstring>(dtsgui_treenode tn, char **buf)</argsstring>
         <name>dtsgui_treenodegetxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -2147,7 +2147,7 @@
         <argsstring>(dtsgui_treenode tn)</argsstring>
         <name>dtsgui_treenodegetdata</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <briefdescription>
@@ -2175,11 +2175,11 @@
         <argsstring>(dtsgui_pane pane, event_callback evcb, void *data)</argsstring>
         <name>dtsgui_setevcallback</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1acfd3355668ba382f87a9aab4ea2c4e9c" kindref="member">event_callback</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga06d1a959e1581116961bca636a919043" kindref="member">event_callback</ref></type>
           <declname>evcb</declname>
         </param>
         <param>
@@ -2189,7 +2189,7 @@
         <briefdescription>
 <para>Set event callback function for panel. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1ac18de08077529d488ea329a72ee14d98" kindref="member">DTSPanel::SetEventCallback()</ref> </para><simplesectsep/><para><ref refid="dtsgui_8h_1acfd3355668ba382f87a9aab4ea2c4e9c" kindref="member">event_callback</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1ac18de08077529d488ea329a72ee14d98" kindref="member">DTSPanel::SetEventCallback()</ref> </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga06d1a959e1581116961bca636a919043" kindref="member">event_callback</ref></para></simplesect>
 When a event happens the callback is called with the userdata to allow actioning the event.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>pane</parametername>
@@ -2223,7 +2223,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane)</argsstring>
         <name>dtsgui_xmlpanel_update</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <briefdescription>
@@ -2249,7 +2249,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane p)</argsstring>
         <name>dtsgui_pane2post</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -2276,7 +2276,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane)</argsstring>
         <name>dtsgui_paneldata</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <briefdescription>
@@ -2304,7 +2304,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title)</argsstring>
         <name>dtsgui_settitle</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -2341,7 +2341,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *status)</argsstring>
         <name>dtsgui_setstatus</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -2378,7 +2378,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, dtsgui_configcb cb, void *data)</argsstring>
         <name>dtsgui_configcallback</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -2427,7 +2427,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane p, const char *xpath, const char *node, const char *nodeval, const char *attrkey)</argsstring>
         <name>dtsgui_panetoxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -2498,11 +2498,11 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, event_callback evcb, void *data)</argsstring>
         <name>dtsgui_rundialog</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1acfd3355668ba382f87a9aab4ea2c4e9c" kindref="member">event_callback</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga06d1a959e1581116961bca636a919043" kindref="member">event_callback</ref></type>
           <declname>evcb</declname>
         </param>
         <param>
@@ -2579,7 +2579,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="928" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="928" bodyend="930"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_wizard_1ga3e76b1ea2eebb91e1d0b5a55649d65e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_wizard_addpage</definition>
         <argsstring>(struct dtsgui_wizard *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)</argsstring>
         <name>dtsgui_wizard_addpage</name>
@@ -2855,7 +2855,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane)</argsstring>
         <name>dtsgui_panel_items</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <briefdescription>
@@ -2882,7 +2882,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane p, const char *name)</argsstring>
         <name>dtsgui_finditem</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -3003,7 +3003,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane p, const char *name)</argsstring>
         <name>dtsgui_findvalue</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
@@ -3463,7 +3463,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data)</argsstring>
         <name>dtsgui_textbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -3533,7 +3533,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data)</argsstring>
         <name>dtsgui_textbox_multi</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -3603,7 +3603,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *value, void *data)</argsstring>
         <name>dtsgui_passwdbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -3673,7 +3673,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheck, int ischecked, void *data)</argsstring>
         <name>dtsgui_checkbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -3765,7 +3765,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, void *data)</argsstring>
         <name>dtsgui_listbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -3825,7 +3825,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, void *data)</argsstring>
         <name>dtsgui_combobox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -3885,7 +3885,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
         <name>dtsgui_xmltextbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -3988,7 +3988,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
         <name>dtsgui_xmltextbox_multi</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -4091,7 +4091,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
         <name>dtsgui_xmlpasswdbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -4194,7 +4194,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
         <name>dtsgui_xmlcheckbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -4319,7 +4319,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
         <name>dtsgui_xmllistbox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>
@@ -4423,7 +4423,7 @@ When a event happens the callback is called with the userdata to allow actioning
         <argsstring>(dtsgui_pane pane, const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)</argsstring>
         <name>dtsgui_xmlcombobox</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>pane</declname>
         </param>
         <param>

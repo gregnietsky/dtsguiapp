@@ -6,7 +6,7 @@ var searchData=
   ['evdata',['evdata',['../classevdata.html',1,'evdata'],['../classevdata.html#ad136a65ea4c324ecbd9b98e953c10afc',1,'evdata::evdata()']]],
   ['evdata_2ecpp',['evdata.cpp',['../evdata_8cpp.html',1,'']]],
   ['evdata_2eh',['evdata.h',['../evdata_8h.html',1,'']]],
-  ['event_5fcallback',['event_callback',['../dtsgui_8h.html#acfd3355668ba382f87a9aab4ea2c4e9c',1,'dtsgui.h']]],
+  ['event_5fcallback',['event_callback',['../group___c_o_r_e.html#ga06d1a959e1581116961bca636a919043',1,'dtsgui.h']]],
   ['eventhandler',['EventHandler',['../class_d_t_s_object.html#a392c5ee37a2ca5e82e39cf11bc781eda',1,'DTSObject']]],
   ['export_5fconfig',['export_config',['../config_8c.html#a01bdf27a0760d9da4bb77918735171c1',1,'export_config(struct dtsgui *dtsgui, const char *title, void *data):&#160;config.c'],['../private_8h.html#a01bdf27a0760d9da4bb77918735171c1',1,'export_config(struct dtsgui *dtsgui, const char *title, void *data):&#160;config.c']]]
 ];

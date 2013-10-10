@@ -4,7 +4,7 @@
     <compoundname>new_iface_data</compoundname>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structnew__iface__data_1a9d79a7426a503e08072ca03cd2e03bd2" prot="public" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" kindref="member">dtsgui_tabview</ref></type>
         <definition>dtsgui_tabview new_iface_data::tv</definition>
         <argsstring></argsstring>
         <name>tv</name>

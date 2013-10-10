@@ -18,7 +18,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="41" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classtree__newnode_1a6d2aeccaa71eac80144dfb2353b51adc" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
         <definition>dtsgui_treeview tree_newnode::tv</definition>
         <argsstring></argsstring>
         <name>tv</name>
@@ -31,7 +31,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="42" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classtree__newnode_1aa910ec0ca8be88d01c6595984213b816" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
         <definition>dtsgui_treenode tree_newnode::tn</definition>
         <argsstring></argsstring>
         <name>tn</name>
@@ -44,7 +44,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="43" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classtree__newnode_1acd8405c3d6f344a21ecdadcbf3db14a6" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
         <definition>dtsgui_xmltreenode_cb tree_newnode::node_cb</definition>
         <argsstring></argsstring>
         <name>node_cb</name>
@@ -57,7 +57,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="44" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classtree__newnode_1ad29bf242b359fc093c474559e6f1be21" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
         <definition>dtsgui_treeviewpanel_cb tree_newnode::p_cb</definition>
         <argsstring></argsstring>
         <name>p_cb</name>
@@ -171,11 +171,11 @@
         <argsstring>(dtsgui_treeview tree, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr, int nid, int flags, dtsgui_xmltreenode_cb node_cb, void *data, dtsgui_treeviewpanel_cb p_cb)</argsstring>
         <name>tree_newnode</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -203,7 +203,7 @@
           <declname>flags</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
           <declname>node_cb</declname>
         </param>
         <param>
@@ -211,7 +211,7 @@
           <declname>data</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
         </param>
         <briefdescription>
@@ -234,7 +234,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>

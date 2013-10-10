@@ -174,7 +174,7 @@
           <defval>-1</defval>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
           <defval>NULL</defval>
         </param>
@@ -225,7 +225,7 @@
           <defval>-1</defval>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
           <defval>NULL</defval>
         </param>
@@ -282,7 +282,7 @@
           <defval>-1</defval>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
           <defval>NULL</defval>
         </param>

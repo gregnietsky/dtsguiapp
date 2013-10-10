@@ -44,7 +44,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/app/private.h" line="62" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/private.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structapp__data_1a0afceecac34508f601812c1dcae49af5" prot="public" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+        <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
         <definition>dtsgui_menuitem app_data::n_wiz</definition>
         <argsstring></argsstring>
         <name>n_wiz</name>
@@ -57,7 +57,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/app/private.h" line="63" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/private.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structapp__data_1ab9263ad9047e56992b17fc5f7062f26a" prot="public" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+        <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
         <definition>dtsgui_menuitem app_data::e_wiz</definition>
         <argsstring></argsstring>
         <name>e_wiz</name>
@@ -70,7 +70,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/app/private.h" line="64" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/private.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structapp__data_1a68690abb28e424749f67339ea3736a41" prot="public" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1af59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
+        <type><ref refid="group___c_o_r_e_1gaf59302244664352117c2669055da5850" kindref="member">dtsgui_menuitem</ref></type>
         <definition>dtsgui_menuitem app_data::c_open</definition>
         <argsstring></argsstring>
         <name>c_open</name>
@@ -83,7 +83,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/app/private.h" line="65" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/private.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structapp__data_1a7ad75d9cf58124aed6037c47c87fcbf5" prot="public" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1afb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
+        <type><ref refid="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" kindref="member">dtsgui_menu</ref></type>
         <definition>dtsgui_menu app_data::cfg_menu</definition>
         <argsstring></argsstring>
         <name>cfg_menu</name>

@@ -10,11 +10,11 @@
         <argsstring>(dtsgui_treeview tree, dtsgui_treenode node, const char *newname)</argsstring>
         <name>dtsgui_nodesetxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -53,12 +53,12 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="478" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="478" bodyend="481"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gad71b59e1898bce570cac2acd774f71e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_treepane</definition>
         <argsstring>(dtsgui_treeview tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc)</argsstring>
         <name>dtsgui_treepane</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
@@ -124,16 +124,16 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="623" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="623" bodyend="626"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gab8713feb542a9bb13f8fe7e3bf568bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
         <definition>dtsgui_pane DTS_C_API::dtsgui_treepane_default</definition>
         <argsstring>(dtsgui_treeview tv, dtsgui_treenode node)</argsstring>
         <name>dtsgui_treepane_default</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tv</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <briefdescription>
@@ -163,16 +163,16 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="641" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="641" bodyend="644"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
         <definition>dtsgui_treenode DTS_C_API::dtsgui_treecont</definition>
         <argsstring>(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data)</argsstring>
         <name>dtsgui_treecont</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -196,7 +196,7 @@
           <declname>nodeid</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
         </param>
         <param>
@@ -207,7 +207,7 @@
 <para>Create a container in the tree view. </para>        </briefdescription>
         <detaileddescription>
 <para>Create and insert a new folder/container in the tree view with properties / call back. A panel will be created and supplied to the callback too implement on selection.</para><para><simplesect kind="note"><para>The root node is NULL this is the initial container.</para></simplesect>
-<simplesect kind="see"><para>DTSTreeWindow::AppendContainer </para><simplesectsep/><para><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
+<simplesect kind="see"><para>DTSTreeWindow::AppendContainer </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tree</parametername>
@@ -278,16 +278,16 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="667" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="666" bodyend="670"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga0f7146637609d42057e2cd21bd2bf33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
         <definition>dtsgui_treenode DTS_C_API::dtsgui_treeitem</definition>
         <argsstring>(dtsgui_treeview tree, dtsgui_treenode node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, dtsgui_treeviewpanel_cb p_cb, void *data)</argsstring>
         <name>dtsgui_treeitem</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>node</declname>
         </param>
         <param>
@@ -311,7 +311,7 @@
           <declname>nodeid</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
         </param>
         <param>
@@ -321,7 +321,7 @@
         <briefdescription>
 <para>Create a item in a container. </para>        </briefdescription>
         <detaileddescription>
-<para>Create and insert a new item in the tree view in the node specified with properties / call back. A panel will be created and supplied to the callback too implement on selection.</para><para><simplesect kind="see"><para>DTSTreeWindow::AppendItem </para><simplesectsep/><para><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
+<para>Create and insert a new item in the tree view in the node specified with properties / call back. A panel will be created and supplied to the callback too implement on selection.</para><para><simplesect kind="see"><para>DTSTreeWindow::AppendItem </para><simplesectsep/><para><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>tree</parametername>
@@ -397,15 +397,15 @@
         <argsstring>(dtsgui_treeview tree, dtsgui_pane p, dtsgui_treenode tn, const char *xpath, const char *node, const char *vitem, const char *tattr, int nid, int flags, dtsgui_xmltreenode_cb node_cb, void *data, dtsgui_treeviewpanel_cb p_cb)</argsstring>
         <name>dtsgui_newxmltreenode</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" kindref="member">dtsgui_treeview</ref></type>
           <declname>tree</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -433,7 +433,7 @@
           <declname>flags</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga52992645e33e4d92c8e68c3490239c75" kindref="member">dtsgui_xmltreenode_cb</ref></type>
           <declname>node_cb</declname>
         </param>
         <param>
@@ -441,7 +441,7 @@
           <declname>data</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" kindref="member">dtsgui_treeviewpanel_cb</ref></type>
           <declname>p_cb</declname>
         </param>
         <briefdescription>
@@ -546,7 +546,7 @@
         <argsstring>(dtsgui_treenode tn)</argsstring>
         <name>dtsgui_treenodeid</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <briefdescription>
@@ -573,7 +573,7 @@
         <argsstring>(dtsgui_treenode tn)</argsstring>
         <name>dtsgui_treenodeparent</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <briefdescription>
@@ -600,7 +600,7 @@
         <argsstring>(dtsgui_treenode tn, struct xml_node *xn, const char *tattr)</argsstring>
         <name>dtsgui_treenodesetxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -648,7 +648,7 @@
         <argsstring>(dtsgui_treenode tn, char **buf)</argsstring>
         <name>dtsgui_treenodegetxml</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <param>
@@ -686,7 +686,7 @@
         <argsstring>(dtsgui_treenode tn)</argsstring>
         <name>dtsgui_treenodegetdata</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
           <declname>tn</declname>
         </param>
         <briefdescription>

@@ -72,7 +72,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="130" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_tree_window_1a996e933c35328c5302c52880c85d005f" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
         <definition>dtsgui_treenode DTSTreeWindow::a_node</definition>
         <argsstring></argsstring>
         <name>a_node</name>
@@ -128,7 +128,7 @@
           <defval>NULL</defval>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga32927ee58215cd957e5134af0f13303f" kindref="member">dtsgui_tree_cb</ref></type>
           <declname>tree_cb</declname>
           <defval>NULL</defval>
         </param>
@@ -336,7 +336,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="120" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="673" bodyend="695"/>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tree_window_1a13f1a1a56891ccba3df14c857e09197e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="dtsgui_8h_1a6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" kindref="member">dtsgui_treenode</ref></type>
         <definition>dtsgui_treenode DTSTreeWindow::GetActiveNode</definition>
         <argsstring>()</argsstring>
         <name>GetActiveNode</name>

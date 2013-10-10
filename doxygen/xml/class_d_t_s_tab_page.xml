@@ -6,7 +6,7 @@
     <includes refid="_d_t_s_panel_8h" local="no">DTSPanel.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_d_t_s_tab_page_1a89d1be9e8530a03ed51872a07c14a8b7" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+        <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
         <definition>dtsgui_tabpanel_cb DTSTabPage::cb</definition>
         <argsstring></argsstring>
         <name>cb</name>
@@ -71,7 +71,7 @@
           <defval>0</defval>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1ab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
+          <type><ref refid="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" kindref="member">dtsgui_tabpanel_cb</ref></type>
           <defname>c_cb</defname>
           <defval>NULL</defval>
         </param>

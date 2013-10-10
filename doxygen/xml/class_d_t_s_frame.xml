@@ -136,7 +136,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSFrame.h" line="75" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSFrame.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_frame_1a9beabfd1eda04f79c8df588790c83398" prot="private" static="no" mutable="no">
-        <type><ref refid="dtsgui_8h_1a53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
+        <type><ref refid="group___c_o_r_e_1ga53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
         <definition>dtsgui_toolbar_create DTSFrame::tbcb</definition>
         <argsstring></argsstring>
         <name>tbcb</name>
@@ -515,7 +515,7 @@
         <argsstring>(dtsgui_toolbar_create cb, void *data)</argsstring>
         <name>SetupToolbar</name>
         <param>
-          <type><ref refid="dtsgui_8h_1a53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga53eefce4ace6a7d72e49e9ae4c520226" kindref="member">dtsgui_toolbar_create</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -639,7 +639,7 @@
           <declname>blank</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" kindref="member">dtsgui_dynpanel</ref></type>
           <declname>cb</declname>
         </param>
         <param>
@@ -791,7 +791,7 @@
           <declname>dtsgui</declname>
         </param>
         <param>
-          <type><ref refid="dtsgui_8h_1a80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
+          <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
           <declname>p</declname>
         </param>
         <param>

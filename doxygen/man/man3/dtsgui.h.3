@@ -52,52 +52,63 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "typedef struct \fBdtsgui\fP \fBdtsgui\fP"
 .br
+.RI "\fIForward decleration of the application data class\&. \fP"
 .ti -1c
 .RI "typedef struct \fBdtsgui_wizard\fP \fBdtsgui_wizard\fP"
 .br
-.ti -1c
-.RI "typedef void * \fBdtsgui_menu\fP"
-.br
-.ti -1c
-.RI "typedef void * \fBdtsgui_menuitem\fP"
-.br
-.ti -1c
-.RI "typedef void * \fBdtsgui_pane\fP"
-.br
-.ti -1c
-.RI "typedef void * \fBdtsgui_notebook\fP"
-.br
-.ti -1c
-.RI "typedef void * \fBdtsgui_treeview\fP"
-.br
-.ti -1c
-.RI "typedef void * \fBdtsgui_tabview\fP"
-.br
-.ti -1c
-.RI "typedef void * \fBdtsgui_treenode\fP"
-.br
-.ti -1c
-.RI "typedef void * \fBdtsgui_progress\fP"
-.br
+.RI "\fIForward decleration of wizard class\&. \fP"
 .ti -1c
 .RI "typedef struct \fBform_item\fP \fBform_item\fP"
 .br
+.RI "\fIForward definition of \fBform_item\fP\&. \fP"
 .ti -1c
 .RI "typedef struct \fBdynamic_panel\fP \fBdynamic_panel\fP"
 .br
+.RI "\fIForward definition of \fBdynamic_panel\fP\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_menu\fP"
+.br
+.RI "\fIDefine menu as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_menuitem\fP"
+.br
+.RI "\fIDefine menuitem as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_pane\fP"
+.br
+.RI "\fIDefine panel as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_notebook\fP"
+.br
+.RI "\fIDefine notebook as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_treeview\fP"
+.br
+.RI "\fIDefine treeview as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_tabview\fP"
+.br
+.RI "\fIDefine tabview as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_treenode\fP"
+.br
+.RI "\fIDefine treenode as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef void * \fBdtsgui_progress\fP"
+.br
+.RI "\fIDefine progress as void* it is not exported to API\&. \fP"
 .ti -1c
 .RI "typedef int(* \fBdtsgui_configcb\fP )(struct \fBdtsgui\fP *, void *)"
 .br
 .RI "\fICallback called on application execution\&. \fP"
 .ti -1c
-.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_menucb\fP )(struct \fBdtsgui\fP *, void *)"
+.RI "typedef int(* \fBevent_callback\fP )(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int type, int, void *)"
 .br
-.ti -1c
-.RI "typedef int(* \fBevent_callback\fP )(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int, int, void *)"
-.br
+.RI "\fICallback run on panel event When a panel event is triggered and a callback has been registered it will be called\&. \fP"
 .ti -1c
 .RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_dynpanel\fP )(struct \fBdtsgui\fP *, const char *, void *)"
 .br
+.RI "\fICallback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed\&. \fP"
 .ti -1c
 .RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_tree_cb\fP )(struct \fBdtsgui\fP *, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, enum \fBtree_cbtype\fP cb_type, const char *, void *)"
 .br
@@ -482,92 +493,6 @@ This file needs to be included to use the defined functions and API\&. Including
 It is not recomended to use the C API from C++\&. 
 .PP
 Definition in file \fBdtsgui\&.h\fP\&.
-.SH "Typedef Documentation"
-.PP 
-.SS "typedef struct \fBdtsgui\fP \fBdtsgui\fP"
-
-.PP
-Definition at line 38 of file dtsgui\&.h\&.
-.SS "typedef \fBdtsgui_pane\fP(* dtsgui_dynpanel)(struct \fBdtsgui\fP *, const char *, void *)"
-
-.PP
-Definition at line 90 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_menu\fP"
-
-.PP
-Definition at line 42 of file dtsgui\&.h\&.
-.SS "typedef \fBdtsgui_pane\fP(* dtsgui_menucb)(struct \fBdtsgui\fP *, void *)"
-
-.PP
-Definition at line 88 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_menuitem\fP"
-
-.PP
-Definition at line 43 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_notebook\fP"
-
-.PP
-Definition at line 47 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_pane\fP"
-
-.PP
-Definition at line 46 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_progress\fP"
-
-.PP
-Definition at line 52 of file dtsgui\&.h\&.
-.SS "typedef void(* dtsgui_tabpane_newdata_cb)(struct xml_doc *, struct xml_node *, void *, void **, int *)"
-
-.PP
-Definition at line 96 of file dtsgui\&.h\&.
-.SS "typedef void(* dtsgui_tabpanel_cb)(\fBdtsgui_pane\fP, void *)"
-
-.PP
-Definition at line 94 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_tabview\fP"
-
-.PP
-Definition at line 49 of file dtsgui\&.h\&.
-.SS "typedef void*(* dtsgui_toolbar_create)(struct \fBdtsgui\fP *, void *, long, int, const char *, void *data)"
-
-.PP
-Definition at line 95 of file dtsgui\&.h\&.
-.SS "typedef \fBdtsgui_pane\fP(* dtsgui_tree_cb)(struct \fBdtsgui\fP *, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, enum \fBtree_cbtype\fP cb_type, const char *, void *)"
-
-.PP
-Definition at line 91 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_treenode\fP"
-
-.PP
-Definition at line 51 of file dtsgui\&.h\&.
-.SS "typedef void* \fBdtsgui_treeview\fP"
-
-.PP
-Definition at line 48 of file dtsgui\&.h\&.
-.SS "typedef void(* dtsgui_treeviewpanel_cb)(\fBdtsgui_pane\fP, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, void *)"
-
-.PP
-Definition at line 93 of file dtsgui\&.h\&.
-.SS "typedef struct \fBdtsgui_wizard\fP \fBdtsgui_wizard\fP"
-
-.PP
-Definition at line 39 of file dtsgui\&.h\&.
-.SS "typedef void(* dtsgui_xmltreenode_cb)(\fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, struct xml_node *, void *)"
-
-.PP
-Definition at line 92 of file dtsgui\&.h\&.
-.SS "typedef struct \fBdynamic_panel\fP \fBdynamic_panel\fP"
-
-.PP
-Definition at line 56 of file dtsgui\&.h\&.
-.SS "typedef int(* event_callback)(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int, int, void *)"
-
-.PP
-Definition at line 89 of file dtsgui\&.h\&.
-.SS "typedef struct \fBform_item\fP \fBform_item\fP"
-
-.PP
-Definition at line 55 of file dtsgui\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.
