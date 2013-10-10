@@ -50,39 +50,6 @@ Main include file for the GUI Library\&.
 
 .in +1c
 .ti -1c
-.RI "typedef int(* \fBdtsgui_configcb\fP )(struct \fBdtsgui\fP *, void *)"
-.br
-.RI "\fICallback called on application execution\&. \fP"
-.ti -1c
-.RI "typedef int(* \fBevent_callback\fP )(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int type, int, void *)"
-.br
-.RI "\fICallback run on panel event When a panel event is triggered and a callback has been registered it will be called\&. \fP"
-.ti -1c
-.RI "typedef void *(* \fBdtsgui_toolbar_create\fP )(struct \fBdtsgui\fP *, void *, long, int, const char *, void *data)"
-.br
-.RI "\fICalback to configure and return a wxToolbar objecct\&. \fP"
-.ti -1c
-.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_dynpanel\fP )(struct \fBdtsgui\fP *, const char *, void *)"
-.br
-.RI "\fICallback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed\&. \fP"
-.ti -1c
-.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_tree_cb\fP )(struct \fBdtsgui\fP *, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, enum \fBtree_cbtype\fP, const char *, void *)"
-.br
-.RI "\fICallback used for tree view events\&. \fP"
-.ti -1c
-.RI "typedef void(* \fBdtsgui_xmltreenode_cb\fP )(\fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, struct xml_node *, void *)"
-.br
-.RI "\fICallback called as part of the creation of a new node\&. This callback will allow manipulation of the newly created node if required\&. \fP"
-.ti -1c
-.RI "typedef void(* \fBdtsgui_treeviewpanel_cb\fP )(\fBdtsgui_pane\fP, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, void *)"
-.br
-.ti -1c
-.RI "typedef void(* \fBdtsgui_tabpanel_cb\fP )(\fBdtsgui_pane\fP, void *)"
-.br
-.ti -1c
-.RI "typedef void(* \fBdtsgui_tabpane_newdata_cb\fP )(struct xml_doc *, struct xml_node *, void *, void **, int *)"
-.br
-.ti -1c
 .RI "typedef struct \fBdtsgui\fP \fBdtsgui\fP"
 .br
 .RI "\fIForward decleration of the application data class\&. \fP"
@@ -130,6 +97,40 @@ Main include file for the GUI Library\&.
 .RI "typedef void * \fBdtsgui_progress\fP"
 .br
 .RI "\fIDefine progress as void* it is not exported to API\&. \fP"
+.ti -1c
+.RI "typedef int(* \fBdtsgui_configcb\fP )(struct \fBdtsgui\fP *, void *)"
+.br
+.RI "\fICallback called on application execution\&. \fP"
+.ti -1c
+.RI "typedef int(* \fBevent_callback\fP )(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int type, int, void *)"
+.br
+.RI "\fICallback run on panel event When a panel event is triggered and a callback has been registered it will be called\&. \fP"
+.ti -1c
+.RI "typedef void *(* \fBdtsgui_toolbar_create\fP )(struct \fBdtsgui\fP *, void *, long, int, const char *, void *data)"
+.br
+.RI "\fICalback to configure and return a wxToolbar objecct\&. \fP"
+.ti -1c
+.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_dynpanel\fP )(struct \fBdtsgui\fP *, const char *, void *)"
+.br
+.RI "\fICallback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed\&. \fP"
+.ti -1c
+.RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_tree_cb\fP )(struct \fBdtsgui\fP *, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, enum \fBtree_cbtype\fP, const char *, void *)"
+.br
+.RI "\fICallback used for tree view events\&. \fP"
+.ti -1c
+.RI "typedef void(* \fBdtsgui_treeviewpanel_cb\fP )(\fBdtsgui_pane\fP, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, void *)"
+.br
+.RI "\fICallback called after dtsgui_tree_cb to allow configuration of the panel\&. This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback\&. \fP"
+.ti -1c
+.RI "typedef void(* \fBdtsgui_xmltreenode_cb\fP )(\fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, struct xml_node *, void *)"
+.br
+.RI "\fICallback called as part of the creation of a new node\&. This callback will allow manipulation of the newly created node if required\&. \fP"
+.ti -1c
+.RI "typedef void(* \fBdtsgui_tabpanel_cb\fP )(\fBdtsgui_pane\fP, void *)"
+.br
+.ti -1c
+.RI "typedef void(* \fBdtsgui_tabpane_newdata_cb\fP )(struct xml_doc *, struct xml_node *, void *, void **, int *)"
+.br
 .in -1c
 .SS "Enumerations"
 

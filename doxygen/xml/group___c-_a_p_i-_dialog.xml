@@ -39,7 +39,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1094" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1094" bodyend="1097"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1093" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1093" bodyend="1096"/>
         <references refid="class_d_t_s_frame_1a890f88e157626205916bdb961cc6fb6f" compoundref="_d_t_s_frame_8cpp" startline="112" endline="119">DTSFrame::Alert</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="740" endline="769">advanced_config</referencedby>
@@ -88,7 +88,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1105" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1105" bodyend="1108"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1104" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1104" bodyend="1107"/>
         <references refid="class_d_t_s_frame_1a937f276b15be00e81087ef1a73605478" compoundref="_d_t_s_frame_8cpp" startline="96" endline="110">DTSFrame::Confirm</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
@@ -162,7 +162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1119" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1119" bodyend="1122"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1118" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1118" bodyend="1121"/>
         <references refid="class_d_t_s_frame_1af996b558ba17ecc23cf6ed1a3d1873fb" compoundref="_d_t_s_frame_8cpp" startline="400" endline="411">DTSFrame::FileDialog</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1a01bdf27a0760d9da4bb77918735171c1" compoundref="config_8c" startline="150" endline="187">export_config</referencedby>
@@ -237,7 +237,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1135" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1135" bodyend="1138"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1134" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1134" bodyend="1137"/>
         <references refid="class_d_t_s_frame_1af996b558ba17ecc23cf6ed1a3d1873fb" compoundref="_d_t_s_frame_8cpp" startline="400" endline="411">DTSFrame::FileDialog</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wizard_8c_1a126b309803052977061662f97fb9012a" compoundref="wizard_8c" startline="456" endline="474">editsys_wizard</referencedby>
@@ -291,7 +291,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1150" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1150" bodyend="1153"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1149" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1149" bodyend="1152"/>
         <references refid="class_d_t_s_frame_1a5a7ad78662b511e7ef6ac513f8d1a28b" compoundref="_d_t_s_frame_8cpp" startline="487" endline="502">DTSFrame::Passwd</references>
       </memberdef>
       </sectiondef>

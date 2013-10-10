@@ -204,8 +204,8 @@
         <references refid="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" compoundref="_d_t_s_panel_8h" startline="53">parent</references>
         <references refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" compoundref="dtsgui_8h" startline="211">wx_DTSPANEL_DIALOG</references>
-        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a331937b86eb259d1d84728d28fbed79d" compoundref="dtsgui_8h" startline="184">wx_PANEL_EVENT_BUTTON</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" compoundref="dtsgui_8h" startline="221">wx_DTSPANEL_DIALOG</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a331937b86eb259d1d84728d28fbed79d" compoundref="dtsgui_8h" startline="194">wx_PANEL_EVENT_BUTTON</references>
         <referencedby refid="class_d_t_s_panel_event_1ac885bd160c79e96062605dc1f0fcd4f4" compoundref="_d_t_s_panel_8cpp" startline="220" endline="222">BindButton</referencedby>
         <referencedby refid="class_d_t_s_panel_event_1ae7b3a422bc55f7f9f676b2b640614fd9" compoundref="_d_t_s_panel_8cpp" startline="144" endline="149">OnDialog</referencedby>
       </memberdef>
@@ -232,8 +232,8 @@
         <references refid="classform__item_1a9d5508fb933bef9f078f702338e3d166" compoundref="pitems_8cpp" startline="213" endline="215">form_item::GetWidget</references>
         <references refid="class_d_t_s_panel_event_1a9870f4a7cbb59e59471ccf811269396d" compoundref="_d_t_s_panel_8h" startline="53">parent</references>
         <references refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</references>
-        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a05cb2a662e44a9332f631e8fb04ea5ef" compoundref="dtsgui_8h" startline="186">wx_PANEL_EVENT_COMBO_ENTER</references>
-        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a9d9853f83e3e28aaca0621c788994cc8" compoundref="dtsgui_8h" startline="188">wx_PANEL_EVENT_COMBO_UPDATE</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a05cb2a662e44a9332f631e8fb04ea5ef" compoundref="dtsgui_8h" startline="196">wx_PANEL_EVENT_COMBO_ENTER</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a9d9853f83e3e28aaca0621c788994cc8" compoundref="dtsgui_8h" startline="198">wx_PANEL_EVENT_COMBO_UPDATE</references>
         <referencedby refid="class_d_t_s_panel_event_1a65d4d4e41f8fe4501dfccab666b46123" compoundref="_d_t_s_panel_8cpp" startline="224" endline="227">BindCombo</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1a878aaab5bddc9167d3d2380ea7de0f31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -255,7 +255,7 @@
         <references refid="class_d_t_s_panel_event_1a63313454db1807ffd97873cb2ffd5e0d" compoundref="_d_t_s_panel_8h" startline="51">data</references>
         <references refid="class_d_t_s_panel_event_1a1f989eb33812d025e2876c538b032ee4" compoundref="_d_t_s_panel_8h" startline="52">evcb</references>
         <references refid="class_d_t_s_panel_event_1aac849a4fb920e6e680f4d7092202f60e" compoundref="_d_t_s_panel_8cpp" startline="84" endline="109">RunCallBack</references>
-        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a8f700b4b2b17b782d57dd32dc696956c" compoundref="dtsgui_8h" startline="190">wx_PANEL_EVENT_DTS</references>
+        <references refid="group___c_o_r_e_1gga54d7edaba9c015c3b5310ed3080b82e6a8f700b4b2b17b782d57dd32dc696956c" compoundref="dtsgui_8h" startline="200">wx_PANEL_EVENT_DTS</references>
         <referencedby refid="class_d_t_s_panel_event_1af2333021915425cd85ab9544170e7152" compoundref="_d_t_s_panel_8cpp" startline="216" endline="218">BindDTSEvent</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_event_1ad6d0fb736bf45162b6bf2082e437195b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">

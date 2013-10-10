@@ -197,8 +197,8 @@
         <references refid="classdtsgui_1a9c7541fac0311f9b2ffcb5c2699719ca" compoundref="_d_t_s_app_8h" startline="33">userdata</references>
         <references refid="classdtsgui_1a7a64aff083bfba24859a4c47e9d89c53" compoundref="_d_t_s_app_8h" startline="39">wpos</references>
         <references refid="classdtsgui_1a04955c97163ded998019001b749a1883" compoundref="_d_t_s_app_8h" startline="38">wsize</references>
-        <references refid="structpoint_1ad679b07fb69d55f5ad454d0f1f2891d5" compoundref="dtsgui_8h" startline="158">point::x</references>
-        <references refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" compoundref="dtsgui_8h" startline="160">point::y</references>
+        <references refid="structpoint_1ad679b07fb69d55f5ad454d0f1f2891d5" compoundref="dtsgui_8h" startline="168">point::x</references>
+        <references refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" compoundref="dtsgui_8h" startline="170">point::y</references>
         <referencedby refid="class_d_t_s_app_1ae21cc8793d06b6b770867ebd3d0d1daa" compoundref="_d_t_s_app_8cpp" startline="262" endline="268">DTSApp::OnInit</referencedby>
       </memberdef>
       <memberdef kind="function" id="classdtsgui_1a4d5bf22a505defc4ab13178ff95f2b32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -217,7 +217,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="27" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="85" bodyend="95"/>
         <references refid="classdtsgui_1a9c7541fac0311f9b2ffcb5c2699719ca" compoundref="_d_t_s_app_8h" startline="33">userdata</references>
-        <referencedby refid="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" compoundref="wrapper_8cpp" startline="184" endline="186">DTS_C_API::dtsgui_userdata</referencedby>
+        <referencedby refid="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" compoundref="wrapper_8cpp" startline="183" endline="185">DTS_C_API::dtsgui_userdata</referencedby>
       </memberdef>
       <memberdef kind="function" id="classdtsgui_1a67a85f336d93a287e5ec3434a79620ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -257,7 +257,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="29" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="105" bodyend="127"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
         <references refid="classdtsgui_1a949562ecff03159461686f2ddc36b936" compoundref="_d_t_s_app_8h" startline="35">title</references>
-        <referencedby refid="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" compoundref="wrapper_8cpp" startline="235" endline="237">DTS_C_API::dtsgui_titleappend</referencedby>
+        <referencedby refid="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" compoundref="wrapper_8cpp" startline="234" endline="236">DTS_C_API::dtsgui_titleappend</referencedby>
       </memberdef>
       <memberdef kind="function" id="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>class <ref refid="class_d_t_s_frame" kindref="compound">DTSFrame</ref> *</type>
@@ -276,29 +276,29 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="30" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="137" bodyend="139"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
         <referencedby refid="classdtsgui__wizard_1a02984b1d70df5100e8b6200e0bb1b421" compoundref="_d_t_s_wizard_8cpp" startline="48" endline="79">dtsgui_wizard::AddPage</referencedby>
-        <referencedby refid="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" compoundref="wrapper_8cpp" startline="371" endline="374">DTS_C_API::dtsgui_about</referencedby>
-        <referencedby refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1094" endline="1097">DTS_C_API::dtsgui_alert</referencedby>
-        <referencedby refid="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" compoundref="wrapper_8cpp" startline="354" endline="357">DTS_C_API::dtsgui_close</referencedby>
-        <referencedby refid="group___c-_a_p_i-_dialog_1ga5761cfa6ab849723e50760a9642efc9f" compoundref="wrapper_8cpp" startline="1105" endline="1108">DTS_C_API::dtsgui_confirm</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" compoundref="wrapper_8cpp" startline="370" endline="373">DTS_C_API::dtsgui_about</referencedby>
+        <referencedby refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1093" endline="1096">DTS_C_API::dtsgui_alert</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" compoundref="wrapper_8cpp" startline="353" endline="356">DTS_C_API::dtsgui_close</referencedby>
+        <referencedby refid="group___c-_a_p_i-_dialog_1ga5761cfa6ab849723e50760a9642efc9f" compoundref="wrapper_8cpp" startline="1104" endline="1107">DTS_C_API::dtsgui_confirm</referencedby>
         <referencedby refid="classdtsgui__curl_1a32244d6816ad29d796387af121707d2f" compoundref="_d_t_s_app_8cpp" startline="141" endline="147">dtsgui_curl::dtsgui_curl</referencedby>
-        <referencedby refid="group___c-_a_p_i-_menus_1gabf67f1b041be315b58ccacc7d193b273" compoundref="wrapper_8cpp" startline="336" endline="339">DTS_C_API::dtsgui_exit</referencedby>
-        <referencedby refid="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" compoundref="wrapper_8cpp" startline="1135" endline="1138">DTS_C_API::dtsgui_fileopen</referencedby>
-        <referencedby refid="group___c-_a_p_i-_dialog_1gad2b11bd5e9e51dcba9f53f4969f1f25c" compoundref="wrapper_8cpp" startline="1119" endline="1122">DTS_C_API::dtsgui_filesave</referencedby>
-        <referencedby refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" compoundref="wrapper_8cpp" startline="269" endline="272">DTS_C_API::dtsgui_newmenu</referencedby>
-        <referencedby refid="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" compoundref="wrapper_8cpp" startline="318" endline="321">DTS_C_API::dtsgui_newmenucb</referencedby>
-        <referencedby refid="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" compoundref="wrapper_8cpp" startline="291" endline="294">DTS_C_API::dtsgui_newmenuitem</referencedby>
-        <referencedby refid="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" compoundref="wrapper_8cpp" startline="928" endline="930">DTS_C_API::dtsgui_newwizard</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel_1gac763bff39863668014931022b469d836" compoundref="wrapper_8cpp" startline="407" endline="410">DTS_C_API::dtsgui_panel</referencedby>
-        <referencedby refid="group___c-_a_p_i-_progress_1ga528f638b6cb7b0d813e350a0b0c7262c" compoundref="wrapper_8cpp" startline="1006" endline="1009">DTS_C_API::dtsgui_progress_end</referencedby>
-        <referencedby refid="group___c-_a_p_i-_progress_1ga7bd617a3f00cb21ae6df7a37eba0dc7b" compoundref="wrapper_8cpp" startline="997" endline="1000">DTS_C_API::dtsgui_progress_increment</referencedby>
-        <referencedby refid="group___c-_a_p_i-_progress_1gac4185ec71523c1735f1da2cb6dc876d3" compoundref="wrapper_8cpp" startline="970" endline="973">DTS_C_API::dtsgui_progress_start</referencedby>
-        <referencedby refid="group___c-_a_p_i-_progress_1gabda6276de46c13fb4e0831bb8c8d1ec1" compoundref="wrapper_8cpp" startline="985" endline="988">DTS_C_API::dtsgui_progress_update</referencedby>
-        <referencedby refid="group___c-_a_p_i_1ga4e766a49c1e9eba3f2c2fda47b8166aa" compoundref="wrapper_8cpp" startline="210" endline="213">DTS_C_API::dtsgui_sendevent</referencedby>
-        <referencedby refid="group___c-_a_p_i_1ga1734b840fc0696b13d5b616df0ec3bbb" compoundref="wrapper_8cpp" startline="224" endline="227">DTS_C_API::dtsgui_setuptoolbar</referencedby>
-        <referencedby refid="group___c-_a_p_i_1ga529d973a998e39dba025dfcd96a9a706" compoundref="wrapper_8cpp" startline="198" endline="201">DTS_C_API::dtsgui_setwindow</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" compoundref="wrapper_8cpp" startline="463" endline="466">DTS_C_API::dtsgui_tabwindow</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel_1gafb8efe017917a372826f7ddedb0e8bba" compoundref="wrapper_8cpp" startline="426" endline="429">DTS_C_API::dtsgui_textpane</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel_1gaa92cb9c6006aaf320e784f04500c3b25" compoundref="wrapper_8cpp" startline="446" endline="449">DTS_C_API::dtsgui_treewindow</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1gabf67f1b041be315b58ccacc7d193b273" compoundref="wrapper_8cpp" startline="335" endline="338">DTS_C_API::dtsgui_exit</referencedby>
+        <referencedby refid="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" compoundref="wrapper_8cpp" startline="1134" endline="1137">DTS_C_API::dtsgui_fileopen</referencedby>
+        <referencedby refid="group___c-_a_p_i-_dialog_1gad2b11bd5e9e51dcba9f53f4969f1f25c" compoundref="wrapper_8cpp" startline="1118" endline="1121">DTS_C_API::dtsgui_filesave</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" compoundref="wrapper_8cpp" startline="268" endline="271">DTS_C_API::dtsgui_newmenu</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" compoundref="wrapper_8cpp" startline="317" endline="320">DTS_C_API::dtsgui_newmenucb</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" compoundref="wrapper_8cpp" startline="290" endline="293">DTS_C_API::dtsgui_newmenuitem</referencedby>
+        <referencedby refid="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" compoundref="wrapper_8cpp" startline="927" endline="929">DTS_C_API::dtsgui_newwizard</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel_1gac763bff39863668014931022b469d836" compoundref="wrapper_8cpp" startline="406" endline="409">DTS_C_API::dtsgui_panel</referencedby>
+        <referencedby refid="group___c-_a_p_i-_progress_1ga528f638b6cb7b0d813e350a0b0c7262c" compoundref="wrapper_8cpp" startline="1005" endline="1008">DTS_C_API::dtsgui_progress_end</referencedby>
+        <referencedby refid="group___c-_a_p_i-_progress_1ga7bd617a3f00cb21ae6df7a37eba0dc7b" compoundref="wrapper_8cpp" startline="996" endline="999">DTS_C_API::dtsgui_progress_increment</referencedby>
+        <referencedby refid="group___c-_a_p_i-_progress_1gac4185ec71523c1735f1da2cb6dc876d3" compoundref="wrapper_8cpp" startline="969" endline="972">DTS_C_API::dtsgui_progress_start</referencedby>
+        <referencedby refid="group___c-_a_p_i-_progress_1gabda6276de46c13fb4e0831bb8c8d1ec1" compoundref="wrapper_8cpp" startline="984" endline="987">DTS_C_API::dtsgui_progress_update</referencedby>
+        <referencedby refid="group___c-_a_p_i_1ga4e766a49c1e9eba3f2c2fda47b8166aa" compoundref="wrapper_8cpp" startline="209" endline="212">DTS_C_API::dtsgui_sendevent</referencedby>
+        <referencedby refid="group___c-_a_p_i_1ga1734b840fc0696b13d5b616df0ec3bbb" compoundref="wrapper_8cpp" startline="223" endline="226">DTS_C_API::dtsgui_setuptoolbar</referencedby>
+        <referencedby refid="group___c-_a_p_i_1ga529d973a998e39dba025dfcd96a9a706" compoundref="wrapper_8cpp" startline="197" endline="200">DTS_C_API::dtsgui_setwindow</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" compoundref="wrapper_8cpp" startline="462" endline="465">DTS_C_API::dtsgui_tabwindow</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel_1gafb8efe017917a372826f7ddedb0e8bba" compoundref="wrapper_8cpp" startline="425" endline="428">DTS_C_API::dtsgui_textpane</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel_1gaa92cb9c6006aaf320e784f04500c3b25" compoundref="wrapper_8cpp" startline="445" endline="448">DTS_C_API::dtsgui_treewindow</referencedby>
       </memberdef>
       <memberdef kind="function" id="classdtsgui_1adbf932006dfc6df2266b5fbf34af67ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -318,7 +318,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="31" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="129" bodyend="135"/>
         <references refid="classdtsgui_1a23186f0e51311156f54f9f9882806414" compoundref="_d_t_s_app_8h" startline="34">appframe</references>
-        <referencedby refid="group___c-_a_p_i_1ga164aa159bc57a744f012b49268796bbe" compoundref="wrapper_8cpp" startline="253" endline="255">DTS_C_API::dtsgui_set_toolbar</referencedby>
+        <referencedby refid="group___c-_a_p_i_1ga164aa159bc57a744f012b49268796bbe" compoundref="wrapper_8cpp" startline="252" endline="254">DTS_C_API::dtsgui_set_toolbar</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

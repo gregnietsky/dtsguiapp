@@ -62,7 +62,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="970" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="970" bodyend="973"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="969" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="969" bodyend="972"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a55bbe89f24dc6ad3fbe78589bcbd9686" compoundref="_d_t_s_frame_8cpp" startline="121" endline="141">DTSFrame::StartProgress</references>
       </memberdef>
@@ -113,7 +113,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="985" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="985" bodyend="988"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="984" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="984" bodyend="987"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a3b057f8c85958444049063e75b602108" compoundref="_d_t_s_frame_8cpp" startline="143" endline="156">DTSFrame::UpdateProgress</references>
       </memberdef>
@@ -164,7 +164,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="997" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="997" bodyend="1000"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="996" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="996" bodyend="999"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a8b1f1c4cf298ef550edec3fa3bf96738" compoundref="_d_t_s_frame_8cpp" startline="158" endline="171">DTSFrame::IncProgress</references>
       </memberdef>
@@ -192,7 +192,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1006" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1006" bodyend="1009"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1005" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1005" bodyend="1008"/>
         <references refid="class_d_t_s_frame_1aa33b0ba3ce50a7ec4434a78c2be498b7" compoundref="_d_t_s_frame_8cpp" startline="173" endline="182">DTSFrame::EndProgress</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
       </memberdef>

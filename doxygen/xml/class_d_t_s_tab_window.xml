@@ -40,7 +40,7 @@
         <references refid="class_d_t_s_tab_window_1a7e438e77899502fc316577e972d9ef28" compoundref="_d_t_s_tree_window_8cpp" startline="927" endline="965">Show</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
         <references refid="class_d_t_s_object_1a783949e39ffd9e00aec15fa2b8cc12ed" compoundref="_d_t_s_panel_8h" startline="78">DTSObject::userdata</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="214">wx_DTSPANEL_TAB</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="224">wx_DTSPANEL_TAB</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1a2ce2a4e23f391cb621c80d92cd7ebea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -106,8 +106,8 @@
         <references refid="class_d_t_s_object_1ae88ef1ea6f28346b6cd6d2d898d7acde" compoundref="_d_t_s_panel_8cpp" startline="270" endline="272">DTSObject::GetPanel</references>
         <references refid="class_d_t_s_object_1a3e39ba76f7cb701fc9b99f6f059fb49e" compoundref="_d_t_s_panel_8cpp" startline="314" endline="324">DTSObject::SetUserData</references>
         <referencedby refid="class_d_t_s_tab_window_1a92747d3ec04159b96c1e2fde83b9c325" compoundref="_d_t_s_tree_window_8cpp" startline="967" endline="974">CreateTab</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" compoundref="wrapper_8cpp" startline="546" endline="549">DTS_C_API::dtsgui_newtabpage</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" compoundref="wrapper_8cpp" startline="575" endline="578">DTS_C_API::dtsgui_tabpage_insert</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" compoundref="wrapper_8cpp" startline="545" endline="548">DTS_C_API::dtsgui_newtabpage</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" compoundref="wrapper_8cpp" startline="574" endline="577">DTS_C_API::dtsgui_tabpage_insert</referencedby>
         <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="202" endline="239">tab_newpane::handle_newtabpane</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1a92747d3ec04159b96c1e2fde83b9c325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">

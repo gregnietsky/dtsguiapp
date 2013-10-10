@@ -52,6 +52,32 @@ enum form_data_type {
 	DTSGUI_FORM_DATA_XML
 };
 
+/** @brief Forward decleration of the application data class*/
+typedef struct dtsgui dtsgui;
+/** @brief Forward decleration of wizard class*/
+typedef struct dtsgui_wizard dtsgui_wizard;
+/** @brief Forward definition of form_item*/
+typedef struct form_item form_item;
+/** @brief Forward definition of dynamic_panel*/
+typedef struct dynamic_panel dynamic_panel;
+
+/** @brief Define menu as void* it is not exported to API*/
+typedef void *dtsgui_menu;
+/** @brief Define menuitem as void* it is not exported to API*/
+typedef void *dtsgui_menuitem;
+/** @brief Define panel as void* it is not exported to API*/
+typedef void *dtsgui_pane;
+/** @brief Define notebook as void* it is not exported to API*/
+typedef void *dtsgui_notebook;
+/** @brief Define treeview as void* it is not exported to API*/
+typedef void *dtsgui_treeview;
+/** @brief Define tabview as void* it is not exported to API*/
+typedef void *dtsgui_tabview;
+/** @brief Define treenode as void* it is not exported to API*/
+typedef void *dtsgui_treenode;
+/** @brief Define progress as void* it is not exported to API*/
+typedef void *dtsgui_progress;
+
 /** @brief Callback called on application execution
   *
   * The callback is called with the application pointer and supplied userdata
@@ -112,6 +138,17 @@ typedef dtsgui_pane (*dtsgui_dynpanel)(struct dtsgui*, const char*, void*);
   * @return If a panel is returned it will be placed int the display area.*/
 typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_treenode, enum tree_cbtype, const char*, void*);
 
+/** @brief Callback called after dtsgui_tree_cb to allow configuration of the panel.
+  * This callback is stored on the node and allows the panel to be configured per node allowing generic
+  * tree callback.
+  * @see DTSTreeWindowEvent::TreeCallback()
+  * @see DTSDVMListStore::ConfigPanel()
+  * @param pane Panel to be configured.
+  * @param tree Treeview that contains the node/panel.
+  * @param node Node that this panel represents.
+  * @param data Reference to user data stored on node.*/
+typedef void (*dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void*);
+
 /** @brief Callback called as part of the creation of a new node.
   * This callback will allow manipulation of the newly created node if required.
   * @see dtsgui_newxmltreenode()
@@ -121,36 +158,9 @@ typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_t
   * @param xn XML Node assigned to the node.
   * @param data Reference to user data.*/
 typedef void (*dtsgui_xmltreenode_cb)(dtsgui_treeview, dtsgui_treenode, struct xml_node*, void*);
-typedef void (*dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void*);
 
 typedef void (*dtsgui_tabpanel_cb)(dtsgui_pane, void*);
 typedef void (*dtsgui_tabpane_newdata_cb)(struct xml_doc*, struct xml_node*, void*, void**, int*);
-
-/** @brief Forward decleration of the application data class*/
-typedef struct dtsgui dtsgui;
-/** @brief Forward decleration of wizard class*/
-typedef struct dtsgui_wizard dtsgui_wizard;
-/** @brief Forward definition of form_item*/
-typedef struct form_item form_item;
-/** @brief Forward definition of dynamic_panel*/
-typedef struct dynamic_panel dynamic_panel;
-
-/** @brief Define menu as void* it is not exported to API*/
-typedef void *dtsgui_menu;
-/** @brief Define menuitem as void* it is not exported to API*/
-typedef void *dtsgui_menuitem;
-/** @brief Define panel as void* it is not exported to API*/
-typedef void *dtsgui_pane;
-/** @brief Define notebook as void* it is not exported to API*/
-typedef void *dtsgui_notebook;
-/** @brief Define treeview as void* it is not exported to API*/
-typedef void *dtsgui_treeview;
-/** @brief Define tabview as void* it is not exported to API*/
-typedef void *dtsgui_tabview;
-/** @brief Define treenode as void* it is not exported to API*/
-typedef void *dtsgui_treenode;
-/** @brief Define progress as void* it is not exported to API*/
-typedef void *dtsgui_progress;
 
 /** @brief A simple data structure to store a coordinate*/
 struct point {
@@ -224,14 +234,19 @@ enum widget_type {
 
 /** @brief Shortcut flags for navigation buttons.*/
 #define wx_PANEL_BUTTON_NAV		wx_PANEL_EVENT_BUTTON_FIRST | wx_PANEL_EVENT_BUTTON_BACK | wx_PANEL_EVENT_BUTTON_FWD | wx_PANEL_EVENT_BUTTON_LAST
+
 /** @brief Shortcut flags for direction buttons.*/
 #define wx_PANEL_BUTTON_DIR		wx_PANEL_EVENT_BUTTON_BACK | wx_PANEL_EVENT_BUTTON_FWD
+
 /** @brief Shortcut flags for action buttons.*/
 #define wx_PANEL_BUTTON_ACTION wx_PANEL_EVENT_BUTTON_YES | wx_PANEL_EVENT_BUTTON_NO
+
 /** @brief Shortcut flags for all buttons.*/
 #define wx_PANEL_BUTTON_ALL wx_PANEL_BUTTON_ACTION | wx_PANEL_BUTTON_NAV
+
 /** @brief Shortcut flags for no buttons.*/
 #define wx_PANEL_EVENT_BUTTON_NONE 0
+
 /**@}*/
 
 /*

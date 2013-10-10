@@ -142,30 +142,6 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gad3b80490c86b8275c47382588f2ecfd4"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *)</td></tr>
-<tr class="memdesc:gad3b80490c86b8275c47382588f2ecfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called on application execution.  <a href="#gad3b80490c86b8275c47382588f2ecfd4"></a><br/></td></tr>
-<tr class="separator:gad3b80490c86b8275c47382588f2ecfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga06d1a959e1581116961bca636a919043"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga06d1a959e1581116961bca636a919043">event_callback</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, int type, int, void *)</td></tr>
-<tr class="memdesc:ga06d1a959e1581116961bca636a919043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback run on panel event When a panel event is triggered and a callback has been registered it will be called.  <a href="#ga06d1a959e1581116961bca636a919043"></a><br/></td></tr>
-<tr class="separator:ga06d1a959e1581116961bca636a919043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="memItemLeft" align="right" valign="top">typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *, long, int, const char *, void *data)</td></tr>
-<tr class="memdesc:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calback to configure and return a wxToolbar objecct.  <a href="#ga53eefce4ace6a7d72e49e9ae4c520226"></a><br/></td></tr>
-<tr class="separator:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga080f931027861c0021f72ac2562b45d7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, const char *, void *)</td></tr>
-<tr class="memdesc:ga080f931027861c0021f72ac2562b45d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed.  <a href="#ga080f931027861c0021f72ac2562b45d7"></a><br/></td></tr>
-<tr class="separator:ga080f931027861c0021f72ac2562b45d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae088feda00f338f6ddd35daaacc44817"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gae088feda00f338f6ddd35daaacc44817">dtsgui_tree_cb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, <a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, enum <a class="el" href="group___c_o_r_e.html#ga465794df2cb30731dfe34d3e7a4ed368">tree_cbtype</a>, const char *, void *)</td></tr>
-<tr class="memdesc:gae088feda00f338f6ddd35daaacc44817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback used for tree view events.  <a href="#gae088feda00f338f6ddd35daaacc44817"></a><br/></td></tr>
-<tr class="separator:gae088feda00f338f6ddd35daaacc44817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52992645e33e4d92c8e68c3490239c75"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga52992645e33e4d92c8e68c3490239c75">dtsgui_xmltreenode_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, struct xml_node *, void *)</td></tr>
-<tr class="memdesc:ga52992645e33e4d92c8e68c3490239c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called as part of the creation of a new node. This callback will allow manipulation of the newly created node if required.  <a href="#ga52992645e33e4d92c8e68c3490239c75"></a><br/></td></tr>
-<tr class="separator:ga52992645e33e4d92c8e68c3490239c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, <a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, void *)</td></tr>
-<tr class="separator:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab65db729662a3b0d109158d2fb51f93c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, void *)</td></tr>
-<tr class="separator:gab65db729662a3b0d109158d2fb51f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab5e1fa276d48b20d35f4ef20110c39ed">dtsgui_tabpane_newdata_cb</a> )(struct xml_doc *, struct xml_node *, void *, void **, int *)</td></tr>
-<tr class="separator:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8d0ed2b4049e42079b366e341b33347f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="classdtsgui.html">dtsgui</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga8d0ed2b4049e42079b366e341b33347f">dtsgui</a></td></tr>
 <tr class="memdesc:ga8d0ed2b4049e42079b366e341b33347f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward decleration of the application data class.  <a href="#ga8d0ed2b4049e42079b366e341b33347f"></a><br/></td></tr>
 <tr class="separator:ga8d0ed2b4049e42079b366e341b33347f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +178,31 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga531b61ccda025272407e2d2b26f0072c"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga531b61ccda025272407e2d2b26f0072c">dtsgui_progress</a></td></tr>
 <tr class="memdesc:ga531b61ccda025272407e2d2b26f0072c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define progress as void* it is not exported to API.  <a href="#ga531b61ccda025272407e2d2b26f0072c"></a><br/></td></tr>
 <tr class="separator:ga531b61ccda025272407e2d2b26f0072c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3b80490c86b8275c47382588f2ecfd4"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gad3b80490c86b8275c47382588f2ecfd4">dtsgui_configcb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *)</td></tr>
+<tr class="memdesc:gad3b80490c86b8275c47382588f2ecfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called on application execution.  <a href="#gad3b80490c86b8275c47382588f2ecfd4"></a><br/></td></tr>
+<tr class="separator:gad3b80490c86b8275c47382588f2ecfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06d1a959e1581116961bca636a919043"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga06d1a959e1581116961bca636a919043">event_callback</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, int type, int, void *)</td></tr>
+<tr class="memdesc:ga06d1a959e1581116961bca636a919043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback run on panel event When a panel event is triggered and a callback has been registered it will be called.  <a href="#ga06d1a959e1581116961bca636a919043"></a><br/></td></tr>
+<tr class="separator:ga06d1a959e1581116961bca636a919043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="memItemLeft" align="right" valign="top">typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *, long, int, const char *, void *data)</td></tr>
+<tr class="memdesc:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calback to configure and return a wxToolbar objecct.  <a href="#ga53eefce4ace6a7d72e49e9ae4c520226"></a><br/></td></tr>
+<tr class="separator:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga080f931027861c0021f72ac2562b45d7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, const char *, void *)</td></tr>
+<tr class="memdesc:ga080f931027861c0021f72ac2562b45d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed.  <a href="#ga080f931027861c0021f72ac2562b45d7"></a><br/></td></tr>
+<tr class="separator:ga080f931027861c0021f72ac2562b45d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae088feda00f338f6ddd35daaacc44817"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gae088feda00f338f6ddd35daaacc44817">dtsgui_tree_cb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, <a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, enum <a class="el" href="group___c_o_r_e.html#ga465794df2cb30731dfe34d3e7a4ed368">tree_cbtype</a>, const char *, void *)</td></tr>
+<tr class="memdesc:gae088feda00f338f6ddd35daaacc44817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback used for tree view events.  <a href="#gae088feda00f338f6ddd35daaacc44817"></a><br/></td></tr>
+<tr class="separator:gae088feda00f338f6ddd35daaacc44817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, <a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, void *)</td></tr>
+<tr class="memdesc:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after dtsgui_tree_cb to allow configuration of the panel. This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback.  <a href="#ga8bf800adcd2392cf7722c3cf2f603f96"></a><br/></td></tr>
+<tr class="separator:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52992645e33e4d92c8e68c3490239c75"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga52992645e33e4d92c8e68c3490239c75">dtsgui_xmltreenode_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, struct xml_node *, void *)</td></tr>
+<tr class="memdesc:ga52992645e33e4d92c8e68c3490239c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called as part of the creation of a new node. This callback will allow manipulation of the newly created node if required.  <a href="#ga52992645e33e4d92c8e68c3490239c75"></a><br/></td></tr>
+<tr class="separator:ga52992645e33e4d92c8e68c3490239c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab65db729662a3b0d109158d2fb51f93c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, void *)</td></tr>
+<tr class="separator:gab65db729662a3b0d109158d2fb51f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab5e1fa276d48b20d35f4ef20110c39ed">dtsgui_tabpane_newdata_cb</a> )(struct xml_doc *, struct xml_node *, void *, void **, int *)</td></tr>
+<tr class="separator:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -278,7 +279,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for action buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00230">230</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00242">242</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 <p>Referenced by <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00722">DTSTreeWindow::CreatePane()</a>, <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00202">tab_newpane::handle_newtabpane()</a>, <a class="el" href="interface_8c_source.html#l00145">iface_config()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00487">DTSFrame::Passwd()</a>, and <a class="el" href="pbxconfig_8c_source.html#l00325">pbx_settings()</a>.</p>
 
@@ -296,7 +297,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for all buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00232">232</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00245">245</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 <p>Referenced by <a class="el" href="testing_8c_source.html#l00094">test_menu()</a>.</p>
 
@@ -314,7 +315,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for direction buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00228">228</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00239">239</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -330,7 +331,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for navigation buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00226">226</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00236">236</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +347,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for no buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00234">234</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00248">248</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -363,7 +364,7 @@ Enumerations</h2></td></tr>
 
 <p>Forward decleration of the application data class. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00130">130</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00056">56</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +392,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returning 0 will cause application execution to fail. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00063">63</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00089">89</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -419,7 +420,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If a panel is returned it will be displayed. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00100">100</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00126">126</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -435,7 +436,7 @@ Enumerations</h2></td></tr>
 
 <p>Define menu as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00139">139</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00065">65</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -451,7 +452,7 @@ Enumerations</h2></td></tr>
 
 <p>Define menuitem as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00141">141</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00067">67</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -467,7 +468,7 @@ Enumerations</h2></td></tr>
 
 <p>Define notebook as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00145">145</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00071">71</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -483,7 +484,7 @@ Enumerations</h2></td></tr>
 
 <p>Define panel as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00143">143</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00069">69</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -499,7 +500,7 @@ Enumerations</h2></td></tr>
 
 <p>Define progress as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00153">153</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00079">79</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +514,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00127">127</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00163">163</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -527,7 +528,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00126">126</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00162">162</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -543,7 +544,7 @@ Enumerations</h2></td></tr>
 
 <p>Define tabview as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00149">149</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00075">75</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -574,7 +575,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Must return a wxToolbar object. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00090">90</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00116">116</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -605,7 +606,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If a panel is returned it will be placed int the display area. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00113">113</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00139">139</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -621,7 +622,7 @@ Enumerations</h2></td></tr>
 
 <p>Define treenode as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00151">151</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00077">77</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -637,7 +638,7 @@ Enumerations</h2></td></tr>
 
 <p>Define treeview as void* it is not exported to API. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00147">147</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00073">73</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -651,7 +652,21 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00124">124</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Callback called after dtsgui_tree_cb to allow configuration of the panel. This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_d_t_s_tree_window_event.html#a98ac8a3612545e1eaeb99fa9b5662048">DTSTreeWindowEvent::TreeCallback()</a> </dd>
+<dd>
+<a class="el" href="class_d_t_s_d_v_m_list_store.html#a235c78752ca007f5189806e95abcefe2">DTSDVMListStore::ConfigPanel()</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pane</td><td>Panel to be configured. </td></tr>
+    <tr><td class="paramname">tree</td><td>Treeview that contains the node/panel. </td></tr>
+    <tr><td class="paramname">node</td><td>Node that this panel represents. </td></tr>
+    <tr><td class="paramname">data</td><td>Reference to user data stored on node. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00150">150</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -667,7 +682,7 @@ Enumerations</h2></td></tr>
 
 <p>Forward decleration of wizard class. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00132">132</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00058">58</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -695,7 +710,7 @@ Enumerations</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00123">123</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00160">160</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -711,7 +726,7 @@ Enumerations</h2></td></tr>
 
 <p>Forward definition of <a class="el" href="classdynamic__panel.html">dynamic_panel</a>. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00136">136</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00062">62</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -745,7 +760,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A non zero value to allow further processing of the event. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00078">78</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00104">104</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -761,7 +776,7 @@ Enumerations</h2></td></tr>
 
 <p>Forward definition of <a class="el" href="classform__item.html">form_item</a>. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00134">134</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00060">60</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -827,7 +842,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00166">166</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00176">176</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -859,7 +874,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00182">182</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00192">192</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -893,7 +908,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00207">207</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00217">217</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -955,7 +970,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00195">195</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00205">205</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -983,7 +998,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00218">218</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00228">228</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -992,7 +1007,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Oct 10 2013 22:26:38 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Thu Oct 10 2013 23:45:06 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

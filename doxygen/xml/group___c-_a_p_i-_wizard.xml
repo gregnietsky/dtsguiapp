@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="928" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="928" bodyend="930"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="927" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="927" bodyend="929"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
@@ -102,7 +102,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="942" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="942" bodyend="944"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="941" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="941" bodyend="943"/>
         <references refid="classdtsgui__wizard_1a02984b1d70df5100e8b6200e0bb1b421" compoundref="_d_t_s_wizard_8cpp" startline="48" endline="79">dtsgui_wizard::AddPage</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="957" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="957" bodyend="959"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="956" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="956" bodyend="958"/>
         <references refid="classdtsgui__wizard_1ab0554e6b9fe1d2c0419a6659d883edf3" compoundref="_d_t_s_wizard_8cpp" startline="81" endline="86">dtsgui_wizard::RunWizard</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>

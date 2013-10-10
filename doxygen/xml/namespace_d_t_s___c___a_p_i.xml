@@ -3,21 +3,21 @@
   <compounddef id="namespace_d_t_s___c___a_p_i" kind="namespace">
     <compoundname>DTS_C_API</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="namespace_d_t_s___c___a_p_i_1a295fb20974bd3ceb8a6d8ed6e13a6c70" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="group___c-_a_p_i_1ga295fb20974bd3ceb8a6d8ed6e13a6c70" prot="public" static="yes" mutable="no">
         <type>int</type>
         <definition>int DTS_C_API::menuid</definition>
         <argsstring></argsstring>
         <name>menuid</name>
         <initializer>= wxID_AUTO_LOWEST</initializer>
         <briefdescription>
-        </briefdescription>
+<para>Static variable containing menuid incremented each time a menu is created. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="130" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="130" bodyend="-1"/>
-        <referencedby refid="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" compoundref="wrapper_8cpp" startline="318" endline="321">dtsgui_newmenucb</referencedby>
-        <referencedby refid="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" compoundref="wrapper_8cpp" startline="291" endline="294">dtsgui_newmenuitem</referencedby>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="129" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="129" bodyend="-1"/>
+        <referencedby refid="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" compoundref="wrapper_8cpp" startline="317" endline="320">dtsgui_newmenucb</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" compoundref="wrapper_8cpp" startline="290" endline="293">dtsgui_newmenuitem</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -55,7 +55,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="52" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="52" bodyend="67"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="51" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="51" bodyend="66"/>
         <referencedby refid="private_8h_1a2bcdb1dc60a2dc5383e027578faeb44e" compoundref="config_8c" startline="189" endline="217">config_menu</referencedby>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
         <referencedby refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" compoundref="config_8c" startline="69" endline="92">save_config</referencedby>
@@ -140,7 +140,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="156" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="156" bodyend="158"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="155" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="155" bodyend="157"/>
         <referencedby refid="wxforms_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="wxforms_8c" startline="133" endline="173">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga3ac9d5ef153d17266a704a373d591962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -179,7 +179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="171" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="171" bodyend="173"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="170" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="170" bodyend="172"/>
         <referencedby refid="wxforms_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="wxforms_8c" startline="133" endline="173">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -208,7 +208,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="184" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="184" bodyend="186"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="183" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="183" bodyend="185"/>
         <references refid="classdtsgui_1a4d5bf22a505defc4ab13178ff95f2b32" compoundref="_d_t_s_app_8cpp" startline="85" endline="95">dtsgui::GetUserData</references>
         <referencedby refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="740" endline="769">advanced_config</referencedby>
         <referencedby refid="wxforms_8c_1a65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="44" endline="63">app_getxmldoc</referencedby>
@@ -255,7 +255,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="198" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="198" bodyend="201"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="197" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="197" bodyend="200"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a7e9f18961fb55d1b9be667b81681803c" compoundref="_d_t_s_frame_8cpp" startline="227" endline="247">DTSFrame::SetWindow</references>
       </memberdef>
@@ -294,7 +294,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="210" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="210" bodyend="213"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="209" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="209" bodyend="212"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a63488ecbdbe2770ea7d12ce2b06f1b72" compoundref="_d_t_s_frame_8cpp" startline="292" endline="297">DTSFrame::SendDTSEvent</references>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
@@ -345,7 +345,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="224" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="224" bodyend="227"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="223" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="223" bodyend="226"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a1fe29f6d56f11d1702a372416a659e3e" compoundref="_d_t_s_frame_8cpp" startline="320" endline="339">DTSFrame::SetupToolbar</references>
         <referencedby refid="wxforms_8c_1af12c2714c0878b7565d8b788931f9e50" compoundref="wxforms_8c" startline="106" endline="119">guiconfig_cb</referencedby>
@@ -385,7 +385,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="235" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="235" bodyend="237"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="234" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="234" bodyend="236"/>
         <references refid="classdtsgui_1a9d7432eacf96358d22797b37ee73caed" compoundref="_d_t_s_app_8cpp" startline="105" endline="127">dtsgui::AppendTitle</references>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
         <referencedby refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" compoundref="config_8c" startline="69" endline="92">save_config</referencedby>
@@ -424,7 +424,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="243" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="243" bodyend="246"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="242" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="242" bodyend="245"/>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
         <referencedby refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" compoundref="config_8c" startline="69" endline="92">save_config</referencedby>
       </memberdef>
@@ -463,7 +463,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="253" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="253" bodyend="255"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="252" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="252" bodyend="254"/>
         <references refid="classdtsgui_1adbf932006dfc6df2266b5fbf34af67ac" compoundref="_d_t_s_app_8cpp" startline="129" endline="135">dtsgui::ShowToolbar</references>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
         <referencedby refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" compoundref="config_8c" startline="69" endline="92">save_config</referencedby>
@@ -504,7 +504,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="269" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="269" bodyend="272"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="268" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="268" bodyend="271"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a27cb5c393f6f9bbab0d087db9e6338ce" compoundref="_d_t_s_frame_8cpp" startline="358" endline="365">DTSFrame::NewMenu</references>
         <referencedby refid="private_8h_1a2bcdb1dc60a2dc5383e027578faeb44e" compoundref="config_8c" startline="189" endline="217">config_menu</referencedby>
@@ -569,9 +569,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="291" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="291" bodyend="294"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="290" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="290" bodyend="293"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
-        <references refid="namespace_d_t_s___c___a_p_i_1a295fb20974bd3ceb8a6d8ed6e13a6c70" compoundref="wrapper_8cpp" startline="130">menuid</references>
+        <references refid="group___c-_a_p_i_1ga295fb20974bd3ceb8a6d8ed6e13a6c70" compoundref="wrapper_8cpp" startline="129">menuid</references>
         <references refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" compoundref="_d_t_s_frame_8cpp" startline="427" endline="443">DTSFrame::NewMenuItem</references>
         <referencedby refid="wxforms_8c_1ae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="90" endline="104">help_menu</referencedby>
         <referencedby refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" compoundref="testing_8c" startline="94" endline="105">test_menu</referencedby>
@@ -667,9 +667,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="318" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="318" bodyend="321"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="317" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="317" bodyend="320"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
-        <references refid="namespace_d_t_s___c___a_p_i_1a295fb20974bd3ceb8a6d8ed6e13a6c70" compoundref="wrapper_8cpp" startline="130">menuid</references>
+        <references refid="group___c-_a_p_i_1ga295fb20974bd3ceb8a6d8ed6e13a6c70" compoundref="wrapper_8cpp" startline="129">menuid</references>
         <references refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" compoundref="_d_t_s_frame_8cpp" startline="427" endline="443">DTSFrame::NewMenuItem</references>
         <referencedby refid="private_8h_1a2bcdb1dc60a2dc5383e027578faeb44e" compoundref="config_8c" startline="189" endline="217">config_menu</referencedby>
         <referencedby refid="wxforms_8c_1a011cd0b131174029fed8babdf1c7a101" compoundref="wxforms_8c" startline="65" endline="88">file_menu</referencedby>
@@ -710,7 +710,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="336" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="336" bodyend="339"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="335" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="335" bodyend="338"/>
         <references refid="class_d_t_s_frame_1a424fbab6df135ea54b5c62a191e809cd" compoundref="_d_t_s_frame_8cpp" startline="345" endline="356">DTSFrame::CloseMenu</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wxforms_8c_1a011cd0b131174029fed8babdf1c7a101" compoundref="wxforms_8c" startline="65" endline="88">file_menu</referencedby>
@@ -751,7 +751,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="354" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="354" bodyend="357"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="353" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="353" bodyend="356"/>
         <references refid="class_d_t_s_frame_1a424fbab6df135ea54b5c62a191e809cd" compoundref="_d_t_s_frame_8cpp" startline="345" endline="356">DTSFrame::CloseMenu</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wxforms_8c_1a011cd0b131174029fed8babdf1c7a101" compoundref="wxforms_8c" startline="65" endline="88">file_menu</referencedby>
@@ -803,7 +803,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="371" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="371" bodyend="374"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="370" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="370" bodyend="373"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1af57b68ada1f1958582fea200a2a315fc" compoundref="_d_t_s_frame_8cpp" startline="86" endline="94">DTSFrame::SetAbout</references>
         <referencedby refid="wxforms_8c_1ae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="90" endline="104">help_menu</referencedby>
@@ -833,7 +833,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="386" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="386" bodyend="389"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="385" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="385" bodyend="388"/>
         <referencedby refid="private_8h_1a2bcdb1dc60a2dc5383e027578faeb44e" compoundref="config_8c" startline="189" endline="217">config_menu</referencedby>
         <referencedby refid="wxforms_8c_1a011cd0b131174029fed8babdf1c7a101" compoundref="wxforms_8c" startline="65" endline="88">file_menu</referencedby>
         <referencedby refid="wxforms_8c_1ae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="90" endline="104">help_menu</referencedby>
@@ -918,7 +918,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="407" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="407" bodyend="410"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="406" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="406" bodyend="409"/>
         <references refid="class_d_t_s_frame_1a3b1105fb9c8e3b6909994e7f993eee20" compoundref="_d_t_s_frame_8cpp" startline="367" endline="398">DTSFrame::CreatePane</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" compoundref="testing_8c" startline="94" endline="105">test_menu</referencedby>
@@ -970,7 +970,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="426" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="426" bodyend="429"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="425" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="425" bodyend="428"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</references>
         <referencedby refid="wxforms_8c_1ae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="90" endline="104">help_menu</referencedby>
@@ -1045,7 +1045,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="446" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="446" bodyend="449"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="445" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="445" bodyend="448"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="740" endline="769">advanced_config</referencedby>
       </memberdef>
@@ -1096,7 +1096,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="463" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="463" bodyend="466"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="462" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="462" bodyend="465"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
         <referencedby refid="private_8h_1aa1aa69985689f9714422c273fe968fdf" compoundref="pbxconfig_8c" startline="325" endline="350">pbx_settings</referencedby>
@@ -1147,7 +1147,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="478" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="478" bodyend="481"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="477" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="477" bodyend="480"/>
         <references refid="class_d_t_s_tree_window_1a3a7d1d1ce34864f71d5ffd154ca18210" compoundref="_d_t_s_tree_window_8cpp" startline="740" endline="762">DTSTreeWindow::UpdateNodeXML</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gad91055a12542c30dab4aacbd0761c785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1185,7 +1185,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="492" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="492" bodyend="495"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="491" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="491" bodyend="494"/>
         <references refid="class_d_t_s_object_1a1ae63425d8e5770a8b0717f37fd695b2" compoundref="_d_t_s_panel_8cpp" startline="278" endline="291">DTSObject::SetXMLDoc</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga75c6083aa363922fdf1fd19767eceeea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1214,7 +1214,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="508" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="508" bodyend="511"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="507" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="507" bodyend="510"/>
         <references refid="class_d_t_s_object_1ae177d1cfd85be759810b252b98f2050d" compoundref="_d_t_s_panel_8cpp" startline="293" endline="302">DTSObject::GetXMLDoc</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
@@ -1245,7 +1245,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="519" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="519" bodyend="521"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="518" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="518" bodyend="520"/>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -1338,7 +1338,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="546" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="546" bodyend="549"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="545" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="545" bodyend="548"/>
         <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="977" endline="998">DTSTabWindow::CreateTab</references>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
         <referencedby refid="private_8h_1aa1aa69985689f9714422c273fe968fdf" compoundref="pbxconfig_8c" startline="325" endline="350">pbx_settings</referencedby>
@@ -1456,7 +1456,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="575" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="575" bodyend="578"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="574" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="574" bodyend="577"/>
         <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="977" endline="998">DTSTabWindow::CreateTab</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gad3333a23e28993072b5ef4feed86778c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1595,7 +1595,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="604" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="603" bodyend="607"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="603" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="602" bodyend="606"/>
         <references refid="classtab__newpane_1a8084796f246b29a21c9077aefa40fc18" compoundref="_d_t_s_tree_window_8cpp" startline="184" endline="200">tab_newpane::handle_newtabpane_cb</references>
         <references refid="classtab__newpane_1a66f664e9d0212bd0415953c72afbbacd" compoundref="_d_t_s_tree_window_8cpp" startline="131" endline="155">tab_newpane::tab_newpane</references>
         <referencedby refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" compoundref="interface_8c" startline="137" endline="142">network_iface_new_pane_cb</referencedby>
@@ -1669,7 +1669,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="623" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="623" bodyend="626"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="622" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="622" bodyend="625"/>
         <references refid="class_d_t_s_tree_window_1a7457dc767b9cbc873e0e963644fa1fda" compoundref="_d_t_s_tree_window_8cpp" startline="701" endline="720">DTSTreeWindow::CreatePane</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gab8713feb542a9bb13f8fe7e3bf568bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1709,7 +1709,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="641" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="641" bodyend="644"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="640" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="640" bodyend="643"/>
         <references refid="class_d_t_s_tree_window_1a7457dc767b9cbc873e0e963644fa1fda" compoundref="_d_t_s_tree_window_8cpp" startline="701" endline="720">DTSTreeWindow::CreatePane</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1825,7 +1825,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="667" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="666" bodyend="670"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="666" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="665" bodyend="669"/>
         <references refid="class_d_t_s_d_v_m_ctrl_1a853bc63ae2098cf907897dfe896f38b2" compoundref="_d_t_s_list_view_8cpp" startline="604" endline="606">DTSDVMCtrl::AppendContainer</references>
         <references refid="class_d_t_s_tree_window_1aae9e856659f3701452382e2cdcba8463" compoundref="_d_t_s_tree_window_8cpp" startline="641" endline="643">DTSTreeWindow::GetTreeCtrl</references>
         <referencedby refid="netconfig_8c_1a1d7b1d28e9721a0c428be28f6c505875" compoundref="netconfig_8c" startline="134" endline="136">network_config_dns_domain_node</referencedby>
@@ -1943,7 +1943,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="691" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="690" bodyend="694"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="690" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="689" bodyend="693"/>
         <references refid="class_d_t_s_d_v_m_ctrl_1a60de6e9342a4c140fa2b72acfbfd97dc" compoundref="_d_t_s_list_view_8cpp" startline="600" endline="602">DTSDVMCtrl::AppendItem</references>
         <references refid="class_d_t_s_tree_window_1aae9e856659f3701452382e2cdcba8463" compoundref="_d_t_s_tree_window_8cpp" startline="641" endline="643">DTSTreeWindow::GetTreeCtrl</references>
         <referencedby refid="netconfig_8c_1ad5f5bf5384beb7b8c2fefdd51315d079" compoundref="netconfig_8c" startline="602" endline="738">network_tree_setup</referencedby>
@@ -2095,7 +2095,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="721" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="720" bodyend="724"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="720" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="719" bodyend="723"/>
         <references refid="classtree__newnode_1a307fb2ff9afc18429af055850f3c01a8" compoundref="_d_t_s_tree_window_8cpp" startline="71" endline="87">tree_newnode::handle_newtreenode_cb</references>
         <references refid="classtree__newnode_1a79fd1a82bf40d2d922c1d297f1de3f29" compoundref="_d_t_s_tree_window_8cpp" startline="52" endline="69">tree_newnode::tree_newnode</references>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
@@ -2134,7 +2134,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="733" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="733" bodyend="736"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="732" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="732" bodyend="735"/>
         <references refid="class_d_t_s_d_v_m_list_store_1a9744dc2bb294481c69a55fcdd667b357" compoundref="_d_t_s_list_view_8cpp" startline="207" endline="209">DTSDVMListStore::GetNodeID</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tree_1gaedca58250011ea48c67fbc4faa14278f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2162,7 +2162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="743" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="743" bodyend="746"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="742" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="742" bodyend="745"/>
         <references refid="class_d_t_s_d_v_m_list_store_1a06805bea00fbdbf5df1f995b87897b5e" compoundref="_d_t_s_list_view_8cpp" startline="79" endline="82">DTSDVMListStore::GetParentTitle</references>
         <referencedby refid="netconfig_8c_1af6cb7d31e4a663493723310afddf0657" compoundref="netconfig_8c" startline="177" endline="199">network_config_dns_domain_server_new</referencedby>
       </memberdef>
@@ -2212,7 +2212,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="754" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="754" bodyend="757"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="753" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="753" bodyend="756"/>
         <references refid="class_d_t_s_d_v_m_list_store_1aa82d333247a2bf537c3acdeae7635e15" compoundref="_d_t_s_list_view_8cpp" startline="211" endline="218">DTSDVMListStore::SetXMLData</references>
         <referencedby refid="netconfig_8c_1ad5f5bf5384beb7b8c2fefdd51315d079" compoundref="netconfig_8c" startline="602" endline="738">network_tree_setup</referencedby>
       </memberdef>
@@ -2252,7 +2252,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="768" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="768" bodyend="771"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="767" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="767" bodyend="770"/>
         <references refid="class_d_t_s_d_v_m_list_store_1a61adea3902f8c4b1c746546b1b9bbff0" compoundref="_d_t_s_list_view_8cpp" startline="220" endline="230">DTSDVMListStore::GetXMLData</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" compoundref="netconfig_8c" startline="504" endline="511">network_adsl_user</referencedby>
@@ -2291,7 +2291,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="779" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="779" bodyend="782"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="778" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="778" bodyend="781"/>
         <references refid="class_d_t_s_d_v_m_list_store_1a35aa2204af134770c1fab2f5426c50a7" compoundref="_d_t_s_list_view_8cpp" startline="200" endline="205">DTSDVMListStore::GetUserData</references>
         <referencedby refid="netconfig_8c_1a85464ec7fa78ad423246f4cd96e69cfc" compoundref="netconfig_8c" startline="163" endline="175">network_config_dns_domain_server</referencedby>
       </memberdef>
@@ -2341,7 +2341,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="796" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="796" bodyend="799"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="795" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="795" bodyend="798"/>
         <references refid="class_d_t_s_panel_1ac18de08077529d488ea329a72ee14d98" compoundref="_d_t_s_panel_8cpp" startline="394" endline="403">DTSPanel::SetEventCallback</references>
         <referencedby refid="interface_8c_1aec69e5698c53680c3551eeb9e05cbaf6" compoundref="interface_8c" startline="123" endline="135">network_iface_pane_cb</referencedby>
         <referencedby refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" compoundref="testing_8c" startline="94" endline="105">test_menu</referencedby>
@@ -2370,7 +2370,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="812" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="812" bodyend="815"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="811" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="811" bodyend="814"/>
         <references refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="733" endline="762">DTSPanel::Update_XML</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
@@ -2399,7 +2399,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="830" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="830" bodyend="833"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="829" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="829" bodyend="832"/>
         <references refid="class_d_t_s_panel_1a7ce048cedd00ee1f1d9ea1c1fd504a6f" compoundref="_d_t_s_panel_8cpp" startline="828" endline="867">DTSPanel::Panel2Post</references>
         <referencedby refid="testing_8c_1a467cf1f57bc5317de7fa356f87b324a6" compoundref="testing_8c" startline="25" endline="42">post_items</referencedby>
       </memberdef>
@@ -2429,7 +2429,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="844" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="844" bodyend="847"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="843" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="843" bodyend="846"/>
         <references refid="class_d_t_s_object_1a5d32407be34aa68ea2b038ede768d50e" compoundref="_d_t_s_panel_8cpp" startline="326" endline="334">DTSObject::GetUserData</references>
         <referencedby refid="testing_8c_1a467cf1f57bc5317de7fa356f87b324a6" compoundref="testing_8c" startline="25" endline="42">post_items</referencedby>
       </memberdef>
@@ -2468,7 +2468,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="854" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="854" bodyend="857"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="853" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="853" bodyend="856"/>
         <references refid="class_d_t_s_panel_1a58daeb533cce1e4bdac57118cce7c7ea" compoundref="_d_t_s_panel_8cpp" startline="470" endline="476">DTSPanel::SetTitle</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1gad561196144c72953e31b83aff17054e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2506,7 +2506,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="865" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="865" bodyend="868"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="864" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="864" bodyend="867"/>
         <references refid="class_d_t_s_panel_1a03be174c3cb033ba74b6abce543347e3" compoundref="_d_t_s_panel_8cpp" startline="478" endline="482">DTSPanel::SetStatus</references>
         <referencedby refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" compoundref="interface_8c" startline="86" endline="121">handle_updatetabpane</referencedby>
       </memberdef>
@@ -2557,7 +2557,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="881" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="881" bodyend="884"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="880" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="880" bodyend="883"/>
         <references refid="class_d_t_s_panel_1acdb57729ace5f3c0fc76cce4d41c36cc" compoundref="_d_t_s_panel_8cpp" startline="405" endline="418">DTSPanel::SetConfigCallback</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga9c1222d2fe8fa5066a2c55e4b71c2cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2629,7 +2629,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="900" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="900" bodyend="903"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="899" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="899" bodyend="902"/>
         <references refid="class_d_t_s_panel_1ad28f5ed6bd19e9d685a18df8bf568f92" compoundref="_d_t_s_panel_8cpp" startline="764" endline="826">DTSPanel::Panel2XML</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel_1ga3f904089ceb734323477f2b3dbac4a41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2678,7 +2678,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="912" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="912" bodyend="915"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="911" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="911" bodyend="914"/>
         <references refid="class_d_t_s_dialog_1af1e6be7e08913149d128839b7e535cd0" compoundref="_d_t_s_panel_8cpp" startline="1064" endline="1076">DTSDialog::RunDialog</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -2717,7 +2717,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="928" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="928" bodyend="930"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="927" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="927" bodyend="929"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
@@ -2779,7 +2779,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="942" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="942" bodyend="944"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="941" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="941" bodyend="943"/>
         <references refid="classdtsgui__wizard_1a02984b1d70df5100e8b6200e0bb1b421" compoundref="_d_t_s_wizard_8cpp" startline="48" endline="79">dtsgui_wizard::AddPage</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
@@ -2808,7 +2808,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="957" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="957" bodyend="959"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="956" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="956" bodyend="958"/>
         <references refid="classdtsgui__wizard_1ab0554e6b9fe1d2c0419a6659d883edf3" compoundref="_d_t_s_wizard_8cpp" startline="81" endline="86">dtsgui_wizard::RunWizard</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
@@ -2870,7 +2870,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="970" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="970" bodyend="973"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="969" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="969" bodyend="972"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a55bbe89f24dc6ad3fbe78589bcbd9686" compoundref="_d_t_s_frame_8cpp" startline="121" endline="141">DTSFrame::StartProgress</references>
       </memberdef>
@@ -2921,7 +2921,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="985" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="985" bodyend="988"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="984" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="984" bodyend="987"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a3b057f8c85958444049063e75b602108" compoundref="_d_t_s_frame_8cpp" startline="143" endline="156">DTSFrame::UpdateProgress</references>
       </memberdef>
@@ -2972,7 +2972,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="997" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="997" bodyend="1000"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="996" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="996" bodyend="999"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a8b1f1c4cf298ef550edec3fa3bf96738" compoundref="_d_t_s_frame_8cpp" startline="158" endline="171">DTSFrame::IncProgress</references>
       </memberdef>
@@ -3000,7 +3000,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1006" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1006" bodyend="1009"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1005" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1005" bodyend="1008"/>
         <references refid="class_d_t_s_frame_1aa33b0ba3ce50a7ec4434a78c2be498b7" compoundref="_d_t_s_frame_8cpp" startline="173" endline="182">DTSFrame::EndProgress</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
       </memberdef>
@@ -3029,7 +3029,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1019" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1019" bodyend="1022"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1018" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1018" bodyend="1021"/>
         <references refid="class_d_t_s_object_1a4cadcce0480e7e8f4a9a07a4aedd3c1f" compoundref="_d_t_s_panel_8cpp" startline="304" endline="309">DTSObject::GetItems</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -3068,7 +3068,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1032" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1032" bodyend="1035"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1031" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1031" bodyend="1034"/>
         <references refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" compoundref="_d_t_s_panel_8cpp" startline="869" endline="871">DTSPanel::FindItem</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga30bc1422cf3395b150773320ffda00ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -3096,7 +3096,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1045" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1045" bodyend="1047"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1044" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1044" bodyend="1046"/>
         <references refid="classform__item_1a45b4a4db5526c1032f15ba20d3f28249" compoundref="pitems_8cpp" startline="136" endline="145">form_item::GetData</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -3125,7 +3125,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1056" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1056" bodyend="1058"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1055" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1055" bodyend="1057"/>
         <references refid="classform__item_1a6377c3eeefcf7272d5200cd462c9eba7" compoundref="pitems_8cpp" startline="184" endline="211">form_item::GetValue</references>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>
       </memberdef>
@@ -3155,7 +3155,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1067" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1067" bodyend="1069"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1066" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1066" bodyend="1068"/>
         <references refid="classform__item_1a4f3558ce5670e789ad51d1f489ec5b14" compoundref="pitems_8cpp" startline="180" endline="182">form_item::GetName</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga37f578498eb38e545906898e7250e6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -3195,7 +3195,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1083" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1083" bodyend="1086"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1082" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1082" bodyend="1085"/>
         <references refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" compoundref="_d_t_s_panel_8cpp" startline="873" endline="884">DTSPanel::FindValue</references>
         <referencedby refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" compoundref="interface_8c" startline="86" endline="121">handle_updatetabpane</referencedby>
       </memberdef>
@@ -3234,7 +3234,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1094" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1094" bodyend="1097"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1093" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1093" bodyend="1096"/>
         <references refid="class_d_t_s_frame_1a890f88e157626205916bdb961cc6fb6f" compoundref="_d_t_s_frame_8cpp" startline="112" endline="119">DTSFrame::Alert</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="740" endline="769">advanced_config</referencedby>
@@ -3283,7 +3283,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1105" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1105" bodyend="1108"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1104" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1104" bodyend="1107"/>
         <references refid="class_d_t_s_frame_1a937f276b15be00e81087ef1a73605478" compoundref="_d_t_s_frame_8cpp" startline="96" endline="110">DTSFrame::Confirm</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
@@ -3357,7 +3357,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1119" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1119" bodyend="1122"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1118" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1118" bodyend="1121"/>
         <references refid="class_d_t_s_frame_1af996b558ba17ecc23cf6ed1a3d1873fb" compoundref="_d_t_s_frame_8cpp" startline="400" endline="411">DTSFrame::FileDialog</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="private_8h_1a01bdf27a0760d9da4bb77918735171c1" compoundref="config_8c" startline="150" endline="187">export_config</referencedby>
@@ -3432,7 +3432,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1135" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1135" bodyend="1138"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1134" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1134" bodyend="1137"/>
         <references refid="class_d_t_s_frame_1af996b558ba17ecc23cf6ed1a3d1873fb" compoundref="_d_t_s_frame_8cpp" startline="400" endline="411">DTSFrame::FileDialog</references>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <referencedby refid="wizard_8c_1a126b309803052977061662f97fb9012a" compoundref="wizard_8c" startline="456" endline="474">editsys_wizard</referencedby>
@@ -3486,7 +3486,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1150" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1150" bodyend="1153"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1149" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1149" bodyend="1152"/>
         <references refid="class_d_t_s_frame_1a5a7ad78662b511e7ef6ac513f8d1a28b" compoundref="_d_t_s_frame_8cpp" startline="487" endline="502">DTSFrame::Passwd</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -3535,7 +3535,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1161" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1161" bodyend="1163"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1160" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1160" bodyend="1162"/>
         <references refid="classform__item_1ad99d224a37a5bc6f99835afb2347fac8" compoundref="pitems_8cpp" startline="147" endline="166">form_item::Append</references>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>
         <referencedby refid="netconfig_8c_1aaf6857ee640832afc05a9e158faedde3" compoundref="netconfig_8c" startline="372" endline="388">network_modem</referencedby>
@@ -3591,7 +3591,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1169" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1169" bodyend="1171"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1168" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1168" bodyend="1170"/>
         <references refid="classform__item_1a9f108735a3f81f0f419fd828a29b2938" compoundref="pitems_8cpp" startline="168" endline="178">form_item::SetSelection</references>
         <referencedby refid="netconfig_8c_1a3a749e8b1e9561bb168ba3aed04444a8" compoundref="netconfig_8c" startline="277" endline="318">network_newwifi</referencedby>
       </memberdef>
@@ -3663,7 +3663,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1182" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1182" bodyend="1184"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1181" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1181" bodyend="1183"/>
         <references refid="classform__item_1a7bbc5ad6365c6b104f230afb35b0996b" compoundref="pitems_8cpp" startline="217" endline="237">form_item::AppendXML</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
@@ -3738,7 +3738,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1194" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1194" bodyend="1197"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1193" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1193" bodyend="1196"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="554" endline="570">DTSPanel::TextBox</references>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
@@ -3821,7 +3821,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1207" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1207" bodyend="1210"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1206" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1206" bodyend="1209"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="554" endline="570">DTSPanel::TextBox</references>
         <referencedby refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" compoundref="testing_8c" startline="72" endline="92">testpanel</referencedby>
@@ -3894,7 +3894,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1220" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1220" bodyend="1223"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1219" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1219" bodyend="1222"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="554" endline="570">DTSPanel::TextBox</references>
       </memberdef>
@@ -3988,7 +3988,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1235" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1235" bodyend="1238"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1234" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1234" bodyend="1237"/>
         <references refid="class_d_t_s_panel_1a1bfea883644cb1052752528b89b8c71f" compoundref="_d_t_s_panel_8cpp" startline="595" endline="613">DTSPanel::CheckBox</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <referencedby refid="netconfig_8c_1aa9efe8e76bc229a36fa2499c892949ce" compoundref="netconfig_8c" startline="151" endline="161">network_config_dns_domain_new</referencedby>
@@ -4052,7 +4052,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1248" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1248" bodyend="1251"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1247" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1247" bodyend="1250"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1a08cb04c83c8e5668592bd2f3bacf8267" compoundref="_d_t_s_panel_8cpp" startline="635" endline="652">DTSPanel::ListBox</references>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
@@ -4118,7 +4118,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1261" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1261" bodyend="1264"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1260" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1260" bodyend="1263"/>
         <references refid="class_d_t_s_panel_1ad91d3ca25ab8349403efc7cc78cb1869" compoundref="_d_t_s_panel_8cpp" startline="671" endline="692">DTSPanel::ComboBox</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <referencedby refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" compoundref="testing_8c" startline="72" endline="92">testpanel</referencedby>
@@ -4224,7 +4224,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1277" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1277" bodyend="1280"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1276" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1276" bodyend="1279"/>
         <references refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" compoundref="_d_t_s_panel_8cpp" startline="572" endline="585">DTSPanel::XMLTextBox</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" compoundref="netconfig_8c" startline="504" endline="511">network_adsl_user</referencedby>
@@ -4368,7 +4368,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1293" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1293" bodyend="1296"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1292" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1292" bodyend="1295"/>
         <references refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" compoundref="_d_t_s_panel_8cpp" startline="572" endline="585">DTSPanel::XMLTextBox</references>
         <referencedby refid="wizard_8c_1accc1788f03d17d487ce09a1d07d53018" compoundref="wizard_8c" startline="159" endline="168">wizz_custinfo</referencedby>
       </memberdef>
@@ -4473,7 +4473,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1309" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1309" bodyend="1312"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1308" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1308" bodyend="1311"/>
         <references refid="class_d_t_s_panel_1a5bbe4bfc295ef7b772c09628e80976c7" compoundref="_d_t_s_panel_8cpp" startline="591" endline="593">DTSPanel::XMLPasswdBox</references>
         <referencedby refid="pbxconfig_8c_1a13ef8f931ae62e6036a1ac3e6596a424" compoundref="pbxconfig_8c" startline="195" endline="212">pbxconf_global</referencedby>
       </memberdef>
@@ -4600,7 +4600,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1327" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1327" bodyend="1330"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1326" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1326" bodyend="1329"/>
         <references refid="class_d_t_s_panel_1a1495f670e901f45cbbc3a4d2c471aa53" compoundref="_d_t_s_panel_8cpp" startline="615" endline="633">DTSPanel::XMLCheckBox</references>
         <referencedby refid="netconfig_8c_1ae9c5a17913250cf9e849ee49b2398b98" compoundref="netconfig_8c" startline="76" endline="87">network_config_dns</referencedby>
         <referencedby refid="netconfig_8c_1a07f37413fb1c1cb24c6f3a8a2e542114" compoundref="netconfig_8c" startline="138" endline="149">network_config_dns_domain</referencedby>
@@ -4726,7 +4726,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1344" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1344" bodyend="1347"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1343" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1343" bodyend="1346"/>
         <references refid="class_d_t_s_panel_1a03d63a8c380ee62e263d7bc3a3c86396" compoundref="_d_t_s_panel_8cpp" startline="654" endline="669">DTSPanel::XMLListBox</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>
@@ -4846,7 +4846,7 @@ When a event happens the callback is called with the userdata to allow actioning
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1361" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1361" bodyend="1364"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1360" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1360" bodyend="1363"/>
         <references refid="class_d_t_s_panel_1a4d294755a98b6194df04292abe18d1b0" compoundref="_d_t_s_panel_8cpp" startline="694" endline="709">DTSPanel::XMLComboBox</references>
         <referencedby refid="netconfig_8c_1adceac66b5b38e18e528fc5a2adb2d649" compoundref="netconfig_8c" startline="245" endline="275">network_wifi</referencedby>
         <referencedby refid="wizard_8c_1a4fc4a7cde0492cbde04a4e0804cc81d8" compoundref="wizard_8c" startline="212" endline="226">wizz_network</referencedby>
@@ -4856,6 +4856,6 @@ When a event happens the callback is called with the userdata to allow actioning
 <para>Namespace containing exported functions used by C. </para>    </briefdescription>
     <detaileddescription>
 <para>These functions should not be used in C++ code use of the native API is recomended.</para><para>Allocate all exported fuctions for C to the namespace <ref refid="namespace_d_t_s___c___a_p_i" kindref="compound">DTS_C_API</ref> Functions in this namespace are wrappers and should not be used in C++ code. </para>    </detaileddescription>
-    <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="46"/>
+    <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="45"/>
   </compounddef>
 </doxygen>

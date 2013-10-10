@@ -26,8 +26,7 @@
   * These functions should not be used in C++ applications.*/
 
 
-/**  
-  * @ingroup C-API
+/** @ingroup C-API
   * @brief Defining __DTS_C_API allows access to C API from inside a C++ file
   * 
   * dtsgui.h will only include the definitions for the C API if this is defined.*/
@@ -66,6 +65,11 @@ void dtsgui_menuenable(dtsgui_menu dm, int enable) {
 	}
 }
 
+/** @ingroup C-API
+  * @fn void getwin32folder(int csidl, char *path)
+  * @brief Wrapper to obtain "special" path for WIN32
+  * @param csidl Special folder to obtain.
+  * @param path Buffer that the path is placed in.*/
 #ifdef __WIN32
 void getwin32folder(int csidl, char *path) {
 	SHGetFolderPathA(NULL, csidl, NULL, 0, path);

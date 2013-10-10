@@ -35,7 +35,7 @@
         <references refid="class_d_t_s_object_1af8c7a75701ac05261749552eef4bc6ed" compoundref="_d_t_s_panel_8h" startline="75">DTSObject::panel</references>
         <references refid="class_d_t_s_panel_1a9e90d0d7b1466eb3e8005343ce787974" compoundref="_d_t_s_panel_8cpp" startline="378" endline="392">DTSPanel::SetupWin</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373ad0213b4d1d51e9f04e084a09e8da1c62" compoundref="dtsgui_8h" startline="208">wx_DTSPANEL_WINDOW</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373ad0213b4d1d51e9f04e084a09e8da1c62" compoundref="dtsgui_8h" startline="218">wx_DTSPANEL_WINDOW</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_window_1a0c09a82da8cb97cf387c14d18ae056d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>

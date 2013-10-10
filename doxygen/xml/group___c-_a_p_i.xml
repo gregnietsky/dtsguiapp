@@ -12,6 +12,24 @@
     <innergroup refid="group___c-_a_p_i-_wizard">C API Wizard Interface</innergroup>
     <innergroup refid="group___c-_a_p_i-_dialog">C API Common Dialog Boxes</innergroup>
     <innergroup refid="group___c-_a_p_i-_progress">C API Progress Dialog Functions</innergroup>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___c-_a_p_i_1ga295fb20974bd3ceb8a6d8ed6e13a6c70" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int DTS_C_API::menuid</definition>
+        <argsstring></argsstring>
+        <name>menuid</name>
+        <initializer>= wxID_AUTO_LOWEST</initializer>
+        <briefdescription>
+<para>Static variable containing menuid incremented each time a menu is created. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="129" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="129" bodyend="-1"/>
+        <referencedby refid="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" compoundref="wrapper_8cpp" startline="317" endline="320">DTS_C_API::dtsgui_newmenucb</referencedby>
+        <referencedby refid="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" compoundref="wrapper_8cpp" startline="290" endline="293">DTS_C_API::dtsgui_newmenuitem</referencedby>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="group___c-_a_p_i_1gacecdb36b65ac3d5522a419a6b69c9f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -93,7 +111,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="156" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="156" bodyend="158"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="155" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="155" bodyend="157"/>
         <referencedby refid="wxforms_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="wxforms_8c" startline="133" endline="173">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1ga3ac9d5ef153d17266a704a373d591962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -132,7 +150,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="171" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="171" bodyend="173"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="170" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="170" bodyend="172"/>
         <referencedby refid="wxforms_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="wxforms_8c" startline="133" endline="173">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -161,7 +179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="184" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="184" bodyend="186"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="183" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="183" bodyend="185"/>
         <references refid="classdtsgui_1a4d5bf22a505defc4ab13178ff95f2b32" compoundref="_d_t_s_app_8cpp" startline="85" endline="95">dtsgui::GetUserData</references>
         <referencedby refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="740" endline="769">advanced_config</referencedby>
         <referencedby refid="wxforms_8c_1a65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="44" endline="63">app_getxmldoc</referencedby>
@@ -208,7 +226,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="198" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="198" bodyend="201"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="197" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="197" bodyend="200"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a7e9f18961fb55d1b9be667b81681803c" compoundref="_d_t_s_frame_8cpp" startline="227" endline="247">DTSFrame::SetWindow</references>
       </memberdef>
@@ -247,7 +265,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="210" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="210" bodyend="213"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="209" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="209" bodyend="212"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a63488ecbdbe2770ea7d12ce2b06f1b72" compoundref="_d_t_s_frame_8cpp" startline="292" endline="297">DTSFrame::SendDTSEvent</references>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
@@ -298,7 +316,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="224" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="224" bodyend="227"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="223" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="223" bodyend="226"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="137" endline="139">dtsgui::GetFrame</references>
         <references refid="class_d_t_s_frame_1a1fe29f6d56f11d1702a372416a659e3e" compoundref="_d_t_s_frame_8cpp" startline="320" endline="339">DTSFrame::SetupToolbar</references>
         <referencedby refid="wxforms_8c_1af12c2714c0878b7565d8b788931f9e50" compoundref="wxforms_8c" startline="106" endline="119">guiconfig_cb</referencedby>
@@ -338,7 +356,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="235" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="235" bodyend="237"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="234" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="234" bodyend="236"/>
         <references refid="classdtsgui_1a9d7432eacf96358d22797b37ee73caed" compoundref="_d_t_s_app_8cpp" startline="105" endline="127">dtsgui::AppendTitle</references>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
         <referencedby refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" compoundref="config_8c" startline="69" endline="92">save_config</referencedby>
@@ -377,7 +395,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="243" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="243" bodyend="246"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="242" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="242" bodyend="245"/>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
         <referencedby refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" compoundref="config_8c" startline="69" endline="92">save_config</referencedby>
       </memberdef>
@@ -416,7 +434,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="253" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="253" bodyend="255"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="252" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="252" bodyend="254"/>
         <references refid="classdtsgui_1adbf932006dfc6df2266b5fbf34af67ac" compoundref="_d_t_s_app_8cpp" startline="129" endline="135">dtsgui::ShowToolbar</references>
         <referencedby refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</referencedby>
         <referencedby refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" compoundref="config_8c" startline="69" endline="92">save_config</referencedby>
@@ -431,7 +449,7 @@
 <para><ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref> will only include the definitions for the C API if this is defined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="34" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="34" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="33" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" prot="public" static="no">
         <name>__DTS_C_API</name>

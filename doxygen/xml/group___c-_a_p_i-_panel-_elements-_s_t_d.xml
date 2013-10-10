@@ -72,7 +72,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1194" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1194" bodyend="1197"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1193" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1193" bodyend="1196"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="554" endline="570">DTSPanel::TextBox</references>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
@@ -155,7 +155,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1207" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1207" bodyend="1210"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1206" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1206" bodyend="1209"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="554" endline="570">DTSPanel::TextBox</references>
         <referencedby refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" compoundref="testing_8c" startline="72" endline="92">testpanel</referencedby>
@@ -228,7 +228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1220" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1220" bodyend="1223"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1219" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1219" bodyend="1222"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="554" endline="570">DTSPanel::TextBox</references>
       </memberdef>
@@ -322,7 +322,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1235" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1235" bodyend="1238"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1234" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1234" bodyend="1237"/>
         <references refid="class_d_t_s_panel_1a1bfea883644cb1052752528b89b8c71f" compoundref="_d_t_s_panel_8cpp" startline="595" endline="613">DTSPanel::CheckBox</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <referencedby refid="netconfig_8c_1aa9efe8e76bc229a36fa2499c892949ce" compoundref="netconfig_8c" startline="151" endline="161">network_config_dns_domain_new</referencedby>
@@ -386,7 +386,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1248" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1248" bodyend="1251"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1247" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1247" bodyend="1250"/>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_panel_1a08cb04c83c8e5668592bd2f3bacf8267" compoundref="_d_t_s_panel_8cpp" startline="635" endline="652">DTSPanel::ListBox</references>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
@@ -452,7 +452,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1261" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1261" bodyend="1264"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1260" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1260" bodyend="1263"/>
         <references refid="class_d_t_s_panel_1ad91d3ca25ab8349403efc7cc78cb1869" compoundref="_d_t_s_panel_8cpp" startline="671" endline="692">DTSPanel::ComboBox</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <referencedby refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" compoundref="testing_8c" startline="72" endline="92">testpanel</referencedby>

@@ -19,5 +19,6 @@ var group___c__a_p_i =
     [ "dtsgui_setuptoolbar", "group___c-_a_p_i.html#ga1734b840fc0696b13d5b616df0ec3bbb", null ],
     [ "dtsgui_setwindow", "group___c-_a_p_i.html#ga529d973a998e39dba025dfcd96a9a706", null ],
     [ "dtsgui_titleappend", "group___c-_a_p_i.html#gafc00c020f324c119956fcc38e7fd55db", null ],
-    [ "dtsgui_userdata", "group___c-_a_p_i.html#gaa224c0a868745526e6ac3c05970471c5", null ]
+    [ "dtsgui_userdata", "group___c-_a_p_i.html#gaa224c0a868745526e6ac3c05970471c5", null ],
+    [ "menuid", "group___c-_a_p_i.html#ga295fb20974bd3ceb8a6d8ed6e13a6c70", null ]
 ];

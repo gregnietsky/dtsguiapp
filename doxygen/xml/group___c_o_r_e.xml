@@ -118,7 +118,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="166" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="166" bodyend="179"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="176" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="176" bodyend="189"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1ga54d7edaba9c015c3b5310ed3080b82e6" prot="public" static="no">
         <name>panel_events</name>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="182" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="182" bodyend="191"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="192" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="192" bodyend="201"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1ga7ecd2a00f2306c0b94734a72a7899898" prot="public" static="no">
         <name>tree_newnode_flags</name>
@@ -203,7 +203,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="195" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="195" bodyend="204"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="205" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="205" bodyend="214"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1ga9275874ac61d3750aa677a36da714373" prot="public" static="no">
         <name>panel_type</name>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="207" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="207" bodyend="215"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="217" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="217" bodyend="225"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1gafd296180392ef5681415b9fb0590be84" prot="public" static="no">
         <name>widget_type</name>
@@ -300,10 +300,166 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="218" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="218" bodyend="223"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="228" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="228" bodyend="233"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga8d0ed2b4049e42079b366e341b33347f" prot="public" static="no">
+        <type>struct <ref refid="classdtsgui" kindref="compound">dtsgui</ref></type>
+        <definition>typedef struct dtsgui dtsgui</definition>
+        <argsstring></argsstring>
+        <name>dtsgui</name>
+        <briefdescription>
+<para>Forward decleration of the application data class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="56" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga00d1631dc45e8a99d361b5091856abe3" prot="public" static="no">
+        <type>struct <ref refid="classdtsgui__wizard" kindref="compound">dtsgui_wizard</ref></type>
+        <definition>typedef struct dtsgui_wizard dtsgui_wizard</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_wizard</name>
+        <briefdescription>
+<para>Forward decleration of wizard class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="58" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1gabbf6decd0bf8428c296f4adcafed46fb" prot="public" static="no">
+        <type>struct <ref refid="classform__item" kindref="compound">form_item</ref></type>
+        <definition>typedef struct form_item form_item</definition>
+        <argsstring></argsstring>
+        <name>form_item</name>
+        <briefdescription>
+<para>Forward definition of <ref refid="classform__item" kindref="compound">form_item</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="60" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1gaa881f6b55dcf9b95108f08bf62d4802f" prot="public" static="no">
+        <type>struct <ref refid="classdynamic__panel" kindref="compound">dynamic_panel</ref></type>
+        <definition>typedef struct dynamic_panel dynamic_panel</definition>
+        <argsstring></argsstring>
+        <name>dynamic_panel</name>
+        <briefdescription>
+<para>Forward definition of <ref refid="classdynamic__panel" kindref="compound">dynamic_panel</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="62" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_menu</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_menu</name>
+        <briefdescription>
+<para>Define menu as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="65" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1gaf59302244664352117c2669055da5850" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_menuitem</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_menuitem</name>
+        <briefdescription>
+<para>Define menuitem as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="67" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_pane</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_pane</name>
+        <briefdescription>
+<para>Define panel as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="69" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga698d08e25e0df56af6ba94c8056bdd97" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_notebook</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_notebook</name>
+        <briefdescription>
+<para>Define notebook as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="71" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_treeview</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_treeview</name>
+        <briefdescription>
+<para>Define treeview as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="73" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_tabview</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_tabview</name>
+        <briefdescription>
+<para>Define tabview as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="75" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_treenode</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_treenode</name>
+        <briefdescription>
+<para>Define treenode as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="77" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga531b61ccda025272407e2d2b26f0072c" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* dtsgui_progress</definition>
+        <argsstring></argsstring>
+        <name>dtsgui_progress</name>
+        <briefdescription>
+<para>Define progress as void* it is not exported to API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="79" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1gad3b80490c86b8275c47382588f2ecfd4" prot="public" static="no">
         <type>int(*</type>
         <definition>typedef int(* dtsgui_configcb)(struct dtsgui *, void *)</definition>
@@ -332,7 +488,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="63" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="63" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="89" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1ga06d1a959e1581116961bca636a919043" prot="public" static="no">
         <type>int(*</type>
@@ -383,7 +539,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="78" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="78" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="104" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1ga53eefce4ace6a7d72e49e9ae4c520226" prot="public" static="no">
         <type>void *(*</type>
@@ -441,7 +597,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="90" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="90" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="116" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1ga080f931027861c0021f72ac2562b45d7" prot="public" static="no">
         <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref>(*</type>
@@ -478,7 +634,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="100" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="100" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="126" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="126" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1gae088feda00f338f6ddd35daaacc44817" prot="public" static="no">
         <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref>(*</type>
@@ -536,7 +692,50 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="113" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="113" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="139" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void *)</definition>
+        <argsstring>)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void *)</argsstring>
+        <name>dtsgui_treeviewpanel_cb</name>
+        <briefdescription>
+<para>Callback called after dtsgui_tree_cb to allow configuration of the panel. This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_tree_window_event_1a98ac8a3612545e1eaeb99fa9b5662048" kindref="member">DTSTreeWindowEvent::TreeCallback()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_d_v_m_list_store_1a235c78752ca007f5189806e95abcefe2" kindref="member">DTSDVMListStore::ConfigPanel()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Panel to be configured. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Treeview that contains the node/panel. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node that this panel represents. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to user data stored on node. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="150" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="150" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1ga52992645e33e4d92c8e68c3490239c75" prot="public" static="no">
         <type>void(*</type>
@@ -579,20 +778,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="123" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="123" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga8bf800adcd2392cf7722c3cf2f603f96" prot="public" static="no">
-        <type>void(*</type>
-        <definition>typedef void(* dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void *)</definition>
-        <argsstring>)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void *)</argsstring>
-        <name>dtsgui_treeviewpanel_cb</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="124" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="124" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="160" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="160" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1gab65db729662a3b0d109158d2fb51f93c" prot="public" static="no">
         <type>void(*</type>
@@ -605,7 +791,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="126" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="126" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="162" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="162" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group___c_o_r_e_1gab5e1fa276d48b20d35f4ef20110c39ed" prot="public" static="no">
         <type>void(*</type>
@@ -618,163 +804,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="127" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="127" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga8d0ed2b4049e42079b366e341b33347f" prot="public" static="no">
-        <type>struct <ref refid="classdtsgui" kindref="compound">dtsgui</ref></type>
-        <definition>typedef struct dtsgui dtsgui</definition>
-        <argsstring></argsstring>
-        <name>dtsgui</name>
-        <briefdescription>
-<para>Forward decleration of the application data class. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="130" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="130" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga00d1631dc45e8a99d361b5091856abe3" prot="public" static="no">
-        <type>struct <ref refid="classdtsgui__wizard" kindref="compound">dtsgui_wizard</ref></type>
-        <definition>typedef struct dtsgui_wizard dtsgui_wizard</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_wizard</name>
-        <briefdescription>
-<para>Forward decleration of wizard class. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="132" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="132" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1gabbf6decd0bf8428c296f4adcafed46fb" prot="public" static="no">
-        <type>struct <ref refid="classform__item" kindref="compound">form_item</ref></type>
-        <definition>typedef struct form_item form_item</definition>
-        <argsstring></argsstring>
-        <name>form_item</name>
-        <briefdescription>
-<para>Forward definition of <ref refid="classform__item" kindref="compound">form_item</ref>. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="134" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="134" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1gaa881f6b55dcf9b95108f08bf62d4802f" prot="public" static="no">
-        <type>struct <ref refid="classdynamic__panel" kindref="compound">dynamic_panel</ref></type>
-        <definition>typedef struct dynamic_panel dynamic_panel</definition>
-        <argsstring></argsstring>
-        <name>dynamic_panel</name>
-        <briefdescription>
-<para>Forward definition of <ref refid="classdynamic__panel" kindref="compound">dynamic_panel</ref>. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="136" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="136" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1gafb1e28bd82fd8ea9d43a188c06095682" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_menu</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_menu</name>
-        <briefdescription>
-<para>Define menu as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="139" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="139" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1gaf59302244664352117c2669055da5850" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_menuitem</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_menuitem</name>
-        <briefdescription>
-<para>Define menuitem as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="141" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="141" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_pane</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_pane</name>
-        <briefdescription>
-<para>Define panel as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="143" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="143" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga698d08e25e0df56af6ba94c8056bdd97" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_notebook</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_notebook</name>
-        <briefdescription>
-<para>Define notebook as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="145" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="145" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga91b92f00d06cc6174b8b271fc9f2c241" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_treeview</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_treeview</name>
-        <briefdescription>
-<para>Define treeview as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="147" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="147" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga29c463cda54f69beb273c77e1aa7ccef" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_tabview</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_tabview</name>
-        <briefdescription>
-<para>Define tabview as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="149" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="149" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga6529df5f03710b4fec84553e1d7febc5" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_treenode</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_treenode</name>
-        <briefdescription>
-<para>Define treenode as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="151" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="151" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="group___c_o_r_e_1ga531b61ccda025272407e2d2b26f0072c" prot="public" static="no">
-        <type>void *</type>
-        <definition>typedef void* dtsgui_progress</definition>
-        <argsstring></argsstring>
-        <name>dtsgui_progress</name>
-        <briefdescription>
-<para>Define progress as void* it is not exported to API. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="153" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="153" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="163" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="163" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -787,7 +817,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="226" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="226" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="236" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="236" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1gaa7fc68a1ddb9112dbbbfe2ae26e2e379" prot="public" static="no">
         <name>wx_PANEL_BUTTON_DIR</name>
@@ -798,7 +828,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="228" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="228" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="239" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="239" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1ga4ef37ee1286eb68a9f5663813f134be2" prot="public" static="no">
         <name>wx_PANEL_BUTTON_ACTION</name>
@@ -809,7 +839,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="230" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="230" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="242" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="242" bodyend="-1"/>
         <referencedby refid="class_d_t_s_tree_window_1a45d33a41609c46d51d17bb80a64f2ca4" compoundref="_d_t_s_tree_window_8cpp" startline="722" endline="738">DTSTreeWindow::CreatePane</referencedby>
         <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="202" endline="239">tab_newpane::handle_newtabpane</referencedby>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
@@ -825,7 +855,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="232" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="232" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="245" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="245" bodyend="-1"/>
         <referencedby refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" compoundref="testing_8c" startline="94" endline="105">test_menu</referencedby>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1ga655f2051956468f6592bef486573e424" prot="public" static="no">
@@ -837,7 +867,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="234" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="234" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="248" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="248" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

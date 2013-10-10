@@ -124,9 +124,8 @@
   * Functions in this namespace are wrappers and should not be used in C++ code.*/
 namespace DTS_C_API {
 
-/*
- * Static variable incremented on each menu item created this should be put into its own class XXX
- */
+/** @ingroup C-API
+  * @brief Static variable containing menuid incremented each time a menu is created.*/
 static int menuid = wxID_AUTO_LOWEST;
 
 /** @ingroup C-API

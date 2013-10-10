@@ -109,8 +109,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="159" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="159" bodyend="168"/>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga1e60e1a55957b1055c99df5a45f18bce" compoundref="wrapper_8cpp" startline="1293" endline="1296">dtsgui_xmltextbox_multi</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga1e60e1a55957b1055c99df5a45f18bce" compoundref="wrapper_8cpp" startline="1292" endline="1295">dtsgui_xmltextbox_multi</references>
         <referencedby refid="netconfig_8c_1ae22737be42f8d0e7f4095a937e911578" compoundref="netconfig_8c" startline="32" endline="34">customer_info</referencedby>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
@@ -130,7 +130,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="170" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="170" bodyend="177"/>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a488833f1ea62639df39c4cd7662864db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -149,7 +149,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="179" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="179" bodyend="183"/>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a2d137c5c2ae4b1407da5442477dd2b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -168,7 +168,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="185" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="185" bodyend="192"/>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a81b5895e97fa4d47dbd829cccffa1b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -187,7 +187,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="194" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="194" bodyend="202"/>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a85fecec1da6b92b910c3810a9f0f431c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -206,8 +206,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="204" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="204" bodyend="210"/>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1327" endline="1330">dtsgui_xmlcheckbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1326" endline="1329">dtsgui_xmlcheckbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a4fc4a7cde0492cbde04a4e0804cc81d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -226,10 +226,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="212" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="212" bodyend="226"/>
-        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1161" endline="1163">dtsgui_listbox_add</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1327" endline="1330">dtsgui_xmlcheckbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga9472a3941bf352a063fa5e55a6016fdc" compoundref="wrapper_8cpp" startline="1361" endline="1364">dtsgui_xmlcombobox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1160" endline="1162">dtsgui_listbox_add</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1326" endline="1329">dtsgui_xmlcheckbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga9472a3941bf352a063fa5e55a6016fdc" compoundref="wrapper_8cpp" startline="1360" endline="1363">dtsgui_xmlcombobox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a2385f9d99b5222b879485702af299fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -248,10 +248,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="228" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="228" bodyend="275"/>
-        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1161" endline="1163">dtsgui_listbox_add</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1327" endline="1330">dtsgui_xmlcheckbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1344" endline="1347">dtsgui_xmllistbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1160" endline="1162">dtsgui_listbox_add</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1326" endline="1329">dtsgui_xmlcheckbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1343" endline="1346">dtsgui_xmllistbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <references refid="structlistitem_1af53587242ef469841b5a0c0836b3cb21" compoundref="private_8h" startline="70">listitem::name</references>
         <references refid="structlistitem_1a678100a2bc64b5f325a842ac0555d191" compoundref="private_8h" startline="71">listitem::value</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
@@ -272,10 +272,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="277" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="277" bodyend="310"/>
-        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1161" endline="1163">dtsgui_listbox_add</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1327" endline="1330">dtsgui_xmlcheckbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1344" endline="1347">dtsgui_xmllistbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1160" endline="1162">dtsgui_listbox_add</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1326" endline="1329">dtsgui_xmlcheckbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1343" endline="1346">dtsgui_xmllistbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a34653c75ebbdc91cadc68180a51b121b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -294,8 +294,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="312" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="312" bodyend="319"/>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1327" endline="1330">dtsgui_xmlcheckbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1326" endline="1329">dtsgui_xmlcheckbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1aa274a72a578011082041109b5e2d8b22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -314,10 +314,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="321" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="321" bodyend="341"/>
-        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1161" endline="1163">dtsgui_listbox_add</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1327" endline="1330">dtsgui_xmlcheckbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1344" endline="1347">dtsgui_xmllistbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1277" endline="1280">dtsgui_xmltextbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1160" endline="1162">dtsgui_listbox_add</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1326" endline="1329">dtsgui_xmlcheckbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1343" endline="1346">dtsgui_xmllistbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" compoundref="wrapper_8cpp" startline="1276" endline="1279">dtsgui_xmltextbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1a4663a22f17fb8c01f6058f117ed6c201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -336,9 +336,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="343" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="343" bodyend="356"/>
-        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1161" endline="1163">dtsgui_listbox_add</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1327" endline="1330">dtsgui_xmlcheckbox</references>
-        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1344" endline="1347">dtsgui_xmllistbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" compoundref="wrapper_8cpp" startline="1160" endline="1162">dtsgui_listbox_add</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga2a2a0a7402e2f1bbbd5eeff3446a08fe" compoundref="wrapper_8cpp" startline="1326" endline="1329">dtsgui_xmlcheckbox</references>
+        <references refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" compoundref="wrapper_8cpp" startline="1343" endline="1346">dtsgui_xmllistbox</references>
         <referencedby refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</referencedby>
       </memberdef>
       <memberdef kind="function" id="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -373,12 +373,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="358" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="358" bodyend="429"/>
-        <references refid="group___c-_a_p_i-_dialog_1ga5761cfa6ab849723e50760a9642efc9f" compoundref="wrapper_8cpp" startline="1105" endline="1108">dtsgui_confirm</references>
-        <references refid="group___c-_a_p_i-_dialog_1gad2b11bd5e9e51dcba9f53f4969f1f25c" compoundref="wrapper_8cpp" startline="1119" endline="1122">dtsgui_filesave</references>
-        <references refid="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" compoundref="wrapper_8cpp" startline="928" endline="930">dtsgui_newwizard</references>
-        <references refid="group___c-_a_p_i-_wizard_1ga25174d47f2e9680d41aebdf08ff9b979" compoundref="wrapper_8cpp" startline="957" endline="959">dtsgui_runwizard</references>
-        <references refid="group___c-_a_p_i-_wizard_1ga3e76b1ea2eebb91e1d0b5a55649d65e6" compoundref="wrapper_8cpp" startline="942" endline="944">dtsgui_wizard_addpage</references>
-        <references refid="group___c-_a_p_i-_panel_1ga28e2dbe2171ea35e32fa615aca55b934" compoundref="wrapper_8cpp" startline="812" endline="815">dtsgui_xmlpanel_update</references>
+        <references refid="group___c-_a_p_i-_dialog_1ga5761cfa6ab849723e50760a9642efc9f" compoundref="wrapper_8cpp" startline="1104" endline="1107">dtsgui_confirm</references>
+        <references refid="group___c-_a_p_i-_dialog_1gad2b11bd5e9e51dcba9f53f4969f1f25c" compoundref="wrapper_8cpp" startline="1118" endline="1121">dtsgui_filesave</references>
+        <references refid="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" compoundref="wrapper_8cpp" startline="927" endline="929">dtsgui_newwizard</references>
+        <references refid="group___c-_a_p_i-_wizard_1ga25174d47f2e9680d41aebdf08ff9b979" compoundref="wrapper_8cpp" startline="956" endline="958">dtsgui_runwizard</references>
+        <references refid="group___c-_a_p_i-_wizard_1ga3e76b1ea2eebb91e1d0b5a55649d65e6" compoundref="wrapper_8cpp" startline="941" endline="943">dtsgui_wizard_addpage</references>
+        <references refid="group___c-_a_p_i-_panel_1ga28e2dbe2171ea35e32fa615aca55b934" compoundref="wrapper_8cpp" startline="811" endline="814">dtsgui_xmlpanel_update</references>
         <references refid="wizard_8c_1ac882aeda8345539fc608001e35a5cc59" compoundref="wizard_8c" startline="106" endline="157">rem_temp_xml</references>
         <references refid="wizard_8c_1a4f882ff8bd54df9885846da44baba542" compoundref="wizard_8c" startline="30" endline="104">set_temp_xml</references>
         <references refid="wizard_8c_1a34653c75ebbdc91cadc68180a51b121b" compoundref="wizard_8c" startline="312" endline="319">wizz_acd</references>
@@ -422,8 +422,8 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="431" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="431" bodyend="454"/>
         <references refid="structapp__data_1aaa1b1bd30fab72d8b9a34f890fd060c0" compoundref="private_8h" startline="61">app_data::datadir</references>
-        <references refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1094" endline="1097">dtsgui_alert</references>
-        <references refid="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" compoundref="wrapper_8cpp" startline="184" endline="186">dtsgui_userdata</references>
+        <references refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1093" endline="1096">dtsgui_alert</references>
+        <references refid="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" compoundref="wrapper_8cpp" startline="183" endline="185">dtsgui_userdata</references>
         <references refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</references>
         <referencedby refid="wxforms_8c_1a011cd0b131174029fed8babdf1c7a101" compoundref="wxforms_8c" startline="65" endline="88">file_menu</referencedby>
       </memberdef>
@@ -451,8 +451,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" line="456" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wizard.c" bodystart="456" bodyend="474"/>
-        <references refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1094" endline="1097">dtsgui_alert</references>
-        <references refid="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" compoundref="wrapper_8cpp" startline="1135" endline="1138">dtsgui_fileopen</references>
+        <references refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1093" endline="1096">dtsgui_alert</references>
+        <references refid="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" compoundref="wrapper_8cpp" startline="1134" endline="1137">dtsgui_fileopen</references>
         <references refid="wizard_8c_1ae99af9389a848fe0d810a538d0b64d53" compoundref="wizard_8c" startline="358" endline="429">system_wizard</references>
         <referencedby refid="wxforms_8c_1a011cd0b131174029fed8babdf1c7a101" compoundref="wxforms_8c" startline="65" endline="88">file_menu</referencedby>
       </memberdef>

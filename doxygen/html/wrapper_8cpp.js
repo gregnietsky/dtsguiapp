@@ -80,5 +80,5 @@ var wrapper_8cpp =
     [ "dtsgui_xmlpasswdbox", "wrapper_8cpp.html#gab8e603da01cb2c17d0ecfbbe216ac750", null ],
     [ "dtsgui_xmltextbox", "wrapper_8cpp.html#ga8eca510dc07eee0cd113f852fe67caa6", null ],
     [ "dtsgui_xmltextbox_multi", "wrapper_8cpp.html#ga1e60e1a55957b1055c99df5a45f18bce", null ],
-    [ "menuid", "wrapper_8cpp.html#a295fb20974bd3ceb8a6d8ed6e13a6c70", null ]
+    [ "menuid", "wrapper_8cpp.html#ga295fb20974bd3ceb8a6d8ed6e13a6c70", null ]
 ];

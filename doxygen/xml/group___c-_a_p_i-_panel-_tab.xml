@@ -95,7 +95,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="546" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="546" bodyend="549"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="545" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="545" bodyend="548"/>
         <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="977" endline="998">DTSTabWindow::CreateTab</references>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
         <referencedby refid="private_8h_1aa1aa69985689f9714422c273fe968fdf" compoundref="pbxconfig_8c" startline="325" endline="350">pbx_settings</referencedby>
@@ -213,7 +213,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="575" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="575" bodyend="578"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="574" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="574" bodyend="577"/>
         <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="977" endline="998">DTSTabWindow::CreateTab</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gad3333a23e28993072b5ef4feed86778c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -352,7 +352,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="604" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="603" bodyend="607"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="603" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="602" bodyend="606"/>
         <references refid="classtab__newpane_1a8084796f246b29a21c9077aefa40fc18" compoundref="_d_t_s_tree_window_8cpp" startline="184" endline="200">tab_newpane::handle_newtabpane_cb</references>
         <references refid="classtab__newpane_1a66f664e9d0212bd0415953c72afbbacd" compoundref="_d_t_s_tree_window_8cpp" startline="131" endline="155">tab_newpane::tab_newpane</references>
         <referencedby refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" compoundref="interface_8c" startline="137" endline="142">network_iface_new_pane_cb</referencedby>

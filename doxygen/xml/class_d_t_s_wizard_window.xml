@@ -27,7 +27,7 @@
         <references refid="class_d_t_s_object_1af8c7a75701ac05261749552eef4bc6ed" compoundref="_d_t_s_panel_8h" startline="75">DTSObject::panel</references>
         <references refid="class_d_t_s_panel_1a9e90d0d7b1466eb3e8005343ce787974" compoundref="_d_t_s_panel_8cpp" startline="378" endline="392">DTSPanel::SetupWin</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" compoundref="dtsgui_8h" startline="213">wx_DTSPANEL_WIZARD</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" compoundref="dtsgui_8h" startline="223">wx_DTSPANEL_WIZARD</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_wizard_window_1acf99ea3a36ad6da056456e5fc31c8bee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
