@@ -158,7 +158,7 @@
     <member refid="class_d_t_s_frame_1a6da5874c6ac49f979251013785b62b0d" kind="function"><name>OnCreateToolBar</name></member>
     <member refid="class_d_t_s_frame_1a1fe29f6d56f11d1702a372416a659e3e" kind="function"><name>SetupToolbar</name></member>
     <member refid="class_d_t_s_frame_1a3b1105fb9c8e3b6909994e7f993eee20" kind="function"><name>CreatePane</name></member>
-    <member refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" kind="function"><name>TextPanel</name></member>
+    <member refid="class_d_t_s_frame_1afc0dae8ce7b26ef38297d520a3144d2a" kind="function"><name>TextPanel</name></member>
     <member refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" kind="function"><name>NewMenuItem</name></member>
     <member refid="class_d_t_s_frame_1a658114abb50692e826e18593a0e3ba73" kind="function"><name>NewMenuItem</name></member>
     <member refid="class_d_t_s_frame_1a63488ecbdbe2770ea7d12ce2b06f1b72" kind="function"><name>SendDTSEvent</name></member>
@@ -835,6 +835,7 @@
     <member refid="_d_t_s_frame_8h_1a76cdd62022b409cbb306785d979d5644" kind="typedef"><name>wxProgressDialog</name></member>
     <member refid="_d_t_s_frame_8h_1aa91ff9a59523cc19b5e1bbbd8a53d6ab" kind="typedef"><name>DTSPanel</name></member>
     <member refid="_d_t_s_frame_8h_1a0cffe42d59bc7197d9c84182aef0f22d" kind="typedef"><name>DTSObject</name></member>
+    <member refid="_d_t_s_frame_8h_1aaf5c0edaf8bc2cf97613de1b618bff60" kind="typedef"><name>DTSWindow</name></member>
   </compound>
   <compound refid="dtsgui_8h" kind="file"><name>dtsgui.h</name>
     <member refid="group___c_o_r_e_1gabcf9e451a313490d78549227e6dc8824" kind="define"><name>wx_PANEL_BUTTON_NAV</name></member>

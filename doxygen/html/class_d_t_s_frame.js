@@ -28,7 +28,7 @@ var class_d_t_s_frame =
     [ "SetWindow", "class_d_t_s_frame.html#a7e9f18961fb55d1b9be667b81681803c", null ],
     [ "StartProgress", "class_d_t_s_frame.html#a55bbe89f24dc6ad3fbe78589bcbd9686", null ],
     [ "SwitchWindow", "class_d_t_s_frame.html#a85e9e9e31176870e5d1d7fb96972d236", null ],
-    [ "TextPanel", "class_d_t_s_frame.html#a036e076a53c67d43204aa636ab26328d", null ],
+    [ "TextPanel", "class_d_t_s_frame.html#afc0dae8ce7b26ef38297d520a3144d2a", null ],
     [ "UpdateProgress", "class_d_t_s_frame.html#a3b057f8c85958444049063e75b602108", null ],
     [ "a_window", "class_d_t_s_frame.html#a4eaa2e530669ee48b4b6d38a4cc3ae6e", null ],
     [ "abortconfirm", "class_d_t_s_frame.html#a5206963dd3d2de8dc57ab020d8926c37", null ],

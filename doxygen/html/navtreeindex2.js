@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classtree__newnode.html#a6d2aeccaa71eac80144dfb2353b51adc":[3,0,35,11],
 "classtree__newnode.html#a71eae2a3f8fbcb7e2c4245ae0303d171":[3,0,35,5],
 "classtree__newnode.html#a79fd1a82bf40d2d922c1d297f1de3f29":[3,0,35,0],
 "classtree__newnode.html#aa910ec0ca8be88d01c6595984213b816":[3,0,35,10],
@@ -239,8 +240,8 @@ var NAVTREEINDEX2 =
 "functions_func_0x78.html":[3,3,1,18],
 "functions_func_0x7e.html":[3,3,1,19],
 "functions_vars.html":[3,3,2],
-"globals.html":[4,1,0],
 "globals.html":[4,1,0,0],
+"globals.html":[4,1,0],
 "globals_0x61.html":[4,1,0,1],
 "globals_0x63.html":[4,1,0,2],
 "globals_0x64.html":[4,1,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "globals_0x66.html":[4,1,0,5],
 "globals_0x67.html":[4,1,0,6],
 "globals_0x68.html":[4,1,0,7],
-"globals_0x69.html":[4,1,0,8],
-"globals_0x6c.html":[4,1,0,9]
+"globals_0x69.html":[4,1,0,8]
 };

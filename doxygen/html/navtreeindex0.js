@@ -9,10 +9,11 @@ var NAVTREEINDEX0 =
 "_d_t_s_frame_8cpp_source.html":[4,0,3,3],
 "_d_t_s_frame_8h.html":[4,0,3,0,1],
 "_d_t_s_frame_8h.html#a0cffe42d59bc7197d9c84182aef0f22d":[4,0,3,0,1,1],
-"_d_t_s_frame_8h.html#a76cdd62022b409cbb306785d979d5644":[4,0,3,0,1,5],
-"_d_t_s_frame_8h.html#a87c58918f18a953b17e8f868b1fa6a95":[4,0,3,0,1,4],
+"_d_t_s_frame_8h.html#a76cdd62022b409cbb306785d979d5644":[4,0,3,0,1,6],
+"_d_t_s_frame_8h.html#a87c58918f18a953b17e8f868b1fa6a95":[4,0,3,0,1,5],
 "_d_t_s_frame_8h.html#aa91ff9a59523cc19b5e1bbbd8a53d6ab":[4,0,3,0,1,2],
-"_d_t_s_frame_8h.html#ad396616e0ef9ed30f9053d7b48712ecd":[4,0,3,0,1,3],
+"_d_t_s_frame_8h.html#aaf5c0edaf8bc2cf97613de1b618bff60":[4,0,3,0,1,3],
+"_d_t_s_frame_8h.html#ad396616e0ef9ed30f9053d7b48712ecd":[4,0,3,0,1,4],
 "_d_t_s_frame_8h_source.html":[4,0,3,0,1],
 "_d_t_s_list_view_8cpp.html":[4,0,3,4],
 "_d_t_s_list_view_8cpp_source.html":[4,0,3,4],
@@ -184,7 +185,6 @@ var NAVTREEINDEX0 =
 "class_d_t_s_dialog.html#af1e6be7e08913149d128839b7e535cd0":[3,0,5,2],
 "class_d_t_s_dialog.html#af68cd07469e4fbe9dcb3640219adfee0":[3,0,5,1],
 "class_d_t_s_frame.html":[3,0,9],
-"class_d_t_s_frame.html#a036e076a53c67d43204aa636ab26328d":[3,0,9,28],
 "class_d_t_s_frame.html#a0a5798261ab9b56b7938f968b4032a24":[3,0,9,9],
 "class_d_t_s_frame.html#a117230517edf6e062aad2a22b00b2d56":[3,0,9,16],
 "class_d_t_s_frame.html#a183097dc59ac2195f758f7ea5213ad76":[3,0,9,0],
@@ -226,6 +226,7 @@ var NAVTREEINDEX0 =
 "class_d_t_s_frame.html#af57b68ada1f1958582fea200a2a315fc":[3,0,9,23],
 "class_d_t_s_frame.html#af5ccc418850aa4603c4100b6a93cc051":[3,0,9,38],
 "class_d_t_s_frame.html#af996b558ba17ecc23cf6ed1a3d1873fb":[3,0,9,8],
+"class_d_t_s_frame.html#afc0dae8ce7b26ef38297d520a3144d2a":[3,0,9,28],
 "class_d_t_s_object.html":[3,0,13],
 "class_d_t_s_object.html#a0e9b6e22629a9aa1fd5227cefaa25e6f":[3,0,13,21],
 "class_d_t_s_object.html#a1292b4804b31450f0ee960fa59fcfc7a":[3,0,13,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_d_t_s_object.html#ae177d1cfd85be759810b252b98f2050d":[3,0,13,8],
 "class_d_t_s_object.html#ae5239b912c725a7a5720954767c3537a":[3,0,13,3],
 "class_d_t_s_object.html#ae88ef1ea6f28346b6cd6d2d898d7acde":[3,0,13,6],
-"class_d_t_s_object.html#af8c7a75701ac05261749552eef4bc6ed":[3,0,13,16],
-"class_d_t_s_panel.html":[3,0,14]
+"class_d_t_s_object.html#af8c7a75701ac05261749552eef4bc6ed":[3,0,13,16]
 };

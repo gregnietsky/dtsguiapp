@@ -717,7 +717,7 @@
         <referencedby refid="class_d_t_s_panel_1ad91d3ca25ab8349403efc7cc78cb1869" compoundref="_d_t_s_panel_8cpp" startline="671" endline="692">ComboBox</referencedby>
         <referencedby refid="class_d_t_s_panel_1a08cb04c83c8e5668592bd2f3bacf8267" compoundref="_d_t_s_panel_8cpp" startline="635" endline="652">ListBox</referencedby>
         <referencedby refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="554" endline="570">TextBox</referencedby>
-        <referencedby refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</referencedby>
+        <referencedby refid="class_d_t_s_frame_1afc0dae8ce7b26ef38297d520a3144d2a" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</referencedby>
         <referencedby refid="class_d_t_s_panel_1ae0135da688bb9046fd2cafbf5eaf7ffc" compoundref="_d_t_s_panel_8cpp" startline="448" endline="468">Title</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_panel_1ac18de08077529d488ea329a72ee14d98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">

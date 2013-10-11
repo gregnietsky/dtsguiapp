@@ -210,7 +210,7 @@
         <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373ad0213b4d1d51e9f04e084a09e8da1c62" prot="public">
           <name>wx_DTSPANEL_WINDOW</name>
           <briefdescription>
-<para><ref refid="class_d_t_s_window" kindref="compound">DTSWindow</ref> (wx_DTSPANEL_WINDOW) is a basic panel without tab traversal controls and is rarely used (<ref refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" kindref="member">DTSFrame::TextPanel</ref>). </para>          </briefdescription>
+<para><ref refid="class_d_t_s_window" kindref="compound">DTSWindow</ref> (wx_DTSPANEL_WINDOW) is a basic panel without tab traversal controls and is rarely used (<ref refid="class_d_t_s_frame_1afc0dae8ce7b26ef38297d520a3144d2a" kindref="member">DTSFrame::TextPanel</ref>). </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>

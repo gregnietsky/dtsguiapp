@@ -71,7 +71,7 @@ Inherits wxFrame\&.
 .RI "\fBDTSPanel\fP * \fBCreatePane\fP (const wxString &name, const wxString &title, int butmask, enum \fBpanel_type\fP type, void *udata)"
 .br
 .ti -1c
-.RI "\fBDTSPanel\fP * \fBTextPanel\fP (const wxString &title, const char *buf)"
+.RI "\fBDTSWindow\fP * \fBTextPanel\fP (const wxString &title, const char *buf)"
 .br
 .ti -1c
 .RI "wxMenuItem * \fBNewMenuItem\fP (wxMenu *m, \fBDTSObject\fP *panel, int menuid, const wxString &hint)"
@@ -154,7 +154,7 @@ Inherits wxFrame\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Definition at line 30 of file DTSFrame\&.h\&.
+Definition at line 31 of file DTSFrame\&.h\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "DTSFrame::DTSFrame (const wxString &title, const wxPoint &pos, const wxSize &size, class \fBdtsgui\fP *dtsgui)"
@@ -363,7 +363,7 @@ Definition at line 249 of file DTSFrame\&.cpp\&.
 References a_window, blank, evdata::data, and SetWindow()\&.
 .PP
 Referenced by NewMenuItem()\&.
-.SS "\fBDTSPanel\fP * DTSFrame::TextPanel (const wxString &title, const char *buf)"
+.SS "\fBDTSWindow\fP * DTSFrame::TextPanel (const wxString &title, const char *buf)"
 
 .PP
 Definition at line 413 of file DTSFrame\&.cpp\&.
@@ -384,73 +384,73 @@ Referenced by dtsgui_curl::curl_progress_function(), and DTS_C_API::dtsgui_progr
 .SS "\fBwxWindow\fP* DTSFrame::a_window\fC [private]\fP"
 
 .PP
-Definition at line 68 of file DTSFrame\&.h\&.
+Definition at line 69 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), DynamicPanelEvent(), SetWindow(), and SwitchWindow()\&.
 .SS "bool DTSFrame::abortconfirm\fC [private]\fP"
 
 .PP
-Definition at line 73 of file DTSFrame\&.h\&.
+Definition at line 74 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), OnAbort(), and OnClose()\&.
 .SS "wxString DTSFrame::about\fC [private]\fP"
 
 .PP
-Definition at line 70 of file DTSFrame\&.h\&.
+Definition at line 71 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), OnAbout(), and SetAbout()\&.
 .SS "\fBwxWindow\fP* DTSFrame::blank\fC [private]\fP"
 
 .PP
-Definition at line 67 of file DTSFrame\&.h\&.
+Definition at line 68 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), SetWindow(), SwitchWindow(), and ~DTSFrame()\&.
 .SS "class \fBdtsgui\fP* DTSFrame::dtsgui\fC [private]\fP"
 
 .PP
-Definition at line 72 of file DTSFrame\&.h\&.
+Definition at line 73 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), and GetDTSData()\&.
 .SS "wxMenuBar* DTSFrame::menubar\fC [private]\fP"
 
 .PP
-Definition at line 71 of file DTSFrame\&.h\&.
+Definition at line 72 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), GetMenuBar(), and NewMenu()\&.
 .SS "\fBwxGauge\fP* DTSFrame::pbar\fC [private]\fP"
 
 .PP
-Definition at line 74 of file DTSFrame\&.h\&.
+Definition at line 75 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), SetupToolbar(), and StartProgress()\&.
 .SS "\fBwxProgressDialog\fP* DTSFrame::pdia\fC [private]\fP"
 
 .PP
-Definition at line 75 of file DTSFrame\&.h\&.
+Definition at line 76 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), EndProgress(), IncProgress(), StartProgress(), and UpdateProgress()\&.
 .SS "\fBwxBoxSizer\fP* DTSFrame::sizer\fC [private]\fP"
 
 .PP
-Definition at line 66 of file DTSFrame\&.h\&.
+Definition at line 67 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), and SetWindow()\&.
 .SS "void* DTSFrame::tb_data\fC [private]\fP"
 
 .PP
-Definition at line 77 of file DTSFrame\&.h\&.
+Definition at line 78 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), OnCreateToolBar(), SetupToolbar(), and ~DTSFrame()\&.
 .SS "\fBdtsgui_toolbar_create\fP DTSFrame::tbcb\fC [private]\fP"
 
 .PP
-Definition at line 76 of file DTSFrame\&.h\&.
+Definition at line 77 of file DTSFrame\&.h\&.
 .PP
 Referenced by DTSFrame(), OnCreateToolBar(), and SetupToolbar()\&.
 .SS "wxToolBar* DTSFrame::toolbar\fC [private]\fP"
 
 .PP
-Definition at line 69 of file DTSFrame\&.h\&.
+Definition at line 70 of file DTSFrame\&.h\&.
 .PP
 Referenced by SetupToolbar()\&.
 

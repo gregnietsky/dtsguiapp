@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"netconfig_8c.html#a1d7b1d28e9721a0c428be28f6c505875":[4,0,0,2,10],
 "netconfig_8c.html#a21ad9729b2e5667d1a71117c3811d428":[4,0,0,2,18],
 "netconfig_8c.html#a27bdf0ff7227d24f8b4811af169802a1":[4,0,0,2,24],
 "netconfig_8c.html#a298dbf73bc519972483995caa73e6d94":[4,0,0,2,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "wrapper_8cpp_source.html":[4,0,3,11],
 "wxforms_8c.html":[4,0,0,8],
 "wxforms_8c.html#ga011cd0b131174029fed8babdf1c7a101":[4,0,0,8,1],
-"wxforms_8c.html#ga063bbba7cc37af45b7989f2838fae1e1":[4,0,0,8,6],
-"wxforms_8c.html#ga3c04138a5bfe5d72780bb7e82a18e627":[4,0,0,8,5]
+"wxforms_8c.html#ga063bbba7cc37af45b7989f2838fae1e1":[4,0,0,8,6]
 };

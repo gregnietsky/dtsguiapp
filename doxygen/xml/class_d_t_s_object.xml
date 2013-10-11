@@ -351,7 +351,7 @@
         <referencedby refid="class_d_t_s_frame_1a55fe07b66530435bce652e8ab3091707" compoundref="_d_t_s_frame_8cpp" startline="427" endline="443">DTSFrame::NewMenuItem</referencedby>
         <referencedby refid="classdynamic__panel_1a5774ea0571dc1748c346129fcddf63de" compoundref="evdata_8cpp" startline="60" endline="75">dynamic_panel::RunCallback</referencedby>
         <referencedby refid="class_d_t_s_tree_window_1a491a55218197db09e099be00afe06850" compoundref="_d_t_s_tree_window_8cpp" startline="673" endline="695">DTSTreeWindow::SetWindow</referencedby>
-        <referencedby refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</referencedby>
+        <referencedby refid="class_d_t_s_frame_1afc0dae8ce7b26ef38297d520a3144d2a" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_object_1ae5239b912c725a7a5720954767c3537a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_d_t_s_frame" kindref="compound">DTSFrame</ref> *</type>

@@ -3,7 +3,6 @@
   <compounddef id="class_d_t_s_window" kind="class" prot="public">
     <compoundname>DTSWindow</compoundname>
     <basecompoundref refid="class_d_t_s_panel" prot="public" virt="non-virtual">DTSPanel</basecompoundref>
-    <basecompoundref prot="public" virt="virtual">wxWindow</basecompoundref>
     <includes refid="_d_t_s_panel_8h" local="no">DTSPanel.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_d_t_s_window_1a1b755f48a71c0a749b7b5d0e43eec20e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -82,8 +81,6 @@
         <link refid="class_d_t_s_window"/>
         <childnode refid="252" relation="public-inheritance">
         </childnode>
-        <childnode refid="254" relation="public-inheritance">
-        </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
@@ -143,8 +140,6 @@
         <label>DTSWindow</label>
         <link refid="class_d_t_s_window"/>
         <childnode refid="256" relation="public-inheritance">
-        </childnode>
-        <childnode refid="258" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

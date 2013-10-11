@@ -191,7 +191,7 @@ var searchData=
   ['dtstreewindow_2ecpp',['DTSTreeWindow.cpp',['../_d_t_s_tree_window_8cpp.html',1,'']]],
   ['dtstreewindow_2eh',['DTSTreeWindow.h',['../_d_t_s_tree_window_8h.html',1,'']]],
   ['dtstreewindowevent',['DTSTreeWindowEvent',['../class_d_t_s_tree_window_event.html',1,'DTSTreeWindowEvent'],['../class_d_t_s_tree_window_event.html#ab42e89c20d43eb8b536c3601158b6f7a',1,'DTSTreeWindowEvent::DTSTreeWindowEvent()']]],
-  ['dtswindow',['DTSWindow',['../class_d_t_s_window.html',1,'DTSWindow'],['../class_d_t_s_window.html#a1b755f48a71c0a749b7b5d0e43eec20e',1,'DTSWindow::DTSWindow()']]],
+  ['dtswindow',['DTSWindow',['../class_d_t_s_window.html',1,'DTSWindow'],['../class_d_t_s_window.html#a1b755f48a71c0a749b7b5d0e43eec20e',1,'DTSWindow::DTSWindow()'],['../_d_t_s_frame_8h.html#aaf5c0edaf8bc2cf97613de1b618bff60',1,'DTSWindow():&#160;DTSFrame.h']]],
   ['dtswizard_2ecpp',['DTSWizard.cpp',['../_d_t_s_wizard_8cpp.html',1,'']]],
   ['dtswizard_2eh',['DTSWizard.h',['../_d_t_s_wizard_8h.html',1,'']]],
   ['dtswizardwindow',['DTSWizardWindow',['../class_d_t_s_wizard_window.html',1,'DTSWizardWindow'],['../class_d_t_s_wizard_window.html#a5b360c03b6bfd75b420b9c8b56b6e7fd',1,'DTSWizardWindow::DTSWizardWindow()'],['../_d_t_s_wizard_8h.html#aa8db4e8a4187c26468519a4456933b3b',1,'DTSWizardWindow():&#160;DTSWizard.h']]],

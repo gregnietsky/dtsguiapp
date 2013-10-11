@@ -944,7 +944,7 @@
         <briefdescription>
 <para>Create a text display box with the text in the buffer been displayed. </para>        </briefdescription>
         <detaileddescription>
-<para>This creates a panel that only contains the supplied buffer Scrollbars are used as required.</para><para>This window is read only.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" kindref="member">DTSFrame::TextPanel()</ref></para></simplesect>
+<para>This creates a panel that only contains the supplied buffer Scrollbars are used as required.</para><para>This window is read only.</para><para><simplesect kind="see"><para><ref refid="class_d_t_s_frame_1afc0dae8ce7b26ef38297d520a3144d2a" kindref="member">DTSFrame::TextPanel()</ref></para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dtsgui</parametername>
@@ -973,7 +973,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="477" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="477" bodyend="480"/>
         <references refid="classdtsgui_1a533a6afc9b54ac5055ab1fdbd679188a" compoundref="_d_t_s_app_8cpp" startline="138" endline="140">dtsgui::GetFrame</references>
-        <references refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</references>
+        <references refid="class_d_t_s_frame_1afc0dae8ce7b26ef38297d520a3144d2a" compoundref="_d_t_s_frame_8cpp" startline="413" endline="425">DTSFrame::TextPanel</references>
         <referencedby refid="group___d_t_s-_a_p_p_1gae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="93" endline="107">help_menu</referencedby>
         <referencedby refid="private_8h_1abc9a4e54439d7a701992752ec7b3f6b9" compoundref="config_8c" startline="112" endline="148">view_config_conf</referencedby>
         <referencedby refid="private_8h_1abe0b9ce2252ec72774af23a0ec71424f" compoundref="config_8c" startline="94" endline="110">view_config_xml</referencedby>

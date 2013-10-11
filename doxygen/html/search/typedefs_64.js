@@ -25,6 +25,7 @@ var searchData=
   ['dtspanel',['DTSPanel',['../_d_t_s_frame_8h.html#aa91ff9a59523cc19b5e1bbbd8a53d6ab',1,'DTSFrame.h']]],
   ['dtstabwindow',['DTSTabWindow',['../_d_t_s_tree_window_8h.html#a97e93e5bc35e2e15b56d1a1dfc055c82',1,'DTSTreeWindow.h']]],
   ['dtstreewindow',['DTSTreeWindow',['../_d_t_s_tree_window_8h.html#a784aa6f77dc66f229fc77dbab4c1e0f0',1,'DTSTreeWindow.h']]],
+  ['dtswindow',['DTSWindow',['../_d_t_s_frame_8h.html#aaf5c0edaf8bc2cf97613de1b618bff60',1,'DTSFrame.h']]],
   ['dtswizardwindow',['DTSWizardWindow',['../_d_t_s_wizard_8h.html#aa8db4e8a4187c26468519a4456933b3b',1,'DTSWizard.h']]],
   ['dynamic_5fpanel',['dynamic_panel',['../group___c_o_r_e.html#gaa881f6b55dcf9b95108f08bf62d4802f',1,'dtsgui.h']]]
 ];

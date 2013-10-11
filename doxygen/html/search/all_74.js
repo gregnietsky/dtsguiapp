@@ -13,7 +13,7 @@ var searchData=
   ['testing_2ec',['testing.c',['../testing_8c.html',1,'']]],
   ['testpanel',['testpanel',['../testing_8c.html#a7436ba5c38bedec1d9ddda07ea99815d',1,'testing.c']]],
   ['textbox',['TextBox',['../class_d_t_s_panel.html#acd1b20a134272f1bc2d048d5977a3d3c',1,'DTSPanel']]],
-  ['textpanel',['TextPanel',['../class_d_t_s_frame.html#a036e076a53c67d43204aa636ab26328d',1,'DTSFrame']]],
+  ['textpanel',['TextPanel',['../class_d_t_s_frame.html#afc0dae8ce7b26ef38297d520a3144d2a',1,'DTSFrame']]],
   ['title',['title',['../classdtsgui.html#a949562ecff03159461686f2ddc36b936',1,'dtsgui::title()'],['../class_d_t_s_d_v_m_list_store.html#a9a6df6dbd6c84fd0cfbb987266203c20',1,'DTSDVMListStore::title()'],['../class_d_t_s_panel.html#accbfebfa3c737d3bf33386616f6771f4',1,'DTSPanel::title()'],['../class_d_t_s_panel.html#ae0135da688bb9046fd2cafbf5eaf7ffc',1,'DTSPanel::Title(const char *title)']]],
   ['tn',['tn',['../classtree__newnode.html#aa910ec0ca8be88d01c6595984213b816',1,'tree_newnode']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],

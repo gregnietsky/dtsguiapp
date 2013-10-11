@@ -484,7 +484,7 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            dp = <span class="keyword">new</span> <a class="code" href="class_d_t_s_static_panel.html">DTSStaticPanel</a>(<span class="keyword">this</span>, <span class="keyword">this</span>, name, butmask);</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#gga9275874ac61d3750aa677a36da714373ad0213b4d1d51e9f04e084a09e8da1c62" title="DTSWindow (wx_DTSPANEL_WINDOW) is a basic panel without tab traversal controls and is rarely used (DT...">wx_DTSPANEL_WINDOW</a>:</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            dp = <span class="keyword">new</span> <a class="code" href="class_d_t_s_window.html">DTSWindow</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            dp = <span class="keyword">new</span> <a class="code" href="_d_t_s_frame_8h.html#aaf5c0edaf8bc2cf97613de1b618bff60">DTSWindow</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group___c_o_r_e.html#gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" title="DTSDialog (wx_DTSPANEL_DIALOG) is a wx_DTSPANEL_PANEL displayed in a pop up dialog box...">wx_DTSPANEL_DIALOG</a>:</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            dp = <span class="keyword">new</span> <a class="code" href="class_d_t_s_dialog.html">DTSDialog</a>(<span class="keyword">this</span>, name, butmask);</div>
@@ -519,12 +519,12 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>*)filename;</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;}</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno"><a class="code" href="class_d_t_s_frame.html#a036e076a53c67d43204aa636ab26328d">  413</a></span>&#160;<a class="code" href="class_d_t_s_panel.html">DTSPanel</a> *<a class="code" href="class_d_t_s_frame.html#a036e076a53c67d43204aa636ab26328d">DTSFrame::TextPanel</a>(<span class="keyword">const</span> wxString &amp;<a class="code" href="classdtsgui.html#a949562ecff03159461686f2ddc36b936">title</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *buf) {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="class_d_t_s_static_panel.html">DTSStaticPanel</a> *p;</div>
+<div class="line"><a name="l00413"></a><span class="lineno"><a class="code" href="class_d_t_s_frame.html#afc0dae8ce7b26ef38297d520a3144d2a">  413</a></span>&#160;<a class="code" href="class_d_t_s_window.html">DTSWindow</a> *<a class="code" href="class_d_t_s_frame.html#afc0dae8ce7b26ef38297d520a3144d2a">DTSFrame::TextPanel</a>(<span class="keyword">const</span> wxString &amp;<a class="code" href="classdtsgui.html#a949562ecff03159461686f2ddc36b936">title</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *buf) {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="class_d_t_s_window.html">DTSWindow</a> *p;</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <a class="code" href="evdata_8h.html#a1105ebf7ed384267b36c9594fb95e3f4">wxWindow</a> *w;</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    wxTextCtrl *tc;</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    p = <span class="keyword">new</span> <a class="code" href="class_d_t_s_static_panel.html">DTSStaticPanel</a>(<span class="keyword">this</span>, <span class="keyword">this</span>, title);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    p = <span class="keyword">new</span> <a class="code" href="_d_t_s_frame_8h.html#aaf5c0edaf8bc2cf97613de1b618bff60">DTSWindow</a>(<span class="keyword">this</span>, <span class="keyword">this</span>, title);</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    w = p-&gt;<a class="code" href="class_d_t_s_object.html#ae88ef1ea6f28346b6cd6d2d898d7acde">GetPanel</a>();</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    tc = <span class="keyword">new</span> wxTextCtrl(w, -1, buf, wxDefaultPosition, wxDefaultSize,wxTE_MULTILINE | wxHSCROLL | wxTE_READONLY);</div>
@@ -615,7 +615,7 @@ $(document).ready(function(){initNavTree('_d_t_s_frame_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_d_t_s_frame_8cpp.html">DTSFrame.cpp</a></li>
-    <li class="footer">Generated on Fri Oct 11 2013 12:47:01 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 12:50:03 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>
