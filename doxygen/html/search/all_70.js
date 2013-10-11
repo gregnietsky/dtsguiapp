@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['panel_20element_20interface_2e',['Panel element interface.',['../group___c-_a_p_i-_panel-_elements.html',1,'']]],
+  ['panel_20item_20interface_2e',['Panel item interface.',['../group___c-_a_p_i-_panel-_items.html',1,'']]],
+  ['progress_20dialog_20interface_2e',['Progress dialog interface.',['../group___c-_a_p_i-_progress.html',1,'']]],
   ['p',['p',['../unionwidgets.html#a5dbc3a005c0d466449a1be8c20db8cfc',1,'widgets']]],
   ['p_5fcb',['p_cb',['../class_d_t_s_d_v_m_list_store.html#a71c0dfe1d46cbf2b92ab0d3d39b2a010',1,'DTSDVMListStore::p_cb()'],['../classtree__newnode.html#ad29bf242b359fc093c474559e6f1be21',1,'tree_newnode::p_cb()']]],
   ['package',['PACKAGE',['../build_2config_8h.html#aca8570fb706c81df371b7f9bc454ae03',1,'PACKAGE():&#160;config.h'],['../mingw_2config_8h.html#aca8570fb706c81df371b7f9bc454ae03',1,'PACKAGE():&#160;config.h']]],

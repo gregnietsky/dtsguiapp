@@ -210,49 +210,49 @@
         <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373ad0213b4d1d51e9f04e084a09e8da1c62" prot="public">
           <name>wx_DTSPANEL_WINDOW</name>
           <briefdescription>
-          </briefdescription>
+<para><ref refid="class_d_t_s_window" kindref="compound">DTSWindow</ref> (wx_DTSPANEL_WINDOW) is a basic panel without tab traversal controls and is rarely used (<ref refid="class_d_t_s_frame_1a036e076a53c67d43204aa636ab26328d" kindref="member">DTSFrame::TextPanel</ref>). </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a0e31c26466ea939007976914785fff2c" prot="public">
           <name>wx_DTSPANEL_PANEL</name>
           <briefdescription>
-          </briefdescription>
+<para><ref refid="class_d_t_s_static_panel" kindref="compound">DTSStaticPanel</ref> (wx_DTSPANEL_PANEL) includes tab traversal. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500" prot="public">
           <name>wx_DTSPANEL_SCROLLPANEL</name>
           <briefdescription>
-          </briefdescription>
+<para><ref refid="class_d_t_s_scroll_panel" kindref="compound">DTSScrollPanel</ref> (wx_DTSPANEL_SCROLLPANEL) adds scrollbar support. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" prot="public">
           <name>wx_DTSPANEL_DIALOG</name>
           <briefdescription>
-          </briefdescription>
+<para><ref refid="class_d_t_s_dialog" kindref="compound">DTSDialog</ref> (wx_DTSPANEL_DIALOG) is a wx_DTSPANEL_PANEL displayed in a pop up dialog box. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" prot="public">
           <name>wx_DTSPANEL_TREE</name>
           <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" prot="public">
-          <name>wx_DTSPANEL_WIZARD</name>
-          <briefdescription>
-          </briefdescription>
+<para><ref refid="class_d_t_s_tree_window" kindref="compound">DTSTreeWindow</ref> (wx_DTSPANEL_TREE) see <ref refid="group___c-_a_p_i-_panel-_tree" kindref="compound">Tree view panel interface.</ref>. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" prot="public">
           <name>wx_DTSPANEL_TAB</name>
           <briefdescription>
-          </briefdescription>
+<para><ref refid="class_d_t_s_tab_window" kindref="compound">DTSTabWindow</ref> (wx_DTSPANEL_TAB) see <ref refid="group___c-_a_p_i-_panel-_tab" kindref="compound">Tab view panel interface.</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" prot="public">
+          <name>wx_DTSPANEL_WIZARD</name>
+          <briefdescription>
+<para><ref refid="class_d_t_s_wizard_window" kindref="compound">DTSWizardWindow</ref> (wx_DTSPANEL_WIZARD) see <ref refid="group___c-_a_p_i-_wizard" kindref="compound">Wizard Interface.</ref>. </para>          </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="232" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="232" bodyend="240"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="232" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="232" bodyend="247"/>
       </memberdef>
       <memberdef kind="enum" id="group___c_o_r_e_1gafd296180392ef5681415b9fb0590be84" prot="public" static="no">
         <name>widget_type</name>
@@ -300,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="243" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="243" bodyend="248"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="250" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="250" bodyend="255"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -870,7 +870,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="251" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="251" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="258" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="258" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1gaa7fc68a1ddb9112dbbbfe2ae26e2e379" prot="public" static="no">
         <name>wx_PANEL_BUTTON_DIR</name>
@@ -881,7 +881,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="254" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="254" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="261" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="261" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1ga4ef37ee1286eb68a9f5663813f134be2" prot="public" static="no">
         <name>wx_PANEL_BUTTON_ACTION</name>
@@ -892,7 +892,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="257" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="257" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="264" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="264" bodyend="-1"/>
         <referencedby refid="class_d_t_s_tree_window_1a45d33a41609c46d51d17bb80a64f2ca4" compoundref="_d_t_s_tree_window_8cpp" startline="722" endline="738">DTSTreeWindow::CreatePane</referencedby>
         <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="202" endline="239">tab_newpane::handle_newtabpane</referencedby>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
@@ -908,7 +908,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="260" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="260" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="267" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="267" bodyend="-1"/>
         <referencedby refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" compoundref="testing_8c" startline="94" endline="105">test_menu</referencedby>
       </memberdef>
       <memberdef kind="define" id="group___c_o_r_e_1ga655f2051956468f6592bef486573e424" prot="public" static="no">
@@ -920,7 +920,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="263" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="263" bodyend="-1"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" line="270" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/dtsgui.h" bodystart="270" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

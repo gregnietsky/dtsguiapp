@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>DTS Application wxWidgets GUI Library: C API Form Item Interface</title>
+<title>DTS Application wxWidgets GUI Library: Panel item interface.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -86,7 +87,7 @@ $(document).ready(function(){initNavTree('group___c-_a_p_i-_panel-_items.html','
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,11 +100,11 @@ $(document).ready(function(){initNavTree('group___c-_a_p_i-_panel-_items.html','
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">C API Form Item Interface</div>  </div>
-<div class="ingroups"><a class="el" href="group___c-_a_p_i-_panel.html">C API Panel Interface</a></div></div><!--header-->
+<div class="title">Panel item interface.</div>  </div>
+<div class="ingroups"><a class="el" href="group___c-_a_p_i-_panel.html">Display panel interface.</a></div></div><!--header-->
 <div class="contents">
 
-<p>C API for managing elements of a panel.  
+<p>Access and manage panel elements in a consistant way.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -128,8 +129,11 @@ Functions</h2></td></tr>
 <tr class="separator:ga37f578498eb38e545906898e7250e6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>C API for managing elements of a panel. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>Element items include Text / Password / Check / List / Combo boxes. </dd></dl>
+<p>Access and manage panel elements in a consistant way. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___c-_a_p_i-_panel-_elements.html">Panel element interface.</a> </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Element items include Text / Password / Check / List / Combo boxes. </dd>
+<dd>
+Information of each element is stored in a hashed bucket to provide a consistant interface to the values and references to data (XML). </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga3af426dd6bf50cb6bd7232c4ea5b92f6"></a>
 <div class="memitem">
@@ -174,7 +178,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Form item if found matching the name. </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01031">1031</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01083">1083</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="_d_t_s_panel_8cpp_source.html#l00869">DTSPanel::FindItem()</a>.</p>
 
@@ -224,7 +228,7 @@ dtsgui_item::GetValue() </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value of element. </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01082">1082</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01134">1134</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="_d_t_s_panel_8cpp_source.html#l00873">DTSPanel::FindValue()</a>.</p>
 
@@ -257,7 +261,7 @@ dtsgui_item::GetValue() </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to data stored in item. </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01044">1044</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01096">1096</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="pitems_8cpp_source.html#l00136">form_item::GetData()</a>.</p>
 
@@ -288,7 +292,7 @@ dtsgui_item::GetValue() </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Name of item. </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01066">1066</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01118">1118</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="pitems_8cpp_source.html#l00180">form_item::GetName()</a>.</p>
 
@@ -319,7 +323,7 @@ dtsgui_item::GetValue() </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Value of the element. </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01055">1055</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01107">1107</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="pitems_8cpp_source.html#l00184">form_item::GetValue()</a>.</p>
 
@@ -360,7 +364,7 @@ dtsgui_item::GetValue() </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to hashed bucket list. </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01018">1018</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01070">1070</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="_d_t_s_panel_8cpp_source.html#l00304">DTSObject::GetItems()</a>.</p>
 
@@ -371,7 +375,7 @@ dtsgui_item::GetValue() </dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 11 2013 00:37:52 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 12:47:01 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

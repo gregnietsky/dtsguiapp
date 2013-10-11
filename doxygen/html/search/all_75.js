@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['user_20interface_20dialogs_2e',['User interface dialogs.',['../group___c-_a_p_i-_dialog.html',1,'']]],
   ['undo',['Undo',['../class_d_t_s_tab_window.html#aa52e98a59b0ad81e28f5463be5e85051',1,'DTSTabWindow']]],
   ['unref',['unref',['../classevdata.html#a5ccf23487f6c2b58bedf37bf6da3adf5',1,'evdata']]],
   ['update_5fxml',['Update_XML',['../class_d_t_s_panel.html#adc5131960a24dfa65adba935a1be0f79',1,'DTSPanel']]],

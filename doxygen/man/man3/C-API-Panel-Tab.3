@@ -1,10 +1,10 @@
-.TH "C API Tab View Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Tab view panel interface." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Tab View Interface \- 
+Tab view panel interface. \- 
 .PP
-C API for managing tab view panels\&.  
+A tree view is a panel with tabs along the top and display area underneath\&.  
 
 .SS "Functions"
 
@@ -24,11 +24,16 @@ C API for managing tab view panels\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for managing tab view panels\&. 
+A tree view is a panel with tabs along the top and display area underneath\&. 
 
+\fBTodo\fP
+.RS 4
+Implement a right click action to allow for deletion via a confirmation dialog\&. 
+.RE
+.PP
 \fBRemarks:\fP
 .RS 4
-Resources controlling and manipulating tab view in the C API\&. 
+The tab window allows grouping related panels together via the tab control when the tab is clicked its display area displays the panel associated with this control\&. 
 .RE
 .PP
 
@@ -80,7 +85,7 @@ On win32 all tabs are configured when the view is activated\&.
 .PP
 
 .PP
-Definition at line 545 of file wrapper\&.cpp\&.
+Definition at line 597 of file wrapper\&.cpp\&.
 .PP
 References DTSTabWindow::CreateTab()\&.
 .PP
@@ -132,7 +137,7 @@ Nothing is returned the callback is registered on the panel\&.
 .PP
 
 .PP
-Definition at line 602 of file wrapper\&.cpp\&.
+Definition at line 654 of file wrapper\&.cpp\&.
 .PP
 References tab_newpane::handle_newtabpane_cb(), and tab_newpane::tab_newpane()\&.
 .PP
@@ -185,7 +190,7 @@ New Tab Pane
 .PP
 
 .PP
-Definition at line 574 of file wrapper\&.cpp\&.
+Definition at line 626 of file wrapper\&.cpp\&.
 .PP
 References DTSTabWindow::CreateTab()\&.
 .SH "Author"

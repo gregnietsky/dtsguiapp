@@ -1,30 +1,30 @@
-.TH "C API Panel Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Display panel interface." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Panel Interface \- 
+Display panel interface. \- 
 .PP
-C API Panel Management\&.  
+Create and manage display panels shown in the application display area\&.  
 
 .SS "Modules"
 
 .in +1c
 .ti -1c
-.RI "\fBC API Tree View Interface\fP"
+.RI "\fBTree view panel interface\&.\fP"
 .br
-.RI "\fIC API for managing tree view panels\&. \fP"
+.RI "\fIA tree view is a split window with a tree in the left window and display area on right\&. \fP"
 .ti -1c
-.RI "\fBC API Tab View Interface\fP"
+.RI "\fBTab view panel interface\&.\fP"
 .br
-.RI "\fIC API for managing tab view panels\&. \fP"
+.RI "\fIA tree view is a panel with tabs along the top and display area underneath\&. \fP"
 .ti -1c
-.RI "\fBC API Form Item Interface\fP"
+.RI "\fBPanel element interface\&.\fP"
 .br
-.RI "\fIC API for managing elements of a panel\&. \fP"
+.RI "\fIInterface for creating and placing elements on the panel\&. \fP"
 .ti -1c
-.RI "\fBC API Form Element Interface\fP"
+.RI "\fBPanel item interface\&.\fP"
 .br
-.RI "\fIC API for placing and creating elements on a panel\&. \fP"
+.RI "\fIAccess and manage panel elements in a consistant way\&. \fP"
 .in -1c
 .SS "Functions"
 
@@ -36,7 +36,7 @@ C API Panel Management\&.
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBDTS_C_API::dtsgui_textpane\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, const char *buf)"
 .br
-.RI "\fICreate a text display box with the supplied buffer\&. \fP"
+.RI "\fICreate a text display box with the text in the buffer been displayed\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_treeview\fP \fBDTS_C_API::dtsgui_treewindow\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, \fBdtsgui_tree_cb\fP tree_cb, void *userdata, struct xml_doc *xmldoc)"
 .br
@@ -64,7 +64,7 @@ C API Panel Management\&.
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_xmlpanel_update\fP (\fBdtsgui_pane\fP pane)"
 .br
-.RI "\fIupdate all XML elements in the panel\&. \fP"
+.RI "\fIupdate all XML items in the panel from current element values\&. \fP"
 .ti -1c
 .RI "struct curl_post * \fBDTS_C_API::dtsgui_pane2post\fP (\fBdtsgui_pane\fP p)"
 .br
@@ -88,19 +88,34 @@ C API Panel Management\&.
 .ti -1c
 .RI "struct xml_node * \fBDTS_C_API::dtsgui_panetoxml\fP (\fBdtsgui_pane\fP p, const char *xpath, const char *node, const char *nodeval, const char *attrkey)"
 .br
-.RI "\fICreate a node from the elements on the panel\&. \fP"
+.RI "\fICreate a XML node from the elements on the panel\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_rundialog\fP (\fBdtsgui_pane\fP pane, \fBevent_callback\fP evcb, void *data)"
 .br
-.RI "\fIExecute a dialog panel\&. Pop up and run a dialog pane the result will be obtained int the event handler\&. \fP"
+.RI "\fIExecute a dialog panel\&. Pop up and run a dialog pane the result will be obtained in the event handler\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API Panel Management\&. 
+Create and manage display panels shown in the application display area\&. 
 
 \fBRemarks:\fP
 .RS 4
-Resources controlling and manipulating panels in the C API\&. 
+The application display area can display one panel at a time these panels may be static or dynamic\&. static panels are created once and persist during execution\&. dynamic panels are created and displayed each time the associated menuitem is selected\&. 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBpanel_type\fP 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+The displayed dynamic panel will be removed when a new item is selected\&. 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Emit and allow panels to manage a event when a new panel is requested to allow saving the displayed panel\&. 
 .RE
 .PP
 
@@ -132,7 +147,7 @@ Not yet implemted who knows maybe it will maybe it wont\&.
 .PP
 
 .PP
-Definition at line 880 of file wrapper\&.cpp\&.
+Definition at line 932 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::SetConfigCallback()\&.
 .SS "void DTS_C_API::dtsgui_delpane (\fBdtsgui_pane\fPpane)"
@@ -150,7 +165,7 @@ This is unlikly too be needed as the GUI manages panels\&.
 .PP
 
 .PP
-Definition at line 518 of file wrapper\&.cpp\&.
+Definition at line 570 of file wrapper\&.cpp\&.
 .SS "struct curl_post* DTS_C_API::dtsgui_pane2post (\fBdtsgui_pane\fPp)\fC [read]\fP"
 
 .PP
@@ -177,7 +192,7 @@ A CURL HTTP POST Structure\&.
 .PP
 
 .PP
-Definition at line 829 of file wrapper\&.cpp\&.
+Definition at line 881 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::Panel2Post()\&.
 .PP
@@ -218,7 +233,7 @@ Newly created panel\&.
 .PP
 
 .PP
-Definition at line 406 of file wrapper\&.cpp\&.
+Definition at line 458 of file wrapper\&.cpp\&.
 .PP
 References DTSFrame::CreatePane(), and dtsgui::GetFrame()\&.
 .PP
@@ -242,7 +257,7 @@ Pass a reference to a XML Doc Structure to the panel\&. Assign a reference to a 
 .PP
 
 .PP
-Definition at line 491 of file wrapper\&.cpp\&.
+Definition at line 543 of file wrapper\&.cpp\&.
 .PP
 References DTSObject::SetXMLDoc()\&.
 .SS "void* DTS_C_API::dtsgui_paneldata (\fBdtsgui_pane\fPpane)"
@@ -270,7 +285,7 @@ Reference to userdata\&.
 .PP
 
 .PP
-Definition at line 843 of file wrapper\&.cpp\&.
+Definition at line 895 of file wrapper\&.cpp\&.
 .PP
 References DTSObject::GetUserData()\&.
 .PP
@@ -302,7 +317,7 @@ Reference to XML Doc\&.
 .PP
 
 .PP
-Definition at line 507 of file wrapper\&.cpp\&.
+Definition at line 559 of file wrapper\&.cpp\&.
 .PP
 References DTSObject::GetXMLDoc()\&.
 .PP
@@ -310,7 +325,7 @@ Referenced by network_adsl_link(), network_adsl_link_new(), network_config(), an
 .SS "struct xml_node* DTS_C_API::dtsgui_panetoxml (\fBdtsgui_pane\fPp, const char *xpath, const char *node, const char *nodeval, const char *attrkey)\fC [read]\fP"
 
 .PP
-Create a node from the elements on the panel\&. Using the path information a node is created and elements added as attributes\&.
+Create a XML node from the elements on the panel\&. Using the path information a node is created and elements added as attributes\&.
 .PP
 \fBSee Also:\fP
 .RS 4
@@ -337,13 +352,13 @@ New XML Node\&.
 .PP
 
 .PP
-Definition at line 899 of file wrapper\&.cpp\&.
+Definition at line 951 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::Panel2XML()\&.
 .SS "void DTS_C_API::dtsgui_rundialog (\fBdtsgui_pane\fPpane, \fBevent_callback\fPevcb, void *data)"
 
 .PP
-Execute a dialog panel\&. Pop up and run a dialog pane the result will be obtained int the event handler\&. \fBSee Also:\fP
+Execute a dialog panel\&. Pop up and run a dialog pane the result will be obtained in the event handler\&. \fBSee Also:\fP
 .RS 4
 \fBDTSDialog::RunDialog()\fP 
 .RE
@@ -359,7 +374,7 @@ Execute a dialog panel\&. Pop up and run a dialog pane the result will be obtain
 .PP
 
 .PP
-Definition at line 911 of file wrapper\&.cpp\&.
+Definition at line 963 of file wrapper\&.cpp\&.
 .PP
 References DTSDialog::RunDialog()\&.
 .SS "void DTS_C_API::dtsgui_setevcallback (\fBdtsgui_pane\fPpane, \fBevent_callback\fPevcb, void *data)"
@@ -385,7 +400,7 @@ When a event happens the callback is called with the userdata to allow actioning
 .PP
 
 .PP
-Definition at line 795 of file wrapper\&.cpp\&.
+Definition at line 847 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::SetEventCallback()\&.
 .PP
@@ -407,7 +422,7 @@ Update the status bar message of panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 864 of file wrapper\&.cpp\&.
+Definition at line 916 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::SetStatus()\&.
 .PP
@@ -429,7 +444,7 @@ Update the title on the panel if it exists\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 853 of file wrapper\&.cpp\&.
+Definition at line 905 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::SetTitle()\&.
 .SS "\fBdtsgui_tabview\fP DTS_C_API::dtsgui_tabwindow (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
@@ -458,7 +473,7 @@ Tab window\&.
 .PP
 
 .PP
-Definition at line 462 of file wrapper\&.cpp\&.
+Definition at line 514 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame()\&.
 .PP
@@ -466,7 +481,7 @@ Referenced by iface_config(), and pbx_settings()\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_textpane (struct \fBdtsgui\fP *dtsgui, const char *title, const char *buf)"
 
 .PP
-Create a text display box with the supplied buffer\&. This creates a panel that only contains the supplied buffer Scrollbars are used as required\&.
+Create a text display box with the text in the buffer been displayed\&. This creates a panel that only contains the supplied buffer Scrollbars are used as required\&.
 .PP
 This window is read only\&.
 .PP
@@ -491,7 +506,7 @@ New text panel\&.
 .PP
 
 .PP
-Definition at line 425 of file wrapper\&.cpp\&.
+Definition at line 477 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::TextPanel()\&.
 .PP
@@ -525,7 +540,7 @@ Create a treepane view\&. Create a split window with a tree control on the left 
 .PP
 
 .PP
-Definition at line 445 of file wrapper\&.cpp\&.
+Definition at line 497 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame()\&.
 .PP
@@ -533,7 +548,7 @@ Referenced by advanced_config()\&.
 .SS "void DTS_C_API::dtsgui_xmlpanel_update (\fBdtsgui_pane\fPpane)"
 
 .PP
-update all XML elements in the panel\&. All elements on the panel that are XML will have there nodes updated Based on the value of the elements\&.
+update all XML items in the panel from current element values\&. All elements on the panel that are XML will have there nodes updated Based on the value of the elements\&.
 .PP
 \fBSee Also:\fP
 .RS 4
@@ -551,7 +566,7 @@ update all XML elements in the panel\&. All elements on the panel that are XML w
 .PP
 
 .PP
-Definition at line 811 of file wrapper\&.cpp\&.
+Definition at line 863 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::Update_XML()\&.
 .PP

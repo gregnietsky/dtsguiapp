@@ -38,7 +38,7 @@
         <briefdescription>
 <para>Defining __DTS_C_API allows access to C API from inside a C++ file. </para>        </briefdescription>
         <detaileddescription>
-<para><ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref> will only include the definitions for the C API if this is defined. </para>        </detaileddescription>
+<para><ref refid="dtsgui_8h" kindref="compound">dtsgui.h</ref> will only include the definitions for the C API using C++ if this is defined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" line="33" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/cxxapi.cpp" bodystart="33" bodyend="-1"/>
@@ -47,7 +47,7 @@
     <briefdescription>
 <para>C++ Functions exported to C API. </para>    </briefdescription>
     <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="namespace_d_t_s___c___a_p_i" kindref="compound">DTS_C_API</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kindref="member">__DTS_C_API</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i" kindref="compound">Library C API</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="namespace_d_t_s___c___a_p_i" kindref="compound">DTS_C_API</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kindref="member">__DTS_C_API</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i" kindref="compound">Distrotech GUI Library C API</ref></para></simplesect>
 These functions should not be used in C++ applications. </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>

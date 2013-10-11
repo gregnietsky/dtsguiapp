@@ -16,7 +16,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/** @defgroup C-API Library C API
+/** @defgroup C-API Distrotech GUI Library C API
   * @brief Exported functions used for use in C code.
   * @remark Use of this API is not recomended from inside C++ use the native API.
   * @see __DTS_C_API
@@ -27,7 +27,7 @@
   * @see @ref dtsgui.h*/
 
 /** @file
-  * @brief C API Wrapper functions exported
+  * @brief Wrapper functions exported to C to allow interfacing with C++.
   * @ingroup C-API
   * @see DTS_C_API
   * @see __DTS_C_API
@@ -35,70 +35,116 @@
   *
   * These functions should not be used in C++ applications.*/
 
-/** @defgroup C-API-Menus C API Menu Bar Interface
-  * @brief C-API Menu Management
+/** @defgroup C-API-Menus Menu bar interface.
+  * @brief Create and manage menus.
   * @ingroup C-API
-  * @remark Resources controlling the menu bar in the C API.*/
+  * @remark The menu bar at the top of the application contains menus,
+  * these menus contain menuitems these are the primary control interface.
+  * @remark Menu items when selected can call a function or place a pre created 
+  * panel in the display area. If the function returns a panel it will be placed
+  * in the display area.
+  * @remark Menuitems can also be enabled / disabled programatically,
+  * disabled menu items are shown greyed out.
+  * @todo Define and implement Exit/Quit events*/
 
-/** @defgroup C-API-Panel C API Panel Interface
-  * @brief C API Panel Management
+/** @defgroup C-API-Panel Display panel interface.
+  * @brief Create and manage display panels shown in the application display area.
   * @ingroup C-API
-  * @remark Resources controlling and manipulating panels in the C API.*/
+  * @remark The application display area can display one panel at a time these panels
+  * may be static or dynamic. static panels are created once and persist during execution.
+  * dynamic panels are created and displayed each time the associated menuitem is selected.
+  * @see panel_type
+  * @warning The displayed dynamic panel will be removed when a new item is selected.
+  * @todo Emit and allow panels to manage a event when a new panel is requested to allow saving
+  * the displayed panel.*/
 
-/** @defgroup C-API-Wizard C API Wizard Interface
-  * @brief C API Wizard Management
+/** @defgroup C-API-Panel-Tree Tree view panel interface.
+  * @brief A tree view is a split window with a tree in the left window and display area on right.
+  * @ingroup C-API-Panel
+  * @remark The tree can contain branches (folder containers) and leaf nodes each node when clicked will
+  * create and place a panel in the display area.
+  * @remark The tree window supports sorting and deletion via a menu displayed when right clicking.
+  * @todo Allow for the deletion of branch/container/folder nodes.*/
+
+/** @defgroup C-API-Panel-Tab Tab view panel interface.
+  * @brief A tree view is a panel with tabs along the top and display area underneath.
+  * @ingroup C-API-Panel
+  * @todo Implement a right click action to allow for deletion via a confirmation dialog.
+  * @remark The tab window allows grouping related panels together via the tab control
+  * when the tab is clicked its display area displays the panel associated with this control.*/
+
+/** @defgroup C-API-Panel-Elements Panel element interface.
+  * @brief Interface for creating and placing elements on the panel.
+  * @ingroup C-API-Panel
+  * @todo Add a JSON API
+  * @see @ref C-API-Panel-Items
+  * @remark Element items include Text / Password / Check / List / Combo boxes.
+  * @remark They are placed with the title on the left and element on the right.
+  * @remark Elements are accessed via the item interface.
+  * @remark There multiple API's for managing elements but a common interface for
+  * controling list and combo boxes.*/
+
+/** @defgroup C-API-Panel-Elements-STD Basic Elements.
+  * @brief Elements consisting Name/Value/Data.
+  * @ingroup C-API-Panel-Elements
+  * @note The data is a reference to a referenced object.*/
+
+/** @defgroup C-API-Panel-Elements-XML XML Elements
+  * @brief Elements derived from a XML node.  
+  * @ingroup C-API-Panel-Elements
+  * @see DTSPanel::GetNode()
+  * @todo Adding functions to work from a search path will be better than
+  * the current interface that alloacates a new search for each element.
+  * @remark XML elements require a xpath to the parent , node name , filter attribute , filter value
+  * and attribute name to derive the value from.
+  * @remark If a node name is supplied a XML node will be attempted to be created.
+  * @remark If no XML node is found or can be created the element will be disabled.
+  * @remark the resulting path will be
+  * @verbatim XPATH/Node<[<Filter attribute|.> = 'Filter Value']>@endverbatim
+  * @note node, filter attribute, filter value and attribute may be NULL.
+  * @note If the node name is not supplied a node will not be created.
+  * @note If the attribute is NULL the value of the node will be used for value.
+  * @note If no filter value is supplied the filter attribute is ignored*/
+
+/** @defgroup C-API-Panel-Items Panel item interface.
+  * @brief Access and manage panel elements in a consistant way.
+  * @ingroup C-API-Panel
+  * @see @ref C-API-Panel-Elements
+  * @remark Element items include Text / Password / Check / List / Combo boxes.
+  * @remark Information of each element is stored in a hashed bucket to provide
+  * a consistant interface to the values and references to data (XML).*/
+
+/** @defgroup C-API-Dialog User interface dialogs.
+  * @brief Common dialogs for user interaction Confirmation, File, Password.
   * @ingroup C-API
-  * @remark Resources controlling and manipulating wizards in the C API.*/
-
-/** @defgroup C-API-Panel-Tree C API Tree View Interface
-  * @brief C API for managing tree view panels.
-  * @ingroup C-API-Panel
-  * @remark Resources controlling and manipulating tree view in the C API.*/
-
-/** @defgroup C-API-Panel-Tab C API Tab View Interface
-  * @brief C API for managing tab view panels.
-  * @ingroup C-API-Panel
-  * @remark Resources controlling and manipulating tab view in the C API.*/
-
-/** @defgroup C-API-Panel-Items C API Form Item Interface
-  * @brief C API for managing elements of a panel.
-  * @ingroup C-API-Panel
-  * @remark Element items include Text / Password / Check / List / Combo boxes.*/
-
-/** @defgroup C-API-Panel-Elements C API Form Element Interface
-  * @brief C API for placing and creating elements on a panel.
-  * @ingroup C-API-Panel
-  * @remark Element items include Text / Password / Check / List / Combo boxes.*/
-
-/** @defgroup C-API-Panel-Elements-STD C API Standard Form Element Interface
-  * @brief C API for placing and creating standard elements on a panel.
-  * @ingroup C-API-Panel-Elements*/
-
-/** @defgroup C-API-Panel-Elements-XML C API XML Form Element Interface
-  * @brief C API for placing and creating XML elements on a panel.
-  * @ingroup C-API-Panel-Elements*/
-
-/** @defgroup C-API-Dialog C API Common Dialog Boxes
-  * @brief C API for managing user interface dialogs.
-  * @ingroup C-API
-  * @remark Simple dialog boxes for user interfacing (Alert/Confirm/File/Password)
-  *
-  * remark All implementations of the wxFileDialog provide a wildcard filter.
+  * @remark Custom dialog boxes can be created using DTSDialog panels.
+  * @remark All implementations of the wxFileDialog provide a wildcard filter.
   * Typing a filename containing wildcards (*, ?) in the filename text item, and clicking on Ok, will 
   * result in only those files matching the pattern being displayed.
   * The wildcard may be a specification for multiple types of file with a description for each, such as:
-  * @verbatim"BMP and GIF files (*.bmp;*.gif)|*.bmp;*.gif|PNG files (*.png)|*.png"@endverbatim*/
+  * @verbatim"BMP and GIF files (*.bmp;*.gif)|*.bmp;*.gif|PNG files (*.png)|*.png"@endverbatim
+  * Copied from wxFileDialog Documentation*/
 
-/** @defgroup C-API-Progress C API Progress Dialog Functions
-  * @brief C API for managing progress dialog
+/** @defgroup C-API-Wizard Wizard Interface.
+  * @brief Multi panel pop up wizard user interface.
   * @ingroup C-API
-  * @remark Resources controlling and manipulating the progress dialog*/
+  * @remark A wizard is a dialog box that allows for multiple panels to be dispalayed
+  * in sequence via Back/Next controls.
+  * @note It is important to process the panels on complition before un refrencing the
+  * wizard.
+  * @todo Add a hashed list to the wizard class storing the panels to no longer need to
+  * keep a array of panels.*/
+
+/** @defgroup C-API-Progress Progress dialog interface.
+  * @brief Popup dialog containing a progress bar and posible cancel button.
+  * @ingroup C-API
+  * @todo Allow multiple instances of progress dialog not only the single interface at present.*/
 
 /**
   * @ingroup C-API
   * @brief Defining __DTS_C_API allows access to C API from inside a C++ file
   * 
-  * dtsgui.h will only include the definitions for the C API if this is defined.*/
+  * dtsgui.h will only include the definitions for the C API using C++ if this is defined.*/
 #define __DTS_C_API
 
 #include <wx/menu.h>
@@ -139,7 +185,7 @@ static int menuid = wxID_AUTO_LOWEST;
   *
   * The userdata is returned in the callback.
   *
-  * The Callback must return a non zero value to indicat success should
+  * The Callback must return a non zero value to indicate success should
   * the application fail returning 0 will close the application.
   *
   * @see DTSApp
@@ -157,7 +203,7 @@ void dtsgui_config(dtsgui_configcb confcallback_cb, void *userdata, struct point
 }
 
 /** @ingroup C-API
-  * @brief Configure the GUI and create a application frame.
+  * @brief Pass execution to the GUI and activate the frame.
   *
   * Pass application processing to the GUI after calling the configure callback.
   *
@@ -185,7 +231,7 @@ void *dtsgui_userdata(struct dtsgui *dtsgui) {
 }
 
 /** @ingroup C-API
-  * @brief Set the displayed panel
+  * @brief Set the displayed panel to pane provided.
   *
   * Switch the curent pane with the one provided this
   * should not be done and rather use menu callbacks.
@@ -200,7 +246,8 @@ void dtsgui_setwindow(struct dtsgui *dtsgui, dtsgui_pane p) {
 }
 
 /** @ingroup C-API
-  * @brief Emit a event handled by event callback's
+  * @brief Emit a event handled by event callback's.
+  *
   * A event is emited and recived by all active handlers
   * The ID can be determined as required.
   * @see DTSFrame::SendDTSEvent()
@@ -212,11 +259,13 @@ void dtsgui_sendevent(struct dtsgui *dtsgui, int eid) {
 }
 
 /** @ingroup C-API
-  * @brief Callback to run to create and activate the toolbar.
+  * @brief Specify callback to run to create and activate the toolbar.
+  *
   * The toolbar has of yet not been wrapped into the C API
   * Its recomended that a C++ object be linked that contains a derived
   * class of wxToolbar.
   * @see DTSFrame::SetupToolbar
+  * @warning This needs to be done in the application configuration callback.
   * @param dtsgui Application data ptr.
   * @param cb Toolbar create callback.
   * @param data Userdata to be passed to the toolbar*/
@@ -226,31 +275,24 @@ void dtsgui_setuptoolbar(struct dtsgui *dtsgui, dtsgui_toolbar_create cb, void *
 }
 
 /** @ingroup C-API
-  * @brief Append text to the title enclosed in square brackets
+  * @brief Disable or enable the toolbar.
+  *
+  * @see dtsgui::ShowToolbar()
+  * @param dtsgui Application data ptr.
+  * @param show Display the toolbar if non zero.*/
+void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
+	dtsgui->ShowToolbar(show);
+}
+
+/** @ingroup C-API
+  * @brief Append text to the application frame title enclosed in square brackets.
+  *
   * Update the main application title bar text.
   * @see dtsgui::AppendTitle()
   * @param dtsgui Application Data ptr.
   * @param text Text to append*/
 void dtsgui_titleappend(struct dtsgui *dtsgui, const char *text) {
 	dtsgui->AppendTitle(text);
-}
-
-/** @ingroup C-API
-  * @brief Enable/Disable an menu item.
-  * @param dmi Menuitem
-  * @param enable Disable the menu if set to 0.*/
-void dtsgui_menuitemenable(dtsgui_menuitem dmi, int enable) {
-	wxMenuItem *mi = (wxMenuItem*)dmi;
-	mi->Enable((enable) ? true : false);
-}
-
-/** @ingroup C-API
-  * @brief Disable or enable the toolbar
-  * @see dtsgui::ShowToolbar()
-  * @param dtsgui Application data ptr.
-  * @param show Display the toolbar if non zero.*/
-void dtsgui_set_toolbar(struct dtsgui *dtsgui, int show) {
-	dtsgui->ShowToolbar(show);
 }
 
 /** @ingroup C-API-Menus
@@ -293,7 +335,7 @@ dtsgui_menuitem dtsgui_newmenuitem(dtsgui_menu dtsmenu, struct dtsgui *dtsgui, c
 }
 
 /** @ingroup C-API-Menus
-  * @brief Create a menu item that will call a function with supplied data.
+  * @brief Create a menu item that will call a function with supplied data to execute when selected.
   *
   * The specified call back will be called passing the application pointer (dtsgui),
   * the name and data ptr supplied. if this function returns a DTSObject pane it
@@ -387,6 +429,16 @@ void dtsgui_menusep(dtsgui_menu dtsmenu) {
 	m->AppendSeparator();
 }
 
+/** @ingroup C-API-Menus
+  * @brief Enable/Disable an menu item.
+  *
+  * @param dmi Menuitem
+  * @param enable Disable the menu if set to 0.*/
+void dtsgui_menuitemenable(dtsgui_menuitem dmi, int enable) {
+	wxMenuItem *mi = (wxMenuItem*)dmi;
+	mi->Enable((enable) ? true : false);
+}
+
 /** @ingroup C-API-Panel
   * @brief Create a pannel to be displayed.
   *
@@ -409,7 +461,7 @@ dtsgui_pane dtsgui_panel(struct dtsgui *dtsgui, const char *name, const char *ti
 }
 
 /** @ingroup C-API-Panel
-  * @brief Create a text display box with the supplied buffer.
+  * @brief Create a text display box with the text in the buffer been displayed.
   *
   * This creates a panel that only contains the supplied buffer
   * Scrollbars are used as required.
@@ -798,7 +850,7 @@ void dtsgui_setevcallback(dtsgui_pane pane,event_callback evcb, void *data) {
 }
 
 /** @ingroup C-API-Panel
-  * @brief update all XML elements in the panel.
+  * @brief update all XML items in the panel from current element values.
   *
   * All elements on the panel that are XML will have there nodes updated
   * Based on the value of the elements.
@@ -883,7 +935,7 @@ void dtsgui_configcallback(dtsgui_pane pane,dtsgui_configcb cb, void *data) {
 }
 
 /** @ingroup C-API-Panel
-  * @brief Create a node from the elements on the panel.
+  * @brief Create a XML node from the elements on the panel.
   *
   * Using the path information a node is created and elements
   * added as attributes.
@@ -903,7 +955,7 @@ struct xml_node *dtsgui_panetoxml(dtsgui_pane p, const char *xpath, const char *
 
 /** @ingroup C-API-Panel
   * @brief Execute a dialog panel.
-  * Pop up and run a dialog pane the result will be obtained int the event handler.
+  * Pop up and run a dialog pane the result will be obtained in the event handler.
   * @see DTSDialog::RunDialog()
   * @param pane Dialog panel to execute.
   * @param evcb Event callback to handle the results in.
@@ -929,7 +981,7 @@ extern struct dtsgui_wizard *dtsgui_newwizard(struct dtsgui *dtsgui, const char 
 }
 
 /** @ingroup C-API-Wizard
-  * @brief Create a panel appended to the wizard.
+  * @brief Create a panel and append it to the wizard.
   *
   * @see dtsgui_wizard::AddPage()
   *
@@ -1138,6 +1190,7 @@ extern const char *dtsgui_fileopen(struct dtsgui *dtsgui, const char *title, con
 
 /** @ingroup C-API-Dialog
   * @brief Return basic auth reference from a password dialog box.
+  *
   * A dialog box requesting the user name and password is presented to the user.
   * The initial values may be supplied.
   * @remark This function is used as a callback for CURL.

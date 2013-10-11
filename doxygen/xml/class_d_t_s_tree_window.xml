@@ -202,7 +202,7 @@
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
         <references refid="class_d_t_s_object_1a783949e39ffd9e00aec15fa2b8cc12ed" compoundref="_d_t_s_panel_8h" startline="78">DTSObject::userdata</references>
         <references refid="class_d_t_s_tree_window_1a57f82dd35e2ad0c6f50041b40c6e67f5" compoundref="_d_t_s_tree_window_8h" startline="129">vm</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="237">wx_DTSPANEL_TREE</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="242">wx_DTSPANEL_TREE</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tree_window_1ae76407acd39772ef597cbfa599b349af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -302,8 +302,8 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="114" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="641" bodyend="643"/>
         <references refid="class_d_t_s_tree_window_1af4f29b88bb58c804090e5c4bab01898d" compoundref="_d_t_s_tree_window_8h" startline="128">tree</references>
-        <referencedby refid="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" compoundref="wrapper_8cpp" startline="665" endline="669">DTS_C_API::dtsgui_treecont</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel-_tree_1ga0f7146637609d42057e2cd21bd2bf33e" compoundref="wrapper_8cpp" startline="689" endline="693">DTS_C_API::dtsgui_treeitem</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" compoundref="wrapper_8cpp" startline="717" endline="721">DTS_C_API::dtsgui_treecont</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tree_1ga0f7146637609d42057e2cd21bd2bf33e" compoundref="wrapper_8cpp" startline="741" endline="745">DTS_C_API::dtsgui_treeitem</referencedby>
         <referencedby refid="class_d_t_s_tree_window_event_1ab42e89c20d43eb8b536c3601158b6f7a" compoundref="_d_t_s_tree_window_8cpp" startline="281" endline="296">DTSTreeWindowEvent::DTSTreeWindowEvent</referencedby>
         <referencedby refid="classtree__newnode_1a64abbefc5f204cfbf9b7ad0bd7e035cf" compoundref="_d_t_s_tree_window_8cpp" startline="89" endline="129">tree_newnode::handle_newtreenode</referencedby>
       </memberdef>
@@ -475,10 +475,10 @@
         <references refid="class_d_t_s_panel_1a58daeb533cce1e4bdac57118cce7c7ea" compoundref="_d_t_s_panel_8cpp" startline="470" endline="476">DTSPanel::SetTitle</references>
         <references refid="class_d_t_s_object_1a1ae63425d8e5770a8b0717f37fd695b2" compoundref="_d_t_s_panel_8cpp" startline="278" endline="291">DTSObject::SetXMLDoc</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="237">wx_DTSPANEL_TREE</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" compoundref="dtsgui_8h" startline="242">wx_DTSPANEL_TREE</references>
         <referencedby refid="class_d_t_s_tree_window_1a45d33a41609c46d51d17bb80a64f2ca4" compoundref="_d_t_s_tree_window_8cpp" startline="722" endline="738">CreatePane</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel-_tree_1gad71b59e1898bce570cac2acd774f71e3" compoundref="wrapper_8cpp" startline="622" endline="625">DTS_C_API::dtsgui_treepane</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel-_tree_1gab8713feb542a9bb13f8fe7e3bf568bda" compoundref="wrapper_8cpp" startline="640" endline="643">DTS_C_API::dtsgui_treepane_default</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tree_1gad71b59e1898bce570cac2acd774f71e3" compoundref="wrapper_8cpp" startline="674" endline="677">DTS_C_API::dtsgui_treepane</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tree_1gab8713feb542a9bb13f8fe7e3bf568bda" compoundref="wrapper_8cpp" startline="692" endline="695">DTS_C_API::dtsgui_treepane_default</referencedby>
         <referencedby refid="class_d_t_s_tree_window_event_1a98ac8a3612545e1eaeb99fa9b5662048" compoundref="_d_t_s_tree_window_8cpp" startline="469" endline="508">DTSTreeWindowEvent::TreeCallback</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tree_window_1a45d33a41609c46d51d17bb80a64f2ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -501,7 +501,7 @@
         <references refid="class_d_t_s_d_v_m_list_view_1ac8cd1cebdb6a6c3d03cbc7697e4ac9ed" compoundref="_d_t_s_list_view_8cpp" startline="499" endline="509">DTSDVMListView::GetNodeID</references>
         <references refid="class_d_t_s_d_v_m_list_view_1ab6290667fa8c72eedc83399220fee834" compoundref="_d_t_s_list_view_8cpp" startline="532" endline="541">DTSDVMListView::GetTitle</references>
         <references refid="class_d_t_s_tree_window_1a57f82dd35e2ad0c6f50041b40c6e67f5" compoundref="_d_t_s_tree_window_8h" startline="129">vm</references>
-        <references refid="group___c_o_r_e_1ga4ef37ee1286eb68a9f5663813f134be2" compoundref="dtsgui_8h" startline="257">wx_PANEL_BUTTON_ACTION</references>
+        <references refid="group___c_o_r_e_1ga4ef37ee1286eb68a9f5663813f134be2" compoundref="dtsgui_8h" startline="264">wx_PANEL_BUTTON_ACTION</references>
         <references refid="class_d_t_s_object_1a0e9b6e22629a9aa1fd5227cefaa25e6f" compoundref="_d_t_s_panel_8h" startline="79">DTSObject::xmldoc</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tree_window_1a3a7d1d1ce34864f71d5ffd154ca18210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -527,7 +527,7 @@
         <references refid="class_d_t_s_d_v_m_list_view_1a90439ae943298c9d7104e3f09dbd3abf" compoundref="_d_t_s_list_view_8cpp" startline="521" endline="530">DTSDVMListView::GetXMLData</references>
         <references refid="class_d_t_s_tree_window_1a57f82dd35e2ad0c6f50041b40c6e67f5" compoundref="_d_t_s_tree_window_8h" startline="129">vm</references>
         <references refid="class_d_t_s_object_1a0e9b6e22629a9aa1fd5227cefaa25e6f" compoundref="_d_t_s_panel_8h" startline="79">DTSObject::xmldoc</references>
-        <referencedby refid="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" compoundref="wrapper_8cpp" startline="477" endline="480">DTS_C_API::dtsgui_nodesetxml</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" compoundref="wrapper_8cpp" startline="529" endline="532">DTS_C_API::dtsgui_nodesetxml</referencedby>
         <referencedby refid="class_d_t_s_tree_window_event_1a98ac8a3612545e1eaeb99fa9b5662048" compoundref="_d_t_s_tree_window_8cpp" startline="469" endline="508">DTSTreeWindowEvent::TreeCallback</referencedby>
       </memberdef>
       </sectiondef>

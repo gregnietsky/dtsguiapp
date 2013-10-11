@@ -1,10 +1,10 @@
-.TH "C API Form Item Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Panel item interface." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Form Item Interface \- 
+Panel item interface. \- 
 .PP
-C API for managing elements of a panel\&.  
+Access and manage panel elements in a consistant way\&.  
 
 .SS "Functions"
 
@@ -36,11 +36,18 @@ C API for managing elements of a panel\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for managing elements of a panel\&. 
+Access and manage panel elements in a consistant way\&. 
 
+\fBSee Also:\fP
+.RS 4
+\fBPanel element interface\&.\fP 
+.RE
+.PP
 \fBRemarks:\fP
 .RS 4
 Element items include Text / Password / Check / List / Combo boxes\&. 
+.PP
+Information of each element is stored in a hashed bucket to provide a consistant interface to the values and references to data (XML)\&. 
 .RE
 .PP
 
@@ -68,7 +75,7 @@ Form item if found matching the name\&.
 .PP
 
 .PP
-Definition at line 1031 of file wrapper\&.cpp\&.
+Definition at line 1083 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::FindItem()\&.
 .SS "const char* DTS_C_API::dtsgui_findvalue (\fBdtsgui_pane\fPp, const char *name)"
@@ -106,7 +113,7 @@ Value of element\&.
 .PP
 
 .PP
-Definition at line 1082 of file wrapper\&.cpp\&.
+Definition at line 1134 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::FindValue()\&.
 .PP
@@ -133,7 +140,7 @@ Reference to data stored in item\&.
 .PP
 
 .PP
-Definition at line 1044 of file wrapper\&.cpp\&.
+Definition at line 1096 of file wrapper\&.cpp\&.
 .PP
 References form_item::GetData()\&.
 .SS "const char* DTS_C_API::dtsgui_item_name (struct \fBform_item\fP *fi)"
@@ -161,7 +168,7 @@ Name of item\&.
 .PP
 
 .PP
-Definition at line 1066 of file wrapper\&.cpp\&.
+Definition at line 1118 of file wrapper\&.cpp\&.
 .PP
 References form_item::GetName()\&.
 .SS "const char* DTS_C_API::dtsgui_item_value (struct \fBform_item\fP *fi)"
@@ -189,7 +196,7 @@ Value of the element\&.
 .PP
 
 .PP
-Definition at line 1055 of file wrapper\&.cpp\&.
+Definition at line 1107 of file wrapper\&.cpp\&.
 .PP
 References form_item::GetValue()\&.
 .PP
@@ -216,7 +223,7 @@ Reference to hashed bucket list\&.
 .PP
 
 .PP
-Definition at line 1018 of file wrapper\&.cpp\&.
+Definition at line 1070 of file wrapper\&.cpp\&.
 .PP
 References DTSObject::GetItems()\&.
 .SH "Author"

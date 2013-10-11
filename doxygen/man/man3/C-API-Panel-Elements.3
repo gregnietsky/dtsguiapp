@@ -1,22 +1,22 @@
-.TH "C API Form Element Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Panel element interface." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Form Element Interface \- 
+Panel element interface. \- 
 .PP
-C API for placing and creating elements on a panel\&.  
+Interface for creating and placing elements on the panel\&.  
 
 .SS "Modules"
 
 .in +1c
 .ti -1c
-.RI "\fBC API Standard Form Element Interface\fP"
+.RI "\fBBasic Elements\&.\fP"
 .br
-.RI "\fIC API for placing and creating standard elements on a panel\&. \fP"
+.RI "\fIElements consisting Name/Value/Data\&. \fP"
 .ti -1c
-.RI "\fBC API XML Form Element Interface\fP"
+.RI "\fBXML Elements\fP"
 .br
-.RI "\fIC API for placing and creating XML elements on a panel\&. \fP"
+.RI "\fIElements derived from a XML node\&. \fP"
 .in -1c
 .SS "Functions"
 
@@ -36,11 +36,27 @@ C API for placing and creating elements on a panel\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for placing and creating elements on a panel\&. 
+Interface for creating and placing elements on the panel\&. 
 
+\fBTodo\fP
+.RS 4
+Add a JSON API 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBPanel item interface\&.\fP 
+.RE
+.PP
 \fBRemarks:\fP
 .RS 4
 Element items include Text / Password / Check / List / Combo boxes\&. 
+.PP
+They are placed with the title on the left and element on the right\&. 
+.PP
+Elements are accessed via the item interface\&. 
+.PP
+There multiple API's for managing elements but a common interface for controling list and combo boxes\&. 
 .RE
 .PP
 
@@ -65,7 +81,7 @@ Add a name / value to the list box for selection\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1160 of file wrapper\&.cpp\&.
+Definition at line 1213 of file wrapper\&.cpp\&.
 .PP
 References form_item::Append()\&.
 .PP
@@ -93,7 +109,7 @@ passing NULL as either or both of the attributes will use the value of the node\
 .PP
 
 .PP
-Definition at line 1181 of file wrapper\&.cpp\&.
+Definition at line 1234 of file wrapper\&.cpp\&.
 .PP
 References form_item::AppendXML()\&.
 .PP
@@ -110,7 +126,7 @@ Set the selected item on a list box or combobox to the index\&. \fBParameters:\f
 .PP
 
 .PP
-Definition at line 1168 of file wrapper\&.cpp\&.
+Definition at line 1221 of file wrapper\&.cpp\&.
 .PP
 References form_item::SetSelection()\&.
 .PP

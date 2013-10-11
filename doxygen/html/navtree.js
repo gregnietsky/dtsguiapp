@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "DTS Application wxWidgets GUI Library", "index.html", [
+    [ "Todo List", "todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -42,7 +43,7 @@ var NAVTREEINDEX =
 "classtree__newnode.html#a71eae2a3f8fbcb7e2c4245ae0303d171",
 "globals_0x6d.html",
 "netconfig_8c.html#a21ad9729b2e5667d1a71117c3811d428",
-"wxforms_8c.html#ga65a24b9322f0fd002413f3e9e13272f0"
+"wxforms_8c.html#ga5fe0b449ba347b98cc9acad0f5608ca1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

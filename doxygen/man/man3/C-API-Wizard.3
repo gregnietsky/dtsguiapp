@@ -1,10 +1,10 @@
-.TH "C API Wizard Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Wizard Interface." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Wizard Interface \- 
+Wizard Interface. \- 
 .PP
-C API Wizard Management\&.  
+Multi panel pop up wizard user interface\&.  
 
 .SS "Functions"
 
@@ -16,7 +16,7 @@ C API Wizard Management\&.
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBDTS_C_API::dtsgui_wizard_addpage\fP (struct \fBdtsgui_wizard\fP *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)"
 .br
-.RI "\fICreate a panel appended to the wizard\&. \fP"
+.RI "\fICreate a panel and append it to the wizard\&. \fP"
 .ti -1c
 .RI "int \fBDTS_C_API::dtsgui_runwizard\fP (struct \fBdtsgui_wizard\fP *dtswiz)"
 .br
@@ -24,11 +24,21 @@ C API Wizard Management\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API Wizard Management\&. 
+Multi panel pop up wizard user interface\&. 
 
 \fBRemarks:\fP
 .RS 4
-Resources controlling and manipulating wizards in the C API\&. 
+A wizard is a dialog box that allows for multiple panels to be dispalayed in sequence via Back/Next controls\&. 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+It is important to process the panels on complition before un refrencing the wizard\&. 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Add a hashed list to the wizard class storing the panels to no longer need to keep a array of panels\&. 
 .RE
 .PP
 
@@ -58,7 +68,7 @@ New wizard that needs pages added too and run\&.
 .PP
 
 .PP
-Definition at line 927 of file wrapper\&.cpp\&.
+Definition at line 979 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame()\&.
 .PP
@@ -85,7 +95,7 @@ non Zero on success\&.
 .PP
 
 .PP
-Definition at line 956 of file wrapper\&.cpp\&.
+Definition at line 1008 of file wrapper\&.cpp\&.
 .PP
 References dtsgui_wizard::RunWizard()\&.
 .PP
@@ -93,7 +103,7 @@ Referenced by system_wizard()\&.
 .SS "\fBdtsgui_pane\fP DTS_C_API::dtsgui_wizard_addpage (struct \fBdtsgui_wizard\fP *dtswiz, const char *title, void *userdata, struct xml_doc *xmldoc)"
 
 .PP
-Create a panel appended to the wizard\&. \fBSee Also:\fP
+Create a panel and append it to the wizard\&. \fBSee Also:\fP
 .RS 4
 \fBdtsgui_wizard::AddPage()\fP
 .RE
@@ -116,7 +126,7 @@ New panel that will need to be configured and processed after completion\&.
 .PP
 
 .PP
-Definition at line 941 of file wrapper\&.cpp\&.
+Definition at line 993 of file wrapper\&.cpp\&.
 .PP
 References dtsgui_wizard::AddPage()\&.
 .PP

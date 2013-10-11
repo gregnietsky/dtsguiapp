@@ -158,7 +158,7 @@ Core elements shared by all API's\&.
 .br
 .RI "\fIOptions set on tree nodes\&. \fP"
 .ti -1c
-.RI "enum \fBpanel_type\fP { \fBwx_DTSPANEL_WINDOW\fP, \fBwx_DTSPANEL_PANEL\fP, \fBwx_DTSPANEL_SCROLLPANEL\fP, \fBwx_DTSPANEL_DIALOG\fP, \fBwx_DTSPANEL_TREE\fP, \fBwx_DTSPANEL_WIZARD\fP, \fBwx_DTSPANEL_TAB\fP }"
+.RI "enum \fBpanel_type\fP { \fBwx_DTSPANEL_WINDOW\fP, \fBwx_DTSPANEL_PANEL\fP, \fBwx_DTSPANEL_SCROLLPANEL\fP, \fBwx_DTSPANEL_DIALOG\fP, \fBwx_DTSPANEL_TREE\fP, \fBwx_DTSPANEL_TAB\fP, \fBwx_DTSPANEL_WIZARD\fP }"
 .br
 .RI "\fIPanel Type\&. \fP"
 .ti -1c
@@ -178,7 +178,7 @@ Core elements shared by all API's\&.
 .PP
 Shortcut flags for action buttons\&. 
 .PP
-Definition at line 257 of file dtsgui\&.h\&.
+Definition at line 264 of file dtsgui\&.h\&.
 .PP
 Referenced by DTSTreeWindow::CreatePane(), tab_newpane::handle_newtabpane(), iface_config(), DTSFrame::Passwd(), and pbx_settings()\&.
 .SS "#define wx_PANEL_BUTTON_ALL   \fBwx_PANEL_BUTTON_ACTION\fP | \fBwx_PANEL_BUTTON_NAV\fP"
@@ -186,7 +186,7 @@ Referenced by DTSTreeWindow::CreatePane(), tab_newpane::handle_newtabpane(), ifa
 .PP
 Shortcut flags for all buttons\&. 
 .PP
-Definition at line 260 of file dtsgui\&.h\&.
+Definition at line 267 of file dtsgui\&.h\&.
 .PP
 Referenced by test_menu()\&.
 .SS "#define wx_PANEL_BUTTON_DIR   \fBwx_PANEL_EVENT_BUTTON_BACK\fP | \fBwx_PANEL_EVENT_BUTTON_FWD\fP"
@@ -194,19 +194,19 @@ Referenced by test_menu()\&.
 .PP
 Shortcut flags for direction buttons\&. 
 .PP
-Definition at line 254 of file dtsgui\&.h\&.
+Definition at line 261 of file dtsgui\&.h\&.
 .SS "#define wx_PANEL_BUTTON_NAV   \fBwx_PANEL_EVENT_BUTTON_FIRST\fP | \fBwx_PANEL_EVENT_BUTTON_BACK\fP | \fBwx_PANEL_EVENT_BUTTON_FWD\fP | \fBwx_PANEL_EVENT_BUTTON_LAST\fP"
 
 .PP
 Shortcut flags for navigation buttons\&. 
 .PP
-Definition at line 251 of file dtsgui\&.h\&.
+Definition at line 258 of file dtsgui\&.h\&.
 .SS "#define wx_PANEL_EVENT_BUTTON_NONE   0"
 
 .PP
 Shortcut flags for no buttons\&. 
 .PP
-Definition at line 263 of file dtsgui\&.h\&.
+Definition at line 270 of file dtsgui\&.h\&.
 .SH "Typedef Documentation"
 .PP 
 .SS "typedef struct \fBdtsgui\fP \fBdtsgui\fP"
@@ -605,19 +605,25 @@ Panel Type\&.
 .in +1c
 .TP
 \fB\fIwx_DTSPANEL_WINDOW \fP\fP
+\fBDTSWindow\fP (wx_DTSPANEL_WINDOW) is a basic panel without tab traversal controls and is rarely used (\fBDTSFrame::TextPanel\fP)\&. 
 .TP
 \fB\fIwx_DTSPANEL_PANEL \fP\fP
+\fBDTSStaticPanel\fP (wx_DTSPANEL_PANEL) includes tab traversal\&. 
 .TP
 \fB\fIwx_DTSPANEL_SCROLLPANEL \fP\fP
+\fBDTSScrollPanel\fP (wx_DTSPANEL_SCROLLPANEL) adds scrollbar support\&. 
 .TP
 \fB\fIwx_DTSPANEL_DIALOG \fP\fP
+\fBDTSDialog\fP (wx_DTSPANEL_DIALOG) is a wx_DTSPANEL_PANEL displayed in a pop up dialog box\&. 
 .TP
 \fB\fIwx_DTSPANEL_TREE \fP\fP
-.TP
-\fB\fIwx_DTSPANEL_WIZARD \fP\fP
+\fBDTSTreeWindow\fP (wx_DTSPANEL_TREE) see \fBTree view panel interface\&.\fP\&. 
 .TP
 \fB\fIwx_DTSPANEL_TAB \fP\fP
-
+\fBDTSTabWindow\fP (wx_DTSPANEL_TAB) see \fBTab view panel interface\&.\fP\&. 
+.TP
+\fB\fIwx_DTSPANEL_WIZARD \fP\fP
+\fBDTSWizardWindow\fP (wx_DTSPANEL_WIZARD) see \fBWizard Interface\&.\fP\&. 
 .PP
 Definition at line 232 of file dtsgui\&.h\&.
 .SS "enum \fBtree_cbtype\fP"
@@ -681,7 +687,7 @@ Type of list item\&.
 \fB\fIDTS_WIDGET_COMBOBOX \fP\fP
 
 .PP
-Definition at line 243 of file dtsgui\&.h\&.
+Definition at line 250 of file dtsgui\&.h\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

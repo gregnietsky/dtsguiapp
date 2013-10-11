@@ -519,9 +519,8 @@
     <member refid="group___c-_a_p_i_1ga529d973a998e39dba025dfcd96a9a706" kind="function"><name>dtsgui_setwindow</name></member>
     <member refid="group___c-_a_p_i_1ga4e766a49c1e9eba3f2c2fda47b8166aa" kind="function"><name>dtsgui_sendevent</name></member>
     <member refid="group___c-_a_p_i_1ga1734b840fc0696b13d5b616df0ec3bbb" kind="function"><name>dtsgui_setuptoolbar</name></member>
-    <member refid="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" kind="function"><name>dtsgui_titleappend</name></member>
-    <member refid="group___c-_a_p_i_1ga99f0bbb3bf979d0102b7b19899ad79dd" kind="function"><name>dtsgui_menuitemenable</name></member>
     <member refid="group___c-_a_p_i_1ga164aa159bc57a744f012b49268796bbe" kind="function"><name>dtsgui_set_toolbar</name></member>
+    <member refid="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" kind="function"><name>dtsgui_titleappend</name></member>
     <member refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kind="function"><name>dtsgui_newmenu</name></member>
     <member refid="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" kind="function"><name>dtsgui_newmenuitem</name></member>
     <member refid="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" kind="function"><name>dtsgui_newmenucb</name></member>
@@ -529,6 +528,7 @@
     <member refid="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" kind="function"><name>dtsgui_close</name></member>
     <member refid="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" kind="function"><name>dtsgui_about</name></member>
     <member refid="group___c-_a_p_i-_menus_1gaf655828d94de128cfd8269d03d649092" kind="function"><name>dtsgui_menusep</name></member>
+    <member refid="group___c-_a_p_i-_menus_1ga99f0bbb3bf979d0102b7b19899ad79dd" kind="function"><name>dtsgui_menuitemenable</name></member>
     <member refid="group___c-_a_p_i-_panel_1gac763bff39863668014931022b469d836" kind="function"><name>dtsgui_panel</name></member>
     <member refid="group___c-_a_p_i-_panel_1gafb8efe017917a372826f7ddedb0e8bba" kind="function"><name>dtsgui_textpane</name></member>
     <member refid="group___c-_a_p_i-_panel_1gaa92cb9c6006aaf320e784f04500c3b25" kind="function"><name>dtsgui_treewindow</name></member>
@@ -872,8 +872,8 @@
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500" kind="enumvalue"><name>wx_DTSPANEL_SCROLLPANEL</name></member>
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" kind="enumvalue"><name>wx_DTSPANEL_DIALOG</name></member>
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" kind="enumvalue"><name>wx_DTSPANEL_TREE</name></member>
-    <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" kind="enumvalue"><name>wx_DTSPANEL_WIZARD</name></member>
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" kind="enumvalue"><name>wx_DTSPANEL_TAB</name></member>
+    <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" kind="enumvalue"><name>wx_DTSPANEL_WIZARD</name></member>
     <member refid="group___c_o_r_e_1gafd296180392ef5681415b9fb0590be84" kind="enum"><name>widget_type</name></member>
     <member refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836" kind="enumvalue"><name>DTS_WIDGET_TEXTBOX</name></member>
     <member refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28" kind="enumvalue"><name>DTS_WIDGET_CHECKBOX</name></member>
@@ -912,7 +912,7 @@
     <member refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kind="function"><name>dtsgui_newmenu</name></member>
     <member refid="group___c-_a_p_i-_menus_1ga045cc441a11f42796d6bd89dfa52e4ec" kind="function"><name>dtsgui_newmenucb</name></member>
     <member refid="group___c-_a_p_i-_menus_1gabb8b44357ce2ce4a3fd028939cf8c700" kind="function"><name>dtsgui_newmenuitem</name></member>
-    <member refid="group___c-_a_p_i_1ga99f0bbb3bf979d0102b7b19899ad79dd" kind="function"><name>dtsgui_menuitemenable</name></member>
+    <member refid="group___c-_a_p_i-_menus_1ga99f0bbb3bf979d0102b7b19899ad79dd" kind="function"><name>dtsgui_menuitemenable</name></member>
     <member refid="group___c-_a_p_i-_menus_1gaf655828d94de128cfd8269d03d649092" kind="function"><name>dtsgui_menusep</name></member>
     <member refid="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" kind="function"><name>dtsgui_about</name></member>
     <member refid="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" kind="function"><name>dtsgui_close</name></member>
@@ -1078,8 +1078,8 @@
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500" kind="enumvalue"><name>wx_DTSPANEL_SCROLLPANEL</name></member>
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" kind="enumvalue"><name>wx_DTSPANEL_DIALOG</name></member>
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3" kind="enumvalue"><name>wx_DTSPANEL_TREE</name></member>
-    <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" kind="enumvalue"><name>wx_DTSPANEL_WIZARD</name></member>
     <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" kind="enumvalue"><name>wx_DTSPANEL_TAB</name></member>
+    <member refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02" kind="enumvalue"><name>wx_DTSPANEL_WIZARD</name></member>
     <member refid="group___c_o_r_e_1gafd296180392ef5681415b9fb0590be84" kind="enum"><name>widget_type</name></member>
     <member refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84a30946b987fd9b1a681425eb86c33b836" kind="enumvalue"><name>DTS_WIDGET_TEXTBOX</name></member>
     <member refid="group___c_o_r_e_1ggafd296180392ef5681415b9fb0590be84af8b07c907089ef8cf8534af437682a28" kind="enumvalue"><name>DTS_WIDGET_CHECKBOX</name></member>
@@ -1120,9 +1120,8 @@
     <member refid="group___c-_a_p_i_1ga529d973a998e39dba025dfcd96a9a706" kind="function"><name>dtsgui_setwindow</name></member>
     <member refid="group___c-_a_p_i_1ga4e766a49c1e9eba3f2c2fda47b8166aa" kind="function"><name>dtsgui_sendevent</name></member>
     <member refid="group___c-_a_p_i_1ga1734b840fc0696b13d5b616df0ec3bbb" kind="function"><name>dtsgui_setuptoolbar</name></member>
-    <member refid="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" kind="function"><name>dtsgui_titleappend</name></member>
-    <member refid="group___c-_a_p_i_1ga99f0bbb3bf979d0102b7b19899ad79dd" kind="function"><name>dtsgui_menuitemenable</name></member>
     <member refid="group___c-_a_p_i_1ga164aa159bc57a744f012b49268796bbe" kind="function"><name>dtsgui_set_toolbar</name></member>
+    <member refid="group___c-_a_p_i_1gafc00c020f324c119956fcc38e7fd55db" kind="function"><name>dtsgui_titleappend</name></member>
     <member refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
     <member refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
   </compound>
@@ -1135,6 +1134,7 @@
     <member refid="group___c-_a_p_i-_menus_1ga58e38f8ef567c8f50e15a53507ee4a72" kind="function"><name>dtsgui_close</name></member>
     <member refid="group___c-_a_p_i-_menus_1gaf06c34986c04d800883694733554033e" kind="function"><name>dtsgui_about</name></member>
     <member refid="group___c-_a_p_i-_menus_1gaf655828d94de128cfd8269d03d649092" kind="function"><name>dtsgui_menusep</name></member>
+    <member refid="group___c-_a_p_i-_menus_1ga99f0bbb3bf979d0102b7b19899ad79dd" kind="function"><name>dtsgui_menuitemenable</name></member>
   </compound>
   <compound refid="group___c-_a_p_i-_panel" kind="group"><name>C-API-Panel</name>
     <member refid="group___c-_a_p_i-_panel_1gac763bff39863668014931022b469d836" kind="function"><name>dtsgui_panel</name></member>
@@ -1154,11 +1154,6 @@
     <member refid="group___c-_a_p_i-_panel_1ga9c1222d2fe8fa5066a2c55e4b71c2cac" kind="function"><name>dtsgui_panetoxml</name></member>
     <member refid="group___c-_a_p_i-_panel_1ga3f904089ceb734323477f2b3dbac4a41" kind="function"><name>dtsgui_rundialog</name></member>
   </compound>
-  <compound refid="group___c-_a_p_i-_wizard" kind="group"><name>C-API-Wizard</name>
-    <member refid="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" kind="function"><name>dtsgui_newwizard</name></member>
-    <member refid="group___c-_a_p_i-_wizard_1ga3e76b1ea2eebb91e1d0b5a55649d65e6" kind="function"><name>dtsgui_wizard_addpage</name></member>
-    <member refid="group___c-_a_p_i-_wizard_1ga25174d47f2e9680d41aebdf08ff9b979" kind="function"><name>dtsgui_runwizard</name></member>
-  </compound>
   <compound refid="group___c-_a_p_i-_panel-_tree" kind="group"><name>C-API-Panel-Tree</name>
     <member refid="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" kind="function"><name>dtsgui_nodesetxml</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1gad71b59e1898bce570cac2acd774f71e3" kind="function"><name>dtsgui_treepane</name></member>
@@ -1176,14 +1171,6 @@
     <member refid="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" kind="function"><name>dtsgui_newtabpage</name></member>
     <member refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" kind="function"><name>dtsgui_tabpage_insert</name></member>
     <member refid="group___c-_a_p_i-_panel-_tab_1gad3333a23e28993072b5ef4feed86778c" kind="function"><name>dtsgui_newxmltabpane</name></member>
-  </compound>
-  <compound refid="group___c-_a_p_i-_panel-_items" kind="group"><name>C-API-Panel-Items</name>
-    <member refid="group___c-_a_p_i-_panel-_items_1ga9a2e87bf30be8644653d11754fcb4e26" kind="function"><name>dtsgui_panel_items</name></member>
-    <member refid="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" kind="function"><name>dtsgui_finditem</name></member>
-    <member refid="group___c-_a_p_i-_panel-_items_1ga30bc1422cf3395b150773320ffda00ea" kind="function"><name>dtsgui_item_data</name></member>
-    <member refid="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" kind="function"><name>dtsgui_item_value</name></member>
-    <member refid="group___c-_a_p_i-_panel-_items_1ga2cb1581f47559805b221f9290f9ec83e" kind="function"><name>dtsgui_item_name</name></member>
-    <member refid="group___c-_a_p_i-_panel-_items_1ga37f578498eb38e545906898e7250e6bb" kind="function"><name>dtsgui_findvalue</name></member>
   </compound>
   <compound refid="group___c-_a_p_i-_panel-_elements" kind="group"><name>C-API-Panel-Elements</name>
     <member refid="group___c-_a_p_i-_panel-_elements_1ga557f314ceb047c6d2ee3ec5f40e6b93a" kind="function"><name>dtsgui_listbox_add</name></member>
@@ -1206,6 +1193,14 @@
     <member refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga0f5275b68ac882154ab7b2bf48e47ef2" kind="function"><name>dtsgui_xmllistbox</name></member>
     <member refid="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga9472a3941bf352a063fa5e55a6016fdc" kind="function"><name>dtsgui_xmlcombobox</name></member>
   </compound>
+  <compound refid="group___c-_a_p_i-_panel-_items" kind="group"><name>C-API-Panel-Items</name>
+    <member refid="group___c-_a_p_i-_panel-_items_1ga9a2e87bf30be8644653d11754fcb4e26" kind="function"><name>dtsgui_panel_items</name></member>
+    <member refid="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" kind="function"><name>dtsgui_finditem</name></member>
+    <member refid="group___c-_a_p_i-_panel-_items_1ga30bc1422cf3395b150773320ffda00ea" kind="function"><name>dtsgui_item_data</name></member>
+    <member refid="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" kind="function"><name>dtsgui_item_value</name></member>
+    <member refid="group___c-_a_p_i-_panel-_items_1ga2cb1581f47559805b221f9290f9ec83e" kind="function"><name>dtsgui_item_name</name></member>
+    <member refid="group___c-_a_p_i-_panel-_items_1ga37f578498eb38e545906898e7250e6bb" kind="function"><name>dtsgui_findvalue</name></member>
+  </compound>
   <compound refid="group___c-_a_p_i-_dialog" kind="group"><name>C-API-Dialog</name>
     <member refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" kind="function"><name>dtsgui_alert</name></member>
     <member refid="group___c-_a_p_i-_dialog_1ga5761cfa6ab849723e50760a9642efc9f" kind="function"><name>dtsgui_confirm</name></member>
@@ -1213,11 +1208,18 @@
     <member refid="group___c-_a_p_i-_dialog_1gad458f5d64710487c7213a4921a5ebc99" kind="function"><name>dtsgui_fileopen</name></member>
     <member refid="group___c-_a_p_i-_dialog_1gab2431470ff495d71aae8e41368a214cb" kind="function"><name>dtsgui_pwdialog</name></member>
   </compound>
+  <compound refid="group___c-_a_p_i-_wizard" kind="group"><name>C-API-Wizard</name>
+    <member refid="group___c-_a_p_i-_wizard_1ga2e1e2013214ae275160b8c87e6cb3d89" kind="function"><name>dtsgui_newwizard</name></member>
+    <member refid="group___c-_a_p_i-_wizard_1ga3e76b1ea2eebb91e1d0b5a55649d65e6" kind="function"><name>dtsgui_wizard_addpage</name></member>
+    <member refid="group___c-_a_p_i-_wizard_1ga25174d47f2e9680d41aebdf08ff9b979" kind="function"><name>dtsgui_runwizard</name></member>
+  </compound>
   <compound refid="group___c-_a_p_i-_progress" kind="group"><name>C-API-Progress</name>
     <member refid="group___c-_a_p_i-_progress_1gac4185ec71523c1735f1da2cb6dc876d3" kind="function"><name>dtsgui_progress_start</name></member>
     <member refid="group___c-_a_p_i-_progress_1gabda6276de46c13fb4e0831bb8c8d1ec1" kind="function"><name>dtsgui_progress_update</name></member>
     <member refid="group___c-_a_p_i-_progress_1ga7bd617a3f00cb21ae6df7a37eba0dc7b" kind="function"><name>dtsgui_progress_increment</name></member>
     <member refid="group___c-_a_p_i-_progress_1ga528f638b6cb7b0d813e350a0b0c7262c" kind="function"><name>dtsgui_progress_end</name></member>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
   </compound>
   <compound refid="dir_d422163b96683743ed3963d4aac17747" kind="dir"><name>app</name>
   </compound>

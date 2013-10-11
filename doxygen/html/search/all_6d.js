@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['menu_20bar_20interface_2e',['Menu bar interface.',['../group___c-_a_p_i-_menus.html',1,'']]],
   ['main',['main',['../group___d_t_s-_a_p_p.html#ga3c04138a5bfe5d72780bb7e82a18e627',1,'wxforms.c']]],
   ['mdelete',['mdelete',['../classtreemenu.html#a359469982a21e31368621e0cda9c5f5d',1,'treemenu']]],
   ['mdown',['mdown',['../classtreemenu.html#a662ecad63db574b8e5766be9875ddd3a',1,'treemenu']]],

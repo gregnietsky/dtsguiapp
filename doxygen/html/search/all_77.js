@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['wizard_20interface_2e',['Wizard Interface.',['../group___c-_a_p_i-_wizard.html',1,'']]],
   ['w',['w',['../classdynamic__panel.html#a5d13849f704cffb0ecfde8dfdb072571',1,'dynamic_panel']]],
   ['widget',['widget',['../classform__item.html#a6720d7a562d897686e128fc2146702e7',1,'form_item']]],
   ['widget_5ftype',['widget_type',['../group___c_o_r_e.html#gafd296180392ef5681415b9fb0590be84',1,'dtsgui.h']]],

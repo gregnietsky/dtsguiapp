@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['distrotech_20gui_20library_20c_20api',['Distrotech GUI Library C API',['../group___c-_a_p_i.html',1,'']]],
+  ['display_20panel_20interface_2e',['Display panel interface.',['../group___c-_a_p_i-_panel.html',1,'']]],
   ['data',['data',['../class_d_t_s_d_v_m_list_store.html#a9d9977d520e8871cfdc9abae581801d5',1,'DTSDVMListStore::data()'],['../class_d_t_s_panel_event.html#a63313454db1807ffd97873cb2ffd5e0d',1,'DTSPanelEvent::data()'],['../classtree__newnode.html#a0f8198927692046e5763c7e126ea101c',1,'tree_newnode::data()'],['../classtab__newpane.html#a70f33dd22d1a121e7d8e84cd52f1efd0',1,'tab_newpane::data()'],['../class_d_t_s_tree_window_event.html#a97dc4c3c5cebbaa4c5f7f5dcad70f104',1,'DTSTreeWindowEvent::data()'],['../class_d_t_s_tab_window_event.html#a4d7e06b09353386e0c891fb2f5c82b55',1,'DTSTabWindowEvent::data()'],['../classdynamic__panel.html#a829939df89ab897c11179a31b8cd46be',1,'dynamic_panel::data()'],['../classevdata.html#ab8569cae7cd7a33fde4e51872ef29090',1,'evdata::data()'],['../classform__item.html#a601ff328ce4165b07d5ad23bd96967b7',1,'form_item::data()']]],
   ['data_5fcb',['data_cb',['../classtab__newpane.html#ad411183382cacce488de4bad08fa1e74',1,'tab_newpane']]],
   ['data_5fdir',['DATA_DIR',['../private_8h.html#a48cc0a91e8f54c62f3341c21c8cc74e8',1,'private.h']]],
@@ -8,7 +10,7 @@ var searchData=
   ['delete',['Delete',['../class_d_t_s_d_v_m_list_view.html#aae01dd71efaebb94dfea9e35d552237e',1,'DTSDVMListView']]],
   ['deleteall',['DeleteAll',['../class_d_t_s_d_v_m_list_view.html#a7d0ec062e50e1d05cf4a2e8852104580',1,'DTSDVMListView']]],
   ['dialog',['dialog',['../class_d_t_s_dialog.html#aa5f49d2b6d13bebadc4721ade6f29de9',1,'DTSDialog']]],
-  ['distrotech_20application',['Distrotech Application',['../group___d_t_s-_a_p_p.html',1,'']]],
+  ['distrotech_20server_20configuration_20application',['Distrotech Server Configuration Application',['../group___d_t_s-_a_p_p.html',1,'']]],
   ['distrotech_20application_20wizard_20interface',['Distrotech Application Wizard Interface',['../group___d_t_s-_a_p_p-_wizard.html',1,'']]],
   ['dts_5fc_5fapi',['DTS_C_API',['../namespace_d_t_s___c___a_p_i.html',1,'']]],
   ['dts_5fnode_5fcustomer',['DTS_NODE_CUSTOMER',['../private_8h.html#a018cb6fe637d3a25a67e794d620808eca05bdc159f9d09f11da201a71742409ab',1,'private.h']]],
@@ -98,7 +100,7 @@ var searchData=
   ['dtsgui_5fmenu',['dtsgui_menu',['../group___c_o_r_e.html#gafb1e28bd82fd8ea9d43a188c06095682',1,'dtsgui.h']]],
   ['dtsgui_5fmenuenable',['dtsgui_menuenable',['../group___c-_a_p_i-_menus.html#gab20156180905342ce3bc648253507f73',1,'DTS_C_API::dtsgui_menuenable()'],['../group___c-_a_p_i-_menus.html#gab20156180905342ce3bc648253507f73',1,'dtsgui_menuenable():&#160;cxxapi.cpp']]],
   ['dtsgui_5fmenuitem',['dtsgui_menuitem',['../group___c_o_r_e.html#gaf59302244664352117c2669055da5850',1,'dtsgui.h']]],
-  ['dtsgui_5fmenuitemenable',['dtsgui_menuitemenable',['../group___c-_a_p_i.html#ga99f0bbb3bf979d0102b7b19899ad79dd',1,'dtsgui_menuitemenable():&#160;wrapper.cpp'],['../group___c-_a_p_i.html#ga99f0bbb3bf979d0102b7b19899ad79dd',1,'DTS_C_API::dtsgui_menuitemenable()']]],
+  ['dtsgui_5fmenuitemenable',['dtsgui_menuitemenable',['../group___c-_a_p_i-_menus.html#ga99f0bbb3bf979d0102b7b19899ad79dd',1,'dtsgui_menuitemenable():&#160;wrapper.cpp'],['../group___c-_a_p_i-_menus.html#ga99f0bbb3bf979d0102b7b19899ad79dd',1,'DTS_C_API::dtsgui_menuitemenable()']]],
   ['dtsgui_5fmenusep',['dtsgui_menusep',['../group___c-_a_p_i-_menus.html#gaf655828d94de128cfd8269d03d649092',1,'dtsgui_menusep():&#160;wrapper.cpp'],['../group___c-_a_p_i-_menus.html#gaf655828d94de128cfd8269d03d649092',1,'DTS_C_API::dtsgui_menusep()']]],
   ['dtsgui_5fnewmenu',['dtsgui_newmenu',['../group___c-_a_p_i-_menus.html#gadd0f3eab51bf576378a6438c3982fd48',1,'dtsgui_newmenu():&#160;wrapper.cpp'],['../group___c-_a_p_i-_menus.html#gadd0f3eab51bf576378a6438c3982fd48',1,'DTS_C_API::dtsgui_newmenu()']]],
   ['dtsgui_5fnewmenucb',['dtsgui_newmenucb',['../group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec',1,'dtsgui_newmenucb():&#160;wrapper.cpp'],['../group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec',1,'DTS_C_API::dtsgui_newmenucb()']]],

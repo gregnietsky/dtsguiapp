@@ -230,13 +230,20 @@ enum tree_newnode_flags {
 
 /** @brief Panel Type.*/
 enum panel_type {
+	/** @brief DTSWindow (wx_DTSPANEL_WINDOW) is a basic panel without tab traversal controls and is rarely used (DTSFrame::TextPanel).*/
 	wx_DTSPANEL_WINDOW,
+	/** @brief DTSStaticPanel (wx_DTSPANEL_PANEL) includes tab traversal.*/
 	wx_DTSPANEL_PANEL,
+	/** @brief DTSScrollPanel (wx_DTSPANEL_SCROLLPANEL) adds scrollbar support.*/
 	wx_DTSPANEL_SCROLLPANEL,
+	/** @brief DTSDialog (wx_DTSPANEL_DIALOG) is a wx_DTSPANEL_PANEL displayed in a pop up dialog box.*/
 	wx_DTSPANEL_DIALOG,
+	/** @brief DTSTreeWindow (wx_DTSPANEL_TREE) see @ref C-API-Panel-Tree.*/
 	wx_DTSPANEL_TREE,
-	wx_DTSPANEL_WIZARD,
-	wx_DTSPANEL_TAB
+	/** @brief DTSTabWindow (wx_DTSPANEL_TAB) see @ref C-API-Panel-Tab.*/
+	wx_DTSPANEL_TAB,
+	/** @brief DTSWizardWindow (wx_DTSPANEL_WIZARD) see @ref C-API-Wizard.*/
+	wx_DTSPANEL_WIZARD
 };
 
 /** @brief Type of list item.*/

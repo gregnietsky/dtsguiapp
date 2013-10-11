@@ -1,10 +1,10 @@
-.TH "C API Standard Form Element Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Basic Elements." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Standard Form Element Interface \- 
+Basic Elements. \- 
 .PP
-C API for placing and creating standard elements on a panel\&.  
+Elements consisting Name/Value/Data\&.  
 
 .SS "Functions"
 
@@ -36,8 +36,13 @@ C API for placing and creating standard elements on a panel\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for placing and creating standard elements on a panel\&. 
+Elements consisting Name/Value/Data\&. 
 
+\fBNote:\fP
+.RS 4
+The data is a reference to a referenced object\&. 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -68,7 +73,7 @@ Place a checkbox element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1234 of file wrapper\&.cpp\&.
+Definition at line 1287 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::CheckBox(), and DTSGUI_FORM_DATA_PTR\&.
 .PP
@@ -99,7 +104,7 @@ Form item that can be used to add values this must be unreferenced
 .PP
 
 .PP
-Definition at line 1260 of file wrapper\&.cpp\&.
+Definition at line 1313 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::ComboBox(), and DTSGUI_FORM_DATA_PTR\&.
 .PP
@@ -130,7 +135,7 @@ Form item that can be used to add values this must be unreferenced
 .PP
 
 .PP
-Definition at line 1247 of file wrapper\&.cpp\&.
+Definition at line 1300 of file wrapper\&.cpp\&.
 .PP
 References DTSGUI_FORM_DATA_PTR, and DTSPanel::ListBox()\&.
 .PP
@@ -158,7 +163,7 @@ Place a password element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1219 of file wrapper\&.cpp\&.
+Definition at line 1272 of file wrapper\&.cpp\&.
 .PP
 References DTSGUI_FORM_DATA_PTR, and DTSPanel::TextBox()\&.
 .SS "void DTS_C_API::dtsgui_textbox (\fBdtsgui_pane\fPpane, const char *title, const char *name, const char *value, void *data)"
@@ -184,7 +189,7 @@ Place a text element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1193 of file wrapper\&.cpp\&.
+Definition at line 1246 of file wrapper\&.cpp\&.
 .PP
 References DTSGUI_FORM_DATA_PTR, and DTSPanel::TextBox()\&.
 .PP
@@ -212,7 +217,7 @@ Place a multi line text element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1206 of file wrapper\&.cpp\&.
+Definition at line 1259 of file wrapper\&.cpp\&.
 .PP
 References DTSGUI_FORM_DATA_PTR, and DTSPanel::TextBox()\&.
 .PP

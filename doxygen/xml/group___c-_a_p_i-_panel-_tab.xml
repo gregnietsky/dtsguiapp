@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
   <compounddef id="group___c-_a_p_i-_panel-_tab" kind="group">
     <compoundname>C-API-Panel-Tab</compoundname>
-    <title>C API Tab View Interface</title>
+    <title>Tab view panel interface.</title>
       <sectiondef kind="func">
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group___c_o_r_e_1ga80d0a6abc3c934c0adc3fca6a1e62438" kindref="member">dtsgui_pane</ref></type>
@@ -95,7 +95,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="545" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="545" bodyend="548"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="597" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="597" bodyend="600"/>
         <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="977" endline="998">DTSTabWindow::CreateTab</references>
         <referencedby refid="private_8h_1abf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="145" endline="184">iface_config</referencedby>
         <referencedby refid="private_8h_1aa1aa69985689f9714422c273fe968fdf" compoundref="pbxconfig_8c" startline="325" endline="350">pbx_settings</referencedby>
@@ -213,7 +213,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="574" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="574" bodyend="577"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="626" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="626" bodyend="629"/>
         <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="977" endline="998">DTSTabWindow::CreateTab</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_tab_1gad3333a23e28993072b5ef4feed86778c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -352,16 +352,16 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="603" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="602" bodyend="606"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="655" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="654" bodyend="658"/>
         <references refid="classtab__newpane_1a8084796f246b29a21c9077aefa40fc18" compoundref="_d_t_s_tree_window_8cpp" startline="184" endline="200">tab_newpane::handle_newtabpane_cb</references>
         <references refid="classtab__newpane_1a66f664e9d0212bd0415953c72afbbacd" compoundref="_d_t_s_tree_window_8cpp" startline="131" endline="155">tab_newpane::tab_newpane</references>
         <referencedby refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" compoundref="interface_8c" startline="137" endline="142">network_iface_new_pane_cb</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>C API for managing tab view panels. </para>    </briefdescription>
+<para>A tree view is a panel with tabs along the top and display area underneath. </para>    </briefdescription>
     <detaileddescription>
-<para><simplesect kind="remark"><para>Resources controlling and manipulating tab view in the C API. </para></simplesect>
+<para><xrefsect id="todo_1_todo000004"><xreftitle>Todo</xreftitle><xrefdescription><para>Implement a right click action to allow for deletion via a confirmation dialog. </para></xrefdescription></xrefsect><simplesect kind="remark"><para>The tab window allows grouping related panels together via the tab control when the tab is clicked its display area displays the panel associated with this control. </para></simplesect>
 </para>    </detaileddescription>
   </compounddef>
 </doxygen>

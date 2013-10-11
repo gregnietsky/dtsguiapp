@@ -50,8 +50,8 @@ var dtsgui_8h =
       [ "wx_DTSPANEL_SCROLLPANEL", "dtsgui_8h.html#gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500", null ],
       [ "wx_DTSPANEL_DIALOG", "dtsgui_8h.html#gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a", null ],
       [ "wx_DTSPANEL_TREE", "dtsgui_8h.html#gga9275874ac61d3750aa677a36da714373a8aa14d05cc73bd9438f302f6f2cb29c3", null ],
-      [ "wx_DTSPANEL_WIZARD", "dtsgui_8h.html#gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02", null ],
-      [ "wx_DTSPANEL_TAB", "dtsgui_8h.html#gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad", null ]
+      [ "wx_DTSPANEL_TAB", "dtsgui_8h.html#gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad", null ],
+      [ "wx_DTSPANEL_WIZARD", "dtsgui_8h.html#gga9275874ac61d3750aa677a36da714373aa108fde55f9c1830cf68cd368aba1d02", null ]
     ] ],
     [ "tree_cbtype", "dtsgui_8h.html#ga465794df2cb30731dfe34d3e7a4ed368", [
       [ "DTSGUI_TREE_CB_SELECT", "dtsgui_8h.html#gga465794df2cb30731dfe34d3e7a4ed368adac89e1845cacd5358022cbc20aba1a9", null ],

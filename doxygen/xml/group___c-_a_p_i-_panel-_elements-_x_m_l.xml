@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
   <compounddef id="group___c-_a_p_i-_panel-_elements-_x_m_l" kind="group">
     <compoundname>C-API-Panel-Elements-XML</compoundname>
-    <title>C API XML Form Element Interface</title>
+    <title>XML Elements</title>
       <sectiondef kind="func">
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements-_x_m_l_1ga8eca510dc07eee0cd113f852fe67caa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,7 +105,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1276" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1276" bodyend="1279"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1329" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1329" bodyend="1332"/>
         <references refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" compoundref="_d_t_s_panel_8cpp" startline="572" endline="585">DTSPanel::XMLTextBox</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1aa879445eb24134718f10512cbd22df27" compoundref="netconfig_8c" startline="504" endline="511">network_adsl_user</referencedby>
@@ -249,7 +249,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1292" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1292" bodyend="1295"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1345" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1345" bodyend="1348"/>
         <references refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" compoundref="_d_t_s_panel_8cpp" startline="572" endline="585">DTSPanel::XMLTextBox</references>
         <referencedby refid="group___d_t_s-_a_p_p-_wizard_1gaccc1788f03d17d487ce09a1d07d53018" compoundref="wizard_8c" startline="163" endline="172">wizz_custinfo</referencedby>
       </memberdef>
@@ -354,7 +354,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1308" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1308" bodyend="1311"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1361" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1361" bodyend="1364"/>
         <references refid="class_d_t_s_panel_1a5bbe4bfc295ef7b772c09628e80976c7" compoundref="_d_t_s_panel_8cpp" startline="591" endline="593">DTSPanel::XMLPasswdBox</references>
         <referencedby refid="pbxconfig_8c_1a13ef8f931ae62e6036a1ac3e6596a424" compoundref="pbxconfig_8c" startline="195" endline="212">pbxconf_global</referencedby>
       </memberdef>
@@ -481,7 +481,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1326" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1326" bodyend="1329"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1379" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1379" bodyend="1382"/>
         <references refid="class_d_t_s_panel_1a1495f670e901f45cbbc3a4d2c471aa53" compoundref="_d_t_s_panel_8cpp" startline="615" endline="633">DTSPanel::XMLCheckBox</references>
         <referencedby refid="netconfig_8c_1ae9c5a17913250cf9e849ee49b2398b98" compoundref="netconfig_8c" startline="76" endline="87">network_config_dns</referencedby>
         <referencedby refid="netconfig_8c_1a07f37413fb1c1cb24c6f3a8a2e542114" compoundref="netconfig_8c" startline="138" endline="149">network_config_dns_domain</referencedby>
@@ -607,7 +607,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1343" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1343" bodyend="1346"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1396" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1396" bodyend="1399"/>
         <references refid="class_d_t_s_panel_1a03d63a8c380ee62e263d7bc3a3c86396" compoundref="_d_t_s_panel_8cpp" startline="654" endline="669">DTSPanel::XMLListBox</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>
@@ -727,15 +727,18 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1360" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1360" bodyend="1363"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1413" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1413" bodyend="1416"/>
         <references refid="class_d_t_s_panel_1a4d294755a98b6194df04292abe18d1b0" compoundref="_d_t_s_panel_8cpp" startline="694" endline="709">DTSPanel::XMLComboBox</references>
         <referencedby refid="netconfig_8c_1adceac66b5b38e18e528fc5a2adb2d649" compoundref="netconfig_8c" startline="245" endline="275">network_wifi</referencedby>
         <referencedby refid="group___d_t_s-_a_p_p-_wizard_1ga4fc4a7cde0492cbde04a4e0804cc81d8" compoundref="wizard_8c" startline="216" endline="230">wizz_network</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>C API for placing and creating XML elements on a panel. </para>    </briefdescription>
+<para>Elements derived from a XML node. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_d_t_s_panel_1aab8f3d3fbeb44163401d558d903f45ad" kindref="member">DTSPanel::GetNode()</ref> </para></simplesect>
+<xrefsect id="todo_1_todo000006"><xreftitle>Todo</xreftitle><xrefdescription><para>Adding functions to work from a search path will be better than the current interface that alloacates a new search for each element. </para></xrefdescription></xrefsect><simplesect kind="remark"><para>XML elements require a xpath to the parent , node name , filter attribute , filter value and attribute name to derive the value from. </para><simplesectsep/><para>If a node name is supplied a XML node will be attempted to be created. </para><simplesectsep/><para>If no XML node is found or can be created the element will be disabled. </para><simplesectsep/><para>the resulting path will be <verbatim>XPATH/Node&lt;[&lt;Filter attribute|.&gt; = &apos;Filter Value&apos;]&gt;</verbatim> </para></simplesect>
+<simplesect kind="note"><para>node, filter attribute, filter value and attribute may be NULL. </para><simplesectsep/><para>If the node name is not supplied a node will not be created. </para><simplesectsep/><para>If the attribute is NULL the value of the node will be used for value. </para><simplesectsep/><para>If no filter value is supplied the filter attribute is ignored </para></simplesect>
+</para>    </detaileddescription>
   </compounddef>
 </doxygen>

@@ -1,10 +1,10 @@
-.TH "C API Progress Dialog Functions" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Progress dialog interface." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Progress Dialog Functions \- 
+Progress dialog interface. \- 
 .PP
-C API for managing progress dialog\&.  
+Popup dialog containing a progress bar and posible cancel button\&.  
 
 .SS "Functions"
 
@@ -28,11 +28,11 @@ C API for managing progress dialog\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for managing progress dialog\&. 
+Popup dialog containing a progress bar and posible cancel button\&. 
 
-\fBRemarks:\fP
+\fBTodo\fP
 .RS 4
-Resources controlling and manipulating the progress dialog 
+Allow multiple instances of progress dialog not only the single interface at present\&. 
 .RE
 .PP
 
@@ -53,7 +53,7 @@ Disable the progress bar\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1005 of file wrapper\&.cpp\&.
+Definition at line 1057 of file wrapper\&.cpp\&.
 .PP
 References DTSFrame::EndProgress(), and dtsgui::GetFrame()\&.
 .SS "int DTS_C_API::dtsgui_progress_increment (struct \fBdtsgui\fP *dtsgui, intival, const char *newtext)"
@@ -80,7 +80,7 @@ Increments the counter by adding to it not setting it\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 996 of file wrapper\&.cpp\&.
+Definition at line 1048 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::IncProgress()\&.
 .SS "int DTS_C_API::dtsgui_progress_start (struct \fBdtsgui\fP *dtsgui, const char *text, intmaxval, intquit)"
@@ -109,7 +109,7 @@ zero on failure
 .PP
 
 .PP
-Definition at line 969 of file wrapper\&.cpp\&.
+Definition at line 1021 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::StartProgress()\&.
 .SS "int DTS_C_API::dtsgui_progress_update (struct \fBdtsgui\fP *dtsgui, intnewval, const char *newtext)"
@@ -136,7 +136,7 @@ Update the progress bar counter This function updates the current progress value
 .PP
 
 .PP
-Definition at line 984 of file wrapper\&.cpp\&.
+Definition at line 1036 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::UpdateProgress()\&.
 .SH "Author"

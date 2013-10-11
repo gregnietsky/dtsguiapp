@@ -1,10 +1,10 @@
-.TH "C API Menu Bar Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Menu bar interface." 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API Menu Bar Interface \- 
+Menu bar interface. \- 
 .PP
-C-API Menu Management\&.  
+Create and manage menus\&.  
 
 .SS "Functions"
 
@@ -24,7 +24,7 @@ C-API Menu Management\&.
 .ti -1c
 .RI "\fBdtsgui_menuitem\fP \fBDTS_C_API::dtsgui_newmenucb\fP (\fBdtsgui_menu\fP dtsmenu, struct \fBdtsgui\fP *\fBdtsgui\fP, const char *hint, const char *name, int blank, \fBdtsgui_dynpanel\fP cb, void *data)"
 .br
-.RI "\fICreate a menu item that will call a function with supplied data\&. \fP"
+.RI "\fICreate a menu item that will call a function with supplied data to execute when selected\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_exit\fP (\fBdtsgui_menu\fP dtsmenu, struct \fBdtsgui\fP *\fBdtsgui\fP)"
 .br
@@ -41,14 +41,27 @@ C-API Menu Management\&.
 .RI "void \fBDTS_C_API::dtsgui_menusep\fP (\fBdtsgui_menu\fP dtsmenu)"
 .br
 .RI "\fIAdd Menu seperator to the menu\&. \fP"
+.ti -1c
+.RI "void \fBDTS_C_API::dtsgui_menuitemenable\fP (\fBdtsgui_menuitem\fP dmi, int enable)"
+.br
+.RI "\fIEnable/Disable an menu item\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
-C-API Menu Management\&. 
+Create and manage menus\&. 
 
 \fBRemarks:\fP
 .RS 4
-Resources controlling the menu bar in the C API\&. 
+The menu bar at the top of the application contains menus, these menus contain menuitems these are the primary control interface\&. 
+.PP
+Menu items when selected can call a function or place a pre created panel in the display area\&. If the function returns a panel it will be placed in the display area\&. 
+.PP
+Menuitems can also be enabled / disabled programatically, disabled menu items are shown greyed out\&. 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Define and implement Exit/Quit events 
 .RE
 .PP
 
@@ -82,7 +95,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 370 of file wrapper\&.cpp\&.
+Definition at line 412 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::SetAbout()\&.
 .PP
@@ -115,7 +128,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 353 of file wrapper\&.cpp\&.
+Definition at line 395 of file wrapper\&.cpp\&.
 .PP
 References DTSFrame::CloseMenu(), and dtsgui::GetFrame()\&.
 .PP
@@ -148,7 +161,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 335 of file wrapper\&.cpp\&.
+Definition at line 377 of file wrapper\&.cpp\&.
 .PP
 References DTSFrame::CloseMenu(), and dtsgui::GetFrame()\&.
 .PP
@@ -168,6 +181,21 @@ Enable or disable all items in menu\&. \fBParameters:\fP
 Definition at line 51 of file cxxapi\&.cpp\&.
 .PP
 Referenced by config_menu(), open_config(), and save_config()\&.
+.SS "void DTS_C_API::dtsgui_menuitemenable (\fBdtsgui_menuitem\fPdmi, intenable)"
+
+.PP
+Enable/Disable an menu item\&. \fBParameters:\fP
+.RS 4
+\fIdmi\fP Menuitem 
+.br
+\fIenable\fP Disable the menu if set to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 437 of file wrapper\&.cpp\&.
+.PP
+Referenced by open_config(), and save_config()\&.
 .SS "void DTS_C_API::dtsgui_menusep (\fBdtsgui_menu\fPdtsmenu)"
 
 .PP
@@ -192,7 +220,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 385 of file wrapper\&.cpp\&.
+Definition at line 427 of file wrapper\&.cpp\&.
 .PP
 Referenced by config_menu(), file_menu(), and help_menu()\&.
 .SS "\fBdtsgui_menu\fP DTS_C_API::dtsgui_newmenu (struct \fBdtsgui\fP *dtsgui, const char *name)"
@@ -219,7 +247,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 268 of file wrapper\&.cpp\&.
+Definition at line 310 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::NewMenu()\&.
 .PP
@@ -227,7 +255,7 @@ Referenced by config_menu(), file_menu(), and help_menu()\&.
 .SS "\fBdtsgui_menuitem\fP DTS_C_API::dtsgui_newmenucb (\fBdtsgui_menu\fPdtsmenu, struct \fBdtsgui\fP *dtsgui, const char *hint, const char *name, intblank, \fBdtsgui_dynpanel\fPcb, void *data)"
 
 .PP
-Create a menu item that will call a function with supplied data\&. The specified call back will be called passing the application pointer (dtsgui), the name and data ptr supplied\&. if this function returns a \fBDTSObject\fP pane it will be displayed\&.
+Create a menu item that will call a function with supplied data to execute when selected\&. The specified call back will be called passing the application pointer (dtsgui), the name and data ptr supplied\&. if this function returns a \fBDTSObject\fP pane it will be displayed\&.
 .PP
 \fBSee Also:\fP
 .RS 4
@@ -266,7 +294,7 @@ Created menu item\&.
 .PP
 
 .PP
-Definition at line 317 of file wrapper\&.cpp\&.
+Definition at line 359 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), DTS_C_API::menuid, and DTSFrame::NewMenuItem()\&.
 .PP
@@ -305,7 +333,7 @@ Created menu item\&.
 .PP
 
 .PP
-Definition at line 290 of file wrapper\&.cpp\&.
+Definition at line 332 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), DTS_C_API::menuid, and DTSFrame::NewMenuItem()\&.
 .PP

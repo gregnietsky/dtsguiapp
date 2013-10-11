@@ -29,7 +29,7 @@
 /** @ingroup C-API
   * @brief Defining __DTS_C_API allows access to C API from inside a C++ file
   * 
-  * dtsgui.h will only include the definitions for the C API if this is defined.*/
+  * dtsgui.h will only include the definitions for the C API using C++ if this is defined.*/
 #define __DTS_C_API
 
 #ifdef __WIN32__

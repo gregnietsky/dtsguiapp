@@ -1,10 +1,10 @@
-.TH "C API XML Form Element Interface" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "XML Elements" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-C API XML Form Element Interface \- 
+XML Elements \- 
 .PP
-C API for placing and creating XML elements on a panel\&.  
+Elements derived from a XML node\&.  
 
 .SS "Functions"
 
@@ -36,8 +36,46 @@ C API for placing and creating XML elements on a panel\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-C API for placing and creating XML elements on a panel\&. 
+Elements derived from a XML node\&. 
 
+\fBSee Also:\fP
+.RS 4
+\fBDTSPanel::GetNode()\fP 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Adding functions to work from a search path will be better than the current interface that alloacates a new search for each element\&. 
+.RE
+.PP
+\fBRemarks:\fP
+.RS 4
+XML elements require a xpath to the parent , node name , filter attribute , filter value and attribute name to derive the value from\&. 
+.PP
+If a node name is supplied a XML node will be attempted to be created\&. 
+.PP
+If no XML node is found or can be created the element will be disabled\&. 
+.PP
+the resulting path will be 
+.PP
+.nf
+XPATH/Node<[<Filter attribute|.> = 'Filter Value']>
+.fi
+.PP
+ 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+node, filter attribute, filter value and attribute may be NULL\&. 
+.PP
+If the node name is not supplied a node will not be created\&. 
+.PP
+If the attribute is NULL the value of the node will be used for value\&. 
+.PP
+If no filter value is supplied the filter attribute is ignored 
+.RE
+.PP
 
 .SH "Function Documentation"
 .PP 
@@ -74,7 +112,7 @@ Place a XML checkbox element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1326 of file wrapper\&.cpp\&.
+Definition at line 1379 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::XMLCheckBox()\&.
 .PP
@@ -113,7 +151,7 @@ Form item that can be used to add values this must be unreferenced
 .PP
 
 .PP
-Definition at line 1360 of file wrapper\&.cpp\&.
+Definition at line 1413 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::XMLComboBox()\&.
 .PP
@@ -152,7 +190,7 @@ Form item that can be used to add values this must be unreferenced
 .PP
 
 .PP
-Definition at line 1343 of file wrapper\&.cpp\&.
+Definition at line 1396 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::XMLListBox()\&.
 .PP
@@ -186,7 +224,7 @@ Place a XML password element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1308 of file wrapper\&.cpp\&.
+Definition at line 1361 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::XMLPasswdBox()\&.
 .PP
@@ -220,7 +258,7 @@ Place a XML text element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1276 of file wrapper\&.cpp\&.
+Definition at line 1329 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::XMLTextBox()\&.
 .PP
@@ -254,7 +292,7 @@ Place a XML multi line text element on the panel\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 1292 of file wrapper\&.cpp\&.
+Definition at line 1345 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::XMLTextBox()\&.
 .PP

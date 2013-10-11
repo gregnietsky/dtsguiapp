@@ -1,8 +1,8 @@
-.TH "Library C API" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.TH "Distrotech GUI Library C API" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Library C API \- 
+Distrotech GUI Library C API \- 
 .PP
 Exported functions used for use in C code\&.  
 
@@ -10,25 +10,25 @@ Exported functions used for use in C code\&.
 
 .in +1c
 .ti -1c
-.RI "\fBC API Menu Bar Interface\fP"
+.RI "\fBMenu bar interface\&.\fP"
 .br
-.RI "\fIC-API Menu Management\&. \fP"
+.RI "\fICreate and manage menus\&. \fP"
 .ti -1c
-.RI "\fBC API Panel Interface\fP"
+.RI "\fBDisplay panel interface\&.\fP"
 .br
-.RI "\fIC API Panel Management\&. \fP"
+.RI "\fICreate and manage display panels shown in the application display area\&. \fP"
 .ti -1c
-.RI "\fBC API Wizard Interface\fP"
+.RI "\fBUser interface dialogs\&.\fP"
 .br
-.RI "\fIC API Wizard Management\&. \fP"
+.RI "\fICommon dialogs for user interaction Confirmation, File, Password\&. \fP"
 .ti -1c
-.RI "\fBC API Common Dialog Boxes\fP"
+.RI "\fBWizard Interface\&.\fP"
 .br
-.RI "\fIC API for managing user interface dialogs\&. \fP"
+.RI "\fIMulti panel pop up wizard user interface\&. \fP"
 .ti -1c
-.RI "\fBC API Progress Dialog Functions\fP"
+.RI "\fBProgress dialog interface\&.\fP"
 .br
-.RI "\fIC API for managing progress dialog\&. \fP"
+.RI "\fIPopup dialog containing a progress bar and posible cancel button\&. \fP"
 .in -1c
 .SS "Files"
 
@@ -44,7 +44,7 @@ Exported functions used for use in C code\&.
 .ti -1c
 .RI "file \fBwrapper\&.cpp\fP"
 .br
-.RI "\fIC API Wrapper functions exported\&. \fP"
+.RI "\fIWrapper functions exported to C to allow interfacing with C++\&. \fP"
 .in -1c
 .SS "Namespaces"
 
@@ -76,7 +76,7 @@ Exported functions used for use in C code\&.
 .ti -1c
 .RI "int \fBDTS_C_API::dtsgui_run\fP (int argc, char **argv)"
 .br
-.RI "\fIConfigure the GUI and create a application frame\&. \fP"
+.RI "\fIPass execution to the GUI and activate the frame\&. \fP"
 .ti -1c
 .RI "void * \fBDTS_C_API::dtsgui_userdata\fP (struct \fBdtsgui\fP *\fBdtsgui\fP)"
 .br
@@ -84,27 +84,23 @@ Exported functions used for use in C code\&.
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_setwindow\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, \fBdtsgui_pane\fP p)"
 .br
-.RI "\fISet the displayed panel\&. \fP"
+.RI "\fISet the displayed panel to pane provided\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_sendevent\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, int eid)"
 .br
-.RI "\fIEmit a event handled by event callback's A event is emited and recived by all active handlers The ID can be determined as required\&. \fP"
+.RI "\fIEmit a event handled by event callback's\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_setuptoolbar\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, \fBdtsgui_toolbar_create\fP cb, void *data)"
 .br
-.RI "\fICallback to run to create and activate the toolbar\&. The toolbar has of yet not been wrapped into the C API Its recomended that a C++ object be linked that contains a derived class of wxToolbar\&. \fP"
-.ti -1c
-.RI "void \fBDTS_C_API::dtsgui_titleappend\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *text)"
-.br
-.RI "\fIAppend text to the title enclosed in square brackets Update the main application title bar text\&. \fP"
-.ti -1c
-.RI "void \fBDTS_C_API::dtsgui_menuitemenable\fP (\fBdtsgui_menuitem\fP dmi, int enable)"
-.br
-.RI "\fIEnable/Disable an menu item\&. \fP"
+.RI "\fISpecify callback to run to create and activate the toolbar\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_set_toolbar\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, int show)"
 .br
 .RI "\fIDisable or enable the toolbar\&. \fP"
+.ti -1c
+.RI "void \fBDTS_C_API::dtsgui_titleappend\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *text)"
+.br
+.RI "\fIAppend text to the application frame title enclosed in square brackets\&. \fP"
 .in -1c
 .SS "Variables"
 
@@ -144,15 +140,15 @@ Use of this API is not recomended from inside C++ use the native API\&.
 .SS "#define __DTS_C_API"
 
 .PP
-Defining __DTS_C_API allows access to C API from inside a C++ file\&. \fBdtsgui\&.h\fP will only include the definitions for the C API if this is defined\&. 
+Defining __DTS_C_API allows access to C API from inside a C++ file\&. \fBdtsgui\&.h\fP will only include the definitions for the C API using C++ if this is defined\&. 
 .PP
 Definition at line 33 of file cxxapi\&.cpp\&.
 .SS "#define __DTS_C_API"
 
 .PP
-Defining __DTS_C_API allows access to C API from inside a C++ file\&. \fBdtsgui\&.h\fP will only include the definitions for the C API if this is defined\&. 
+Defining __DTS_C_API allows access to C API from inside a C++ file\&. \fBdtsgui\&.h\fP will only include the definitions for the C API using C++ if this is defined\&. 
 .PP
-Definition at line 102 of file wrapper\&.cpp\&.
+Definition at line 148 of file wrapper\&.cpp\&.
 .SH "Function Documentation"
 .PP 
 .SS "void DTS_C_API::dtsgui_config (\fBdtsgui_configcb\fPconfcallback_cb, void *userdata, struct \fBpoint\fPwsize, struct \fBpoint\fPwpos, const char *title, const char *status)"
@@ -164,7 +160,7 @@ Application processing continues until dtsgui_run is executed at this point the 
 .PP
 The userdata is returned in the callback\&.
 .PP
-The Callback must return a non zero value to indicat success should the application fail returning 0 will close the application\&.
+The Callback must return a non zero value to indicate success should the application fail returning 0 will close the application\&.
 .PP
 \fBSee Also:\fP
 .RS 4
@@ -195,28 +191,13 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 155 of file wrapper\&.cpp\&.
+Definition at line 201 of file wrapper\&.cpp\&.
 .PP
 Referenced by main()\&.
-.SS "void DTS_C_API::dtsgui_menuitemenable (\fBdtsgui_menuitem\fPdmi, intenable)"
-
-.PP
-Enable/Disable an menu item\&. \fBParameters:\fP
-.RS 4
-\fIdmi\fP Menuitem 
-.br
-\fIenable\fP Disable the menu if set to 0\&. 
-.RE
-.PP
-
-.PP
-Definition at line 242 of file wrapper\&.cpp\&.
-.PP
-Referenced by open_config(), and save_config()\&.
 .SS "int DTS_C_API::dtsgui_run (intargc, char **argv)"
 
 .PP
-Configure the GUI and create a application frame\&. Pass application processing to the GUI after calling the configure callback\&.
+Pass execution to the GUI and activate the frame\&. Pass application processing to the GUI after calling the configure callback\&.
 .PP
 \fBSee Also:\fP
 .RS 4
@@ -239,13 +220,15 @@ Return value from callback function\&.
 .PP
 
 .PP
-Definition at line 170 of file wrapper\&.cpp\&.
+Definition at line 216 of file wrapper\&.cpp\&.
 .PP
 Referenced by main()\&.
 .SS "void DTS_C_API::dtsgui_sendevent (struct \fBdtsgui\fP *dtsgui, inteid)"
 
 .PP
-Emit a event handled by event callback's A event is emited and recived by all active handlers The ID can be determined as required\&. \fBSee Also:\fP
+Emit a event handled by event callback's\&. A event is emited and recived by all active handlers The ID can be determined as required\&. 
+.PP
+\fBSee Also:\fP
 .RS 4
 \fBDTSFrame::SendDTSEvent()\fP 
 .RE
@@ -259,7 +242,7 @@ Emit a event handled by event callback's A event is emited and recived by all ac
 .PP
 
 .PP
-Definition at line 209 of file wrapper\&.cpp\&.
+Definition at line 256 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::SendDTSEvent()\&.
 .PP
@@ -281,7 +264,7 @@ Disable or enable the toolbar\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 252 of file wrapper\&.cpp\&.
+Definition at line 283 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::ShowToolbar()\&.
 .PP
@@ -289,9 +272,16 @@ Referenced by open_config(), and save_config()\&.
 .SS "void DTS_C_API::dtsgui_setuptoolbar (struct \fBdtsgui\fP *dtsgui, \fBdtsgui_toolbar_create\fPcb, void *data)"
 
 .PP
-Callback to run to create and activate the toolbar\&. The toolbar has of yet not been wrapped into the C API Its recomended that a C++ object be linked that contains a derived class of wxToolbar\&. \fBSee Also:\fP
+Specify callback to run to create and activate the toolbar\&. The toolbar has of yet not been wrapped into the C API Its recomended that a C++ object be linked that contains a derived class of wxToolbar\&. 
+.PP
+\fBSee Also:\fP
 .RS 4
 \fBDTSFrame::SetupToolbar\fP 
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+This needs to be done in the application configuration callback\&. 
 .RE
 .PP
 \fBParameters:\fP
@@ -305,7 +295,7 @@ Callback to run to create and activate the toolbar\&. The toolbar has of yet not
 .PP
 
 .PP
-Definition at line 223 of file wrapper\&.cpp\&.
+Definition at line 272 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::SetupToolbar()\&.
 .PP
@@ -313,7 +303,7 @@ Referenced by guiconfig_cb()\&.
 .SS "void DTS_C_API::dtsgui_setwindow (struct \fBdtsgui\fP *dtsgui, \fBdtsgui_pane\fPp)"
 
 .PP
-Set the displayed panel\&. Switch the curent pane with the one provided this should not be done and rather use menu callbacks\&.
+Set the displayed panel to pane provided\&. Switch the curent pane with the one provided this should not be done and rather use menu callbacks\&.
 .PP
 \fBSee Also:\fP
 .RS 4
@@ -329,13 +319,15 @@ Set the displayed panel\&. Switch the curent pane with the one provided this sho
 .PP
 
 .PP
-Definition at line 197 of file wrapper\&.cpp\&.
+Definition at line 243 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::SetWindow()\&.
 .SS "void DTS_C_API::dtsgui_titleappend (struct \fBdtsgui\fP *dtsgui, const char *text)"
 
 .PP
-Append text to the title enclosed in square brackets Update the main application title bar text\&. \fBSee Also:\fP
+Append text to the application frame title enclosed in square brackets\&. Update the main application title bar text\&. 
+.PP
+\fBSee Also:\fP
 .RS 4
 \fBdtsgui::AppendTitle()\fP 
 .RE
@@ -349,7 +341,7 @@ Append text to the title enclosed in square brackets Update the main application
 .PP
 
 .PP
-Definition at line 234 of file wrapper\&.cpp\&.
+Definition at line 294 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::AppendTitle()\&.
 .PP
@@ -379,7 +371,7 @@ Reference to application user data
 .PP
 
 .PP
-Definition at line 183 of file wrapper\&.cpp\&.
+Definition at line 229 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetUserData()\&.
 .PP
@@ -391,7 +383,7 @@ Referenced by advanced_config(), app_getxmldoc(), config_menu(), export_config()
 .PP
 Static variable containing menuid incremented each time a menu is created\&. 
 .PP
-Definition at line 129 of file wrapper\&.cpp\&.
+Definition at line 175 of file wrapper\&.cpp\&.
 .PP
 Referenced by DTS_C_API::dtsgui_newmenucb(), and DTS_C_API::dtsgui_newmenuitem()\&.
 .SH "Author"

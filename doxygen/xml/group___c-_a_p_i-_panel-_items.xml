@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
   <compounddef id="group___c-_a_p_i-_panel-_items" kind="group">
     <compoundname>C-API-Panel-Items</compoundname>
-    <title>C API Form Item Interface</title>
+    <title>Panel item interface.</title>
       <sectiondef kind="func">
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga9a2e87bf30be8644653d11754fcb4e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct bucket_list *</type>
@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1018" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1018" bodyend="1021"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1070" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1070" bodyend="1073"/>
         <references refid="class_d_t_s_object_1a4cadcce0480e7e8f4a9a07a4aedd3c1f" compoundref="_d_t_s_panel_8cpp" startline="304" endline="309">DTSObject::GetItems</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -68,7 +68,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1031" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1031" bodyend="1034"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1083" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1083" bodyend="1086"/>
         <references refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" compoundref="_d_t_s_panel_8cpp" startline="869" endline="871">DTSPanel::FindItem</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga30bc1422cf3395b150773320ffda00ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -96,7 +96,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1044" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1044" bodyend="1046"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1096" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1096" bodyend="1098"/>
         <references refid="classform__item_1a45b4a4db5526c1032f15ba20d3f28249" compoundref="pitems_8cpp" startline="136" endline="145">form_item::GetData</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -125,7 +125,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1055" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1055" bodyend="1057"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1107" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1107" bodyend="1109"/>
         <references refid="classform__item_1a6377c3eeefcf7272d5200cd462c9eba7" compoundref="pitems_8cpp" startline="184" endline="211">form_item::GetValue</references>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>
       </memberdef>
@@ -155,7 +155,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1066" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1066" bodyend="1068"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1118" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1118" bodyend="1120"/>
         <references refid="classform__item_1a4f3558ce5670e789ad51d1f489ec5b14" compoundref="pitems_8cpp" startline="180" endline="182">form_item::GetName</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga37f578498eb38e545906898e7250e6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -195,15 +195,16 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1082" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1082" bodyend="1085"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1134" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1134" bodyend="1137"/>
         <references refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" compoundref="_d_t_s_panel_8cpp" startline="873" endline="884">DTSPanel::FindValue</references>
         <referencedby refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" compoundref="interface_8c" startline="86" endline="121">handle_updatetabpane</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>C API for managing elements of a panel. </para>    </briefdescription>
+<para>Access and manage panel elements in a consistant way. </para>    </briefdescription>
     <detaileddescription>
-<para><simplesect kind="remark"><para>Element items include Text / Password / Check / List / Combo boxes. </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_elements" kindref="compound">Panel element interface.</ref> </para></simplesect>
+<simplesect kind="remark"><para>Element items include Text / Password / Check / List / Combo boxes. </para><simplesectsep/><para>Information of each element is stored in a hashed bucket to provide a consistant interface to the values and references to data (XML). </para></simplesect>
 </para>    </detaileddescription>
   </compounddef>
 </doxygen>

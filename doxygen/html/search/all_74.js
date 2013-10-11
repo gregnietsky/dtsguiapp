@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['tab_20view_20panel_20interface_2e',['Tab view panel interface.',['../group___c-_a_p_i-_panel-_tab.html',1,'']]],
+  ['tree_20view_20panel_20interface_2e',['Tree view panel interface.',['../group___c-_a_p_i-_panel-_tree.html',1,'']]],
   ['t',['t',['../unionwidgets.html#ad9dbdf416e8ba75e55b8030549c2d5ac',1,'widgets']]],
   ['t_5fpane',['t_pane',['../class_d_t_s_tree_window.html#a7ea74947094602a9ad9c3ca3ebd078e2',1,'DTSTreeWindow']]],
   ['tab_5fnewpane',['tab_newpane',['../classtab__newpane.html',1,'tab_newpane'],['../classtab__newpane.html#a66f664e9d0212bd0415953c72afbbacd',1,'tab_newpane::tab_newpane()']]],
@@ -14,6 +16,7 @@ var searchData=
   ['textpanel',['TextPanel',['../class_d_t_s_frame.html#a036e076a53c67d43204aa636ab26328d',1,'DTSFrame']]],
   ['title',['title',['../classdtsgui.html#a949562ecff03159461686f2ddc36b936',1,'dtsgui::title()'],['../class_d_t_s_d_v_m_list_store.html#a9a6df6dbd6c84fd0cfbb987266203c20',1,'DTSDVMListStore::title()'],['../class_d_t_s_panel.html#accbfebfa3c737d3bf33386616f6771f4',1,'DTSPanel::title()'],['../class_d_t_s_panel.html#ae0135da688bb9046fd2cafbf5eaf7ffc',1,'DTSPanel::Title(const char *title)']]],
   ['tn',['tn',['../classtree__newnode.html#aa910ec0ca8be88d01c6595984213b816',1,'tree_newnode']]],
+  ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['toolbar',['toolbar',['../class_d_t_s_frame.html#a5b1acb9ecd1828ba46aca3524efbe9ea',1,'DTSFrame']]],
   ['toolbar_2ecpp',['toolbar.cpp',['../toolbar_8cpp.html',1,'']]],
   ['tree',['tree',['../class_d_t_s_tree_window_event.html#ad88ac828c98c880e1976abea11512c76',1,'DTSTreeWindowEvent::tree()'],['../class_d_t_s_tree_window.html#af4f29b88bb58c804090e5c4bab01898d',1,'DTSTreeWindow::tree()']]],

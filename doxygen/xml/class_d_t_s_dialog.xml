@@ -73,7 +73,7 @@
         <references refid="class_d_t_s_panel_1a9e90d0d7b1466eb3e8005343ce787974" compoundref="_d_t_s_panel_8cpp" startline="378" endline="392">DTSPanel::SetupWin</references>
         <references refid="class_d_t_s_dialog_1aa9988391a17d5a8afe72a24ec57fe9ca" compoundref="_d_t_s_panel_8h" startline="168">sizer</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" compoundref="dtsgui_8h" startline="236">wx_DTSPANEL_DIALOG</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" compoundref="dtsgui_8h" startline="240">wx_DTSPANEL_DIALOG</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_dialog_1af68cd07469e4fbe9dcb3640219adfee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -134,7 +134,7 @@
         <references refid="class_d_t_s_panel_1ac18de08077529d488ea329a72ee14d98" compoundref="_d_t_s_panel_8cpp" startline="394" endline="403">DTSPanel::SetEventCallback</references>
         <references refid="class_d_t_s_dialog_1a569e3d1caa1405354a2a090725b76071" compoundref="_d_t_s_panel_8cpp" startline="1059" endline="1062">Show</references>
         <references refid="class_d_t_s_dialog_1aa9988391a17d5a8afe72a24ec57fe9ca" compoundref="_d_t_s_panel_8h" startline="168">sizer</references>
-        <referencedby refid="group___c-_a_p_i-_panel_1ga3f904089ceb734323477f2b3dbac4a41" compoundref="wrapper_8cpp" startline="911" endline="914">DTS_C_API::dtsgui_rundialog</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel_1ga3f904089ceb734323477f2b3dbac4a41" compoundref="wrapper_8cpp" startline="963" endline="966">DTS_C_API::dtsgui_rundialog</referencedby>
         <referencedby refid="class_d_t_s_frame_1a5a7ad78662b511e7ef6ac513f8d1a28b" compoundref="_d_t_s_frame_8cpp" startline="487" endline="502">DTSFrame::Passwd</referencedby>
       </memberdef>
       </sectiondef>

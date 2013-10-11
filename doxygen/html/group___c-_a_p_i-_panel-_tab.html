@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>DTS Application wxWidgets GUI Library: C API Tab View Interface</title>
+<title>DTS Application wxWidgets GUI Library: Tab view panel interface.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
@@ -86,7 +87,7 @@ $(document).ready(function(){initNavTree('group___c-_a_p_i-_panel-_tab.html','')
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,11 +100,11 @@ $(document).ready(function(){initNavTree('group___c-_a_p_i-_panel-_tab.html','')
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">C API Tab View Interface</div>  </div>
-<div class="ingroups"><a class="el" href="group___c-_a_p_i-_panel.html">C API Panel Interface</a></div></div><!--header-->
+<div class="title">Tab view panel interface.</div>  </div>
+<div class="ingroups"><a class="el" href="group___c-_a_p_i-_panel.html">Display panel interface.</a></div></div><!--header-->
 <div class="contents">
 
-<p>C API for managing tab view panels.  
+<p>A tree view is a panel with tabs along the top and display area underneath.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -119,8 +120,9 @@ Functions</h2></td></tr>
 <tr class="separator:gad3333a23e28993072b5ef4feed86778c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>C API for managing tab view panels. </p>
-<dl class="section remark"><dt>Remarks</dt><dd>Resources controlling and manipulating tab view in the C API. </dd></dl>
+<p>A tree view is a panel with tabs along the top and display area underneath. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Implement a right click action to allow for deletion via a confirmation dialog. </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>The tab window allows grouping related panels together via the tab control when the tab is clicked its display area displays the panel associated with this control. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="gae7cf11b65ccca530aecef7f7daa389e9"></a>
 <div class="memitem">
@@ -205,7 +207,7 @@ On win32 all tabs are configured when the view is activated.</dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00545">545</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00597">597</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00977">DTSTabWindow::CreateTab()</a>.</p>
 
@@ -313,7 +315,7 @@ On win32 all tabs are configured when the view is activated.</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing is returned the callback is registered on the panel. </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00602">602</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00654">654</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00184">tab_newpane::handle_newtabpane_cb()</a>, and <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00131">tab_newpane::tab_newpane()</a>.</p>
 
@@ -416,7 +418,7 @@ On win32 all tabs are configured when the view is activated.</dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>New Tab Pane </dd></dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00574">574</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l00626">626</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
 <p>References <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00977">DTSTabWindow::CreateTab()</a>.</p>
 
@@ -427,7 +429,7 @@ On win32 all tabs are configured when the view is activated.</dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 11 2013 00:37:52 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 12:47:01 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>
