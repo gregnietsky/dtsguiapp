@@ -16,6 +16,14 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/** @defgroup DTS-APP-Config Application config menu functions
+  * @ingroup DTS-APP
+  * @brief Configuration menu functions.
+  * @addtogroup DTS-APP-Config
+  * @{
+  * @file
+  * @brief Configuration menu functions.*/
+
 #include <stdlib.h>
 #include <limits.h>
 #include <stdio.h>
@@ -215,3 +223,5 @@ void config_menu(struct dtsgui *dtsgui) {
 	objunlock(appdata);
 	objunref(appdata);
 }
+
+/** @}*/
