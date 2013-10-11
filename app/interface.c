@@ -181,7 +181,7 @@ void network_iface_pane_cb(dtsgui_pane p, void *data) {
 void network_iface_new_pane_cb(dtsgui_pane p, void *data) {
 	struct new_iface_data *nd = data;
 
-	network_iface_new_pane(p, data);
+	network_iface_new_pane(p);
 	/** @remark use dtsgui_newxmltabpane() helper to atach a callback that will create a new panel
 	  * @see handle_newxmltabpane()
 	  * @see network_iface_pane_cb()*/

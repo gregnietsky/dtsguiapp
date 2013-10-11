@@ -2,7 +2,7 @@ var searchData=
 [
   ['additem',['AddItem',['../class_d_t_s_panel.html#a714c09276642d4a0cf20cc5d941f62a1',1,'DTSPanel']]],
   ['addpage',['AddPage',['../classdtsgui__wizard.html#a02984b1d70df5100e8b6200e0bb1b421',1,'dtsgui_wizard']]],
-  ['advanced_5fconfig',['advanced_config',['../netconfig_8c.html#a6d9d2b0105df87000cb2bdecbff91239',1,'advanced_config(struct dtsgui *dtsgui, const char *title, void *data):&#160;netconfig.c'],['../private_8h.html#a6d9d2b0105df87000cb2bdecbff91239',1,'advanced_config(struct dtsgui *dtsgui, const char *title, void *data):&#160;netconfig.c']]],
+  ['advanced_5fconfig',['advanced_config',['../group___d_t_s-_a_p_p-_tree.html#ga6d9d2b0105df87000cb2bdecbff91239',1,'advanced_config(struct dtsgui *dtsgui, const char *title, void *data):&#160;netconfig.c'],['../group___d_t_s-_a_p_p-_tree.html#ga6d9d2b0105df87000cb2bdecbff91239',1,'advanced_config(struct dtsgui *dtsgui, const char *title, void *data):&#160;netconfig.c']]],
   ['alert',['Alert',['../class_d_t_s_frame.html#a890f88e157626205916bdb961cc6fb6f',1,'DTSFrame']]],
   ['app_5fgetxmldoc',['app_getxmldoc',['../group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0',1,'app_getxmldoc(struct dtsgui *dtsgui):&#160;wxforms.c'],['../group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0',1,'app_getxmldoc(struct dtsgui *dtsgui):&#160;wxforms.c']]],
   ['app_5ftoolbar',['app_toolbar',['../group___d_t_s-_a_p_p-_toolbar.html#gab33c9c3228455b45318900a842c7a693',1,'app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data):&#160;toolbar.cpp'],['../group___d_t_s-_a_p_p-_toolbar.html#gab33c9c3228455b45318900a842c7a693',1,'app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data):&#160;toolbar.cpp']]],

@@ -1,0 +1,305 @@
+.TH "PBX Configuration" 3 "Fri Oct 11 2013" "Version 0.00" "DTS Application wxWidgets GUI Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PBX Configuration \- 
+.PP
+PBX Configuration\&.  
+
+.SS "Files"
+
+.in +1c
+.ti -1c
+.RI "file \fBpbxconfig\&.c\fP"
+.br
+.RI "\fIPBX Configuration panel\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpbxconf_trunk\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for tunk panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_topts\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for trunk options panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_misdn\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for mISDN panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_e1\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for E1/T1 panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_mfcr2\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for MFC/R2 panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_global\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for global settings panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_acd\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for ACD options panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_default\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for extension default panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_location\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for location panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_incoming\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for incoming panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_numplan\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for number plan panel\&. \fP"
+.ti -1c
+.RI "void \fBpbxconf_autoadd\fP (\fBdtsgui_pane\fP pg, void *data)"
+.br
+.RI "\fIConfiguration callback for auto add panel\&. \fP"
+.ti -1c
+.RI "\fBdtsgui_pane\fP \fBpbx_settings\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, void *data)"
+.br
+.RI "\fIConfigure and return the PBX configuration tab view\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+PBX Configuration\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBdtsgui_pane\fP pbx_settings (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
+
+.PP
+Configure and return the PBX configuration tab view\&. \fBParameters:\fP
+.RS 4
+\fIdtsgui\fP Application data ptr\&. 
+.br
+\fItitle\fP Title of menuitem\&. 
+.br
+\fIdata\fP Reference of data associated with menu item\&. 
+.RE
+.PP
+
+.PP
+Definition at line 374 of file pbxconfig\&.c\&.
+.PP
+References app_getxmldoc(), dtsgui_newtabpage(), dtsgui_tabwindow(), pbxconf_acd(), pbxconf_autoadd(), pbxconf_default(), pbxconf_e1(), pbxconf_global(), pbxconf_incoming(), pbxconf_location(), pbxconf_mfcr2(), pbxconf_misdn(), pbxconf_numplan(), pbxconf_topts(), pbxconf_trunk(), and wx_PANEL_BUTTON_ACTION\&.
+.PP
+Referenced by config_menu()\&.
+.SS "void pbxconf_acd (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for ACD options panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 244 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_autoadd (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for auto add panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 360 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_xmlcheckbox(), and dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_default (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for extension default panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 253 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), dtsgui_xmllistbox(), dtsgui_xmltextbox(), form_item::name, and form_item::value\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_e1 (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for E1/T1 panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), and dtsgui_xmllistbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_global (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for global settings panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 222 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), dtsgui_xmllistbox(), dtsgui_xmlpasswdbox(), and dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_incoming (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for incoming panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 318 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), and dtsgui_xmllistbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_location (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for location panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 304 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_mfcr2 (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for MFC/R2 panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), dtsgui_xmllistbox(), and dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_misdn (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for mISDN panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 139 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_xmlcheckbox(), and dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_numplan (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for number plan panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 343 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_topts (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for trunk options panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_xmlcheckbox(), and dtsgui_xmltextbox()\&.
+.PP
+Referenced by pbx_settings()\&.
+.SS "void pbxconf_trunk (\fBdtsgui_pane\fPpg, void *data)"
+
+.PP
+Configuration callback for tunk panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to be configured\&. 
+.br
+\fIdata\fP data Reference to data held by callback\&. 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file pbxconfig\&.c\&.
+.PP
+References dtsgui_listbox_add(), dtsgui_xmllistbox(), dtsgui_xmltextbox(), form_item::name, and form_item::value\&.
+.PP
+Referenced by pbx_settings()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.

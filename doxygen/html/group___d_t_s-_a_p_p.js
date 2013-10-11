@@ -1,7 +1,10 @@
 var group___d_t_s__a_p_p =
 [
-    [ "Distrotech Application Wizard Interface", "group___d_t_s-_a_p_p-_wizard.html", "group___d_t_s-_a_p_p-_wizard" ],
+    [ "System configuration wizard", "group___d_t_s-_a_p_p-_wizard.html", "group___d_t_s-_a_p_p-_wizard" ],
+    [ "Configuration menu functions", "group___d_t_s-_a_p_p-_config.html", "group___d_t_s-_a_p_p-_config" ],
     [ "Interface configuration tab view", "group___d_t_s-_a_p_p-_iface.html", "group___d_t_s-_a_p_p-_iface" ],
+    [ "Advanced configuration tree", "group___d_t_s-_a_p_p-_tree.html", "group___d_t_s-_a_p_p-_tree" ],
+    [ "PBX Configuration", "group___d_t_s-_a_p_p-_p_b_x.html", "group___d_t_s-_a_p_p-_p_b_x" ],
     [ "Application test panel", "group___d_t_s-_a_p_p-_test.html", "group___d_t_s-_a_p_p-_test" ],
     [ "Application toolbar", "group___d_t_s-_a_p_p-_toolbar.html", "group___d_t_s-_a_p_p-_toolbar" ],
     [ "private.h", "private_8h.html", null ],

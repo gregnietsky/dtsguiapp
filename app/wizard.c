@@ -16,7 +16,7 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/** @defgroup DTS-APP-Wizard Distrotech Application Wizard Interface
+/** @defgroup DTS-APP-Wizard System configuration wizard
   * @brief System configuration wizard
   * @ingroup DTS-APP
   * @{

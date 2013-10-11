@@ -7,8 +7,11 @@
     <innerfile refid="wxforms_8c">wxforms.c</innerfile>
     <innerclass refid="structapp__data" prot="public">app_data</innerclass>
     <innerclass refid="structlistitem" prot="public">listitem</innerclass>
-    <innergroup refid="group___d_t_s-_a_p_p-_wizard">Distrotech Application Wizard Interface</innergroup>
+    <innergroup refid="group___d_t_s-_a_p_p-_wizard">System configuration wizard</innergroup>
+    <innergroup refid="group___d_t_s-_a_p_p-_config">Configuration menu functions</innergroup>
     <innergroup refid="group___d_t_s-_a_p_p-_iface">Interface configuration tab view</innergroup>
+    <innergroup refid="group___d_t_s-_a_p_p-_tree">Advanced configuration tree</innergroup>
+    <innergroup refid="group___d_t_s-_a_p_p-_p_b_x">PBX Configuration</innergroup>
     <innergroup refid="group___d_t_s-_a_p_p-_test">Application test panel</innergroup>
     <innergroup refid="group___d_t_s-_a_p_p-_toolbar">Application toolbar</innergroup>
       <sectiondef kind="enum">
@@ -279,13 +282,13 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wxforms.c" line="56" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wxforms.c" bodystart="56" bodyend="75"/>
         <references refid="group___c-_a_p_i_1gaa224c0a868745526e6ac3c05970471c5" compoundref="wrapper_8cpp" startline="235" endline="237">dtsgui_userdata</references>
         <references refid="structapp__data_1a8b7fe9aa0af51051f077073d12a335e8" compoundref="private_8h" startline="71">app_data::xmldoc</references>
-        <referencedby refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="740" endline="769">advanced_config</referencedby>
-        <referencedby refid="private_8h_1a01bdf27a0760d9da4bb77918735171c1" compoundref="config_8c" startline="150" endline="187">export_config</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p-_tree_1ga6d9d2b0105df87000cb2bdecbff91239" compoundref="netconfig_8c" startline="912" endline="926">advanced_config</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p-_config_1ga01bdf27a0760d9da4bb77918735171c1" compoundref="config_8c" startline="198" endline="235">export_config</referencedby>
         <referencedby refid="group___d_t_s-_a_p_p-_iface_1gabf43f59e582eee9f27734b14c8307819" compoundref="interface_8c" startline="197" endline="236">iface_config</referencedby>
-        <referencedby refid="private_8h_1aa1aa69985689f9714422c273fe968fdf" compoundref="pbxconfig_8c" startline="325" endline="350">pbx_settings</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p-_p_b_x_1gaa1aa69985689f9714422c273fe968fdf" compoundref="pbxconfig_8c" startline="374" endline="399">pbx_settings</referencedby>
         <referencedby refid="group___d_t_s-_a_p_p-_wizard_1ga0be336c09b5cd473a616326c4cb227d2" compoundref="wizard_8c" startline="550" endline="559">reconfig_wizard</referencedby>
-        <referencedby refid="private_8h_1abc9a4e54439d7a701992752ec7b3f6b9" compoundref="config_8c" startline="112" endline="148">view_config_conf</referencedby>
-        <referencedby refid="private_8h_1abe0b9ce2252ec72774af23a0ec71424f" compoundref="config_8c" startline="94" endline="110">view_config_xml</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p-_config_1gabc9a4e54439d7a701992752ec7b3f6b9" compoundref="config_8c" startline="152" endline="188">view_config_conf</referencedby>
+        <referencedby refid="group___d_t_s-_a_p_p-_config_1gabe0b9ce2252ec72774af23a0ec71424f" compoundref="config_8c" startline="126" endline="142">view_config_xml</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___d_t_s-_a_p_p_1ga011cd0b131174029fed8babdf1c7a101" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -322,7 +325,7 @@
         <references refid="group___d_t_s-_a_p_p-_wizard_1ga126b309803052977061662f97fb9012a" compoundref="wizard_8c" startline="523" endline="541">editsys_wizard</references>
         <references refid="structapp__data_1a0afceecac34508f601812c1dcae49af5" compoundref="private_8h" startline="77">app_data::n_wiz</references>
         <references refid="group___d_t_s-_a_p_p-_wizard_1ga56c78e0d32a18452dcea4f026de2c889" compoundref="wizard_8c" startline="491" endline="514">newsys_wizard</references>
-        <references refid="config_8c_1a72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="27" endline="67">open_config</references>
+        <references refid="group___d_t_s-_a_p_p-_config_1ga72af4355dbc5afe93fef750a81a3e572" compoundref="config_8c" startline="44" endline="84">open_config</references>
         <referencedby refid="group___d_t_s-_a_p_p_1gaf12c2714c0878b7565d8b788931f9e50" compoundref="wxforms_8c" startline="130" endline="143">guiconfig_cb</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___d_t_s-_a_p_p_1gae1b0e521306d90ee09f460064c015b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -395,7 +398,7 @@
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/wxforms.c" line="130" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/wxforms.c" bodystart="130" bodyend="143"/>
         <references refid="group___d_t_s-_a_p_p-_toolbar_1gab33c9c3228455b45318900a842c7a693" compoundref="toolbar_8cpp" startline="88" endline="94">app_toolbar</references>
-        <references refid="config_8c_1a2bcdb1dc60a2dc5383e027578faeb44e" compoundref="config_8c" startline="189" endline="217">config_menu</references>
+        <references refid="group___d_t_s-_a_p_p-_config_1ga2bcdb1dc60a2dc5383e027578faeb44e" compoundref="config_8c" startline="240" endline="268">config_menu</references>
         <references refid="group___c-_a_p_i_1ga1734b840fc0696b13d5b616df0ec3bbb" compoundref="wrapper_8cpp" startline="278" endline="281">dtsgui_setuptoolbar</references>
         <references refid="group___d_t_s-_a_p_p_1ga011cd0b131174029fed8babdf1c7a101" compoundref="wxforms_8c" startline="79" endline="102">file_menu</references>
         <references refid="group___d_t_s-_a_p_p_1gae1b0e521306d90ee09f460064c015b2b" compoundref="wxforms_8c" startline="106" endline="120">help_menu</references>

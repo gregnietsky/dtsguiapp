@@ -118,7 +118,7 @@ void test_menu(struct dtsgui *dtsgui, dtsgui_menu menu, const char *url);
 /*netconfig.c*/
 dtsgui_pane advanced_config(struct dtsgui *dtsgui, const char *title, void *data);
 void network_iface_pane(dtsgui_pane p, const char *xpre, const char *iface);
-void network_iface_new_pane(dtsgui_pane p, void *data);
+void network_iface_new_pane(dtsgui_pane p);
 
 /*iface*/
 dtsgui_pane iface_config(struct dtsgui *dtsgui, const char *title, void *data);

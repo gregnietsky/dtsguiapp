@@ -141,6 +141,6 @@
     <detaileddescription>
 <para><simplesect kind="remark"><para>A wizard is a dialog box that allows for multiple panels to be dispalayed in sequence via Back/Next controls. </para></simplesect>
 <simplesect kind="note"><para>It is important to process the panels on complition before un refrencing the wizard. </para></simplesect>
-<xrefsect id="todo_1_todo000008"><xreftitle>Todo</xreftitle><xrefdescription><para>Add a hashed list to the wizard class storing the panels to no longer need to keep a array of panels. </para></xrefdescription></xrefsect></para>    </detaileddescription>
+<xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>Add a hashed list to the wizard class storing the panels to no longer need to keep a array of panels. </para></xrefdescription></xrefsect></para>    </detaileddescription>
   </compounddef>
 </doxygen>
