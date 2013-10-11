@@ -912,8 +912,6 @@ void network_tree_setup(dtsgui_treeview tree, struct xml_doc *xmldoc) {
 dtsgui_pane advanced_config(struct dtsgui *dtsgui, const char *title, void *data) {
 	dtsgui_treeview tree;
 	struct xml_doc *xmldoc;
-	struct app_data *appdata;
-	char defconf[PATH_MAX];
 
 	if (!(xmldoc = app_getxmldoc(dtsgui))) {
 		return NULL;
