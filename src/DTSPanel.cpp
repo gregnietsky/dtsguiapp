@@ -502,7 +502,7 @@ struct xml_element *DTSPanel::GetNode(const char *ppath, const char *node, const
 	int len;
 
 
-	if (!(xd = GetXMLDoc()) || !ppath) {
+	if (!ppath || !(xd = GetXMLDoc())) {
 		return NULL;
 	}
 
@@ -540,9 +540,10 @@ struct xml_element *DTSPanel::GetNode(const char *ppath, const char *node, const
 	}
 
 	if (!(xs = xml_xpath(xd, xpath, attr))) {
-		if (ppath && node && fval) {
+		if (ppath && node) {
+			const char *tval = (fval) ? fval : "";
 			xml_createpath(xd, ppath);
-			if ((xn = xml_addnode(xd, ppath, node, (fattr) ? "" : fval, fattr, (fattr) ? fval : NULL))) {
+			if ((xn = xml_addnode(xd, ppath, node, (fattr) ? "" : tval, fattr, (fattr) ? tval : NULL))) {
 				xs = xml_xpath(xd, xpath, attr);
 				objunref(xn);
 			}
