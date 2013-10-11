@@ -183,28 +183,28 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:gad3b80490c86b8275c47382588f2ecfd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called on application execution.  <a href="#gad3b80490c86b8275c47382588f2ecfd4"></a><br/></td></tr>
 <tr class="separator:gad3b80490c86b8275c47382588f2ecfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga06d1a959e1581116961bca636a919043"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga06d1a959e1581116961bca636a919043">event_callback</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, int type, int, void *)</td></tr>
-<tr class="memdesc:ga06d1a959e1581116961bca636a919043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback run on panel event When a panel event is triggered and a callback has been registered it will be called.  <a href="#ga06d1a959e1581116961bca636a919043"></a><br/></td></tr>
+<tr class="memdesc:ga06d1a959e1581116961bca636a919043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback run on panel event.  <a href="#ga06d1a959e1581116961bca636a919043"></a><br/></td></tr>
 <tr class="separator:ga06d1a959e1581116961bca636a919043"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="memItemLeft" align="right" valign="top">typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga53eefce4ace6a7d72e49e9ae4c520226">dtsgui_toolbar_create</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, void *, long, int, const char *, void *data)</td></tr>
 <tr class="memdesc:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calback to configure and return a wxToolbar objecct.  <a href="#ga53eefce4ace6a7d72e49e9ae4c520226"></a><br/></td></tr>
 <tr class="separator:ga53eefce4ace6a7d72e49e9ae4c520226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga080f931027861c0021f72ac2562b45d7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga080f931027861c0021f72ac2562b45d7">dtsgui_dynpanel</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, const char *, void *)</td></tr>
-<tr class="memdesc:ga080f931027861c0021f72ac2562b45d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed.  <a href="#ga080f931027861c0021f72ac2562b45d7"></a><br/></td></tr>
+<tr class="memdesc:ga080f931027861c0021f72ac2562b45d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called when a dynamic menu item is selected.  <a href="#ga080f931027861c0021f72ac2562b45d7"></a><br/></td></tr>
 <tr class="separator:ga080f931027861c0021f72ac2562b45d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae088feda00f338f6ddd35daaacc44817"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gae088feda00f338f6ddd35daaacc44817">dtsgui_tree_cb</a> )(struct <a class="el" href="classdtsgui.html">dtsgui</a> *, <a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, enum <a class="el" href="group___c_o_r_e.html#ga465794df2cb30731dfe34d3e7a4ed368">tree_cbtype</a>, const char *, void *)</td></tr>
 <tr class="memdesc:gae088feda00f338f6ddd35daaacc44817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback used for tree view events.  <a href="#gae088feda00f338f6ddd35daaacc44817"></a><br/></td></tr>
 <tr class="separator:gae088feda00f338f6ddd35daaacc44817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga8bf800adcd2392cf7722c3cf2f603f96">dtsgui_treeviewpanel_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, <a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, void *)</td></tr>
-<tr class="memdesc:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after dtsgui_tree_cb to allow configuration of the panel. This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback.  <a href="#ga8bf800adcd2392cf7722c3cf2f603f96"></a><br/></td></tr>
+<tr class="memdesc:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after dtsgui_tree_cb to allow configuration of the panel.  <a href="#ga8bf800adcd2392cf7722c3cf2f603f96"></a><br/></td></tr>
 <tr class="separator:ga8bf800adcd2392cf7722c3cf2f603f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga52992645e33e4d92c8e68c3490239c75"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#ga52992645e33e4d92c8e68c3490239c75">dtsgui_xmltreenode_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga91b92f00d06cc6174b8b271fc9f2c241">dtsgui_treeview</a>, <a class="el" href="group___c_o_r_e.html#ga6529df5f03710b4fec84553e1d7febc5">dtsgui_treenode</a>, struct xml_node *, void *)</td></tr>
-<tr class="memdesc:ga52992645e33e4d92c8e68c3490239c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called as part of the creation of a new node. This callback will allow manipulation of the newly created node if required.  <a href="#ga52992645e33e4d92c8e68c3490239c75"></a><br/></td></tr>
+<tr class="memdesc:ga52992645e33e4d92c8e68c3490239c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called as part of the creation of a new node.  <a href="#ga52992645e33e4d92c8e68c3490239c75"></a><br/></td></tr>
 <tr class="separator:ga52992645e33e4d92c8e68c3490239c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab65db729662a3b0d109158d2fb51f93c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab65db729662a3b0d109158d2fb51f93c">dtsgui_tabpanel_cb</a> )(<a class="el" href="group___c_o_r_e.html#ga80d0a6abc3c934c0adc3fca6a1e62438">dtsgui_pane</a>, void *)</td></tr>
-<tr class="memdesc:gab65db729662a3b0d109158d2fb51f93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a tab view panel prior to display. Tab panels are dynanic and created as needed by calling this callback.  <a href="#gab65db729662a3b0d109158d2fb51f93c"></a><br/></td></tr>
+<tr class="memdesc:gab65db729662a3b0d109158d2fb51f93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a tab view panel prior to display.  <a href="#gab65db729662a3b0d109158d2fb51f93c"></a><br/></td></tr>
 <tr class="separator:gab65db729662a3b0d109158d2fb51f93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_e.html#gab5e1fa276d48b20d35f4ef20110c39ed">dtsgui_tabpane_newdata_cb</a> )(struct xml_doc *, struct xml_node *, void *, void **, int *)</td></tr>
-<tr class="memdesc:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow setting the configuration data before tab pane is created. This callback is called as part of the new tab creation to allow setting callback data.The position of the pane can also be set.  <a href="#gab5e1fa276d48b20d35f4ef20110c39ed"></a><br/></td></tr>
+<tr class="memdesc:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow setting the configuration data before tab pane is created.  <a href="#gab5e1fa276d48b20d35f4ef20110c39ed"></a><br/></td></tr>
 <tr class="separator:gab5e1fa276d48b20d35f4ef20110c39ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -282,9 +282,9 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for action buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00264">264</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00271">271</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
-<p>Referenced by <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00722">DTSTreeWindow::CreatePane()</a>, <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00202">tab_newpane::handle_newtabpane()</a>, <a class="el" href="interface_8c_source.html#l00145">iface_config()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00487">DTSFrame::Passwd()</a>, and <a class="el" href="pbxconfig_8c_source.html#l00325">pbx_settings()</a>.</p>
+<p>Referenced by <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00736">DTSTreeWindow::CreatePane()</a>, <a class="el" href="_d_t_s_tree_window_8cpp_source.html#l00216">tab_newpane::handle_newtabpane()</a>, <a class="el" href="interface_8c_source.html#l00145">iface_config()</a>, <a class="el" href="_d_t_s_frame_8cpp_source.html#l00495">DTSFrame::Passwd()</a>, and <a class="el" href="pbxconfig_8c_source.html#l00325">pbx_settings()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +300,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for all buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00267">267</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00274">274</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 <p>Referenced by <a class="el" href="testing_8c_source.html#l00094">test_menu()</a>.</p>
 
@@ -318,7 +318,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for direction buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00261">261</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00268">268</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -334,7 +334,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for navigation buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00258">258</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00265">265</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -350,7 +350,7 @@ Enumerations</h2></td></tr>
 
 <p>Shortcut flags for no buttons. </p>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00270">270</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00277">277</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -409,7 +409,8 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed. </p>
+<p>Callback called when a dynamic menu item is selected. </p>
+<p>This function is called and allows returning a pane to be displayed. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_d_t_s_frame.html#a55fe07b66530435bce652e8ab3091707">DTSFrame::NewMenuItem()</a> </dd>
 <dd>
 <a class="el" href="group___c-_a_p_i-_menus.html#ga045cc441a11f42796d6bd89dfa52e4ec" title="Create a menu item that will call a function with supplied data to execute when selected.">dtsgui_newmenucb</a> </dd></dl>
@@ -423,7 +424,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If a panel is returned it will be displayed. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00126">126</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00129">129</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -517,7 +518,8 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allow setting the configuration data before tab pane is created. This callback is called as part of the new tab creation to allow setting callback data.The position of the pane can also be set. </p>
+<p>Allow setting the configuration data before tab pane is created. </p>
+<p>This callback is called as part of the new tab creation to allow setting callback data.The position of the pane can also be set. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classtab__newpane.html#af3f96c0ce186f089d5e5598ea4814179">tab_newpane::handle_newtabpane()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -530,7 +532,7 @@ Enumerations</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00178">178</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00185">185</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -544,7 +546,8 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Configure a tab view panel prior to display. Tab panels are dynanic and created as needed by calling this callback. </p>
+<p>Configure a tab view panel prior to display. </p>
+<p>Tab panels are dynanic and created as needed by calling this callback. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_d_t_s_tab_page.html#a433bdbb8af0ded1fb884b45c5d9259a9">DTSTabPage::ConfigPane()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -554,7 +557,7 @@ Enumerations</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00167">167</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00173">173</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -601,7 +604,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Must return a wxToolbar object. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00116">116</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00118">118</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -632,7 +635,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If a panel is returned it will be placed int the display area. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00139">139</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00142">142</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -678,7 +681,8 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback called after dtsgui_tree_cb to allow configuration of the panel. This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback. </p>
+<p>Callback called after dtsgui_tree_cb to allow configuration of the panel. </p>
+<p>This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_d_t_s_tree_window_event.html#a98ac8a3612545e1eaeb99fa9b5662048">DTSTreeWindowEvent::TreeCallback()</a> </dd>
 <dd>
 <a class="el" href="class_d_t_s_d_v_m_list_store.html#a235c78752ca007f5189806e95abcefe2">DTSDVMListStore::ConfigPanel()</a> </dd></dl>
@@ -692,7 +696,7 @@ Enumerations</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00150">150</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00154">154</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -722,7 +726,8 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback called as part of the creation of a new node. This callback will allow manipulation of the newly created node if required. </p>
+<p>Callback called as part of the creation of a new node. </p>
+<p>This callback will allow manipulation of the newly created node if required. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___c-_a_p_i-_panel-_tree.html#ga55a99744231b294667ece32a1087042f" title="Helper function to handle &quot;Adding&quot; a new node from a existing node.">dtsgui_newxmltreenode()</a> </dd>
 <dd>
 <a class="el" href="classtree__newnode.html#a79fd1a82bf40d2d922c1d297f1de3f29">tree_newnode::tree_newnode()</a> </dd></dl>
@@ -736,7 +741,7 @@ Enumerations</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00160">160</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00165">165</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -766,7 +771,8 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback run on panel event When a panel event is triggered and a callback has been registered it will be called. </p>
+<p>Callback run on panel event. </p>
+<p>When a panel event is triggered and a callback has been registered it will be called. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group___c_o_r_e.html#ga54d7edaba9c015c3b5310ed3080b82e6" title="Define all possible events that are passed to event handler.">panel_events</a> </dd>
 <dd>
 <a class="el" href="group___c_o_r_e.html#ga5082bae7f0b5d2b7d715e40450f302ec" title="Define all buttons that are used in creating a panel.">panel_buttons</a> </dd>
@@ -786,7 +792,7 @@ Enumerations</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A non zero value to allow further processing of the event. </dd></dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00104">104</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00105">105</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -868,7 +874,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00191">191</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00198">198</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -900,7 +906,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00207">207</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00214">214</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -941,7 +947,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00232">232</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00239">239</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1009,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00220">220</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00227">227</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1037,7 @@ Enumerations</h2></td></tr>
 </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00250">250</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
+<p>Definition at line <a class="el" href="dtsgui_8h_source.html#l00257">257</a> of file <a class="el" href="dtsgui_8h_source.html">dtsgui.h</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1046,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 11 2013 12:50:03 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 14:10:52 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

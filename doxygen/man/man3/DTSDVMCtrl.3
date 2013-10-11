@@ -60,19 +60,19 @@ Definition at line 105 of file DTSListView\&.h\&.
 .SS "DTSDVMCtrl::DTSDVMCtrl ()"
 
 .PP
-Definition at line 543 of file DTSListView\&.cpp\&.
+Definition at line 551 of file DTSListView\&.cpp\&.
 .PP
 References model\&.
 .SS "DTSDVMCtrl::DTSDVMCtrl (\fBwxWindow\fP *parent, wxWindowIDid = \fCwxID_ANY\fP, \fBDTSDVMListView\fP *model = \fCNULL\fP, const wxPoint &pos = \fCwxDefaultPosition\fP, const wxSize &size = \fCwxDefaultSize\fP, longstyle = \fCwxDV_ROW_LINES\fP, const wxValidator &validator = \fCwxDefaultValidator\fP)"
 
 .PP
-Definition at line 547 of file DTSListView\&.cpp\&.
+Definition at line 555 of file DTSListView\&.cpp\&.
 .PP
 References AssociateModel()\&.
 .SS "DTSDVMCtrl::~DTSDVMCtrl ()"
 
 .PP
-Definition at line 574 of file DTSListView\&.cpp\&.
+Definition at line 582 of file DTSListView\&.cpp\&.
 .PP
 References DTSDVMListView::DeleteAll(), and model\&.
 .SH "Member Function Documentation"
@@ -80,7 +80,7 @@ References DTSDVMListView::DeleteAll(), and model\&.
 .SS "wxDataViewItem DTSDVMCtrl::AppendContainer (wxDataViewItemparent, const wxString &title, boolcan_edit = \fCtrue\fP, boolcan_sort = \fCtrue\fP, boolcan_del = \fCfalse\fP, intnodeid = \fC-1\fP, \fBdtsgui_treeviewpanel_cb\fPp_cb = \fCNULL\fP, void *userdata = \fCNULL\fP)"
 
 .PP
-Definition at line 604 of file DTSListView\&.cpp\&.
+Definition at line 612 of file DTSListView\&.cpp\&.
 .PP
 References AppendNode()\&.
 .PP
@@ -88,7 +88,7 @@ Referenced by DTS_C_API::dtsgui_treecont(), and tree_newnode::handle_newtreenode
 .SS "wxDataViewItem DTSDVMCtrl::AppendItem (wxDataViewItemparent, const wxString &title, boolcan_edit = \fCtrue\fP, boolcan_sort = \fCtrue\fP, boolcan_del = \fCfalse\fP, intnodeid = \fC-1\fP, \fBdtsgui_treeviewpanel_cb\fPp_cb = \fCNULL\fP, void *userdata = \fCNULL\fP)"
 
 .PP
-Definition at line 600 of file DTSListView\&.cpp\&.
+Definition at line 608 of file DTSListView\&.cpp\&.
 .PP
 References AppendNode()\&.
 .PP
@@ -96,7 +96,7 @@ Referenced by DTS_C_API::dtsgui_treeitem(), and tree_newnode::handle_newtreenode
 .SS "wxDataViewItem DTSDVMCtrl::AppendNode (wxDataViewItemparent, const wxString &title, booliscont, boolcan_edit = \fCtrue\fP, boolcan_sort = \fCtrue\fP, boolcan_del = \fCfalse\fP, intnodeid = \fC-1\fP, \fBdtsgui_treeviewpanel_cb\fPp_cb = \fCNULL\fP, void *userdata = \fCNULL\fP)\fC [private]\fP"
 
 .PP
-Definition at line 608 of file DTSListView\&.cpp\&.
+Definition at line 616 of file DTSListView\&.cpp\&.
 .PP
 References DTSDVMListStore::Append(), DTSDVMListStore::can_delete, DTSDVMListStore::can_edit, DTSDVMListStore::can_sort, DTSDVMListView::GetRoot(), model, and DTSDVMListView::SetRoot()\&.
 .PP
@@ -104,7 +104,7 @@ Referenced by AppendContainer(), and AppendItem()\&.
 .SS "bool DTSDVMCtrl::AssociateModel (\fBDTSDVMListView\fP *model)\fC [virtual]\fP"
 
 .PP
-Definition at line 578 of file DTSListView\&.cpp\&.
+Definition at line 586 of file DTSListView\&.cpp\&.
 .PP
 References DTSDVMListView::DeleteAll(), and model\&.
 .PP
@@ -112,7 +112,7 @@ Referenced by DTSDVMCtrl()\&.
 .SS "\fBDTSDVMListView\fP * DTSDVMCtrl::GetStore ()"
 
 .PP
-Definition at line 596 of file DTSListView\&.cpp\&.
+Definition at line 604 of file DTSListView\&.cpp\&.
 .PP
 References model\&.
 .PP
@@ -120,7 +120,7 @@ Referenced by DTSTreeWindowEvent::DTSTreeWindowEvent(), and DTSTreeWindow::Show(
 .SS "void DTSDVMCtrl::Sort (const wxDataViewItem &parent)"
 
 .PP
-Definition at line 592 of file DTSListView\&.cpp\&.
+Definition at line 600 of file DTSListView\&.cpp\&.
 .PP
 References model, and DTSDVMListView::SortChildren()\&.
 .SH "Member Data Documentation"

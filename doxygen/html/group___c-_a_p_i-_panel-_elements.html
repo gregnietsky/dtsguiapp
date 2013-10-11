@@ -126,7 +126,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gaaa4e4de11048d7e32151628f4428cf3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the selected item on a list box or combobox to the index.  <a href="#gaaa4e4de11048d7e32151628f4428cf3e"></a><br/></td></tr>
 <tr class="separator:gaaa4e4de11048d7e32151628f4428cf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6585281832905a2e769f8b0f813a67e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c-_a_p_i-_panel-_elements.html#ga6585281832905a2e769f8b0f813a67e0">DTS_C_API::dtsgui_listbox_addxml</a> (struct <a class="el" href="classform__item.html">form_item</a> *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr)</td></tr>
-<tr class="memdesc:ga6585281832905a2e769f8b0f813a67e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a listbox or combobox from a XML path. A entry is added for each node found using the supplied attributes for displayed text and value.  <a href="#ga6585281832905a2e769f8b0f813a67e0"></a><br/></td></tr>
+<tr class="memdesc:ga6585281832905a2e769f8b0f813a67e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate a listbox or combobox from a XML path.  <a href="#ga6585281832905a2e769f8b0f813a67e0"></a><br/></td></tr>
 <tr class="separator:ga6585281832905a2e769f8b0f813a67e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -182,9 +182,9 @@ There multiple API's for managing elements but a common interface for controling
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01213">1213</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01219">1219</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
-<p>References <a class="el" href="pitems_8cpp_source.html#l00147">form_item::Append()</a>.</p>
+<p>References <a class="el" href="pitems_8cpp_source.html#l00155">form_item::Append()</a>.</p>
 
 <p>Referenced by <a class="el" href="netconfig_8c_source.html#l00037">network_config()</a>, <a class="el" href="netconfig_8c_source.html#l00372">network_modem()</a>, <a class="el" href="netconfig_8c_source.html#l00401">network_modem_ana()</a>, <a class="el" href="netconfig_8c_source.html#l00277">network_newwifi()</a>, <a class="el" href="netconfig_8c_source.html#l00524">network_tos()</a>, <a class="el" href="netconfig_8c_source.html#l00565">network_tos_new()</a>, <a class="el" href="netconfig_8c_source.html#l00245">network_wifi()</a>, <a class="el" href="pbxconfig_8c_source.html#l00220">pbxconf_default()</a>, <a class="el" href="pbxconfig_8c_source.html#l00134">pbxconf_e1()</a>, <a class="el" href="pbxconfig_8c_source.html#l00195">pbxconf_global()</a>, <a class="el" href="pbxconfig_8c_source.html#l00279">pbxconf_incoming()</a>, <a class="el" href="pbxconfig_8c_source.html#l00161">pbxconf_mfcr2()</a>, <a class="el" href="pbxconfig_8c_source.html#l00025">pbxconf_trunk()</a>, <a class="el" href="testing_8c_source.html#l00072">testpanel()</a>, <a class="el" href="wizard_8c_source.html#l00232">wizz_exten()</a>, <a class="el" href="wizard_8c_source.html#l00281">wizz_location()</a>, <a class="el" href="wizard_8c_source.html#l00216">wizz_network()</a>, <a class="el" href="wizard_8c_source.html#l00325">wizz_trunk()</a>, and <a class="el" href="wizard_8c_source.html#l00347">wizz_voip()</a>.</p>
 
@@ -232,7 +232,8 @@ There multiple API's for managing elements but a common interface for controling
       </table>
 </div><div class="memdoc">
 
-<p>Populate a listbox or combobox from a XML path. A entry is added for each node found using the supplied attributes for displayed text and value. </p>
+<p>Populate a listbox or combobox from a XML path. </p>
+<p>A entry is added for each node found using the supplied attributes for displayed text and value </p>
 <dl class="section remark"><dt>Remarks</dt><dd>passing NULL as either or both of the attributes will use the value of the node. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -245,9 +246,9 @@ There multiple API's for managing elements but a common interface for controling
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01234">1234</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01241">1241</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
-<p>References <a class="el" href="pitems_8cpp_source.html#l00217">form_item::AppendXML()</a>.</p>
+<p>References <a class="el" href="pitems_8cpp_source.html#l00225">form_item::AppendXML()</a>.</p>
 
 <p>Referenced by <a class="el" href="netconfig_8c_source.html#l00446">network_adsl_link()</a>, <a class="el" href="netconfig_8c_source.html#l00479">network_adsl_link_new()</a>, <a class="el" href="netconfig_8c_source.html#l00037">network_config()</a>, and <a class="el" href="netconfig_8c_source.html#l00277">network_newwifi()</a>.</p>
 
@@ -286,9 +287,9 @@ There multiple API's for managing elements but a common interface for controling
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01221">1221</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
+<p>Definition at line <a class="el" href="wrapper_8cpp_source.html#l01227">1227</a> of file <a class="el" href="wrapper_8cpp_source.html">wrapper.cpp</a>.</p>
 
-<p>References <a class="el" href="pitems_8cpp_source.html#l00168">form_item::SetSelection()</a>.</p>
+<p>References <a class="el" href="pitems_8cpp_source.html#l00176">form_item::SetSelection()</a>.</p>
 
 <p>Referenced by <a class="el" href="netconfig_8c_source.html#l00277">network_newwifi()</a>.</p>
 
@@ -299,7 +300,7 @@ There multiple API's for managing elements but a common interface for controling
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 11 2013 12:50:03 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 14:10:52 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

@@ -16,6 +16,14 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/** @defgroup CPP-Panel Core panel classes
+  * @brief Implementation of core panel clases and event handler.
+  * @ingroup CPP*/
+
+/** @file
+  * @brief Implementation of core panel classes and event handler.
+  * @ingroup CPP-Panel*/
+
 #include <stdlib.h>
 
 #include <wx/combobox.h>
@@ -30,8 +38,12 @@
 #include "pitems.h"
 #include "DTSPanel.h"
 
+/** @brief Border used when placing elements.
+  * @ingroup CPP-Panel*/
 #define PADING	10
 
+/** @brief Array mapping wxWidgets buttons to DTS Buttons.
+  * @ingroup CPP-Panel*/
 static const int def_buttons[6] = {wxID_FIRST, wxID_BACKWARD, wxID_FORWARD, wxID_LAST, wxID_APPLY, wxID_UNDO};
 
 int DTSPanel::fitems_hash(const void *data, int key) {

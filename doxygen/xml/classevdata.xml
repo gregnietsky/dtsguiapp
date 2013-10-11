@@ -17,10 +17,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" line="44" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" bodystart="44" bodyend="-1"/>
-        <referencedby refid="class_d_t_s_frame_1a8b1d7dbacb2a99f3758a35ef06046963" compoundref="_d_t_s_frame_8cpp" startline="264" endline="290">DTSFrame::DynamicPanelEvent</referencedby>
-        <referencedby refid="classevdata_1ad136a65ea4c324ecbd9b98e953c10afc" compoundref="evdata_8cpp" startline="77" endline="84">evdata</referencedby>
-        <referencedby refid="class_d_t_s_frame_1a85e9e9e31176870e5d1d7fb96972d236" compoundref="_d_t_s_frame_8cpp" startline="249" endline="262">DTSFrame::SwitchWindow</referencedby>
-        <referencedby refid="classevdata_1a2d73a5260935f0e089c1f660c950786d" compoundref="evdata_8cpp" startline="86" endline="90">~evdata</referencedby>
+        <referencedby refid="class_d_t_s_frame_1a8b1d7dbacb2a99f3758a35ef06046963" compoundref="_d_t_s_frame_8cpp" startline="272" endline="298">DTSFrame::DynamicPanelEvent</referencedby>
+        <referencedby refid="classevdata_1ad136a65ea4c324ecbd9b98e953c10afc" compoundref="evdata_8cpp" startline="85" endline="92">evdata</referencedby>
+        <referencedby refid="class_d_t_s_frame_1a85e9e9e31176870e5d1d7fb96972d236" compoundref="_d_t_s_frame_8cpp" startline="257" endline="270">DTSFrame::SwitchWindow</referencedby>
+        <referencedby refid="classevdata_1a2d73a5260935f0e089c1f660c950786d" compoundref="evdata_8cpp" startline="94" endline="98">~evdata</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -36,8 +36,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" line="46" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" bodystart="46" bodyend="-1"/>
-        <referencedby refid="classevdata_1ad136a65ea4c324ecbd9b98e953c10afc" compoundref="evdata_8cpp" startline="77" endline="84">evdata</referencedby>
-        <referencedby refid="classevdata_1a2d73a5260935f0e089c1f660c950786d" compoundref="evdata_8cpp" startline="86" endline="90">~evdata</referencedby>
+        <referencedby refid="classevdata_1ad136a65ea4c324ecbd9b98e953c10afc" compoundref="evdata_8cpp" startline="85" endline="92">evdata</referencedby>
+        <referencedby refid="classevdata_1a2d73a5260935f0e089c1f660c950786d" compoundref="evdata_8cpp" startline="94" endline="98">~evdata</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" line="42" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/evdata.cpp" bodystart="77" bodyend="84"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" line="42" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/evdata.cpp" bodystart="85" bodyend="92"/>
         <references refid="classevdata_1ab8569cae7cd7a33fde4e51872ef29090" compoundref="evdata_8h" startline="44">data</references>
         <references refid="classevdata_1a5ccf23487f6c2b58bedf37bf6da3adf5" compoundref="evdata_8h" startline="46">unref</references>
       </memberdef>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" line="43" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/evdata.cpp" bodystart="86" bodyend="90"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/evdata.h" line="43" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/evdata.cpp" bodystart="94" bodyend="98"/>
         <references refid="classevdata_1ab8569cae7cd7a33fde4e51872ef29090" compoundref="evdata_8h" startline="44">data</references>
         <references refid="classevdata_1a5ccf23487f6c2b58bedf37bf6da3adf5" compoundref="evdata_8h" startline="46">unref</references>
       </memberdef>

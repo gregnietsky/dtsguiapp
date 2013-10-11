@@ -130,10 +130,6 @@ Wrapper functions exported to C to allow interfacing with C++\&.
 .br
 .RI "\fICreate a tab view panel\&. \fP"
 .ti -1c
-.RI "void \fBDTS_C_API::dtsgui_nodesetxml\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *newname)"
-.br
-.RI "\fIUpdate the XML Node with a new name\&. \fP"
-.ti -1c
 .RI "void \fBDTS_C_API::dtsgui_panel_setxml\fP (\fBdtsgui_pane\fP pane, struct xml_doc *xmldoc)"
 .br
 .RI "\fIPass a reference to a XML Doc Structure to the panel\&. \fP"
@@ -152,7 +148,7 @@ Wrapper functions exported to C to allow interfacing with C++\&.
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBDTS_C_API::dtsgui_tabpage_insert\fP (\fBdtsgui_tabview\fP tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fP cb, void *cdata, int pos, int undo)"
 .br
-.RI "\fICreate and append a tab to the view\&. \fP"
+.RI "\fICreate and insert a tab in the view\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_newxmltabpane\fP (\fBdtsgui_tabview\fP tabv, \fBdtsgui_pane\fP p, const char *xpath, const char *node, const char *vitem, const char *tattr, \fBdtsgui_tabpane_newdata_cb\fP data_cb, \fBdtsgui_tabpanel_cb\fP cb, void *cdata, struct xml_doc *xmldoc, void *data)"
 .br
@@ -160,11 +156,11 @@ Wrapper functions exported to C to allow interfacing with C++\&.
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBDTS_C_API::dtsgui_treepane\fP (\fBdtsgui_treeview\fP tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc)"
 .br
-.RI "\fICreate a tree view panel with information\&. \fP"
+.RI "\fICreate a panel owned by the tree\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBDTS_C_API::dtsgui_treepane_default\fP (\fBdtsgui_treeview\fP tv, \fBdtsgui_treenode\fP node)"
 .br
-.RI "\fICreate a tree view panel with information\&. \fP"
+.RI "\fICreate a panel owned by the tree configured from the specified node\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_treenode\fP \fBDTS_C_API::dtsgui_treecont\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, \fBdtsgui_treeviewpanel_cb\fP p_cb, void *data)"
 .br
@@ -172,7 +168,7 @@ Wrapper functions exported to C to allow interfacing with C++\&.
 .ti -1c
 .RI "\fBdtsgui_treenode\fP \fBDTS_C_API::dtsgui_treeitem\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, \fBdtsgui_treeviewpanel_cb\fP p_cb, void *data)"
 .br
-.RI "\fICreate a item in a container\&. \fP"
+.RI "\fICreate a item in a container in the tree view\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_newxmltreenode\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_pane\fP p, \fBdtsgui_treenode\fP tn, const char *xpath, const char *node, const char *vitem, const char *tattr, int nid, int flags, \fBdtsgui_xmltreenode_cb\fP node_cb, void *data, \fBdtsgui_treeviewpanel_cb\fP p_cb)"
 .br
@@ -193,6 +189,10 @@ Wrapper functions exported to C to allow interfacing with C++\&.
 .RI "struct xml_node * \fBDTS_C_API::dtsgui_treenodegetxml\fP (\fBdtsgui_treenode\fP tn, char **buf)"
 .br
 .RI "\fIReturn the XML node reference held by the tree node\&. \fP"
+.ti -1c
+.RI "void \fBDTS_C_API::dtsgui_nodesetxml\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *newname)"
+.br
+.RI "\fIUpdate the XML Node or title attribute with a new name\&. \fP"
 .ti -1c
 .RI "void * \fBDTS_C_API::dtsgui_treenodegetdata\fP (\fBdtsgui_treenode\fP tn)"
 .br
@@ -316,7 +316,7 @@ Wrapper functions exported to C to allow interfacing with C++\&.
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_listbox_addxml\fP (struct \fBform_item\fP *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr)"
 .br
-.RI "\fIPopulate a listbox or combobox from a XML path\&. A entry is added for each node found using the supplied attributes for displayed text and value\&. \fP"
+.RI "\fIPopulate a listbox or combobox from a XML path\&. \fP"
 .ti -1c
 .RI "void \fBDTS_C_API::dtsgui_textbox\fP (\fBdtsgui_pane\fP pane, const char *title, const char *name, const char *value, void *data)"
 .br

@@ -52,8 +52,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1213" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1213" bodyend="1215"/>
-        <references refid="classform__item_1ad99d224a37a5bc6f99835afb2347fac8" compoundref="pitems_8cpp" startline="147" endline="166">form_item::Append</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1219" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1219" bodyend="1221"/>
+        <references refid="classform__item_1ad99d224a37a5bc6f99835afb2347fac8" compoundref="pitems_8cpp" startline="155" endline="174">form_item::Append</references>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>
         <referencedby refid="netconfig_8c_1aaf6857ee640832afc05a9e158faedde3" compoundref="netconfig_8c" startline="372" endline="388">network_modem</referencedby>
         <referencedby refid="netconfig_8c_1a4bab1c305385131091d979ad287b2ea3" compoundref="netconfig_8c" startline="401" endline="444">network_modem_ana</referencedby>
@@ -108,8 +108,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1221" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1221" bodyend="1223"/>
-        <references refid="classform__item_1a9f108735a3f81f0f419fd828a29b2938" compoundref="pitems_8cpp" startline="168" endline="178">form_item::SetSelection</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1227" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1227" bodyend="1229"/>
+        <references refid="classform__item_1a9f108735a3f81f0f419fd828a29b2938" compoundref="pitems_8cpp" startline="176" endline="186">form_item::SetSelection</references>
         <referencedby refid="netconfig_8c_1a3a749e8b1e9561bb168ba3aed04444a8" compoundref="netconfig_8c" startline="277" endline="318">network_newwifi</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_elements_1ga6585281832905a2e769f8b0f813a67e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -138,9 +138,9 @@
           <declname>vattr</declname>
         </param>
         <briefdescription>
-<para>Populate a listbox or combobox from a XML path. A entry is added for each node found using the supplied attributes for displayed text and value. </para>        </briefdescription>
+<para>Populate a listbox or combobox from a XML path. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="remark"><para>passing NULL as either or both of the attributes will use the value of the node. </para></simplesect>
+<para>A entry is added for each node found using the supplied attributes for displayed text and value <simplesect kind="remark"><para>passing NULL as either or both of the attributes will use the value of the node. </para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>lb</parametername>
@@ -180,8 +180,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1234" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1234" bodyend="1236"/>
-        <references refid="classform__item_1a7bbc5ad6365c6b104f230afb35b0996b" compoundref="pitems_8cpp" startline="217" endline="237">form_item::AppendXML</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1241" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1241" bodyend="1243"/>
+        <references refid="classform__item_1a7bbc5ad6365c6b104f230afb35b0996b" compoundref="pitems_8cpp" startline="225" endline="245">form_item::AppendXML</references>
         <referencedby refid="netconfig_8c_1afbdf0e8165311538e8b408c7ba2fabbf" compoundref="netconfig_8c" startline="446" endline="477">network_adsl_link</referencedby>
         <referencedby refid="netconfig_8c_1aa4d1bbd43067e6a75b7a441658a28646" compoundref="netconfig_8c" startline="479" endline="502">network_adsl_link_new</referencedby>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>

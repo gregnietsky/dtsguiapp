@@ -89,6 +89,7 @@ typedef void *dtsgui_progress;
 typedef int (*dtsgui_configcb)(struct dtsgui*, void*);
 
 /** @brief Callback run on panel event
+  *
   * When a panel event is triggered and a callback has been registered it will
   * be called.
   * @see panel_events
@@ -104,6 +105,7 @@ typedef int (*dtsgui_configcb)(struct dtsgui*, void*);
 typedef int (*event_callback)(struct dtsgui*, dtsgui_pane, int type, int, void*);
 
 /** @brief Calback to configure and return a wxToolbar objecct.
+  *
   * @see DTSFrame::SetupToolbar()
   * @see dtsgui_setuptoolbar
   * @param dtsgui Application data ptr.
@@ -116,6 +118,7 @@ typedef int (*event_callback)(struct dtsgui*, dtsgui_pane, int type, int, void*)
 typedef void* (*dtsgui_toolbar_create)(struct dtsgui*, void *, long, int, const char*, void *data);
 
 /** @brief Callback called when a dynamic menu item is selected
+  *
   * This function is called and allows returning a pane to be displayed.
   * @see DTSFrame::NewMenuItem()
   * @see dtsgui_newmenucb
@@ -139,6 +142,7 @@ typedef dtsgui_pane (*dtsgui_dynpanel)(struct dtsgui*, const char*, void*);
 typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_treenode, enum tree_cbtype, const char*, void*);
 
 /** @brief Callback called after dtsgui_tree_cb to allow configuration of the panel.
+  *
   * This callback is stored on the node and allows the panel to be configured per node allowing generic
   * tree callback.
   * @see DTSTreeWindowEvent::TreeCallback()
@@ -150,6 +154,7 @@ typedef dtsgui_pane (*dtsgui_tree_cb)(struct dtsgui *, dtsgui_treeview, dtsgui_t
 typedef void (*dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_treenode, void*);
 
 /** @brief Callback called as part of the creation of a new node.
+  *
   * This callback will allow manipulation of the newly created node if required.
   * @see dtsgui_newxmltreenode()
   * @see tree_newnode::tree_newnode()
@@ -160,6 +165,7 @@ typedef void (*dtsgui_treeviewpanel_cb)(dtsgui_pane, dtsgui_treeview, dtsgui_tre
 typedef void (*dtsgui_xmltreenode_cb)(dtsgui_treeview, dtsgui_treenode, struct xml_node*, void*);
 
 /** @brief Configure a tab view panel prior to display.
+  *
   * Tab panels are dynanic and created as needed by calling this callback.
   * @see DTSTabPage::ConfigPane()
   * @param pane Panel been configured.
@@ -167,6 +173,7 @@ typedef void (*dtsgui_xmltreenode_cb)(dtsgui_treeview, dtsgui_treenode, struct x
 typedef void (*dtsgui_tabpanel_cb)(dtsgui_pane, void*);
 
 /** @brief Allow setting the configuration data before tab pane is created.
+  *
   * This callback is called as part of the new tab creation to allow setting callback
   * data.The position of the pane can also be set.
   * @see tab_newpane::handle_newtabpane()

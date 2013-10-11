@@ -107,9 +107,12 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp.html','');});
 <a href="#define-members">Macros</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">DTSPanel.cpp File Reference</div>  </div>
+<div class="title">DTSPanel.cpp File Reference<div class="ingroups"><a class="el" href="group___c_p_p-_panel.html">Core panel classes</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation of core panel classes and event handler.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;wx/combobox.h&gt;</code><br/>
 <code>#include &lt;wx/stattext.h&gt;</code><br/>
@@ -125,63 +128,27 @@ $(document).ready(function(){initNavTree('_d_t_s_panel_8cpp.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a00fc562a7d9ef5cac917f9697dfdb769"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_t_s_panel_8cpp.html#a00fc562a7d9ef5cac917f9697dfdb769">PADING</a>&#160;&#160;&#160;10</td></tr>
-<tr class="separator:a00fc562a7d9ef5cac917f9697dfdb769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00fc562a7d9ef5cac917f9697dfdb769"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_p_p-_panel.html#ga00fc562a7d9ef5cac917f9697dfdb769">PADING</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:ga00fc562a7d9ef5cac917f9697dfdb769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Border used when placing elements.  <a href="group___c_p_p-_panel.html#ga00fc562a7d9ef5cac917f9697dfdb769"></a><br/></td></tr>
+<tr class="separator:ga00fc562a7d9ef5cac917f9697dfdb769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a138f34819b90ed241ed77fc27958f745"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_d_t_s_panel_8cpp.html#a138f34819b90ed241ed77fc27958f745">def_buttons</a> [6] = {wxID_FIRST, wxID_BACKWARD, wxID_FORWARD, wxID_LAST, wxID_APPLY, wxID_UNDO}</td></tr>
-<tr class="separator:a138f34819b90ed241ed77fc27958f745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga138f34819b90ed241ed77fc27958f745"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_p_p-_panel.html#ga138f34819b90ed241ed77fc27958f745">def_buttons</a> [6] = {wxID_FIRST, wxID_BACKWARD, wxID_FORWARD, wxID_LAST, wxID_APPLY, wxID_UNDO}</td></tr>
+<tr class="memdesc:ga138f34819b90ed241ed77fc27958f745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array mapping wxWidgets buttons to DTS Buttons.  <a href="group___c_p_p-_panel.html#ga138f34819b90ed241ed77fc27958f745"></a><br/></td></tr>
+<tr class="separator:ga138f34819b90ed241ed77fc27958f745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a00fc562a7d9ef5cac917f9697dfdb769"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PADING&#160;&#160;&#160;10</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of core panel classes and event handler. </p>
 
-<p>Definition at line <a class="el" href="_d_t_s_panel_8cpp_source.html#l00033">33</a> of file <a class="el" href="_d_t_s_panel_8cpp_source.html">DTSPanel.cpp</a>.</p>
-
-<p>Referenced by <a class="el" href="_d_t_s_panel_8cpp_source.html#l00711">DTSPanel::Buttons()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00595">DTSPanel::CheckBox()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00671">DTSPanel::ComboBox()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00635">DTSPanel::ListBox()</a>, <a class="el" href="_d_t_s_panel_8cpp_source.html#l00554">DTSPanel::TextBox()</a>, and <a class="el" href="_d_t_s_panel_8cpp_source.html#l00448">DTSPanel::Title()</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a138f34819b90ed241ed77fc27958f745"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int def_buttons[6] = {wxID_FIRST, wxID_BACKWARD, wxID_FORWARD, wxID_LAST, wxID_APPLY, wxID_UNDO}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_d_t_s_panel_8cpp_source.html#l00035">35</a> of file <a class="el" href="_d_t_s_panel_8cpp_source.html">DTSPanel.cpp</a>.</p>
-
-<p>Referenced by <a class="el" href="_d_t_s_panel_8cpp_source.html#l00336">DTSPanel::DTSPanel()</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<p>Definition in file <a class="el" href="_d_t_s_panel_8cpp_source.html">DTSPanel.cpp</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_d_t_s_panel_8cpp.html">DTSPanel.cpp</a></li>
-    <li class="footer">Generated on Fri Oct 11 2013 12:50:03 for DTS Application wxWidgets GUI Library by
+    <li class="footer">Generated on Fri Oct 11 2013 14:10:52 for DTS Application wxWidgets GUI Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

@@ -148,7 +148,7 @@ Definition at line 33 of file cxxapi\&.cpp\&.
 .PP
 Defining __DTS_C_API allows access to C API from inside a C++ file\&. \fBdtsgui\&.h\fP will only include the definitions for the C API using C++ if this is defined\&. 
 .PP
-Definition at line 148 of file wrapper\&.cpp\&.
+Definition at line 154 of file wrapper\&.cpp\&.
 .SH "Function Documentation"
 .PP 
 .SS "void DTS_C_API::dtsgui_config (\fBdtsgui_configcb\fPconfcallback_cb, void *userdata, struct \fBpoint\fPwsize, struct \fBpoint\fPwpos, const char *title, const char *status)"
@@ -191,7 +191,7 @@ The fuction does not return\&.
 .PP
 
 .PP
-Definition at line 201 of file wrapper\&.cpp\&.
+Definition at line 207 of file wrapper\&.cpp\&.
 .PP
 Referenced by main()\&.
 .SS "int DTS_C_API::dtsgui_run (intargc, char **argv)"
@@ -220,7 +220,7 @@ Return value from callback function\&.
 .PP
 
 .PP
-Definition at line 216 of file wrapper\&.cpp\&.
+Definition at line 222 of file wrapper\&.cpp\&.
 .PP
 Referenced by main()\&.
 .SS "void DTS_C_API::dtsgui_sendevent (struct \fBdtsgui\fP *dtsgui, inteid)"
@@ -242,7 +242,7 @@ Emit a event handled by event callback's\&. A event is emited and recived by all
 .PP
 
 .PP
-Definition at line 256 of file wrapper\&.cpp\&.
+Definition at line 262 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::SendDTSEvent()\&.
 .PP
@@ -264,7 +264,7 @@ Disable or enable the toolbar\&. \fBSee Also:\fP
 .PP
 
 .PP
-Definition at line 283 of file wrapper\&.cpp\&.
+Definition at line 289 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::ShowToolbar()\&.
 .PP
@@ -295,7 +295,7 @@ This needs to be done in the application configuration callback\&.
 .PP
 
 .PP
-Definition at line 272 of file wrapper\&.cpp\&.
+Definition at line 278 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::SetupToolbar()\&.
 .PP
@@ -319,7 +319,7 @@ Set the displayed panel to pane provided\&. Switch the curent pane with the one 
 .PP
 
 .PP
-Definition at line 243 of file wrapper\&.cpp\&.
+Definition at line 249 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetFrame(), and DTSFrame::SetWindow()\&.
 .SS "void DTS_C_API::dtsgui_titleappend (struct \fBdtsgui\fP *dtsgui, const char *text)"
@@ -341,7 +341,7 @@ Append text to the application frame title enclosed in square brackets\&. Update
 .PP
 
 .PP
-Definition at line 294 of file wrapper\&.cpp\&.
+Definition at line 300 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::AppendTitle()\&.
 .PP
@@ -371,7 +371,7 @@ Reference to application user data
 .PP
 
 .PP
-Definition at line 229 of file wrapper\&.cpp\&.
+Definition at line 235 of file wrapper\&.cpp\&.
 .PP
 References dtsgui::GetUserData()\&.
 .PP
@@ -383,7 +383,7 @@ Referenced by advanced_config(), app_getxmldoc(), config_menu(), export_config()
 .PP
 Static variable containing menuid incremented each time a menu is created\&. 
 .PP
-Definition at line 175 of file wrapper\&.cpp\&.
+Definition at line 181 of file wrapper\&.cpp\&.
 .PP
 Referenced by DTS_C_API::dtsgui_newmenucb(), and DTS_C_API::dtsgui_newmenuitem()\&.
 .SH "Author"

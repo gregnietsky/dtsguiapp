@@ -12,5 +12,5 @@ var searchData=
   ['wizz_5ftrunk',['wizz_trunk',['../group___d_t_s-_a_p_p-_wizard.html#gaa274a72a578011082041109b5e2d8b22',1,'wizard.c']]],
   ['wizz_5fvoip',['wizz_voip',['../group___d_t_s-_a_p_p-_wizard.html#ga4663a22f17fb8c01f6058f117ed6c201',1,'wizard.c']]],
   ['wizz_5fx509',['wizz_x509',['../group___d_t_s-_a_p_p-_wizard.html#ga81b5895e97fa4d47dbd829cccffa1b7b',1,'wizard.c']]],
-  ['wxdefine_5fevent',['wxDEFINE_EVENT',['../_d_t_s_app_8cpp.html#ac7cc8ecc2c05777065fdf0af985b197b',1,'DTSApp.cpp']]]
+  ['wxdefine_5fevent',['wxDEFINE_EVENT',['../group___c_p_p.html#gac7cc8ecc2c05777065fdf0af985b197b',1,'DTSApp.cpp']]]
 ];

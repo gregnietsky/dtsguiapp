@@ -29,8 +29,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1070" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1070" bodyend="1073"/>
-        <references refid="class_d_t_s_object_1a4cadcce0480e7e8f4a9a07a4aedd3c1f" compoundref="_d_t_s_panel_8cpp" startline="304" endline="309">DTSObject::GetItems</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1076" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1076" bodyend="1079"/>
+        <references refid="class_d_t_s_object_1a4cadcce0480e7e8f4a9a07a4aedd3c1f" compoundref="_d_t_s_panel_8cpp" startline="316" endline="321">DTSObject::GetItems</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct <ref refid="classform__item" kindref="compound">form_item</ref> *</type>
@@ -68,8 +68,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1083" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1083" bodyend="1086"/>
-        <references refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" compoundref="_d_t_s_panel_8cpp" startline="869" endline="871">DTSPanel::FindItem</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1089" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1089" bodyend="1092"/>
+        <references refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" compoundref="_d_t_s_panel_8cpp" startline="881" endline="883">DTSPanel::FindItem</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga30bc1422cf3395b150773320ffda00ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -83,7 +83,7 @@
         <briefdescription>
 <para>Get refernece to data stoed on element. </para>        </briefdescription>
         <detaileddescription>
-<para>Each element is capable of storing user supplied data this returns a reference to this data. <simplesect kind="see"><para>dtsgui_item::GetData() </para></simplesect>
+<para>Each element is capable of storing user supplied data this returns a reference to this data. <simplesect kind="see"><para><ref refid="classform__item_1a45b4a4db5526c1032f15ba20d3f28249" kindref="member">form_item::GetData()</ref> </para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fi</parametername>
@@ -96,8 +96,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1096" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1096" bodyend="1098"/>
-        <references refid="classform__item_1a45b4a4db5526c1032f15ba20d3f28249" compoundref="pitems_8cpp" startline="136" endline="145">form_item::GetData</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1102" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1102" bodyend="1104"/>
+        <references refid="classform__item_1a45b4a4db5526c1032f15ba20d3f28249" compoundref="pitems_8cpp" startline="144" endline="153">form_item::GetData</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -112,7 +112,7 @@
 <para>Return value of element. The value of the panel element is returned fo the item. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="note"><para>The return value must be freed. </para></simplesect>
-<simplesect kind="see"><para>dtsgui_item::GetValue() </para></simplesect>
+<simplesect kind="see"><para><ref refid="classform__item_1a6377c3eeefcf7272d5200cd462c9eba7" kindref="member">form_item::GetValue()</ref> </para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fi</parametername>
@@ -125,8 +125,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1107" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1107" bodyend="1109"/>
-        <references refid="classform__item_1a6377c3eeefcf7272d5200cd462c9eba7" compoundref="pitems_8cpp" startline="184" endline="211">form_item::GetValue</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1113" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1113" bodyend="1115"/>
+        <references refid="classform__item_1a6377c3eeefcf7272d5200cd462c9eba7" compoundref="pitems_8cpp" startline="192" endline="219">form_item::GetValue</references>
         <referencedby refid="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" compoundref="netconfig_8c" startline="37" endline="74">network_config</referencedby>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga2cb1581f47559805b221f9290f9ec83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -155,8 +155,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1118" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1118" bodyend="1120"/>
-        <references refid="classform__item_1a4f3558ce5670e789ad51d1f489ec5b14" compoundref="pitems_8cpp" startline="180" endline="182">form_item::GetName</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1124" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1124" bodyend="1126"/>
+        <references refid="classform__item_1a4f3558ce5670e789ad51d1f489ec5b14" compoundref="pitems_8cpp" startline="188" endline="190">form_item::GetName</references>
       </memberdef>
       <memberdef kind="function" id="group___c-_a_p_i-_panel-_items_1ga37f578498eb38e545906898e7250e6bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -175,7 +175,7 @@
 <para>Helper function to return a value of a item. This function finds a value by name returning the value. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="note"><para>the returned value must be freeed. </para></simplesect>
-<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" kindref="member">dtsgui_finditem()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" kindref="member">dtsgui_item_value()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" kindref="member">DTSPanel::FindValue()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" kindref="member">DTSPanel::FindItem()</ref> </para><simplesectsep/><para>dtsgui_item::GetValue() </para></simplesect>
+<simplesect kind="see"><para><ref refid="group___c-_a_p_i-_panel-_items_1ga3af426dd6bf50cb6bd7232c4ea5b92f6" kindref="member">dtsgui_finditem()</ref> </para><simplesectsep/><para><ref refid="group___c-_a_p_i-_panel-_items_1gadc168d1ed91fc91be2bb7bf7b060dd62" kindref="member">dtsgui_item_value()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" kindref="member">DTSPanel::FindValue()</ref> </para><simplesectsep/><para><ref refid="class_d_t_s_panel_1a3c4a20a1c122851ae935dcac34697361" kindref="member">DTSPanel::FindItem()</ref> </para><simplesectsep/><para><ref refid="classform__item_1a6377c3eeefcf7272d5200cd462c9eba7" kindref="member">form_item::GetValue()</ref> </para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>p</parametername>
@@ -195,8 +195,8 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1134" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1134" bodyend="1137"/>
-        <references refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" compoundref="_d_t_s_panel_8cpp" startline="873" endline="884">DTSPanel::FindValue</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" line="1140" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/wrapper.cpp" bodystart="1140" bodyend="1143"/>
+        <references refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" compoundref="_d_t_s_panel_8cpp" startline="885" endline="896">DTSPanel::FindValue</references>
         <referencedby refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" compoundref="interface_8c" startline="86" endline="121">handle_updatetabpane</referencedby>
       </memberdef>
       </sectiondef>

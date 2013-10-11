@@ -533,7 +533,6 @@
     <member refid="group___c-_a_p_i-_panel_1gafb8efe017917a372826f7ddedb0e8bba" kind="function"><name>dtsgui_textpane</name></member>
     <member refid="group___c-_a_p_i-_panel_1gaa92cb9c6006aaf320e784f04500c3b25" kind="function"><name>dtsgui_treewindow</name></member>
     <member refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" kind="function"><name>dtsgui_tabwindow</name></member>
-    <member refid="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" kind="function"><name>dtsgui_nodesetxml</name></member>
     <member refid="group___c-_a_p_i-_panel_1gad91055a12542c30dab4aacbd0761c785" kind="function"><name>dtsgui_panel_setxml</name></member>
     <member refid="group___c-_a_p_i-_panel_1ga75c6083aa363922fdf1fd19767eceeea" kind="function"><name>dtsgui_panelxml</name></member>
     <member refid="group___c-_a_p_i-_panel_1ga71826ffc718e3dc219e57befdb6f0d8c" kind="function"><name>dtsgui_delpane</name></member>
@@ -549,6 +548,7 @@
     <member refid="group___c-_a_p_i-_panel-_tree_1gaedca58250011ea48c67fbc4faa14278f" kind="function"><name>dtsgui_treenodeparent</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1ga3e6618e889e7b58e3bf2ae3d63332178" kind="function"><name>dtsgui_treenodesetxml</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kind="function"><name>dtsgui_treenodegetxml</name></member>
+    <member refid="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" kind="function"><name>dtsgui_nodesetxml</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1ga00767aae723dce154065e0bb090c0e70" kind="function"><name>dtsgui_treenodegetdata</name></member>
     <member refid="group___c-_a_p_i-_panel_1gaa85445ee6c9a2c24d76824bb67cc2ab2" kind="function"><name>dtsgui_setevcallback</name></member>
     <member refid="group___c-_a_p_i-_panel_1ga28e2dbe2171ea35e32fa615aca55b934" kind="function"><name>dtsgui_xmlpanel_update</name></member>
@@ -804,22 +804,22 @@
     <member refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
   </compound>
   <compound refid="_d_t_s_app_8cpp" kind="file"><name>DTSApp.cpp</name>
-    <member refid="_d_t_s_app_8cpp_1ac7cc8ecc2c05777065fdf0af985b197b" kind="function"><name>wxDEFINE_EVENT</name></member>
+    <member refid="group___c_p_p_1gac7cc8ecc2c05777065fdf0af985b197b" kind="function"><name>wxDEFINE_EVENT</name></member>
   </compound>
   <compound refid="_d_t_s_frame_8cpp" kind="file"><name>DTSFrame.cpp</name>
   </compound>
   <compound refid="_d_t_s_list_view_8cpp" kind="file"><name>DTSListView.cpp</name>
   </compound>
   <compound refid="_d_t_s_panel_8cpp" kind="file"><name>DTSPanel.cpp</name>
-    <member refid="_d_t_s_panel_8cpp_1a00fc562a7d9ef5cac917f9697dfdb769" kind="define"><name>PADING</name></member>
-    <member refid="_d_t_s_panel_8cpp_1a138f34819b90ed241ed77fc27958f745" kind="variable"><name>def_buttons</name></member>
+    <member refid="group___c_p_p-_panel_1ga00fc562a7d9ef5cac917f9697dfdb769" kind="define"><name>PADING</name></member>
+    <member refid="group___c_p_p-_panel_1ga138f34819b90ed241ed77fc27958f745" kind="variable"><name>def_buttons</name></member>
   </compound>
   <compound refid="_d_t_s_tree_window_8cpp" kind="file"><name>DTSTreeWindow.cpp</name>
-    <member refid="_d_t_s_tree_window_8cpp_1a1ed19fc940f9de92a2ac518ffbc04486" kind="enum"><name>treewinmenu</name></member>
-    <member refid="_d_t_s_tree_window_8cpp_1a1ed19fc940f9de92a2ac518ffbc04486aed80ef06b46ae100a6f5c56da1674ba7" kind="enumvalue"><name>DTS_TREEWIN_MENU_SORT</name></member>
-    <member refid="_d_t_s_tree_window_8cpp_1a1ed19fc940f9de92a2ac518ffbc04486af5bd57193f475f49c63b9b7271586daf" kind="enumvalue"><name>DTS_TREEWIN_MENU_MOVEUP</name></member>
-    <member refid="_d_t_s_tree_window_8cpp_1a1ed19fc940f9de92a2ac518ffbc04486a097ecad73656ee80fb0c9e7ddf464e5d" kind="enumvalue"><name>DTS_TREEWIN_MENU_MOVEDOWN</name></member>
-    <member refid="_d_t_s_tree_window_8cpp_1a1ed19fc940f9de92a2ac518ffbc04486a4a0c85437a842221377dac401285454f" kind="enumvalue"><name>DTS_TREEWIN_MENU_DELETE</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1ga1ed19fc940f9de92a2ac518ffbc04486" kind="enum"><name>treewinmenu</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486aed80ef06b46ae100a6f5c56da1674ba7" kind="enumvalue"><name>DTS_TREEWIN_MENU_SORT</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486af5bd57193f475f49c63b9b7271586daf" kind="enumvalue"><name>DTS_TREEWIN_MENU_MOVEUP</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486a097ecad73656ee80fb0c9e7ddf464e5d" kind="enumvalue"><name>DTS_TREEWIN_MENU_MOVEDOWN</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486a4a0c85437a842221377dac401285454f" kind="enumvalue"><name>DTS_TREEWIN_MENU_DELETE</name></member>
   </compound>
   <compound refid="_d_t_s_wizard_8cpp" kind="file"><name>DTSWizard.cpp</name>
   </compound>
@@ -1048,6 +1048,29 @@
     <member refid="group___d_t_s-_a_p_p_1ga5fe0b449ba347b98cc9acad0f5608ca1" kind="function"><name>free_appdata</name></member>
     <member refid="group___d_t_s-_a_p_p_1ga3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="group___c_p_p-_frame" kind="group"><name>CPP-Frame</name>
+  </compound>
+  <compound refid="group___c_p_p-_panel-_tree-_store" kind="group"><name>CPP-Panel-Tree-Store</name>
+  </compound>
+  <compound refid="group___c_p_p-_panel" kind="group"><name>CPP-Panel</name>
+    <member refid="group___c_p_p-_panel_1ga138f34819b90ed241ed77fc27958f745" kind="variable"><name>def_buttons</name></member>
+    <member refid="group___c_p_p-_panel_1ga00fc562a7d9ef5cac917f9697dfdb769" kind="define"><name>PADING</name></member>
+  </compound>
+  <compound refid="group___c_p_p-_panel-_tree" kind="group"><name>CPP-Panel-Tree</name>
+    <member refid="group___c_p_p-_panel-_tree_1ga1ed19fc940f9de92a2ac518ffbc04486" kind="enum"><name>treewinmenu</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486aed80ef06b46ae100a6f5c56da1674ba7" kind="enumvalue"><name>DTS_TREEWIN_MENU_SORT</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486af5bd57193f475f49c63b9b7271586daf" kind="enumvalue"><name>DTS_TREEWIN_MENU_MOVEUP</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486a097ecad73656ee80fb0c9e7ddf464e5d" kind="enumvalue"><name>DTS_TREEWIN_MENU_MOVEDOWN</name></member>
+    <member refid="group___c_p_p-_panel-_tree_1gga1ed19fc940f9de92a2ac518ffbc04486a4a0c85437a842221377dac401285454f" kind="enumvalue"><name>DTS_TREEWIN_MENU_DELETE</name></member>
+  </compound>
+  <compound refid="group___c_p_p-_wizard" kind="group"><name>CPP-Wizard</name>
+  </compound>
+  <compound refid="group___c_p_p-_x_m_l_combo" kind="group"><name>CPP-XMLCombo</name>
+  </compound>
+  <compound refid="group___c_p_p-_panel-_event" kind="group"><name>CPP-Panel-Event</name>
+  </compound>
+  <compound refid="group___c_p_p-_panel-_items" kind="group"><name>CPP-Panel-Items</name>
+  </compound>
   <compound refid="group___c_o_r_e" kind="group"><name>CORE</name>
     <member refid="group___c_o_r_e_1ga465794df2cb30731dfe34d3e7a4ed368" kind="enum"><name>tree_cbtype</name></member>
     <member refid="group___c_o_r_e_1gga465794df2cb30731dfe34d3e7a4ed368adac89e1845cacd5358022cbc20aba1a9" kind="enumvalue"><name>DTSGUI_TREE_CB_SELECT</name></member>
@@ -1126,6 +1149,9 @@
     <member refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
     <member refid="group___c-_a_p_i_1gadc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
   </compound>
+  <compound refid="group___c_p_p" kind="group"><name>CPP</name>
+    <member refid="group___c_p_p_1gac7cc8ecc2c05777065fdf0af985b197b" kind="function"><name>wxDEFINE_EVENT</name></member>
+  </compound>
   <compound refid="group___c-_a_p_i-_menus" kind="group"><name>C-API-Menus</name>
     <member refid="group___c-_a_p_i-_menus_1gab20156180905342ce3bc648253507f73" kind="function"><name>dtsgui_menuenable</name></member>
     <member refid="group___c-_a_p_i-_menus_1gadd0f3eab51bf576378a6438c3982fd48" kind="function"><name>dtsgui_newmenu</name></member>
@@ -1156,7 +1182,6 @@
     <member refid="group___c-_a_p_i-_panel_1ga3f904089ceb734323477f2b3dbac4a41" kind="function"><name>dtsgui_rundialog</name></member>
   </compound>
   <compound refid="group___c-_a_p_i-_panel-_tree" kind="group"><name>C-API-Panel-Tree</name>
-    <member refid="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" kind="function"><name>dtsgui_nodesetxml</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1gad71b59e1898bce570cac2acd774f71e3" kind="function"><name>dtsgui_treepane</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1gab8713feb542a9bb13f8fe7e3bf568bda" kind="function"><name>dtsgui_treepane_default</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1ga550b7516bbb97dd66bc71033e7d996cb" kind="function"><name>dtsgui_treecont</name></member>
@@ -1166,6 +1191,7 @@
     <member refid="group___c-_a_p_i-_panel-_tree_1gaedca58250011ea48c67fbc4faa14278f" kind="function"><name>dtsgui_treenodeparent</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1ga3e6618e889e7b58e3bf2ae3d63332178" kind="function"><name>dtsgui_treenodesetxml</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1gaf56a924134315107e80c8b01bfbeee68" kind="function"><name>dtsgui_treenodegetxml</name></member>
+    <member refid="group___c-_a_p_i-_panel-_tree_1gaaaf93911380c2f40eb8adbdc39ac36ac" kind="function"><name>dtsgui_nodesetxml</name></member>
     <member refid="group___c-_a_p_i-_panel-_tree_1ga00767aae723dce154065e0bb090c0e70" kind="function"><name>dtsgui_treenodegetdata</name></member>
   </compound>
   <compound refid="group___c-_a_p_i-_panel-_tab" kind="group"><name>C-API-Panel-Tab</name>

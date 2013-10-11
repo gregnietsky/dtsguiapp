@@ -1,6 +1,7 @@
 var searchData=
 [
   ['wizard_20interface_2e',['Wizard Interface.',['../group___c-_a_p_i-_wizard.html',1,'']]],
+  ['wizard_20classes',['Wizard Classes',['../group___c_p_p-_wizard.html',1,'']]],
   ['w',['w',['../classdynamic__panel.html#a5d13849f704cffb0ecfde8dfdb072571',1,'dynamic_panel']]],
   ['widget',['widget',['../classform__item.html#a6720d7a562d897686e128fc2146702e7',1,'form_item']]],
   ['widget_5ftype',['widget_type',['../group___c_o_r_e.html#gafd296180392ef5681415b9fb0590be84',1,'dtsgui.h']]],
@@ -48,7 +49,7 @@ var searchData=
   ['wxboxsizer',['wxBoxSizer',['../_d_t_s_frame_8h.html#ad396616e0ef9ed30f9053d7b48712ecd',1,'DTSFrame.h']]],
   ['wxcheckbox',['wxCheckBox',['../pitems_8h.html#aef96dbf274b0324394cd30671b01d2bb',1,'pitems.h']]],
   ['wxcombobox',['wxComboBox',['../pitems_8h.html#abd3381f4db4e2b967199254324c78f71',1,'pitems.h']]],
-  ['wxdefine_5fevent',['wxDEFINE_EVENT',['../_d_t_s_app_8cpp.html#ac7cc8ecc2c05777065fdf0af985b197b',1,'DTSApp.cpp']]],
+  ['wxdefine_5fevent',['wxDEFINE_EVENT',['../group___c_p_p.html#gac7cc8ecc2c05777065fdf0af985b197b',1,'DTSApp.cpp']]],
   ['wxdialog',['wxDialog',['../_d_t_s_panel_8h.html#a0a27e6150193664909134000ec2fd06d',1,'DTSPanel.h']]],
   ['wxforms_2ec',['wxforms.c',['../wxforms_8c.html',1,'']]],
   ['wxgauge',['wxGauge',['../_d_t_s_frame_8h.html#a87c58918f18a953b17e8f868b1fa6a95',1,'DTSFrame.h']]],

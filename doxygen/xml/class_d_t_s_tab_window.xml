@@ -32,15 +32,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="151" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="874" bodyend="896"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="151" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="888" bodyend="910"/>
         <references refid="class_d_t_s_object_1a132481851865629352e4aefa7f822e4b" compoundref="_d_t_s_panel_8h" startline="76">DTSObject::dtsevthandler</references>
         <references refid="class_d_t_s_object_1a8ca3e7c6f66685caf07fa93fb5e14337" compoundref="_d_t_s_panel_8h" startline="73">DTSObject::frame</references>
         <references refid="class_d_t_s_object_1af8c7a75701ac05261749552eef4bc6ed" compoundref="_d_t_s_panel_8h" startline="75">DTSObject::panel</references>
-        <references refid="class_d_t_s_tab_window_event_1af41c21b5d534856a22eb64ccf1281807" compoundref="_d_t_s_tree_window_8cpp" startline="846" endline="848">DTSTabWindowEvent::RightMenu</references>
-        <references refid="class_d_t_s_tab_window_1a7e438e77899502fc316577e972d9ef28" compoundref="_d_t_s_tree_window_8cpp" startline="927" endline="965">Show</references>
+        <references refid="class_d_t_s_tab_window_event_1af41c21b5d534856a22eb64ccf1281807" compoundref="_d_t_s_tree_window_8cpp" startline="860" endline="862">DTSTabWindowEvent::RightMenu</references>
+        <references refid="class_d_t_s_tab_window_1a7e438e77899502fc316577e972d9ef28" compoundref="_d_t_s_tree_window_8cpp" startline="941" endline="979">Show</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
         <references refid="class_d_t_s_object_1a783949e39ffd9e00aec15fa2b8cc12ed" compoundref="_d_t_s_panel_8h" startline="78">DTSObject::userdata</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="244">wx_DTSPANEL_TAB</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a94b4b5412dbd78fdf58517c74afa9dad" compoundref="dtsgui_8h" startline="251">wx_DTSPANEL_TAB</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1a2ce2a4e23f391cb621c80d92cd7ebea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="152" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="898" bodyend="902"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="152" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="912" bodyend="916"/>
         <references refid="class_d_t_s_object_1a783949e39ffd9e00aec15fa2b8cc12ed" compoundref="_d_t_s_panel_8h" startline="78">DTSObject::userdata</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -101,14 +101,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="153" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="977" bodyend="998"/>
-        <references refid="class_d_t_s_object_1ae5239b912c725a7a5720954767c3537a" compoundref="_d_t_s_panel_8cpp" startline="274" endline="276">DTSObject::GetFrame</references>
-        <references refid="class_d_t_s_object_1ae88ef1ea6f28346b6cd6d2d898d7acde" compoundref="_d_t_s_panel_8cpp" startline="270" endline="272">DTSObject::GetPanel</references>
-        <references refid="class_d_t_s_object_1a3e39ba76f7cb701fc9b99f6f059fb49e" compoundref="_d_t_s_panel_8cpp" startline="314" endline="324">DTSObject::SetUserData</references>
-        <referencedby refid="class_d_t_s_tab_window_1a92747d3ec04159b96c1e2fde83b9c325" compoundref="_d_t_s_tree_window_8cpp" startline="967" endline="974">CreateTab</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" compoundref="wrapper_8cpp" startline="597" endline="600">DTS_C_API::dtsgui_newtabpage</referencedby>
-        <referencedby refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" compoundref="wrapper_8cpp" startline="626" endline="629">DTS_C_API::dtsgui_tabpage_insert</referencedby>
-        <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="202" endline="239">tab_newpane::handle_newtabpane</referencedby>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="153" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="991" bodyend="1012"/>
+        <references refid="class_d_t_s_object_1ae5239b912c725a7a5720954767c3537a" compoundref="_d_t_s_panel_8cpp" startline="286" endline="288">DTSObject::GetFrame</references>
+        <references refid="class_d_t_s_object_1ae88ef1ea6f28346b6cd6d2d898d7acde" compoundref="_d_t_s_panel_8cpp" startline="282" endline="284">DTSObject::GetPanel</references>
+        <references refid="class_d_t_s_object_1a3e39ba76f7cb701fc9b99f6f059fb49e" compoundref="_d_t_s_panel_8cpp" startline="326" endline="336">DTSObject::SetUserData</references>
+        <referencedby refid="class_d_t_s_tab_window_1a92747d3ec04159b96c1e2fde83b9c325" compoundref="_d_t_s_tree_window_8cpp" startline="981" endline="988">CreateTab</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" compoundref="wrapper_8cpp" startline="588" endline="591">DTS_C_API::dtsgui_newtabpage</referencedby>
+        <referencedby refid="group___c-_a_p_i-_panel-_tab_1ga26ee371ec8b1bed0f4a652eb99e04767" compoundref="wrapper_8cpp" startline="617" endline="620">DTS_C_API::dtsgui_tabpage_insert</referencedby>
+        <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="216" endline="253">tab_newpane::handle_newtabpane</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1a92747d3ec04159b96c1e2fde83b9c325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_d_t_s_tab_page" kindref="compound">DTSTabPage</ref> *</type>
@@ -153,9 +153,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="154" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="967" bodyend="974"/>
-        <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="977" endline="998">CreateTab</references>
-        <references refid="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" compoundref="_d_t_s_tree_window_8cpp" startline="1000" endline="1016">InsertTab</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="154" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="981" bodyend="988"/>
+        <references refid="class_d_t_s_tab_window_1aa37d1c10f98b08a6c7b265ecd77e3f1f" compoundref="_d_t_s_tree_window_8cpp" startline="991" endline="1012">CreateTab</references>
+        <references refid="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" compoundref="_d_t_s_tree_window_8cpp" startline="1014" endline="1030">InsertTab</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,15 +186,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="155" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="1000" bodyend="1016"/>
-        <references refid="class_d_t_s_object_1aa800a3664b895617df9884469dbdf1f8" compoundref="_d_t_s_panel_8cpp" startline="260" endline="268">DTSObject::GetName</references>
-        <references refid="class_d_t_s_object_1ae88ef1ea6f28346b6cd6d2d898d7acde" compoundref="_d_t_s_panel_8cpp" startline="270" endline="272">DTSObject::GetPanel</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="155" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="1014" bodyend="1030"/>
+        <references refid="class_d_t_s_object_1aa800a3664b895617df9884469dbdf1f8" compoundref="_d_t_s_panel_8cpp" startline="272" endline="280">DTSObject::GetName</references>
+        <references refid="class_d_t_s_object_1ae88ef1ea6f28346b6cd6d2d898d7acde" compoundref="_d_t_s_panel_8cpp" startline="282" endline="284">DTSObject::GetPanel</references>
         <references refid="class_d_t_s_object_1af8c7a75701ac05261749552eef4bc6ed" compoundref="_d_t_s_panel_8h" startline="75">DTSObject::panel</references>
         <references refid="class_d_t_s_object_1a941fc98555b60d021a6c2f488ce9ae3e" compoundref="_d_t_s_panel_8h" startline="72">DTSObject::refobj</references>
-        <references refid="class_d_t_s_tab_window_1aa52e98a59b0ad81e28f5463be5e85051" compoundref="_d_t_s_tree_window_8cpp" startline="905" endline="925">Undo</references>
-        <referencedby refid="class_d_t_s_tab_window_1a92747d3ec04159b96c1e2fde83b9c325" compoundref="_d_t_s_tree_window_8cpp" startline="967" endline="974">CreateTab</referencedby>
-        <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="202" endline="239">tab_newpane::handle_newtabpane</referencedby>
-        <referencedby refid="class_d_t_s_tab_window_1aa52e98a59b0ad81e28f5463be5e85051" compoundref="_d_t_s_tree_window_8cpp" startline="905" endline="925">Undo</referencedby>
+        <references refid="class_d_t_s_tab_window_1aa52e98a59b0ad81e28f5463be5e85051" compoundref="_d_t_s_tree_window_8cpp" startline="919" endline="939">Undo</references>
+        <referencedby refid="class_d_t_s_tab_window_1a92747d3ec04159b96c1e2fde83b9c325" compoundref="_d_t_s_tree_window_8cpp" startline="981" endline="988">CreateTab</referencedby>
+        <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="216" endline="253">tab_newpane::handle_newtabpane</referencedby>
+        <referencedby refid="class_d_t_s_tab_window_1aa52e98a59b0ad81e28f5463be5e85051" compoundref="_d_t_s_tree_window_8cpp" startline="919" endline="939">Undo</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1aa52e98a59b0ad81e28f5463be5e85051" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -211,11 +211,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="156" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="905" bodyend="925"/>
-        <references refid="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" compoundref="_d_t_s_tree_window_8cpp" startline="1000" endline="1016">InsertTab</references>
-        <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="202" endline="239">tab_newpane::handle_newtabpane</referencedby>
-        <referencedby refid="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" compoundref="_d_t_s_tree_window_8cpp" startline="1000" endline="1016">InsertTab</referencedby>
-        <referencedby refid="class_d_t_s_tab_window_event_1a0d4bd622b3c1ef90ca87cd6b052b4f76" compoundref="_d_t_s_tree_window_8cpp" startline="826" endline="843">DTSTabWindowEvent::OnButton</referencedby>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="156" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="919" bodyend="939"/>
+        <references refid="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" compoundref="_d_t_s_tree_window_8cpp" startline="1014" endline="1030">InsertTab</references>
+        <referencedby refid="classtab__newpane_1af3f96c0ce186f089d5e5598ea4814179" compoundref="_d_t_s_tree_window_8cpp" startline="216" endline="253">tab_newpane::handle_newtabpane</referencedby>
+        <referencedby refid="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" compoundref="_d_t_s_tree_window_8cpp" startline="1014" endline="1030">InsertTab</referencedby>
+        <referencedby refid="class_d_t_s_tab_window_event_1a0d4bd622b3c1ef90ca87cd6b052b4f76" compoundref="_d_t_s_tree_window_8cpp" startline="840" endline="857">DTSTabWindowEvent::OnButton</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_window_1a7e438e77899502fc316577e972d9ef28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -233,16 +233,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="157" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="927" bodyend="965"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="157" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="941" bodyend="979"/>
         <references refid="class_d_t_s_object_1ab4249f538d36789b20bb15e29ab4121f" compoundref="_d_t_s_panel_8h" startline="80">DTSObject::beenshown</references>
-        <references refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="932" endline="947">DTSTabPage::ConfigPane</references>
+        <references refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="944" endline="959">DTSTabPage::ConfigPane</references>
         <references refid="class_d_t_s_object_1a132481851865629352e4aefa7f822e4b" compoundref="_d_t_s_panel_8h" startline="76">DTSObject::dtsevthandler</references>
         <references refid="class_d_t_s_object_1a8ca3e7c6f66685caf07fa93fb5e14337" compoundref="_d_t_s_panel_8h" startline="73">DTSObject::frame</references>
-        <references refid="class_d_t_s_tab_window_event_1a0d4bd622b3c1ef90ca87cd6b052b4f76" compoundref="_d_t_s_tree_window_8cpp" startline="826" endline="843">DTSTabWindowEvent::OnButton</references>
-        <references refid="class_d_t_s_tab_window_event_1a0ef3c51fe26036ac2cb0353940307eb6" compoundref="_d_t_s_tree_window_8cpp" startline="850" endline="860">DTSTabWindowEvent::PageChange</references>
-        <references refid="class_d_t_s_tab_window_event_1a373ea755544153574d3d93018ebc2f9c" compoundref="_d_t_s_tree_window_8cpp" startline="862" endline="872">DTSTabWindowEvent::PageChanged</references>
+        <references refid="class_d_t_s_tab_window_event_1a0d4bd622b3c1ef90ca87cd6b052b4f76" compoundref="_d_t_s_tree_window_8cpp" startline="840" endline="857">DTSTabWindowEvent::OnButton</references>
+        <references refid="class_d_t_s_tab_window_event_1a0ef3c51fe26036ac2cb0353940307eb6" compoundref="_d_t_s_tree_window_8cpp" startline="864" endline="874">DTSTabWindowEvent::PageChange</references>
+        <references refid="class_d_t_s_tab_window_event_1a373ea755544153574d3d93018ebc2f9c" compoundref="_d_t_s_tree_window_8cpp" startline="876" endline="886">DTSTabWindowEvent::PageChanged</references>
         <references refid="class_d_t_s_object_1a1292b4804b31450f0ee960fa59fcfc7a" compoundref="_d_t_s_panel_8h" startline="74">DTSObject::status</references>
-        <referencedby refid="class_d_t_s_tab_window_1af62011731508681950ec835f6293095b" compoundref="_d_t_s_tree_window_8cpp" startline="874" endline="896">DTSTabWindow</referencedby>
+        <referencedby refid="class_d_t_s_tab_window_1af62011731508681950ec835f6293095b" compoundref="_d_t_s_tree_window_8cpp" startline="888" endline="910">DTSTabWindow</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -98,13 +98,13 @@ Definition at line 56 of file DTSPanel\&.h\&.
 .SS "DTSObject::DTSObject (wxStringst = \fCwxEmptyString\fP)"
 
 .PP
-Definition at line 229 of file DTSPanel\&.cpp\&.
+Definition at line 241 of file DTSPanel\&.cpp\&.
 .PP
 References beenshown, dtsevthandler, frame, panel, refobj, status, userdata, and xmldoc\&.
 .SS "DTSObject::~DTSObject ()"
 
 .PP
-Definition at line 242 of file DTSPanel\&.cpp\&.
+Definition at line 254 of file DTSPanel\&.cpp\&.
 .PP
 References dtsevthandler, refobj, userdata, and xmldoc\&.
 .SH "Member Function Documentation"
@@ -112,13 +112,13 @@ References dtsevthandler, refobj, userdata, and xmldoc\&.
 .SS "void DTSObject::EventHandler (inteid, wxCommandEvent *event)"
 
 .PP
-Definition at line 311 of file DTSPanel\&.cpp\&.
+Definition at line 323 of file DTSPanel\&.cpp\&.
 .PP
 Referenced by DTSPanelEvent::OnButton()\&.
 .SS "\fBDTSFrame\fP * DTSObject::GetFrame (void)"
 
 .PP
-Definition at line 274 of file DTSPanel\&.cpp\&.
+Definition at line 286 of file DTSPanel\&.cpp\&.
 .PP
 References frame\&.
 .PP
@@ -126,7 +126,7 @@ Referenced by DTSTreeWindow::CreatePane(), DTSTabWindow::CreateTab(), DTSTreeWin
 .SS "struct bucket_list * DTSObject::GetItems (void)\fC [read]\fP"
 
 .PP
-Definition at line 304 of file DTSPanel\&.cpp\&.
+Definition at line 316 of file DTSPanel\&.cpp\&.
 .PP
 References fitems\&.
 .PP
@@ -134,7 +134,7 @@ Referenced by DTS_C_API::dtsgui_panel_items(), and DTSPanelEvent::OnCombo()\&.
 .SS "wxString DTSObject::GetName ()"
 
 .PP
-Definition at line 260 of file DTSPanel\&.cpp\&.
+Definition at line 272 of file DTSPanel\&.cpp\&.
 .PP
 References refobj, and status\&.
 .PP
@@ -142,7 +142,7 @@ Referenced by DTSTabWindow::InsertTab(), and DTSFrame::NewMenuItem()\&.
 .SS "\fBwxWindow\fP * DTSObject::GetPanel ()"
 
 .PP
-Definition at line 270 of file DTSPanel\&.cpp\&.
+Definition at line 282 of file DTSPanel\&.cpp\&.
 .PP
 References panel\&.
 .PP
@@ -150,7 +150,7 @@ Referenced by DTSTreeWindow::CreatePane(), DTSTabWindow::CreateTab(), DTSTreeWin
 .SS "void * DTSObject::GetUserData (void)"
 
 .PP
-Definition at line 326 of file DTSPanel\&.cpp\&.
+Definition at line 338 of file DTSPanel\&.cpp\&.
 .PP
 References refobj, and userdata\&.
 .PP
@@ -158,7 +158,7 @@ Referenced by DTS_C_API::dtsgui_paneldata(), and DTSFrame::pwevent()\&.
 .SS "struct xml_doc * DTSObject::GetXMLDoc (void)\fC [read]\fP"
 
 .PP
-Definition at line 293 of file DTSPanel\&.cpp\&.
+Definition at line 305 of file DTSPanel\&.cpp\&.
 .PP
 References refobj, and xmldoc\&.
 .PP
@@ -166,7 +166,7 @@ Referenced by DTS_C_API::dtsgui_panelxml(), and DTSPanel::GetNode()\&.
 .SS "void DTSObject::SetUserData (void *data)"
 
 .PP
-Definition at line 314 of file DTSPanel\&.cpp\&.
+Definition at line 326 of file DTSPanel\&.cpp\&.
 .PP
 References refobj, and userdata\&.
 .PP
@@ -174,7 +174,7 @@ Referenced by DTSFrame::CreatePane(), and DTSTabWindow::CreateTab()\&.
 .SS "void DTSObject::SetXMLDoc (struct xml_doc *xmldoc)"
 
 .PP
-Definition at line 278 of file DTSPanel\&.cpp\&.
+Definition at line 290 of file DTSPanel\&.cpp\&.
 .PP
 References refobj, and xmldoc\&.
 .PP

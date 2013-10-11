@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="70" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="248" bodyend="250"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="70" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="247" bodyend="249"/>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_app_1a4b4ef9b0d2e3ae5fda50e81f4ade664c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="71" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="252" bodyend="261"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="71" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="251" bodyend="260"/>
         <references refid="classdtsgui__curl_1aba670f1e03229a05d40fd5dc5881a241" compoundref="_d_t_s_app_8h" startline="54">dtsgui_curl::curl</references>
       </memberdef>
       </sectiondef>
@@ -97,9 +97,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="73" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="263" bodyend="269"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSApp.h" line="73" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSApp.cpp" bodystart="262" bodyend="268"/>
         <references refid="classdtsgui__curl_1aba670f1e03229a05d40fd5dc5881a241" compoundref="_d_t_s_app_8h" startline="54">dtsgui_curl::curl</references>
-        <references refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="65" endline="84">dtsgui::SetupAPPFrame</references>
+        <references refid="classdtsgui_1a8dd69405dd8fe95341e0a99c14a6f431" compoundref="_d_t_s_app_8cpp" startline="64" endline="83">dtsgui::SetupAPPFrame</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

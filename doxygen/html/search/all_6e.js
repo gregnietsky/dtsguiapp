@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['native_20c_2b_2b_20api',['Native C++ API',['../group___c_p_p.html',1,'']]],
   ['n_5fwiz',['n_wiz',['../structapp__data.html#a0afceecac34508f601812c1dcae49af5',1,'app_data']]],
   ['name',['name',['../structiface__cdata.html#afbf1d003b7573fb72ce7a31b527557cb',1,'iface_cdata::name()'],['../structlistitem.html#af53587242ef469841b5a0c0836b3cb21',1,'listitem::name()'],['../classdynamic__panel.html#ab6472f891f994a9f4dddd9572eb8adab',1,'dynamic_panel::name()'],['../classform__item.html#a4b647b26beee4bb3f3935645f3eb1a9b',1,'form_item::name()']]],
   ['netconfig_2ec',['netconfig.c',['../netconfig_8c.html',1,'']]],

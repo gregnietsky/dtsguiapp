@@ -22,5 +22,6 @@ var searchData=
   ['appendxmlnodes',['AppendXMLNodes',['../class_d_t_s_x_m_l_combo_box.html#acf258ad2d53caf6b87d48cbb53e32a65',1,'DTSXMLComboBox']]],
   ['appframe',['appframe',['../classdtsgui.html#a23186f0e51311156f54f9f9882806414',1,'dtsgui']]],
   ['associatemodel',['AssociateModel',['../class_d_t_s_d_v_m_ctrl.html#ad844ee2c061ae2233ac8cca01c0a6a92',1,'DTSDVMCtrl']]],
-  ['attr',['attr',['../classxml__element.html#a5e1c544e39cc117f13e692f59cf020c1',1,'xml_element']]]
+  ['attr',['attr',['../classxml__element.html#a5e1c544e39cc117f13e692f59cf020c1',1,'xml_element']]],
+  ['application_20frame_2e',['Application frame.',['../group___c_p_p-_frame.html',1,'']]]
 ];

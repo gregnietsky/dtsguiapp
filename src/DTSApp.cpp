@@ -24,13 +24,12 @@
 #include "DTSApp.h"
 #include "DTSFrame.h"
 
-/** @defgroup CORE Core API Interface Common to C and C++
-  * @brief Core elements shared by all API's*/
-
 /**@file
-  *@brief Core Application Classes.*/
+  *@brief Core Application Class implementation.
+  *@ingroup CPP*/
 
-/** @brief Define event type used for application events*/
+/** @brief Define event type used for application events.
+  *@ingroup CPP*/
 wxDEFINE_EVENT(DTS_APP_EVENT, wxCommandEvent);
 
 dtsgui::dtsgui(const char *title, const char *stat, struct point w_size, struct point w_pos, dtsgui_configcb confcallback_cb , void *data) {

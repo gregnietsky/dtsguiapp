@@ -37,13 +37,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="138" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="886" bodyend="896"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="138" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="898" bodyend="908"/>
         <references refid="class_d_t_s_object_1a132481851865629352e4aefa7f822e4b" compoundref="_d_t_s_panel_8h" startline="76">DTSObject::dtsevthandler</references>
-        <references refid="class_d_t_s_panel_event_1ae7b3a422bc55f7f9f676b2b640614fd9" compoundref="_d_t_s_panel_8cpp" startline="144" endline="149">DTSPanelEvent::OnDialog</references>
+        <references refid="class_d_t_s_panel_event_1ae7b3a422bc55f7f9f676b2b640614fd9" compoundref="_d_t_s_panel_8cpp" startline="156" endline="161">DTSPanelEvent::OnDialog</references>
         <references refid="class_d_t_s_object_1af8c7a75701ac05261749552eef4bc6ed" compoundref="_d_t_s_panel_8h" startline="75">DTSObject::panel</references>
-        <references refid="class_d_t_s_panel_1a9e90d0d7b1466eb3e8005343ce787974" compoundref="_d_t_s_panel_8cpp" startline="378" endline="392">DTSPanel::SetupWin</references>
+        <references refid="class_d_t_s_panel_1a9e90d0d7b1466eb3e8005343ce787974" compoundref="_d_t_s_panel_8cpp" startline="390" endline="404">DTSPanel::SetupWin</references>
         <references refid="class_d_t_s_object_1ad191e42b5daa056f9ea8247d752df3b0" compoundref="_d_t_s_panel_8h" startline="69">DTSObject::type</references>
-        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500" compoundref="dtsgui_8h" startline="238">wx_DTSPANEL_SCROLLPANEL</references>
+        <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a51268d1576c4e816f1416435cfe61500" compoundref="dtsgui_8h" startline="245">wx_DTSPANEL_SCROLLPANEL</references>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_scroll_panel_1a4aea715d4e6ac3257c482813c8ab2bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -61,8 +61,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="139" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="898" bodyend="901"/>
-        <references refid="class_d_t_s_panel_1a0c1a3aa81559298e059473bde57ab23e" compoundref="_d_t_s_panel_8cpp" startline="420" endline="438">DTSPanel::ShowPanel</references>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="139" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="910" bodyend="913"/>
+        <references refid="class_d_t_s_panel_1a0c1a3aa81559298e059473bde57ab23e" compoundref="_d_t_s_panel_8cpp" startline="432" endline="450">DTSPanel::ShowPanel</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

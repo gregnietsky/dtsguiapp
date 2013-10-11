@@ -96,13 +96,13 @@ Definition at line 108 of file DTSTreeWindow\&.h\&.
 .SS "DTSTreeWindow::DTSTreeWindow (\fBwxWindow\fP *parent = \fCNULL\fP, \fBDTSFrame\fP *frame = \fCNULL\fP, \fBdtsgui_tree_cb\fPtree_cb = \fCNULL\fP, wxStringstat_msg = \fCwxEmptyString\fP, intpos = \fC30\fP, void *u_data = \fCNULL\fP, struct xml_doc *xd = \fCNULL\fP)"
 
 .PP
-Definition at line 530 of file DTSTreeWindow\&.cpp\&.
+Definition at line 544 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_window, DTSObject::dtsevthandler, DTSObject::frame, DTSFrame::GetDTSData(), DTSObject::GetPanel(), DTSTreeWindowEvent::MenuEvent(), DTSTreeWindowEvent::OnButton(), DTSObject::panel, rmenu, DTSObject::SetXMLDoc(), Show(), DTSTreeWindowEvent::SplitterEvent(), t_pane, tree, DTSTreeWindowEvent::TreeEvent(), treesizer, DTSObject::type, DTSObject::userdata, vm, and wx_DTSPANEL_TREE\&.
 .SS "DTSTreeWindow::~DTSTreeWindow ()"
 
 .PP
-Definition at line 764 of file DTSTreeWindow\&.cpp\&.
+Definition at line 778 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_window, rmenu, t_pane, and DTSObject::userdata\&.
 .SH "Member Function Documentation"
@@ -110,7 +110,7 @@ References a_window, rmenu, t_pane, and DTSObject::userdata\&.
 .SS "\fBDTSScrollPanel\fP * DTSTreeWindow::CreatePane (const wxString &name = \fCwxEmptyString\fP, intbutmask = \fC0\fP, void *userdata = \fCNULL\fP, struct xml_doc *xmldoc = \fCNULL\fP)"
 
 .PP
-Definition at line 701 of file DTSTreeWindow\&.cpp\&.
+Definition at line 715 of file DTSTreeWindow\&.cpp\&.
 .PP
 References DTSObject::GetFrame(), DTSObject::GetPanel(), DTSPanel::SetTitle(), DTSObject::SetXMLDoc(), DTSObject::type, and wx_DTSPANEL_TREE\&.
 .PP
@@ -118,13 +118,13 @@ Referenced by CreatePane(), DTS_C_API::dtsgui_treepane(), DTS_C_API::dtsgui_tree
 .SS "\fBDTSScrollPanel\fP * DTSTreeWindow::CreatePane (const wxDataViewItem &node)"
 
 .PP
-Definition at line 722 of file DTSTreeWindow\&.cpp\&.
+Definition at line 736 of file DTSTreeWindow\&.cpp\&.
 .PP
 References CreatePane(), DTSDVMListView::GetNodeID(), DTSDVMListView::GetTitle(), vm, wx_PANEL_BUTTON_ACTION, and DTSObject::xmldoc\&.
 .SS "\fBdtsgui_treenode\fP DTSTreeWindow::GetActiveNode ()"
 
 .PP
-Definition at line 669 of file DTSTreeWindow\&.cpp\&.
+Definition at line 683 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_node\&.
 .PP
@@ -132,7 +132,7 @@ Referenced by DTSTreeWindowEvent::OnButton()\&.
 .SS "\fBDTSPanel\fP * DTSTreeWindow::GetClientPane ()"
 
 .PP
-Definition at line 796 of file DTSTreeWindow\&.cpp\&.
+Definition at line 810 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_window\&.
 .PP
@@ -140,7 +140,7 @@ Referenced by DTSTreeWindowEvent::OnButton()\&.
 .SS "\fBDTSDVMCtrl\fP * DTSTreeWindow::GetTreeCtrl ()"
 
 .PP
-Definition at line 641 of file DTSTreeWindow\&.cpp\&.
+Definition at line 655 of file DTSTreeWindow\&.cpp\&.
 .PP
 References tree\&.
 .PP
@@ -148,7 +148,7 @@ Referenced by DTS_C_API::dtsgui_treecont(), DTS_C_API::dtsgui_treeitem(), DTSTre
 .SS "void DTSTreeWindow::Select (const wxDataViewItem &item)"
 
 .PP
-Definition at line 800 of file DTSTreeWindow\&.cpp\&.
+Definition at line 814 of file DTSTreeWindow\&.cpp\&.
 .PP
 References DTSDVMListView::IsContainer(), tree, and vm\&.
 .PP
@@ -156,7 +156,7 @@ Referenced by tree_newnode::handle_newtreenode(), DTSTreeWindowEvent::OnButton()
 .SS "void DTSTreeWindow::SetPaneTitle (const wxStringvalue)"
 
 .PP
-Definition at line 659 of file DTSTreeWindow\&.cpp\&.
+Definition at line 673 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_window, DTSPanel::SetTitle(), and TreeResize()\&.
 .PP
@@ -164,7 +164,7 @@ Referenced by DTSTreeWindowEvent::TreeEvent()\&.
 .SS "void DTSTreeWindow::SetTreePaneSize ()"
 
 .PP
-Definition at line 645 of file DTSTreeWindow\&.cpp\&.
+Definition at line 659 of file DTSTreeWindow\&.cpp\&.
 .PP
 References tree\&.
 .PP
@@ -172,7 +172,7 @@ Referenced by DTSTreeWindowEvent::SplitterEvent()\&.
 .SS "\fBwxWindow\fP * DTSTreeWindow::SetWindow (\fBDTSPanel\fP *window, const wxDataViewItem &item)"
 
 .PP
-Definition at line 673 of file DTSTreeWindow\&.cpp\&.
+Definition at line 687 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_node, a_window, and DTSObject::GetPanel()\&.
 .PP
@@ -180,7 +180,7 @@ Referenced by DTSTreeWindowEvent::TreeCallback()\&.
 .SS "bool DTSTreeWindow::Show (boolshow = \fCtrue\fP)"
 
 .PP
-Definition at line 773 of file DTSTreeWindow\&.cpp\&.
+Definition at line 787 of file DTSTreeWindow\&.cpp\&.
 .PP
 References DTSObject::beenshown, DTSObject::frame, DTSDVMListView::GetRoot(), DTSDVMCtrl::GetStore(), Select(), DTSObject::status, tree, and TreeResize()\&.
 .PP
@@ -188,7 +188,7 @@ Referenced by DTSTreeWindow()\&.
 .SS "void DTSTreeWindow::ShowRMenu (boolcont, intcnt, boolfirst, boollast, boolc_sort, booldel)"
 
 .PP
-Definition at line 697 of file DTSTreeWindow\&.cpp\&.
+Definition at line 711 of file DTSTreeWindow\&.cpp\&.
 .PP
 References rmenu, treemenu::Show(), and tree\&.
 .PP
@@ -196,7 +196,7 @@ Referenced by DTSTreeWindowEvent::TreeEvent()\&.
 .SS "void DTSTreeWindow::TreeResize ()"
 
 .PP
-Definition at line 654 of file DTSTreeWindow\&.cpp\&.
+Definition at line 668 of file DTSTreeWindow\&.cpp\&.
 .PP
 References tree\&.
 .PP
@@ -204,7 +204,7 @@ Referenced by SetPaneTitle(), Show(), and DTSTreeWindowEvent::TreeEvent()\&.
 .SS "void DTSTreeWindow::UpdateNodeXML (const wxDataViewItem &node, const char *newname)"
 
 .PP
-Definition at line 740 of file DTSTreeWindow\&.cpp\&.
+Definition at line 754 of file DTSTreeWindow\&.cpp\&.
 .PP
 References DTSDVMListView::GetXMLData(), vm, and DTSObject::xmldoc\&.
 .PP

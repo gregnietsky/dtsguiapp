@@ -69,13 +69,13 @@ Definition at line 27 of file DTSXMLComboBox\&.h\&.
 .SS "DTSXMLComboBox::DTSXMLComboBox (\fBwxWindow\fP *parent, intid, wxStringurl, wxStringxpath, struct curl_post *(*)(const wxString &)getpost, size_tminlen)"
 
 .PP
-Definition at line 26 of file DTSXMLComboBox\&.cpp\&.
+Definition at line 34 of file DTSXMLComboBox\&.cpp\&.
 .PP
 References getpost, HandleEvent(), minlen, sflags, url, and xpath\&.
 .SS "DTSXMLComboBox::~DTSXMLComboBox ()"
 
 .PP
-Definition at line 86 of file DTSXMLComboBox\&.cpp\&.
+Definition at line 94 of file DTSXMLComboBox\&.cpp\&.
 .PP
 References EmptyServerList()\&.
 .SH "Member Function Documentation"
@@ -83,13 +83,13 @@ References EmptyServerList()\&.
 .SS "bool DTSXMLComboBox::AppendXMLNodes (struct xml_doc *xmldoc)\fC [private]\fP"
 
 .PP
-Definition at line 64 of file DTSXMLComboBox\&.cpp\&.
+Definition at line 72 of file DTSXMLComboBox\&.cpp\&.
 .PP
 Referenced by HandleEvent()\&.
 .SS "void DTSXMLComboBox::EmptyServerList ()\fC [private]\fP"
 
 .PP
-Definition at line 154 of file DTSXMLComboBox\&.cpp\&.
+Definition at line 162 of file DTSXMLComboBox\&.cpp\&.
 .PP
 Referenced by HandleEvent(), and ~DTSXMLComboBox()\&.
 .SS "struct curl_post* DTSXMLComboBox::GetPostInfo (const wxString &val)\fC [read]\fP, \fC [private]\fP"
@@ -97,7 +97,7 @@ Referenced by HandleEvent(), and ~DTSXMLComboBox()\&.
 .SS "struct xml_doc * DTSXMLComboBox::GetXMLDoc (const wxString &val, struct xml_node *xn)\fC [read]\fP, \fC [private]\fP"
 
 .PP
-Definition at line 43 of file DTSXMLComboBox\&.cpp\&.
+Definition at line 51 of file DTSXMLComboBox\&.cpp\&.
 .PP
 References getpost\&.
 .PP
@@ -105,7 +105,7 @@ Referenced by HandleEvent()\&.
 .SS "void DTSXMLComboBox::HandleEvent (wxCommandEvent &event)\fC [private]\fP"
 
 .PP
-Definition at line 98 of file DTSXMLComboBox\&.cpp\&.
+Definition at line 106 of file DTSXMLComboBox\&.cpp\&.
 .PP
 References AppendXMLNodes(), DTSAPPTB_SERVER_POP, DTSAPPTB_SERVER_SET, EmptyServerList(), GetXMLDoc(), minlen, and sflags\&.
 .PP
@@ -113,7 +113,7 @@ Referenced by DTSXMLComboBox()\&.
 .SS "bool DTSXMLComboBox::HasXMLList ()"
 
 .PP
-Definition at line 90 of file DTSXMLComboBox\&.cpp\&.
+Definition at line 98 of file DTSXMLComboBox\&.cpp\&.
 .PP
 References DTSAPPTB_SERVER_POP, and sflags\&.
 .PP

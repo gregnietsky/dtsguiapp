@@ -75,7 +75,7 @@ Form item if found matching the name\&.
 .PP
 
 .PP
-Definition at line 1083 of file wrapper\&.cpp\&.
+Definition at line 1089 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::FindItem()\&.
 .SS "const char* DTS_C_API::dtsgui_findvalue (\fBdtsgui_pane\fPp, const char *name)"
@@ -96,7 +96,7 @@ the returned value must be freeed\&.
 .PP
 \fBDTSPanel::FindItem()\fP 
 .PP
-dtsgui_item::GetValue() 
+\fBform_item::GetValue()\fP 
 .RE
 .PP
 \fBParameters:\fP
@@ -113,7 +113,7 @@ Value of element\&.
 .PP
 
 .PP
-Definition at line 1134 of file wrapper\&.cpp\&.
+Definition at line 1140 of file wrapper\&.cpp\&.
 .PP
 References DTSPanel::FindValue()\&.
 .PP
@@ -125,7 +125,7 @@ Get refernece to data stoed on element\&. Each element is capable of storing use
 .PP
 \fBSee Also:\fP
 .RS 4
-dtsgui_item::GetData() 
+\fBform_item::GetData()\fP 
 .RE
 .PP
 \fBParameters:\fP
@@ -140,7 +140,7 @@ Reference to data stored in item\&.
 .PP
 
 .PP
-Definition at line 1096 of file wrapper\&.cpp\&.
+Definition at line 1102 of file wrapper\&.cpp\&.
 .PP
 References form_item::GetData()\&.
 .SS "const char* DTS_C_API::dtsgui_item_name (struct \fBform_item\fP *fi)"
@@ -168,7 +168,7 @@ Name of item\&.
 .PP
 
 .PP
-Definition at line 1118 of file wrapper\&.cpp\&.
+Definition at line 1124 of file wrapper\&.cpp\&.
 .PP
 References form_item::GetName()\&.
 .SS "const char* DTS_C_API::dtsgui_item_value (struct \fBform_item\fP *fi)"
@@ -181,7 +181,7 @@ The return value must be freed\&.
 .PP
 \fBSee Also:\fP
 .RS 4
-dtsgui_item::GetValue() 
+\fBform_item::GetValue()\fP 
 .RE
 .PP
 \fBParameters:\fP
@@ -196,7 +196,7 @@ Value of the element\&.
 .PP
 
 .PP
-Definition at line 1107 of file wrapper\&.cpp\&.
+Definition at line 1113 of file wrapper\&.cpp\&.
 .PP
 References form_item::GetValue()\&.
 .PP
@@ -223,7 +223,7 @@ Reference to hashed bucket list\&.
 .PP
 
 .PP
-Definition at line 1070 of file wrapper\&.cpp\&.
+Definition at line 1076 of file wrapper\&.cpp\&.
 .PP
 References DTSObject::GetItems()\&.
 .SH "Author"

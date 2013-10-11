@@ -78,13 +78,13 @@ Definition at line 87 of file DTSTreeWindow\&.h\&.
 .SS "DTSTreeWindowEvent::DTSTreeWindowEvent (void *userdata = \fCNULL\fP, \fBdtsgui_tree_cb\fPtree_cb = \fCNULL\fP, class \fBdtsgui\fP *dtsgui = \fCNULL\fP, \fBDTSTreeWindow\fP *win = \fCNULL\fP)"
 
 .PP
-Definition at line 281 of file DTSTreeWindow\&.cpp\&.
+Definition at line 295 of file DTSTreeWindow\&.cpp\&.
 .PP
 References data, dtsgui, DTSDVMCtrl::GetStore(), DTSTreeWindow::GetTreeCtrl(), parent, tree, treecb, and vm\&.
 .SS "DTSTreeWindowEvent::~DTSTreeWindowEvent ()"
 
 .PP
-Definition at line 298 of file DTSTreeWindow\&.cpp\&.
+Definition at line 312 of file DTSTreeWindow\&.cpp\&.
 .PP
 References data\&.
 .SH "Member Function Documentation"
@@ -92,7 +92,7 @@ References data\&.
 .SS "void DTSTreeWindowEvent::MenuEvent (wxCommandEvent &event)"
 
 .PP
-Definition at line 431 of file DTSTreeWindow\&.cpp\&.
+Definition at line 445 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_cont, a_item, DTSFrame::Confirm(), DTSDVMListView::Delete(), DTS_TREEWIN_MENU_DELETE, DTS_TREEWIN_MENU_MOVEDOWN, DTS_TREEWIN_MENU_MOVEUP, DTS_TREEWIN_MENU_SORT, DTSGUI_TREE_CB_DELETE, DTSGUI_TREE_CB_SELECT, DTSObject::GetFrame(), DTSDVMListView::GetParent(), parent, SortParent(), tree, TreeCallback(), and vm\&.
 .PP
@@ -100,7 +100,7 @@ Referenced by DTSTreeWindow::DTSTreeWindow()\&.
 .SS "void DTSTreeWindowEvent::OnButton (wxCommandEvent &event)"
 
 .PP
-Definition at line 510 of file DTSTreeWindow\&.cpp\&.
+Definition at line 524 of file DTSTreeWindow\&.cpp\&.
 .PP
 References DTSTreeWindow::GetActiveNode(), DTSTreeWindow::GetClientPane(), parent, DTSTreeWindow::Select(), DTSPanel::Update_XML(), wx_PANEL_EVENT_BUTTON_NO, and wx_PANEL_EVENT_BUTTON_YES\&.
 .PP
@@ -108,7 +108,7 @@ Referenced by DTSTreeWindow::DTSTreeWindow()\&.
 .SS "void DTSTreeWindowEvent::SortParent (const wxDataViewItemparent, intaction)\fC [private]\fP"
 
 .PP
-Definition at line 382 of file DTSTreeWindow\&.cpp\&.
+Definition at line 396 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_cont, a_item, data, DTS_TREEWIN_MENU_MOVEDOWN, DTS_TREEWIN_MENU_MOVEUP, DTS_TREEWIN_MENU_SORT, DTSDVMListView::GetContainers(), DTSDVMListStore::IsExpanded(), DTSDVMListView::MoveChildDown(), DTSDVMListView::MoveChildUp(), DTSDVMListStore::SetExpanded(), DTSDVMListView::SetExpanded(), DTSDVMListView::SortChildren(), tree, and vm\&.
 .PP
@@ -116,7 +116,7 @@ Referenced by MenuEvent()\&.
 .SS "void DTSTreeWindowEvent::SplitterEvent (wxSplitterEvent &event)"
 
 .PP
-Definition at line 457 of file DTSTreeWindow\&.cpp\&.
+Definition at line 471 of file DTSTreeWindow\&.cpp\&.
 .PP
 References parent, and DTSTreeWindow::SetTreePaneSize()\&.
 .PP
@@ -124,7 +124,7 @@ Referenced by DTSTreeWindow::DTSTreeWindow()\&.
 .SS "void DTSTreeWindowEvent::TreeCallback (const wxDataViewItemitem, enum \fBtree_cbtype\fPcbtype)"
 
 .PP
-Definition at line 469 of file DTSTreeWindow\&.cpp\&.
+Definition at line 483 of file DTSTreeWindow\&.cpp\&.
 .PP
 References DTSDVMListStore::ConfigPanel(), DTSTreeWindow::CreatePane(), data, DTSGUI_TREE_CB_DELETE, DTSGUI_TREE_CB_EDIT, DTSGUI_TREE_CB_SELECT, DTSDVMListStore::GetTitle(), parent, DTSTreeWindow::SetWindow(), treecb, and DTSTreeWindow::UpdateNodeXML()\&.
 .PP
@@ -132,7 +132,7 @@ Referenced by MenuEvent(), and TreeEvent()\&.
 .SS "void DTSTreeWindowEvent::TreeEvent (wxDataViewEvent &event)"
 
 .PP
-Definition at line 307 of file DTSTreeWindow\&.cpp\&.
+Definition at line 321 of file DTSTreeWindow\&.cpp\&.
 .PP
 References a_cont, a_item, DTSDVMListStore::can_delete, DTSDVMListStore::can_edit, DTSDVMListStore::can_sort, data, DTSGUI_TREE_CB_EDIT, DTSGUI_TREE_CB_SELECT, DTSDVMListView::GetChildCount(), DTSDVMListView::GetNodeID(), DTSDVMListView::GetNthChild(), DTSDVMListView::GetParent(), DTSDVMListStore::GetTitle(), DTSDVMListStore::IsContainer(), DTSDVMListView::IsContainer(), parent, DTSTreeWindow::SetPaneTitle(), DTSTreeWindow::ShowRMenu(), tree, TreeCallback(), DTSTreeWindow::TreeResize(), and vm\&.
 .PP

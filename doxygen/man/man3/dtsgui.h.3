@@ -104,7 +104,7 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "typedef int(* \fBevent_callback\fP )(struct \fBdtsgui\fP *, \fBdtsgui_pane\fP, int type, int, void *)"
 .br
-.RI "\fICallback run on panel event When a panel event is triggered and a callback has been registered it will be called\&. \fP"
+.RI "\fICallback run on panel event\&. \fP"
 .ti -1c
 .RI "typedef void *(* \fBdtsgui_toolbar_create\fP )(struct \fBdtsgui\fP *, void *, long, int, const char *, void *data)"
 .br
@@ -112,7 +112,7 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_dynpanel\fP )(struct \fBdtsgui\fP *, const char *, void *)"
 .br
-.RI "\fICallback called when a dynamic menu item is selected This function is called and allows returning a pane to be displayed\&. \fP"
+.RI "\fICallback called when a dynamic menu item is selected\&. \fP"
 .ti -1c
 .RI "typedef \fBdtsgui_pane\fP(* \fBdtsgui_tree_cb\fP )(struct \fBdtsgui\fP *, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, enum \fBtree_cbtype\fP, const char *, void *)"
 .br
@@ -120,19 +120,19 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "typedef void(* \fBdtsgui_treeviewpanel_cb\fP )(\fBdtsgui_pane\fP, \fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, void *)"
 .br
-.RI "\fICallback called after dtsgui_tree_cb to allow configuration of the panel\&. This callback is stored on the node and allows the panel to be configured per node allowing generic tree callback\&. \fP"
+.RI "\fICallback called after dtsgui_tree_cb to allow configuration of the panel\&. \fP"
 .ti -1c
 .RI "typedef void(* \fBdtsgui_xmltreenode_cb\fP )(\fBdtsgui_treeview\fP, \fBdtsgui_treenode\fP, struct xml_node *, void *)"
 .br
-.RI "\fICallback called as part of the creation of a new node\&. This callback will allow manipulation of the newly created node if required\&. \fP"
+.RI "\fICallback called as part of the creation of a new node\&. \fP"
 .ti -1c
 .RI "typedef void(* \fBdtsgui_tabpanel_cb\fP )(\fBdtsgui_pane\fP, void *)"
 .br
-.RI "\fIConfigure a tab view panel prior to display\&. Tab panels are dynanic and created as needed by calling this callback\&. \fP"
+.RI "\fIConfigure a tab view panel prior to display\&. \fP"
 .ti -1c
 .RI "typedef void(* \fBdtsgui_tabpane_newdata_cb\fP )(struct xml_doc *, struct xml_node *, void *, void **, int *)"
 .br
-.RI "\fIAllow setting the configuration data before tab pane is created\&. This callback is called as part of the new tab creation to allow setting callback data\&.The position of the pane can also be set\&. \fP"
+.RI "\fIAllow setting the configuration data before tab pane is created\&. \fP"
 .in -1c
 .SS "Enumerations"
 
@@ -288,7 +288,7 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBdtsgui_tabpage_insert\fP (\fBdtsgui_tabview\fP tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc, \fBdtsgui_tabpanel_cb\fP cb, void *cdata, int pos, int undo)"
 .br
-.RI "\fICreate and append a tab to the view\&. \fP"
+.RI "\fICreate and insert a tab in the view\&. \fP"
 .ti -1c
 .RI "void \fBdtsgui_newxmltabpane\fP (\fBdtsgui_tabview\fP tabv, \fBdtsgui_pane\fP p, const char *xpath, const char *node, const char *vitem, const char *tattr, \fBdtsgui_tabpane_newdata_cb\fP data_cb, \fBdtsgui_tabpanel_cb\fP cb, void *cdata, struct xml_doc *xmldoc, void *data)"
 .br
@@ -300,15 +300,15 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBdtsgui_treepane\fP (\fBdtsgui_treeview\fP tv, const char *name, int butmask, void *userdata, struct xml_doc *xmldoc)"
 .br
-.RI "\fICreate a tree view panel with information\&. \fP"
+.RI "\fICreate a panel owned by the tree\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBdtsgui_treepane_default\fP (\fBdtsgui_treeview\fP self, \fBdtsgui_treenode\fP node)"
 .br
-.RI "\fICreate a tree view panel with information\&. \fP"
+.RI "\fICreate a panel owned by the tree configured from the specified node\&. \fP"
 .ti -1c
 .RI "void \fBdtsgui_nodesetxml\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title)"
 .br
-.RI "\fIUpdate the XML Node with a new name\&. \fP"
+.RI "\fIUpdate the XML Node or title attribute with a new name\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_treenode\fP \fBdtsgui_treecont\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, \fBdtsgui_treeviewpanel_cb\fP p_cb, void *data)"
 .br
@@ -316,7 +316,7 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "\fBdtsgui_treenode\fP \fBdtsgui_treeitem\fP (\fBdtsgui_treeview\fP tree, \fBdtsgui_treenode\fP node, const char *title, int can_edit, int can_sort, int can_del, int nodeid, \fBdtsgui_treeviewpanel_cb\fP p_cb, void *data)"
 .br
-.RI "\fICreate a item in a container\&. \fP"
+.RI "\fICreate a item in a container in the tree view\&. \fP"
 .ti -1c
 .RI "void \fBdtsgui_treenodesetxml\fP (\fBdtsgui_treenode\fP tn, struct xml_node *xn, const char *tattr)"
 .br
@@ -404,7 +404,7 @@ Main include file for the GUI Library\&.
 .ti -1c
 .RI "void \fBdtsgui_listbox_addxml\fP (struct \fBform_item\fP *lb, struct xml_doc *xmldoc, const char *xpath, const char *nattr, const char *vattr)"
 .br
-.RI "\fIPopulate a listbox or combobox from a XML path\&. A entry is added for each node found using the supplied attributes for displayed text and value\&. \fP"
+.RI "\fIPopulate a listbox or combobox from a XML path\&. \fP"
 .ti -1c
 .RI "void \fBdtsgui_listbox_set\fP (struct \fBform_item\fP *listbox, int idx)"
 .br

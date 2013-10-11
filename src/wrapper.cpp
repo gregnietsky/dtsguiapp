@@ -16,6 +16,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/** @defgroup CORE Core API Interface Common to C and C++
+  * @brief Core elements shared by all API's*/
+
 /** @defgroup C-API Distrotech GUI Library C API
   * @brief Exported functions used for use in C code.
   * @remark Use of this API is not recomended from inside C++ use the native API.
@@ -25,6 +28,9 @@
   * @see @ref wrapper.cpp
   * @see @ref cxxapi.cpp
   * @see @ref dtsgui.h*/
+
+/** @defgroup CPP Native C++ API
+  * @brief C++ Interface*/
 
 /** @file
   * @brief Wrapper functions exported to C to allow interfacing with C++.
@@ -516,21 +522,6 @@ extern dtsgui_tabview dtsgui_tabwindow(struct dtsgui *dtsgui, const char *title,
 	return  new DTSTabWindow(frame, title, data);
 }
 
-/** @ingroup C-API-Panel-Tree
-  * @brief Update the XML Node with a new name.
-  *
-  * This helper function will update the node's XML after a edit event.
-  *
-  * @see DTSTreeWindow::UpdateNodeXML()
-  *
-  * @param tree Treeview node is part of.
-  * @param node TreeNode to update.
-  * @param newname Name to update XML node with.*/
-void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *newname) {
-	DTSTreeWindow *tw = (DTSTreeWindow*)tree;
-	tw->UpdateNodeXML(wxDataViewItem(node), newname);
-}
-
 /** @ingroup C-API-Panel
   * @brief Pass a reference to a XML Doc Structure to the panel.
   *
@@ -601,7 +592,7 @@ extern dtsgui_pane dtsgui_newtabpage(dtsgui_tabview tv, const char *name, int bu
 
 
 /** @ingroup C-API-Panel-Tab
-  * @brief Create and append a tab to the view.
+  * @brief Create and insert a tab in the view.
   *
   * Insert a tab at the position specified and recreate the panel at
   * position undo.
@@ -658,13 +649,13 @@ void dtsgui_newxmltabpane(dtsgui_tabview tabv, dtsgui_pane p, const char *xpath,
 }
 
 /** @ingroup C-API-Panel-Tree
-  * @brief Create a tree view panel with information.
+  * @brief Create a panel owned by the tree.
   *
   * This will seldom be needed as panels are created and supplied in callbacks.
   *
   * @see DTSTreeWindow::CreatePane()
   * @see panel_buttons
-  *
+  * @note Panels used in tree views must be created as children of the tree.
   * @param tv Tree view.
   * @param name Title placed on the panel top/center
   * @param butmask A mask of buttons to be placed on the panel.
@@ -677,7 +668,7 @@ extern dtsgui_pane dtsgui_treepane(dtsgui_treeview tv, const char *name, int but
 }
 
 /** @ingroup C-API-Panel-Tree
-  * @brief Create a tree view panel with information.
+  * @brief Create a panel owned by the tree configured from the specified node.
   *
   * Create a pane from information obtained from node.
   * Name of node is used for the panel title and a Accept/Undo button.
@@ -721,7 +712,7 @@ dtsgui_treenode dtsgui_treecont(dtsgui_treeview tree, dtsgui_treenode node, cons
 }
 
 /** @ingroup C-API-Panel-Tree
-  * @brief Create a item in a container.
+  * @brief Create a item in a container in the tree view.
   *
   * Create and insert a new item in the tree view in the node specified with properties / call back.
   * A panel will be created and supplied to the callback too implement on selection.
@@ -819,6 +810,21 @@ void dtsgui_treenodesetxml(dtsgui_treenode tn,struct xml_node *xn, const char *t
 struct xml_node *dtsgui_treenodegetxml(dtsgui_treenode tn, char **buf) {
 	DTSDVMListStore *ls = (DTSDVMListStore*)tn;
 	return ls->GetXMLData(buf);
+}
+
+/** @ingroup C-API-Panel-Tree
+  * @brief Update the XML Node or title attribute with a new name.
+  *
+  * This helper function will update the node's XML after a edit event.
+  *
+  * @see DTSTreeWindow::UpdateNodeXML()
+  *
+  * @param tree Treeview node is part of.
+  * @param node TreeNode to update.
+  * @param newname Name to update XML node with.*/
+void dtsgui_nodesetxml(dtsgui_treeview tree, dtsgui_treenode node, const char *newname) {
+	DTSTreeWindow *tw = (DTSTreeWindow*)tree;
+	tw->UpdateNodeXML(wxDataViewItem(node), newname);
 }
 
 /** @ingroup C-API-Panel-Tree
@@ -1090,7 +1096,7 @@ extern struct form_item *dtsgui_finditem(dtsgui_pane p, const char *name) {
   *
   * Each element is capable of storing user supplied data
   * this returns a reference to this data.
-  * @see dtsgui_item::GetData()
+  * @see form_item::GetData()
   * @param fi Form item to obtain data from.
   * @return Reference to data stored in item.*/
 extern void *dtsgui_item_data(struct form_item *fi) {
@@ -1101,7 +1107,7 @@ extern void *dtsgui_item_data(struct form_item *fi) {
   * @brief Return value of element.
   * The value of the panel element is returned fo the item.
   * @note The return value must be freed.
-  * @see dtsgui_item::GetValue()
+  * @see form_item::GetValue()
   * @param fi Form item to obtain value of.
   * @return Value of the element.*/
 extern 	const char *dtsgui_item_value(struct form_item *fi) {
@@ -1127,7 +1133,7 @@ extern const char *dtsgui_item_name(struct form_item *fi) {
   * @see dtsgui_item_value()
   * @see DTSPanel::FindValue()
   * @see DTSPanel::FindItem()
-  * @see dtsgui_item::GetValue()
+  * @see form_item::GetValue()
   * @param p Panel to search element.
   * @param name Return value of element with this name.
   * @return Value of element.*/
@@ -1224,6 +1230,7 @@ void dtsgui_listbox_set(struct form_item *listbox, int idx) {
 
 /** @ingroup C-API-Panel-Elements
   * @brief Populate a listbox or combobox from a XML path.
+  *
   * A entry is added for each node found using the supplied attributes for displayed text and value
   * @remark passing NULL as either or both of the attributes will use the value of the node.
   * @param lb A form item containing a listbox or combobox.

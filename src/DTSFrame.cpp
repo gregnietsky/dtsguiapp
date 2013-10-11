@@ -16,6 +16,14 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/** @defgroup CPP-Frame Application frame.
+  * @brief Core application frame class.
+  * @ingroup CPP*/
+
+/** @file
+  * @brief Core application frame class.
+  * @ingroup CPP-Frame*/
+
 #include <stdlib.h>
 
 #include <wx/menu.h>
