@@ -362,7 +362,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/pbxconfig.c" line="325" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/pbxconfig.c" bodystart="325" bodyend="350"/>
-        <references refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="47" endline="66">app_getxmldoc</references>
+        <references refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="48" endline="67">app_getxmldoc</references>
         <references refid="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" compoundref="wrapper_8cpp" startline="588" endline="591">dtsgui_newtabpage</references>
         <references refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" compoundref="wrapper_8cpp" startline="520" endline="523">dtsgui_tabwindow</references>
         <references refid="pbxconfig_8c_1aea392efee7b48a143a527ffe383e6d81" compoundref="pbxconfig_8c" startline="214" endline="218">pbxconf_acd</references>

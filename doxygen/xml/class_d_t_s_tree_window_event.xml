@@ -254,7 +254,7 @@
         <references refid="class_d_t_s_tree_window_1ad5c187ebc6203b19afae00ea5a42b78d" compoundref="_d_t_s_tree_window_8cpp" startline="810" endline="812">DTSTreeWindow::GetClientPane</references>
         <references refid="class_d_t_s_tree_window_event_1a182862c6039a3636a3b2a8fad26f15a9" compoundref="_d_t_s_tree_window_8h" startline="100">parent</references>
         <references refid="class_d_t_s_tree_window_1a16e8b0b7de01806b70235b4eac89345e" compoundref="_d_t_s_tree_window_8cpp" startline="814" endline="823">DTSTreeWindow::Select</references>
-        <references refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="745" endline="774">DTSPanel::Update_XML</references>
+        <references refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="746" endline="775">DTSPanel::Update_XML</references>
         <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302ecadb8742f8472eb90558cfbf8e3914553b" compoundref="dtsgui_8h" startline="210">wx_PANEL_EVENT_BUTTON_NO</references>
         <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302eca6ce91176e6c929e87d7acbd000d07f79" compoundref="dtsgui_8h" startline="208">wx_PANEL_EVENT_BUTTON_YES</references>
         <referencedby refid="class_d_t_s_tree_window_1a1664835725e0e19ce3e4cced298fac39" compoundref="_d_t_s_tree_window_8cpp" startline="544" endline="653">DTSTreeWindow::DTSTreeWindow</referencedby>

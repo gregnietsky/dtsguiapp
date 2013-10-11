@@ -17,9 +17,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="150" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="150" bodyend="-1"/>
-        <referencedby refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="944" endline="959">ConfigPane</referencedby>
-        <referencedby refid="class_d_t_s_tab_page_1ae29cbd93440f0d485b2f186fcdbc9c7c" compoundref="_d_t_s_panel_8cpp" startline="915" endline="930">DTSTabPage</referencedby>
-        <referencedby refid="class_d_t_s_tab_page_1a99f09a166ea777c2dcc572284594b00e" compoundref="_d_t_s_panel_8cpp" startline="961" endline="1009">operator=</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="945" endline="960">ConfigPane</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1ae29cbd93440f0d485b2f186fcdbc9c7c" compoundref="_d_t_s_panel_8cpp" startline="916" endline="931">DTSTabPage</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1a99f09a166ea777c2dcc572284594b00e" compoundref="_d_t_s_panel_8cpp" startline="962" endline="1010">operator=</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_tab_page_1a99f6c8da250c0cbb5f75cf5395658d77" prot="private" static="no" mutable="no">
         <type>void *</type>
@@ -33,10 +33,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="151" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="151" bodyend="-1"/>
-        <referencedby refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="944" endline="959">ConfigPane</referencedby>
-        <referencedby refid="class_d_t_s_tab_page_1ae29cbd93440f0d485b2f186fcdbc9c7c" compoundref="_d_t_s_panel_8cpp" startline="915" endline="930">DTSTabPage</referencedby>
-        <referencedby refid="class_d_t_s_tab_page_1a99f09a166ea777c2dcc572284594b00e" compoundref="_d_t_s_panel_8cpp" startline="961" endline="1009">operator=</referencedby>
-        <referencedby refid="class_d_t_s_tab_page_1a9dc8aa3cd79b00e80747a9bd0cf9b379" compoundref="_d_t_s_panel_8cpp" startline="932" endline="938">~DTSTabPage</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="945" endline="960">ConfigPane</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1ae29cbd93440f0d485b2f186fcdbc9c7c" compoundref="_d_t_s_panel_8cpp" startline="916" endline="931">DTSTabPage</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1a99f09a166ea777c2dcc572284594b00e" compoundref="_d_t_s_panel_8cpp" startline="962" endline="1010">operator=</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1a9dc8aa3cd79b00e80747a9bd0cf9b379" compoundref="_d_t_s_panel_8cpp" startline="933" endline="939">~DTSTabPage</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_d_t_s_tab_page_1a26fb9793db8290bf72d411475224a97d" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -50,8 +50,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="152" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" bodystart="152" bodyend="-1"/>
-        <referencedby refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="944" endline="959">ConfigPane</referencedby>
-        <referencedby refid="class_d_t_s_tab_page_1ae29cbd93440f0d485b2f186fcdbc9c7c" compoundref="_d_t_s_panel_8cpp" startline="915" endline="930">DTSTabPage</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="945" endline="960">ConfigPane</referencedby>
+        <referencedby refid="class_d_t_s_tab_page_1ae29cbd93440f0d485b2f186fcdbc9c7c" compoundref="_d_t_s_panel_8cpp" startline="916" endline="931">DTSTabPage</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="144" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="915" bodyend="930"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="144" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="916" bodyend="931"/>
         <references refid="class_d_t_s_tab_page_1a89d1be9e8530a03ed51872a07c14a8b7" compoundref="_d_t_s_panel_8h" startline="150">cb</references>
         <references refid="class_d_t_s_tab_page_1a99f6c8da250c0cbb5f75cf5395658d77" compoundref="_d_t_s_panel_8h" startline="151">cdata</references>
         <references refid="class_d_t_s_tab_page_1a26fb9793db8290bf72d411475224a97d" compoundref="_d_t_s_panel_8h" startline="152">hasconfig</references>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="145" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="932" bodyend="938"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="145" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="933" bodyend="939"/>
         <references refid="class_d_t_s_tab_page_1a99f6c8da250c0cbb5f75cf5395658d77" compoundref="_d_t_s_panel_8h" startline="151">cdata</references>
         <references refid="class_d_t_s_object_1a941fc98555b60d021a6c2f488ce9ae3e" compoundref="_d_t_s_panel_8h" startline="72">DTSObject::refobj</references>
       </memberdef>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="146" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="944" bodyend="959"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="146" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="945" bodyend="960"/>
         <references refid="class_d_t_s_tab_page_1a89d1be9e8530a03ed51872a07c14a8b7" compoundref="_d_t_s_panel_8h" startline="150">cb</references>
         <references refid="class_d_t_s_tab_page_1a99f6c8da250c0cbb5f75cf5395658d77" compoundref="_d_t_s_panel_8h" startline="151">cdata</references>
         <references refid="class_d_t_s_tab_page_1a26fb9793db8290bf72d411475224a97d" compoundref="_d_t_s_panel_8h" startline="152">hasconfig</references>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="147" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="940" bodyend="942"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="147" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="941" bodyend="943"/>
       </memberdef>
       <memberdef kind="function" id="class_d_t_s_tab_page_1a99f09a166ea777c2dcc572284594b00e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_d_t_s_tab_page" kindref="compound">DTSTabPage</ref> &amp;</type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="148" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="961" bodyend="1009"/>
+        <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSPanel.h" line="148" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSPanel.cpp" bodystart="962" bodyend="1010"/>
         <references refid="class_d_t_s_panel_event_1af2333021915425cd85ab9544170e7152" compoundref="_d_t_s_panel_8cpp" startline="228" endline="230">DTSPanelEvent::BindDTSEvent</references>
         <references refid="class_d_t_s_panel_1af25bdb7e04f715c228774c2be0dd8251" compoundref="_d_t_s_panel_8h" startline="114">DTSPanel::button_mask</references>
         <references refid="class_d_t_s_tab_page_1a89d1be9e8530a03ed51872a07c14a8b7" compoundref="_d_t_s_panel_8h" startline="150">cb</references>

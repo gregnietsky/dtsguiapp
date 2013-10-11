@@ -321,7 +321,7 @@
         <references refid="classtree__newnode_1a50e4845fff0149464cfb8ffe105b061c" compoundref="_d_t_s_tree_window_8h" startline="47">node</references>
         <references refid="classtree__newnode_1acd8405c3d6f344a21ecdadcbf3db14a6" compoundref="_d_t_s_tree_window_8h" startline="44">node_cb</references>
         <references refid="classtree__newnode_1ad29bf242b359fc093c474559e6f1be21" compoundref="_d_t_s_tree_window_8h" startline="45">p_cb</references>
-        <references refid="class_d_t_s_panel_1ad28f5ed6bd19e9d685a18df8bf568f92" compoundref="_d_t_s_panel_8cpp" startline="776" endline="838">DTSPanel::Panel2XML</references>
+        <references refid="class_d_t_s_panel_1ad28f5ed6bd19e9d685a18df8bf568f92" compoundref="_d_t_s_panel_8cpp" startline="777" endline="839">DTSPanel::Panel2XML</references>
         <references refid="class_d_t_s_tree_window_1a16e8b0b7de01806b70235b4eac89345e" compoundref="_d_t_s_tree_window_8cpp" startline="814" endline="823">DTSTreeWindow::Select</references>
         <references refid="class_d_t_s_d_v_m_list_store_1aa82d333247a2bf537c3acdeae7635e15" compoundref="_d_t_s_list_view_8cpp" startline="219" endline="226">DTSDVMListStore::SetXMLData</references>
         <references refid="classtree__newnode_1af024b549dee406efb459720399e3ba46" compoundref="_d_t_s_tree_window_8h" startline="49">tattr</references>

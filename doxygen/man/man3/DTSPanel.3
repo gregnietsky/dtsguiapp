@@ -168,7 +168,7 @@ Referenced by Buttons(), CheckBox(), ComboBox(), ListBox(), TextBox(), DTSFrame:
 .SS "void DTSPanel::Buttons (void)\fC [protected]\fP"
 
 .PP
-Definition at line 723 of file DTSPanel\&.cpp\&.
+Definition at line 724 of file DTSPanel\&.cpp\&.
 .PP
 References AddItem(), DTSPanelEvent::BindButton(), button_mask, DTSObject::buttons, DTSObject::dtsevthandler, fgs, g_row, PADING, and DTSObject::panel\&.
 .PP
@@ -176,7 +176,7 @@ Referenced by ShowPanel()\&.
 .SS "void DTSPanel::CheckBox (const char *title, const char *name, intischecked, const char *checkval, const char *uncheckval, void *data = \fCNULL\fP, enum \fBform_data_type\fPdtype = \fC\fBDTSGUI_FORM_DATA_PTR\fP\fP)"
 
 .PP
-Definition at line 607 of file DTSPanel\&.cpp\&.
+Definition at line 608 of file DTSPanel\&.cpp\&.
 .PP
 References AddItem(), DTS_WIDGET_CHECKBOX, DTSGUI_FORM_DATA_XML, DTSObject::fitems, g_row, PADING, and DTSObject::panel\&.
 .PP
@@ -184,7 +184,7 @@ Referenced by DTS_C_API::dtsgui_checkbox(), and XMLCheckBox()\&.
 .SS "class \fBform_item\fP * DTSPanel::ComboBox (const char *title, const char *name, const char *value, void *data = \fCNULL\fP, enum \fBform_data_type\fPdtype = \fC\fBDTSGUI_FORM_DATA_PTR\fP\fP)"
 
 .PP
-Definition at line 683 of file DTSPanel\&.cpp\&.
+Definition at line 684 of file DTSPanel\&.cpp\&.
 .PP
 References AddItem(), DTSPanelEvent::BindCombo(), form_item::data, DTS_WIDGET_COMBOBOX, DTSObject::dtsevthandler, DTSGUI_FORM_DATA_XML, DTSObject::fitems, g_row, PADING, and DTSObject::panel\&.
 .PP
@@ -192,7 +192,7 @@ Referenced by DTS_C_API::dtsgui_combobox(), and XMLComboBox()\&.
 .SS "class \fBform_item\fP * DTSPanel::FindItem (const char *name)"
 
 .PP
-Definition at line 881 of file DTSPanel\&.cpp\&.
+Definition at line 882 of file DTSPanel\&.cpp\&.
 .PP
 References DTSObject::fitems\&.
 .PP
@@ -200,7 +200,7 @@ Referenced by DTS_C_API::dtsgui_finditem(), and FindValue()\&.
 .SS "const char * DTSPanel::FindValue (const char *name)"
 
 .PP
-Definition at line 885 of file DTSPanel\&.cpp\&.
+Definition at line 886 of file DTSPanel\&.cpp\&.
 .PP
 References FindItem(), and form_item::GetValue()\&.
 .PP
@@ -224,7 +224,7 @@ Referenced by XMLCheckBox(), XMLComboBox(), XMLListBox(), and XMLTextBox()\&.
 .SS "class \fBform_item\fP * DTSPanel::ListBox (const char *title, const char *name, const char *value, void *data = \fCNULL\fP, enum \fBform_data_type\fPdtype = \fC\fBDTSGUI_FORM_DATA_PTR\fP\fP)"
 
 .PP
-Definition at line 647 of file DTSPanel\&.cpp\&.
+Definition at line 648 of file DTSPanel\&.cpp\&.
 .PP
 References AddItem(), DTS_WIDGET_LISTBOX, DTSGUI_FORM_DATA_XML, DTSObject::fitems, g_row, PADING, and DTSObject::panel\&.
 .PP
@@ -232,7 +232,7 @@ Referenced by DTS_C_API::dtsgui_listbox(), and XMLListBox()\&.
 .SS "struct curl_post * DTSPanel::Panel2Post ()\fC [read]\fP"
 
 .PP
-Definition at line 840 of file DTSPanel\&.cpp\&.
+Definition at line 841 of file DTSPanel\&.cpp\&.
 .PP
 References DTSObject::fitems, form_item::GetName(), form_item::GetValue(), and form_item::name\&.
 .PP
@@ -240,7 +240,7 @@ Referenced by DTS_C_API::dtsgui_pane2post()\&.
 .SS "struct xml_node * DTSPanel::Panel2XML (const char *xpath, const char *node, const char *nodeval, const char *attrkey)\fC [read]\fP"
 
 .PP
-Definition at line 776 of file DTSPanel\&.cpp\&.
+Definition at line 777 of file DTSPanel\&.cpp\&.
 .PP
 References DTSObject::fitems, form_item::GetName(), form_item::GetValue(), and DTSObject::xmldoc\&.
 .PP
@@ -248,7 +248,7 @@ Referenced by DTS_C_API::dtsgui_panetoxml(), tab_newpane::handle_newtabpane(), a
 .SS "void DTSPanel::PasswdBox (const char *title, const char *name, wxStringdefval = \fCwxEmptyString\fP, intflags = \fCwxTE_LEFT\fP, void *data = \fCNULL\fP, enum \fBform_data_type\fPdtype = \fC\fBDTSGUI_FORM_DATA_PTR\fP\fP)"
 
 .PP
-Definition at line 599 of file DTSPanel\&.cpp\&.
+Definition at line 600 of file DTSPanel\&.cpp\&.
 .PP
 References TextBox()\&.
 .SS "void DTSPanel::SetConfigCallback (\fBdtsgui_configcb\fPcb, void *userdata = \fCNULL\fP)"
@@ -310,7 +310,7 @@ Referenced by DTSTabPage::ConfigPane(), DTSStaticPanel::Show(), DTSScrollPanel::
 .SS "void DTSPanel::TextBox (const char *title, const char *name, wxStringdefval = \fCwxEmptyString\fP, intflags = \fCwxTE_LEFT\fP, introws = \fC1\fP, void *data = \fCNULL\fP, enum \fBform_data_type\fPdtype = \fC\fBDTSGUI_FORM_DATA_PTR\fP\fP)"
 
 .PP
-Definition at line 566 of file DTSPanel\&.cpp\&.
+Definition at line 567 of file DTSPanel\&.cpp\&.
 .PP
 References AddItem(), DTS_WIDGET_TEXTBOX, DTSGUI_FORM_DATA_XML, DTSObject::fitems, g_row, PADING, and DTSObject::panel\&.
 .PP
@@ -326,7 +326,7 @@ Referenced by SetTitle()\&.
 .SS "void DTSPanel::Update_XML ()"
 
 .PP
-Definition at line 745 of file DTSPanel\&.cpp\&.
+Definition at line 746 of file DTSPanel\&.cpp\&.
 .PP
 References DTSObject::fitems, form_item::GetValue(), form_item::GetXMLData(), xml_element::Modify(), and DTSObject::xmldoc\&.
 .PP
@@ -334,7 +334,7 @@ Referenced by DTS_C_API::dtsgui_xmlpanel_update(), DTSTreeWindowEvent::OnButton(
 .SS "void DTSPanel::XMLCheckBox (const char *title, const char *name, const char *checkval, const char *uncheckval, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
 
 .PP
-Definition at line 627 of file DTSPanel\&.cpp\&.
+Definition at line 628 of file DTSPanel\&.cpp\&.
 .PP
 References CheckBox(), DTSGUI_FORM_DATA_XML, GetNode(), and xml_element::GetValue()\&.
 .PP
@@ -342,7 +342,7 @@ Referenced by DTS_C_API::dtsgui_xmlcheckbox()\&.
 .SS "class \fBform_item\fP * DTSPanel::XMLComboBox (const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
 
 .PP
-Definition at line 706 of file DTSPanel\&.cpp\&.
+Definition at line 707 of file DTSPanel\&.cpp\&.
 .PP
 References ComboBox(), DTSGUI_FORM_DATA_XML, GetNode(), xml_element::GetValue(), and form_item::value\&.
 .PP
@@ -350,7 +350,7 @@ Referenced by DTS_C_API::dtsgui_xmlcombobox()\&.
 .SS "class \fBform_item\fP * DTSPanel::XMLListBox (const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr)"
 
 .PP
-Definition at line 666 of file DTSPanel\&.cpp\&.
+Definition at line 667 of file DTSPanel\&.cpp\&.
 .PP
 References DTSGUI_FORM_DATA_XML, GetNode(), xml_element::GetValue(), ListBox(), and form_item::value\&.
 .PP
@@ -358,7 +358,7 @@ Referenced by DTS_C_API::dtsgui_xmllistbox()\&.
 .SS "void DTSPanel::XMLPasswdBox (const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr, intflags)"
 
 .PP
-Definition at line 603 of file DTSPanel\&.cpp\&.
+Definition at line 604 of file DTSPanel\&.cpp\&.
 .PP
 References XMLTextBox()\&.
 .PP
@@ -366,7 +366,7 @@ Referenced by DTS_C_API::dtsgui_xmlpasswdbox()\&.
 .SS "void DTSPanel::XMLTextBox (const char *title, const char *name, const char *xpath, const char *node, const char *fattr, const char *fval, const char *attr, intflags = \fCwxTE_LEFT\fP, introws = \fC1\fP)"
 
 .PP
-Definition at line 584 of file DTSPanel\&.cpp\&.
+Definition at line 585 of file DTSPanel\&.cpp\&.
 .PP
 References DTSGUI_FORM_DATA_XML, GetNode(), xml_element::GetValue(), and TextBox()\&.
 .PP

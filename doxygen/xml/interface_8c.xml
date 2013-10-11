@@ -286,7 +286,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/interface.c" line="145" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/interface.c" bodystart="145" bodyend="184"/>
-        <references refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="47" endline="66">app_getxmldoc</references>
+        <references refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="48" endline="67">app_getxmldoc</references>
         <references refid="group___c-_a_p_i-_panel-_tab_1gae7cf11b65ccca530aecef7f7daa389e9" compoundref="wrapper_8cpp" startline="588" endline="591">dtsgui_newtabpage</references>
         <references refid="group___c-_a_p_i-_panel_1ga05cf1592d301351aa838bd23c710f3bb" compoundref="wrapper_8cpp" startline="520" endline="523">dtsgui_tabwindow</references>
         <references refid="interface_8c_1a3a6216b44ef12f4343578439ea097c50" compoundref="interface_8c" startline="43" endline="52">get_iface_cdata</references>

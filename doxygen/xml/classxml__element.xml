@@ -118,7 +118,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/pitems.h" line="30" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/pitems.cpp" bodystart="54" bodyend="65"/>
         <references refid="classxml__element_1a5e1c544e39cc117f13e692f59cf020c1" compoundref="pitems_8h" startline="35">attr</references>
         <references refid="classxml__element_1a7064cb97bc7806a0d2fb792d9c0891e5" compoundref="pitems_8h" startline="33">xsearch</references>
-        <referencedby refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="745" endline="774">DTSPanel::Update_XML</referencedby>
+        <referencedby refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="746" endline="775">DTSPanel::Update_XML</referencedby>
       </memberdef>
       <memberdef kind="function" id="classxml__element_1ae0415b9bbe906cbab04e2c78c84ae5bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -134,10 +134,10 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/pitems.h" line="31" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/pitems.cpp" bodystart="67" bodyend="87"/>
         <references refid="classxml__element_1a5e1c544e39cc117f13e692f59cf020c1" compoundref="pitems_8h" startline="35">attr</references>
         <references refid="classxml__element_1a7064cb97bc7806a0d2fb792d9c0891e5" compoundref="pitems_8h" startline="33">xsearch</references>
-        <referencedby refid="class_d_t_s_panel_1a1495f670e901f45cbbc3a4d2c471aa53" compoundref="_d_t_s_panel_8cpp" startline="627" endline="645">DTSPanel::XMLCheckBox</referencedby>
-        <referencedby refid="class_d_t_s_panel_1a4d294755a98b6194df04292abe18d1b0" compoundref="_d_t_s_panel_8cpp" startline="706" endline="721">DTSPanel::XMLComboBox</referencedby>
-        <referencedby refid="class_d_t_s_panel_1a03d63a8c380ee62e263d7bc3a3c86396" compoundref="_d_t_s_panel_8cpp" startline="666" endline="681">DTSPanel::XMLListBox</referencedby>
-        <referencedby refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" compoundref="_d_t_s_panel_8cpp" startline="584" endline="597">DTSPanel::XMLTextBox</referencedby>
+        <referencedby refid="class_d_t_s_panel_1a1495f670e901f45cbbc3a4d2c471aa53" compoundref="_d_t_s_panel_8cpp" startline="628" endline="646">DTSPanel::XMLCheckBox</referencedby>
+        <referencedby refid="class_d_t_s_panel_1a4d294755a98b6194df04292abe18d1b0" compoundref="_d_t_s_panel_8cpp" startline="707" endline="722">DTSPanel::XMLComboBox</referencedby>
+        <referencedby refid="class_d_t_s_panel_1a03d63a8c380ee62e263d7bc3a3c86396" compoundref="_d_t_s_panel_8cpp" startline="667" endline="682">DTSPanel::XMLListBox</referencedby>
+        <referencedby refid="class_d_t_s_panel_1a2b893b30f6265079a143bb23029aa083" compoundref="_d_t_s_panel_8cpp" startline="585" endline="598">DTSPanel::XMLTextBox</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

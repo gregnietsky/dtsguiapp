@@ -403,8 +403,8 @@
         <references refid="class_d_t_s_frame_1a3b1105fb9c8e3b6909994e7f993eee20" compoundref="_d_t_s_frame_8cpp" startline="375" endline="406">CreatePane</references>
         <references refid="group___c_o_r_e_1ggaa648ae9cc0927fecec3a6f705930f8a9aca76bf5a50c1ed8835755c9385c1beee" compoundref="dtsgui_8h" startline="50">DTSGUI_FORM_DATA_PTR</references>
         <references refid="class_d_t_s_frame_1adb19cc1077af840c132d8e11fd163a15" compoundref="_d_t_s_frame_8cpp" startline="470" endline="493">pwevent</references>
-        <references refid="class_d_t_s_dialog_1af1e6be7e08913149d128839b7e535cd0" compoundref="_d_t_s_panel_8cpp" startline="1076" endline="1088">DTSDialog::RunDialog</references>
-        <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="566" endline="582">DTSPanel::TextBox</references>
+        <references refid="class_d_t_s_dialog_1af1e6be7e08913149d128839b7e535cd0" compoundref="_d_t_s_panel_8cpp" startline="1077" endline="1089">DTSDialog::RunDialog</references>
+        <references refid="class_d_t_s_panel_1acd1b20a134272f1bc2d048d5977a3d3c" compoundref="_d_t_s_panel_8cpp" startline="567" endline="583">DTSPanel::TextBox</references>
         <references refid="group___c_o_r_e_1gga9275874ac61d3750aa677a36da714373a259d19ace1b7a45cbd7e99697bd2b69a" compoundref="dtsgui_8h" startline="247">wx_DTSPANEL_DIALOG</references>
         <references refid="group___c_o_r_e_1ga4ef37ee1286eb68a9f5663813f134be2" compoundref="dtsgui_8h" startline="271">wx_PANEL_BUTTON_ACTION</references>
         <referencedby refid="classdtsgui__curl_1a6185280c5a0b3071a7b34a38131754f3" compoundref="_d_t_s_app_8cpp" startline="216" endline="221">dtsgui_curl::CurlPasswd</referencedby>
@@ -964,7 +964,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSFrame.h" line="66" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSFrame.cpp" bodystart="470" bodyend="493"/>
-        <references refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" compoundref="_d_t_s_panel_8cpp" startline="885" endline="896">DTSPanel::FindValue</references>
+        <references refid="class_d_t_s_panel_1aaeef18ad561346699ed24e0aa6fa47b3" compoundref="_d_t_s_panel_8cpp" startline="886" endline="897">DTSPanel::FindValue</references>
         <references refid="class_d_t_s_object_1a5d32407be34aa68ea2b038ede768d50e" compoundref="_d_t_s_panel_8cpp" startline="338" endline="346">DTSObject::GetUserData</references>
         <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302eca6ce91176e6c929e87d7acbd000d07f79" compoundref="dtsgui_8h" startline="208">wx_PANEL_EVENT_BUTTON_YES</references>
         <referencedby refid="class_d_t_s_frame_1a5a7ad78662b511e7ef6ac513f8d1a28b" compoundref="_d_t_s_frame_8cpp" startline="495" endline="510">Passwd</referencedby>

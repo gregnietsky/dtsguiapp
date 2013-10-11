@@ -140,7 +140,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/netconfig.c" line="32" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/netconfig.c" bodystart="32" bodyend="34"/>
-        <references refid="group___d_t_s-_a_p_p-_wizard_1gaccc1788f03d17d487ce09a1d07d53018" compoundref="wizard_8c" startline="163" endline="172">wizz_custinfo</references>
+        <references refid="group___d_t_s-_a_p_p-_wizard_1gaccc1788f03d17d487ce09a1d07d53018" compoundref="wizard_8c" startline="164" endline="173">wizz_custinfo</references>
         <referencedby refid="netconfig_8c_1ad5f5bf5384beb7b8c2fefdd51315d079" compoundref="netconfig_8c" startline="602" endline="738">network_tree_setup</referencedby>
       </memberdef>
       <memberdef kind="function" id="netconfig_8c_1a53ff57cbb1a4442c4428c95746229150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1279,7 +1279,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/app/netconfig.c" line="740" bodyfile="/usr/src/dtsapplib/dtsguiapp/app/netconfig.c" bodystart="740" bodyend="769"/>
-        <references refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="47" endline="66">app_getxmldoc</references>
+        <references refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" compoundref="wxforms_8c" startline="48" endline="67">app_getxmldoc</references>
         <references refid="structapp__data_1aaa1b1bd30fab72d8b9a34f890fd060c0" compoundref="private_8h" startline="61">app_data::datadir</references>
         <references refid="group___c-_a_p_i-_dialog_1gad331a82b0502bea7d78545c6efb72b78" compoundref="wrapper_8cpp" startline="1151" endline="1154">dtsgui_alert</references>
         <references refid="group___c-_a_p_i-_panel_1gaa92cb9c6006aaf320e784f04500c3b25" compoundref="wrapper_8cpp" startline="503" endline="506">dtsgui_treewindow</references>

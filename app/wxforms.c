@@ -17,6 +17,7 @@
 */
 
 /** @defgroup DTS-APP Distrotech Server Configuration Application
+  * @brief Multi platform GUI server management application.
   * @{
   * @file
   * @brief Main application file.*/

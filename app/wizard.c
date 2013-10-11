@@ -17,10 +17,11 @@
 */
 
 /** @defgroup DTS-APP-Wizard Distrotech Application Wizard Interface
+  * @brief System configuration wizard
   * @ingroup DTS-APP
   * @{
   * @file
-  * @brief Wizard Interface.*/
+  * @brief System configuration wizard*/
 
 #include <stdlib.h>
 #include <stdio.h>

@@ -94,7 +94,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="140" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="864" bodyend="874"/>
-        <references refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="944" endline="959">DTSTabPage::ConfigPane</references>
+        <references refid="class_d_t_s_tab_page_1a433bdbb8af0ded1fb884b45c5d9259a9" compoundref="_d_t_s_panel_8cpp" startline="945" endline="960">DTSTabPage::ConfigPane</references>
         <references refid="class_d_t_s_tab_window_event_1a7e79f616df8c47b3ce95535b0d13fd76" compoundref="_d_t_s_tree_window_8h" startline="146">tw</references>
         <referencedby refid="class_d_t_s_tab_window_1a7e438e77899502fc316577e972d9ef28" compoundref="_d_t_s_tree_window_8cpp" startline="941" endline="979">DTSTabWindow::Show</referencedby>
       </memberdef>
@@ -153,7 +153,7 @@
         <location file="/usr/src/dtsapplib/dtsguiapp/src/include/DTSTreeWindow.h" line="143" bodyfile="/usr/src/dtsapplib/dtsguiapp/src/DTSTreeWindow.cpp" bodystart="840" bodyend="857"/>
         <references refid="class_d_t_s_tab_window_event_1a7e79f616df8c47b3ce95535b0d13fd76" compoundref="_d_t_s_tree_window_8h" startline="146">tw</references>
         <references refid="class_d_t_s_tab_window_1aa52e98a59b0ad81e28f5463be5e85051" compoundref="_d_t_s_tree_window_8cpp" startline="919" endline="939">DTSTabWindow::Undo</references>
-        <references refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="745" endline="774">DTSPanel::Update_XML</references>
+        <references refid="class_d_t_s_panel_1adc5131960a24dfa65adba935a1be0f79" compoundref="_d_t_s_panel_8cpp" startline="746" endline="775">DTSPanel::Update_XML</references>
         <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302ecadb8742f8472eb90558cfbf8e3914553b" compoundref="dtsgui_8h" startline="210">wx_PANEL_EVENT_BUTTON_NO</references>
         <references refid="group___c_o_r_e_1gga5082bae7f0b5d2b7d715e40450f302eca6ce91176e6c929e87d7acbd000d07f79" compoundref="dtsgui_8h" startline="208">wx_PANEL_EVENT_BUTTON_YES</references>
         <referencedby refid="class_d_t_s_tab_window_1a7e438e77899502fc316577e972d9ef28" compoundref="_d_t_s_tree_window_8cpp" startline="941" endline="979">DTSTabWindow::Show</referencedby>

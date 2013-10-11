@@ -313,7 +313,7 @@
         <references refid="class_d_t_s_tab_window_1a9906beec5aeff80face128b7631f5a8b" compoundref="_d_t_s_tree_window_8cpp" startline="1014" endline="1030">DTSTabWindow::InsertTab</references>
         <references refid="classtab__newpane_1ad3c901ac96fe24f4f57e2052dd459361" compoundref="_d_t_s_tree_window_8h" startline="71">last</references>
         <references refid="classtab__newpane_1a6ba77ba36491f4faaa975fe4264e0da5" compoundref="_d_t_s_tree_window_8h" startline="66">node</references>
-        <references refid="class_d_t_s_panel_1ad28f5ed6bd19e9d685a18df8bf568f92" compoundref="_d_t_s_panel_8cpp" startline="776" endline="838">DTSPanel::Panel2XML</references>
+        <references refid="class_d_t_s_panel_1ad28f5ed6bd19e9d685a18df8bf568f92" compoundref="_d_t_s_panel_8cpp" startline="777" endline="839">DTSPanel::Panel2XML</references>
         <references refid="classtab__newpane_1ab354d877d932ffb47de092bf1e1a8ab8" compoundref="_d_t_s_tree_window_8h" startline="62">tabv</references>
         <references refid="classtab__newpane_1a1fdfec0a57f980f16a83892b0da294b9" compoundref="_d_t_s_tree_window_8h" startline="68">tattr</references>
         <references refid="class_d_t_s_tab_window_1aa52e98a59b0ad81e28f5463be5e85051" compoundref="_d_t_s_tree_window_8cpp" startline="919" endline="939">DTSTabWindow::Undo</references>

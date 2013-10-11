@@ -51,13 +51,13 @@ Definition at line 142 of file DTSPanel\&.h\&.
 .SS "DTSTabPage::DTSTabPage (\fBwxBookCtrlBase\fP *parent, \fBDTSFrame\fP *frame = \fCNULL\fP, wxStringstatus = \fCwxEmptyString\fP, intbutmask = \fC0\fP, \fBdtsgui_tabpanel_cb\fPc_cb = \fCNULL\fP, void *c_data = \fCNULL\fP, struct xml_doc *xmldoc = \fCNULL\fP)"
 
 .PP
-Definition at line 915 of file DTSPanel\&.cpp\&.
+Definition at line 916 of file DTSPanel\&.cpp\&.
 .PP
 References cb, cdata, hasconfig, DTSPanel::SetTitle(), DTSObject::SetXMLDoc(), DTSObject::type, and wx_DTSPANEL_TAB\&.
 .SS "DTSTabPage::~DTSTabPage ()"
 
 .PP
-Definition at line 932 of file DTSPanel\&.cpp\&.
+Definition at line 933 of file DTSPanel\&.cpp\&.
 .PP
 References cdata, and DTSObject::refobj\&.
 .SH "Member Function Documentation"
@@ -65,7 +65,7 @@ References cdata, and DTSObject::refobj\&.
 .SS "void DTSTabPage::ConfigPane ()"
 
 .PP
-Definition at line 944 of file DTSPanel\&.cpp\&.
+Definition at line 945 of file DTSPanel\&.cpp\&.
 .PP
 References cb, cdata, hasconfig, and DTSPanel::ShowPanel()\&.
 .PP
@@ -73,7 +73,7 @@ Referenced by DTSTabWindowEvent::PageChange(), and DTSTabWindow::Show()\&.
 .SS "\fBDTSTabPage\fP & DTSTabPage::operator= (const \fBDTSTabPage\fP &orig)"
 
 .PP
-Definition at line 961 of file DTSPanel\&.cpp\&.
+Definition at line 962 of file DTSPanel\&.cpp\&.
 .PP
 References DTSPanelEvent::BindDTSEvent(), DTSPanel::button_mask, cb, cdata, DTSObject::dtsevthandler, DTSObject::frame, DTSObject::panel, DTSObject::refobj, DTSPanel::SetTitle(), DTSObject::status, and DTSObject::xmldoc\&.
 .SS "bool DTSTabPage::Show (boolshow)\fC [virtual]\fP"
@@ -81,7 +81,7 @@ References DTSPanelEvent::BindDTSEvent(), DTSPanel::button_mask, cb, cdata, DTSO
 .PP
 Reimplemented from \fBDTSScrollPanel\fP\&.
 .PP
-Definition at line 940 of file DTSPanel\&.cpp\&.
+Definition at line 941 of file DTSPanel\&.cpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBdtsgui_tabpanel_cb\fP DTSTabPage::cb\fC [private]\fP"
