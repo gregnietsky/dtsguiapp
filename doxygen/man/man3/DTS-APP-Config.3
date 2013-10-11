@@ -64,6 +64,38 @@ Definition at line 240 of file config\&.c\&.
 References advanced_config(), app_data::cfg_menu, dtsgui_menuenable(), dtsgui_menusep(), dtsgui_newmenu(), dtsgui_newmenucb(), dtsgui_userdata(), export_config(), iface_config(), pbx_settings(), reconfig_wizard(), save_config(), view_config_conf(), and view_config_xml()\&.
 .PP
 Referenced by guiconfig_cb()\&.
+.PP
+.nf
+                                        {
+    struct app_data *appdata;
+
+    if (!(appdata = dtsgui_userdata(dtsgui))) {
+        return;
+    }
+
+    objlock(appdata);
+    appdata->cfg_menu = dtsgui_newmenu(dtsgui, '&Config');
+
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, 'Reconfigure &Wizard', 'Run System Reconfigure Wizard\&.', 1, reconfig_wizard, NULL);
+
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, 'P&BX Configuration', 'PBX Setup', 0, pbx_settings, NULL);
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, '&Interface Configuration', 'Inteface Configuration', 0, iface_config, NULL);
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, '&Advanced Configuration', 'Advanced Config', 0, advanced_config, NULL);
+
+    dtsgui_menusep(appdata->cfg_menu);
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, '&Save And Close Config', 'Save/Close System Config (File/URL)', 1, save_config, NULL);
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, 'E&xport Config', 'Export Configuration as a \&.conf file', 0, export_config, NULL);
+
+    dtsgui_menusep(appdata->cfg_menu);
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, '&View Config (XML)', 'View Current Config File In XML Format\&.', 0, view_config_xml, NULL);
+    dtsgui_newmenucb(appdata->cfg_menu, dtsgui, 'View &Config (CONF)', 'View Current Config File Converted to \&.conf Format\&.', 0, view_config_conf, NULL);
+
+    /*initially greyed out*/
+    dtsgui_menuenable(appdata->cfg_menu, 0);
+    objunlock(appdata);
+    objunref(appdata);
+}
+.fi
 .SS "\fBdtsgui_pane\fP export_config (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -90,6 +122,47 @@ Definition at line 198 of file config\&.c\&.
 References app_getxmldoc(), app_data::datadir, dtsgui_alert(), dtsgui_filesave(), and dtsgui_userdata()\&.
 .PP
 Referenced by config_menu()\&.
+.PP
+.nf
+                                                                                {
+    struct app_data *appdata;
+    struct xml_doc *xmldoc;
+    struct xslt_doc *xsltdoc;
+    char xsltfile[PATH_MAX];
+    const char *newfile;
+
+    if (!(appdata = dtsgui_userdata(dtsgui))) {
+        return NULL;
+    }
+    snprintf(xsltfile, PATH_MAX-1, '%s/xml2conf\&.xsl', appdata->datadir);
+    objunref(appdata);
+
+    if (!is_file(xsltfile)) {
+        dtsgui_alert(dtsgui, 'XSLT Transform Not Found');
+        return NULL;
+    }
+
+    if (!(xsltdoc = xslt_open(xsltfile))) {
+        dtsgui_alert(dtsgui, 'XSLT Open Failed');
+        return NULL;
+    }
+
+    if (!(xmldoc = app_getxmldoc(dtsgui))) {
+        objunref(xsltdoc);
+        return NULL;
+    }
+
+    newfile = dtsgui_filesave(dtsgui, 'Export Config To File', NULL, 'firewall\&.conf', 'System Configuration (\&.conf)|*\&.conf');
+    if (newfile) {
+        xslt_apply(xmldoc, xsltdoc, newfile, 0);
+        objunref((void*)newfile);
+    }
+
+    objunref(xsltdoc);
+    objunref(xmldoc);
+    return NULL;
+}
+.fi
 .SS "\fBdtsgui_pane\fP open_config (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -116,6 +189,50 @@ Definition at line 44 of file config\&.c\&.
 References app_data::c_open, app_data::cfg_menu, dtsgui_alert(), dtsgui_fileopen(), dtsgui_menuenable(), dtsgui_menuitemenable(), dtsgui_sendevent(), dtsgui_set_toolbar(), dtsgui_titleappend(), dtsgui_userdata(), app_data::e_wiz, app_data::n_wiz, and app_data::xmldoc\&.
 .PP
 Referenced by file_menu()\&.
+.PP
+.nf
+                                                                              {
+    struct app_data *appdata;
+    const char *filename;
+
+
+    if (!(filename = dtsgui_fileopen(dtsgui, 'Select Customer Configuration To Open', NULL, '', 'XML Configuration|*\&.xml'))) {
+        return NULL;
+    }
+
+    if (!(appdata = dtsgui_userdata(dtsgui))) {
+        objunref((void*)filename);
+        return  NULL;
+    }
+
+    objlock(appdata);
+    if (!(appdata->xmldoc = xml_loaddoc(filename, 1 ))) {
+        objunlock(appdata);
+        objunref(appdata);
+        objunref((void*)filename);
+        dtsgui_alert(dtsgui, 'Configuration failed to load\&.\n');
+        return NULL;
+    }
+    objunlock(appdata);
+
+    dtsgui_sendevent(dtsgui, 1);
+
+    objlock(appdata);
+    dtsgui_menuitemenable(appdata->e_wiz, 0);
+    dtsgui_menuitemenable(appdata->n_wiz, 0);
+    dtsgui_menuitemenable(appdata->c_open, 0);
+    dtsgui_menuenable(appdata->cfg_menu, 1);
+    objunlock(appdata);
+
+    dtsgui_titleappend(dtsgui, filename);
+    objunref((void*)filename);
+
+    dtsgui_set_toolbar(dtsgui, 0);
+    objunref(appdata);
+
+    return NULL;
+}
+.fi
 .SS "\fBdtsgui_pane\fP save_config (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -147,6 +264,33 @@ Definition at line 95 of file config\&.c\&.
 References app_data::c_open, app_data::cfg_menu, dtsgui_menuenable(), dtsgui_menuitemenable(), dtsgui_set_toolbar(), dtsgui_titleappend(), dtsgui_userdata(), app_data::e_wiz, app_data::n_wiz, and app_data::xmldoc\&.
 .PP
 Referenced by config_menu()\&.
+.PP
+.nf
+                                                                              {
+    struct app_data *appdata;
+
+    if (!(appdata = dtsgui_userdata(dtsgui))) {
+        return NULL;
+    }
+    /*  dtsgui_sendevent(dtsgui);*/
+    dtsgui_titleappend(dtsgui, NULL);
+
+    objlock(appdata);
+    dtsgui_menuenable(appdata->cfg_menu, 0);
+    dtsgui_menuitemenable(appdata->e_wiz, 1);
+    dtsgui_menuitemenable(appdata->n_wiz, 1);
+    dtsgui_menuitemenable(appdata->c_open, 1);
+
+    objunref(appdata->xmldoc);
+    appdata->xmldoc = NULL;
+    objunlock(appdata);
+    objunref(appdata);
+
+    dtsgui_set_toolbar(dtsgui, 1);
+
+    return NULL;
+}
+.fi
 .SS "\fBdtsgui_pane\fP view_config_conf (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -173,6 +317,46 @@ Definition at line 152 of file config\&.c\&.
 References app_getxmldoc(), app_data::datadir, dtsgui_alert(), dtsgui_textpane(), and dtsgui_userdata()\&.
 .PP
 Referenced by config_menu()\&.
+.PP
+.nf
+                                                                                   {
+    struct app_data *appdata;
+    struct xml_doc *xmldoc;
+    struct xslt_doc *xsltdoc;
+    dtsgui_pane p = NULL;
+    char xsltfile[PATH_MAX];
+    void *xmlbuf;
+
+    if (!(appdata = dtsgui_userdata(dtsgui))) {
+        return NULL;
+    }
+    snprintf(xsltfile, PATH_MAX-1, '%s/xml2conf\&.xsl', appdata->datadir);
+    objunref(appdata);
+
+    if (!is_file(xsltfile)) {
+        dtsgui_alert(dtsgui, 'XSLT Transform Not Found');
+        return NULL;
+    }
+
+    if (!(xmldoc = app_getxmldoc(dtsgui))) {
+        return NULL;
+    }
+
+    if (!(xsltdoc = xslt_open(xsltfile))) {
+        dtsgui_alert(dtsgui, 'XSLT Open Failed');
+        objunref(xmldoc);
+        return NULL;
+    }
+
+    xmlbuf = xslt_apply_buffer(xmldoc, xsltdoc);
+    p = dtsgui_textpane(dtsgui, 'Configuration in \&.conf format', xml_getbuffer(xmlbuf));
+
+    objunref(xsltdoc);
+    objunref(xmlbuf);
+    objunref(xmldoc);
+    return p;
+}
+.fi
 .SS "\fBdtsgui_pane\fP view_config_xml (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
@@ -197,6 +381,26 @@ Definition at line 126 of file config\&.c\&.
 References app_getxmldoc(), and dtsgui_textpane()\&.
 .PP
 Referenced by config_menu()\&.
+.PP
+.nf
+                                                                                  {
+    struct xml_doc *xmldoc = NULL;
+    dtsgui_pane p;
+    void *xmlbuf;
+
+    if (!(xmldoc = app_getxmldoc(dtsgui))) {
+        return NULL;
+    }
+
+    xmlbuf = xml_doctobuffer(xmldoc);
+    p = dtsgui_textpane(dtsgui, 'XML Configuration', xml_getbuffer(xmlbuf));
+
+    objunref(xmlbuf);
+    objunref(xmldoc);
+
+    return p;
+}
+.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for DTS Application wxWidgets GUI Library from the source code\&.
