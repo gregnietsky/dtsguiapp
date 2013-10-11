@@ -12,7 +12,7 @@ var searchData=
   ['alert',['Alert',['../class_d_t_s_frame.html#a890f88e157626205916bdb961cc6fb6f',1,'DTSFrame']]],
   ['app_5fdata',['app_data',['../structapp__data.html',1,'']]],
   ['app_5fgetxmldoc',['app_getxmldoc',['../group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0',1,'app_getxmldoc(struct dtsgui *dtsgui):&#160;wxforms.c'],['../group___d_t_s-_a_p_p.html#ga65a24b9322f0fd002413f3e9e13272f0',1,'app_getxmldoc(struct dtsgui *dtsgui):&#160;wxforms.c']]],
-  ['app_5ftoolbar',['app_toolbar',['../private_8h.html#ab33c9c3228455b45318900a842c7a693',1,'app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data):&#160;toolbar.cpp'],['../toolbar_8cpp.html#ab33c9c3228455b45318900a842c7a693',1,'app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data):&#160;toolbar.cpp']]],
+  ['app_5ftoolbar',['app_toolbar',['../group___d_t_s-_a_p_p-_toolbar.html#gab33c9c3228455b45318900a842c7a693',1,'app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data):&#160;toolbar.cpp'],['../group___d_t_s-_a_p_p-_toolbar.html#gab33c9c3228455b45318900a842c7a693',1,'app_toolbar(struct dtsgui *dtsgui, void *pw, long style, int id, const char *name, void *data):&#160;toolbar.cpp']]],
   ['append',['Append',['../class_d_t_s_d_v_m_list_store.html#aa12273287bfd185a52224543fcae3b23',1,'DTSDVMListStore::Append()'],['../classform__item.html#ad99d224a37a5bc6f99835afb2347fac8',1,'form_item::Append()']]],
   ['appendcontainer',['AppendContainer',['../class_d_t_s_d_v_m_ctrl.html#a853bc63ae2098cf907897dfe896f38b2',1,'DTSDVMCtrl']]],
   ['appenditem',['AppendItem',['../class_d_t_s_d_v_m_ctrl.html#a60de6e9342a4c140fa2b72acfbfd97dc',1,'DTSDVMCtrl']]],
@@ -23,5 +23,7 @@ var searchData=
   ['appframe',['appframe',['../classdtsgui.html#a23186f0e51311156f54f9f9882806414',1,'dtsgui']]],
   ['associatemodel',['AssociateModel',['../class_d_t_s_d_v_m_ctrl.html#ad844ee2c061ae2233ac8cca01c0a6a92',1,'DTSDVMCtrl']]],
   ['attr',['attr',['../classxml__element.html#a5e1c544e39cc117f13e692f59cf020c1',1,'xml_element']]],
-  ['application_20frame_2e',['Application frame.',['../group___c_p_p-_frame.html',1,'']]]
+  ['application_20frame_2e',['Application frame.',['../group___c_p_p-_frame.html',1,'']]],
+  ['application_20test_20panel',['Application test panel',['../group___d_t_s-_a_p_p-_test.html',1,'']]],
+  ['application_20toolbar',['Application toolbar',['../group___d_t_s-_a_p_p-_toolbar.html',1,'']]]
 ];

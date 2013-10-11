@@ -20,57 +20,75 @@ System configuration wizard\&.
 .ti -1c
 .RI "static void \fBset_temp_xml\fP (struct xml_doc *xmldoc)"
 .br
+.RI "\fIAdd temp nodes used in the wizard\&. \fP"
 .ti -1c
 .RI "static void \fBrem_temp_xml\fP (struct xml_doc *xmldoc)"
 .br
+.RI "\fIRemove tempoary XML nodes updating XML\&. \fP"
 .ti -1c
 .RI "void \fBwizz_custinfo\fP (\fBdtsgui_pane\fP *pg)"
 .br
+.RI "\fICustomer information panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_netinfo\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fINetwork information panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_dyndns\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fIDynamic DNS configuration panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_dnsinfo\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fIDNS/Wins configuration panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_x509\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fIX\&.509 configuration panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_samba\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fISamba configuration panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_network\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fINetwork configuration panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_exten\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fIDefault extension settings panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_location\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fILocation information panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_acd\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fIACD configuration panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_trunk\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fITelephony Trunk configuration panel\&. \fP"
 .ti -1c
 .RI "void \fBwizz_voip\fP (\fBdtsgui_pane\fP pg)"
 .br
+.RI "\fIVOIP Configuration panel\&. \fP"
 .ti -1c
 .RI "static int \fBsystem_wizard\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, void *data, const char *filename, struct xml_doc *xmldoc, int save)"
 .br
+.RI "\fISystem configuration wizard\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBnewsys_wizard\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, void *data)"
 .br
+.RI "\fICallback from create new system menu item\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBeditsys_wizard\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, void *data)"
 .br
+.RI "\fICallback from edit customer configuration\&. \fP"
 .ti -1c
 .RI "\fBdtsgui_pane\fP \fBreconfig_wizard\fP (struct \fBdtsgui\fP *\fBdtsgui\fP, const char *title, void *data)"
 .br
+.RI "\fICallback from configuration menu\&. \fP"
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -82,7 +100,25 @@ System configuration wizard\&.
 .SS "\fBdtsgui_pane\fP editsys_wizard (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
-Definition at line 461 of file wizard\&.c\&.
+Callback from edit customer configuration\&. Open the configuration and run the wizard\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdtsgui\fP Application data ptr\&. 
+.br
+\fItitle\fP Name of the menuitem as shown on status bar\&. 
+.br
+\fIdata\fP Data supplied to the menuitem\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL as the wizzard will run and no panel is supplied for dislpay area\&. 
+.RE
+.PP
+
+.PP
+Definition at line 523 of file wizard\&.c\&.
 .PP
 References dtsgui_alert(), dtsgui_fileopen(), and system_wizard()\&.
 .PP
@@ -90,7 +126,25 @@ Referenced by file_menu()\&.
 .SS "\fBdtsgui_pane\fP newsys_wizard (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
-Definition at line 436 of file wizard\&.c\&.
+Callback from create new system menu item\&. Open the default configuration and run the wizard saving to a new file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdtsgui\fP Application data ptr\&. 
+.br
+\fItitle\fP Name of the menuitem as shown on status bar\&. 
+.br
+\fIdata\fP Data supplied to the menuitem\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL as the wizzard will run and no panel is supplied for dislpay area\&. 
+.RE
+.PP
+
+.PP
+Definition at line 491 of file wizard\&.c\&.
 .PP
 References app_data::datadir, dtsgui_alert(), dtsgui_userdata(), and system_wizard()\&.
 .PP
@@ -98,7 +152,25 @@ Referenced by file_menu()\&.
 .SS "\fBdtsgui_pane\fP reconfig_wizard (struct \fBdtsgui\fP *dtsgui, const char *title, void *data)"
 
 .PP
-Definition at line 481 of file wizard\&.c\&.
+Callback from configuration menu\&. Run the wizard on the current application XML document\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdtsgui\fP Application data ptr\&. 
+.br
+\fItitle\fP Name of the menuitem as shown on status bar\&. 
+.br
+\fIdata\fP Data supplied to the menuitem\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL as the wizzard will run and no panel is supplied for dislpay area\&. 
+.RE
+.PP
+
+.PP
+Definition at line 550 of file wizard\&.c\&.
 .PP
 References app_getxmldoc(), and system_wizard()\&.
 .PP
@@ -106,19 +178,70 @@ Referenced by config_menu()\&.
 .SS "static void rem_temp_xml (struct xml_doc *xmldoc)\fC [static]\fP"
 
 .PP
-Definition at line 111 of file wizard\&.c\&.
+Remove tempoary XML nodes updating XML\&. Update the XML document as required based on values set on these tempoary nones\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIxmldoc\fP XML document\&. 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file wizard\&.c\&.
 .PP
 Referenced by system_wizard()\&.
 .SS "static void set_temp_xml (struct xml_doc *xmldoc)\fC [static]\fP"
 
 .PP
-Definition at line 35 of file wizard\&.c\&.
+Add temp nodes used in the wizard\&. The nodes added are compisite information used in the wizard and using a tempoary XML node simplifies the process\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIxmldoc\fP XML Document\&. 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file wizard\&.c\&.
 .PP
 Referenced by system_wizard()\&.
 .SS "static int system_wizard (struct \fBdtsgui\fP *dtsgui, void *data, const char *filename, struct xml_doc *xmldoc, intsave)\fC [static]\fP"
 
 .PP
-Definition at line 363 of file wizard\&.c\&.
+System configuration wizard\&. Run the system configuration wizard some values are added to the XML document tempoaraly and deleted when completed\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdtsgui\fP Application data ptr\&. 
+.br
+\fIdata\fP User data from menuitem\&. 
+.br
+\fIfilename\fP Reference to the filename to write too if editing\&. 
+.br
+\fIxmldoc\fP XML document\&. 
+.br
+\fIsave\fP Non zero value if the filename should be saved too on completion\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Non zero on success\&. 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+Add callback to \fBdtsgui_wizard_addpage()\fP to be called to configure the panel 
+.RE
+.PP
+.PP
+\fBRemarks:\fP
+.RS 4
+If no filename is supplied a save dialog is opened for the user to enter file to save too\&. 
+.RE
+.PP
+
+.PP
+Definition at line 408 of file wizard\&.c\&.
 .PP
 References dtsgui_confirm(), dtsgui_filesave(), dtsgui_newwizard(), dtsgui_runwizard(), dtsgui_wizard_addpage(), dtsgui_xmlpanel_update(), rem_temp_xml(), set_temp_xml(), wizz_acd(), wizz_custinfo(), wizz_dnsinfo(), wizz_dyndns(), wizz_exten(), wizz_location(), wizz_netinfo(), wizz_network(), wizz_samba(), wizz_trunk(), wizz_voip(), and wizz_x509()\&.
 .PP
@@ -126,7 +249,14 @@ Referenced by editsys_wizard(), newsys_wizard(), and reconfig_wizard()\&.
 .SS "void wizz_acd (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 317 of file wizard\&.c\&.
+ACD configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 348 of file wizard\&.c\&.
 .PP
 References dtsgui_xmlcheckbox(), and dtsgui_xmltextbox()\&.
 .PP
@@ -134,7 +264,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_custinfo (\fBdtsgui_pane\fP *pg)"
 
 .PP
-Definition at line 164 of file wizard\&.c\&.
+Customer information panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 177 of file wizard\&.c\&.
 .PP
 References dtsgui_xmltextbox(), and dtsgui_xmltextbox_multi()\&.
 .PP
@@ -142,7 +279,14 @@ Referenced by customer_info(), and system_wizard()\&.
 .SS "void wizz_dnsinfo (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 190 of file wizard\&.c\&.
+DNS/Wins configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 209 of file wizard\&.c\&.
 .PP
 References dtsgui_xmltextbox()\&.
 .PP
@@ -150,7 +294,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_dyndns (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 184 of file wizard\&.c\&.
+Dynamic DNS configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 201 of file wizard\&.c\&.
 .PP
 References dtsgui_xmltextbox()\&.
 .PP
@@ -158,7 +309,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_exten (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 233 of file wizard\&.c\&.
+Default extension settings panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 260 of file wizard\&.c\&.
 .PP
 References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), dtsgui_xmllistbox(), dtsgui_xmltextbox(), listitem::name, and listitem::value\&.
 .PP
@@ -166,7 +324,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_location (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 282 of file wizard\&.c\&.
+Location information panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 311 of file wizard\&.c\&.
 .PP
 References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), dtsgui_xmllistbox(), and dtsgui_xmltextbox()\&.
 .PP
@@ -174,7 +339,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_netinfo (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 175 of file wizard\&.c\&.
+Network information panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 190 of file wizard\&.c\&.
 .PP
 References dtsgui_xmltextbox()\&.
 .PP
@@ -182,7 +354,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_network (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 217 of file wizard\&.c\&.
+Network configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 242 of file wizard\&.c\&.
 .PP
 References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), dtsgui_xmlcombobox(), and dtsgui_xmltextbox()\&.
 .PP
@@ -190,7 +369,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_samba (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 209 of file wizard\&.c\&.
+Samba configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 232 of file wizard\&.c\&.
 .PP
 References dtsgui_xmlcheckbox(), and dtsgui_xmltextbox()\&.
 .PP
@@ -198,7 +384,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_trunk (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 326 of file wizard\&.c\&.
+Telephony Trunk configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 359 of file wizard\&.c\&.
 .PP
 References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), dtsgui_xmllistbox(), and dtsgui_xmltextbox()\&.
 .PP
@@ -206,7 +399,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_voip (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 348 of file wizard\&.c\&.
+VOIP Configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 383 of file wizard\&.c\&.
 .PP
 References dtsgui_listbox_add(), dtsgui_xmlcheckbox(), and dtsgui_xmllistbox()\&.
 .PP
@@ -214,7 +414,14 @@ Referenced by system_wizard()\&.
 .SS "void wizz_x509 (\fBdtsgui_pane\fPpg)"
 
 .PP
-Definition at line 199 of file wizard\&.c\&.
+X\&.509 configuration panel\&. \fBParameters:\fP
+.RS 4
+\fIpg\fP Panel to configure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 220 of file wizard\&.c\&.
 .PP
 References dtsgui_xmltextbox()\&.
 .PP

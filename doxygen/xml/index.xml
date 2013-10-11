@@ -602,15 +602,15 @@
     <member refid="config_8c_1a2bcdb1dc60a2dc5383e027578faeb44e" kind="function"><name>config_menu</name></member>
   </compound>
   <compound refid="interface_8c" kind="file"><name>interface.c</name>
-    <member refid="interface_8c_1af0850a1d3d424533abf6f42eb7603b58" kind="function"><name>free_iface_cdata</name></member>
-    <member refid="interface_8c_1a3a6216b44ef12f4343578439ea097c50" kind="function"><name>get_iface_cdata</name></member>
-    <member refid="interface_8c_1ad806ada5b6aa10cb8e8b21af8fe03c33" kind="function"><name>free_newiface_data</name></member>
-    <member refid="interface_8c_1a23ef5c5cf103f36dd179c5625f8f8576" kind="function"><name>get_newiface_data</name></member>
-    <member refid="interface_8c_1ad174419104751f817b6b094628bd9846" kind="function"><name>handle_newxmltabpane</name></member>
-    <member refid="interface_8c_1a2079939d5d21847b07c782120206b7ce" kind="function"><name>handle_updatetabpane</name></member>
-    <member refid="interface_8c_1aec69e5698c53680c3551eeb9e05cbaf6" kind="function"><name>network_iface_pane_cb</name></member>
-    <member refid="interface_8c_1adcfa585026374cce3c2443ea55cebc25" kind="function"><name>network_iface_new_pane_cb</name></member>
-    <member refid="interface_8c_1abf43f59e582eee9f27734b14c8307819" kind="function"><name>iface_config</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gaf0850a1d3d424533abf6f42eb7603b58" kind="function"><name>free_iface_cdata</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1ga3a6216b44ef12f4343578439ea097c50" kind="function"><name>get_iface_cdata</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gad806ada5b6aa10cb8e8b21af8fe03c33" kind="function"><name>free_newiface_data</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1ga23ef5c5cf103f36dd179c5625f8f8576" kind="function"><name>get_newiface_data</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gad174419104751f817b6b094628bd9846" kind="function"><name>handle_newxmltabpane</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1ga2079939d5d21847b07c782120206b7ce" kind="function"><name>handle_updatetabpane</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gaec69e5698c53680c3551eeb9e05cbaf6" kind="function"><name>network_iface_pane_cb</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gadcfa585026374cce3c2443ea55cebc25" kind="function"><name>network_iface_new_pane_cb</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gabf43f59e582eee9f27734b14c8307819" kind="function"><name>iface_config</name></member>
   </compound>
   <compound refid="netconfig_8c" kind="file"><name>netconfig.c</name>
     <member refid="netconfig_8c_1adbe54f6a0a7e02ca7aa64f300dc162b0" kind="variable"><name>protocols</name></member>
@@ -665,49 +665,49 @@
     <member refid="pbxconfig_8c_1aa1aa69985689f9714422c273fe968fdf" kind="function"><name>pbx_settings</name></member>
   </compound>
   <compound refid="private_8h" kind="file"><name>private.h</name>
-    <member refid="private_8h_1a48cc0a91e8f54c62f3341c21c8cc74e8" kind="define"><name>DATA_DIR</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ec" kind="enum"><name>node_id</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca05bdc159f9d09f11da201a71742409ab" kind="enumvalue"><name>DTS_NODE_CUSTOMER</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca5d9219d48e330379299d2ed15ff4ea15" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca18ebf5363d2b4ceb3a8743a4e7647bcf" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecaca8f7e08a6f51e6081b99238a63cbafe" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DYN</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca6fc67e5941f734e9de7b2637da5c9d2e" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_SERV</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca72083493da720ce59de27e706129d826" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_ZONE</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecadc2abb3aae3102620d94987b8bf84f62" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca1bd61a04594205156cf8c1bdbee06c25" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_HOST</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecac0f1f71b049c8b3cb01da6496f13806e" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca25d60169e86212cf235d0c4667064603" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca67d5c38ab27222a53751515b85b184f3" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca5b916eea0e8627cd48cad8e0ea0d39ca" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecaadaa5062456242e248fd995b69227644" kind="enumvalue"><name>DTS_NODE_NETWORK_IFACE_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca08159fce51c8b85d49c5f4966bf35d8b" kind="enumvalue"><name>DTS_NODE_NETWORK_IFACE</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecae56467f65a231afd6634cae3269e663c" kind="enumvalue"><name>DTS_NODE_NETWORK_WIFI_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca692abd6a99c569736b4bf162a07c298e" kind="enumvalue"><name>DTS_NODE_NETWORK_WIFI</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca19640654abb2114b8ee8098dc52e250a" kind="enumvalue"><name>DTS_NODE_NETWORK_WAN_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca701fcc5c32156589c8d427dca26ad3c7" kind="enumvalue"><name>DTS_NODE_NETWORK_WAN</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecaffda66a81ab84d7dfb2dac1c5ce352f0" kind="enumvalue"><name>DTS_NODE_NETWORK_ROUTE_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecaa6a75ad98f4e80d9ef8fa806e966bfdb" kind="enumvalue"><name>DTS_NODE_NETWORK_ROUTE</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecab0e808e1aa3a128b563041ad11d63892" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecae55296fcae8a1a6d9b68b3488ce510ca" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM_ADV</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecad3a141f5a4b83f7396624ec46408781b" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM_ANA</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecada7817a2ab63af146792c6e8421b0124" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_LINK_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca227b415be9d0831d430de77ec5bf8c52" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_LINK</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca767fd577d500a56d72c11ffea034e08c" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_USER_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecaeb4d90752cc1ae6b1189057456d4080d" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_USER</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808eca15c8b3347c4ae06b4206e5960f7bd41c" kind="enumvalue"><name>DTS_NODE_NETWORK_TOS_NEW</name></member>
-    <member refid="private_8h_1a018cb6fe637d3a25a67e794d620808ecae4d8c8164988e426b306b81ba7a54551" kind="enumvalue"><name>DTS_NODE_NETWORK_TOS</name></member>
+    <member refid="group___d_t_s-_a_p_p_1ga48cc0a91e8f54c62f3341c21c8cc74e8" kind="define"><name>DATA_DIR</name></member>
+    <member refid="group___d_t_s-_a_p_p_1ga018cb6fe637d3a25a67e794d620808ec" kind="enum"><name>node_id</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca05bdc159f9d09f11da201a71742409ab" kind="enumvalue"><name>DTS_NODE_CUSTOMER</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca5d9219d48e330379299d2ed15ff4ea15" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca18ebf5363d2b4ceb3a8743a4e7647bcf" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaca8f7e08a6f51e6081b99238a63cbafe" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DYN</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca6fc67e5941f734e9de7b2637da5c9d2e" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_SERV</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca72083493da720ce59de27e706129d826" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_ZONE</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecadc2abb3aae3102620d94987b8bf84f62" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca1bd61a04594205156cf8c1bdbee06c25" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_HOST</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecac0f1f71b049c8b3cb01da6496f13806e" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca25d60169e86212cf235d0c4667064603" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca67d5c38ab27222a53751515b85b184f3" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca5b916eea0e8627cd48cad8e0ea0d39ca" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaadaa5062456242e248fd995b69227644" kind="enumvalue"><name>DTS_NODE_NETWORK_IFACE_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca08159fce51c8b85d49c5f4966bf35d8b" kind="enumvalue"><name>DTS_NODE_NETWORK_IFACE</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecae56467f65a231afd6634cae3269e663c" kind="enumvalue"><name>DTS_NODE_NETWORK_WIFI_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca692abd6a99c569736b4bf162a07c298e" kind="enumvalue"><name>DTS_NODE_NETWORK_WIFI</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca19640654abb2114b8ee8098dc52e250a" kind="enumvalue"><name>DTS_NODE_NETWORK_WAN_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca701fcc5c32156589c8d427dca26ad3c7" kind="enumvalue"><name>DTS_NODE_NETWORK_WAN</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaffda66a81ab84d7dfb2dac1c5ce352f0" kind="enumvalue"><name>DTS_NODE_NETWORK_ROUTE_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaa6a75ad98f4e80d9ef8fa806e966bfdb" kind="enumvalue"><name>DTS_NODE_NETWORK_ROUTE</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecab0e808e1aa3a128b563041ad11d63892" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecae55296fcae8a1a6d9b68b3488ce510ca" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM_ADV</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecad3a141f5a4b83f7396624ec46408781b" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM_ANA</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecada7817a2ab63af146792c6e8421b0124" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_LINK_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca227b415be9d0831d430de77ec5bf8c52" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_LINK</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca767fd577d500a56d72c11ffea034e08c" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_USER_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaeb4d90752cc1ae6b1189057456d4080d" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_USER</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca15c8b3347c4ae06b4206e5960f7bd41c" kind="enumvalue"><name>DTS_NODE_NETWORK_TOS_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecae4d8c8164988e426b306b81ba7a54551" kind="enumvalue"><name>DTS_NODE_NETWORK_TOS</name></member>
     <member refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" kind="function"><name>app_getxmldoc</name></member>
-    <member refid="private_8h_1ab33c9c3228455b45318900a842c7a693" kind="function"><name>app_toolbar</name></member>
+    <member refid="group___d_t_s-_a_p_p-_toolbar_1gab33c9c3228455b45318900a842c7a693" kind="function"><name>app_toolbar</name></member>
     <member refid="group___d_t_s-_a_p_p-_wizard_1ga0be336c09b5cd473a616326c4cb227d2" kind="function"><name>reconfig_wizard</name></member>
     <member refid="group___d_t_s-_a_p_p-_wizard_1ga126b309803052977061662f97fb9012a" kind="function"><name>editsys_wizard</name></member>
     <member refid="group___d_t_s-_a_p_p-_wizard_1ga56c78e0d32a18452dcea4f026de2c889" kind="function"><name>newsys_wizard</name></member>
     <member refid="group___d_t_s-_a_p_p-_wizard_1gaccc1788f03d17d487ce09a1d07d53018" kind="function"><name>wizz_custinfo</name></member>
     <member refid="private_8h_1aa1aa69985689f9714422c273fe968fdf" kind="function"><name>pbx_settings</name></member>
-    <member refid="private_8h_1a77cb81a619f8c9ccd83cdf1e7c97aae9" kind="function"><name>test_menu</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1ga77cb81a619f8c9ccd83cdf1e7c97aae9" kind="function"><name>test_menu</name></member>
     <member refid="private_8h_1a6d9d2b0105df87000cb2bdecbff91239" kind="function"><name>advanced_config</name></member>
     <member refid="private_8h_1ab77c80061336502da4c2cc2d2c11f4a0" kind="function"><name>network_iface_pane</name></member>
     <member refid="private_8h_1a3d43e57bb96cf8bd603872099c3bc038" kind="function"><name>network_iface_new_pane</name></member>
-    <member refid="private_8h_1abf43f59e582eee9f27734b14c8307819" kind="function"><name>iface_config</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gabf43f59e582eee9f27734b14c8307819" kind="function"><name>iface_config</name></member>
     <member refid="private_8h_1a72af4355dbc5afe93fef750a81a3e572" kind="function"><name>open_config</name></member>
     <member refid="private_8h_1ae1a63d1e8add52ca63e83582891054fa" kind="function"><name>save_config</name></member>
     <member refid="private_8h_1a01bdf27a0760d9da4bb77918735171c1" kind="function"><name>export_config</name></member>
@@ -716,14 +716,14 @@
     <member refid="private_8h_1a2bcdb1dc60a2dc5383e027578faeb44e" kind="function"><name>config_menu</name></member>
   </compound>
   <compound refid="testing_8c" kind="file"><name>testing.c</name>
-    <member refid="testing_8c_1a467cf1f57bc5317de7fa356f87b324a6" kind="function"><name>post_items</name></member>
-    <member refid="testing_8c_1af1d7f330874be6beda389c9ea4a4545c" kind="function"><name>handle_test</name></member>
-    <member refid="testing_8c_1a7436ba5c38bedec1d9ddda07ea99815d" kind="function"><name>testpanel</name></member>
-    <member refid="testing_8c_1a77cb81a619f8c9ccd83cdf1e7c97aae9" kind="function"><name>test_menu</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1ga467cf1f57bc5317de7fa356f87b324a6" kind="function"><name>post_items</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1gaf1d7f330874be6beda389c9ea4a4545c" kind="function"><name>handle_test</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1ga7436ba5c38bedec1d9ddda07ea99815d" kind="function"><name>testpanel</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1ga77cb81a619f8c9ccd83cdf1e7c97aae9" kind="function"><name>test_menu</name></member>
   </compound>
   <compound refid="toolbar_8cpp" kind="file"><name>toolbar.cpp</name>
-    <member refid="toolbar_8cpp_1adc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
-    <member refid="toolbar_8cpp_1ab33c9c3228455b45318900a842c7a693" kind="function"><name>app_toolbar</name></member>
+    <member refid="group___d_t_s-_a_p_p-_toolbar_1gadc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
+    <member refid="group___d_t_s-_a_p_p-_toolbar_1gab33c9c3228455b45318900a842c7a693" kind="function"><name>app_toolbar</name></member>
   </compound>
   <compound refid="wizard_8c" kind="file"><name>wizard.c</name>
     <member refid="group___d_t_s-_a_p_p-_wizard_1ga4f882ff8bd54df9885846da44baba542" kind="function"><name>set_temp_xml</name></member>
@@ -1040,6 +1040,36 @@
     <member refid="group___d_t_s-_a_p_p-_wizard_1ga0be336c09b5cd473a616326c4cb227d2" kind="function"><name>reconfig_wizard</name></member>
   </compound>
   <compound refid="group___d_t_s-_a_p_p" kind="group"><name>DTS-APP</name>
+    <member refid="group___d_t_s-_a_p_p_1ga018cb6fe637d3a25a67e794d620808ec" kind="enum"><name>node_id</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca05bdc159f9d09f11da201a71742409ab" kind="enumvalue"><name>DTS_NODE_CUSTOMER</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca5d9219d48e330379299d2ed15ff4ea15" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca18ebf5363d2b4ceb3a8743a4e7647bcf" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaca8f7e08a6f51e6081b99238a63cbafe" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DYN</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca6fc67e5941f734e9de7b2637da5c9d2e" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_SERV</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca72083493da720ce59de27e706129d826" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_ZONE</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecadc2abb3aae3102620d94987b8bf84f62" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_HOST_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca1bd61a04594205156cf8c1bdbee06c25" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_HOST</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecac0f1f71b049c8b3cb01da6496f13806e" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca25d60169e86212cf235d0c4667064603" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca67d5c38ab27222a53751515b85b184f3" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca5b916eea0e8627cd48cad8e0ea0d39ca" kind="enumvalue"><name>DTS_NODE_NETWORK_CONFIG_DNS_DOMAIN_SERVER</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaadaa5062456242e248fd995b69227644" kind="enumvalue"><name>DTS_NODE_NETWORK_IFACE_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca08159fce51c8b85d49c5f4966bf35d8b" kind="enumvalue"><name>DTS_NODE_NETWORK_IFACE</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecae56467f65a231afd6634cae3269e663c" kind="enumvalue"><name>DTS_NODE_NETWORK_WIFI_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca692abd6a99c569736b4bf162a07c298e" kind="enumvalue"><name>DTS_NODE_NETWORK_WIFI</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca19640654abb2114b8ee8098dc52e250a" kind="enumvalue"><name>DTS_NODE_NETWORK_WAN_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca701fcc5c32156589c8d427dca26ad3c7" kind="enumvalue"><name>DTS_NODE_NETWORK_WAN</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaffda66a81ab84d7dfb2dac1c5ce352f0" kind="enumvalue"><name>DTS_NODE_NETWORK_ROUTE_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaa6a75ad98f4e80d9ef8fa806e966bfdb" kind="enumvalue"><name>DTS_NODE_NETWORK_ROUTE</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecab0e808e1aa3a128b563041ad11d63892" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecae55296fcae8a1a6d9b68b3488ce510ca" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM_ADV</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecad3a141f5a4b83f7396624ec46408781b" kind="enumvalue"><name>DTS_NODE_NETWORK_MODEM_ANA</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecada7817a2ab63af146792c6e8421b0124" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_LINK_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca227b415be9d0831d430de77ec5bf8c52" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_LINK</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca767fd577d500a56d72c11ffea034e08c" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_USER_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecaeb4d90752cc1ae6b1189057456d4080d" kind="enumvalue"><name>DTS_NODE_NETWORK_ADSL_USER</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808eca15c8b3347c4ae06b4206e5960f7bd41c" kind="enumvalue"><name>DTS_NODE_NETWORK_TOS_NEW</name></member>
+    <member refid="group___d_t_s-_a_p_p_1gga018cb6fe637d3a25a67e794d620808ecae4d8c8164988e426b306b81ba7a54551" kind="enumvalue"><name>DTS_NODE_NETWORK_TOS</name></member>
     <member refid="group___d_t_s-_a_p_p_1ga063bbba7cc37af45b7989f2838fae1e1" kind="function"><name>xml_config</name></member>
     <member refid="group___d_t_s-_a_p_p_1ga65a24b9322f0fd002413f3e9e13272f0" kind="function"><name>app_getxmldoc</name></member>
     <member refid="group___d_t_s-_a_p_p_1ga011cd0b131174029fed8babdf1c7a101" kind="function"><name>file_menu</name></member>
@@ -1047,6 +1077,7 @@
     <member refid="group___d_t_s-_a_p_p_1gaf12c2714c0878b7565d8b788931f9e50" kind="function"><name>guiconfig_cb</name></member>
     <member refid="group___d_t_s-_a_p_p_1ga5fe0b449ba347b98cc9acad0f5608ca1" kind="function"><name>free_appdata</name></member>
     <member refid="group___d_t_s-_a_p_p_1ga3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+    <member refid="group___d_t_s-_a_p_p_1ga48cc0a91e8f54c62f3341c21c8cc74e8" kind="define"><name>DATA_DIR</name></member>
   </compound>
   <compound refid="group___c_p_p-_frame" kind="group"><name>CPP-Frame</name>
   </compound>
@@ -1245,6 +1276,27 @@
     <member refid="group___c-_a_p_i-_progress_1gabda6276de46c13fb4e0831bb8c8d1ec1" kind="function"><name>dtsgui_progress_update</name></member>
     <member refid="group___c-_a_p_i-_progress_1ga7bd617a3f00cb21ae6df7a37eba0dc7b" kind="function"><name>dtsgui_progress_increment</name></member>
     <member refid="group___c-_a_p_i-_progress_1ga528f638b6cb7b0d813e350a0b0c7262c" kind="function"><name>dtsgui_progress_end</name></member>
+  </compound>
+  <compound refid="group___d_t_s-_a_p_p-_iface" kind="group"><name>DTS-APP-Iface</name>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gaf0850a1d3d424533abf6f42eb7603b58" kind="function"><name>free_iface_cdata</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1ga3a6216b44ef12f4343578439ea097c50" kind="function"><name>get_iface_cdata</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gad806ada5b6aa10cb8e8b21af8fe03c33" kind="function"><name>free_newiface_data</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1ga23ef5c5cf103f36dd179c5625f8f8576" kind="function"><name>get_newiface_data</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gad174419104751f817b6b094628bd9846" kind="function"><name>handle_newxmltabpane</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1ga2079939d5d21847b07c782120206b7ce" kind="function"><name>handle_updatetabpane</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gaec69e5698c53680c3551eeb9e05cbaf6" kind="function"><name>network_iface_pane_cb</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gadcfa585026374cce3c2443ea55cebc25" kind="function"><name>network_iface_new_pane_cb</name></member>
+    <member refid="group___d_t_s-_a_p_p-_iface_1gabf43f59e582eee9f27734b14c8307819" kind="function"><name>iface_config</name></member>
+  </compound>
+  <compound refid="group___d_t_s-_a_p_p-_test" kind="group"><name>DTS-APP-Test</name>
+    <member refid="group___d_t_s-_a_p_p-_test_1ga467cf1f57bc5317de7fa356f87b324a6" kind="function"><name>post_items</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1gaf1d7f330874be6beda389c9ea4a4545c" kind="function"><name>handle_test</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1ga7436ba5c38bedec1d9ddda07ea99815d" kind="function"><name>testpanel</name></member>
+    <member refid="group___d_t_s-_a_p_p-_test_1ga77cb81a619f8c9ccd83cdf1e7c97aae9" kind="function"><name>test_menu</name></member>
+  </compound>
+  <compound refid="group___d_t_s-_a_p_p-_toolbar" kind="group"><name>DTS-APP-Toolbar</name>
+    <member refid="group___d_t_s-_a_p_p-_toolbar_1gab33c9c3228455b45318900a842c7a693" kind="function"><name>app_toolbar</name></member>
+    <member refid="group___d_t_s-_a_p_p-_toolbar_1gadc3e6af7bc4df899bca001c49d7f5e07" kind="define"><name>__DTS_C_API</name></member>
   </compound>
   <compound refid="todo" kind="page"><name>todo</name>
   </compound>

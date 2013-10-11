@@ -754,6 +754,6 @@
 <para>A tree view is a split window with a tree in the left window and display area on right. </para>    </briefdescription>
     <detaileddescription>
 <para><simplesect kind="remark"><para>The tree can contain branches (folder containers) and leaf nodes each node when clicked will create and place a panel in the display area. </para><simplesectsep/><para>The tree window supports sorting and deletion via a menu displayed when right clicking. </para></simplesect>
-<xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>Allow for the deletion of branch/container/folder nodes. </para></xrefdescription></xrefsect></para>    </detaileddescription>
+<xrefsect id="todo_1_todo000004"><xreftitle>Todo</xreftitle><xrefdescription><para>Allow for the deletion of branch/container/folder nodes. </para></xrefdescription></xrefsect></para>    </detaileddescription>
   </compounddef>
 </doxygen>

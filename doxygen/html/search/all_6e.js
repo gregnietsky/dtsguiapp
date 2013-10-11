@@ -22,9 +22,9 @@ var searchData=
   ['network_5fconfig_5fdns_5fzone',['network_config_dns_zone',['../netconfig_8c.html#a9648a33ba3b8a54dc53b527c6604feb5',1,'netconfig.c']]],
   ['network_5fiface',['network_iface',['../netconfig_8c.html#a21ad9729b2e5667d1a71117c3811d428',1,'netconfig.c']]],
   ['network_5fiface_5fnew_5fpane',['network_iface_new_pane',['../netconfig_8c.html#a3d43e57bb96cf8bd603872099c3bc038',1,'network_iface_new_pane(dtsgui_pane p, void *data):&#160;netconfig.c'],['../private_8h.html#a3d43e57bb96cf8bd603872099c3bc038',1,'network_iface_new_pane(dtsgui_pane p, void *data):&#160;netconfig.c']]],
-  ['network_5fiface_5fnew_5fpane_5fcb',['network_iface_new_pane_cb',['../interface_8c.html#adcfa585026374cce3c2443ea55cebc25',1,'interface.c']]],
+  ['network_5fiface_5fnew_5fpane_5fcb',['network_iface_new_pane_cb',['../group___d_t_s-_a_p_p-_iface.html#gadcfa585026374cce3c2443ea55cebc25',1,'interface.c']]],
   ['network_5fiface_5fpane',['network_iface_pane',['../netconfig_8c.html#ab77c80061336502da4c2cc2d2c11f4a0',1,'network_iface_pane(dtsgui_pane p, const char *xpre, const char *iface):&#160;netconfig.c'],['../private_8h.html#ab77c80061336502da4c2cc2d2c11f4a0',1,'network_iface_pane(dtsgui_pane p, const char *xpre, const char *iface):&#160;netconfig.c']]],
-  ['network_5fiface_5fpane_5fcb',['network_iface_pane_cb',['../interface_8c.html#aec69e5698c53680c3551eeb9e05cbaf6',1,'interface.c']]],
+  ['network_5fiface_5fpane_5fcb',['network_iface_pane_cb',['../group___d_t_s-_a_p_p-_iface.html#gaec69e5698c53680c3551eeb9e05cbaf6',1,'interface.c']]],
   ['network_5fmodem',['network_modem',['../netconfig_8c.html#aaf6857ee640832afc05a9e158faedde3',1,'netconfig.c']]],
   ['network_5fmodem_5fadv',['network_modem_adv',['../netconfig_8c.html#ab761836f12c4ee80260a57451498d48f',1,'netconfig.c']]],
   ['network_5fmodem_5fana',['network_modem_ana',['../netconfig_8c.html#a4bab1c305385131091d979ad287b2ea3',1,'netconfig.c']]],
@@ -44,6 +44,6 @@ var searchData=
   ['newsys_5fwizard',['newsys_wizard',['../group___d_t_s-_a_p_p-_wizard.html#ga56c78e0d32a18452dcea4f026de2c889',1,'newsys_wizard(struct dtsgui *dtsgui, const char *title, void *data):&#160;wizard.c'],['../group___d_t_s-_a_p_p-_wizard.html#ga56c78e0d32a18452dcea4f026de2c889',1,'newsys_wizard(struct dtsgui *dtsgui, const char *title, void *data):&#160;wizard.c']]],
   ['node',['node',['../classtree__newnode.html#a50e4845fff0149464cfb8ffe105b061c',1,'tree_newnode::node()'],['../classtab__newpane.html#a6ba77ba36491f4faaa975fe4264e0da5',1,'tab_newpane::node()']]],
   ['node_5fcb',['node_cb',['../classtree__newnode.html#acd8405c3d6f344a21ecdadcbf3db14a6',1,'tree_newnode']]],
-  ['node_5fid',['node_id',['../private_8h.html#a018cb6fe637d3a25a67e794d620808ec',1,'private.h']]],
+  ['node_5fid',['node_id',['../group___d_t_s-_a_p_p.html#ga018cb6fe637d3a25a67e794d620808ec',1,'private.h']]],
   ['nodeid',['nodeid',['../class_d_t_s_d_v_m_list_store.html#a7b6738784e2ddbafe71da24babd29e68',1,'DTSDVMListStore']]]
 ];

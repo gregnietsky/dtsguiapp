@@ -42,8 +42,8 @@ var NAVTREEINDEX =
 "class_d_t_s_panel.html",
 "classtree__newnode.html#a6d2aeccaa71eac80144dfb2353b51adc",
 "globals_0x6c.html",
-"mingw_2config_8h.html#aca8570fb706c81df371b7f9bc454ae03",
-"wrapper_8cpp.html#gad91055a12542c30dab4aacbd0761c785"
+"group___d_t_s-_a_p_p.html#gga018cb6fe637d3a25a67e794d620808eca67d5c38ab27222a53751515b85b184f3",
+"wrapper_8cpp.html#ga3af426dd6bf50cb6bd7232c4ea5b92f6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
