@@ -410,12 +410,12 @@ const char *DTSFrame::FileDialog(const char *title, const char *path, const char
 	return (const char*)filename;
 }
 
-DTSPanel *DTSFrame::TextPanel(const wxString &title, const char *buf) {
-	DTSStaticPanel *p;
+DTSWindow *DTSFrame::TextPanel(const wxString &title, const char *buf) {
+	DTSWindow *p;
 	wxWindow *w;
 	wxTextCtrl *tc;
 
-	p = new DTSStaticPanel(this, this, title);
+	p = new DTSWindow(this, this, title);
 	w = p->GetPanel();
 
 	tc = new wxTextCtrl(w, -1, buf, wxDefaultPosition, wxDefaultSize,wxTE_MULTILINE | wxHSCROLL | wxTE_READONLY);
