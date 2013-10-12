@@ -1028,10 +1028,6 @@ bool DTSStaticPanel::Show(bool show) {
 	return wxPanel::Show(show);
 }
 
-DTSTextPanel::DTSTextPanel(wxWindow *parent,DTSFrame *frame, wxString status)
-	:DTSStaticPanel(parent, frame, status) {
-}
-
 DTSWindow::DTSWindow(wxWindow *parent, DTSFrame *frame, wxString status)
 	:wxWindow(parent, -1),
 	 DTSPanel(frame, status) {
